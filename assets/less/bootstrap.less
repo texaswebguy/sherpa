@@ -1,4 +1,10 @@
 /*!
+ *
+ * Dell Sherpa v1.2
+ * Global Design Creative, Dell, Inc.
+ * 2013
+ *
+ * Based on 
  * Bootstrap v2.3.1
  *
  * Copyright 2012 Twitter, Inc
@@ -8,56 +14,60 @@
  * Designed and built with all the love in the world @twitter by @mdo and @fat.
  */
 
+
 // Core variables and mixins
-@import "variables.less"; // Modify this for custom colors, font-sizes, etc
-@import "mixins.less";
+@import "brands/white_label/variables.less"; // Default Bootstrap
+@import "brands/white_label/mixins.less"; // Default Bootstrap
+
+//@import "brands/dell_308/variables.less"; // Default Bootstrap
+//@import "brands/dell_308/mixins.less"; // Default Bootstrap
 
 // CSS Reset
-@import "reset.less";
+@import "base/reset.less";
 
 // Grid system and page structure
-@import "scaffolding.less";
-@import "grid.less";
-@import "layouts.less";
+@import "grid/scaffolding.less";
+@import "grid/grid.less";
+@import "grid/layouts.less";
 
 // Base CSS
-@import "type.less";
-@import "code.less";
-@import "forms.less";
-@import "tables.less";
+@import "base/type.less";
+@import "base/code.less";
+@import "base/forms.less";
+@import "base/tables.less";
 
 // Components: common
-@import "sprites.less";
-@import "dropdowns.less";
-@import "wells.less";
-@import "component-animations.less";
-@import "close.less";
+@import "components/sprites.less";
+@import "components/dropdowns.less";
+@import "components/wells.less";
+@import "components/component-animations.less";
+@import "components/close.less";
 
 // Components: Buttons & Alerts
-@import "buttons.less";
-@import "button-groups.less";
-@import "alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+@import "components/buttons.less";
+@import "components/button-groups.less";
+@import "components/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
 
 // Components: Nav
-@import "navs.less";
-@import "navbar.less";
-@import "breadcrumbs.less";
-@import "pagination.less";
-@import "pager.less";
+@import "components/navs.less";
+@import "components/navbar.less";
+@import "components/breadcrumbs.less";
+@import "components/pagination.less";
+@import "components/pager.less";
 
 // Components: Popovers
-@import "modals.less";
-@import "tooltip.less";
-@import "popovers.less";
+@import "components/modals.less";
+@import "components/tooltip.less";
+@import "components/popovers.less";
 
 // Components: Misc
-@import "thumbnails.less";
-@import "media.less";
-@import "labels-badges.less";
-@import "progress-bars.less";
-@import "accordion.less";
-@import "carousel.less";
-@import "hero-unit.less";
+@import "components/thumbnails.less";
+@import "components/media.less";
+@import "components/labels-badges.less";
+@import "components/progress-bars.less";
+@import "components/accordion.less";
+@import "components/carousel.less";
+@import "components/hero-unit.less";
 
 // Utility classes
-@import "utilities.less"; // Has to be last to override when necessary
+@import "base/utilities.less"; // Has to be last to override when necessary

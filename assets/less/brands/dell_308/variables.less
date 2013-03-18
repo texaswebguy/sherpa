@@ -1,7 +1,10 @@
 //
-// Variables
+// Dell Magnum 308 Variables
 // --------------------------------------------------
-
+//
+// Leaving this file as is to serve as the default 
+// color scheme for sherpa.  Clones of this file will
+// be create to provide different branding thems.
 
 // Global values
 // --------------------------------------------------
@@ -10,42 +13,65 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            #222;
-@grayDark:              #333;
-@gray:                  #555;
-@grayLight:             #999;
-@grayLighter:           #eee;
+@grayDarker:            #444;
+@grayDark:              #444;
+@gray:                  #737373;
+@grayLight:             #eee;
+@grayLighter:           #f9f9f9;
 @white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  #049cdb;
-@blueDark:              #0064cd;
-@green:                 #46a546;
-@red:                   #9d261d;
-@yellow:                #ffc40d;
-@orange:                #f89406;
+@blue:                  #0085c3;
+@blueMedium:            #7fc2e1;
+@blueLight:             #d9edf6;
+@blueDark:              #003758;
+@green:                 #7ab800;
+@greenMedium:           #bcdb7f;
+@greenLight:            #dcf1cc;
+@red:                   #dc5034;
+@redMedium:             #eda799;
+@redLight:              #fae5e1;
+@redDark:               #ce1126;
+@yellow:                #f2af00;
+@yellowMedium:          #fae07c;
+@yellowLight:           #ffeeca;
+@orange:                #ff7700;
+@orangeMedium:          #ffbe84;
+@orangeLight:           #fdebd9;
 @pink:                  #c3325f;
-@purple:                #7a43b6;
+@purple:                #6e2585;
+@purpleMedium:          #b396c7;
+@purpleLight:           #e8e0ee;
+@berry:                 #b7295a;
+@berryMedium:           #db94ac;
+@berryLight:            #f4dfe3;
+@teal:                  #71c6c1;
+@tealMedium:            #bde5e2;
+@tealLight:             #d9f2eb;
 
 
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDark;
+@textColor:             @grayDarker;
 
 
 // Links
 // -------------------------
-@linkColor:             #08c;
-@linkColorHover:        darken(@linkColor, 15%);
+@linkColor:             @blue;
+@linkColorHover:        @linkColor;
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        "Helvetica Neue", Helvetica, Arial, sans-serif;
-@serifFontFamily:       Georgia, "Times New Roman", Times, serif;
+@import "fonts.less";
+
+@sansFontFamily:        'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', 微软雅黑, 'Hiragino Sans GB', 'Microsoft JhengHei', 微軟正黑體, 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+
+@serifFontFamily:       'museo-dell-serif-100', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', 微软雅黑, 'Hiragino Sans GB', 'Microsoft JhengHei', 微軟正黑體, 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+
 @monoFontFamily:        Monaco, Menlo, Consolas, "Courier New", monospace;
 
 @baseFontSize:          14px;
@@ -53,8 +79,15 @@
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    inherit; // empty to use BS default, @baseFontFamily
-@headingsFontWeight:    bold;    // instead of browser default, bold
+@headingsFontFamily:    'museo-dell-sans-300',@sansFontFamily;
+
+@headingsSerifFontFamily:    'museo-dell-serif-300',@sansFontFamily;
+
+
+
+
+@headingsFontWeight:    bold;    // instead of browser default, bold;
+
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -62,6 +95,7 @@
 // -------------------------
 // Based on 14px font-size and 20px line-height
 
+@fontSizeFeature:         @baseFontSize * 3.40; // ~50px
 @fontSizeLarge:         @baseFontSize * 1.25; // ~18px
 @fontSizeSmall:         @baseFontSize * 0.85; // ~12px
 @fontSizeMini:          @baseFontSize * 0.75; // ~11px
@@ -70,16 +104,16 @@
 @paddingSmall:          2px 10px;  // 26px
 @paddingMini:           0 6px;   // 22px
 
-@baseBorderRadius:      4px;
-@borderRadiusLarge:     6px;
-@borderRadiusSmall:     3px;
+@baseBorderRadius:      5px;
+@borderRadiusLarge:     10px;
+@borderRadiusSmall:     2px;
 
 
 // Tables
 // -------------------------
 @tableBackground:                   transparent; // overall background-color
-@tableBackgroundAccent:             #f9f9f9; // for striping
-@tableBackgroundHover:              #f5f5f5; // for hover
+@tableBackgroundAccent:             @grayLight; // for striping
+@tableBackgroundHover:              @blueLight; // for hover
 @tableBorder:                       #ddd; // table and cell border
 
 // Buttons
@@ -91,8 +125,8 @@
 @btnPrimaryBackground:              @linkColor;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 @blue;
+@btnInfoBackgroundHighlight:        @blueMedium;
 
 @btnSuccessBackground:              #62c462;
 @btnSuccessBackgroundHighlight:     #51a351;
