@@ -1,0 +1,421 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sherpa - If you know Bootstrap then you know Sherpa</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <!-- framework styles -->
+    <link href="assets/css/bootstrap.css" rel="stylesheet">
+   <!--  <link href="assets/css/bootstrap-responsive.css" rel="stylesheet"> -->
+    <link href="assets/css/sherpa_override.css" rel="stylesheet">
+
+    <!-- Sherpa site styles -->
+    <link href="assets/css/sherpa_site_style.css" rel="stylesheet">
+    
+    <!-- Code in a page styles -->
+    <link href="assets/js/google-code-prettify/prettify.css" rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- Le fav and touch icons -->
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Sherpa</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+<!--               <li class="">
+                <a href="./getting-started.html">Get started</a>
+              </li> -->
+              <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li>
+              <li class="">
+                <a href="./base-css.html">Basic Elements</a>
+              </li>
+              <li class="">
+                <a href="./components.html">Components</a>
+              </li>
+              <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li>
+              <li class="divider-vertical"></li>
+              <li class="active">
+                <a href="./how-to.html">How to's</a>
+              </li>
+<!--               <li class="">
+                <a href="./customize.html">Customize</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container-fluid">
+    <h1 class="sherpa">How To's</h1>
+    <p class="lead">Everything you'll need to know to build templates and patterns with ease! Before starting, be sure to have a code editor (we recommend Sublime Text 2) and some working knowledge of HTML and CSS.</p>
+  </div>
+</header>
+
+
+  <div class="container-fluid">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row-fluid">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
+          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+          <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+          <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+          <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+          <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Download
+        ================================================== -->
+        <section id="download-bootstrap">
+          <div class="page-header">
+            <h1 class="sherpa">1. Download</h1>
+          </div>
+          <p class="lead">Before downloading, be sure to have a code editor (we recommend <a href="http://sublimetext.com/2">Sublime Text 2</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the compiled Bootstrap files.</p>
+
+          <div class="row-fluid">
+            <div class="span12">
+              <h2 class="sherpa">Download source</h2>
+              <p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and sample.html.</p>
+              <p><a class="btn btn-large btn-primary" href="starter_kit/starter_kit.zip" >Download Sherpa</a></p>
+            </div>
+            <!-- <div class="span6">
+              <h2 class="sherpa">Download source</h2>
+              <p>Get the original files for all CSS and JavaScript, along with a local copy of the docs by downloading the latest version directly from GitHub.</p>
+              <p><a class="btn btn-large" href="https://github.com/twitter/bootstrap/zipball/master" >Download Bootstrap source</a></p>
+            </div> -->
+          </div>
+        </section>
+
+
+
+        <!-- File structure
+        ================================================== -->
+        <section id="file-structure">
+          <div class="page-header">
+            <h1 class="sherpa">2. File structure</h1>
+          </div>
+          <p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
+          <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
+<pre class="prettyprint">
+  sherpa/
+  ├── assets/
+      ├── sample.html
+      ├── css/
+      │   ├── bootstrap.css
+      │   ├── bootstrap-responsive.css
+      │   ├── sherpa_override.css
+      │   ├── stylesheet.css
+      ├── fonts/
+      │   ├── MuseoForDell-100
+      │   ├── MuseoForDell-300
+      │   ├── MuseoForDell-700
+      ├── img/
+      ├── js/
+          ├── jquery.js
+          ├── bootstrap-transition.js
+          ├── bootstrap-alert.js
+          ├── bootstrap-modal.js
+          ├── bootstrap-dropdown.js
+          ├── bootstrap-scrollspy.js
+          ├── bootstrap-tab.js
+          ├── bootstrap-tooltip.js
+          ├── bootstrap-popover.js
+          ├── bootstrap-button.js
+          ├── bootstrap-collapse.js
+          ├── bootstrap-tooltip.js
+          ├── bootstrap-typeahead.js
+          ├── bootstrap-affix.js
+          ├── application.js
+</pre>
+          <p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
+          <p>Please note that all JavaScript plugins require jQuery to be included.</p>
+        </section>
+
+
+
+        <!-- Contents
+        ================================================== -->
+        <section id="contents">
+          <div class="page-header">
+            <h1 class="sherpa">3. What's included</h1>
+          </div>
+          <p class="lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible at the top of the <a href="index.html">Sherpa documentation</a>.</p>
+
+          <h2 class="sherpa">Docs sections</h2>
+          <h4 class="sherpa"><a href="scaffolding.html">Scaffolding</a></h4>
+          <p>Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
+          <h4 class="sherpa"><a href="base-css.html">Base Elements</a></h4>
+          <p>Styles for common HTML elements like typography, code, tables, forms, and buttons.</p>
+          <h4 class="sherpa"><a href="components.html">Components</a></h4>
+          <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
+          <h4 class="sherpa"><a href="javascript.html">JavaScript plugins</a></h4>
+          <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
+
+          <h2 class="sherpa">List of components</h2>
+          <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
+          <ul>
+            <li>Button groups</li>
+            <li>Button dropdowns</li>
+            <li>Navigational tabs, pills, and lists</li>
+            <li>Navbar</li>
+            <li>Labels</li>
+            <li>Badges</li>
+            <li>Page headers and hero unit</li>
+            <li>Thumbnails</li>
+            <li>Alerts</li>
+            <li>Progress bars</li>
+            <li>Modals</li>
+            <li>Dropdowns</li>
+            <li>Tooltips</li>
+            <li>Popovers</li>
+            <li>Accordion</li>
+            <li>Carousel</li>
+            <li>Typeahead</li>
+          </ul>
+          <p>In future guides, we may walk through these components individually in more detail. Until then, look for each of these in the documentation for information on how to utilize and customize them.</p>
+        </section>
+
+
+
+        <!-- HTML template
+        ================================================== -->
+        <section id="html-template">
+          <div class="page-header">
+            <h1 class="sherpa">4. Basic HTML template</h1>
+          </div>
+          <p class="lead">With a brief intro into the contents out of the way, we can focus on putting Sherpa to use. To do that, we'll utilize a basic HTML template that includes everything we mentioned in the File structure.</p>
+          <!-- <p>Now, here's a look at a <strong>typical HTML file</strong>:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Bootstrap 101 Template&lt;/title&gt;
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;h1&gt;Hello, world!&lt;/h1&gt;
+    &lt;script src="http://code.jquery.com/jquery-latest.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre> -->
+          <p>To make this <strong>a Sherpa template</strong>, just include the appropriate CSS and JS files:</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html&gt;
+  &lt;head&gt;
+    &lt;title&gt;Sherpa 101 Template&lt;/title&gt;
+
+    &lt;!-- framework styles --&gt;
+    &lt;link href="assets/css/bootstrap.css" rel="stylesheet"&gt;
+    &lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;
+    &lt;link href="assets/css/sherpa_override.css" rel="stylesheet"&gt;
+
+    &lt;!-- page styles - add any new styles to this file --&gt;
+    &lt;link href="assets/css/stylesheet.css" rel="stylesheet"&gt;
+
+  &lt;/head&gt;
+  &lt;body&gt;
+    &lt;div class="container-fluid-fluid"&gt;
+      &lt;div class="row-fluid-fluid"&gt;
+        &lt;div class="span12"&gt;
+          &lt;div class="pattern-name"&gt;
+            &lt;p&gt;content...&lt;/p&gt;
+          &lt;/div&gt;
+        &lt;/div&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+    
+    &lt;!-- javascript plugins
+    ================================================== -->
+    &lt;!-- Placed at the end of the document so the pages load faster -->
+
+    &lt;script src="assets/js/jquery.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/google-code-prettify/prettify.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-transition.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-alert.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-modal.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-dropdown.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-scrollspy.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-tab.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-tooltip.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-popover.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-button.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-collapse.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-carousel.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-typeahead.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/bootstrap-affix.js"&gt;&lt;/script&gt;
+    &lt;script src="assets/js/application.js"&gt;&lt;/script&gt;
+  &lt;/body&gt;
+&lt;/html&gt;
+</pre>
+          <p><strong>And you're set!</strong> With these files added, you can begin to develop any site or application with Sherpa.</p>
+        </section>
+
+
+
+        <!-- Examples
+        ================================================== -->
+        <section id="examples">
+          <div class="page-header">
+            <h1 class="sherpa">5. Examples</h1>
+          </div>
+          <p>coming soon...</p>
+          <!-- <p class="lead">Move beyond the base template with a few example layouts. We encourage folks to iterate on these examples and not simply use them as an end result.</p>
+          <ul class="thumbnails bootstrap-examples">
+            <li class="span3">
+              <a class="thumbnail" href="examples/starter-template.html">
+                <img src="assets/img/examples/bootstrap-example-starter.jpg" alt="">
+              </a>
+              <h4 class="sherpa">Starter template</h4>
+              <p>A barebones HTML document with all the Bootstrap CSS and JavaScript included.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/hero.html">
+                <img src="assets/img/examples/bootstrap-example-hero.jpg" alt="">
+              </a>
+              <h4 class="sherpa">Basic marketing site</h4>
+              <p>Featuring a hero unit for a primary message and three supporting elements.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/fluid.html">
+                <img src="assets/img/examples/bootstrap-example-fluid.jpg" alt="">
+              </a>
+              <h4 class="sherpa">Fluid layout</h4>
+              <p>Uses our new responsive, fluid grid system to create a seamless liquid layout.</p>
+            </li>
+
+            <li class="span3">
+              <a class="thumbnail" href="examples/marketing-narrow-fluid.html">
+                <img src="assets/img/examples/bootstrap-example-marketing-narrow-fluid.png" alt="">
+              </a>
+              <h4>Narrow-fluid marketing</h4>
+              <p>Slim, lightweight marketing template for small projects or teams.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/signin.html">
+                <img src="assets/img/examples/bootstrap-example-signin.png" alt="">
+              </a>
+              <h4 class="sherpa">Sign in</h4>
+              <p>Barebones sign in form with custom, larger form controls and a flexible layout.</p>
+            </li>
+            <li class="span3">
+              <a class="thumbnail" href="examples/sticky-footer.html">
+                <img src="assets/img/examples/bootstrap-example-sticky-footer.png" alt="">
+              </a>
+              <h4 class="sherpa">Sticky footer</h4>
+              <p>Pin a fixed-height footer to the bottom of the user's viewport.</p>
+            </li>
+
+            <li class="span3">
+              <a class="thumbnail" href="examples/carousel.html">
+                <img src="assets/img/examples/bootstrap-example-carousel.png" alt="">
+              </a>
+              <h4 class="sherpa">Carousel jumbotron</h4>
+              <p>A more interactive riff on the basic marketing site featuring a prominent carousel.</p>
+            </li>
+          </ul> -->
+        </section>
+
+
+
+
+        <!-- Next
+        ================================================== -->
+        <section id="what-next">
+          <div class="page-header">
+            <h1 class="sherpa">What next?</h1>
+          </div>
+          <p class="lead">Head to the docs for information, examples, and code snippets.</p>
+          <a class="btn btn-large btn-primary" href="./scaffolding.html" >Visit the Sherpa docs</a>
+          <!-- <a class="btn btn-large" href="./customize.html" style="margin-left: 5px;" >Customize Bootstrap</a> -->
+        </section>
+
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Sherpa is designed and built using <a href="http://twitter.github.com/bootstrap/">Bootstrap by Twitter</a>.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
+
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/application.js"></script>
+
+
+
+  </body>
+</html>
