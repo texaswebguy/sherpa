@@ -850,32 +850,20 @@ border-radius: 6px;
   color:#ffffff;
 }
 
+/* Gray */
 
-.dell_darkgray {
-  background-color: #444444;
-}
+.dark_gray {background-color: #444444;}
+.medium_gray {background-color: #737373;}
+.gray {background-color: #aaaaaa;}
+.light_gray {background-color: #eeeeee;}
+.very_light_gray {background-color: #f9f9f9;}
 
-.dell_gray {
-  background-color: #aaaaaa;
-}
+.gsd_gray_stroke {padding: 30px 0px;border: 2px solid #cccccc;}
 
-.gsd_medium_gray {
-  background-color: #737373;
-}
 
-.gsd_gray_stroke {
-  padding: 30px 0px;
-  border: 2px solid #cccccc;
-}
 
-.dell_lightgray {
-  background-color: #eeeeee;
-}
 
-.gsd_background_gray {
-  background-color: #f9f9f9;
-}
-
+/* Blue */
 
 .dell_blue {
   background-color: #0085c3;
@@ -890,6 +878,9 @@ border-radius: 6px;
   background-color: #d9edf6;
 }
 
+
+/* Green */
+
 .dell_green {
   background-color: #7ab800;
 }
@@ -902,6 +893,8 @@ border-radius: 6px;
 .dell_green_light {
   background-color: #dcf1cc;
 }
+
+/* Yellow */
 
 .dell_yellow {
   background-color: #F2AF00;
@@ -916,6 +909,8 @@ border-radius: 6px;
   background-color: #ffeeca;
 }
 
+/* Orange */
+
 .dell_orange {
   background-color: #FF7700;
 }
@@ -928,6 +923,8 @@ border-radius: 6px;
 .dell_orange_light {
   background-color: #fdebd9;
 }
+
+/* Red */
 
 .dell_red {
   background-color: #DC5034;
@@ -946,6 +943,8 @@ border-radius: 6px;
   background-color: #CE1126;
 }
 
+/* Berry */
+
 .dell_berry {
   background-color: #B7295A;
 }
@@ -958,6 +957,8 @@ border-radius: 6px;
 .dell_berry_light {
   background-color: #f4dfe3;
 }
+
+/* Purple */
 
 .dell_purple {
   background-color: #6E2585;
@@ -972,6 +973,8 @@ border-radius: 6px;
   background-color: #e8e0ee;
 }
 
+/* Teal */
+
 .dell_teal {
   background-color: #71C6C1;
 }
@@ -984,6 +987,8 @@ border-radius: 6px;
 .dell_teal_light {
   background-color: #d9f2eb
 }
+
+/* Navy */
 
 .gsd_navyblue {
   background-color: #003758;
