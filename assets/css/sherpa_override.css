@@ -837,12 +837,11 @@ border-radius: 6px;
 
 
 
-/* COLORS
+/* COLORS from sherpa_override.css
 -------------------------------------------------- */
 
 .color-block {
   padding:30px 0px;
-  margin-top:20px;
   border: 1px solid #eeeeee;
 }
 
@@ -860,30 +859,87 @@ border-radius: 6px;
   background-color: #aaaaaa;
 }
 
+.gsd_medium_gray {
+  background-color: #737373;
+}
+
+.gsd_gray_stroke {
+  padding: 30px 0px;
+  border: 2px solid #cccccc;
+}
+
 .dell_lightgray {
   background-color: #eeeeee;
 }
 
+.gsd_background_gray {
+  background-color: #f9f9f9;
+}
 
 
 .dell_blue {
   background-color: #0085c3;
 }
 
+.dell_blue_medium {
+  padding: 30px 0px;
+  border: 2px solid #7fc2e1;
+}
+
+.dell_blue_light {
+  background-color: #d9edf6;
+}
+
 .dell_green {
   background-color: #7ab800;
+}
+
+.dell_green_medium { 
+  padding: 30px 0px;
+  border: 2px solid #bcdb7f;
+}
+
+.dell_green_light {
+  background-color: #dcf1cc;
 }
 
 .dell_yellow {
   background-color: #F2AF00;
 }
 
+.dell_yellow_medium {
+  padding: 30px 0px;
+  border: 2px solid #fae07c;
+}
+
+.dell_yellow_light {
+  background-color: #ffeeca;
+}
+
 .dell_orange {
   background-color: #FF7700;
 }
 
+.dell_orange_medium {
+  padding: 30px 0px;
+  border: 2px solid #ffbe84;
+}
+
+.dell_orange_light {
+  background-color: #fdebd9;
+}
+
 .dell_red {
   background-color: #DC5034;
+}
+
+.dell_red_medium {
+  padding: 30px 0px;
+  border: 2px solid #eda799;
+}
+
+.dell_red_light { 
+  background-color: #fae5e1
 }
 
 .dell_darkred {
@@ -894,28 +950,43 @@ border-radius: 6px;
   background-color: #B7295A;
 }
 
+.dell_berry_medium {
+  padding: 30px 0px;
+  border: 2px solid #db94ac;
+}
+
+.dell_berry_light {
+  background-color: #f4dfe3;
+}
+
 .dell_purple {
   background-color: #6E2585;
+}
+
+.dell_purple_medium {
+  padding: 30px 0px;
+  border: 2px solid #b396c7;
+}
+
+.dell_purple_light {
+  background-color: #e8e0ee;
 }
 
 .dell_teal {
   background-color: #71C6C1;
 }
 
+.dell_teal_medium {
+  padding: 30px 0px;
+  border: 2px solid #bde5e2;
+}
+
+.dell_teal_light {
+  background-color: #d9f2eb
+}
+
 .gsd_navyblue {
   background-color: #003758;
-}
-
-.gsd_lightblue {
-  background-color: #CCE7F3;
-}
-
-.gsd_orange {
-  background-color: #fd5400;
-}
-
-.gsd_gray {
-  background-color: #737373;
 }
 
 
