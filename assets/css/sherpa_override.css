@@ -151,18 +151,20 @@ h5, h6 {
   text-rendering: optimizelegibility;
 }
 
-h1,h2   {font-size: 36px;line-height: 40px;}
-h3      {font-size: 28px;line-height: 32px;}
-h4      {font-size: 20px;line-height: 22px;}
-h5      {font-size: 16px;line-height: 20px;}
-h6      {font-size: 14px;line-height: 18px;}
+h1      {font-size: 36px;line-height: 40px;}
+h2      {font-size: 28px;line-height: 32px;}
+h3      {font-size: 20px;line-height: 24px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h4      {font-size: 20px;line-height: 24px;}
+h5      {font-size: 18px;line-height: 22px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h6      {font-size: 18px;line-height: 22px;}
 
 /* Header - featured*/
 h4.feature {font-size: 50px;line-height: 100px;}
 
-/* Header - Bold*/
-h3.bold {font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;font-size: 26px;line-height: 28px;}
-h4.bold {font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;font-size: 20px;line-height: 22px;}
+/* Header - Bold
+h3.bold {font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h4.bold {font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+*/
 
 /*p {
 margin: 0 0 0 10px;
@@ -172,7 +174,7 @@ margin: 0 0 0 10px;
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: normal;
-  line-height: 24px;
+  line-height: 22px;
 }
 
 small {
