@@ -141,49 +141,63 @@ h6.sherpa {
 
 
 
-/* Edit made by: AJ lohman - Needed to show what headers look like in mobile */
-/* Mobile examples*/
-h1.mobile,
-h2.mobile,
-h3.mobile,
-h4.mobile,
-h5.mobile,
-h6.mobile {
+/* Edits made by:; AJ Lohman - just organized them a bit*/
+/* headers - All*/
+h1.tablet, h2.tablet, h3.tablet, h4.tablet {
   font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
 }
 
-h1.mobile,
-h2.mobile,
-h3.mobile {
-  line-height: 40px;
+/* Edits made by AJ Lohman */
+h5.tablet, h6.tablet {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
 }
 
-h1.mobile {
-  font-size: 28px;
+h1.tablet      {font-size: 32px;line-height: 38px;}
+h2.tablet      {font-size: 26px;line-height: 30px;}
+h3.tablet      {font-size: 20px;line-height: 24px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h4.tablet      {font-size: 20px;line-height: 24px;}
+h5.tablet      {font-size: 16px;line-height: 22px;}
+h6.tablet      {font-size: 16px;line-height: 22px;}
+
+
+
+/* Edits made by:; AJ Lohman - just organized them a bit*/
+/* headers - All*/
+h1.mobile, h2.mobile, h3.mobile, h4.mobile {
+  font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
 }
 
-h2.mobile {
-  font-size: 28px;
+/* Edits made by AJ Lohman */
+h5.mobile, h6.mobile {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: bold;
+  color: inherit;
+  text-rendering: optimizelegibility;
 }
 
-h3.mobile {
-  font-size: 24px;
-}
+h1.mobile      {font-size: 22px;line-height: 26px;}
+h2.mobile      {font-size: 20px;line-height: 24px;}
+h3.mobile      {font-size: 18px;line-height: 22px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h4.mobile      {font-size: 18px;line-height: 22px;}
+h5.mobile      {font-size: 14px;line-height: 20px;}
+h6.mobile      {font-size: 14px;line-height: 20px;}
 
-h4.mobile {
-  font-size: 20px;
-}
 
-h5.mobile {
-  font-size: 16px;
-}
 
-h6.mobile {
-  font-size: 14px;
-}
+
+
+
+
+
 
 
 
