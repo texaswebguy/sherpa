@@ -139,7 +139,7 @@ a.white {
   text-decoration: none;
 }
 
-a.white:hover {
+a:hover.white {
   color: #ffffff;
   text-decoration: underline;
 }
