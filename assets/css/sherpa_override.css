@@ -134,6 +134,16 @@ a:hover {
   text-decoration: underline;
 }
 
+a.white {
+  color:#ffffff;
+  text-decoration: none;
+}
+
+a.white:hover {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
 /*
 ================================================
 Headers for desktop
