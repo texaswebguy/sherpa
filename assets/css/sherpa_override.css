@@ -926,142 +926,51 @@ border-radius: 6px;
 .gray {background-color: #aaaaaa;}
 .light_gray {background-color: #eeeeee;}
 .very_light_gray {background-color: #f9f9f9;}
-
 .gsd_gray_stroke {padding: 30px 0px;border: 2px solid #cccccc;}
 
-
-
-
 /* Blue */
-
-.dell_blue {
-  background-color: #0085c3;
-}
-
-.dell_blue_medium {
-  padding: 30px 0px;
-  border: 2px solid #7fc2e1;
-}
-
-.dell_blue_light {
-  background-color: #d9edf6;
-}
-
+.blue {background-color: #0085c3;}
+.blue_medium {padding: 30px 0px;border: 2px solid #7fc2e1;}
+.blue_light {background-color: #d9edf6;}
 
 /* Green */
-
-.dell_green {
-  background-color: #7ab800;
-}
-
-.dell_green_medium { 
-  padding: 30px 0px;
-  border: 2px solid #bcdb7f;
-}
-
-.dell_green_light {
-  background-color: #dcf1cc;
-}
+.green {background-color: #7ab800;}
+.green_medium { padding: 30px 0px;border: 2px solid #bcdb7f;}
+.green_light {background-color: #dcf1cc;}
 
 /* Yellow */
-
-.dell_yellow {
-  background-color: #F2AF00;
-}
-
-.dell_yellow_medium {
-  padding: 30px 0px;
-  border: 2px solid #fae07c;
-}
-
-.dell_yellow_light {
-  background-color: #ffeeca;
-}
+.yellow {background-color: #F2AF00;}
+.yellow_medium {padding: 30px 0px;border: 2px solid #fae07c;}
+.yellow_light {background-color: #ffeeca;}
 
 /* Orange */
-
-.dell_orange {
-  background-color: #FF7700;
-}
-
-.dell_orange_medium {
-  padding: 30px 0px;
-  border: 2px solid #ffbe84;
-}
-
-.dell_orange_light {
-  background-color: #fdebd9;
-}
+.orange {background-color: #FF7700;}
+.orange_medium {padding: 30px 0px;border: 2px solid #ffbe84;}
+.orange_light {background-color: #fdebd9;}
 
 /* Red */
-
-.dell_red {
-  background-color: #DC5034;
-}
-
-.dell_red_medium {
-  padding: 30px 0px;
-  border: 2px solid #eda799;
-}
-
-.dell_red_light { 
-  background-color: #fae5e1
-}
-
-.dell_darkred {
-  background-color: #CE1126;
-}
+.red {background-color: #DC5034;}
+.red_medium {padding: 30px 0px;border: 2px solid #eda799;}
+.red_light { background-color: #fae5e1}
+.darkred {background-color: #CE1126;}
 
 /* Berry */
-
-.dell_berry {
-  background-color: #B7295A;
-}
-
-.dell_berry_medium {
-  padding: 30px 0px;
-  border: 2px solid #db94ac;
-}
-
-.dell_berry_light {
-  background-color: #f4dfe3;
-}
+.berry {background-color: #B7295A;}
+.berry_medium {padding: 30px 0px;border: 2px solid #db94ac;}
+.berry_light {background-color: #f4dfe3;}
 
 /* Purple */
-
-.dell_purple {
-  background-color: #6E2585;
-}
-
-.dell_purple_medium {
-  padding: 30px 0px;
-  border: 2px solid #b396c7;
-}
-
-.dell_purple_light {
-  background-color: #e8e0ee;
-}
+.purple {background-color: #6E2585;}
+.purple_medium {padding: 30px 0px;border: 2px solid #b396c7;}
+.purple_light {background-color: #e8e0ee;}
 
 /* Teal */
-
-.dell_teal {
-  background-color: #71C6C1;
-}
-
-.dell_teal_medium {
-  padding: 30px 0px;
-  border: 2px solid #bde5e2;
-}
-
-.dell_teal_light {
-  background-color: #d9f2eb
-}
+.teal {background-color: #71C6C1;}
+.teal_medium {padding: 30px 0px;border: 2px solid #bde5e2;}
+.teal_light {background-color: #d9f2eb}
 
 /* Navy */
-
-.gsd_navyblue {
-  background-color: #003758;
-}
+.navyblue {background-color: #003758;}
 
 
 .close {
@@ -1088,76 +997,23 @@ border-radius: 6px;
 /* TEXT COLORS
 -------------------------------------------------- */
 
-
-.white_text {
-  color:#ffffff;
-}
-
-.darkgray_text {
-  color: #444444;
-}
-
-.gray_text {
-  color: #aaaaaa;
-}
-
-.lightgray_text {
-  color: #eeeeee;
-}
-
-
-
-.blue_text {
-  color: #0085c3;
-}
-
-.green_text {
-  color: #7ab800;
-}
-
-.yellow_text {
-  color: #F2AF00;
-}
-
-.orange_text {
-  color: #FF7700;
-}
-
-.red_text {
-  color: #DC5034;
-}
-
-.darkred_text {
-  color: #CE1126;
-}
-
-.berry_text {
-  color: #B7295A;
-}
-
-.purple_text {
-  color: #6E2585;
-}
-
-.teal_text {
-  color: #71C6C1;
-}
-
-.navyblue_text {
-  color: #003758;
-}
-
-.lightblue_text {
-  color: #CCE7F3;
-}
-
-.orange_text {
-  color: #fd5400;
-}
-
-.gray_text {
-  color: #737373;
-}
+.white_text {color:#ffffff;}
+.darkgray_text {color: #444444;}
+.gray_text {color: #aaaaaa;}
+.lightgray_text {color: #eeeeee;}
+.blue_text {color: #0085c3;}
+.green_text {color: #7ab800;}
+.yellow_text {color: #F2AF00;}
+.orange_text {color: #FF7700;}
+.red_text {color: #DC5034;}
+.darkred_text {color: #CE1126;}
+.berry_text {color: #B7295A;}
+.purple_text {color: #6E2585;}
+.teal_text {color: #71C6C1;}
+.navyblue_text {color: #003758;}
+.lightblue_text {color: #CCE7F3;}
+.orange_text {color: #fd5400;}
+.gray_text {color: #737373;}
 
 
 
