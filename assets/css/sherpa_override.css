@@ -134,12 +134,12 @@ a:hover {
   text-decoration: underline;
 }
 
-a.white {
+a.white_text {
   color:#ffffff;
   text-decoration: none;
 }
 
-a:hover.white {
+a:hover.white_text {
   color: #ffffff;
   text-decoration: underline;
 }
@@ -914,6 +914,21 @@ border-radius: 6px;
           border-radius: 10px;
 }
 
+/* Rounded corners
+-------------------------------------------------- */
+
+.rounded_big {
+  -webkit-border-radius: 10px; 
+  -moz-border-radius: 10px; 
+  border-radius: 10px;
+}
+
+.rounded_small {
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+}
+
 
 
 /* COLORS from sherpa_override.css
@@ -925,7 +940,7 @@ border-radius: 6px;
 }
 
 
-.white {
+.white_text {
   color:#ffffff;
 }
 
@@ -937,6 +952,7 @@ border-radius: 6px;
 .gray_light {background-color: #eeeeee;}
 .gray_very_light_ {background-color: #f9f9f9;}
 .gray_stroke {padding: 30px 0px;border: 2px solid #cccccc;}
+.white {background-color: #ffffff;}
 
 /* Blue */
 .blue {background-color: #0085c3;}
