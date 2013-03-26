@@ -1532,10 +1532,10 @@ you can use the generic selector below, but it's slower:
 @media (max-width: 767px) {
 
   /* Edits made by: AJ Lohman - removes the default 20px padding from Bootstrap.  */
-  /*body {
+  body {
     padding-right:0;
     padding-left:0;
-  }*/
+  }
 
 }
 
