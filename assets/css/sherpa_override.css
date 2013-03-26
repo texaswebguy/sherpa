@@ -921,12 +921,12 @@ border-radius: 6px;
 
 /* Gray */
 
-.dark_gray {background-color: #444444;}
-.medium_gray {background-color: #737373;}
+.gray_dark {background-color: #444444;}
+.gray_medium {background-color: #737373;}
 .gray {background-color: #aaaaaa;}
-.light_gray {background-color: #eeeeee;}
-.very_light_gray {background-color: #f9f9f9;}
-.gray_stroke_stroke {padding: 30px 0px;border: 2px solid #cccccc;}
+.gray_light {background-color: #eeeeee;}
+.gray_very_light_ {background-color: #f9f9f9;}
+.gray_stroke {padding: 30px 0px;border: 2px solid #cccccc;}
 
 /* Blue */
 .blue {background-color: #0085c3;}
@@ -952,7 +952,7 @@ border-radius: 6px;
 .red {background-color: #DC5034;}
 .red_medium_stroke {padding: 30px 0px;border: 2px solid #eda799;}
 .red_light { background-color: #fae5e1}
-.darkred {background-color: #CE1126;}
+.red_dark {background-color: #CE1126;}
 
 /* Berry */
 .berry {background-color: #B7295A;}
