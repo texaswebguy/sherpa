@@ -124,6 +124,10 @@ body {
   background-color: #ffffff;
 }
 
+p {
+  margin: 0 0 20px 0;
+}
+
 a {
   color: #0085c3;
   text-decoration: none;
