@@ -961,44 +961,52 @@ border-radius: 6px;
 
 /* Blue */
 .blue {background-color: #0085c3;}
-.blue_medium_stroke {padding: 30px 0px;border: 2px solid #7fc2e1;}
-.blue_light {background-color: #d9edf6;}
+.blue_stroke {padding: 30px 0px;border: 2px solid #0085c3;}
+/*.blue_medium_stroke {padding: 30px 0px;border: 2px solid #7fc2e1;}
+*//*.blue_light {background-color: #d9edf6;}*/
 
 /* Green */
 .green {background-color: #7ab800;}
-.green_medium_stroke { padding: 30px 0px;border: 2px solid #bcdb7f;}
-.green_light {background-color: #dcf1cc;}
+.green_stroke { padding: 30px 0px;border: 2px solid #7ab800;}
+/*.green_medium_stroke { padding: 30px 0px;border: 2px solid #bcdb7f;}
+.green_light {background-color: #dcf1cc;}*/
 
 /* Yellow */
 .yellow {background-color: #F2AF00;}
-.yellow_medium_stroke {padding: 30px 0px;border: 2px solid #fae07c;}
-.yellow_light {background-color: #ffeeca;}
+.yellow_stroke {padding: 30px 0px;border: 2px solid #F2AF00;}
+/*.yellow_medium_stroke {padding: 30px 0px;border: 2px solid #fae07c;}
+.yellow_light {background-color: #ffeeca;}*/
 
 /* Orange */
 .orange {background-color: #FF7700;}
-.orange_medium_stroke {padding: 30px 0px;border: 2px solid #ffbe84;}
-.orange_light {background-color: #fdebd9;}
+.orange_stroke {padding: 30px 0px;border: 2px solid #FF7700;}
+/*.orange_medium_stroke {padding: 30px 0px;border: 2px solid #ffbe84;}
+.orange_light {background-color: #fdebd9;}*/
 
 /* Red */
 .red {background-color: #DC5034;}
-.red_medium_stroke {padding: 30px 0px;border: 2px solid #eda799;}
-.red_light { background-color: #fae5e1}
+.red_stroke {padding: 30px 0px;border: 2px solid #DC5034;}
+/*.red_medium_stroke {padding: 30px 0px;border: 2px solid #eda799;}
+.red_light { background-color: #fae5e1}*/
 .red_dark {background-color: #CE1126;}
 
 /* Berry */
 .berry {background-color: #B7295A;}
-.berry_medium_stroke {padding: 30px 0px;border: 2px solid #db94ac;}
-.berry_light {background-color: #f4dfe3;}
+.berry_stroke {padding: 30px 0px;border: 2px solid #B7295A;}
+/*.berry_medium_stroke {padding: 30px 0px;border: 2px solid #db94ac;}
+.berry_light {background-color: #f4dfe3;}*/
 
 /* Purple */
 .purple {background-color: #6E2585;}
-.purple_medium_stroke {padding: 30px 0px;border: 2px solid #b396c7;}
-.purple_light {background-color: #e8e0ee;}
+.purple_stroke {padding: 30px 0px;border: 2px solid #6E2585;}
+/*.purple_medium_stroke {padding: 30px 0px;border: 2px solid #b396c7;}
+.purple_light {background-color: #e8e0ee;}*/
 
 /* Teal */
 .teal {background-color: #71C6C1;}
-.teal_medium_stroke {padding: 30px 0px;border: 2px solid #bde5e2;}
-.teal_light {background-color: #d9f2eb}
+.teal_stroke {padding: 30px 0px;border: 2px solid #71C6C1;}
+/*.teal_medium_stroke {padding: 30px 0px;border: 2px solid #bde5e2;}
+.teal_light {background-color: #d9f2eb}*/
 
 /* Navy */
 .navyblue {background-color: #003758;}
