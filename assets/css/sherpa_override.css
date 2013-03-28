@@ -182,7 +182,21 @@ h6      {font-size: 18px;line-height: 22px;}
 h4.feature {font-size: 50px;line-height: 100px;}
 
 /* Header - title*/
+.title {
+  text-align: center;
+  background: url(https://rawgithub.com/DellGDC/sherpa/master/assets/img/gray_dark_title_line.png) repeat-x 50%;
+  margin-bottom: 20px;
+  display: block;
+}
 
+.title h1 {
+  display: inline;
+  background: #fff;
+  padding: 0px 10px;
+  max-width: 80%;
+  display: block;
+  margin: 0 auto;
+}
 
 /*
 ================================================
