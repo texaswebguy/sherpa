@@ -193,8 +193,8 @@ h4.feature {font-size: 50px;line-height: 100px;}
   display: inline;
   background: pink;
   padding: 0px 10px;
-  /*max-width: 80%;*/
-  display: block;
+  max-width: 80%;
+  /*display: block;*/
   margin: 0 auto;
 }
 
