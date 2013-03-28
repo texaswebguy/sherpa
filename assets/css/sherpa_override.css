@@ -499,7 +499,7 @@ border-radius: 6px;
 /* BUTTONS
 -------------------------------------------------- */
 .btn {
-  font-family: "museo_sans_for_dell_300Rg", "Trebuchet MS", Arial, Helvetica, sans-serif;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-size: 14px;
   display: inline-block;
   *display: inline;
