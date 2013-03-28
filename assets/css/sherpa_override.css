@@ -190,8 +190,8 @@ h4.feature {font-size: 50px;line-height: 100px;}
 }
 
 .title h1 {
-  display: inline;
-  background: pink;
+  /*display: inline;*/
+  background: lightBlue;
   padding: 0px 10px;
   max-width: 80%;
   /*display: block;*/
