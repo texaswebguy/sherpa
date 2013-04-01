@@ -184,12 +184,18 @@ h5.mobile, h6.mobile {
   text-rendering: optimizelegibility;
 }
 
-h1.mobile      {font-size: 22px;line-height: 26px;}
+/*h1.mobile      {font-size: 22px;line-height: 26px;}
 h2.mobile      {font-size: 20px;line-height: 24px;}
 h3.mobile      {font-size: 18px;line-height: 22px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
 h4.mobile      {font-size: 18px;line-height: 22px;}
 h5.mobile      {font-size: 14px;line-height: 20px;}
-h6.mobile      {font-size: 14px;line-height: 20px;}
+h6.mobile      {font-size: 14px;line-height: 20px;}*/
+
+h1.mobile       {font-size: 24px;line-height: 26px;}
+h2.mobile       {font-size: 20px;line-height: 24px;}
+h3.mobile       {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h4.mobile       {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 
 
