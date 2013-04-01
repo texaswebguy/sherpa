@@ -401,6 +401,16 @@ hr.logo {
 }
 
 
+/* Starter kit section*/
+
+.starterkit {
+  background: #799A8B;
+  color:#fff;
+  padding:60px 0;
+  text-align: center;
+}
+
+
 /* Pattern overlay
 ------------------------- */
 .jumbotron .container {
