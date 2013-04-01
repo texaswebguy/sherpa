@@ -404,12 +404,24 @@ hr.logo {
 /* Starter kit section*/
 
 .starterkit {
-  background: #487464;
+  background: #799A8B;
   border-top: 1px solid #487464;
   border-bottom: 1px solid #487464;
   color:#fff;
   padding:60px 0;
   text-align: center;
+
+
+  background-color: #487464;
+  background-image: -moz-linear-gradient(top, #487464, #799A8B);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#487464), to(#799A8B));
+  background-image: -webkit-linear-gradient(top, #487464, #799A8B);
+  background-image: -o-linear-gradient(top, #487464, #799A8B);
+  background-image: linear-gradient(to bottom, #487464, #799A8B);
+  background-repeat: repeat-x;
+  border-color: #487464;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#487464', endColorstr='#799A8B', GradientType=0);
+}
 }
 
 
