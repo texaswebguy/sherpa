@@ -156,7 +156,7 @@ Headers for desktop
 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
-h1, h2, h3, h4 {
+h1, h2 {
   font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -164,19 +164,18 @@ h1, h2, h3, h4 {
 }
 
 /* Edits made by AJ Lohman */
-h5, h6 {
+h3, h4, h5 {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
 }
 
 h1      {font-size: 36px;line-height: 40px;}
 h2      {font-size: 28px;line-height: 32px;}
-h3      {font-size: 20px;line-height: 24px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-h4      {font-size: 20px;line-height: 24px;}
-h5      {font-size: 18px;line-height: 22px;}
-h6      {font-size: 18px;line-height: 22px;}
+h3      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h4      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h5      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 /* Header - featured*/
 h4.feature {font-size: 50px;line-height: 100px;}
@@ -207,7 +206,7 @@ Headers for mobile (Phone)
 
   /* Edits made by:; AJ Lohman - just organized them a bit*/
   /* headers - All*/
-  h1, h2, h3, h4 {
+  h1, h2 {
     font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
     font-weight: normal;
     color: inherit;
@@ -215,19 +214,18 @@ Headers for mobile (Phone)
   }
 
   /* Edits made by AJ Lohman */
-  h5 {
+  h3, h4, h5 {
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
   }
 
-  h1      {font-size: 22px;line-height: 26px;}
+  h1      {font-size: 24px;line-height: 26px;}
   h2      {font-size: 20px;line-height: 24px;}
   h3      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
   h4      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
   h5      {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
-  /*h6      {font-size: 14px;line-height: 20px;}*/
 
 }
 
@@ -239,7 +237,7 @@ Headers for tablet
 
 @media only screen and (min-width:768px) and (max-width:979px) {
 
-  h1, h2, h3, h4 {
+  h1, h2 {
   font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -247,19 +245,18 @@ Headers for tablet
 }
 
   /* Edits made by AJ Lohman */
-  h5, h6 {
+  h3, h4, h5 {
     font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-weight: bold;
+    font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
   }
 
   h1      {font-size: 32px;line-height: 38px;}
   h2      {font-size: 26px;line-height: 30px;}
-  h3      {font-size: 20px;line-height: 24px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-  h4      {font-size: 20px;line-height: 24px;}
-  h5      {font-size: 16px;line-height: 22px;}
-  h6      {font-size: 16px;line-height: 22px;}
+  h3      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+  h4      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+  h5      {font-size: 16px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 }
 

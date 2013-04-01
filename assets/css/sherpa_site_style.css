@@ -143,7 +143,7 @@ h6.sherpa {
 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
-h1.tablet, h2.tablet, h3.tablet, h4.tablet {
+h1.tablet, h2.tablet {
   font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -151,7 +151,7 @@ h1.tablet, h2.tablet, h3.tablet, h4.tablet {
 }
 
 /* Edits made by AJ Lohman */
-h5.tablet, h6.tablet {
+h3.tablet, h4.tablet, h5.tablet {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: bold;
   color: inherit;
@@ -160,16 +160,14 @@ h5.tablet, h6.tablet {
 
 h1.tablet      {font-size: 32px;line-height: 38px;}
 h2.tablet      {font-size: 26px;line-height: 30px;}
-h3.tablet      {font-size: 20px;line-height: 24px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-h4.tablet      {font-size: 20px;line-height: 24px;}
-h5.tablet      {font-size: 16px;line-height: 22px;}
-h6.tablet      {font-size: 16px;line-height: 22px;}
-
+h3.tablet      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h4.tablet      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h5.tablet      {font-size: 16px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
-h1.mobile, h2.mobile, h3.mobile, h4.mobile {
+h1.mobile, h2.mobile {
   font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -177,9 +175,9 @@ h1.mobile, h2.mobile, h3.mobile, h4.mobile {
 }
 
 /* Edits made by AJ Lohman */
-h5.mobile, h6.mobile {
+h3.mobile, h4.mobileh, h5.mobile {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
 }
