@@ -447,7 +447,7 @@ hr.logo {
 /* Masthead (docs home)
 ------------------------- */
 .masthead {
-  padding: 60px 60px;
+  padding: 70px 0 80px;
   margin-bottom: 0;
   color: #fff;
 }
@@ -542,6 +542,7 @@ hr.logo {
 .marketing {
   text-align: center;
   color: #fff;
+  padding-bottom: 60px;
   background: #799A8B;
   border-top: 1px solid #487464;
   border-bottom: 1px solid #487464;
