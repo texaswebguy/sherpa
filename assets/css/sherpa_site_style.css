@@ -404,8 +404,9 @@ hr.logo {
 /* Starter kit section*/
 
 .starterkit {
-  background: #799A8B;
-  border: 1px solid #487464;
+  background: #487464;
+  border-top: 1px solid #487464;
+  border-bottom: 1px solid #487464;
   color:#fff;
   padding:60px 0;
   text-align: center;
