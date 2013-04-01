@@ -153,7 +153,7 @@ h1.tablet, h2.tablet {
 /* Edits made by AJ Lohman */
 h3.tablet, h4.tablet, h5.tablet {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  font-weight: bold;
+  font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
 }
