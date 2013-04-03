@@ -14,23 +14,7 @@
     *zoom: 1;
   }
 
-/* The main wrapper - don't touch */
 
-    .wrapper {
-      margin: 0 auto;
-      width: 90%;
-      max-width:1140px;
-      float: none;
-    }
-
-    div {
-      float: left;
-      width: 100%;
-      margin-bottom: 0px;
-      display: block;
-      position: relative;
-      *zoom: 1;
-    }
 
 /* FONTS
 -------------------------------------------------- */
