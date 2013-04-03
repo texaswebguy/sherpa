@@ -1,0 +1,236 @@
+
+/* The main wrapper - don't touch */
+		.wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none;}
+		div {float: left;width: 100%;margin-bottom: 0px;display: block;position: relative;*zoom: 1;}
+		input, textarea, .uneditable-input {width: 75%;}
+
+/* Put your styles here */
+
+	header {
+		padding-top:0px;
+		padding-bottom:0px;
+		overflow: hidden;
+	}
+
+	section {
+		overflow:hidden;
+	}
+
+	.main-content {
+		padding-top:20px;
+		overflow: hidden;
+	}
+
+	footer {
+		padding-top:20px;
+		overflow: hidden;
+	}
+	
+	.box {
+		margin-bottom: 20px;
+		padding: 10px 20px 0px 20px;
+		-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+		-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+		box-sizing: border-box;         /* Opera/IE 8+ */
+	}
+
+	
+/* Dell logo*/
+
+	.dell_logo {
+		font-size: 60px;
+		padding:21px 0 21px 0;
+		text-align: center;
+	}
+
+	.dell_logo a  {
+		color: #fff;
+		
+		-webkit-transition: all 0.2s ease-in;
+	  	-moz-transition: all 0.2s ease-in;
+	  	-o-transition: all 0.2s ease-in; 
+	}
+
+	.dell_logo a:hover  {
+		color: #fff;
+		text-decoration: none;
+	}
+
+/* Main nav*/
+
+	.main-nav {
+		display: block;
+		font-size: 18px;
+		line-height: 46px;
+		padding-top:0px;
+	}
+
+	.main-nav a {
+		color: #fff;
+
+		transition: all 0.2s ease-in;
+		-webkit-transition: all 0.2s ease-in;
+	  -moz-transition: all 0.2s ease-in;
+	  -o-transition: all 0.2s ease-in;         
+	}
+
+	.main-nav a:hover {
+		color: rgba(255,255,255,0.5);
+		text-decoration: none;
+	}
+
+	.main-nav ul {
+		margin:0;
+		padding:26px 0 30px 0;
+	}
+
+	.main-nav li{
+		list-style: none;
+		display: inline;
+		margin-right:4%;
+	}
+
+	.nav_name {
+		position: absolute;
+		font-size: 14px;
+		margin-top:-5px;
+		color:#fff;
+	}
+
+	.nav_number {
+		color:#fff;
+		font-size: 12px;
+		line-height: 18px;
+		margin:0 5px;
+		padding:1px 7px;
+
+		border-radius: 20px;
+		-webkit-border-radius:20px;
+		-moz-border-radius:20px;
+	}
+
+/* top bar*/
+
+	.dell_help, .recommends_windows {
+		/*background: pink;*/
+		color:#fff;
+	}
+
+	.recommends_windows {
+		text-align: right;
+	}
+
+	.dell_help p, .recommends_windows p {
+		margin:10px 0;
+	}
+
+/* cart */
+
+	.cart {
+		font-size: 20px;
+		padding:40px 0 40px 0;
+		text-align: right;
+	}
+
+	.cart_number {
+		color:#fff;
+		font-size: 12px;
+		line-height: 18px;
+		margin:0 5px;
+		padding:1px 7px;
+
+		position: absolute;
+		top:27px;
+		right:-20px;
+
+		border-radius: 20px;
+		-webkit-border-radius:20px;
+		-moz-border-radius:20px;
+	}
+
+/* search */
+
+	.search {
+		padding:35px 0 40px 0;
+	}
+
+	.search_collapsed {
+		font-size: 20px;
+		padding:40px 0 40px 0;
+		text-align: center;
+	}
+
+	.menu_callapsed {
+		font-size: 20px;
+		padding:40px 0 40px 0;
+		text-align: center;
+	}
+
+
+/*
+================================================
+Breakpoints
+================================================
+*/
+
+/* Tablet*/
+@media only screen and (min-width:768px) and (max-width:979px) {
+
+	/* Add your CSS here */
+
+	/* cart */
+	.cart {
+		text-align: center;
+	}
+
+	.cart_number {
+		right:0;
+	}
+
+	.border-left {
+		border-left: 1px rgba(255,255,255,0.2) solid;
+	}
+
+}
+
+/* Mobile (Phone)*/
+@media only screen and (max-width:767px) {
+
+	/* Add your CSS here */
+	
+	.border-left {
+		border-left: 1px rgba(255,255,255,0.2) solid;
+	}
+
+	.dell_logo {
+		font-size: 50px;
+		padding:16px 0 16px 0;
+		text-align: center;
+	}
+
+	.menu_callapsed {
+		font-size: 20px;
+		padding:30px 0 30px 0;
+		text-align: center;
+	}
+
+	.cart {
+		font-size: 20px;
+		padding:30px 0 30px 0;
+		text-align: center;
+	}
+
+	.search_collapsed {
+		font-size: 20px;
+		padding:30px 0 30px 0;
+		text-align: center;
+	}
+
+	.cart_number {
+		position: absolute;
+		width:20px;
+		left:50%;
+		top:18px;
+	}
+
+}
