@@ -14,6 +14,11 @@
     *zoom: 1;
   }
 
+<<<<<<< HEAD
+=======
+
+
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 /* FONTS
 -------------------------------------------------- */
 
@@ -124,6 +129,13 @@ body {
   background-color: #ffffff;
 }
 
+<<<<<<< HEAD
+=======
+p {
+  margin: 0 0 20px 0;
+}
+
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 a {
   color: #0085c3;
   text-decoration: none;
@@ -134,9 +146,31 @@ a:hover {
   text-decoration: underline;
 }
 
+<<<<<<< HEAD
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
 h1, h2, h3, h4 {
+=======
+a.white_text {
+  color:#ffffff;
+  text-decoration: none;
+}
+
+a:hover.white_text {
+  color: #ffffff;
+  text-decoration: underline;
+}
+
+/*
+================================================
+Headers for desktop
+================================================
+*/
+
+/* Edits made by:; AJ Lohman - just organized them a bit*/
+/* headers - All*/
+h1, h2 {
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
   font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -144,13 +178,20 @@ h1, h2, h3, h4 {
 }
 
 /* Edits made by AJ Lohman */
+<<<<<<< HEAD
 h5, h6 {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: bold;
+=======
+h3, h4, h5 {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
   color: inherit;
   text-rendering: optimizelegibility;
 }
 
+<<<<<<< HEAD
 h1,h2   {font-size: 36px;line-height: 40px;}
 h3      {font-size: 28px;line-height: 32px;}
 h4      {font-size: 20px;line-height: 22px;}
@@ -167,12 +208,111 @@ h4.bold {font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvet
 /*p {
 margin: 0 0 0 10px;
 }*/
+=======
+h1      {font-size: 36px;line-height: 40px;}
+h2      {font-size: 28px;line-height: 32px;}
+h3      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h4      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h5      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+
+/* Header - featured*/
+h4.feature {font-size: 50px;line-height: 100px;font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+
+/* Header - title*/
+.title {
+  text-align: center;
+  background: url(https://rawgithub.com/DellGDC/sherpa/master/assets/img/gray_dark_title_line.png) repeat-x 50%;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.title h1 {
+  display: inline-block;
+  background: #fff;
+  padding: 0px 10px;
+  max-width: 80%;
+  /*display: block;*/
+}
+
+/*
+================================================
+Headers for mobile (Phone)
+================================================
+*/
+
+@media only screen and (max-width:767px) {
+
+  /* Edits made by:; AJ Lohman - just organized them a bit*/
+  /* headers - All*/
+  h1, h2 {
+    font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: inherit;
+    text-rendering: optimizelegibility;
+  }
+
+  /* Edits made by AJ Lohman */
+  h3, h4, h5 {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: inherit;
+    text-rendering: optimizelegibility;
+  }
+
+  h1      {font-size: 24px;line-height: 26px;}
+  h2      {font-size: 20px;line-height: 24px;}
+  h3      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+  h4      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+  h5      {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+
+}
+
+/*
+================================================
+Headers for tablet
+================================================
+*/
+
+@media only screen and (min-width:768px) and (max-width:979px) {
+
+  h1, h2 {
+  font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+  /* Edits made by AJ Lohman */
+  h3, h4, h5 {
+    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-weight: normal;
+    color: inherit;
+    text-rendering: optimizelegibility;
+  }
+
+  h1      {font-size: 32px;line-height: 38px;}
+  h2      {font-size: 26px;line-height: 30px;}
+  h3      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+  h4      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+  h5      {font-size: 16px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+
+}
+
+
+
+
+
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 
 .lead {
   margin-bottom: 20px;
   font-size: 18px;
   font-weight: normal;
+<<<<<<< HEAD
   line-height: 24px;
+=======
+  line-height: 22px;
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 }
 
 small {
@@ -205,7 +345,11 @@ blockquote small {
 
 /* CENTER TEXT
 -------------------------------------------------- */
+<<<<<<< HEAD
 .center-text {
+=======
+.center_text {
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
   text-align: center;
 }
 
@@ -399,7 +543,11 @@ border-radius: 6px;
 /* BUTTONS
 -------------------------------------------------- */
 .btn {
+<<<<<<< HEAD
   font-family: "museo_sans_for_dell_300Rg", "Trebuchet MS", Arial, Helvetica, sans-serif;
+=======
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
   font-size: 14px;
   display: inline-block;
   *display: inline;
@@ -835,6 +983,7 @@ border-radius: 6px;
           border-radius: 10px;
 }
 
+<<<<<<< HEAD
 
 
 /* COLORS
@@ -862,10 +1011,27 @@ border-radius: 6px;
 
 .dell_lightgray {
   background-color: #eeeeee;
+=======
+/* Rounded corners
+-------------------------------------------------- */
+
+.rounded_big {
+  -webkit-border-radius: 10px; 
+  -moz-border-radius: 10px; 
+  border-radius: 10px;
+  padding:10px;
+}
+
+.rounded_small {
+  -webkit-border-radius: 5px; 
+  -moz-border-radius: 5px; 
+  border-radius: 5px;
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 }
 
 
 
+<<<<<<< HEAD
 .dell_blue {
   background-color: #0085c3;
 }
@@ -917,6 +1083,82 @@ border-radius: 6px;
 .gsd_gray {
   background-color: #737373;
 }
+=======
+/* COLORS from sherpa_override.css
+-------------------------------------------------- */
+
+.color-block {
+  padding:30px 0px;
+  border: 1px solid #eeeeee;
+}
+
+
+.white_text {
+  color:#ffffff;
+}
+
+/* Gray */
+
+.gray_dark {background-color: #444444;}
+.gray_medium {background-color: #737373;}
+.gray {background-color: #aaaaaa;}
+.gray_light {background-color: #eeeeee;}
+.gray_very_light {background-color: #f9f9f9;}
+.gray_stroke {padding: 30px 0px;border: 2px solid #cccccc;}
+.white {background-color: #ffffff;}
+
+/* Blue */
+.blue {background-color: #0085c3;}
+.blue_stroke {padding: 30px 0px;border: 2px solid #0085c3;}
+/*.blue_medium_stroke {padding: 30px 0px;border: 2px solid #7fc2e1;}
+*//*.blue_light {background-color: #d9edf6;}*/
+
+/* Green */
+.green {background-color: #7ab800;}
+.green_stroke { padding: 30px 0px;border: 2px solid #7ab800;}
+/*.green_medium_stroke { padding: 30px 0px;border: 2px solid #bcdb7f;}
+.green_light {background-color: #dcf1cc;}*/
+
+/* Yellow */
+.yellow {background-color: #F2AF00;}
+.yellow_stroke {padding: 30px 0px;border: 2px solid #F2AF00;}
+/*.yellow_medium_stroke {padding: 30px 0px;border: 2px solid #fae07c;}
+.yellow_light {background-color: #ffeeca;}*/
+
+/* Orange */
+.orange {background-color: #FF7700;}
+.orange_stroke {padding: 30px 0px;border: 2px solid #FF7700;}
+/*.orange_medium_stroke {padding: 30px 0px;border: 2px solid #ffbe84;}
+.orange_light {background-color: #fdebd9;}*/
+
+/* Red */
+.red {background-color: #DC5034;}
+.red_stroke {padding: 30px 0px;border: 2px solid #DC5034;}
+/*.red_medium_stroke {padding: 30px 0px;border: 2px solid #eda799;}
+.red_light { background-color: #fae5e1}*/
+.red_dark {background-color: #CE1126;}
+
+/* Berry */
+.berry {background-color: #B7295A;}
+.berry_stroke {padding: 30px 0px;border: 2px solid #B7295A;}
+/*.berry_medium_stroke {padding: 30px 0px;border: 2px solid #db94ac;}
+.berry_light {background-color: #f4dfe3;}*/
+
+/* Purple */
+.purple {background-color: #6E2585;}
+.purple_stroke {padding: 30px 0px;border: 2px solid #6E2585;}
+/*.purple_medium_stroke {padding: 30px 0px;border: 2px solid #b396c7;}
+.purple_light {background-color: #e8e0ee;}*/
+
+/* Teal */
+.teal {background-color: #71C6C1;}
+.teal_stroke {padding: 30px 0px;border: 2px solid #71C6C1;}
+/*.teal_medium_stroke {padding: 30px 0px;border: 2px solid #bde5e2;}
+.teal_light {background-color: #d9f2eb}*/
+
+/* Navy */
+.navyblue {background-color: #003758;}
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 
 
 .close {
@@ -943,6 +1185,7 @@ border-radius: 6px;
 /* TEXT COLORS
 -------------------------------------------------- */
 
+<<<<<<< HEAD
 
 .white_text {
   color:#ffffff;
@@ -1013,6 +1256,25 @@ border-radius: 6px;
 .gsd_gray_text {
   color: #737373;
 }
+=======
+.white_text {color:#ffffff;}
+.darkgray_text {color: #444444;}
+.gray_text {color: #aaaaaa;}
+.lightgray_text {color: #eeeeee;}
+.blue_text {color: #0085c3;}
+.green_text {color: #7ab800;}
+.yellow_text {color: #F2AF00;}
+.orange_text {color: #FF7700;}
+.red_text {color: #DC5034;}
+.darkred_text {color: #CE1126;}
+.berry_text {color: #B7295A;}
+.purple_text {color: #6E2585;}
+.teal_text {color: #71C6C1;}
+.navyblue_text {color: #003758;}
+.lightblue_text {color: #CCE7F3;}
+.orange_text {color: #fd5400;}
+.gray_text {color: #737373;}
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 
 
 
@@ -1379,6 +1641,7 @@ you can use the generic selector below, but it's slower:
   color: #ccc;
 }
 
+<<<<<<< HEAD
 /* Edits made bu: AJ Lohman*/
 
 /* Block Grids ---------------------- */
@@ -1431,6 +1694,8 @@ that IE7/8 do not support :nth-child.
 .block-grid.twelve-up > li:nth-child(12n+1) { clear: both; }
 
 
+=======
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 
 /* Media queries
 -------------------------------------------------- */
@@ -1439,6 +1704,7 @@ that IE7/8 do not support :nth-child.
 @media (max-width: 767px) {
 
   /* Edits made by: AJ Lohman - removes the default 20px padding from Bootstrap.  */
+<<<<<<< HEAD
   /*body {
     padding-right:0;
     padding-left:0;
@@ -1471,6 +1737,12 @@ that IE7/8 do not support :nth-child.
   .block-grid.mobile-eleven-up > li:nth-child(11n+1) { clear: both; }
   .block-grid.mobile-twelve-up > li { width: 8.33333%; }
   .block-grid.mobile-twelve-up > li:nth-child(12n+1) { clear: both; }
+=======
+  body {
+    padding-right:0;
+    padding-left:0;
+  }
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 
 }
 

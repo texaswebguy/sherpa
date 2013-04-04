@@ -1,3 +1,4 @@
+<<<<<<< HEAD
 ## 2.0 BOOTSTRAP JS PHILOSOPHY
 These are the high-level design rules which guide the development of Bootstrap's plugin apis.
 
@@ -104,3 +105,8 @@ examples:
     data-toggle="button"
     data-toggle="buttons-checkbox"
     data-toggle="buttons-radio"
+=======
+## Sherpa
+
+
+>>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
