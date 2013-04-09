@@ -129,13 +129,10 @@ body {
   background-color: #ffffff;
 }
 
-<<<<<<< HEAD
-=======
 p {
   margin: 0 0 20px 0;
 }
 
->>>>>>> 292d2bc0c0dbb686a83fce6e39d211f2a7c77ef2
 a {
   color: #0085c3;
   text-decoration: none;
@@ -146,11 +143,10 @@ a:hover {
   text-decoration: underline;
 }
 
-<<<<<<< HEAD
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
 h1, h2, h3, h4 {
-=======
+
 a.white_text {
   color:#ffffff;
   text-decoration: none;

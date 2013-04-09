@@ -1,0 +1,2894 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8">
+    <title>Sherpa - A Dell web development framework</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <meta name="description" content="web development framework">
+    <meta name="author" content="Dell">
+
+    <!-- Bootstrap styles -->
+    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/bootstrap.css" type="text/css"
+     rel="stylesheet">
+
+    <!-- Sherpa styles -->
+    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_override.css" type="text/css"
+     rel="stylesheet">
+
+    <!-- Sherpa site styles -->
+    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_site_style.css" type="text/css"
+     rel="stylesheet">
+        
+    <!-- Code in a page styles -->
+    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/js/google-code-prettify/prettify.css" type="text/css"
+     rel="stylesheet">
+
+    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
+    <!--[if lt IE 9]>
+      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
+    <![endif]-->
+
+    <!-- fav and touch icons 
+    <link rel="shortcut icon" href="assets/ico/favicon.ico">
+    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
+    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
+    -->
+
+  </head>
+
+  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+
+    <!-- Navbar
+    ================================================== -->
+    <div class="navbar navbar-inverse navbar-fixed-top">
+      <div class="navbar-inner">
+        <div class="container-fluid">
+          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+            <span class="icon-bar"></span>
+          </button>
+          <a class="brand" href="./index.html">Sherpa</a>
+          <div class="nav-collapse collapse">
+            <ul class="nav">
+              <li class="">
+                <a href="./index.html">Home</a>
+              </li>
+<!--               <li class="">
+                <a href="./getting-started.html">Get started</a>
+              </li> -->
+              <li class="">
+                <a href="./how-to.html">Get started</a>
+              </li>
+              <!-- <li class="">
+                <a href="./scaffolding.html">Scaffolding</a>
+              </li> -->
+              <li class="active">
+                <a href="./base-css.html">Basic Elements</a>
+              </li>
+              <!-- <li class="">
+                <a href="./components.html">Components</a>
+              </li> -->
+              <!-- <li class="">
+                <a href="./javascript.html">JavaScript</a>
+              </li> -->
+              <!-- <li class="divider-vertical"></li> -->
+              
+<!--               <li class="">
+                <a href="./customize.html">Customize</a>
+              </li> -->
+            </ul>
+          </div>
+        </div>
+      </div>
+    </div>
+
+<!-- Subhead
+================================================== -->
+<header class="jumbotron subhead" id="overview">
+  <div class="container-fluid">
+    <h1 class="sherpa">Base CSS</h1>
+    <p class="lead">Fundamental HTML elements styled and enhanced with extensible classes.</p>
+  </div>
+</header>
+
+
+  <div class="container-fluid">
+
+    <!-- Docs nav
+    ================================================== -->
+    <div class="row-fluid">
+      <div class="span3 bs-docs-sidebar">
+        <ul class="nav nav-list bs-docs-sidenav">
+          <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+          <!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
+          <!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
+          <li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+          <li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+          <!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
+          <li><a href="#colors"><i class="icon-chevron-right"></i> Colors</a></li>
+          <li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+        </ul>
+      </div>
+      <div class="span9">
+
+
+
+        <!-- Typography
+        ================================================== -->
+        <section id="typography">
+          <div class="page-header">
+            <h1 class="sherpa">Typography</h1>
+          </div>
+
+          <h2 class="sherpa" id="headings">Headings</h2>
+          <p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
+          <div class="bs-docs-example">
+            <h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+            <h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+            <h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+            <h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+            <h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+            <!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+          </div>
+
+
+          <h3 class="sherpa">Headings options</h3>
+          <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
+          <div class="bs-docs-example">
+             <!-- <h3 class="bold"><code>&lt;h3 class="bold"&gt;</code> h3 Heading 3</h3>
+             <h4 class="bold"><code>&lt;h4 class="bold"&gt;</code> h4. Heading 4</h4> -->
+             <h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
+             <h1 class="well-color white_text"><code>&lt;h1 class="white_text"&gt;</code> h1. Heading 1</h1>
+          </div>
+
+          <!-- Edit made by: AJ lohman - Needed to show what headers look like in mobile -->
+          <!-- Mobile headers -->
+          <h3 class="sherpa">Tablet headings</h3>
+          <p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+            <h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+            <h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+            <h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+            <h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+          </div>
+
+          <h3 class="sherpa">Phone headings</h3>
+          <p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+            <h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+            <h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+            <h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+            <h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+          </div>
+
+
+          <hr class="bs-docs-separator">
+
+          <h2 class="sherpa" id="body-copy">Body copy</h2>
+          <p>Sherpa's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+          <div class="bs-docs-example">
+            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+          </div>
+          <pre class="prettyprint">&lt;p&gt;...&lt;/p&gt;</pre>
+
+          <h3 class="sherpa">Lead body copy</h3>
+          <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+          <div class="bs-docs-example">
+            <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+          </div>
+          <pre class="prettyprint">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+
+   <!--        <h3 class="sherpa">Built with Less</h3>
+          <p>The typographic scale is based on two LESS variables in <strong>variables.less</strong>: <code>@baseFontSize</code> and <code>@baseLineHeight</code>. The first is the base font-size used throughout and the second is the base line-height. We use those variables and some simple math to create the margins, paddings, and line-heights of all our type and more. Customize them and Sherpa adapts.</p> -->
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa" id="emphasis">Emphasis</h2>
+          <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+          <h3 class="sherpa"><code>&lt;small&gt;</code></h3>
+          <p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+          <div class="bs-docs-example">
+            <p><small>This line of text is meant to be treated as fine print.</small></p>
+          </div>
+<pre class="prettyprint">
+&lt;p&gt;
+  &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
+&lt;/p&gt;
+</pre>
+
+          <h3 class="sherpa">Bold</h3>
+          <p>For emphasizing a snippet of text with a heavier font-weight.</p>
+          <div class="bs-docs-example">
+            <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+          </div>
+          <pre class="prettyprint">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+
+          <h3 class="sherpa">Italics</h3>
+          <p>For emphasizing a snippet of text with italics.</p>
+          <div class="bs-docs-example">
+            <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+          </div>
+          <pre class="prettyprint">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
+          <p><span class="label label-info">Heads up!</span> Feel free to use <code>&lt;b&gt;</code> and <code>&lt;i&gt;</code> in HTML5. <code>&lt;b&gt;</code> is meant to highlight words or phrases without conveying additional importance while <code>&lt;i&gt;</code> is mostly for voice, technical terms, etc.</p>
+
+          <!-- <h3 class="sherpa">Emphasis classes</h3>
+          <p>Convey meaning through color with a handful of emphasis utility classes.</p>
+          <div class="bs-docs-example">
+            <p class="muted">Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.</p>
+            <p class="text-warning">Etiam porta sem malesuada magna mollis euismod.</p>
+            <p class="text-error">Donec ullamcorper nulla non metus auctor fringilla.</p>
+            <p class="text-info">Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.</p>
+            <p class="text-success">Duis mollis, est non commodo luctus, nisi erat porttitor ligula.</p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p class="muted"&gt;Fusce dapibus, tellus ac cursus commodo, tortor mauris nibh.&lt;/p&gt;
+&lt;p class="text-warning"&gt;Etiam porta sem malesuada magna mollis euismod.&lt;/p&gt;
+&lt;p class="text-error"&gt;Donec ullamcorper nulla non metus auctor fringilla.&lt;/p&gt;
+&lt;p class="text-info"&gt;Aenean eu leo quam. Pellentesque ornare sem lacinia quam venenatis.&lt;/p&gt;
+&lt;p class="text-success"&gt;Duis mollis, est non commodo luctus, nisi erat porttitor ligula.&lt;/p&gt;
+</pre> -->
+
+
+         <!--  <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa" id="abbreviations">Abbreviations</h2>
+          <p>Stylized implemenation of HTML's <code>&lt;abbr&gt;</code> element for abbreviations and acronyms to show the expanded version on hover. Abbreviations with a <code>title</code> attribute have a light dotted bottom border and a help cursor on hover, providing additional context on hover.</p>
+
+          <h3 class="sherpa"><code>&lt;abbr&gt;</code></h3>
+          <p>For expanded text on long hover of an abbreviation, include the <code>title</code> attribute.</p>
+          <div class="bs-docs-example">
+            <p>An abbreviation of the word attribute is <abbr title="attribute">attr</abbr>.</p>
+          </div>
+          <pre class="prettyprint">&lt;abbr title="attribute"&gt;attr&lt;/abbr&gt;</pre>
+
+          <h3 class="sherpa"><code>&lt;abbr class="initialism"&gt;</code></h3>
+          <p>Add <code>.initialism</code> to an abbreviation for a slightly smaller font-size.</p>
+          <div class="bs-docs-example">
+            <p><abbr title="HyperText Markup Language" class="initialism">HTML</abbr> is the best thing since sliced bread.</p>
+          </div>
+          <pre class="prettyprint">&lt;abbr title="HyperText Markup Language" class="initialism"&gt;HTML&lt;/abbr&gt;</pre>
+
+
+          <hr class="bs-docs-separator">
+ -->
+
+         <!--  <h2 class="sherpa" id="addresses">Addresses</h2>
+          <p>Present contact information for the nearest ancestor or the entire body of work.</p>
+
+          <h3 class="sherpa"><code>&lt;address&gt;</code></h3>
+          <p>Preserve formatting by ending all lines with <code>&lt;br&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <address>
+              <strong>Twitter, Inc.</strong><br>
+              795 Folsom Ave, Suite 600<br>
+              San Francisco, CA 94107<br>
+              <abbr title="Phone">P:</abbr> (123) 456-7890
+            </address>
+            <address>
+              <strong>Full Name</strong><br>
+              <a href="mailto:#">first.last@gmail.com</a>
+            </address>
+          </div>
+<pre class="prettyprint linenums">
+&lt;address&gt;
+  &lt;strong&gt;Twitter, Inc.&lt;/strong&gt;&lt;br&gt;
+  795 Folsom Ave, Suite 600&lt;br&gt;
+  San Francisco, CA 94107&lt;br&gt;
+  &lt;abbr title="Phone"&gt;P:&lt;/abbr&gt; (123) 456-7890
+&lt;/address&gt;
+
+&lt;address&gt;
+  &lt;strong&gt;Full Name&lt;/strong&gt;&lt;br&gt;
+  &lt;a href="mailto:#"&gt;first.last@gmail.com&lt;/a&gt;
+&lt;/address&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator"> -->
+
+
+          <!-- <h2 class="sherpa" id="blockquotes">Blockquotes</h2>
+          <p>For quoting blocks of content from another source within your document.</p>
+
+          <h3 class="sherpa">Default blockquote</h3>
+          <p>Wrap <code>&lt;blockquote&gt;</code> around any <abbr title="HyperText Markup Language">HTML</abbr> as the quote. For straight quotes we recommend a <code>&lt;p&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+&lt;/blockquote&gt;
+</pre>
+
+          <h3 class="sherpa">Blockquote options</h3>
+          <p>Style and content changes for simple variations on a standard blockquote.</p>
+
+          <h4 class="sherpa">Naming a source</h4>
+          <p>Add <code>&lt;small&gt;</code> tag for identifying the source. Wrap the name of the source work in <code>&lt;cite&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <blockquote>
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote&gt;
+  &lt;p&gt;Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.&lt;/p&gt;
+  &lt;small&gt;Someone famous &lt;cite title="Source Title"&gt;Source Title&lt;/cite&gt;&lt;/small&gt;
+&lt;/blockquote&gt;
+</pre> -->
+
+          <!-- <h4 class="sherpa">Alternate displays</h4>
+          <p>Use <code>.pull-right</code> for a floated, right-aligned blockquote.</p>
+          <div class="bs-docs-example" style="overflow: hidden;">
+            <blockquote class="pull-right">
+              <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+              <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+            </blockquote>
+          </div>
+<pre class="prettyprint linenums">
+&lt;blockquote class="pull-right"&gt;
+  ...
+&lt;/blockquote&gt;
+</pre> -->
+
+
+          <hr class="bs-docs-separator">
+
+
+          <!-- Lists -->
+          <h2 class="sherpa" id="lists">Lists</h2>
+
+          <h3 class="sherpa">Unordered</h3>
+          <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+          <div class="bs-docs-example">
+            <ul>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit
+                <ul>
+                  <li>Phasellus iaculis neque</li>
+                  <li>Purus sodales ultricies</li>
+                  <li>Vestibulum laoreet porttitor sem</li>
+                  <li>Ac tristique libero volutpat at</li>
+                </ul>
+              </li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ul>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h3 class="sherpa">Ordered</h3>
+          <p>A list of items in which the order <em>does</em> explicitly matter.</p>
+          <div class="bs-docs-example">
+            <ol>
+              <li>Lorem ipsum dolor sit amet</li>
+              <li>Consectetur adipiscing elit</li>
+              <li>Integer molestie lorem at massa</li>
+              <li>Facilisis in pretium nisl aliquet</li>
+              <li>Nulla volutpat aliquam velit</li>
+              <li>Faucibus porta lacus fringilla vel</li>
+              <li>Aenean sit amet erat nunc</li>
+              <li>Eget porttitor lorem</li>
+            </ol>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;
+</pre>
+
+        <h3 class="sherpa">Unstyled</h3>
+        <p>A list of items with no <code>list-style</code> or additional left padding.</p>
+        <div class="bs-docs-example">
+          <ul class="unstyled">
+            <li>Lorem ipsum dolor sit amet</li>
+            <li>Consectetur adipiscing elit</li>
+            <li>Integer molestie lorem at massa</li>
+            <li>Facilisis in pretium nisl aliquet</li>
+            <li>Nulla volutpat aliquam velit
+              <ul>
+                <li>Phasellus iaculis neque</li>
+                <li>Purus sodales ultricies</li>
+                <li>Vestibulum laoreet porttitor sem</li>
+                <li>Ac tristique libero volutpat at</li>
+              </ul>
+            </li>
+            <li>Faucibus porta lacus fringilla vel</li>
+            <li>Aenean sit amet erat nunc</li>
+            <li>Eget porttitor lorem</li>
+          </ul>
+        </div>
+<pre class="prettyprint linenums">
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+        <!-- <h3 class="sherpa">Description</h3>
+        <p>A list of terms with their associated descriptions.</p>
+        <div class="bs-docs-example">
+          <dl>
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+          </dl>
+        </div>
+<pre class="prettyprint linenums">
+&lt;dl&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre> -->
+
+        <!-- <h4 class="sherpa">Horizontal description</h4>
+        <p>Make terms and descriptions in <code>&lt;dl&gt;</code> line up side-by-side.</p>
+        <div class="bs-docs-example">
+          <dl class="dl-horizontal">
+            <dt>Description lists</dt>
+            <dd>A description list is perfect for defining terms.</dd>
+            <dt>Euismod</dt>
+            <dd>Vestibulum id ligula porta felis euismod semper eget lacinia odio sem nec elit.</dd>
+            <dd>Donec id elit non mi porta gravida at eget metus.</dd>
+            <dt>Malesuada porta</dt>
+            <dd>Etiam porta sem malesuada magna mollis euismod.</dd>
+            <dt>Felis euismod semper eget lacinia</dt>
+            <dd>Fusce dapibus, tellus ac cursus commodo, tortor mauris condimentum nibh, ut fermentum massa justo sit amet risus.</dd>
+          </dl>
+        </div>
+<pre class="prettyprint linenums">
+&lt;dl class="dl-horizontal"&gt;
+  &lt;dt&gt;...&lt;/dt&gt;
+  &lt;dd&gt;...&lt;/dd&gt;
+&lt;/dl&gt;
+</pre> -->
+        <!-- <p>
+          <span class="label label-info">Heads up!</span>
+          Horizontal description lists will truncate terms that are too long to fit in the left column fix <code>text-overflow</code>. In narrow-fluider viewports, they will change to the default stacked layout.
+        </p> -->
+      </section>
+
+
+
+        <!-- Code
+        ================================================== -->
+        <!-- <section id="code">
+          <div class="page-header">
+            <h1 class="sherpa">Code</h1>
+          </div>
+
+          <h2 class="sherpa">Inline</h2>
+          <p>Wrap inline snippets of code with <code>&lt;code&gt;</code>.</p>
+<div class="bs-docs-example">
+  For example, <code>&lt;section&gt;</code> should be wrapped as inline.
+</div>
+<pre class="prettyprint linenums">
+For example, &lt;code&gt;&lt;section&gt;&lt;/code&gt; should be wrapped as inline.
+</pre>
+
+          <h2 class="sherpa">Basic block</h2>
+          <p>Use <code>&lt;pre&gt;</code> for multiple lines of code. Be sure to escape any angle brackets in the code for proper rendering.</p>
+<div class="bs-docs-example">
+  <pre>&lt;p&gt;Sample text here...&lt;/p&gt;</pre>
+</div>
+<pre class="prettyprint linenums" style="margin-bottom: 9px;">
+&lt;pre&gt;
+  &amp;lt;p&amp;gt;Sample text here...&amp;lt;/p&amp;gt;
+&lt;/pre&gt;
+</pre>
+          <p><span class="label label-info">Heads up!</span> Be sure to keep code within <code>&lt;pre&gt;</code> tags as close to the left as possible; it will render all tabs.</p>
+          <p>You may optionally add the <code>.pre-scrollable</code> class which will set a max-height of 350px and provide a y-axis scrollbar.</p>
+        </section> -->
+
+
+
+        <!-- Tables
+        ================================================== -->
+        <!-- <section id="tables">
+          <div class="page-header">
+            <h1 class="sherpa">Tables</h1>
+          </div>
+
+          <h2 class="sherpa">Default styles</h2>
+          <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre class="prettyprint linenums">
+&lt;table class="table"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Optional classes</h2>
+          <p>Add any of the following classes to the <code>.table</code> base class.</p>
+
+          <h3 class="sherpa"><code>.table-striped</code></h3>
+          <p>Adds zebra-striping to any table row-fluid within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-IE8).</p>
+          <div class="bs-docs-example">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Larry</td>
+                  <td>the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-striped"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+          <h3 class="sherpa"><code>.table-bordered</code></h3>
+          <p>Add borders and rounded corners to the table.</p>
+          <div class="bs-docs-example">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td row-fluidspan="2">1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@TwSherpa</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre class="prettyprint linenums">
+&lt;table class="table table-bordered"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+          <h3 class="sherpa"><code>.table-hover</code></h3>
+          <p>Enable a hover state on table row-fluids within a <code>&lt;tbody&gt;</code>.</p>
+          <div class="bs-docs-example">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-hover"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+          <h3 class="sherpa"><code>.table-condensed</code></h3>
+          <p>Makes tables more compact by cutting cell padding in half.</p>
+          <div class="bs-docs-example">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>Mark</td>
+                  <td>Otto</td>
+                  <td>@mdo</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Jacob</td>
+                  <td>Thornton</td>
+                  <td>@fat</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td colspan="2">Larry the Bird</td>
+                  <td>@twitter</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre class="prettyprint linenums" style="margin-bottom: 18px;">
+&lt;table class="table table-condensed"&gt;
+  …
+&lt;/table&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator"> -->
+
+<!-- 
+          <h2 class="sherpa">Optional row-fluid classes</h2>
+          <p>Use contextual classes to color table row-fluids.</p>
+          
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>.success</code>
+                </td>
+                <td>Indicates a successful or positive action.</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.error</code>
+                </td>
+                <td>Indicates a dangerous or potentially negative action.</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.warning</code>
+                </td>
+                <td>Indicates a warning that might need attention.</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.info</code>
+                </td>
+                <td>Used as an alternative to the default styles.</td>
+              </tr>
+            </tbody>
+          </table>
+
+
+          <div class="bs-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Product</th>
+                  <th>Payment Taken</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="success">
+                  <td>1</td>
+                  <td>TB - Monthly</td>
+                  <td>01/04/2012</td>
+                  <td>Approved</td>
+                </tr>
+                <tr class="error">
+                  <td>2</td>
+                  <td>TB - Monthly</td>
+                  <td>02/04/2012</td>
+                  <td>Declined</td>
+                </tr>
+                <tr class="warning">
+                  <td>3</td>
+                  <td>TB - Monthly</td>
+                  <td>03/04/2012</td>
+                  <td>Pending</td>
+                </tr>
+                <tr class="info">
+                  <td>4</td>
+                  <td>TB - Monthly</td>
+                  <td>04/04/2012</td>
+                  <td>Call in to confirm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre class="prettyprint linenums">
+...
+  &lt;tr class="success"&gt;
+    &lt;td&gt;1&lt;/td&gt;
+    &lt;td&gt;TB - Monthly&lt;/td&gt;
+    &lt;td&gt;01/04/2012&lt;/td&gt;
+    &lt;td&gt;Approved&lt;/td&gt;
+  &lt;/tr&gt;
+...
+</pre>
+
+
+          <hr class="bs-docs-separator"> -->
+
+
+          <!-- <h2 class="sherpa">Supported table markup</h2>
+          <p>List of supported table HTML elements and how they should be used.</p>
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>&lt;table&gt;</code>
+                </td>
+                <td>
+                  Wrapping element for displaying data in a tabular format
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;thead&gt;</code>
+                </td>
+                <td>
+                  container-fluid element for table header row-fluids (<code>&lt;tr&gt;</code>) to label table columns
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tbody&gt;</code>
+                </td>
+                <td>
+                  container-fluid element for table row-fluids (<code>&lt;tr&gt;</code>) in the body of the table
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tr&gt;</code>
+                </td>
+                <td>
+                  container-fluid element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row-fluid
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;td&gt;</code>
+                </td>
+                <td>
+                  Default table cell
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;th&gt;</code>
+                </td>
+                <td>
+                  Special table cell for column (or row-fluid, depending on scope and placement) labels<br>
+                  Must be used within a <code>&lt;thead&gt;</code>
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;caption&gt;</code>
+                </td>
+                <td>
+                  Description or summary of what the table holds, especially useful for screen readers
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums">
+&lt;table&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;...&lt;/td&gt;
+      &lt;td&gt;...&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+</pre>
+
+        </section> -->
+
+
+
+        <!-- Forms
+        ================================================== -->
+        <section id="forms">
+          <div class="page-header">
+            <h1 class="sherpa">Forms</h1>
+          </div>
+
+          <h2 class="sherpa">Default styles</h2>
+          <p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> or large changes in markup. Results in stacked, left-aligned labels on top of form controls.</p>
+          <form class="bs-docs-example">
+            <fieldset>
+              <legend>Legend</legend>
+              <label>Label name</label>
+              <input type="text" placeholder="Type something…">
+              <span class="help-block">Example block-level help text here.</span>
+              <label class="checkbox">
+                <input type="checkbox"> Check me out
+              </label>
+              <button type="submit" class="btn">Submit</button>
+            </fieldset>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;legend&gt;Legend&lt;/legend&gt;
+    &lt;label&gt;Label name&lt;/label&gt;
+    &lt;input type="text" placeholder="Type something…"&gt;
+    &lt;span class="help-block"&gt;Example block-level help text here.&lt;/span&gt;
+    &lt;label class="checkbox"&gt;
+      &lt;input type="checkbox"&gt; Check me out
+    &lt;/label&gt;
+    &lt;button type="submit" class="btn"&gt;Submit&lt;/button&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Optional layouts</h2>
+          <p>Included with Sherpa are three optional form layouts for common use cases.</p>
+
+          <h3 class="sherpa">Search form</h3>
+          <p>Add <code>.form-search</code> to the form and <code>.search-query</code> to the <code>&lt;input&gt;</code> for an extra-rounded text input.</p>
+          <form class="bs-docs-example form-search">
+            <div class="input-append search-query-left">
+              <input type="text" class="span4 search-query">
+              <button type="submit" class="btn"><span aria-hidden="true" class="icon-search-right"></span></button>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;div class="input-append search-query-left"&gt;
+    &lt;input type="text" class="search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;&lt;span aria-hidden="true" class="icon-search-right"&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;  
+&lt;/form&gt;
+
+</pre>
+
+
+ <h4 class="sherpa">Search form (default - aligned left)</h4>
+
+          <div class="row-fluid">
+            <div class="span12">
+
+              <form class="bs-docs-example form-search">
+                <div class="input-append search-query-left">
+                  <input type="text" class="span6 search-query">
+                  <button type="submit" class="btn"><span aria-hidden="true" class="icon-search-right"></span></button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+          <pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;div class="input-append search-query-left"&gt;
+    &lt;input type="text" class="search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;&lt;span aria-hidden="true" class="icon-search-right"&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;  
+&lt;/form&gt;
+          </pre>
+
+
+          <h4 class="sherpa">Search form (aligned center)</h4>
+
+          <div class="row-fluid">
+            <div class="span12">
+
+              <form class="bs-docs-example form-search">
+                <div class="input-append search-query-center">
+                  <input type="text" class="span6 search-query">
+                  <button type="submit" class="btn"><span aria-hidden="true" class="icon-search-right"></span></button>
+                </div>
+              </form>
+
+            </div>
+          </div>
+
+          <pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;div class="input-append search-query-center"&gt;
+    &lt;input type="text" class="search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;&lt;span aria-hidden="true" class="icon-search-right"&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;  
+&lt;/form&gt;
+          </pre>
+
+          <h4 class="sherpa">Search form (aligned right)</h4>
+
+          <div class="row-fluid">
+            <div class="span12">
+              <form class="bs-docs-example form-search">
+                <div class="input-append search-query-right">
+                  <input type="text" class="span6 search-query">
+                  <button type="submit" class="btn"><span aria-hidden="true" class="icon-search-right"></span></button>
+                </div>
+              </form>
+            </div>
+          </div>
+
+<pre class="prettyprint linenums">
+&lt;form class="form-search"&gt;
+  &lt;div class="input-append search-query-right"&gt;
+    &lt;input type="text" class="search-query"&gt;
+    &lt;button type="submit" class="btn"&gt;&lt;span aria-hidden="true" class="icon-search-right"&gt;&lt;/span&gt;&lt;/button&gt;
+  &lt;/div&gt;  
+&lt;/form&gt;
+          </pre>
+
+
+
+
+          <h3 class="sherpa">Inline form</h3>
+          <p>Add <code>.form-inline</code> for left-aligned labels and inline-block controls for a compact layout.</p>
+          <form class="bs-docs-example form-inline">
+            <input type="text" class="input-small" placeholder="Email">
+            <input type="password" class="input-small" placeholder="Password">
+            <label class="checkbox">
+              <input type="checkbox"> Remember me
+            </label>
+            <button type="submit" class="btn">Sign in</button>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form class="form-inline"&gt;
+  &lt;input type="text" class="input-small" placeholder="Email"&gt;
+  &lt;input type="password" class="input-small" placeholder="Password"&gt;
+  &lt;label class="checkbox"&gt;
+    &lt;input type="checkbox"&gt; Remember me
+  &lt;/label&gt;
+  &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+&lt;/form&gt;
+</pre>
+
+          <h3 class="sherpa">Horizontal form</h3>
+          <p>Right align labels and float them to the left to make them appear on the same line as controls. Requires the most markup changes from a default form:</p>
+          <ul>
+            <li>Add <code>.form-horizontal</code> to the form</li>
+            <li>Wrap labels and controls in <code>.control-group</code></li>
+            <li>Add <code>.control-label</code> to the label</li>
+            <li>Wrap any associated controls in <code>.controls</code> for proper alignment</li>
+          </ul>
+          <form class="bs-docs-example form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputEmail">Email</label>
+              <div class="controls">
+                <input type="text" id="inputEmail" placeholder="Email">
+              </div>
+            </div>
+            <div class="control-group">
+              <label class="control-label" for="inputPassword">Password</label>
+              <div class="controls">
+                <input type="password" id="inputPassword" placeholder="Password">
+              </div>
+            </div>
+            <div class="control-group">
+              <div class="controls">
+                <label class="checkbox">
+                  <input type="checkbox"> Remember me
+                </label>
+                <button type="submit" class="btn">Sign in</button>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;form class="form-horizontal"&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputEmail"&gt;Email&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="text" id="inputEmail" placeholder="Email"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;label class="control-label" for="inputPassword"&gt;Password&lt;/label&gt;
+    &lt;div class="controls"&gt;
+      &lt;input type="password" id="inputPassword" placeholder="Password"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;div class="control-group"&gt;
+    &lt;div class="controls"&gt;
+      &lt;label class="checkbox"&gt;
+        &lt;input type="checkbox"&gt; Remember me
+      &lt;/label&gt;
+      &lt;button type="submit" class="btn"&gt;Sign in&lt;/button&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/form&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Supported form controls</h2>
+          <p>Examples of standard form controls supported in an example form layout.</p>
+
+          <h3 class="sherpa">Inputs</h3>
+          <p>Most common form control, text-based input fields. Includes support for all HTML5 types: text, password, datetime, datetime-local, date, month, time, week, number, email, url, search, tel, and color.</p>
+          <p>Requires the use of a specified <code>type</code> at all times.</p>
+          <form class="bs-docs-example form-inline">
+            <input type="text" placeholder="Text input">
+          </form>
+<pre class="prettyprint linenums">
+&lt;input type="text" placeholder="Text input"&gt;
+</pre>
+
+          <h3 class="sherpa">Textarea</h3>
+          <p>Form control which supports multiple lines of text. Change <code>row-fluids</code> attribute as necessary.</p>
+          <form class="bs-docs-example form-inline">
+            <textarea row-fluids="3"></textarea>
+          </form>
+<pre class="prettyprint linenums">
+&lt;textarea row-fluids="3"&gt;&lt;/textarea&gt;
+</pre>
+
+          <h3 class="sherpa">Checkboxes and radios</h3>
+          <p>Checkboxes are for selecting one or several options in a list while radios are for selecting one option from many.</p>
+          <h4 class="sherpa">Default (stacked)</h4>
+          <form class="bs-docs-example">
+            <label class="checkbox">
+              <input type="checkbox" value="">
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+            <br>
+            <label class="radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked>
+              Option one is this and that&mdash;be sure to include why it's great
+            </label>
+            <label class="radio">
+              <input type="radio" name="optionsRadios" id="optionsRadios2" value="option2">
+              Option two can be something else and selecting it will deselect option one
+            </label>
+          </form>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" value=""&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios1" value="option1" checked&gt;
+  Option one is this and that&mdash;be sure to include why it's great
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadios" id="optionsRadios2" value="option2"&gt;
+  Option two can be something else and selecting it will deselect option one
+&lt;/label&gt;
+</pre>
+
+          <h4 class="sherpa">Inline checkboxes</h4>
+          <p>Add the <code>.inline</code> class to a series of checkboxes or radios for controls appear on the same line.</p>
+          <form class="bs-docs-example">
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox1" value="option1"> 1
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox2" value="option2"> 2
+            </label>
+            <label class="checkbox inline">
+              <input type="checkbox" id="inlineCheckbox3" value="option3"> 3
+            </label>
+          </form>
+<pre class="prettyprint linenums">
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox1" value="option1"&gt; 1
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox2" value="option2"&gt; 2
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" id="inlineCheckbox3" value="option3"&gt; 3
+&lt;/label&gt;
+</pre>
+
+          <h3 class="sherpa">Selects</h3>
+          <p>Use the default option or specify a <code>multiple="multiple"</code> to show multiple options at once.</p>
+          <form class="bs-docs-example">
+            <select>
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+            <br>
+            <select multiple="multiple">
+              <option>1</option>
+              <option>2</option>
+              <option>3</option>
+              <option>4</option>
+              <option>5</option>
+            </select>
+          </form>
+<pre class="prettyprint linenums">
+&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+
+&lt;select multiple="multiple"&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Extending form controls</h2>
+          <p>Adding on top of existing brow-fluidser controls, Sherpa includes other useful form components.</p>
+
+          <h3 class="sherpa">Prepended and appended inputs</h3>
+          <p>Add text or buttons before or after any text-based input. Do note that <code>select</code> elements are not supported here.</p>
+
+          <h4 class="sherpa">Default options</h4>
+          <p>Wrap an <code>.add-on</code> and an <code>input</code> with one of two classes to prepend or append text to an input.</p>
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <span class="add-on">@</span>
+              <input class="span2" id="prependedInput" type="text" placeholder="Username">
+            </div>
+            <br>
+            <div class="input-append">
+              <input class="span2" id="appendedInput" type="text">
+              <span class="add-on">.00</span>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend"&gt;
+  &lt;span class="add-on"&gt;@&lt;/span&gt;
+  &lt;input class="span2" id="prependedInput" type="text" placeholder="Username"&gt;
+&lt;/div&gt;
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInput" type="text"&gt;
+  &lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4 class="sherpa">Combined</h4>
+          <p>Use both classes and two instances of <code>.add-on</code> to prepend and append an input.</p>
+          <form class="bs-docs-example form-inline">
+            <div class="input-prepend input-append">
+              <span class="add-on">$</span>
+              <input class="span2" id="appendedPrependedInput" type="text">
+              <span class="add-on">.00</span>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+  &lt;span class="add-on"&gt;$&lt;/span&gt;
+  &lt;input class="span2" id="appendedPrependedInput" type="text"&gt;
+  &lt;span class="add-on"&gt;.00&lt;/span&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4 class="sherpa">Buttons instead of text</h4>
+          <p>Instead of a <code>&lt;span&gt;</code> with text, use a <code>.btn</code> to attach a button (or two) to an input.</p>
+          <form class="bs-docs-example">
+            <div class="input-append">
+              <input class="span2" id="appendedInputButton" type="text">
+              <button class="btn" type="button">Go!</button>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButton" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;Go!&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+          <form class="bs-docs-example">
+            <div class="input-append">
+              <input class="span2" id="appendedInputButtons" type="text">
+              <button class="btn" type="button">Search</button>
+              <button class="btn" type="button">Options</button>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedInputButtons" type="text"&gt;
+  &lt;button class="btn" type="button"&gt;Search&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Options&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4 class="sherpa">Button dropdowns</h4>
+          <p></p>
+          <form class="bs-docs-example">
+            <div class="input-append">
+              <input class="span2" id="appendedDropdownButton" type="text">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /input-append -->
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-append"&gt;
+  &lt;input class="span2" id="appendedDropdownButton" type="text"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <form class="bs-docs-example">
+            <div class="input-prepend">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input class="span2" id="prependedDropdownButton" type="text">
+            </div><!-- /input-prepend -->
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;input class="span2" id="prependedDropdownButton" type="text"&gt;
+&lt;/div&gt;
+</pre>
+
+          <form class="bs-docs-example">
+            <div class="input-prepend input-append">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+              <input class="span2" id="appendedPrependedDropdownButton" type="text">
+              <div class="btn-group">
+                <button class="btn dropdown-toggle" data-toggle="dropdown">Action <span class="caret"></span></button>
+                <ul class="dropdown-menu">
+                  <li><a href="#">Action</a></li>
+                  <li><a href="#">Another action</a></li>
+                  <li><a href="#">Something else here</a></li>
+                  <li class="divider"></li>
+                  <li><a href="#">Separated link</a></li>
+                </ul>
+              </div><!-- /btn-group -->
+            </div><!-- /input-prepend input-append -->
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="input-prepend input-append"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+  &lt;input class="span2" id="appendedPrependedDropdownButton" type="text"&gt;
+  &lt;div class="btn-group"&gt;
+    &lt;button class="btn dropdown-toggle" data-toggle="dropdown"&gt;
+      Action
+      &lt;span class="caret"&gt;&lt;/span&gt;
+    &lt;/button&gt;
+    &lt;ul class="dropdown-menu"&gt;
+      ...
+    &lt;/ul&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+         
+
+
+          <h3 class="sherpa">Control sizing</h3>
+          <p>Use relative sizing classes like <code>.input-large</code> or match your inputs to the grid column sizes using <code>.span*</code> classes.</p>
+
+          <h4 class="sherpa">Block level inputs</h4>
+          <p>Make any <code>&lt;input&gt;</code> or <code>&lt;textarea&gt;</code> element behave like a block level element.</p>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls">
+              <input class="input-block-level" type="text" placeholder=".input-block-level">
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-block-level" type="text" placeholder=".input-block-level"&gt;
+</pre>
+
+          <h4 class="sherpa">Relative sizing</h4>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls docs-input-sizes">
+              <input class="input-mini" type="text" placeholder=".input-mini">
+              <input class="input-small" type="text" placeholder=".input-small">
+              <input class="input-medium" type="text" placeholder=".input-medium">
+              <input class="input-large" type="text" placeholder=".input-large">
+              <input class="input-xlarge" type="text" placeholder=".input-xlarge">
+              <input class="input-xxlarge" type="text" placeholder=".input-xxlarge">
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-mini" type="text" placeholder=".input-mini"&gt;
+&lt;input class="input-small" type="text" placeholder=".input-small"&gt;
+&lt;input class="input-medium" type="text" placeholder=".input-medium"&gt;
+&lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+&lt;input class="input-xlarge" type="text" placeholder=".input-xlarge"&gt;
+&lt;input class="input-xxlarge" type="text" placeholder=".input-xxlarge"&gt;
+</pre>
+          <p>
+            <span class="label label-info">Heads up!</span> In future versions, we'll be altering the use of these relative input classes to match our button sizes. For example, <code>.input-large</code> will increase the padding and font-size of an input.
+          </p>
+
+          <h4 class="sherpa">Grid sizing</h4>
+          <p>Use <code>.span1</code> to <code>.span12</code> for inputs that match the same sizes of the grid columns.</p>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls docs-input-sizes">
+              <input class="span1" type="text" placeholder=".span1">
+              <input class="span2" type="text" placeholder=".span2">
+              <input class="span3" type="text" placeholder=".span3">
+              <select class="span1">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="span2">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <select class="span3">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;input class="span2" type="text" placeholder=".span2"&gt;
+&lt;input class="span3" type="text" placeholder=".span3"&gt;
+&lt;select class="span1"&gt;
+  ...
+&lt;/select&gt;
+&lt;select class="span2"&gt;
+  ...
+&lt;/select&gt;
+&lt;select class="span3"&gt;
+  ...
+&lt;/select&gt;
+</pre>
+
+          <p>For multiple grid inputs per line, <strong>use the <code>.controls-row-fluid</code> modifier class for proper spacing</strong>. It floats the inputs to collapse white-space, sets the proper margins, and the clears the float.</p>
+          <form class="bs-docs-example" style="padding-bottom: 15px;">
+            <div class="controls">
+              <input class="span5" type="text" placeholder=".span5">
+            </div>
+            <div class="controls controls-row-fluid">
+              <input class="span4" type="text" placeholder=".span4">
+              <input class="span1" type="text" placeholder=".span1">
+            </div>
+            <div class="controls controls-row-fluid">
+              <input class="span3" type="text" placeholder=".span3">
+              <input class="span2" type="text" placeholder=".span2">
+            </div>
+            <div class="controls controls-row-fluid">
+              <input class="span2" type="text" placeholder=".span2">
+              <input class="span3" type="text" placeholder=".span3">
+            </div>
+            <div class="controls controls-row-fluid">
+              <input class="span1" type="text" placeholder=".span1">
+              <input class="span4" type="text" placeholder=".span4">
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="controls"&gt;
+  &lt;input class="span5" type="text" placeholder=".span5"&gt;
+&lt;/div&gt;
+&lt;div class="controls controls-row-fluid"&gt;
+  &lt;input class="span4" type="text" placeholder=".span4"&gt;
+  &lt;input class="span1" type="text" placeholder=".span1"&gt;
+&lt;/div&gt;
+...
+</pre>
+
+          <h3 class="sherpa">Uneditable inputs</h3>
+          <p>Present data in a form that's not editable without using actual form markup.</p>
+          <form class="bs-docs-example">
+            <span class="input-xlarge uneditable-input">Some value here</span>
+          </form>
+<pre class="prettyprint linenums">
+&lt;span class="input-xlarge uneditable-input"&gt;Some value here&lt;/span&gt;
+</pre>
+
+          <h3 class="sherpa">Form actions</h3>
+          <p>End a form with a group of actions (buttons). When placed within a <code>.form-horizontal</code>, the buttons will automatically indent to line up with the form controls.</p>
+          <form class="bs-docs-example">
+            <div class="form-actions">
+              <button type="submit" class="btn btn-primary">Save changes</button>
+              <button type="button" class="btn">Cancel</button>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="form-actions"&gt;
+  &lt;button type="submit" class="btn btn-primary"&gt;Save changes&lt;/button&gt;
+  &lt;button type="button" class="btn"&gt;Cancel&lt;/button&gt;
+&lt;/div&gt;
+</pre>
+
+          <h3 class="sherpa">Help text</h3>
+          <p>Inline and block level support for help text that appears around form controls.</p>
+          <h4 class="sherpa">Inline help</h4>
+          <form class="bs-docs-example form-inline">
+            <input type="text"> <span class="help-inline">Inline help text</span>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input type="text"&gt;&lt;span class="help-inline"&gt;Inline help text&lt;/span&gt;
+</pre>
+
+          <h4 class="sherpa">Block help</h4>
+          <form class="bs-docs-example form-inline">
+            <input type="text">
+            <span class="help-block">A longer block of help text that breaks onto a new line and may extend beyond one line.</span>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input type="text"&gt;&lt;span class="help-block"&gt;A longer block of help text that breaks onto a new line and may extend beyond one line.&lt;/span&gt;
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Form control states</h2>
+          <p>Provide feedback to users or visitors with basic feedback states on form controls and labels.</p>
+
+          <h3 class="sherpa">Input focus</h3>
+          <p>We remove the default <code>outline</code> styles on some form controls and apply a <code>box-shadow</code> in its place for <code>:focus</code>.</p>
+          <form class="bs-docs-example form-inline">
+            <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused...">
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-xlarge" id="focusedInput" type="text" value="This is focused..."&gt;
+</pre>
+
+          <h3 class="sherpa">Disabled inputs</h3>
+          <p>Add the <code>disabled</code> attribute on an input to prevent user input and trigger a slightly different look.</p>
+          <form class="bs-docs-example form-inline">
+            <input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here…" disabled>
+          </form>
+<pre class="prettyprint linenums">
+&lt;input class="input-xlarge" id="disabledInput" type="text" placeholder="Disabled input here..." disabled&gt;
+</pre>
+
+          <h3 class="sherpa">Validation states</h3>
+          <p>Sherpa includes validation styles for error, warning, info, and success messages. To use, add the appropriate class to the surrounding <code>.control-group</code>.</p>
+
+          <form class="bs-docs-example form-horizontal">
+            <div class="control-group warning">
+              <label class="control-label" for="inputWarning">Input with warning</label>
+              <div class="controls">
+                <input type="text" id="inputWarning">
+                <span class="help-inline">Something may have gone wrong</span>
+              </div>
+            </div>
+            <div class="control-group error">
+              <label class="control-label" for="inputError">Input with error</label>
+              <div class="controls">
+                <input type="text" id="inputError">
+                <span class="help-inline">Please correct the error</span>
+              </div>
+            </div>
+            <div class="control-group info">
+              <label class="control-label" for="inputInfo">Input with info</label>
+              <div class="controls">
+                <input type="text" id="inputInfo">
+                <span class="help-inline">Username is taken</span>
+              </div>
+            </div>
+            <div class="control-group success">
+              <label class="control-label" for="inputSuccess">Input with success</label>
+              <div class="controls">
+                <input type="text" id="inputSuccess">
+                <span class="help-inline">Woohoo!</span>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="control-group warning"&gt;
+  &lt;label class="control-label" for="inputWarning"&gt;Input with warning&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputWarning"&gt;
+    &lt;span class="help-inline"&gt;Something may have gone wrong&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control-group error"&gt;
+  &lt;label class="control-label" for="inputError"&gt;Input with error&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputError"&gt;
+    &lt;span class="help-inline"&gt;Please correct the error&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+&lt;div class="control-group success"&gt;
+  &lt;label class="control-label" for="inputSuccess"&gt;Input with success&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;input type="text" id="inputSuccess"&gt;
+    &lt;span class="help-inline"&gt;Woohoo!&lt;/span&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+        </section>
+
+
+
+        <!-- Buttons
+        ================================================== -->
+        <section id="buttons">
+          <div class="page-header">
+            <h1 class="sherpa">Buttons</h1>
+          </div>
+
+          <h2 class="sherpa">Default buttons</h2>
+          <p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>class=""</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn">Default</button></td>
+                <td><code>btn</code></td>
+                <td>Standard gray button with gradient</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-primary">Primary</button></td>
+                <td><code>btn btn-primary</code></td>
+                <td>Used for purchase path, guiding a customer toward checkout.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-secondary">Secondary</button></td>
+                <td><code>btn btn-secondary</code></td>
+                <td>Used as a call-to-action that does not take the user down the purchase path.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-tertiary">Tertiary</button></td>
+                <td><code>btn btn-tertiary</code></td>
+                <td>Used for additional button needs.</td>
+              </tr>
+       <!--        <tr>
+                <td><button type="button" class="btn btn-warning">Warning</button></td>
+                <td><code>btn btn-warning</code></td>
+                <td>Indicates caution should be taken with this action</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-danger">Danger</button></td>
+                <td><code>btn btn-danger</code></td>
+                <td>Indicates a dangerous or potentially negative action</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-inverse">Inverse</button></td>
+                <td><code>btn btn-inverse</code></td>
+                <td>Alternate dark gray button, not tied to a semantic action or use</td>
+              </tr> -->
+              <tr>
+                <td><button type="button" class="btn btn-link">Link</button></td>
+                <td><code>btn btn-link</code></td>
+                <td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+              </tr>
+
+            </tbody>
+          </table>
+
+          <h3 class="sherpa">Miscellaneous buttons</h3>
+          <table class="table table-bordered table-striped">
+            <thead>
+              <tr>
+                <th>Button</th>
+                <th>class=""</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td><button type="button" class="btn btn-info">i</button></td>
+                <td><code>btn btn-info</code></td>
+                <td>Used to indicate more available information to the user.</td>
+              </tr>
+              <tr>
+                <td><button type="button" class="btn btn-hotspot">+</button></td>
+                <td><code>btn btn-hotspot</code></td>
+                <td>Used to highlight a product feature.</td>
+              </tr>
+              <tr>
+                <td><button class="close" style="float: none;">&times;</button></td>
+                <td><code>close</code></td>
+                <td>Use the generic close icon for dismissing content like modals and alerts. <pre class="prettyprint linenums">&lt;button class="close"&gt;&amp;times;&lt;/button&gt;</pre>
+          <p>iOS devices require an href="#" for click events if you would rather use an anchor.</p></td>
+              </tr>
+
+
+
+
+ 
+         
+    
+
+
+
+
+
+
+            </tbody>
+          </table>
+
+          <h4 class="sherpa">Cross brow-fluidser compatibility</h4>
+          <p>IE9 doesn't crop background gradients on rounded corners, so we remove it. Related, IE9 jankifies disabled <code>button</code> elements, rendering text gray with a nasty text-shadow that we cannot fix.</p>
+
+
+
+          <h2 class="sherpa">Button sizes</h2>
+          <p>Fancy larger or smaller buttons? Add <code>.btn-large</code>, <code>.btn-small</code>, or <code>.btn-mini</code> for additional sizes.</p>
+
+          <div class="alert alert-info">
+            <strong>Heads up!</strong>
+            The information button <code>class="btn btn-info"</code> can only be paired with the <code>btn-mini</code> class.
+          </div>
+
+          <div class="bs-docs-example">
+            <p>
+              <button type="button" class="btn btn-large btn-primary">Large button</button>
+              <button type="button" class="btn btn-large">Large button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-primary">Default button</button>
+              <button type="button" class="btn">Default button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-small btn-primary">Small button</button>
+              <button type="button" class="btn btn-small">Small button</button>
+            </p>
+            <p>
+              <button type="button" class="btn btn-mini btn-primary">Mini button</button>
+              <button type="button" class="btn btn-mini">Mini button</button>
+              <button type="button" class="btn btn-mini btn-info">i</button>
+            </p>
+          </div>
+<pre class="prettyprint linenums">
+&lt;p&gt;
+  &lt;button class="btn btn-large btn-primary" type="button"&gt;Large button&lt;/button&gt;
+  &lt;button class="btn btn-large" type="button"&gt;Large button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary" type="button"&gt;Default button&lt;/button&gt;
+  &lt;button class="btn" type="button"&gt;Default button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-small btn-primary" type="button"&gt;Small button&lt;/button&gt;
+  &lt;button class="btn btn-small" type="button"&gt;Small button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-mini btn-primary" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn btn-mini" type="button"&gt;Mini button&lt;/button&gt;
+  &lt;button class="btn btn-mini btn-info" type="button"&gt;i&lt;/button&gt;
+&lt;/p&gt;
+</pre>
+          <p>Create block level buttons&mdash;those that span the full width of a parent&mdash; by adding <code>.btn-block</code>.</p>
+          <div class="bs-docs-example">
+            <div class="well" style="max-width: 400px; margin: 0 auto 10px;">
+              <button type="button" class="btn btn-large btn-block btn-primary">Block level button</button>
+              <button type="button" class="btn btn-large btn-block">Block level button</button>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;button class="btn btn-large btn-block btn-primary" type="button"&gt;Block level button&lt;/button&gt;
+&lt;button class="btn btn-large btn-block" type="button"&gt;Block level button&lt;/button&gt;
+</pre>
+
+
+          <h2 class="sherpa">Disabled state</h2>
+          <p>Make buttons look unclickable by fading them back 50%.</p>
+
+          <h3 class="sherpa">Anchor element</h3>
+          <p>Add the <code>.disabled</code> class to <code>&lt;a&gt;</code> buttons.</p>
+          <p class="bs-docs-example">
+            <a href="#" class="btn btn-large btn-primary disabled">Primary link</a>
+            <a href="#" class="btn btn-large disabled">Link</a>
+          </p>
+<pre class="prettyprint linenums">
+&lt;a href="#" class="btn btn-large btn-primary disabled"&gt;Primary link&lt;/a&gt;
+&lt;a href="#" class="btn btn-large disabled"&gt;Link&lt;/a&gt;
+</pre>
+          <p>
+            <span class="label label-info">Heads up!</span>
+            We use <code>.disabled</code> as a utility class here, similar to the common <code>.active</code> class, so no prefix is required. Also, this class is only for aesthetic; you must use custom JavaScript to disable links here.
+          </p>
+
+          <h3 class="sherpa">Button element</h3>
+          <p>Add the <code>disabled</code> attribute to <code>&lt;button&gt;</code> buttons.</p>
+          <p class="bs-docs-example">
+            <button type="button" class="btn btn-large btn-primary disabled" disabled="disabled">Primary button</button>
+            <button type="button" class="btn btn-large" disabled>Button</button>
+          </p>
+<pre class="prettyprint linenums">
+&lt;button type="button" class="btn btn-large btn-primary disabled" disabled="disabled"&gt;Primary button&lt;/button&gt;
+&lt;button type="button" class="btn btn-large" disabled&gt;Button&lt;/button&gt;
+</pre>
+
+
+          <h2 class="sherpa">One class, multiple tags</h2>
+          <p>Use the <code>.btn</code> class on an <code>&lt;a&gt;</code>, <code>&lt;button&gt;</code>, or <code>&lt;input&gt;</code> element.</p>
+          <form class="bs-docs-example">
+            <a class="btn" href="">Link</a>
+            <button class="btn" type="submit">Button</button>
+            <input class="btn" type="button" value="Input">
+            <input class="btn" type="submit" value="Submit">
+          </form>
+<pre class="prettyprint linenums">
+&lt;a class="btn" href=""&gt;Link&lt;/a&gt;
+&lt;button class="btn" type="submit"&gt;Button&lt;/button&gt;
+&lt;input class="btn" type="button" value="Input"&gt;
+&lt;input class="btn" type="submit" value="Submit"&gt;
+</pre>
+          <p>As a best practice, try to match the element for your context to ensure matching cross-brow-fluidser rendering. If you have an <code>input</code>, use an <code>&lt;input type="submit"&gt;</code> for your button.</p>
+
+        </section>
+
+
+
+        <!-- Images
+        ================================================== -->
+        <!-- <section id="images">
+          <div class="page-header">
+            <h1 class="sherpa">Images</h1>
+          </div>
+
+          <p>Add classes to an <code>&lt;img&gt;</code> element to easily style images in any project.</p>
+          <div class="bs-docs-example bs-docs-example-images">
+            <img src="http://placehold.it/140x140" class="img-rounded">
+            <img src="http://placehold.it/140x140" class="img-circle">
+            <img src="http://placehold.it/140x140" class="img-polaroid">
+          </div>
+<pre class="prettyprint linenums">
+&lt;img src="..." class="img-rounded"&gt;
+&lt;img src="..." class="img-circle"&gt;
+&lt;img src="..." class="img-polaroid"&gt;
+</pre>
+          <p><span class="label label-info">Heads up!</span> <code>.img-rounded</code> and <code>.img-circle</code> do not work in IE7-8 due to lack of <code>border-radius</code> support.</p>
+
+
+        </section> -->
+
+
+
+
+        <!-- Colors
+        ================================================== -->
+        <section id="colors">
+          <div class="page-header">
+            <h1 class="sherpa">Colors</h1>
+          </div>
+
+<!-- Grays -->
+          <h5>Grays</h5>
+          <div class="row-fluid">
+            <div class="span3">
+              <div class="color-block gray_dark"></div>
+              <small>Dell Gray Dark #444444</small>
+              <div><code>.gray_dark</code></div>
+            </div>
+            <div class="span3">
+              <div class="color-block gray_medium"></div>
+              <small>Gray Medium #737373</small>
+              <div><code>.gray_medium</code></div>
+            </div>
+            <div class="span3">
+              <div class="color-block gray"></div>
+              <small>Dell Gray #AAAAAA</small>
+              <div><code>.gray</code></div>
+            </div>
+            <div class="span3">
+              <div class="color-block gray_stroke"></div>
+              <small>Gray Stroke #CCCCCC</small>
+              <div><code>.gray_stroke</code></div>
+            </div>
+          </div> 
+
+          <br>
+          <div class="row-fluid">
+            <div class="span3">
+              <div class="color-block gray_light"></div>
+              <small>Dell Gray Light  #EEEEEE</small>
+              <div><code>.gray_light</code></div>
+            </div>
+            <div class="span3">
+              <div class="color-block gray_very_light"></div>
+              <small>Gray Very Light #f9f9f9</small>
+              <div><code>.gray_very_light</code></div>
+            </div>
+            <div class="span3">
+              <div class="color-block white"></div>
+              <small>White #FFFFFF</small>
+              <div><code>.white</code></div>
+            </div>
+          </div> 
+
+          <hr>
+
+
+<!-- Blue -->
+          <h5>Blue</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block blue"></div>
+              <small>Dell Blue #0085C3</small>
+              <div><code>.blue</code></div>    
+            </div>
+            <div class="span6">
+              <div class="color-block blue_stroke"></div>
+              <small>Blue Stroke #0085C3</small>
+              <div><code>.blue_stroke</code></div>    
+            </div>
+
+
+            <!-- <div class="span4">
+              <div class="color-block blue_medium_stroke"></div>
+              <small>Blue Medium Stroke #7FC2E1</small>
+              <div><code>.blue_medium_stroke</code></div>    
+            </div>
+            <div class="span4">
+              <div class="color-block blue_light"></div>
+              <small>Blue Light #D9EDF6</small>
+              <div><code>.blue_light</code></div>    
+            </div> -->
+          </div>
+
+          <hr>
+
+<!-- Teal -->
+          <h5>Teal</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block teal"></div>
+              <small>Dell Teal #71C6C1</small>
+              <div><code>.teal</code></div>
+            </div>
+            <div class="span6">
+              <div class="color-block teal_stroke"></div>
+              <small>Teal Stroke #71C6C1</small>
+              <div><code>.teal_stoke</code></div>
+            </div>
+
+            <!-- <div class="span4">
+              <div class="color-block teal_medium_stroke"></div>
+              <small>Teal Medium Stroke #BDE5E2</small>
+              <div><code>.teal_medium_stoke</code></div>
+            </div>
+            <div class="span4">
+              <div class="color-block teal_light"></div>
+              <small>Teal Light #D9F2EB</small>
+              <div><code>.teal_light</code></div>
+            </div> -->
+          </div> 
+
+          <hr>
+
+<!-- Green -->
+          <h5>Green</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block green"></div>
+              <small>Dell Green #7AB800</small>
+              <div><code>.green</code></div>  
+            </div>
+            <div class="span6">
+              <div class="color-block green_stroke"></div>
+              <small>Green Stroke #7AB800</small>
+              <div><code>.green_stroke</code></div>    
+            </div>
+
+
+            <!-- <div class="span4">
+              <div class="color-block green_medium_stroke"></div>
+              <small>Green Medium Stroke #8CDB7F</small>
+              <div><code>.green_medium_stroke</code></div>    
+            </div>
+            <div class="span4">
+              <div class="color-block green_light"></div>
+              <small>Green Light #DCF1CC</small>
+              <div><code>.green_light</code></div>    
+            </div> -->
+          </div>
+
+          <hr>
+
+<!-- Yellow -->
+          <h5>Yellow</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block yellow"></div>
+              <small>Dell Yellow #F2AF00</small>
+              <div><code>.yellow</code></div>
+            </div>
+            <div class="span6">
+              <div class="color-block yellow_stroke"></div>
+              <small>Yellow Stroke #F2AF00</small>
+              <div><code>.yellow_stroke</code></div>
+            </div>
+
+            <!-- <div class="span4">
+              <div class="color-block yellow_medium_stroke"></div>
+              <small>Yellow Medium Stroke #FAE07C</small>
+              <div><code>.yellow_medium_stroke</code></div>
+            </div>
+            <div class="span4">
+              <div class="color-block yellow_light"></div>
+              <small>Yellow Light #FFEECA</small>
+              <div><code>.yellow_light</code></div>
+            </div> -->
+          </div> 
+
+          <hr>
+
+<!-- Orange -->
+          <h5>Orange</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block orange"></div>
+              <small>Dell Orange #FF7700</small>
+              <div><code>.orange</code></div>
+            </div>
+            <div class="span6">
+              <div class="color-block orange_stroke"></div>
+              <small>Orange Stroke #FF7700</small>
+              <div><code>.orange_stroke</code></div>
+            </div>
+
+
+            <!-- <div class="span4">
+              <div class="color-block orange_medium_stroke"></div>
+              <small>Orange Medium Stroke #FFBEA4</small>
+              <div><code>.orange_medium_stroke</code></div>
+            </div>
+            <div class="span4">
+              <div class="color-block orange_light"></div>
+              <small>Orange Light #FDEBD9</small>
+              <div><code>.orange_light</code></div>
+            </div> -->
+          </div> 
+
+          <hr>
+
+<!-- Red -->
+          <h5>Red</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block red"></div>
+              <small>Dell Red #DC5034</small>
+              <div><code>.red</code></div>
+            </div>
+            <div class="span6">
+              <div class="color-block red_stroke"></div>
+              <small>Red Stroke #DC5034</small>
+              <div><code>.red_stroke</code></div>
+            </div>
+
+
+            <!-- <div class="span4">
+              <div class="color-block red_medium_stroke"></div>
+              <small>Red Medium Stroke #EDA799</small>
+              <div><code>.red_medium_stroke</code></div>
+            </div>
+            <div class="span4">
+              <div class="color-block red_light"></div>
+              <small>Red Light #FAE5E1</small>
+              <div><code>.red_light</code></div>
+            </div> -->
+          </div> 
+
+          <hr>
+
+<!-- Berry -->
+          <h5>Berry</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block berry"></div>
+              <small>Dell Berry #B7295A</small>
+              <div><code>.berry</code></div>
+            </div>
+            <div class="span6">
+              <div class="color-block berry_stroke"></div>
+              <small>Berry Stroke #B7295A</small>
+              <div><code>.berry_stroke</code></div>
+            </div>
+
+
+            <!-- <div class="span4">
+              <div class="color-block berry_medium_stroke"></div>
+              <small>Berry Medium Stroke #DB94AC</small>
+              <div><code>.berry_medium_stroke</code></div>
+            </div>
+            <div class="span4">
+              <div class="color-block berry_light"></div>
+              <small>Berry Light #F4DFE3</small>
+              <div><code>.berry_light</code></div>
+            </div> -->
+          </div> 
+
+          <hr>
+
+<!-- Purple -->
+          <h5>Purple</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block purple"></div>
+              <small>Dell Purple #6E2585</small>
+              <div><code>.purple</code></div>
+            </div>
+            <div class="span6">
+              <div class="color-block purple_stroke"></div>
+              <small>Purple Stroke #B396C7</small>
+              <div><code>.purple_stroke</code></div>
+            </div>
+
+
+
+            <!-- <div class="span4">
+              <div class="color-block purple_medium_stroke"></div>
+              <small>Purple Medium Stroke #B396C7</small>
+              <div><code>.purple_medium</code></div>
+            </div>
+            <div class="span4">
+              <div class="color-block purple_light"></div>
+              <small>Purple Light #E8E0EE</small>
+              <div><code>.purple_light</code></div>
+            </div> -->
+          </div> 
+
+          <hr>
+
+
+          <h5>Dark Red</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block red_dark"></div>
+              <small>Dell Dark Red #CE1126</small>
+              <div><code>.darkred</code></div>
+            </div>
+          </div>
+
+          <hr>
+
+          <h5>Navy Blue</h5>
+          <div class="row-fluid">
+            <div class="span6">
+              <div class="color-block navyblue"></div>
+              <small>Navy Blue #003758</small>
+              <div><code>.navyblue</code></div>
+            </div>
+          </div>
+
+
+
+
+          <!-- <div class="bs-docs-example">
+            <div class="color-block dell_darkgray"></div>
+            <small>Dell Dark Gray #444444</small>
+            <div><code>.dell_darkgray</code></div>
+
+            <div class="color-block dell_gray"></div>
+            <small>Dell Gray #aaaaaa</small>
+            <div><code>.dell_gray</code></div>
+
+            <div class="color-block dell_lightgray"></div>
+            <small>Dell Light Gray #eeeeee</small>
+            <div><code>.dell_lightgray</code></div>
+
+            <div class="color-block dell_blue"></div>
+            <small>Dell Blue #0085c3</small>
+            <div><code>.dell_blue</code></div>
+
+            <div class="color-block dell_green"></div>
+            <small>>Dell Green #7ab800</small>
+            <div><code>.dell_green</code></div>
+
+            <div class="color-block dell_yellow"></div>
+            <small>Dell Yellow #F2AF00</small>
+            <div><code>.dell_yellow</code></div>
+
+            <div class="color-block dell_orange"></div>
+            <small>Dell Orange #FF7700</small>
+            <div><code>.dell_orange</code></div>
+
+            <div class="color-block dell_red"></div>
+            <small>Dell Red #DC5034</small>
+            <div><code>.dell_red</code></div>
+
+            <div class="color-block dell_darkred"></div>
+            <small>>Dell Dark Red #CE1126</small>
+            <div><code>.dell_darkred</code></div>
+
+            <div class="color-block dell_berry"></div>
+            <small>Dell Berry #B7295A</small>
+            <div><code>.dell_berry</code></div>
+
+            <div class="color-block dell_purple"></div>
+            <small>Dell Purple #6E2585</small>
+            <div><code>.dell_purple</code></div>
+
+            <div class="color-block dell_teal"></div>
+            <small>Dell Teal #71C6C1</small>
+            <div><code>.dell_teal</code></div>
+
+            <div class="color-block gsd_navyblue"></div>
+            <small>GSD Navy Blue #003758</small>
+            <div><code>.gsd_navyblue</code></div>
+
+            <div class="color-block gsd_lightblue"></div>
+            <small>GSD Light Blue #CCE7F3</small>
+            <div><code>.gsd_lightblue</code></div>
+
+            <div class="color-block gsd_orange"></div>
+            <small>GSD Orange #fd5400</small>
+            <div><code>.gsd_orange</code></div>
+
+            <div class="color-block gsd_gray"></div>
+            <small>GSD Gray #737373</small>
+            <div><code>.gsd_gray</code></div>
+          </div> -->
+
+
+        </section>
+
+
+
+        <!-- Colors
+        ================================================== -->
+        <section id="colors">
+          <div class="page-header">
+            <h1 class="sherpa">Text colors</h1>
+          </div>
+
+          <div class="bs-docs-example">
+            <div>
+              <p class="darkgray_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Dark Gray #444444</small>
+            <div><code>.darkgray_text</code></div>
+            <hr>
+
+            <div>
+              <p class="gray_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Gray #aaaaaa</small>
+            <div><code>.gray_text</code></div>
+            <hr>
+
+<!--             <div>
+              <p class="dell_lightgray_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Light Gray #eeeeee</small>
+            <div><code>.dell_lightgray_text</code></div>
+            <hr> -->
+
+            <div>
+              <p class="blue_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Blue #0085c3</small>
+            <div><code>.blue_text</code></div>
+            <hr>
+
+            <div>
+              <p class="green_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Green #7ab800</small>
+            <div><code>.green_text</code></div>
+            <hr>
+
+<!--             <div>
+              <p class="dell_yellow_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Yellow #F2AF00</small>
+            <div><code>.dell_yellow_text</code></div>
+            <hr> -->
+
+<!--             <div>
+              <p class="dell_orange_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Orange #FF7700</small>
+            <div><code>.dell_orange_text</code></div>
+            <hr> -->
+
+            <div>
+              <p class="red_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Red #DC5034</small>
+            <div><code>.red_text</code></div>
+            <hr>
+
+<!--        <div>
+              <p class="dell_darkred_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>>Dell Dark Red #CE1126</small>
+            <div><code>.dell_darkred_text</code></div>
+            <hr> -->
+
+            <div>
+              <p class="berry_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Berry #B7295A</small>
+            <div><code>.berry_text</code></div>
+            <hr>
+
+            <div>
+              <p class="purple_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Purple #6E2585</small>
+            <div><code>.purple_text</code></div>
+            <hr>
+
+<!--             <div>
+              <p class="dell_teal_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>Dell Teal #71C6C1</small>
+            <div><code>.dell_teal_text</code></div>
+            <hr> -->
+
+<!--             <div>
+              <p class="gsd_navyblue_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>GSD Navy Blue #003758</small>
+            <div><code>.gsd_navyblue_text</code></div>
+            <hr> -->
+
+<!--             <div>
+              <p class="gsd_lightblue_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>GSD Light Blue #CCE7F3</small>
+            <div><code>.gsd_lightblue_text</code></div>
+            <hr> -->
+
+<!--             <div>
+              <p class="gsd_orange_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>GSD Orange #fd5400</small>
+            <div><code>.gsd_orange_text</code></div>
+            <hr> -->
+
+<!--             <div>
+              <p class="gsd_gray_text">Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+            </div>
+            <small>GSD Gray #737373</small>
+            <div><code>.gsd_gray_text</code></div>
+            <hr> -->
+
+          </div>
+        </section>
+
+
+
+
+
+
+
+        <!-- Icons
+        ================================================== -->
+        <section id="icons">
+          <div class="page-header">
+            <h1 class="sherpa">Icons <small>by <a href="http://icomoon.io" target="_blank">Icomoon</a></small></h1>
+          </div>
+
+          <h2 class="sherpa">Icon font</h2>
+          <p>73 icons in font form.</p>
+          <ul class="the-icons clearfix">
+            <li>
+              <span aria-hidden="true" class="icon-dell"></span> icon-dell
+            </li>
+            <li>
+              <span aria-hidden="true" class="icon-profile"></span> icon-profile
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-plus"></span> icon-plus
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-menu-collapsed"></span> icon-menu-collapsed
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-expand"></span> icon-expand
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-collapse"></span> icon-collapse
+            </li>            
+            <li>
+              <span aria-hidden="true" class="icon-arrow-right"></span> icon-arrow-right
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-arrow-left"></span> icon-arrow-left
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-alert-notice"></span> icon-alert-notice
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-alert-info"></span> icon-alert-info
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-alert-error"></span> icon-alert-error
+            </li>
+            <li>
+              <span aria-hidden="true" class="icon-triangle-up"></span> icon-triangle-up
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-triangle-right"></span> icon-triangle-right
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-triangle-left"></span> icon-triangle-left
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-triangle-down"></span> icon-triangle-down
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-webcam-hd"></span> icon-webcam-hd
+            </li>
+            <li>
+              <span aria-hidden="true" class="icon-webcam"></span> icon-webcam
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-warranty"></span> icon-warranty
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-video"></span> icon-video
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-trash"></span> icon-trash
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-tower-generic"></span> icon-tower-generic
+            </li>
+            <li>
+              <span aria-hidden="true" class="icon-touchpad"></span> icon-touchpad
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-touch"></span> icon-touch
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-tablet"></span> icon-tablet
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-surge-protection"></span> icon-surge-protection
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-support"></span> icon-support
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-storage"></span> icon-storage
+            </li>
+            <li>
+              <span aria-hidden="true" class="icon-speakers"></span> icon-speakers
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-software-secure"></span> icon-software-secure
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-secure"></span> icon-secure
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-search-right"></span> icon-search-right
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-search-left"></span> icon-search-left
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-screensize"></span> icon-screensize
+            </li>
+            <li>
+              <span aria-hidden="true" class="icon-protection"></span> icon-protection
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-processor"></span> icon-processor
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-printer"></span> icon-printer
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-power"></span> icon-power
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-photos"></span> icon-photos
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-optical-drive"></span> icon-optical-drive
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-operating-system"></span> icon-operating-system
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-notebook"></span> icon-notebook
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-music"></span> icon-music
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-mouse"></span> icon-mouse
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-mail"></span> icon-mail
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-keyboard"></span> icon-keyboard
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-help"></span> icon-help
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-harddrive"></span> icon-harddrive
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-graphics-card"></span> icon-graphics-card
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-giftcard"></span> icon-giftcard
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-finance"></span> icon-finance
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-energy-efficient"></span> icon-energy-efficient
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-drivers"></span> icon-drivers
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-display-3d"></span> icon-display-3d
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-display"></span> icon-display
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-dimensions-weight"></span> icon-dimensions-weight
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-clock"></span> icon-clock
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-color"></span> icon-color
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-chipset"></span> icon-chipset
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-checkmark"></span> icon-checkmark
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-chat"></span> icon-chat
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-cart"></span> icon-cart
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-calendar"></span> icon-calendar
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-calculator"></span> icon-calculator
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-box-package"></span> icon-box-package
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-battery"></span> icon-battery
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-audio-speaker"></span> icon-audio-speaker
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-audio-card"></span> icon-audio-card
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-alert-play"></span> icon-alert-play
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-alert-error"></span> icon-alert-error
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-alert-complete"></span> icon-alert-complete
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-wireless"></span> icon-wireless
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-windows"></span> icon-windows
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-whitepaper"></span> icon-whitepaper
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-software"></span> icon-software
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-ships-fast"></span> icon-ships-fast
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-shipping"></span> icon-shipping
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-mobile"></span> icon-mobile
+            </li>            
+             <li>
+              <span aria-hidden="true" class="icon-memory-card-reader"></span> icon-memory-card-reader
+            </li>           
+             <li>
+              <span aria-hidden="true" class="icon-memory"></span> icon-memory
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-cloud"></span> icon-cloud
+            </li>
+             <li>
+              <span aria-hidden="true" class="icon-close-circle"></span> icon-close-circle
+            </li>         
+             <li>
+              <span aria-hidden="true" class="icon-close"></span> icon-close
+            </li>
+          </ul>
+
+
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">How to use</h2>
+          <p>All icons require an <code>aria-hidden="true"</code> attribute with a unique class. The <code>aria-hidden="true"</code> prevents VoiceOver on OSX. To use, place the following code just about anywhere:</p>
+<pre class="prettyprint linenums">
+&lt;span aria-hidden="true" class="icon-cart"&gt;&lt;/span&gt;
+</pre>
+          <p>Since we are treating icons as fonts, we can color and size with ease and without degradation. Below we are making our icon red.</p>
+<pre class="prettyprint linenums">
+&lt;span aria-hidden="true" class="icon-cart dell_red_text"&gt;&lt;/span&gt;
+&lt;h1&gt;&lt;span aria-hidden="true" class="icon-cart dell_green_text"&gt;&lt;/span&gt;&lt;/h1&gt;
+</pre>
+
+          <div class="bs-docs-example">
+            <span aria-hidden="true" class="icon-cart dell_red_text"></span>
+            <h1><span aria-hidden="true" class="icon-cart dell_green_text"></span></h1>
+          </div>
+
+          <p>
+            <span class="label label-info">Heads up!</span>
+            When using beside strings of text, as in buttons or nav links, be sure to leave a space after the <code>&lt;/span&gt;</code> tag for proper spacing.
+          </p>
+
+
+<!--           <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Icon examples</h2>
+          <p>Use them in buttons, button groups for a toolbar, navigation, or prepended form inputs.</p>
+
+          <h4 class="sherpa">Buttons</h4>
+
+          <h5 class="sherpa">Button group in a button toolbar</h5>
+          <div class="bs-docs-example">
+            <div class="btn-toolbar">
+              <div class="btn-group">
+                <a class="btn" href="#"><i class="icon-align-left"></i></a>
+                <a class="btn" href="#"><i class="icon-align-center"></i></a>
+                <a class="btn" href="#"><i class="icon-align-right"></i></a>
+                <a class="btn" href="#"><i class="icon-align-justify"></i></a>
+              </div>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-toolbar"&gt;
+  &lt;div class="btn-group"&gt;
+
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-left"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-center"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-right"&gt;&lt;/i&gt;&lt;/a&gt;
+    &lt;a class="btn" href="#"&gt;&lt;i class="icon-align-justify"&gt;&lt;/i&gt;&lt;/a&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h5 class="sherpa">Dropdown in a button group</h5>
+          <div class="bs-docs-example">
+            <div class="btn-group">
+              <a class="btn btn-primary" href="#"><i class="icon-user icon-white"></i> User</a>
+              <a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"><span class="caret"></span></a>
+              <ul class="dropdown-menu">
+                <li><a href="#"><i class="icon-pencil"></i> Edit</a></li>
+                <li><a href="#"><i class="icon-trash"></i> Delete</a></li>
+                <li><a href="#"><i class="icon-ban-circle"></i> Ban</a></li>
+                <li class="divider"></li>
+                <li><a href="#"><i class="i"></i> Make admin</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="btn-group"&gt;
+  &lt;a class="btn btn-primary" href="#"&gt;&lt;i class="icon-user icon-white"&gt;&lt;/i&gt; User&lt;/a&gt;
+  &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#"&gt;&lt;span class="caret"&gt;&lt;/span&gt;&lt;/a&gt;
+  &lt;ul class="dropdown-menu"&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; Edit&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-trash"&gt;&lt;/i&gt; Delete&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-ban-circle"&gt;&lt;/i&gt; Ban&lt;/a&gt;&lt;/li&gt;
+    &lt;li class="divider"&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Make admin&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h5 class="sherpa">Small button</h5>
+          <div class="bs-docs-example">
+            <a class="btn btn-small" href="#"><i class="icon-star"></i></a>
+          </div>
+<pre class="prettyprint linenums">
+&lt;a class="btn btn-small" href="#"&gt;&lt;i class="icon-star"&gt;&lt;/i&gt;&lt;/a&gt;
+</pre>
+
+
+          <h4 class="sherpa">Navigation</h4>
+          <div class="bs-docs-example">
+            <div class="well" style="padding: 8px 0; margin-bottom: 0;">
+              <ul class="nav nav-list">
+                <li class="active"><a href="#"><i class="icon-home icon-white"></i> Home</a></li>
+                <li><a href="#"><i class="icon-book"></i> Library</a></li>
+                <li><a href="#"><i class="icon-pencil"></i> Applications</a></li>
+                <li><a href="#"><i class="i"></i> Misc</a></li>
+              </ul>
+            </div>
+          </div>
+<pre class="prettyprint linenums">
+&lt;ul class="nav nav-list"&gt;
+  &lt;li class="active"&gt;&lt;a href="#"&gt;&lt;i class="icon-home icon-white"&gt;&lt;/i&gt; Home&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-book"&gt;&lt;/i&gt; Library&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="icon-pencil"&gt;&lt;/i&gt; Applications&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a href="#"&gt;&lt;i class="i"&gt;&lt;/i&gt; Misc&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+          <h4 class="sherpa">Form fields</h4>
+          <form class="bs-docs-example form-horizontal">
+            <div class="control-group">
+              <label class="control-label" for="inputIcon">Email address</label>
+              <div class="controls">
+                <div class="input-prepend">
+                  <span class="add-on"><i class="icon-envelope"></i></span><input class="span2" id="inputIcon" type="text">
+                </div>
+              </div>
+            </div>
+          </form>
+<pre class="prettyprint linenums">
+&lt;div class="control-group"&gt;
+  &lt;label class="control-label" for="inputIcon"&gt;Email address&lt;/label&gt;
+  &lt;div class="controls"&gt;
+    &lt;div class="input-prepend"&gt;
+      &lt;span class="add-on"&gt;&lt;i class="icon-envelope"&gt;&lt;/i&gt;&lt;/span&gt;
+      &lt;input class="span2" id="inputIcon" type="text"&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre> -->
+
+        </section>
+
+
+
+      </div>
+    </div>
+
+  </div>
+
+
+
+    <!-- Footer
+    ================================================== -->
+    <footer class="footer">
+      <div class="container-fluid">
+        <p class="pull-right"><a href="#">Back to top</a></p>
+        <p>Sherpa is designed and built using <a href="http://twitter.github.com/bootstrap/">Bootstrap by Twitter</a>.</p>
+      </div>
+    </footer>
+
+
+
+    <!-- Le javascript
+    ================================================== -->
+    <!-- Placed at the end of the document so the pages load faster -->
+    <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
+    
+    <script src="assets/js/jquery.js"></script>
+    <script src="assets/js/google-code-prettify/prettify.js"></script>
+    <script src="assets/js/bootstrap-transition.js"></script>
+    <script src="assets/js/bootstrap-alert.js"></script>
+    <script src="assets/js/bootstrap-modal.js"></script>
+    <script src="assets/js/bootstrap-dropdown.js"></script>
+    <script src="assets/js/bootstrap-scrollspy.js"></script>
+    <script src="assets/js/bootstrap-tab.js"></script>
+    <script src="assets/js/bootstrap-tooltip.js"></script>
+    <script src="assets/js/bootstrap-popover.js"></script>
+    <script src="assets/js/bootstrap-button.js"></script>
+    <script src="assets/js/bootstrap-collapse.js"></script>
+    <script src="assets/js/bootstrap-carousel.js"></script>
+    <script src="assets/js/bootstrap-typeahead.js"></script>
+    <script src="assets/js/bootstrap-affix.js"></script>
+    <script src="assets/js/application.js"></script>
+
+
+
+  </body>
+</html>
