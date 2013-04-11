@@ -547,8 +547,8 @@ hr.logo {
   text-align: center;
   color: #fff;
   padding-bottom: 60px;
-  background: #799A8B;
-  border-top: 1px solid #487464;
+  background: #1B1B1B;
+  /*border-top: 1px solid #487464;
   border-bottom: 1px solid #487464;
 
   background-color: #487464;
@@ -559,7 +559,7 @@ hr.logo {
   background-image: linear-gradient(to bottom, #487464, #799A8B);
   background-repeat: repeat-x;
   border-color: #487464;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#487464', endColorstr='#799A8B', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#487464', endColorstr='#799A8B', GradientType=0);*/
 }
 .marketing h1 {
   margin: 60px 0 10px;
