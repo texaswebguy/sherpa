@@ -1,0 +1,34 @@
+# Proprietary Code Libraries #
+##############################
+
+
+# IntelliJ IDEA files and folders #
+###################
+.idea/
+.idea
+sherpa.iml
+
+
+
+# Compiled source #
+###################
+
+
+# Packages #
+############
+
+
+# Logs and databases #
+######################
+
+
+# Mac OS generated files #
+######################
+.DS_Store
+.DS_Store?
+._*
+.Spotlight-V100
+.Trashes
+# Icon?
+# ehthumbs.db
+# Thumbs.db
