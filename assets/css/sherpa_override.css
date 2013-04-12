@@ -960,6 +960,11 @@ border-radius: 6px;
   border: 1px solid #eeeeee;
 }
 
+.container-block {
+  padding:100px 0px;
+  /*border: 1px solid #eeeeee;*/
+}
+
 
 .white_text {
   color:#ffffff;
