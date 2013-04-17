@@ -1,3 +1,42 @@
+/* The main wrapper - don't touch */
+    .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none;}
+    div {float: left;width: 100%;margin-bottom: 0px;display: block;position: relative;*zoom: 1;}
+
+
+/* Put your styles here */
+
+    header {
+      padding-top:20px;
+      overflow: hidden;
+    }
+
+    section {
+      overflow:hidden;
+    }
+
+    .main-content {
+      padding-top:20px;
+      overflow: hidden;
+    }
+
+    footer {
+      padding-top:20px;
+      overflow: hidden;
+    }
+    
+    .box {
+      margin-bottom: 20px;
+      padding: 10px 20px 0px 20px;
+      -webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+      -moz-box-sizing: border-box;    /* Firefox, other Gecko */
+      box-sizing: border-box;         /* Opera/IE 8+ */
+    }
+
+
+
+
+
+
 /* Add additional stylesheets below
 -------------------------------------------------- */
 /*
@@ -42,7 +81,7 @@ filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endC
 
 
 body {
-  position: relative;
+  /*position: relative;*/
   /*padding-top: 40px;*/
 
 }
@@ -520,15 +559,15 @@ hr.logo {
 /* nav
 ------------------------- */
 .navbar-inverse .navbar-inner {
-  background-color: #1b1b1b;
-  background-image: -moz-linear-gradient(top, #1b1b1b, #1b1b1b);
+  background-color: red;
+  /*background-image: -moz-linear-gradient(top, #1b1b1b, #1b1b1b);
   background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#1b1b1b), to(#1b1b1b));
   background-image: -webkit-linear-gradient(top, #1b1b1b, #1b1b1b);
   background-image: -o-linear-gradient(top, #1b1b1b, #1b1b1b);
   background-image: linear-gradient(to bottom, #1b1b1b, #1b1b1b);
   background-repeat: repeat-x;
   border-color: #252525;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endColorstr='#1b1b1b', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#1b1b1b', endColorstr='#1b1b1b', GradientType=0);*/
 }
 
 /*.nav-list > .active > a,
@@ -537,6 +576,13 @@ hr.logo {
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #7ab800;
 }*/
+
+.container,
+.navbar-static-top .container,
+.navbar-fixed-top .container,
+.navbar-fixed-bottom .container {
+  width: 10px;
+}
 
 
 
