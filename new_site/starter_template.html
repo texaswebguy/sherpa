@@ -11,6 +11,8 @@
 
 	    <script type="text/javascript">
             var SHERPA_CONFIG_OVERRIDES = {};
+            	SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa_site.js";
+
                 /*
                  To add your own JS with core js load:
 
@@ -103,32 +105,27 @@
         </div>
 
         <!-- menu -->
-        <!-- ko if: isDesktop() -->
-        <div id="menu" class="da3-da12 ta-hide ma-hide">
-        	<div class="box red">
-            <ul>
-              <li><a href="">Get started</a></li>
-              <li><a href="">Scaffolding</a></li>
-              <li><a href="">Basic Elements</a></li>
-              <li><a href="">Components</a></li>
-            </ul>
-          </div>
-        </div>
-        <!-- /ko -->
 
-        <!-- ko ifnot: isDesktop() -->
-        <div id="menu" class="da-hide ta-all ma-all">
-        	<div class="box red">
-            <ul>
-              <li><a href="">Get started</a></li>
-              <li><a href="">Scaffolding</a></li>
-              <li><a href="">Basic Elements</a></li>
-              <li><a href="">Components</a></li>
-            </ul>
-          </div>
+        <div id="menu" class="da3-da12 ta-all ma-all">
+			<div class="box red">
+				<ul>
+	              <li><a href="">Get started</a></li>
+	              <li><a href="">Scaffolding</a></li>
+	              <li><a href="">Basic Elements</a></li>
+	              <li><a href="">Components</a></li>
+	            </ul>
+	        </div>
         </div>
-        <!-- /ko -->
-          
+
+          <style>
+          	#menu {
+          		display:none;
+          	}
+			.desktop #menu {
+          		display:block;
+          	}
+
+          </style>
 
 
 
@@ -136,12 +133,6 @@
       </div>
     </header>
 
-    
-    <script type="text/javascript">
-
-    
-
-    </script>
 
 	<!-- Main content area -->
 	<section class="main-content" data-page="true" data-deafultpage="true">
