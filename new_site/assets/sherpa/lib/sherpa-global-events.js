@@ -38,9 +38,9 @@ function check_ff(){
 		$('html').removeClass('mobile');
 		$('html').addClass('no-mobile');
 	}
-	viewModel.isDesktop = win.isDesktop;
-	viewModel.isTablet = win.isTablet;
-	viewModel.isMobile = win.isMobile;
+	viewModel.isDesktop = ko.observable(win.isDesktop);
+	viewModel.isTablet = ko.observable(win.isTablet);
+	viewModel.isMobile = ko.observable(win.isMobile);
 }
 if(location.hostname === "localhost") {
 	viewModel.localhost = true;
