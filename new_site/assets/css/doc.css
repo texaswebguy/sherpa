@@ -1,0 +1,86 @@
+
+/* The main wrapper - don't touch */
+    .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none;}
+    div {float: left;width: 100%;margin-bottom: 0px;display: block;position: relative;*zoom: 1;}
+
+
+/* Put your styles here */
+
+		header {
+			padding-top:20px;
+			overflow: hidden;
+		}
+
+		section {
+			overflow:hidden;
+		}
+
+		.main-content {
+			padding-top:20px;
+			overflow: hidden;
+		}
+
+		footer {
+			padding-top:20px;
+			overflow: hidden;
+		}
+		
+		.box {
+			margin-bottom: 20px;
+			padding: 10px 20px 0px 20px;
+			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
+			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
+			box-sizing: border-box;         /* Opera/IE 8+ */
+		}
+
+	.bs-docs-sidenav.affix {
+		top: 8px;
+	}
+/*
+================================================
+Breakpoints
+================================================
+*/
+
+
+/* Mobile (Phone)*/
+@media only screen and (max-width:767px) {
+
+	/* Add your CSS here */
+
+}
+
+/* Tablet*/
+@media only screen and (min-width:768px) and (max-width:979px) {
+
+	/* Add your CSS here */
+
+}
+
+
+/* added to prevent loading of templates to be seen */
+body {
+	opacity:0;
+}
+/* Sherpa.js adds domloaded to html tag when the DOM loads. */
+.sherpaReady body {
+   opacity: 1;
+   transition: opacity .05s ease-in-out;
+   -moz-transition: opacity .05s ease-in-out;
+   -webkit-transition: opacity .05s ease-in-out;
+   background:none;
+}
+
+#cookbook .bs-docs-sidenav.affix {
+	margin-top:100px;
+}
+
+/*fix on bootstrap for dropdown component */
+.open > div > .dropdown-menu {
+	display: block;
+}
+
+.btn-toolbar > div   {
+	width:10%;
+	min-width:12%;
+}
