@@ -218,7 +218,7 @@ IE Workarounds:
 if (Sherpa.browser.ie)  {
 	Sherpa.js(
 		{ html5shiv: SHERPA.JS_LIB_PATH+"html5shiv.js"}, 
-		{ html5printshiv: SHERPA.JS_LIB_PATH+"html5shiv-printshiv.js"}
+		{ html5printshiv: SHERPA.JS_LIB_PATH+"html5shiv-printshiv.js"},
 		{ html5Formshim: SHERPA.JS_LIB_PATH+"jquery.html5form.js"}
 	);
 }
