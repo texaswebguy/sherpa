@@ -6,14 +6,20 @@ addToViewModel = {
 	user: {
 		name:ko.observable("Carl Weatherspoon")
 	},
-    question: ko.observable('How many roads must a man walk down before you can call him a man?')
+    question: ko.observable('How many roads must a man walk down before you can call him a man?'),
+    test:true
 };
 
 addToConfigs = {
 	sample_custom_config : true
 }
 
-
+$(document).ready(function() {
+      $("#menu-toggle").click(function(event) {
+        event.preventDefault();
+        $('#menu').slideToggle('fast');
+      });
+    });
 
 
 Eve.scope(".bs-docs-sidenav", function(){

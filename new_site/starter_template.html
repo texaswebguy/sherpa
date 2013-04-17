@@ -81,18 +81,67 @@
 	</head>
 <body>
 	
-	<!-- Masthead section -->
-	<header class="blue">
-		<div class="wrapper">
-			<div class="da-clear">
-				<div class="da-all ta-all ma-all">
-					<div class="box navyblue">
-						<p class="center_text white_text">masthead</p>
-					</div>
-				</div>
-			</div>
-		</div>
-	</header>
+	<!-- Navbar
+    ================================================== -->
+
+    <header class="blue">
+      <div class="wrapper">
+        <!-- Logo -->
+        <div class="da1-da2 ta1-ta2 mb1">
+          <div class="box red">
+            <p class="white-text">Sherpa</p>
+          </div>
+        </div>
+
+        <!-- menu collapse (tablet and phone) -->
+        <div class="da-hide ta3-ta9 mb2-mb4">
+          <div class="box red">
+            <div class="right-text">
+              <a href="#" id="menu-toggle"><span aria-hidden="true" class="icon-menu-collapsed"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- menu -->
+        <!-- ko if: $root.isDesktop() -->
+        <div id="menu" class="da3-da12 ta-hide ma-hide">
+        	<div class="box red">
+            <ul>
+              <li><a href="">Get started</a></li>
+              <li><a href="">Scaffolding</a></li>
+              <li><a href="">Basic Elements</a></li>
+              <li><a href="">Components</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /ko -->
+
+        <!-- ko ifnot: $root.isDesktop() -->
+        <div id="menu" class="da-hide ta-all ma-all">
+        	<div class="box red">
+            <ul>
+              <li><a href="">Get started</a></li>
+              <li><a href="">Scaffolding</a></li>
+              <li><a href="">Basic Elements</a></li>
+              <li><a href="">Components</a></li>
+            </ul>
+          </div>
+        </div>
+        <!-- /ko -->
+          
+
+
+
+
+      </div>
+    </header>
+
+    
+    <script type="text/javascript">
+
+    
+
+    </script>
 
 	<!-- Main content area -->
 	<section class="main-content" data-page="true" data-deafultpage="true">
