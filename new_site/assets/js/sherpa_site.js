@@ -16,18 +16,29 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		sample_custom_config : true
 	}
 
-	$(document).ready(function() {
-	  $("#menu-toggle").click(function(event) {
-	    event.preventDefault();
-	    $('#menu').slideToggle('fast');
-	  });
-	});
 
 	$(window).resize(function() {
 		if(viewModel.isDesktop()){
 			$('#menu').show()
 		}
 	});
+
+	Eve.scope("#menu-toggle", function(){
+		this.listen("span", "click", function(event){
+			event.preventDefault();
+			console.log("hello");
+			if($('#menu').hasClass('ta-hide ma-hide')){
+				$('#menu').hide();
+				$('#menu').toggleClass('ta-hide ma-hide ta-all ma-all');
+				$('#menu').slideDown('fast');
+			} else {
+				$('#menu').slideUp('fast', function(){
+					$('#menu').toggleClass('ta-hide ma-hide ta-all ma-all');
+				});
+			}
+		})
+	})
+
 
 	Eve.scope(".bs-docs-sidenav", function(){
 		this.listen("li a", "click", function(event){
