@@ -62,9 +62,9 @@
               <li class="active">
                 <a href="./how-to.html">Get started</a>
               </li>
-              <!-- <li class="">
+              <li class="">
                 <a href="./scaffolding.html">Scaffolding</a>
-              </li> -->
+              </li>
               <li class="">
                 <a href="./base-css.html">Basic Elements</a>
               </li>
@@ -103,9 +103,9 @@
       <div class="span3 bs-docs-sidebar">
         <ul class="nav nav-list bs-docs-sidenav">
           <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
-          <!-- <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
           <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
-          <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+          <!-- <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
           <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
           <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li> -->
         </ul>
@@ -118,16 +118,16 @@
         ================================================== -->
         <section id="download-bootstrap">
           <div class="page-header">
-            <h1 class="sherpa">1. Download</h1>
+            <h1 class="sherpa">Download</h1>
           </div>
           <p class="lead">Before downloading, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/">Sublime Text</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the Sherpa files.</p>
 
           <div class="row-fluid">
             <div class="span12">
               <h2 class="sherpa">Download starter it</h2>
-              <p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and sample.html.</p>
+              <p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and starter-template.html.</p>
               <p>
-                <a href="https://github.com/DellGDC/sherpa-starterkit">
+                <a href="http://github.com/DellGDC/sherpa-starterkit/archive/master.zip">
                   <button class="btn btn-large btn-secondary" type="button">Download Starter Kit</button>
                 </a>
               </p>
@@ -144,65 +144,43 @@
 
         <!-- File structure
         ================================================== -->
-        <!-- <section id="file-structure">
+        <section id="file-structure">
           <div class="page-header">
-            <h1 class="sherpa">2. File structure</h1>
+            <h1 class="sherpa">File structure</h1>
           </div>
           <p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
           <p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
 <pre class="prettyprint">
   sherpa/
   ├── assets/
-      ├── sample.html
-      ├── css/
-      │   ├── bootstrap.css
-      │   ├── bootstrap-responsive.css
-      │   ├── sherpa_override.css
-      │   ├── stylesheet.css
-      ├── fonts/
-      │   ├── MuseoForDell-100
-      │   ├── MuseoForDell-300
-      │   ├── MuseoForDell-700
-      ├── img/
-      ├── js/
-          ├── jquery.js
-          ├── bootstrap-transition.js
-          ├── bootstrap-alert.js
-          ├── bootstrap-modal.js
-          ├── bootstrap-dropdown.js
-          ├── bootstrap-scrollspy.js
-          ├── bootstrap-tab.js
-          ├── bootstrap-tooltip.js
-          ├── bootstrap-popover.js
-          ├── bootstrap-button.js
-          ├── bootstrap-collapse.js
-          ├── bootstrap-tooltip.js
-          ├── bootstrap-typeahead.js
-          ├── bootstrap-affix.js
-          ├── application.js
+      ├── starter_template.html
+      ├── assets/
+      │   ├── css/
+      │   │    ├──doc.css
+      │   ├── img/
+      
 </pre>
           <p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
-          <p>Please note that all JavaScript plugins require jQuery to be included.</p>
-        </section> -->
+        </section>
 
 
 
         <!-- Contents
         ================================================== -->
-        <!-- <section id="contents">
+        <section id="contents">
           <div class="page-header">
-            <h1 class="sherpa">3. What's included</h1>
+            <h1 class="sherpa">What's included</h1>
           </div>
-          <p class="lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible at the top of the <a href="index.html">Sherpa documentation</a>.</p>
+          <p class="lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible in the top navigation.</p>
 
           <h2 class="sherpa">Docs sections</h2>
           <h4 class="sherpa"><a href="scaffolding.html">Scaffolding</a></h4>
           <p>Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
           <h4 class="sherpa"><a href="base-css.html">Base Elements</a></h4>
-          <p>Styles for common HTML elements like typography, code, tables, forms, and buttons.</p>
-          <h4 class="sherpa"><a href="components.html">Components</a></h4>
+          <p>Styles for common HTML elements like typography, tables, forms, and buttons.</p>
+          <h4 class="sherpa"><!-- <a href="components.html">Components</a> -->Components</h4>
           <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
-          <h4 class="sherpa"><a href="javascript.html">JavaScript plugins</a></h4>
+          <h4 class="sherpa"><!-- <a href="javascript.html">JavaScript plugins</a> -->JavaScript</h4>
           <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
 
           <h2 class="sherpa">List of components</h2>
@@ -226,8 +204,8 @@
             <li>Carousel</li>
             <li>Typeahead</li>
           </ul>
-          <p>In future guides, we may walk through these components individually in more detail. Until then, look for each of these in the documentation for information on how to utilize and customize them.</p>
-        </section> -->
+          
+        </section>
 
 
 
@@ -380,6 +358,7 @@
 
     <!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
     <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/gridset-overlay.js"></script>
+
 
 
 
