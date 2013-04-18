@@ -1,13 +1,13 @@
 counter("Sherpa Global Events");
 //sherpa-global-events
 
+check_ff();
+
 $(window).resize(function() {
 	check_ff();
 });
 
-$(document).ready(function() {
-	check_ff();
-});
+
 
 function check_ff(){
 
@@ -41,10 +41,12 @@ function check_ff(){
 	viewModel.isDesktop = ko.observable(win.isDesktop);
 	viewModel.isTablet = ko.observable(win.isTablet);
 	viewModel.isMobile = ko.observable(win.isMobile);
+
 }
 if(location.hostname === "localhost") {
 	viewModel.localhost = true;
 } else {
 	viewModel.localhost = false;
 }
+
 counter("Sherpa Global Events");

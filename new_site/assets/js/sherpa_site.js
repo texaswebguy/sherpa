@@ -16,7 +16,25 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		sample_custom_config : true
 	}
 
+	$(document).ready(function() {
+	  $("#menu-toggle").click(function(event) {
+	    event.preventDefault();
+	    $('#menu').slideToggle('fast');
+	  });
+	});
 
+	$(window).resize(function() {
+		if(viewModel.isDesktop()){
+			$('#menu').show()
+		}
+	});
+
+	Eve.scope(".bs-docs-sidenav", function(){
+		this.listen("li a", "click", function(event){
+			event.preventDefault();
+			$('body').scrollTo($(event.currentTarget).attr('href'),300);
+		})
+	})
 
 	/*********************************************************************************
 	Please don't touch below
