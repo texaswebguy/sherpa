@@ -68,12 +68,12 @@
               <li class="">
                 <a href="./base-css.html">Basic Elements</a>
               </li>
-              <li class="">
+              <!-- <li class="">
                 <a href="./components.html">Components</a>
-              </li>
-              <li class="">
+              </li> -->
+              <!-- <li class="">
                 <a href="./javascript.html">JavaScript</a>
-              </li>
+              </li> -->
              <!--  <li class="divider-vertical"></li> -->
               
 <!--               <li class="">
@@ -90,7 +90,7 @@
 <header class="jumbotron subhead" id="overview">
   <div class="container-fluid">
     <h1 class="sherpa">Scaffolding</h1>
-    <p class="lead">Sherpa is built on responsive 12-column grids, layouts, and components.</p>
+    <p class="lead">Sherpa is built on fluid grids, layouts, and components.</p>
   </div>
 </header>
 
@@ -134,8 +134,8 @@
             <li>Remove <code>margin</code> on the body</li>
             <li>Set <code>background-color: white;</code> on the <code>body</code></li>
             <li>Use the <code>body</code> attribute to set the typographic base</li>
-            <li>Use the <code>h1 - h6</code> attributes as our header typographic base</li>
-            <li>Use the <code>small</code> and <code>bold</code> attributes to enhance the typographic style</li>
+            <li>Use the <code>h1 - h5</code> attributes as our header typographic base</li>
+            <!-- <li>Use the <code>small</code> and <code>bold</code> attributes to enhance the typographic style</li> -->
             <!-- <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li> -->
           </ul>
           <p>These styles can be found within <strong>sherpa_override.css</strong>.</p>
@@ -249,12 +249,17 @@
         ================================================== -->
         <section id="fluidGridSystem">
           <div class="page-header">
-            <h1 class="sherpa">Fluid grid system</h1>
+            <h1 class="sherpa">The grid system</h1>
           </div>
 
-          <h2 class="sherpa">Live fluid grid example</h2>
+          <!-- <h2 class="sherpa">Live fluid grid example</h2> -->
           <p>The fluid grid system uses percents instead of pixels for column widths. It ensures proper proportions for key screen resolutions and devices.</p>
-          <div class="bs-docs-grid">
+
+          <p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="btn btn-large btn-secondary" type="button">Live grid example</button></a></p>
+          <p>When viewing the live example, Ctrl+G will show a grid overlay.</p>
+
+
+          <!-- <div class="bs-docs-grid">
             <div class="row-fluid show-grid">
               <div class="span1">1</div>
               <div class="span1">1</div>
@@ -285,16 +290,29 @@
             <div class="row-fluid show-grid">
               <div class="span12">12</div>
             </div>
-          </div>
+          </div> -->
+          <h2 class="sherpa">The grid has 6 different grid layouts</h2>
+          <h3 class="sherpa">Desktop A = 12 columns</h3><code>.da1-da12</code>
+          <h3 class="sherpa">Desktop B = 15 columns</h3>
+          <p>The desktop screensize has a max-width of <b>1140px</b> and a min-width of <b>980px</b>.</p>
 
-          <h3 class="sherpa">Basic fluid grid HTML</h3>
-          <p>By default rows are "fluid" by <!-- changing <code>.row</code> to --> using <code>.row-fluid</code>. If you need to change to a fixed width layout just change <code>.row-fluid</code> to <code>.row</code>.
+          <h3 class="sherpa">Tablet A = 9 columns</h3>
+          <h3 class="sherpa">Tablet B = 8 columns</h3>
+          <p>The desktop screensize has a max-width of <b>979px</b> and a min-width of <b>768px</b>.</p>
+
+          <h3 class="sherpa">Mobile A = 3 columns</h3>
+          <h3 class="sherpa">Mobile B = 4 columns</h3>
+          <p>The desktop screensize has a max-width of <b>767px</b>.</p>
+
+
+          <h3 class="sherpa">Basic grid structure</h3>
+          <p>By default rows are "fluid" by using <code>.row-fluid</code>. If you need to change to a fixed width layout just change <code>.row-fluid</code> to <code>.row</code>.
 
             The column classes stay the exact same, making it easy to flip between fixed and fluid grids.</p>
 <pre class="prettyprint linenums">
-&lt;div class="row-fluid"&gt;
-  &lt;div class="span4"&gt;...&lt;/div&gt;
-  &lt;div class="span8"&gt;...&lt;/div&gt;
+&lt;div class="wrapper"&gt;
+  &lt;div class="da1-da4"&gt;...&lt;/div&gt;
+  &lt;div class="da5-da12"&gt;...&lt;/div&gt;
 &lt;/div&gt;
 </pre>
 
@@ -573,28 +591,30 @@
 
 
 
-    <!-- Le javascript
+    <!-- javascript
     ================================================== -->
     <!-- Placed at the end of the document so the pages load faster -->
     <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
     
-    <script src="assets/js/jquery.js"></script>
-    <script src="assets/js/google-code-prettify/prettify.js"></script>
-    <script src="assets/js/bootstrap-transition.js"></script>
-    <script src="assets/js/bootstrap-alert.js"></script>
-    <script src="assets/js/bootstrap-modal.js"></script>
-    <script src="assets/js/bootstrap-dropdown.js"></script>
-    <script src="assets/js/bootstrap-scrollspy.js"></script>
-    <script src="assets/js/bootstrap-tab.js"></script>
-    <script src="assets/js/bootstrap-tooltip.js"></script>
-    <script src="assets/js/bootstrap-popover.js"></script>
-    <script src="assets/js/bootstrap-button.js"></script>
-    <script src="assets/js/bootstrap-collapse.js"></script>
-    <script src="assets/js/bootstrap-carousel.js"></script>
-    <script src="assets/js/bootstrap-typeahead.js"></script>
-    <script src="assets/js/bootstrap-affix.js"></script>
-    <script src="assets/js/application.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/jquery.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/google-code-prettify/prettify.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-transition.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-alert.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-modal.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-dropdown.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-scrollspy.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-tab.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-tooltip.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-popover.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-button.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-collapse.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-carousel.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-typeahead.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-affix.js"></script>
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/application.js"></script>
 
+    <!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/gridset-overlay.js"></script>
 
 
   </body>

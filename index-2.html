@@ -15,10 +15,22 @@
     <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_override.css" type="text/css"
      rel="stylesheet">
 
+
+     <!--[if (!IE) | (gt IE 9)]><!-->
+    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/grid/gridset.css" type="text/css"
+     rel="stylesheet" />
+    <!--<![endif]-->
+    <!--[if IE 9]>
+    <link rel="stylesheet" href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/grid/gridset-ie-9.css" />
+    <![endif]-->
+    <!--[if lte IE 8]>
+    <link rel="stylesheet" href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/grid/gridset-ie-lte8.css" />
+    <![endif]-->
+
     <!-- Sherpa site styles -->
     <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_site_style.css" type="text/css"
      rel="stylesheet">
-        
+
     <!-- Code in a page styles -->
     <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/js/google-code-prettify/prettify.css" type="text/css"
      rel="stylesheet">
@@ -36,13 +48,78 @@
     <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
     -->
 
+    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/jquery.js"></script>
+
   </head>
 
   <body data-spy="scroll" data-target=".bs-docs-sidebar">
 
     <!-- Navbar
     ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
+
+    <header class="blue">
+      <div class="wrapper">
+        <!-- Logo -->
+        <div class="da1-da2 ta1-ta2 mb1">
+          <div class="box red">
+            <p class="white-text">Sherpa</p>
+          </div>
+        </div>
+
+        <!-- menu collapse (tablet and phone) -->
+        <div class="da-hide ta3-ta9 mb2-mb4">
+          <div class="box red">
+            <div class="right-text">
+              <a href="#" id="menu-toggle"><span aria-hidden="true" class="icon-menu-collapsed"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- menu -->
+        <div id="menu" class="da3-da12 ta-hide ma-hide">
+          <div class="box red">
+            <ul>
+              <li><a href="">Get started</a></li>
+              <li><a href="">Scaffolding</a></li>
+              <li><a href="">Basic Elements</a></li>
+              <li><a href="">Components</a></li>
+            </ul>
+          </div>
+        </div>
+      </div>
+    </header>
+
+    <script type="text/javascript">
+
+    $(document).ready(function() {
+
+      // $('#menu').hide();
+
+      $("#menu-toggle").click(function(event) {
+        event.preventDefault();
+        if ($('#menu').hasClass("ta-hide ma-hide")) {
+          $('#menu').hide();
+          $('#menu').toggleClass("ta-hide ma-hide ta-all ma-all");
+          $('#menu').slideToggle('fast');
+        } else {
+          $('#menu').slideToggle('fast',function() {
+            $('#menu').toggleClass("ta-hide ma-hide ta-all ma-all");
+          });
+          
+          
+        }
+        
+        
+        console.log("hello");
+      });
+    });
+
+    </script>
+
+
+
+
+    <!-- <div class="navbar navbar-inverse navbar-fixed-top">
       <div class="navbar-inner">
         <div class="container-fluid">
           <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
@@ -50,15 +127,17 @@
             <span class="icon-bar"></span>
             <span class="icon-bar"></span>
           </button>
+
           <a class="brand" href="./index.html">Sherpa</a>
+
           <div class="nav-collapse collapse">
             <ul class="nav">
               <li class="active">
                 <a href="./index.html">Home</a>
               </li>
-<!--          <li class="">
+              <li class="">
                 <a href="./getting-started.html">Get started</a>
-              </li> -->
+              </li>
               <li class="">
                 <a href="./how-to.html">Get started</a>
               </li>
@@ -68,77 +147,65 @@
               <li class="">
                 <a href="./base-css.html">Basic Elements</a>
               </li>
-              <!-- <li class="">
+              <li class="">
                 <a href="./components.html">Components</a>
-              </li> -->
-              <!-- <li class="">
+              </li>
+              <li class="">
                 <a href="./javascript.html">JavaScript</a>
-              </li> -->
-              <!-- <li class="divider-vertical"></li> -->
-              
-<!--               <li class="">
+              </li>
+              <li class="divider-vertical"></li>
+               <li class="">
                 <a href="./customize.html">Customize</a>
-              </li> -->
+              </li>
             </ul>
           </div>
+
+
         </div>
       </div>
-    </div>
+    </div> -->
 
-<div class="jumbotron masthead">
+<!-- <div class="jumbotron masthead">
   <div class="container-fluid">
     <div class="logo">
       <img src="assets/img/sherpa-logo-all.png">
     </div>
-      <!-- <div class="rays">
-        <img src="assets/img/rays.png">
-      </div> -->
-    <!-- <div class="mnts">
-      <img src="assets/img/sherpa-mnts.png">
-    </div> -->
     <hr class="logo">
     <h1 class="sherpa">Sherpa</h1>
     <h2 class="sherpa">A responsive front-end framework for web development.</h2>
-    <!-- <p><button class="btn btn-large btn-primary" type="button">Download the Starter Kit</button></p>
-    <p><a class="btn btn-large btn-secondary" href="">Download the Starter Kit</a></p> -->
-    <!-- <p class="small">Version 1.0</p> -->
-
   </div>
-</div>
+</div> -->
 
 
 
   
 
 
-<div class="marketing">
+<!-- <div class="marketing">
   <div class="container-fluid">
     <h1 class="sherpa">Introducing Sherpa.</h1>
     <p class="marketing-byline">Look no further, Sherpa is here to help.</p>
 
     <div class="row-fluid">
       <div class="span4">
-        <!-- <img src="assets/img/bs-docs-twitter-github.png"> -->
         <h2 class="sherpa">The guide</h2>
         <p>Sherpa utilizes HTML, CSS and javascript to help design great web products.</p>
       </div>
       <div class="span4">
-        <!-- <img src="assets/img/bs-docs-responsive-illustrations.png"> -->
         <h2 class="sherpa">Made for everyone.</h2>
         <p>Sherpa was made to not only look and behave great in the latest desktop browsers (as well as IE7!), but in tablet and smartphone browsers.</p>
       </div>
       <div class="span4">
-        <!-- <img src="assets/img/bs-docs-bootstrap-features.png"> -->
         <h2 class="sherpa">Packed with features.</h2>
         <p>A responsive grid, dozens of components, JavaScript plugins, typography, form controls, and more.</p>
       </div>
     </div>
   </div>
-</div>
+</div> -->
 
 
 <!-- Starter kit download -->
-<div class="starterkit">
+<!-- <div class="starterkit">
   <div class="container-fluid">
     <div>
       <h1 class="sherpa">Let's get started</h1>
@@ -146,18 +213,18 @@
       <p><a href="http://github.com/DellGDC/sherpa-starterkit/archive/master.zip"><button class="btn btn-large btn-secondary" type="button">Download Starter Kit</button></a></p>
     </div>
   </div>
-</div>
+</div> -->
 
 
 
     <!-- Footer
     ================================================== -->
-    <footer class="footer">
+    <!-- <footer class="footer">
       <div class="container-fluid">
         <p class="pull-right"><a href="#">Back to top</a></p>
         <p>Sherpa is designed and built using <a href="http://twitter.github.com/bootstrap/">Bootstrap</a> and <a href="https://gridsetapp.com/">Gridset</a>.</p>
       </div>
-    </footer>
+    </footer> -->
 
 
 
@@ -166,7 +233,7 @@
     <!-- Placed at the end of the document so the pages load faster -->
     <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
     
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/jquery.js"></script>
+    
     <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/google-code-prettify/prettify.js"></script>
     <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-transition.js"></script>
     <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-alert.js"></script>
