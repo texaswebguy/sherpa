@@ -1,0 +1,165 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+	    <title>Sherpa - Template</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+	    <script type="text/javascript">
+            var SHERPA_CONFIG_OVERRIDES = {};
+                SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa_site.js";
+
+                /*
+                 To add your own JS with core js load:
+
+                var SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                        { myCustomJS: "assets/js/myCustomJS.js"}
+				]
+
+				This is a palce to overide sherpa default configurations.
+				WARNING: If you don't know what this is, don't touch it! Ask someone!
+
+				SHERPA_CONFIG_OVERRIDES.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
+				// Please note that if you run local you run the risk of libraries and css being out of date.
+
+				SHERPA_CONFIG_OVERRIDES.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
+				SHERPA_CONFIG_OVERRIDES.LOCAL_PATH = "/";
+				SHERPA_CONFIG_OVERRIDES.JS_PATH = "assets/js/";
+				SHERPA_CONFIG_OVERRIDES.JS_LIB_PATH = "assets/sherpa/lib/";
+				SHERPA_CONFIG_OVERRIDES.CSS_PATH = "assets/css/";
+				SHERPA_CONFIG_OVERRIDES.CORE_PATH = "assets/sherpa/";
+				SHERPA_CONFIG_OVERRIDES.COMPONENTS_PATH = "components/";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "app.js";
+				SHERPA_CONFIG_OVERRIDES.DEFAULT_LOCALE = "en";
+				SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+					{ myCustomLib: "assets/js/myCustomLib.js"}
+				]
+				SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = false; //enables hot key for showing grid overlay
+				SHERPA_CONFIG_OVERRIDES.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
+				SHERPA_CONFIG_OVERRIDES.ENABLE_PROTOTYPE_QA = true; //enables script to check html for sherpa errors
+
+	    	*/
+	    </script>
+
+
+		<!-- Framework CSS files - Don't touch
+		********************************************************************************
+		-->
+			<script src="assets/sherpa/sherpa.js"></script>	
+
+
+			<!-- Bootstrap styles -->
+	    	<!--<link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/bootstrap.css" type="text/css" rel="stylesheet">-->
+	    	<link href="assets/sherpa/css/bootstrap.css" type="text/css" rel="stylesheet">
+
+			<!-- Sherpa styles -->
+	    	<!--<link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_override.css" type="text/css" rel="stylesheet">-->
+	    	<link href="assets/sherpa/css/sherpa_override.css" type="text/css" rel="stylesheet">
+
+			<!--[if (!IE) | (gt IE 9)]><!-->
+			<!--<link rel="stylesheet" href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/grid/gridset.css" />-->
+			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset.css" />
+			<!--<![endif]-->
+			<!--[if IE 9]>
+			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset-ie-9.css" />
+			<![endif]-->
+			<!--[if lte IE 8]>
+			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset-ie-lte8.css" />
+			<![endif]-->
+
+
+
+		<!-- Your CSS files - Please touch
+		********************************************************************************
+		-->	
+
+			<!-- Your CSS - Add your new styles to this file -->
+			<link rel="stylesheet" href="assets/css/sherpa-site-styles.css" />
+
+	</head>
+<body>
+	
+	<!-- Navbar
+    ================================================== -->
+
+    <header class="blue">
+      <div class="wrapper">
+        <!-- Logo -->
+        <div class="da1-da2 ta1-ta2 mb1">
+          <div class="box red">
+            <p class="white-text"><a href="/">Sherpa</a></p>
+          </div>
+        </div>
+
+        <!-- menu collapse (tablet and phone) -->
+        <div class="da-hide ta3-ta9 mb2-mb4">
+          <div class="box red">
+            <div class="right-text">
+              <a href="#" id="menu-toggle"><span aria-hidden="true" class="icon-menu-collapsed"></span></a>
+            </div>
+          </div>
+        </div>
+
+        <!-- menu -->
+       
+        <div id="menu" class="da3-da12 ta-hide ma-hide">
+        	<div class="box red">
+            <ul>
+              <li><a href="/how-to.html">Get started</a></li>
+              <li><a href="/scaffolding.html">Scaffolding</a></li>
+              <li><a href="/base-css.html">Basic Elements</a></li>
+              <li><a href="/components.html">Components</a></li>
+            </ul>
+          </div>
+        </div>
+       
+          
+
+
+
+
+      </div>
+    </header>
+
+    
+    <script type="text/javascript">
+
+    
+
+    </script>
+
+	<!-- Main content area -->
+	<section class="main-content" data-page="true" data-deafultpage="true">
+		<div class="wrapper">
+				<div class="da-all ta-all mb-all">
+					<div class="box gray_light">
+						<p>Hello World!</p>
+					</div>
+				</div>
+				
+
+			</div>
+		</div>
+	</section>
+
+
+
+
+	<!-- footer area -->
+	<footer class="blue">
+		<div class="wrapper">
+			<div class="da-clear">
+				<div class="da-all ta-all ma-all">
+					<div class="box navyblue">
+						<p class="center_text white_text">footer</p>
+					</div>
+				</div>
+			</div>
+		</div>
+	</footer>
+</body>
+</html>
