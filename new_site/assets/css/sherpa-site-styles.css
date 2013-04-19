@@ -149,7 +149,8 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
 
 /* masthead */
   .masthead-sherpa {
-    background: #1F1F1C url(../img/topo-pattern-nav.jpg);
+    background: #1F1F1C;
+    /*background: #1F1F1C url(../img/topo-pattern-nav.jpg);*/
     background-position: center 0;
     width: 100%;
     z-index: 100;
@@ -238,7 +239,8 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
 /* overview */
 
   .overview {
-    background: #1F1F1C url(../img/topo-pattern-nav.jpg);
+    background: #1F1F1C;
+    /*background: #1F1F1C url(../img/topo-pattern-nav.jpg);*/
     background-position: center 0;
     color:#444;
     text-align: center;
@@ -257,7 +259,8 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
 /* Title content */
 
   .title-content {
-    background: #1F1F1C url(../img/topo-pattern-nav.jpg);
+    background: #1F1F1C;
+    /*background: #1F1F1C url(../img/topo-pattern-nav.jpg);*/
     background-position: center 0;
     padding:80px 0;
   }
