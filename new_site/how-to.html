@@ -81,7 +81,7 @@
 			<link rel="stylesheet" href="assets/css/sherpa-site-styles.css" />
 
 	</head>
-<body>
+<body data-spy="scroll" data-target=".bs-docs-sidebar">
 	
 	<!-- Start - Masthead
   ================================================== -->
@@ -91,7 +91,7 @@
       <!-- Logo -->
       <div class="da1-da2 ta1-ta2 mb1">
         <div class="brand-sherpa">
-          <a href="/sherpa/new_site/">Sherpa</a>
+          <a href="/">Sherpa</a>
         </div>
       </div>
 
@@ -104,10 +104,10 @@
       <div id="menu" class="da3-da12 ta-hide ma-hide">
       	<nav class="nav-sherpa">
           <ul>
-            <li><a href="/sherpa/new_site/how-to.html">Get started</a></li>
-            <li><a href="/sherpa/new_site/scaffolding.html">Scaffolding</a></li>
-            <li><a href="/sherpa/new_site/base-css.html">Basic Elements</a></li>
-            <li><a href="/sherpa/new_site/components.html">Components</a></li>
+            <li><a href="/how-to.html">Get started</a></li>
+            <li><a href="/scaffolding.html">Scaffolding</a></li>
+            <li><a href="/base-css.html">Basic Elements</a></li>
+            <li><a href="/components.html">Components</a></li>
           </ul>
         </nav>
       </div>
@@ -117,17 +117,108 @@
   <!-- End - Masthead
   ================================================== -->
 
+ 
 	<!-- Main content area -->
-	<section class="main-content" data-page="true" data-deafultpage="true">
+	<section class="title-content">
 		<div class="wrapper">
-				<div class="da-all ta-all mb-all">
-					<div class="box gray_light">
-						<p>Hello World!</p>
-					</div>
-				</div>
-				
-
+			<div class="da-all ta-all mb-all white-text">
+				<h1 class="sherpa">How To's</h1>
+				<h3 class="sherpa">Everything you'll need to know to build templates and patterns with ease! Before starting, be sure to have a text editor (we recommend Sublime Text) and some working knowledge of HTML and CSS.</h3>
 			</div>
+		</div>
+	</section>
+
+	<section class="main-content">
+		<div class="wrapper">
+			<aside class="da1-da3 ta-all mb-all">
+				<div class="bs-docs-sidebar">
+						<ul class="nav nav-list bs-docs-sidenav">
+	          <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
+	          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
+	          <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
+	          <!-- <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
+	          <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
+	          <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li> -->
+	        </ul>
+				</div>
+			</aside>
+			<section class="da4-da12 ta-all mb-all">
+
+				<article id="download-bootstrap">
+					<h2 class="sherpa">Download</h2>
+					<p class="lead">Before downloading, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/">Sublime Text</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the Sherpa files.</p>
+
+					<h3 class="sherpa">Download starter kit</h3>
+					<p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and starter-template.html.</p>
+					<a href="http://github.com/DellGDC/sherpa-starterkit/archive/master.zip">
+            <button class="btn btn-large btn-secondary" type="button">Download starter kit</button>
+          </a>
+
+          <hr>
+				</article>
+
+				<article id="file-structure">
+					<h2 class="sherpa content-offset">File structure</h2>
+					<p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
+
+					<p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
+
+					<pre class="prettyprint">
+  sherpa/
+  ├── assets/
+      ├── starter_template.html
+      ├── assets/
+      │   ├── css/
+      │   │    ├──doc.css
+      │   ├── img/
+      
+				</pre>
+
+				<p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
+
+					<hr>
+				</article>
+
+				<article id="contents">
+					<h2 class="sherpa content-offset">What's included</h2>
+					<p class="lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible in the top navigation.</p>
+
+					<h3 class="sherpa">Docs sections</h3>
+          <h4 class="sherpa"><a href="scaffolding.html">Scaffolding</a></h4>
+          <p>Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
+          <h4 class="sherpa"><a href="base-css.html">Base Elements</a></h4>
+          <p>Styles for common HTML elements like typography, tables, forms, and buttons.</p>
+          <h4 class="sherpa"><!-- <a href="components.html">Components</a> -->Components</h4>
+          <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
+          <h4 class="sherpa"><!-- <a href="javascript.html">JavaScript plugins</a> -->JavaScript</h4>
+          <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
+
+					<h3 class="sherpa">List of components</h3>
+          <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
+          <ul>
+            <li>Button groups</li>
+            <li>Button dropdowns</li>
+            <li>Navigational tabs, pills, and lists</li>
+            <li>Navbar</li>
+            <li>Labels</li>
+            <li>Badges</li>
+            <li>Page headers and hero unit</li>
+            <li>Thumbnails</li>
+            <li>Alerts</li>
+            <li>Progress bars</li>
+            <li>Modals</li>
+            <li>Dropdowns</li>
+            <li>Tooltips</li>
+            <li>Popovers</li>
+            <li>Accordion</li>
+            <li>Carousel</li>
+            <li>Typeahead</li>
+          </ul>
+
+					<hr>
+				</article>
+
+			</section>
 		</div>
 	</section>
 
@@ -135,16 +226,17 @@
 
 
 	<!-- footer area -->
-	<footer class="blue">
+	<footer class="gray-light">
 		<div class="wrapper">
 			<div class="da-clear">
 				<div class="da-all ta-all ma-all">
-					<div class="box navyblue">
-						<p class="center_text white_text">footer</p>
+					<div class="box">
+						<p class="center-text">Sherpa</p>
 					</div>
 				</div>
 			</div>
 		</div>
 	</footer>
+
 </body>
 </html>
