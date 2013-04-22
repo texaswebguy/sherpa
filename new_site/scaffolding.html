@@ -147,6 +147,7 @@
 					<h2 class="sherpa">Global settings</h2>
 					<h3 class="sherpa">Requires HTML5 doctype</h3>
           <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+
 <pre class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
 &lt;html lang="en"&gt;
@@ -183,51 +184,69 @@
 					<h2 class="sherpa content-offset">Grid system</h2>
 					<p>The grid system uses percents instead of pixels for column and gutter widths. It ensures proper proportions for key screen resolutions and devices.</p>
 
-					<p>The desktop grid utilizes a <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
-
-					<div class="da-clear">
-						<div class="da1 gray-light center-text">1</div>
-						<div class="da2 box gray-light text-center">1</div>
-						<div class="da3 box gray-light text-center">1</div>
-						<div class="da4 box gray-light text-center">1</div>
-					</div>
-
-
-
-					<h3 class="sherpa">Docs sections</h3>
-          <h4 class="sherpa"><a href="scaffolding.html">Scaffolding</a></h4>
-          <p>Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
-          <h4 class="sherpa"><a href="base-css.html">Base Elements</a></h4>
-          <p>Styles for common HTML elements like typography, tables, forms, and buttons.</p>
-          <h4 class="sherpa"><!-- <a href="components.html">Components</a> -->Components</h4>
-          <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
-          <h4 class="sherpa"><!-- <a href="javascript.html">JavaScript plugins</a> -->JavaScript</h4>
-          <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
-
-					<h3 class="sherpa">List of components</h3>
-          <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
-          <ul>
-            <li>Button groups</li>
-            <li>Button dropdowns</li>
-            <li>Navigational tabs, pills, and lists</li>
-            <li>Navbar</li>
-            <li>Labels</li>
-            <li>Badges</li>
-            <li>Page headers and hero unit</li>
-            <li>Thumbnails</li>
-            <li>Alerts</li>
-            <li>Progress bars</li>
-            <li>Modals</li>
-            <li>Dropdowns</li>
-            <li>Tooltips</li>
-            <li>Popovers</li>
-            <li>Accordion</li>
-            <li>Carousel</li>
-            <li>Typeahead</li>
-          </ul>
+					<p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="btn btn-large btn-secondary" type="button">Live grid example</button></a></p>
 
 					<hr>
+
+					<h2 class="sherpa">Desktop grid</h2>
+					<p class="lead">The desktop grid utilizes <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
+
+					<h4 class="sherpa">Desktop 12 column grid HTML</h4>
+					<p>The 12 column grid uses <code>.da</code> for columns.</p>
+
+					<h4 class="sherpa">Desktop 15 column grid HTML</h4>
+					<p>The 12 column grid uses <code>.db</code> for columns.</p>
+
+				<hr>
+					
+				<h2 class="sherpa">Tablet grid</h2>
+					<p class="lead">The tablet grid utilizes <strong>9 columns</strong> and <strong>8 columns</strong> with a max-width of 979px and a min-width of 768px.</p>
+
+					<h4 class="sherpa">Tablet 9 column grid HTML</h4>
+					<p>The 12 column grid uses <code>.ta</code> for columns.</p>
+
+					<h4 class="sherpa">Tablet 8 column grid HTML</h4>
+					<p>The 12 column grid uses <code>.tb</code> for columns.</p>
+
+				<hr>
+
+
+				<h2 class="sherpa">Mobile grid</h2>
+					<p class="lead">The mobile grid utilizes <strong>3 columns</strong> and <strong>4 columns</strong> with a max-width of 767px.</p>
+
+					<h4 class="sherpa">Mobile 3 column grid HTML</h4>
+					<p>The 3 column grid uses <code>.ma</code> for columns.</p>
+
+					<h4 class="sherpa">Mobile 4 column grid HTML</h4>
+					<p>The 12 column grid uses <code>.mb</code> for columns.</p>
+
+				<hr>
+
+				<h2 class="sherpa">Basic grid HTML</h2>
+
+					<p>For a simple two column layout, create a <code>.wrapper</code> and add the appropriate number of columns. Remember that you have to add the grid classes for desktop <code>.da</code> or <code>.db</code>, tablet <code>.ta</code> or <code>.tb</code> and mobile <code>.ma</code> or <code>.mb</code>.</p>
+
+					<h4 class="sherpa">Your HTML should look something like this:</h4>
+
+<pre class="prettyprint linenums">
+&lt;div class="wrapper"&gt;
+  &lt;div class="da1-da3 ta1-ta3 ma-all"&gt;...&lt;/div&gt;
+  &lt;div class="da4-da12 ta4-ta9 ma-all"&gt;...&lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+					<p>For desktop we have <code>.da1-da3</code> and <code>.da4-da12</code>, making for 12 total columns and a complete row. For tablet we have <code>.ta1-ta3</code> and <code>.ta4-ta9</code>, making for 9 total columns and a complete row. For mobile we have <code>.ma-all</code> for both, making for 3 total columns and two complete row.</p>
+				
 				</article>
+
+
+
+
+
+
+
+
+
 
 			</section>
 		</div>
