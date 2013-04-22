@@ -143,39 +143,37 @@
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
-				<article id="download-bootstrap">
-					<h2 class="sherpa">Download</h2>
-					<p class="lead">Before downloading, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/">Sublime Text</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the Sherpa files.</p>
-
-					<h3 class="sherpa">Download starter kit</h3>
-					<p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and starter-template.html.</p>
-					<a href="http://github.com/DellGDC/sherpa-starterkit/archive/master.zip">
-            <button class="btn btn-large btn-secondary" type="button">Download starter kit</button>
-          </a>
+				<article id="global">
+					<h2 class="sherpa">Global settings</h2>
+					<h3 class="sherpa">Requires HTML5 doctype</h3>
+          <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+<pre class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+&lt;html lang="en"&gt;
+  ...
+&lt;/html&gt;
+</pre>
 
           <hr>
 				</article>
 
 				<article id="file-structure">
-					<h2 class="sherpa content-offset">File structure</h2>
-					<p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
+					<h3 class="sherpa">Typography and links</h3>
+          <p>Sherpa sets basic global display, typography, and link styles. Specifically, we:</p>
+          <ul>
+            <li>Remove <code>margin</code> on the body</li>
+            <li>Set <code>background-color: white;</code> on the <code>body</code></li>
+            <li>Use the <code>body</code> attribute to set the typographic base</li>
+            <li>Use the <code>h1 - h5</code> attributes as our header typographic base</li>
+            <!-- <li>Use the <code>small</code> and <code>bold</code> attributes to enhance the typographic style</li> -->
+            <!-- <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li> -->
+          </ul>
+          <p>These styles can be found within <strong>sherpa_override.css</strong>.</p>
 
-					<p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
+          <h3 class="sherpa">Reset via Normalize</h3>
+          <p>Sherpa uses <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
 
-					<pre class="prettyprint">
-  sherpa/
-  ├── assets/
-      ├── starter_template.html
-      ├── assets/
-      │   ├── css/
-      │   │    ├──doc.css
-      │   ├── img/
-      
-				</pre>
-
-				<p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
-
-					<hr>
+          <hr>
 				</article>
 
 				<article id="contents">
