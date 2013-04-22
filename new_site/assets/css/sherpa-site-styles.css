@@ -85,19 +85,12 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
 
 
 
-
-
-
-
-
-
-
 /* headings for Dell*/
 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
 h1.tablet, h2.tablet {
-  font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -121,7 +114,7 @@ h5.tablet      {font-size: 16px;line-height: 22px; font-family: 'Trebuchet MS', 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
 h1.mobile, h2.mobile {
-  font-family: 'museo_for_dell_300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
