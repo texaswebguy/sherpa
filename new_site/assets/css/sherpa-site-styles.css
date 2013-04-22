@@ -1,8 +1,6 @@
 
 
-  .sherpaReady body {
-    opacity: 1;
-  }
+  .sherpaReady body {opacity: 1;}
 
 /* The main wrapper - don't touch */
     .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none; overflow:hidden;}
