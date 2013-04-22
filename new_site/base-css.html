@@ -117,29 +117,66 @@
 		<div class="wrapper">
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
-						<ul class="nav nav-list bs-docs-sidenav">
-	          <li><a href="#download-bootstrap"><i class="icon-chevron-right"></i> Download</a></li>
-	          <li><a href="#file-structure"><i class="icon-chevron-right"></i> File structure</a></li>
-	          <li><a href="#contents"><i class="icon-chevron-right"></i> What's included</a></li>
-	          <!-- <li><a href="#html-template"><i class="icon-chevron-right"></i> HTML template</a></li>
-	          <li><a href="#examples"><i class="icon-chevron-right"></i> Examples</a></li>
-	          <li><a href="#what-next"><i class="icon-chevron-right"></i> What next?</a></li> -->
-	        </ul>
+					<ul class="nav nav-list bs-docs-sidenav">
+				      	<li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
+			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
+			          	<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+			          	<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
+			          	<li><a href="#colors"><i class="icon-chevron-right"></i> Colors & Borders</a></li>
+			          	<li><a href="#containers"><i class="icon-chevron-right"></i> Containers</a></li>
+			          	<li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+	   				</ul>
 				</div>
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
 				<article id="download-bootstrap">
-					<h2 class="sherpa">Download</h2>
-					<p class="lead">Before downloading, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/">Sublime Text</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the Sherpa files.</p>
+					<h2 class="sherpa">Typography</h2>
+					
+		          	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
+		          
+		            <h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+		            <h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+		            <h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+		            <h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+		            <h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+		            <!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+			      
+          			<hr>
 
-					<h3 class="sherpa">Download starter kit</h3>
-					<p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and starter-template.html.</p>
-					<a href="http://github.com/DellGDC/sherpa-starterkit/archive/master.zip">
-            <button class="btn btn-large btn-secondary" type="button">Download starter kit</button>
-          </a>
+          		<h3 class="sherpa">Headings options</h3>
+			        <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
+			          
+			        <h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
+			        <h1 class="blue box rounded-big white-text"><code>&lt;h1 class="white-text"&gt;</code> h1. Heading 1</h1>
+			        
 
-          <hr>
+			        <h3 class="sherpa">Tablet headings</h3>
+		          <p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+		          <div class="bs-docs-example">
+		            <h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+		            <h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+		            <h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+		            <h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+		            <h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+		            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+		          </div>
+
+		          <hr>
+
+		          <h3 class="sherpa">Phone headings</h3>
+		          <p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+		          <div class="bs-docs-example">
+		            <h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+		            <h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+		            <h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+		            <h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+		            <h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+		            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+		          </div>
+
 				</article>
 
 				<article id="file-structure">
