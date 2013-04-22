@@ -11,7 +11,15 @@
 
 	    <script type="text/javascript">
             var SHERPA_CONFIG_OVERRIDES = {};
-                SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa_site.js";
+                SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
+            		];
+								SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+									{ bootstrap: "assets/sherpa/css/bootstrap.css" },
+									{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
+									{ sherpa_site: "assets/css/sherpa-site-styles.css" },
+									{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.css" }
+								];
 
                 /*
                  To add your own JS with core js load:
@@ -52,34 +60,11 @@
 			<script src="assets/sherpa/sherpa.js"></script>	
 
 
-			<!-- Bootstrap styles -->
-	    	<!--<link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/bootstrap.css" type="text/css" rel="stylesheet">-->
-	    	<link href="assets/sherpa/css/bootstrap.css" type="text/css" rel="stylesheet">
-
-			<!-- Sherpa styles -->
-	    	<!--<link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_override.css" type="text/css" rel="stylesheet">-->
-	    	<link href="assets/sherpa/css/sherpa-override.css" type="text/css" rel="stylesheet">
-
-			<!--[if (!IE) | (gt IE 9)]><!-->
-			<!--<link rel="stylesheet" href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/grid/gridset.css" />-->
-			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset.css" />
-			<!--<![endif]-->
-			<!--[if IE 9]>
-			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset-ie-9.css" />
-			<![endif]-->
-			<!--[if lte IE 8]>
-			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset-ie-lte8.css" />
-			<![endif]-->
-
-
-
 		<!-- Your CSS files - Please touch
 		********************************************************************************
 		-->	
 
-			<!-- Your CSS - Add your new styles to this file -->
-			<link rel="stylesheet" href="assets/css/sherpa-site-styles.css" />
-
+			
 	</head>
 <body data-spy="scroll" data-target=".bs-docs-sidebar">
 	
@@ -192,10 +177,10 @@
 					<p class="lead">The desktop grid utilizes <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
 
 					<h4 class="sherpa">Desktop 12 column grid HTML</h4>
-					<p>The 12 column grid uses <code>.da</code> for columns.</p>
+					<p>The 12 column grid uses a class of <code>.da</code> for columns.</p>
 
 					<h4 class="sherpa">Desktop 15 column grid HTML</h4>
-					<p>The 12 column grid uses <code>.db</code> for columns.</p>
+					<p>The 12 column grid uses a class of <code>.db</code> for columns.</p>
 
 				<hr>
 					
@@ -203,10 +188,10 @@
 					<p class="lead">The tablet grid utilizes <strong>9 columns</strong> and <strong>8 columns</strong> with a max-width of 979px and a min-width of 768px.</p>
 
 					<h4 class="sherpa">Tablet 9 column grid HTML</h4>
-					<p>The 12 column grid uses <code>.ta</code> for columns.</p>
+					<p>The 12 column grid uses a class of <code>.ta</code> for columns.</p>
 
 					<h4 class="sherpa">Tablet 8 column grid HTML</h4>
-					<p>The 12 column grid uses <code>.tb</code> for columns.</p>
+					<p>The 12 column grid uses a class of <code>.tb</code> for columns.</p>
 
 				<hr>
 

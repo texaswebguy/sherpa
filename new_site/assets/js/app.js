@@ -29,7 +29,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	addToViewModel = null;
 	addToConfigs = null;
 
-
+	$(".prettyprint").html(prettyPrintOne($(".prettyprint").html(),null,true));
 
 	/*********************************************************************************
 	                              INSTRUCTIONS

@@ -1,5 +1,10 @@
-/*********************************************************************************
-Sherpa Protoype Framework
+//______________________________________________________________________________________
+
+/*
+
+Title: Sherpa Protoype Framework
+SubTitle: A stand-alone pure JavaScript User Experience Modeling Framework
+<http://sherpa.gsdprototypes.com>
 
 Rationale:
 	There has been a proliferation of javascript frameworks in the past couple
@@ -22,49 +27,58 @@ How Sherpa is built:
 	load all the javascript libraries we need to deliver the framework. If Sherpa doesn't
 	have something you need, if can be added.
 
-Copyright 2013, Dell Inc.
+Copyright (c) 2013, Dell Inc.
 
 Licensed under the Apache License, Version 2.0 (the "License");
 you may not use this file except in compliance with the License.
 You may obtain a copy of the License at
 
-   http://www.apache.org/licenses/LICENSE-2.0
+   <http://www.apache.org/licenses/LICENSE-2.0>
 
 Unless required by applicable law or agreed to in writing, software
 distributed under the License is distributed on an "AS IS" BASIS,
 WITHOUT WARRANTIES OR CONDITIONS OF ANY KIND, either express or implied.
 See the License for the specific language governing permissions and
 limitations under the License.
+*/
 
-**********************************************************************************/
+//_______________________________________________________________________________________
+
 'use strict'
 
-/*********************************************************************************
-IE Console workaround:
-In case we forget to take out console statements. 
-IE becomes very unhappy when we forget. Let's not make IE unhappy
-*********************************************************************************/
-if(typeof(console)==="undefined"){var console={};console.log=console.error=console.info=console.debug=console.warn=console.trace=console.dir=console.dirxml=console.group=console.groupEnd=console.time=console.timeEnd=console.assert=console.profile=function(){}};
 
-/*********************************************************************************
-HEAD JS  Configuration:
-*********************************************************************************/
 
+// HEAD JS Configuration:
+//______________________________________________________________________________________
+
+/*
+	head.js <http://headjs.com/> provides the ability to preconfigure before it fires.
+	One of the key configurations below is the ability to create a custom namespace with
+	the "head" property. This wraps all the functionality of head.js under the Sherpa name
+	and then we further use the Sherpa object for a wholistic purpose.
+
+	head.js adds classes to the html tag which can be very handy.  However, we had to extend 
+	this to other tags. For example, while the domready class is nice, we added a sherpaReady
+	tag which is fired after the page viewModel is applied to knockout bindings.  While this
+	causes a slight delay in the page becoming visible it prevents all the jerky motion that
+	occurs when a page is being constructed on the client.
+
+*/
 var head_conf = {
 	screens: [767, 979, 1140],
 	head: "Sherpa",
 	screensCss: {
-                                "gt" : true,
-                                "gte": false,
-                                "lt" : true,
-                                "lte": false,
-                                "eq" : false
+        "gt" : false,
+        "gte": false,
+        "lt" : false,
+        "lte": false,
+        "eq" : false
 	},
 	page: ''
 };
 
 
-/*********************************************************************************/
+//______________________________________________________________________________________
 
 /*!
  * HeadJS     The only script in your <HEAD>    
@@ -94,39 +108,98 @@ return d};d.ready(b,function(){g()&&m(x.ALL,function(a){r(a)});d.feature&&d.feat
 return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 
 
-/*********************************************************************************
-GLOBAL Sherpa Configuration:
-*********************************************************************************/
+// GLOBAL Sherpa Configuration:
+//______________________________________________________________________________________
+
+Sherpa.VERSION = "0.1";
+
 var SHERPA = {};
 
 SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
 // Please note that if you run local you run the risk of libraries and css being out of date.
 
-//SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
-SHERPA.REMOTE_PATH = "";
+// Should not be changed, this is a core dependency
+SHERPA.UNDERSCORE = "assets/sherpa/lib/underscore-min.js";
+
+// JS PATH Configuration;
+SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
 SHERPA.LOCAL_PATH = "";
 SHERPA.JS_PATH = "assets/js/";
 SHERPA.JS_LIB_PATH = "assets/sherpa/lib/";
-SHERPA.CSS_PATH = "assets/css/";
 SHERPA.CORE_PATH = "assets/sherpa/";
 SHERPA.COMPONENTS_PATH = "components/";
-SHERPA.PROTOTYPE_APP = "app.js";
+
+
+// i18n Configuration
 SHERPA.DEFAULT_LOCALE = "en";
 
+// Configuration of framework informational functions
+SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
 SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
-
-/* TODO - figure out a way to do CSS as well
+// CSS Configuration
+SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/assets/css/";
+SHERPA.CSS_CORE_LOCAL_PATH = "assets/sherpa/css/";
 SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/assets/css/";
-SHERPA.CSS_LOCAL_PATH = "assets/sherpa/css/";
-SHERPA.CSS_FILES = ["bootstrap","sherpa_overides"];
-SHERPA.CSS_LOCAL_APP = "assets/sherpa/css/docs.css";
+SHERPA.CSS_LOCAL_PATH = "assets/css/";
+
+
+// IE Console workaround and disable:
+//______________________________________________________________________________________
+
+/*
+	In case we forget to take out console statements. 
+	IE becomes very unhappy when we forget. Let's not make IE unhappy
 */
 
+if(typeof(console)==="undefined" || SHERPA.DISABLE_CONSOLE_MESSAGES){
+	var console={};
+	console.log=console.error=console.info=console.debug=console.warn=console.trace=console.dir=console.dirxml=console.group=console.groupEnd=console.time=console.timeEnd=console.assert=console.profile=function(){}
+};
 
+// GLOBAL Counter for troubleshooting bottlenecks:
+//______________________________________________________________________________________
+
+var count = 0, last_time = 0, start_time = 0, time_log = {}, see = "----------------->";
+var counter = function (e) {
+	if(SHERPA.ENABLE_COUNTER) {
+	    count++;
+	    var t = " ",
+	        n = (new Date).getTime(),
+	        r = (n - last_time) / 1e3;
+	    last_time = n;
+	    var i = (last_time - start_time) / 1e3 + " secs";
+	    console.log( e && (time_log[e] ? (r = r = (n - time_log[e].last_time) / 1e3, t = " END: " + e) : (time_log[e] = {
+	        last_time: last_time
+	    }, t = " START: " + e)), count + ": elapsed/total time:" + r + "/" + i + t );
+	}
+}
+
+// initiate counter to start login of entire app
+counter("Sherpa INIT");
+
+
+
+// GLOBAL Sherpa Computed Globals:
+//______________________________________________________________________________________
+
+if(SHERPA.RUN_AS_LOCAL) {
+	SHERPA.JS_LIB_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_LIB_PATH;
+	SHERPA.JS_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_PATH;
+	SHERPA.CSS_CORE_PATH = SHERPA.CSS_CORE_LOCAL_PATH;
+	SHERPA.CSS_PATH = SHERPA.CSS_LOCAL_PATH;
+} else {
+	SHERPA.JS_LIB_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_LIB_PATH;
+	SHERPA.JS_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_PATH;
+	SHERPA.CSS_CORE_PATH = SHERPA.CSS_CORE_REMOTE_PATH;
+	SHERPA.CSS_PATH = SHERPA.CSS_REMOTE_PATH;
+}
+
+// JS Files
+//______________________________________________________________________________________
 
 SHERPA.JS_CORE_LOAD = [
 	{ jquery: SHERPA.JS_LIB_PATH+"jquery.min.js"}, 
@@ -145,16 +218,42 @@ SHERPA.JS_CORE_LOAD = [
 	{ waypointsInfinite: SHERPA.JS_LIB_PATH+"waypoints-infinite.min.js"}
 ]
 
+SHERPA.PROTOTYPE_APP = "app.js";
 
-/*********************************************************************************
- LOAD UNDERSCORE - CANNOT BE OVERRIDEN
- *********************************************************************************/
-Sherpa.js({ underscore: "assets/sherpa/lib/underscore-min.js"});
+// CSS Files
+//______________________________________________________________________________________
 
-/*********************************************************************************
-GLOBAL Sherpa Globals Overides:
-*********************************************************************************/
+SHERPA.CSS_CORE_LOAD = [
+	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },
+	{ sherpa_overides: SHERPA.CSS_CORE_PATH+"sherpa_override.css" }
+];
+SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";
+SHERPA.CSS_GRID_IE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-9.cssgridset.css";
+SHERPA.CSS_GRID_LTIE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-lte8.css";
+SHERPA.CSS_LOCAL_APP = SHERPA.CSS_PATH+"doc.css";
 
+
+// LOAD UNDERSCORE - CANNOT BE OVERRIDEN
+//______________________________________________________________________________________
+
+/* 
+	We decided that underscore is such a vital part of this framework, we better load 
+	it before anything else. Who wants to do for loops??
+*/
+
+Sherpa.js({ underscore: SHERPA.UNDERSCORE});
+
+
+// GLOBAL Sherpa Globals Overides:
+//______________________________________________________________________________________
+
+/*
+	Global overrides is a way to specify global variables from the html document.  In some
+	cases you might have different prototype html pages and maybe you have a need to have
+	different configuration.  For example, you might want a different js file to control 
+	a particular page.
+
+*/
 
 Sherpa.ready("underscore", function() {
 	console.log("loaded: ","underscore")
@@ -168,78 +267,69 @@ Sherpa.ready("underscore", function() {
         
     }
 
+	// Load JS CORE:
+	//______________________________________________________________________
 	_.each(SHERPA.JS_CORE_LOAD, function(lib){
-		console.log("loaded: ",_.keys(lib)[0]);
+		console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
 	});
 
+	// Load CSS Files:
+	//______________________________________________________________________
+	_.each(SHERPA.CSS_CORE_LOAD, function(css){
+		console.log("loaded css: ",_.keys(css)[0]);
+		Sherpa.load(css);
+	});
+
+	if (Sherpa.browser.ie)  {
+		if($('html').hasClass('ie9')) {
+			Sherpa.load({grid: SHERPA.CSS_GRID_IE9});
+		} else {
+			Sherpa.load({grid: SHERPA.CSS_GRID_LTIE9});
+		}
+	} else {
+		Sherpa.load({grid: SHERPA.CSS_GRID});
+		console.log("loaded css: grid");
+	}
+	Sherpa.load({local_css: SHERPA.CSS_LOCAL_APP});
+	console.log("loaded css: local_css");
+
+
 });
 
-/*********************************************************************************
-GLOBAL Counter for troubleshooting bottlenecks:
-*********************************************************************************/
-
-var count = 0, last_time = 0, start_time = 0, time_log = {}, see = "----------------->";
-var counter = function (e) {
-	if(SHERPA.ENABLE_COUNTER) {
-	    count++;
-	    var t = " ",
-	        n = (new Date).getTime(),
-	        r = (n - last_time) / 1e3;
-	    last_time = n;
-	    var i = (last_time - start_time) / 1e3 + " secs";
-	    console.log( e && (time_log[e] ? (r = r = (n - time_log[e].last_time) / 1e3, t = " END: " + e) : (time_log[e] = {
-	        last_time: last_time
-	    }, t = " START: " + e)), count + ": elapsed/total time:" + r + "/" + i + t );
-	}
-}
-counter("Sherpa INIT");
 
 
+// IE Workarounds:
+//______________________________________________________________________________________
 
-
-/*********************************************************************************
-GLOBAL Sherpa Computed Globals:
-*********************************************************************************/
-if(SHERPA.RUN_AS_LOCAL) {
-	SHERPA.JS_LIB_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_LIB_PATH;
-	SHERPA.JS_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_PATH;
-} else {
-	SHERPA.JS_LIB_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_LIB_PATH;
-	SHERPA.JS_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_PATH;
-}
-
-
-
-
-/*********************************************************************************
-IE Workarounds:
-*********************************************************************************/
 if (Sherpa.browser.ie)  {
 	Sherpa.js(
-		{ html5shiv: SHERPA.JS_LIB_PATH+"html5shiv.js"}, 
 		{ html5printshiv: SHERPA.JS_LIB_PATH+"html5shiv-printshiv.js"},
 		{ html5Formshim: SHERPA.JS_LIB_PATH+"jquery.html5form.js"}
 	);
 }
 	
+// TODO everything breaks in IE right now so this is not much to worry about right now
 
-/*********************************************************************************
-Sherpa ready init functions:
-*********************************************************************************/
-var viewModel = {};
 
-/**
- * Defined here to be used for adding additional configs with _.extend();
- *
- * prevents error when not using sherpa-i18n.js (which defines property);
- */
-viewModel.config = {};
+
+// Sherpa ready init functions:
+//______________________________________________________________________________________
+
+
+var viewModel = {
+	config:{}
+};
+
+/*
+	The viewModel holds the context for the entire application/page. It has to be declared 
+	here since all the sherpa core js files use it to store information.
+*/
+
 
 Sherpa.ready(function(){
-
-
-	//Load all sherpa utilities, custom widgets for knockout, pager, amplify, etc.
+	
+	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager.js"},
 		{ sherpaUtils: SHERPA.JS_LIB_PATH+"sherpa-utils.js"},
@@ -250,57 +340,37 @@ Sherpa.ready(function(){
 	);
 
 
-	//Enables Gridset overlay if configured
-	if(SHERPA.ENABLE_GRIDSET_OVERLAY){
-		Sherpa.js({ gridSet: SHERPA.JS_LIB_PATH+"gridset-overlay.js"});
-	}
-
-	//Enables Sherpa Notes if configured
-	if(SHERPA.ENABLE_NOTES){
-		Sherpa.js(
-			{ showdown: SHERPA.JS_LIB_PATH+"showdown.js"},
-			{ sherpaNotes: SHERPA.JS_LIB_PATH+"sherpa-notes.js"}
-		);
-	}
-
-
-	//Wait till all of sherpa specific functions are loaded
+	// Need to wait for i18n to load so that messages are in context (viewModel.content)
 	Sherpa.ready("sherpai18n", function(){
 
-		//load local app
+		// load local app
 		Sherpa.js(
 			{ localJSApp: SHERPA.JS_PATH+SHERPA.PROTOTYPE_APP}
 		);
 
 	    Sherpa.ready("localJSApp", function(){
-		    //apply all bindings to view model
+
+	    	// TODO will need to decide if pager.js plugin is needed
+
+		    //apply view model to allknockout bindings 
 			ko.applyBindings(viewModel);
 
-			//turn on the page
+			// turn on the page
 		    $('html').addClass('sherpaReady');
 
-			//Enables prototype QA if configured
+			// Enables prototype QA if configured
+			// TODO this is way out in terms of building something.  It's just a placeholder for now
 			if(SHERPA.ENABLE_PROTOTYPE_QA){
 				Sherpa.js(
 					{ sherpaPrototypeQA: SHERPA.JS_LIB_PATH+"sherpa-prototype-qa.js"}
 				);
 
 			}
-
+			// Mark the end of the sherpa init sequence
 			counter("Sherpa INIT");
-			
+		}); // end Sherpa.ready - local app
 
-		});
+	}); // end Sherpa.ready - i18n
 
-	});
-
-
-});
-
-
-
-
-
-/*********************************************************************************/
-
+}); // end Sherpa.ready
 
