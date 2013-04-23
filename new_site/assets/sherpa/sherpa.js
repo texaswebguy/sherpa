@@ -210,8 +210,10 @@ SHERPA.JS_CORE_LOAD = [
 	{ scrollTo: SHERPA.JS_LIB_PATH+"jquery.scrollTo.min.js"}, 
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
-	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},
-	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
+	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
+	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"},
+	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"}
+	
 ]
 
 SHERPA.PROTOTYPE_APP = "app.js";
@@ -324,8 +326,8 @@ var viewModel = {
 */
 
 
-Sherpa.ready("dateFormat", function(){
-alert("sherpa is ready");
+Sherpa.ready("bootstrap", function(){
+
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager.js"},
