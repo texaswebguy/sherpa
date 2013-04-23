@@ -79,8 +79,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	  var $spy = $(this).scrollspy('refresh')
 	});
 	
-
-
+alert($('html').attr('class'))
 
 	/*********************************************************************************
 	Please don't touch below
