@@ -63,7 +63,14 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			event.preventDefault();
 			$('body').scrollTo($(event.currentTarget).attr('href'),300);
 		})
-	})
+	});
+
+	$('[data-spy="scroll"]').each(function () {
+	  var $spy = $(this).scrollspy('refresh')
+	});
+	
+
+
 
 	/*********************************************************************************
 	Please don't touch below
