@@ -210,12 +210,8 @@ SHERPA.JS_CORE_LOAD = [
 	{ scrollTo: SHERPA.JS_LIB_PATH+"jquery.scrollTo.min.js"}, 
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
-	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
 	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},
-	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"},
-	{ waypoints: SHERPA.JS_LIB_PATH+"waypoints.min.js"},
-	{ waypointsSticky: SHERPA.JS_LIB_PATH+"waypoints-sticky.min.js"},
-	{ waypointsInfinite: SHERPA.JS_LIB_PATH+"waypoints-infinite.min.js"}
+	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 
 SHERPA.PROTOTYPE_APP = "app.js";
