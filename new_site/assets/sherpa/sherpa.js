@@ -211,11 +211,9 @@ SHERPA.JS_CORE_LOAD = [
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
 	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
-	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"},
-	{ waypoints: SHERPA.JS_LIB_PATH+"waypoints.min.js"},
-	{ waypointsSticky: SHERPA.JS_LIB_PATH+"waypoints-sticky.min.js"},
-	{ waypointsInfinite: SHERPA.JS_LIB_PATH+"waypoints-infinite.min.js"}
+	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"}
+	
 ]
 
 SHERPA.PROTOTYPE_APP = "app.js";
@@ -256,6 +254,7 @@ Sherpa.js({ underscore: SHERPA.UNDERSCORE});
 */
 
 Sherpa.ready("underscore", function() {
+
 	console.log("loaded: ","underscore")
     if(_.isObject(SHERPA_CONFIG_OVERRIDES) && !_.isEmpty(SHERPA_CONFIG_OVERRIDES) ) {
     	if(SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD){
@@ -327,8 +326,8 @@ var viewModel = {
 */
 
 
-Sherpa.ready(function(){
-	
+Sherpa.ready("bootstrap", function(){
+
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager.js"},
@@ -373,4 +372,3 @@ Sherpa.ready(function(){
 	}); // end Sherpa.ready - i18n
 
 }); // end Sherpa.ready
-

@@ -5,33 +5,32 @@ counter("Sherpa Utils");
 
 Sherpa.msg = function(textkey,t_data) {
 	
-	var msg = viewModel.content[textkey];
+	var msg = viewModel.content[textkey], 
+		regex = /\{[0-9]\}*/,
+		i = 0;
 	//TODO - need to get content from Data API
 	if(t_data){
-		//console.log('has data',t_data)
-		var regex = /\{[0-9]\}*/;
 		if(_.isObject(t_data) && !_.isArray(t_data)) {
 			//data is ko.obserbable
-			//TODO this is not reactive
+			//TODO this is not reactive. Will have to worry about that when we do in page editing
 			t_data = t_data();
-			//console.log('has ko data',t_data)
 		}
 		
 		if(_.isArray(t_data) && msg) {
-			var i = 0;
 			while(msg.match(regex)) {
 				msg = msg.replace(msg.match(regex),t_data[i]);
 				i++;
 			}			  			
 		} 
 		else {
-			//console.log('its not an array')
+			// did not find content
 			if(!_.isNaN(parseInt(t_data))){
-				//check to see if there is a plural/singular
-				if(viewModel.content[textkey+"_plural"]) {
+				// is numerical data
+				// check to see if there is a plural/singular
+				msg = viewModel.content[textkey+"_plural"];
+				if(msg) {
 					//it is a plural/singular textkey
 					if(t_data>1) {
-						msg = viewModel.content[textkey+"_plural"];
 						msg = msg.replace(msg.match(regex),t_data);
 					} else {
 						msg = viewModel.content[textkey+"_singular"];
@@ -40,13 +39,14 @@ Sherpa.msg = function(textkey,t_data) {
 					msg = msg.replace(msg.match(regex),t_data);
 				}
 			} else {
-				//console.log(regex, msg)
+				//
 				msg = msg.replace(msg.match(regex),t_data);
 			}
 		} 
 	}
 	if(!msg) {
-		//text key does not exist
+		// text key does not exist
+		// figure out how big the containg element is and then truncate lorem ispum to fit
 		msg = '<span title="Missing textkey: '+textkey+'">Lorem ispum...</span>';
 	};
 	return msg;
@@ -69,10 +69,11 @@ Sherpa.linkedmsg = function (textkey, t_data) {
     		done = true;
     	}
     }   
-    console.log(msg.match(regex)[1])
     if (urls.length) {
         _.each(urls, function(url){
-            var to_be_replaced,text,url_html;
+            var to_be_replaced,
+            	text,
+            	url_html;
             to_be_replaced= msg.match(regex)[0],
             text = msg.match(regex)[1],
             url_html = '<a href="' + url + '">' + text + "</a>",
@@ -91,26 +92,31 @@ Sherpa.formatCurrency = function(number_data){
 						if(number_data.format == 'decimal') {
 							format = number_data.format;
 						} else {
-							format = 'nodecimal'
+							format = 'nodecimal';
 						}
 					}
 				} catch(err) {
 					console.error('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}')
-					//data-bind:="date: {'date': date_var, 'format' : 'dddd, mmmm dd, yyyy'}"
 				}
 			} else {
 				format = 'nodecimal'
 				amount = Math.ceil(number_data);
 			}
-console.log('format_'+format, viewModel.config.currency)
-			format = viewModel.config.currency['format_'+format];
-			amount = amount * viewModel.config.currency.conversion_rate;
-			amount = _.str.numberFormat(amount, format.decimals, format.decimal_separator, format.thousands_separator);
-			position = viewModel.config.currency.symbol_position;
-			if (position == "left") {
-				return viewModel.config.currency.symbol+amount;
-			} else {
-				return amount+viewModel.config.currency.symbol;
+			try {
+				format = viewModel.config.currency['format_'+format];
+				// TODO what if viewModel.config.currency is not configured correctly?
+				amount = amount * viewModel.config.currency.conversion_rate;
+				amount = _.str.numberFormat(amount, format.decimals, format.decimal_separator, format.thousands_separator);
+				position = viewModel.config.currency.symbol_position;
+				if (position == "left") {
+					return viewModel.config.currency.symbol+amount;
+				} else {
+					return amount+viewModel.config.currency.symbol;
+				}
+			} catch (err) {
+				var error_msg = "Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json"
+				console.error(error_msg);
+				return { status: 'failed', error_msg: error_msg };
 			}
 }
 Sherpa.dateFormat = function(date) {
@@ -162,11 +168,14 @@ Sherpa.uuid = function() {
 	         s4() + '-' + s4() + s4() + s4();
 }
 
-Sherpa.getComponentHTML = function(component_name, component_type, element, bindingContext) {
-	var filename, uuid = "";
+Sherpa.insertComponent = function(component_name, component_type, element, bindingContext, options) {
+	var filename, uuid = "",html;
 	if(viewModel.localhost) {
+		// TODO workaround to circumvent browser cache... need to look into this better
 		uuid = "#"+Sherpa.uuid();
 	}
+	/*
+	//TODO don't think we want to really allow this
 	if(component_name.match("/")){
 		//allows to pass a full deep path to a specific file inside the component folder
 		var path = component_name.split("/");
@@ -174,30 +183,33 @@ Sherpa.getComponentHTML = function(component_name, component_type, element, bind
 		path.pop();
 		component_name = path.join("/")
 	}
+	*/
 	if(component_type) {
 		filename = component_type+".html"+uuid;
 	} else {
 		filename = component_name+".html"+uuid
 	}
 	//console.log("fetching :",filename)
-	return amplify.request({
+
+	amplify.request({
 		resourceId: "getComponentHTML", 
 		data: {filename: "components/"+component_name+"/"+filename}, 
-		success: function(html, status){
+		success: function(responseHTML, status){
 			//console.log(status);
 			//console.log(element)
-			$(element).html(html);
+			$(element).html(responseHTML);
+			if(options){
+				bindingContext.component_options = options;
+			}
+			console.log(bindingContext);
 			ko.applyBindingsToDescendants(bindingContext, element);
-			amplify.publish( "register_page_event", component_name );
+			amplify.publish( "register_page_event", component_name );		    					
 		},
 		error: function( data, status ) {
 			//no module exists
 			filename = filename.split('#')[0];
-			var html = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Component</h4> <p>'+'components/'+component_name+'/'+filename+' does not exist</p></div>';
-
-
-			$(element).html(html);
-
+			var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Component</h4> <p>'+'components/'+component_name+'/'+filename+' does not exist</p></div>';
+			$(element).html(responseHTML);
 		}
 	});
 }
@@ -217,8 +229,9 @@ Sherpa.check_condition = function(params){
 	* This function checks for a ko condition (if:/ifnot:)
 	* which might be passed through a custom binding.
 	*/
-	var condition = false;
-	var isConditional = !(_.isUndefined(params.if) && _.isUndefined(params.ifnot));
+	var condition = false,
+		isConditional = !(_.isUndefined(params.if) && _.isUndefined(params.ifnot));
+
 	if(isConditional) {
 		if(!_.isUndefined(params.if)) {
 			condition = params.if;
@@ -229,6 +242,11 @@ Sherpa.check_condition = function(params){
 		condition = true;
 	}
 	return condition;
+}
+
+Sherpa.loadComponentJS = function(component_id, callback) {
+	//TODO this may not work.... the functions are not available to the component in time of binding.
+	Sherpa.js(SHERPA.COMPONENTS_PATH+component_id+"/"+component_id+".js", callback );
 }
 
 _.extend(Sherpa, amplify); //puts all the amplify functions in the Sherpa namespace

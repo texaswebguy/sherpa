@@ -287,7 +287,7 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
   }
   .bs-docs-sidenav.affix {
     top:45px;
-    width:15.08%; /* hard-coded for desktop da1-da3. We will have to figure out how to handle mobile and tablet */
+    width:13%; /* hard-coded for desktop da1-da3. We will have to figure out how to handle mobile and tablet */
   }
   .tablet .bs-docs-sidenav.affix li a, .mobile .bs-docs-sidenav.affix li a{
     display:none;

@@ -1,0 +1,238 @@
+<!DOCTYPE html>
+<html lang="en">
+
+	<head>
+		<meta charset="utf-8">
+	    <title>Sherpa - Template</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+	    <meta name="description" content="">
+	    <meta name="author" content="">
+
+	    <script type="text/javascript">
+            var SHERPA_CONFIG_OVERRIDES = {};
+                SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
+            		];
+				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
+					{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
+					{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.css" }
+				];
+				SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/sherpa-site-styles.css";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa-site.js";
+
+                /*
+                 To add your own JS with core js load:
+
+                var SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                        { myCustomJS: "assets/js/myCustomJS.js"}
+				]
+
+				This is a palce to overide sherpa default configurations.
+				WARNING: If you don't know what this is, don't touch it! Ask someone!
+
+				SHERPA_CONFIG_OVERRIDES.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
+				// Please note that if you run local you run the risk of libraries and css being out of date.
+
+				SHERPA_CONFIG_OVERRIDES.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
+				SHERPA_CONFIG_OVERRIDES.LOCAL_PATH = "/";
+				SHERPA_CONFIG_OVERRIDES.JS_PATH = "assets/js/";
+				SHERPA_CONFIG_OVERRIDES.JS_LIB_PATH = "assets/sherpa/lib/";
+				SHERPA_CONFIG_OVERRIDES.CSS_PATH = "assets/css/";
+				SHERPA_CONFIG_OVERRIDES.CORE_PATH = "assets/sherpa/";
+				SHERPA_CONFIG_OVERRIDES.COMPONENTS_PATH = "components/";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "app.js";
+				SHERPA_CONFIG_OVERRIDES.DEFAULT_LOCALE = "en";
+				SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+					{ myCustomLib: "assets/js/myCustomLib.js"}
+				]
+				SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = false; //enables hot key for showing grid overlay
+				SHERPA_CONFIG_OVERRIDES.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
+				SHERPA_CONFIG_OVERRIDES.ENABLE_PROTOTYPE_QA = true; //enables script to check html for sherpa errors
+
+	    	*/
+	    </script>
+
+	    <style>body {opacity: 0;}</style>
+		<!-- Framework CSS files - Don't touch
+		********************************************************************************
+		-->
+			<script src="assets/sherpa/sherpa.js"></script>	
+
+
+		<!-- Your CSS files - Please touch
+		********************************************************************************
+		-->	
+
+			
+	</head>
+<body data-spy="scroll" data-target=".bs-docs-sidenav" data-offset-top="-20">
+	
+	<!-- Start - Masthead
+  ================================================== -->
+
+  <header class="masthead-sherpa" data-bind="component: { 
+			name :'masthead', 
+			type :'sherpa_site',
+			data : sherpa_masthead
+		}">
+  </header>
+
+  <!-- End - Masthead
+  ================================================== -->
+
+ 
+	<!-- Main content area -->
+	<section class="title-content">
+		<div class="wrapper">
+			<div class="da-all ta-all mb-all white-text">
+				<h1 class="sherpa featured-white">Base CSS</h1>
+				<h3 class="sherpa featured-white">Fundamental HTML elements styled and enhanced with extensible classes.</h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-content">
+		<div class="wrapper">
+			<aside class="da1-da3 ta-all mb-all">
+				<div class="bs-docs-sidebar">
+					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
+				      	<li class="active"><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
+			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
+			          	<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
+			          	<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
+			          	<li><a href="#colors"><i class="icon-chevron-right"></i> Colors & Borders</a></li>
+			          	<li><a href="#containers"><i class="icon-chevron-right"></i> Containers</a></li>
+			          	<li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+	   				</ul>
+				</div>
+			</aside>
+			<section class="da4-da12 ta-all mb-all">
+
+				<article id="typography">
+					<h2 class="sherpa">Typography</h2>
+					
+		          	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
+		          
+		            <h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+		            <h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+		            <h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+		            <h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+		            <h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+		            <!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+			      
+          			<hr>
+
+          		<h3 class="sherpa">Headings options</h3>
+			        <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
+			          
+			        <h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
+			        <h1 class="blue box rounded-big white-text"><code>&lt;h1 class="white-text"&gt;</code> h1. Heading 1</h1>
+			        
+
+			        <h3 class="sherpa">Tablet headings</h3>
+		          <p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+		          <div class="bs-docs-example">
+		            <h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+		            <h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+		            <h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+		            <h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+		            <h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+		            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+		          </div>
+
+		          <hr>
+
+		          <h3 class="sherpa">Phone headings</h3>
+		          <p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
+		          <div class="bs-docs-example">
+		            <h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+		            <h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+		            <h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+		            <h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+		            <h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+		            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+		          </div>
+
+				</article>
+
+				<article id="file-structure">
+					<h2 class="sherpa content-offset">File structure</h2>
+					<p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
+
+					<p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
+
+					<pre class="prettyprint">
+  sherpa/
+  ├── assets/
+      ├── starter_template.html
+      ├── assets/
+      │   ├── css/
+      │   │    ├──doc.css
+      │   ├── img/
+      
+				</pre>
+
+				<p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
+
+					<hr>
+				</article>
+
+				<article id="contents">
+					<h2 class="sherpa content-offset">What's included</h2>
+					<p class="lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible in the top navigation.</p>
+
+					<h3 class="sherpa">Docs sections</h3>
+          <h4 class="sherpa"><a href="scaffolding.html">Scaffolding</a></h4>
+          <p>Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
+          <h4 class="sherpa"><a href="base-css.html">Base Elements</a></h4>
+          <p>Styles for common HTML elements like typography, tables, forms, and buttons.</p>
+          <h4 class="sherpa"><!-- <a href="components.html">Components</a> -->Components</h4>
+          <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
+          <h4 class="sherpa"><!-- <a href="javascript.html">JavaScript plugins</a> -->JavaScript</h4>
+          <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
+
+					<h3 class="sherpa">List of components</h3>
+          <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
+          <ul>
+            <li>Button groups</li>
+            <li>Button dropdowns</li>
+            <li>Navigational tabs, pills, and lists</li>
+            <li>Navbar</li>
+            <li>Labels</li>
+            <li>Badges</li>
+            <li>Page headers and hero unit</li>
+            <li>Thumbnails</li>
+            <li>Alerts</li>
+            <li>Progress bars</li>
+            <li>Modals</li>
+            <li>Dropdowns</li>
+            <li>Tooltips</li>
+            <li>Popovers</li>
+            <li>Accordion</li>
+            <li>Carousel</li>
+            <li>Typeahead</li>
+          </ul>
+
+					<hr>
+				</article>
+
+			</section>
+		</div>
+	</section>
+
+
+
+
+	<!-- footer area -->
+	<footer class="gray-light" data-bind="component: { 
+			name :'footer', 
+			type :'sherpa_site'
+		}">
+	</footer>
+
+</body>
+</html>

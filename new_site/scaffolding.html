@@ -113,9 +113,8 @@
 					<h3 class="sherpa featured-white">Requires HTML5 doctype</h3>
           <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
 
-<pre class="prettyprint linenums">
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
   ...
 &lt;/html&gt;
 </pre>
@@ -140,6 +139,72 @@
           <p>Sherpa uses <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
 
           <hr>
+
+          <h3 class="sherpa">Responsive Classes</h3>
+          <p>Sherpa uses <a href="http://http://headjs.com" target="_blank">head.js</a> to manage the loading of all javascript and css. Using head.js Sherpa adds responsive css classes to the html element which can help </p>
+          <p>The following classes are automatically assigned to the html element when the page loads and resizes:</p>
+          <ul>
+          		<li>desktop</li>
+          		<li>no-desktop</li>
+          		<li>tablet</li>
+          		<li>no-tablet</li>
+          		<li>mobile</li>
+          		<li>no-mobile</li>
+          </ul>
+
+          <hr>
+
+          <h3 class="sherpa">Device Specific Classes</h3>
+          <p>The following classes are automatically assigned to the html element when the page loads:</p>
+          <ul>
+          		<li>touch</li>
+          		<li>no-touch</li>
+          		<li>retina</li>
+          		<li>no-retina</li>
+          </ul>
+
+          <hr>
+          <h3 class="sherpa">Device Orientation Specific Classes</h3>
+          <p>The following classes are automatically assigned to the html element when the page orientation changes:</p>
+          <ul>
+          		<li>landscape</li>
+          		<li>no-lansdscape</li>
+          		<li>portrait</li>
+          		<li>no-portrait</li>
+          </ul>
+
+          <hr>
+
+
+          <h3 class="sherpa">Browser Specific Classes</h3>
+          <p>The following classes are automatically assigned to the html element when the page loads:</p>
+
+
+          <ul>
+          		<li>borderimage: define an image to be used instead of the normal border of an element</li>
+          		<li>borderradius: support for rounded borders</li>
+          		<li>boxshadow: a simple shadow for a box</li>
+          		<li>cssreflections: a reflection effect for an object</li>
+          		<li>csstransforms: ability to scale</li>
+          		<li>csstransitions: ability to animate changes to CSS properties</li>
+          		<li>fontface: ability to use custom fonts</li>
+          		<li>multiplebgs: ability to define multiple background properties for a box</li>
+          		<li>opacity: transparency support</li>
+          		<li>rgba: allows to specify an opacity value for a color</li>
+          		<li>textshadow; a simple shadow for a text</li>
+          	</ul>
+          	<p>a "no-" version shows when above items are not supported</p>
+
+          <hr>
+
+          <hr>
+
+
+          <h3 class="sherpa">Localization attribute</h3>
+          <p>Based on the language/locale which the prototype is set for the "lang" attribute is automatically added to the html ellement.</p>
+
+
+
 				</article>
 
 
@@ -193,7 +258,7 @@
 
 					<h4 class="sherpa">Your HTML should look something like this:</h4>
 
-<pre class="prettyprint linenums">
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 &lt;div class="wrapper"&gt;
   &lt;div class="da1-da3 ta1-ta3 ma-all"&gt;...&lt;/div&gt;
   &lt;div class="da4-da12 ta4-ta9 ma-all"&gt;...&lt;/div&gt;
