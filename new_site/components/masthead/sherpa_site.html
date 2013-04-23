@@ -1,0 +1,37 @@
+
+  <script type="text/javascript">
+
+    var sherpa_masthead_active = function(url){
+        if(_.last(location.pathname.split("/"))== url){
+          return 'active';
+        } else {
+          return "";
+        }
+    }
+
+  </script>
+
+
+
+  <div class="wrapper">
+    <!-- Logo -->
+    <div class="da1-da2 ta1-ta2 mb1">
+      <div class="brand-sherpa">
+        <a href="index.html">Sherpa</a>
+      </div>
+    </div>
+
+    <!-- menu collapse (tablet and phone) -->
+    <div class="da-hide ta3-ta9 mb2-mb4 right-text">
+      <a href="#" id="menu-toggle" class="nav-sherpa-collapse"><span aria-hidden="true" class="icon-menu-collapsed"></span></a>
+    </div>
+
+    <!-- menu -->
+    <div id="menu" class="da3-da12 ta-hide ma-hide">
+    	<nav class="nav-sherpa">
+        <ul data-bind="foreach: $data">
+          <li data-bind="attr: {'class' : sherpa_masthead_active(url) }"><a href="" data-bind="text: label, attr: { 'href' : url }">Get started</a></li>
+        </ul>
+      </nav>
+    </div>
+  </div>

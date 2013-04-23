@@ -14,12 +14,13 @@
                 SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
                 	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
             		];
-								SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
-									{ bootstrap: "assets/sherpa/css/bootstrap.css" },
-									{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
-									{ sherpa_site: "assets/css/sherpa-site-styles.css" },
-									{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.css" }
-								];
+				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
+					{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
+					{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.css" }
+				];
+				SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/sherpa-site-styles.css";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa-site.js";
 
                 /*
                  To add your own JS with core js load:
@@ -71,32 +72,11 @@
 	<!-- Start - Masthead
   ================================================== -->
 
-  <header class="masthead-sherpa">
-    <div class="wrapper">
-      <!-- Logo -->
-      <div class="da1-da2 ta1-ta2 mb1">
-        <div class="brand-sherpa">
-          <a href="http://dellgdc.github.io/sherpa/new_site/">Sherpa</a>
-        </div>
-      </div>
-
-      <!-- menu collapse (tablet and phone) -->
-      <div class="da-hide ta3-ta9 mb2-mb4 right-text">
-        <a href="#" id="menu-toggle" class="nav-sherpa-collapse"><span aria-hidden="true" class="icon-menu-collapsed"></span></a>
-      </div>
-
-      <!-- menu -->
-      <div id="menu" class="da3-da12 ta-hide ma-hide">
-      	<nav class="nav-sherpa">
-          <ul>
-            <li><a href="http://dellgdc.github.io/sherpa/new_site/how-to.html">Get started</a></li>
-            <li><a href="http://dellgdc.github.io/sherpa/new_site/scaffolding.html">Scaffolding</a></li>
-            <li><a href="http://dellgdc.github.io/sherpa/new_site/base-css.html">Basic Elements</a></li>
-            <li><a href="http://dellgdc.github.io/sherpa/new_site/components.html">Components</a></li>
-          </ul>
-        </nav>
-      </div>
-    </div>
+  <header class="masthead-sherpa" data-bind="component: { 
+			name :'masthead', 
+			type :'sherpa_site',
+			data : sherpa_masthead
+		}">
   </header>
 
   <!-- End - Masthead
@@ -241,17 +221,12 @@
 
 
 	<!-- footer area -->
-	<footer class="gray-light">
-		<div class="wrapper">
-			<div class="da-clear">
-				<div class="da-all ta-all ma-all">
-					<div class="box">
-						<p class="center-text">Sherpa</p>
-					</div>
-				</div>
-			</div>
-		</div>
+	<footer class="gray-light" data-bind="component: { 
+			name :'footer', 
+			type :'sherpa_site'
+		}">
 	</footer>
+
 
 </body>
 </html>
