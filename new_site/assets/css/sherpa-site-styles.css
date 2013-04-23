@@ -289,6 +289,30 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
     top:45px;
     width:15.08%; /* hard-coded for desktop da1-da3. We will have to figure out how to handle mobile and tablet */
   }
+  .tablet .bs-docs-sidenav.affix li a, .mobile .bs-docs-sidenav.affix li a{
+    display:none;
+  }
+  .tablet .bs-docs-sidenav.affix, .mobile .bs-docs-sidenav.affix {
+    width:100%;
+    top: -20px;
+    left: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index:9999;
+  }
+  .tablet .bs-docs-sidenav.affix li.active a, .mobile .bs-docs-sidenav.affix li.active a, .tablet .bs-docs-sidenav.affix.open li a, .mobile .bs-docs-sidenav.affix.open li a {
+    display:block;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+  }
+  .tablet .bs-docs-sidenav.affix li.active a:after, .mobile .bs-docs-sidenav.affix li.active a:after {
+    font-family: 'icon-dell-mini';
+    content:"s";
+    color:#fff;
+    float:right;
+  }
 
 
   .bs-docs-sidenav > li > a {

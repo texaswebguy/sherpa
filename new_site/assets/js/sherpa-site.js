@@ -59,10 +59,22 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 	Eve.scope(".bs-docs-sidenav", function(){
-		this.listen("li a", "click", function(event){
+		this.listen("li.active a", "click", function(event){
 			event.preventDefault();
+			event.stopPropagation();
+			console.log($(event.target))
+			$(event.target).parents(".bs-docs-sidenav").toggleClass('open');
+		});
+		this.listen('li:not("[class=active]") a', "click", function(event){
+			event.preventDefault();
+			console.log("scrolling")
 			$('body').scrollTo($(event.currentTarget).attr('href'),300);
-		})
+			if(!viewModel.isDesktop()){
+				$(event.target).parents(".bs-docs-sidenav").toggleClass('open');
+				$(event.target).parents(".bs-docs-sidenav").scrollspy('refresh');
+			}
+		});
+
 	});
 
 	$('[data-spy="scroll"]').each(function () {
