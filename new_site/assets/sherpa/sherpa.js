@@ -324,7 +324,7 @@ var viewModel = {
 */
 
 
-Sherpa(function(){
+Sherpa.ready("dateFormat", function(){
 alert("sherpa is ready");
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
