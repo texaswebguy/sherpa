@@ -1,4 +1,4 @@
-counter("Sherpa i18n");
+Sherpa.counter("Sherpa i18n");
 Sherpa.ready("sherpaUtils", function(){
 
 	var q = Sherpa.urlQuery();
@@ -122,4 +122,4 @@ Sherpa.ready("sherpaUtils", function(){
 
 });
 
-counter("Sherpa i18n");
+Sherpa.counter("Sherpa i18n");

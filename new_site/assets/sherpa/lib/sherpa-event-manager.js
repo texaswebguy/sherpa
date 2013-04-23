@@ -1,4 +1,4 @@
-counter("Sherpa Event Manager");
+Sherpa.counter("Sherpa Event Manager");
 
 /**
  * Eve.js <evejs.com> - v0.8.4 February 18, 2013
@@ -244,4 +244,4 @@ var Scope = {
 })(this);
 if (this.module) this.module.exports = this.Eve;
 
-counter("Sherpa Event Manager");
+Sherpa.counter("Sherpa Event Manager");

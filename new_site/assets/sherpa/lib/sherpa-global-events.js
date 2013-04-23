@@ -1,4 +1,4 @@
-counter("Sherpa Global Events");
+Sherpa.counter("Sherpa Global Events");
 //sherpa-global-events
 
 check_ff();
@@ -49,4 +49,4 @@ if(location.hostname === "localhost") {
 	viewModel.localhost = false;
 }
 
-counter("Sherpa Global Events");
+Sherpa.counter("Sherpa Global Events");

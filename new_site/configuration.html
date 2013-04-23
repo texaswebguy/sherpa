@@ -67,7 +67,7 @@
 
 			
 	</head>
-<body data-spy="scroll" data-target=".bs-docs-sidenav" data-offset-top="-20">
+<body data-spy="scroll" data-target=".bs-docs-sidenav" data-offset-top="-10">
 	
 	<!-- Start - Masthead
   ================================================== -->
@@ -87,8 +87,8 @@
 	<section class="title-content">
 		<div class="wrapper">
 			<div class="da-all ta-all mb-all white-text">
-				<h1 class="sherpa featured-white">Base CSS</h1>
-				<h3 class="sherpa featured-white">Fundamental HTML elements styled and enhanced with extensible classes.</h3>
+				<h1 class="sherpa featured-white">Configuration</h1>
+				<h3 class="sherpa featured-white">Configuring your prototypes</h3>
 			</div>
 		</div>
 	</section>
@@ -98,127 +98,103 @@
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
-				      	<li class="active"><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
+				      	<li class="active"><a href="#configure"><i class="icon-chevron-right"></i> Configuring your prototype</a></li>
+				      	<li><a href="#local-vs-remote"><i class="icon-chevron-right"></i> Local vs Remote</a></li>
 			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
 			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
-			          	<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
-			          	<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
+			          	<li><a href="#paths"><i class="icon-chevron-right"></i> Paths</a></li>
+			          	<li><a href="#proto-app"><i class="icon-chevron-right"></i> Prototype Default Application</a></li>
+			          	<li><a href="#js-core-load"><i class="icon-chevron-right"></i> Javascript Core Libraries</a></li>
+			          	<li><a href="#css-core-load"><i class="icon-chevron-right"></i> CSS Core</a></li>
+			          	<li><a href="#proto-css"><i class="icon-chevron-right"></i> Prototype Default CSS</a></li>
+			          	<li><a href="#i18n"><i class="icon-chevron-right"></i> Localization</a></li>
 			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
-			          	<li><a href="#colors"><i class="icon-chevron-right"></i> Colors & Borders</a></li>
-			          	<li><a href="#containers"><i class="icon-chevron-right"></i> Containers</a></li>
-			          	<li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+			          	<li><a href="#information"><i class="icon-chevron-right"></i> Informational Functions</a></li>
+			          	<li><a href="#overrides"><i class="icon-chevron-right"></i> Cofiguration Overides</a></li>
 	   				</ul>
 				</div>
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
-				<article id="typography">
-					<h2 class="sherpa">Typography</h2>
+				<article id="configure">
+					<h2 class="sherpa">Configuring your prototype</h2>
 					
-		          	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
-		          
-		            <h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
-		            <h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
-		            <h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
-		            <h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
-		            <h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
-		            <!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
-			      
+		          	<p>The Sherpa framework is highly configurable. Configurations are in place to adapt to the diverse needs in User eXperience (UX) prototype modeling. These configurations allow prototypes to run locally or from remote servers. In addition, different javascript libraries can be configured when the prototype page loads. This is done so the framework can be extended to fit your specific needs.</p>
+		          	<p>Out of the box, Sherpa is loaded with everything we use to build prototypes ourselves and very seldom you might need to add or remove things.</p>
+		          	<h3 class="sherpa">How to configure Sherpa</h3>
+		      		<p>There are two places to configure Sherpa:</p>
+		      		<ul>
+		      			<li>
+		      				<h5>Global Configuration:</h5>
+		      				<p></p>
+		      			</li>
+		      			<li>
+		      				<h5>Configuration Overrides:</h5>
+		      				<p></p>
+		      			</li>
+		      		</ul>
+			          
+			    </article>
+
+
+
+				<article id="local-vs-remote">
+					<h2 class="sherpa">Local vs Remote</h2>
+					
+		          	<p>The Sherpa framework has two basic modes operating from your local drive: Run as local or run from remote.</p>
+
+          			<h3 class="sherpa">Run as local</h3>
+
+		          	<p>By default, prototypes run as local.  This means that all files associated with the prototypes are local and the prototype should be able to run locally without any internet connection.  This is important for the purpose of creating a prototype that is highly portable and requires nothing but unziping a file to properly run even if not connected to the Internet. Doing a usability test in China will make you appreciate this feature.</p>
+		      
           			<hr>
 
-          		<h3 class="sherpa">Headings options</h3>
-			        <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
+          			<h3 class="sherpa">Run from remote</h3>
+			        <p>When you set the prototype to "run from remote" it means that core references such as javascript and css files will be directed to whatever location is configured as the remote path. This does not mean you are running it on a remote server, it means that it is using resources from the remote server. Your copy of the prototype in a remote server can actually be configured to run locally and that's perfectly ok. This feature is useful if you want to keep common resources in one location so that your entire team uses the same resources.</p>
 			          
-			        <h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
-			        <h1 class="blue box rounded-big white-text"><code>&lt;h1 class="white-text"&gt;</code> h1. Heading 1</h1>
+			    </article>
+				<article id="js_path">
+					<h2 class="sherpa">Paths</h2>
+					
+		          	<p>The Sherpa framework sets up all of the different paths required to run properly. The following ar all the </p>
+		      
+          			
+
+
+					<hr>
+          			<h3 class="sherpa">SHERPA.LOCAL_PATH</h3>
+			        <p>This is typically empty. It is used to identify the local root directory of your prototype.</p>
+			          
+					<hr>
+          			<h3 class="sherpa">SHERPA.REMOTE_PATH</h3>
+			        <p>This would be set to wherever you have the root of your prototype hosted on the internet. Example:
+						SHERPA.REMOTE_PATH = "https://www.myserver.com/myprototype/";
+			         </p>
+			         <p>Note: It should end with a slash "/"</p>
 			        
 
-			        <h3 class="sherpa">Tablet headings</h3>
-		          <p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
-		          <div class="bs-docs-example">
-		            <h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
-		            <h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
-		            <h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
-		            <h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
-		            <h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
-		            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
-		          </div>
-
-		          <hr>
-
-		          <h3 class="sherpa">Phone headings</h3>
-		          <p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h6&gt;</code>.</p>
-		          <div class="bs-docs-example">
-		            <h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
-		            <h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
-		            <h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
-		            <h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
-		            <h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
-		            <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
-		          </div>
-
-				</article>
-
-				<article id="file-structure">
-					<h2 class="sherpa content-offset">File structure</h2>
-					<p class="lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
-
-					<p>Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
-
-					<pre class="prettyprint">
-  sherpa/
-  ├── assets/
-      ├── starter_template.html
-      ├── assets/
-      │   ├── css/
-      │   │    ├──doc.css
-      │   ├── img/
-      
-				</pre>
-
-				<p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
-
+			        
 					<hr>
-				</article>
-
-				<article id="contents">
-					<h2 class="sherpa content-offset">What's included</h2>
-					<p class="lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible in the top navigation.</p>
-
-					<h3 class="sherpa">Docs sections</h3>
-          <h4 class="sherpa"><a href="scaffolding.html">Scaffolding</a></h4>
-          <p>Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
-          <h4 class="sherpa"><a href="base-css.html">Base Elements</a></h4>
-          <p>Styles for common HTML elements like typography, tables, forms, and buttons.</p>
-          <h4 class="sherpa"><!-- <a href="components.html">Components</a> -->Components</h4>
-          <p>Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
-          <h4 class="sherpa"><!-- <a href="javascript.html">JavaScript plugins</a> -->JavaScript</h4>
-          <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p>
-
-					<h3 class="sherpa">List of components</h3>
-          <p>Together, the <strong>Components</strong> and <strong>JavaScript plugins</strong> sections provide the following interface elements:</p>
-          <ul>
-            <li>Button groups</li>
-            <li>Button dropdowns</li>
-            <li>Navigational tabs, pills, and lists</li>
-            <li>Navbar</li>
-            <li>Labels</li>
-            <li>Badges</li>
-            <li>Page headers and hero unit</li>
-            <li>Thumbnails</li>
-            <li>Alerts</li>
-            <li>Progress bars</li>
-            <li>Modals</li>
-            <li>Dropdowns</li>
-            <li>Tooltips</li>
-            <li>Popovers</li>
-            <li>Accordion</li>
-            <li>Carousel</li>
-            <li>Typeahead</li>
-          </ul>
-
+          			<h3 class="sherpa">SHERPA.JS_PATH</h3>
+			        <p>This is where you save all your custom javascript files.  The default is set to "assets/js/" and there is really not reason change this but you can</p>
+			          
+			        
 					<hr>
-				</article>
+          			<h3 class="sherpa">SHERPA.JS_LIB_PATH</h3>
+			        <p></p>
+			          
+			        
+					<hr>
+          			<h3 class="sherpa">SHERPA.CORE_PATH</h3>
+			        <p></p>
+			          
+			        
+					<hr>
+          			<h3 class="sherpa">SHERPA.COMPONENTS_PATH</h3>
+			        <p></p>
+			          
+			    </article>
+
 
 			</section>
 		</div>

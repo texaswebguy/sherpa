@@ -37,7 +37,8 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	$(window).resize(function() {
 		if(viewModel.isDesktop()){
-			$('#menu').show()
+			$('#menu').show();
+			$('.bs-docs-sidenav').width($('.da1-da3').width()) 
 		}
 	});
 
@@ -66,7 +67,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		});
 		this.listen('li:not("[class=active]") a', "click", function(event){
 			event.preventDefault();
-			$('body').scrollTo($(event.currentTarget).attr('href'),300);
+			$.scrollTo($(event.currentTarget).attr('href'),300, {offset:{top:-60}}); //might have to be different in mobile
 			if(!viewModel.isDesktop()){
 				$(event.target).parents(".bs-docs-sidenav").toggleClass('open');
 				$(event.target).parents(".bs-docs-sidenav").scrollspy('refresh');

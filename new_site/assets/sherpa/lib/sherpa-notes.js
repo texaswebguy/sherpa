@@ -1,4 +1,4 @@
-counter("Sherpa Notes");
+Sherpa.counter("Sherpa Notes");
 // Sherpa notes
 
 Sherpa.notes = {
@@ -86,4 +86,4 @@ Sherpa.notes = {
 
 if (window.location.href.match('notes=show')) Sherpa.notes.show();
 else Sherpa.notes.init();
-counter("Sherpa Notes");
+Sherpa.counter("Sherpa Notes");

@@ -1,4 +1,4 @@
-counter("Sherpa Prototype QA");
+Sherpa.counter("Sherpa Prototype QA");
 
 //sherpa-prototype-qa.js
 
@@ -11,4 +11,4 @@ Not so much errors because those will be visible in the console but any custom c
 certain rules. Other things like inline styles, etc.
 
 */
-counter("Sherpa Prototype QA");
+Sherpa.counter("Sherpa Prototype QA");

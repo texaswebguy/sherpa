@@ -1,4 +1,4 @@
-counter("Sherpa Utils");
+Sherpa.counter("Sherpa Utils");
 /* GDC utilities */
 
 "use strict";
@@ -273,7 +273,7 @@ Sherpa.request.define( "assets", "ajax", {
     type: "GET"
 });
 
-counter("Sherpa Utils");
+Sherpa.counter("Sherpa Utils");
 
 
 

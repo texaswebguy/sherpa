@@ -1,4 +1,4 @@
-counter("Sherpa Custom Widgets");
+Sherpa.counter("Sherpa Custom Widgets");
 Sherpa.ready("sherpai18n", function(){
 
 
@@ -169,4 +169,4 @@ Sherpa.ready("sherpai18n", function(){
 
 });
 
-counter("Sherpa Custom Widgets");
+Sherpa.counter("Sherpa Custom Widgets");
