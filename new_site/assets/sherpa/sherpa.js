@@ -256,7 +256,7 @@ Sherpa.js({ underscore: SHERPA.UNDERSCORE});
 */
 
 Sherpa.ready("underscore", function() {
-		alert("underscore loaded")
+
 	console.log("loaded: ","underscore")
     if(_.isObject(SHERPA_CONFIG_OVERRIDES) && !_.isEmpty(SHERPA_CONFIG_OVERRIDES) ) {
     	if(SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD){
@@ -271,6 +271,7 @@ Sherpa.ready("underscore", function() {
 	// Load JS CORE:
 	//______________________________________________________________________
 	_.each(SHERPA.JS_CORE_LOAD, function(lib){
+		alert("loading:",_.keys(lib)[0])
 		console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
 	});
