@@ -328,7 +328,7 @@ var viewModel = {
 
 
 Sherpa.ready(function(){
-	
+	alert("hello")
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager.js"},
