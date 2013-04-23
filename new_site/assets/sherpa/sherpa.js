@@ -268,7 +268,7 @@ Sherpa.ready("underscore", function() {
 	//______________________________________________________________________
 	_.each(SHERPA.JS_CORE_LOAD, function(lib){
 		console.log("loaded js: ",_.keys(lib)[0]);
-		Sherpa.js(lib, function(){alert('loaded a library')});
+		Sherpa.js(lib);
 	});
 
 	// Load CSS Files:
@@ -324,7 +324,7 @@ var viewModel = {
 */
 
 
-Sherpa.ready(function(){
+Sherpa(function(){
 alert("sherpa is ready");
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
