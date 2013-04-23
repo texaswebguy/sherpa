@@ -202,7 +202,7 @@ if(SHERPA.RUN_AS_LOCAL) {
 //______________________________________________________________________________________
 
 SHERPA.JS_CORE_LOAD = [
-	{ jquery: "http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js}, 
+	{ jquery: "http://code.jquery.com/mobile/1.3.1/jquery.mobile-1.3.1.min.js"}, 
 	{ knockout: SHERPA.JS_LIB_PATH+"knockout.min.js"},
 	{ amplify: SHERPA.JS_LIB_PATH+"amplify.min.js"}, 
 	{ pager: SHERPA.JS_LIB_PATH+"pager.min.js"}, 
