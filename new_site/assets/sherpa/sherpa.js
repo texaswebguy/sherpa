@@ -289,7 +289,6 @@ Sherpa.ready("underscore", function() {
 			Sherpa.load({grid: SHERPA.CSS_GRID_LTIE9});
 		}
 	} else {
-		alert("hello")
 		Sherpa.load({grid: SHERPA.CSS_GRID});
 		console.log("loaded css: grid");
 	}
@@ -330,7 +329,7 @@ var viewModel = {
 
 
 Sherpa.ready(function(){
-
+alert("sherpa is ready");
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager.js"},
