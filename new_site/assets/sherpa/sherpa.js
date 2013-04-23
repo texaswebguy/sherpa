@@ -107,7 +107,7 @@ function(a,b,c,g){a="object"===typeof a?a:{test:a,success:b?k("Array",b)?b:[b]:!
 return d};d.ready(b,function(){g()&&m(x.ALL,function(a){r(a)});d.feature&&d.feature("domloaded",!0)});if("complete"===b.readyState)p();else if(b.addEventListener)b.addEventListener("DOMContentLoaded",c,!1),a.addEventListener("load",p,!1);else{b.attachEvent("onreadystatechange",c);a.attachEvent("onload",p);var z=!1;try{z=null==a.frameElement&&b.documentElement}catch(F){}z&&z.doScroll&&function E(){if(!u){try{z.doScroll("left")}catch(b){a.clearTimeout(d.readyTimeout);d.readyTimeout=a.setTimeout(E,50);
 return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 
-
+	alert("head.js loaded")
 // GLOBAL Sherpa Configuration:
 //______________________________________________________________________________________
 
@@ -328,7 +328,7 @@ var viewModel = {
 
 
 Sherpa.ready(function(){
-	alert("hello")
+
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	Sherpa.js(
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager.js"},
