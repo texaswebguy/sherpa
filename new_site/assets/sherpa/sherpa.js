@@ -271,7 +271,6 @@ Sherpa.ready("underscore", function() {
 	// Load JS CORE:
 	//______________________________________________________________________
 	_.each(SHERPA.JS_CORE_LOAD, function(lib){
-		alert("loading:",_.keys(lib)[0])
 		console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
 	});
@@ -290,6 +289,7 @@ Sherpa.ready("underscore", function() {
 			Sherpa.load({grid: SHERPA.CSS_GRID_LTIE9});
 		}
 	} else {
+		alert("hello")
 		Sherpa.load({grid: SHERPA.CSS_GRID});
 		console.log("loaded css: grid");
 	}
