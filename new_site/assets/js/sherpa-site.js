@@ -38,14 +38,13 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	$(window).resize(function() {
 		if(viewModel.isDesktop()){
 			$('#menu').show();
-			$('.bs-docs-sidenav').width($('.da1-da3').width()) 
+			$('.bs-docs-sidenav').width($('.da1-da3').width());
 		}
 	});
 
 	Eve.scope("#menu-toggle", function(){
 		this.listen("span", "click", function(event){
 			event.preventDefault();
-			console.log("hello");
 			if($('#menu').hasClass('ta-hide ma-hide')){
 				$('#menu').hide();
 				$('#menu').toggleClass('ta-hide ma-hide ta-all ma-all');
@@ -77,7 +76,8 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 	$('[data-spy="scroll"]').each(function () {
-	  var $spy = $(this).scrollspy('refresh')
+	  var $spy = $(this).scrollspy('refresh');
+	  $('.bs-docs-sidenav').width($('.da1-da3').width()) ;
 	});
 	
 
