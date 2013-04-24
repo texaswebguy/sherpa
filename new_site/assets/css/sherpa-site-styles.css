@@ -64,8 +64,7 @@ h1.sherpa,h2.sherpa,h3.sherpa,h4.sherpa,h5.sherpa,h6.sherpa {
   margin: 10px 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-/*  color: #12120F;*/
-    color: red;
+  color: #12120F;
   text-rendering: optimizelegibility;
 }
 
