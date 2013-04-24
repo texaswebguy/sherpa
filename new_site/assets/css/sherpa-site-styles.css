@@ -413,6 +413,17 @@ Breakpoints
   h5.sherpa {font-size: 14px;line-height: 14px;}
   h6.sherpa {font-size: 11px;line-height: 11px;}
 
+
+  /* Sherpa forms*/
+  input[type="search"] {
+    width: 80.5%;
+  }
+
+  .input-prepend input[type="text"]{
+    width: 95.7%;
+  }
+
+
   /* Nav */
   .nav-sherpa ul {
     text-align: left;
@@ -460,6 +471,17 @@ Breakpoints
   h5.sherpa {font-size: 14px;line-height: 14px;}
   h6.sherpa {font-size: 11px;line-height: 11px;}
   
+
+  /* Sherpa forms*/
+  input[type="search"] {
+  width: 89%;
+  }
+
+  .input-prepend input[type="text"] {
+    width: 92%;
+  }
+
+
   /* Nav */
   .nav-sherpa ul {
     text-align: left;
