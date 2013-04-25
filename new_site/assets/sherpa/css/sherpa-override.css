@@ -2133,11 +2133,14 @@ you can use the generic selector below, but it's slower:
 }
 
 
-/* Media queries
--------------------------------------------------- */
+/*
+================================================
+Breakpoints
+================================================
+*/
 
-/* Edits made by: AJ Lohman */
-@media (max-width: 767px) {
+/* Mobile (Phone)*/
+@media only screen and (max-width:767px) {
 
   /* Edits made by: AJ Lohman - removes the default 20px padding from Bootstrap.  */
   body {
@@ -2145,14 +2148,36 @@ you can use the generic selector below, but it's slower:
     padding-left:0;
   }
 
+
+  /* START Sherpa forms*/
+  input[type="search"] {
+  width: 89%;
+  }
+
+  .input-prepend input[type="text"] {
+    width: 92%;
+  }
+  /* END Sherpa forms*/
+
 }
 
-@media (max-width: 979px) {
+/* Tablet*/
+@media only screen and (min-width:768px) and (max-width:979px) {
 
   .navbar-fixed-top .navbar-inner,
   .navbar-fixed-bottom .navbar-inner {
     padding: 0px 20px;
   }
+
+  /* START Sherpa forms*/
+  input[type="search"] {
+    width: 80.5%;
+  }
+
+  .input-prepend input[type="text"]{
+    width: 95.7%;
+  }
+  /* END Sherpa forms*/
 
 }
 
