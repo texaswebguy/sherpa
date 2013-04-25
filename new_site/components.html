@@ -133,16 +133,7 @@
 						  </ul>
 						</div>
 					</div>
-					<p>This is the rendered HTML that displays the dropdown.</p>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
-  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
-  &lt;li class="divider"&gt;&lt;/li&gt;
-  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+
 
 <style>
 .caret {
@@ -224,8 +215,38 @@
 <p></p>
 
 
+
+          <h3 class="sherpa da-clear ta-clear ma-clear">Markup</h3>
+          <p>Rather than using the HTML provided in Bootstrap, Sherpa has custom code to better simplify and structure HTML. Paired with a data object such as the one above, one custom tag takes care of all of the work.</p>
+
+
+<div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : simple_dropdown_data,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}"></div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt; div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : simple_dropdown_data,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}">&lt;/div>
+</pre>
+
+
+
 <h3 class="sherpa da-clear ta-clear ma-clear">Data behind dropdown</h3>
-          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Here is an example of a data object that could feed the dropdown samples above. This structure should be added to the view model.</p>
+          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Here is an example of a data object that could feed the dropdown samples above. This structure should be added to the prototype application <a href="#" onclick="javascript:void window.open('assets/js/app.js','app.js','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');return false;">assets/js/app.js</a>.</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 simple_dropdown_data : {
@@ -259,33 +280,6 @@ simple_dropdown_data : {
 }
 </pre>
 
-
-          <h3 class="sherpa da-clear ta-clear ma-clear">Markup</h3>
-          <p>Rather than using the HTML provided in Bootstrap, Sherpa has custom code to better simplify and structure HTML. Paired with a data object such as the one above, one custom tag takes care of all of the work.</p>
-
-
-<div data-bind="component: { 
-	name :'dropdown', 
-	type :'button',
-	data : simple_dropdown_data,
-	options:{
-		color : 'primary',
-		size : 'large'
-	}
-}"></div>
-
-<p>&nbsp;</p>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt; div data-bind="component: { 
-	name :'dropdown', 
-	type :'button',
-	data : simple_dropdown_data,
-	options:{
-		color : 'primary',
-		size : 'large'
-	}
-}">&lt;/div>
-</pre>
 
           <h3 class="sherpa">Options</h3>
           <p>You may have noticed the data-bind tag above with various elements.</p>
@@ -396,7 +390,7 @@ sample_dropdown_1 : {
           <p>In the sample data sets above you will notice the content for each menu items and button/link text. If you want all these to be localized, set the value of each labels to a textkey:</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-	
+
 label : Sherpa.msg('textkey_label'),
 
 </pre>
