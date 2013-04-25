@@ -50,6 +50,9 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		if(viewModel.isDesktop()){
 			$('#menu').show();
 			$('.bs-docs-sidenav').width($('.da1-da3').width());
+		} else {
+			//TODO Have to make sure that both tablet and mobile are indeed 100%
+			$('.bs-docs-sidenav').width('100%');
 		}
 	});
 
