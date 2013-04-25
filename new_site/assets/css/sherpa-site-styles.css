@@ -15,8 +15,12 @@
     overflow: hidden;
   }
 
-  section {
+  section, article {
     overflow:hidden;
+  }
+
+  .bottom-offset {
+    margin-bottom: 80px;
   }
 
   .main-content {
