@@ -1,13 +1,15 @@
 
   <script type="text/javascript">
 
-    var sherpa_masthead_active = function(url){
-        if(_.last(location.pathname.split("/"))== url){
+    var sherpa_masthead_active = function(data){
+        if(_.last(location.pathname.split("/"))== data.url){
+          $('head title').html(data.browser_title);
           return 'active';
         } else {
           return "";
         }
     }
+
 
   </script>
 
@@ -30,7 +32,7 @@
     <div id="menu" class="da3-da12 ta-hide ma-hide">
     	<nav class="nav-sherpa">
         <ul data-bind="foreach: $data">
-          <li data-bind="attr: {'class' : sherpa_masthead_active(url) }"><a href="" data-bind="text: label, attr: { 'href' : url }">Get started</a></li>
+          <li data-bind="attr: {'class' : sherpa_masthead_active($data) }"><a href="" data-bind="text: label, attr: { 'href' : url }">Get started</a></li>
         </ul>
       </nav>
     </div>

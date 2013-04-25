@@ -9,32 +9,38 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    	{ 
 	    		id: 'get_started',
 	    		label : 'Get Started',
-	    		url : 'how-to.html'
+	    		url : 'how-to.html',
+	    		browser_title : "Sherpa - How to get started"
 	    	},
 	    	{ 
 	    		id: 'scaffolding',
 	    		label : 'Scaffolding',
-	    		url : 'scaffolding.html'
+	    		url : 'scaffolding.html',
+	    		browser_title : "Sherpa - Scaffolding"
 	    	},
 	    	{ 
 	    		id: 'base_css',
 	    		label : 'Basic Elements',
-	    		url : 'base-css.html'
+	    		url : 'base-css.html',
+	    		browser_title : "Sherpa - Basis CSS Elements"
 	    	},
 	    	{ 
 	    		id: 'components',
 	    		label : 'Components',
-	    		url : 'components.html'
+	    		url : 'components.html',
+	    		browser_title : "Sherpa - Components"
 	    	},
 	    	{ 
 	    		id: 'configuration',
 	    		label : 'Configuration',
-	    		url : 'configuration.html'
+	    		url : 'configuration.html',
+	    		browser_title : "Sherpa - Configuring your prototypes"
 	    	},
 	    	{ 
 	    		id: 'functions',
 	    		label : 'Functions',
-	    		url : 'functions.html'
+	    		url : 'functions.html',
+	    		browser_title : "Sherpa - Javascript Functions"
 	    	}
 	    ],
 	    show_sample_core_config : ko.observable(false)
