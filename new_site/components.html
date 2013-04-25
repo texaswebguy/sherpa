@@ -87,8 +87,8 @@
 	<section class="title-content">
 		<div class="wrapper">
 			<div class="da-all ta-all mb-all white-text">
-				<h1 class="sherpa featured-white">Configuration</h1>
-				<h3 class="sherpa featured-white">Sherpa is highly configurable to fit your specific needs.</h3>
+				<h1 class="sherpa featured-white">Components</h1>
+				<h3 class="sherpa featured-white">Reusable data components with very simplistic markup.</h3>
 			</div>
 		</div>
 	</section>
@@ -98,207 +98,311 @@
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
-				      	<li class="active"><a href="#overview"><i class="icon-chevron-right"></i>Overview</a></li>
-				      	<li><a href="#core"><i class="icon-chevron-right"></i>Core Configuration</a></li>
-			          	<li><a href="#overrides"><i class="icon-chevron-right"></i> Cofiguration Overides</a></li>
-				      	<li><a href="#custom"><i class="icon-chevron-right"></i>Custom Configurations</a></li>
-				      	<li><a href="#localization"><i class="icon-chevron-right"></i>Localized Settings</a></li>
+			          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdowns</a></li>
+			          <li><a href="#buttonGroups"><i class="icon-chevron-right"></i> Button groups</a></li>
+			          <li><a href="#buttonDropdowns"><i class="icon-chevron-right"></i> Button dropdowns</a></li>
+			          <li><a href="#navs"><i class="icon-chevron-right"></i> Navs</a></li>
+			          <!-- <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li> -->
+			          <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
+			          <li><a href="#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
+			<!--           <li><a href="#labels-badges"><i class="icon-chevron-right"></i> Labels and badges</a></li> -->
+			<!--           <li><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li> -->
+			<!--           <li><a href="#thumbnails"><i class="icon-chevron-right"></i> Thumbnails</a></li> -->
+			          <li><a href="#alerts"><i class="icon-chevron-right"></i> Alerts</a></li>
+			          <li><a href="#progress"><i class="icon-chevron-right"></i> Progress bars</a></li>
+			          <li><a href="#media"><i class="icon-chevron-right"></i> Media object</a></li>
+			          <li><a href="#misc"><i class="icon-chevron-right"></i> Misc</a></li>
 	   				</ul>
 				</div>
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
-				<article id="overview">
-					<h2 class="sherpa">Overview</h2>
-					
-		          	<p>The Sherpa framework is highly configurable. Configurations are in place to adapt to the diverse needs in User eXperience (UX) prototype modeling. These configurations allow prototypes to run locally or from remote servers. In addition, different javascript libraries can be configured when the prototype page loads. This is done so the framework can be extended to fit your specific needs.</p>
-		          	<p>Out of the box, Sherpa is loaded with everything we use to build prototypes ourselves and very seldom you might need to add or remove things. There are several places to configure Sherpa show below.</p>
+				<article id="dropdowns">
+					<h2 class="sherpa">Dropdown menus</h2>
+
+					<h3 class="sherpa">Example</h3>
+					<p>Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="./functions.html#dropdowns">dropdown JavaScript plugin</a>.</p>
+					<div class="bs-docs-example">
+						<div class="dropdown clearfix">
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 20px; *width: 180px;">
+						    <li><a tabindex="-1" href="#">Action</a></li>
+						    <li><a tabindex="-1" href="#">Another action</a></li>
+						    <li><a tabindex="-1" href="#">Something else here</a></li>
+						    <li class="divider"></li>
+						    <li><a tabindex="-1" href="#">Separated link</a></li>
+						  </ul>
+						</div>
+					</div>
+					<p>This is the rendered HTML that displays the dropdown.</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu"&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Another action&lt;/a&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Something else here&lt;/a&gt;&lt;/li&gt;
+  &lt;li class="divider"&gt;&lt;/li&gt;
+  &lt;li&gt;&lt;a tabindex="-1" href="#"&gt;Separated link&lt;/a&gt;&lt;/li&gt;
+&lt;/ul&gt;
+</pre>
+
+<style>
+.caret {
+	display: inline-block;
+	vertical-align: top;
+	border: none;
+	font-family: 'icon-dell-mini';
+	content: "l";
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+	top:-5px;
+	position:relative;
+	padding-right:15px;
+}
+.caret:before {
+	font-family: 'icon-dell-mini';
+	content: "l";
+	font-style: normal;
+	font-weight: normal;
+	line-height: 1;
+	-webkit-font-smoothing: antialiased;
+}
+
+
+.open .caret:before {
+	content: "m";
+}
+
+</style>
+
+				<h3 class="sherpa">Dropdown triggers</h3>
+					<p>Dropdowns are triggered by various elements such as links and buttons</p>
+					<div class="da-all">
+						<div class="da4-da6 ta1-ta3 ma1">
+							<div class="dropdown">
+								<a href="#" data-toggle="dropdown">From a link <span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							    <li><a tabindex="-1" href="#">Action</a></li>
+							    <li><a tabindex="-1" href="#">Another action</a></li>
+							    <li><a tabindex="-1" href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a tabindex="-1" href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+						<div class="da7-da9 ta4-ta6 ma2">
+							<div class="dropdown">
+								<a href="#" class="btn dropdown-toggle" data-toggle="dropdown">From a button <span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" >
+							    <li><a tabindex="-1" href="#">Action</a></li>
+							    <li><a tabindex="-1" href="#">Another action</a></li>
+							    <li><a tabindex="-1" href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a tabindex="-1" href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+						<div class="da10-da12 ta7-ta9 ma3">
+							<div class="dropdown btn-group">
+								  <button class="btn">From a Split Button</button>
+								  <button class="btn dropdown-toggle" data-toggle="dropdown">
+								    <span class="caret"></span>
+								  </button>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							    <li><a tabindex="-1" href="#">Action</a></li>
+							    <li><a tabindex="-1" href="#">Another action</a></li>
+							    <li><a tabindex="-1" href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a tabindex="-1" href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+						
+					</div>
+
+
+<p></p>
+
+
+<h3 class="sherpa da-clear ta-clear ma-clear">Data behind dropdown</h3>
+          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Here is an example of a data object that could feed the dropdown samples above. This structure should be added to the view model.</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+simple_dropdown_data : {
+    label : 'Sample button dropdown',
+    items: [
+        {
+            id : "action_1",
+            label : "Action 1",
+            url : "#action"
+        },
+        {
+            id : "action_2",
+            label : "Action 2",
+            url : "#action"
+        },
+        {
+            id : "action_3",
+            label : "Action 3",
+            url : "#action",
+            disabled: true
+        },
+        {
+            divider :  true
+        },
+        {
+            id : "action_4",
+            label : "Action 4",
+            url : "#action"
+        }
+    ]
+}
+</pre>
+
+
+          <h3 class="sherpa da-clear ta-clear ma-clear">Markup</h3>
+          <p>Rather than using the HTML provided in Bootstrap, Sherpa has custom code to better simplify and structure HTML. Paired with a data object such as the one above, one custom tag takes care of all of the work.</p>
+
+
+<div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : simple_dropdown_data,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}"></div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt; div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : simple_dropdown_data,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}">&lt;/div>
+</pre>
+
+          <h3 class="sherpa">Options</h3>
+          <p>You may have noticed the data-bind tag above with various elements.</p>
+
+          <h4 class="sherpa">name:</h4>
+          <p>This is always set "dropdown"</p>
+
+          <h4 class="sherpa">type:</h4>
+          <p>Type provides options for the trigger mechanism. Whatever you see in the type correspinds to an HTML file name inside <code>components/dropdown/whatever.html</code></p>
+          <p>The current types available for dropdown are:</p>
+          <ul>
+          	<li>button</li>
+          	<li>split-button</li>
+          	<li>link</li>
+          </ul>
+          <h4 class="sherpa">options:</h4>
+          <p>Options provide further customization of each type. Defualt options will be in place if options is not provided.The current options available for dropdowns are:</p>
+          <ul>
+          	<li>color: 
+          		<ul>
+		        	<li>primary</li>
+		        	<li>secondary</li>
+		        	<li>tertiary (default)</li>
+		        </ul>          			
+          	</li>
+          	<li>size: 
+          		<ul>
+		        	<li>large</li>
+		        	<li>default (default)</li>
+		        	<li>small</li>
+		        	<li>mini</li>
+		        </ul>          			
+          	</li>
+          	<li>orientation: 
+          		<ul>
+		        	<li>dropdown (default)</li>
+		        	<li>dropup</li>
+		        </ul>          			
+          	</li>
+          </ul>
+
+
+          <h3 class="sherpa">Sub menus on dropdowns</h3>
+          <p>To add an extra level of dropdown menus the markup already takes care of it.  All you have to do is have a different data set with nested elements.</p>
+
+<div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : sample_dropdown_1,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}"></div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+sample_dropdown_1 : {
+    label : 'Dropdown with submenus',
+    items: [
+        {
+            id : "action_1",
+            label : "Action 1",
+            url : "#action"
+        },
+        {
+            id : "action_2",
+            label : "Action 2",
+            url : "#action"
+        },
+        {
+            id : "action_3",
+            label : "Action 3",
+            url : "#action",
+            disabled: true
+        },
+        {
+            divider :  true
+        },
+        {
+            id : "action_4",
+            label : "Action 4",
+            url : "#action",
+            items: [
+                {
+            		id : "action_4_1",
+                    label : "Second Level Action 1",
+                    url : "#action"
+                },
+                {
+            		id : "action_4_2",
+                    label : "Second Level Action 2",
+                    url : "#action"
+                },
+                {
+            		id : "action_4_3",
+                    label : "Second Level Action 3",
+                    url : "#action",
+                    disabled: true
+                }
+            ]
+        }
+    ]
+}
+</pre>
+
+          <h3 class="sherpa">Localization of dropdown menus</h3>
+          <p>In the sample data sets above you will notice the content for each menu items and button/link text. If you want all these to be localized, set the value of each labels to a textkey:</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+	
+label : Sherpa.msg('textkey_label'),
+
+</pre>
+
 		        </article>
-				<article id="core">
-					<h2 class="sherpa">Core Configuration</h2>
-      				<p>By editing <code>assets/config/global_config.js</code> you can change core settings.
-      					This javascript file contains the core of Sherpa such as paths, prototype default application, Javascript core libraries, CSS core files, default css and default locale.</p>
-      					<p>This is what the Sherpa configuration object looks like once it is built on startup:</p>
 
-<pre data-bind="prettyprint:{}">
-{
-     "RUN_AS_LOCAL": true,
-     "UNDERSCORE": "assets/sherpa/lib/underscore-min.js",
-     "REMOTE_PATH": "https://rawgithub.com/DellGDC/sherpa/master/",
-     "LOCAL_PATH": "",
-     "JS_PATH": "assets/js/",
-     "JS_LIB_PATH": "assets/sherpa/lib/",
-     "CORE_PATH": "assets/sherpa/",
-     "COMPONENTS_PATH": "components/",
-     "DEFAULT_LOCALE": "en",
-     "DISABLE_CONSOLE_MESSAGES": false,
-     "ENABLE_COUNTER": true,
-     "ENABLE_GRIDSET_OVERLAY": true,
-     "ENABLE_NOTES": false,
-     "ENABLE_PROTOTYPE_QA": false,
-     "CSS_CORE_REMOTE_PATH": "https://rawgithub.com/DellGDC/sherpa/master/assets/css/",
-     "CSS_CORE_LOCAL_PATH": "assets/sherpa/css/",
-     "CSS_REMOTE_PATH": "https://rawgithub.com/DellGDC/sherpa/master/assets/css/",
-     "CSS_LOCAL_PATH": "assets/css/",
-     "CSS_CORE_PATH": "assets/sherpa/css/",
-     "CSS_PATH": "assets/css/",
-     "JS_CORE_LOAD": [
-          {
-               "jquery": "assets/sherpa/lib/jquery.min.js"
-          },
-          {
-               "knockout": "assets/sherpa/lib/knockout.min.js"
-          },
-          {
-               "amplify": "assets/sherpa/lib/amplify.min.js"
-          },
-          {
-               "pager": "assets/sherpa/lib/pager.min.js"
-          },
-          {
-               "history": "assets/sherpa/lib/jquery.history.js"
-          },
-          {
-               "scrollTo": "assets/sherpa/lib/jquery.scrollTo.min.js"
-          },
-          {
-               "underscoreString": "assets/sherpa/lib/underscore.string.min.js"
-          },
-          {
-               "queryString": "assets/sherpa/lib/query-string.js"
-          },
-          {
-               "jqueryUI": "assets/sherpa/lib/jquery-ui.min.js"
-          },
-          {
-               "bootstrap": "assets/sherpa/lib/bootstrap-min.js"
-          },
-          {
-               "dateFormat": "assets/sherpa/lib/date-format.js"
-          },
-          {
-               "prettify": "assets/sherpa/lib/google-code-prettify/prettify.js"
-          }
-     ],
-     "PROTOTYPE_APP": "sherpa-site.js",
-     "CSS_CORE_LOAD": [
-          {
-               "bootstrap": "assets/sherpa/css/bootstrap.css"
-          },
-          {
-               "sherpa_overides": "assets/sherpa/css/sherpa-override.css"
-          },
-          {
-               "prettify": "assets/sherpa/lib/google-code-prettify/prettify.css"
-          }
-     ],
-     "CSS_GRID": "assets/sherpa/css/grid/gridset.css",
-     "CSS_GRID_IE9": "assets/sherpa/css/grid/gridset-ie-9.cssgridset.css",
-     "CSS_GRID_LTIE9": "assets/sherpa/css/grid/gridset-ie-lte8.css",
-     "CSS_LOCAL_APP": "assets/css/sherpa-site-styles.css",
-     "IE_JS_LOAD": [
-          {
-               "html5printshiv": "assets/sherpa/lib/html5shiv-printshiv.js"
-          },
-          {
-               "html5Formshim": "assets/sherpa/lib/jquery.html5form.js"
-          }
-     ],
-     "SHERPA_CORE_LOAD": [
-          {
-               "sherpaEventManager": "assets/sherpa/lib/sherpa-event-manager.js"
-          },
-          {
-               "sherpaUtils": "assets/sherpa/lib/sherpa-utils.js"
-          },
-          {
-               "sherpai18n": "assets/sherpa/lib/sherpa-i18n.js"
-          },
-          {
-               "sherpaPseudoAuth": "assets/sherpa/lib/sherpa-pseudo-auth.js"
-          },
-          {
-               "sherpaCustomWidgets": "assets/sherpa/lib/sherpa-custom-widgets.js"
-          },
-          {
-               "sherpaGlobalEvents": "assets/sherpa/lib/sherpa-global-events.js"
-          }
-     ],
-     "PROTOTYPE_QA_JS": "assets/sherpa/lib/sherpa-prototype-qa.js"
-}
-</pre>
-				</article>
-				<article id="overrides">
-					<h2 class="sherpa">Configuration Overrides</h2>
-		      				<p>Each html file can contain override configurations.  This allows you to create different pages that might use different libraries or helper files.</p>
-
-      					<p>In the head of your HTML document you will notice a script tag. All of the override variables are commented out for your convenience:</p>
-
-<pre data-bind="prettyprint:{}">
-&lt;head>
-
-	...
-
-	&lt;script type="text/javascript">
-	    var SHERPA_CONFIG_OVERRIDES = {};
-		SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/myCustomStyles.css";
-		SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "myCustomApp.js";
-		SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = true;
-		SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-		    { myCustomJS: "assets/js/myCustomJSLibrary.js"}
-		]
-	&lt;/script>
-
-	... 
-
-&lt;/head>
-
-</pre>
-				</article>
-				<article id="custom">
-					<h2 class="sherpa">Custom Configurations</h2>
-		      				<p>The file <code>assets/js/app.js</code> is where your prototype application is. 
-		      					Here you can add custom configuration variables to the global data view model.  These can be used to set up conditionals to display certain components or not.</p>
-
-      					<p>All you have to do is add an element to the addToConfigs object. The sample below would be available in the view model (viewModel.config.sample_custom_config).</p>
-
-<pre data-bind="prettyprint:{}">
-addToConfigs = {
-	sample_custom_config : true
-}
-</pre>
-				</article>
-				<article id="localization">
-					<h2 class="sherpa">Localized Settings</h2>
-		      				<p>The JSON file <code>assets/config/settings_en.json</code> is one of many 
-		      					files that are specific to a locale and contain global configurations for things such as date formats, currency conversion, etc. The file settings_en.json loads by default unless a different locale is specified on the url or core configuration.</p>
-
-      					<p>The contents of this file get placed into the viewModel.config object along with custom configurations: </p>
-
-<pre data-bind="prettyprint:{}">
-{
-     "default_order_code": "fncwl44br",
-     "default_date_format": "mm/dd/yyyy",
-     "currency": {
-          "conversion_rate": 1,
-          "format_decimal": {
-               "decimals": 2,
-               "decimal_separator": ".",
-               "thousands_separator": ","
-          },
-          "format_nodecimal": {
-               "decimals": 0,
-               "decimal_separator": ".",
-               "thousands_separator": ","
-          },
-          "symbol": "$",
-          "symbol_position": "left"
-     },
-     "sample_custom_config": true
-}
-</pre>
-
-			    </article>
 
 
 

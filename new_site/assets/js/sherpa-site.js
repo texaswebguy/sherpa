@@ -43,7 +43,83 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    		browser_title : "Sherpa - Javascript Functions"
 	    	}
 	    ],
-	    show_sample_core_config : ko.observable(false)
+	    show_sample_core_config : ko.observable(false),
+	    simple_dropdown_data : {
+		    label : 'Sample button dropdown',
+		    items: [
+		        {
+		            id : "action_1",
+		            label : "Action 1",
+		            url : "#action"
+		        },
+		        {
+		            id : "action_2",
+		            label : "Action 2",
+		            url : "#action"
+		        },
+		        {
+		            id : "action_3",
+		            label : "Action 3",
+		            url : "#action",
+		            disabled: true
+		        },
+		        {
+		            divider :  true
+		        },
+		        {
+		            id : "action_4",
+		            label : "Action 4",
+		            url : "#action"
+		        }
+		    ]
+		},
+		sample_dropdown_1 : {
+		    label : 'Dropdown with submenus',
+	        items: [
+	            {
+	                id : "action_1",
+	                label : "Action 1",
+	                url : "#action"
+	            },
+	            {
+	                id : "action_2",
+	                label : "Action 2",
+	                url : "#action"
+	            },
+	            {
+	                id : "action_3",
+	                label : "Action 3",
+	                url : "#action",
+	                disabled: true
+	            },
+	            {
+	                divider :  true
+	            },
+	            {
+	                id : "action_4",
+	                label : "Action 4",
+	                url : "#action",
+	                items: [
+	                    {
+	                		id : "action_4_1",
+	                        label : "Second Level Action 1",
+	                        url : "#action"
+	                    },
+	                    {
+	                		id : "action_4_2",
+	                        label : "Second Level Action 2",
+	                        url : "#action"
+	                    },
+	                    {
+	                		id : "action_4_3",
+	                        label : "Second Level Action 3",
+	                        url : "#action",
+	                        disabled: true
+	                    }
+	                ]
+	            }
+	        ]
+	    }
 	    
 	};
 
