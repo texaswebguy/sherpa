@@ -15,8 +15,12 @@
     overflow: hidden;
   }
 
-  section {
+  section, article {
     overflow:hidden;
+  }
+
+  .bottom-offset {
+    margin-bottom: 80px;
   }
 
   .main-content {
@@ -40,6 +44,12 @@
   .content-offset {
     padding-top:50px;
   }
+
+  .sherpa-gray-stroke {
+    border: 1px solid #e1e1e8;
+  }
+
+
 
 /* Links */
   a {

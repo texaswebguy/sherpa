@@ -108,10 +108,11 @@
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
-				<article id="global">
-					<h2 class="sherpa featured-white">Global settings</h2>
-					<h3 class="sherpa featured-white">Requires HTML5 doctype</h3>
-          <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+				<article class="bottom-offset" id="global">
+					<h2 class="sherpa">Global settings</h2>
+					<hr>
+					<h3 class="sherpa">Requires HTML5 doctype</h3>
+				  <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
@@ -119,10 +120,7 @@
 &lt;/html&gt;
 </pre>
 
-          <hr>
-				</article>
-
-				<article>
+				
 					<h3 class="sherpa">Typography and links</h3>
           <p>Sherpa sets basic global display, typography, and link styles. Specifically, we:</p>
           <ul>
@@ -138,7 +136,6 @@
           <h3 class="sherpa">Reset via Normalize</h3>
           <p>Sherpa uses <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
 
-          <hr>
 
           <h3 class="sherpa">Responsive Classes</h3>
           <p>Sherpa uses <a href="http://http://headjs.com" target="_blank">head.js</a> to manage the loading of all javascript and css. Using head.js Sherpa adds responsive css classes to the html element which can help </p>
@@ -152,8 +149,6 @@
           		<li>no-mobile</li>
           </ul>
 
-          <hr>
-
           <h3 class="sherpa">Device Specific Classes</h3>
           <p>The following classes are automatically assigned to the html element when the page loads:</p>
           <ul>
@@ -163,7 +158,6 @@
           		<li>no-retina</li>
           </ul>
 
-          <hr>
           <h3 class="sherpa">Device Orientation Specific Classes</h3>
           <p>The following classes are automatically assigned to the html element when the page orientation changes:</p>
           <ul>
@@ -172,9 +166,6 @@
           		<li>portrait</li>
           		<li>no-portrait</li>
           </ul>
-
-          <hr>
-
 
           <h3 class="sherpa">Browser Specific Classes</h3>
           <p>The following classes are automatically assigned to the html element when the page loads:</p>
@@ -195,11 +186,6 @@
           	</ul>
           	<p>a "no-" version shows when above items are not supported</p>
 
-          <hr>
-
-          <hr>
-
-
           <h3 class="sherpa">Localization attribute</h3>
           <p>Based on the language/locale which the prototype is set for the "lang" attribute is automatically added to the html ellement.</p>
 
@@ -211,26 +197,24 @@
 
 
 				<article id="fluidGridSystem">
-					<h2 class="sherpa content-offset">Grid system</h2>
+					<h2 class="sherpa">Grid system</h2>
+					<hr>
 					<p>The grid system uses percents instead of pixels for column and gutter widths. It ensures proper proportions for key screen resolutions and devices.</p>
 
-					<p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="btn btn-large btn-secondary" type="button">Live grid example</button></a></p>
+					<p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="sherpa-btn" type="button">Live grid example</button></a></p>
 
-					<hr>
 
-					<h2 class="sherpa">Desktop grid</h2>
-					<p class="lead">The desktop grid utilizes <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
+					<h3 class="sherpa">Desktop grid</h3>
+					<p>The desktop grid utilizes <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
 
 					<h4 class="sherpa">Desktop 12 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.da</code> for columns.</p>
 
 					<h4 class="sherpa">Desktop 15 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.db</code> for columns.</p>
-
-				<hr>
 					
-				<h2 class="sherpa">Tablet grid</h2>
-					<p class="lead">The tablet grid utilizes <strong>9 columns</strong> and <strong>8 columns</strong> with a max-width of 979px and a min-width of 768px.</p>
+				<h3 class="sherpa">Tablet grid</h3>
+					<p>The tablet grid utilizes <strong>9 columns</strong> and <strong>8 columns</strong> with a max-width of 979px and a min-width of 768px.</p>
 
 					<h4 class="sherpa">Tablet 9 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.ta</code> for columns.</p>
@@ -238,11 +222,9 @@
 					<h4 class="sherpa">Tablet 8 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.tb</code> for columns.</p>
 
-				<hr>
-
-
-				<h2 class="sherpa">Mobile grid</h2>
-					<p class="lead">The mobile grid utilizes <strong>3 columns</strong> and <strong>4 columns</strong> with a max-width of 767px.</p>
+			
+				<h3 class="sherpa">Mobile grid</h3>
+					<p>The mobile grid utilizes <strong>3 columns</strong> and <strong>4 columns</strong> with a max-width of 767px.</p>
 
 					<h4 class="sherpa">Mobile 3 column grid HTML</h4>
 					<p>The 3 column grid uses <code>.ma</code> for columns.</p>
@@ -252,7 +234,7 @@
 
 				<hr>
 
-				<h2 class="sherpa">Basic grid HTML</h2>
+				<h3 class="sherpa">Basic grid HTML</h3>
 
 					<p>For a simple two column layout, create a <code>.wrapper</code> and add the appropriate number of columns. Remember that you have to add the grid classes for desktop <code>.da</code> or <code>.db</code>, tablet <code>.ta</code> or <code>.tb</code> and mobile <code>.ma</code> or <code>.mb</code>.</p>
 

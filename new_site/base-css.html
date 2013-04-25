@@ -95,12 +95,15 @@
 
 	<section class="main-content">
 		<div class="wrapper">
+
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
 				      	<li class="active"><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
 			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
 			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
+			          	<li><a href="#lists"><i class="icon-chevron-right"></i> Lists</a></li>
+			          	<li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
 			          	<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
 			          	<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
 			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
@@ -110,126 +113,103 @@
 	   				</ul>
 				</div>
 			</aside>
+
 			<section class="da4-da12 ta-all mb-all">
+				<article id="typography" class="bottom-offset">
 
 				<article id="typography">
-					<h2 class="sherpa content-offset">Typography</h2>
+					<h2 class="sherpa">Bo is a hamburger Typography</h2>
 					<hr>
+
 					<h3 class="sherpa">Headings</h3>
-		
-        	<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
-        	
-        	<div class="box gray-very-light sherpa-gray-stroke rounded-big">
-	          <h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
-	          <h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
-	          <h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
-	          <h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
-	          <h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
-	          <!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
-        	</div>
-
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;h1&gt;...&lt;/h1&gt;</pre>
-      
-    			<hr>
-
-        	<h3 class="sherpa">Headings options</h3>
-	        <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
-	        
-	        <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-		        <h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
-		        <h1 class="blue box rounded-big white-text"><code>&lt;h1 class="white-text"&gt;</code> h1. Heading 1</h1>
-		      </div>
-
+					<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+						<h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+						<h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+						<h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+						<h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+						<!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-	&lt;h4 class="feature" &gt;...&lt;/h4&gt;
-	&lt;h1 class="white-text" &gt;...&lt;/h1&gt;
-</pre>
+&lt;h1&gt;...&lt;/h1&gt;</pre>
+
+		        	<h3 class="sherpa">Headings options</h3>
+			        <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
+						<h1 class="blue box rounded-big white-text"><code>&lt;h1 class="white-text"&gt;</code> h1. Heading 1</h1>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h4 class="feature"&gt;...&lt;/h4&gt;
+&lt;h1 class="white-text" &gt;...&lt;/h1&gt;</pre>
 	        
-	        <hr>
+					<h3 class="sherpa">Tablet headings</h3>
+					<p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>
+					<p class="sherpa"><span class="label label-info">Note</span> The below headings for tablet are for display only. You do not need to change anything in your heading tags. The heading will change to the appropriate size automatically.</p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+						<h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+						<h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+						<h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+						<h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+						<!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1&gt;...&lt;/h1&gt;</pre>
 
-	        <h3 class="sherpa">Different screen sizes</h3>
+					<h3 class="sherpa">Phone headings</h3>
+					<p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>	<p class="sherpa"><span class="label label-info">Note</span> The below headings for mobile are for display only. You do not need to change anything in your heading tags. The heading will change to the appropriate size automatically.</p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+						<h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+						<h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+						<h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+						<h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+						<!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1&gt;...&lt;/h1&gt;</pre>
 
-	        <h4 class="sherpa"><span class="label label-info">Note</span> The below headings for tablet and mobile are for display only. You do not need to change anything in your heading tags. The heading will change to the appropriate size automatically.</h4>
+					<h3 class="sherpa" id="body-copy">Body copy</h3>
+					<p>Sherpa's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+						<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;...&lt;/p&gt;</pre>
 
-	        <hr>
-
-	        <h3 class="sherpa">Tablet headings</h3>
-          <p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>
-          <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-	          <h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
-	          <h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
-	          <h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
-	          <h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
-	          <h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
-	          <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
-	        </div>
-
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;h1&gt;...&lt;/h1&gt;</pre>
-
-          <hr>
-
-          <h3 class="sherpa">Phone headings</h3>
-          <p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>
-          <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-	          <h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
-	          <h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
-	          <h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
-	          <h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
-	          <h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
-	          <!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
-	        </div>
-
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;h1&gt;...&lt;/h1&gt;</pre>
-
-         
-
-<!-- Body copy -->
-          <h3 class="sherpa content-offset" id="body-copy">Body copy</h3>
-          <hr>
-          <p>Sherpa's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
-          
-          <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-            <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
-            <p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
-            <p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
-          </div>
-
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;p&gt;...&lt;/p&gt;</pre>
-
-<!-- Lead body copy -->
-          <h3 class="sherpa">Lead body copy</h3>
-          <p>Make a paragraph stand out by adding <code>.lead</code>.</p>
-          <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-            <p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
-          </div>
-
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
-					
+					<h3 class="sherpa">Lead body copy</h3>
+					<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
 					
 
-<!-- Emphasis -->
-          <h3 class="sherpa content-offset" id="emphasis">Emphasis</h3>
-          <hr>
-          <p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+					<h3 class="sherpa" id="emphasis">Emphasis</h3>
+					<p>Make use of HTML's default emphasis tags with lightweight styles.</p>
 
-<!-- Small -->
+
+
 					<h4 class="sherpa">Small</h4>
-          <p class="sherpa"><code>&lt;small&gt;</code></p>
-          <p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
-          <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-            <p><small>This line of text is meant to be treated as fine print.</small></p>
-          </div>
+					<p class="sherpa"><code>&lt;small&gt;</code></p>
+					<p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<p><small>This line of text is meant to be treated as fine print.</small></p>
+					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;p&gt;
-  &lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;
-&lt;/p&gt;
-</pre>
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;</pre>
 					<h4 class="sherpa">Bold</h4>
 					<p>For emphasizing a snippet of text with a heavier font-weight.</p>
-          <div class="box gray-very-light sherpa-gray-stroke rounded-big">
-            <p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
-          </div>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
+						<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
 
           <h4 class="sherpa">Italics</h4>
           <p>For emphasizing a snippet of text with italics.</p>
@@ -237,10 +217,11 @@
             <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
           </div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
-					
+				</article>				
 
 <!-- Lists -->
-          <h2 class="sherpa content-offset" id="lists">Lists</h2>
+				<article id="lists" class="bottom-offset">
+          <h2 class="sherpa">Lists</h2>
           <hr>
           <h3 class="sherpa">Unordered</h3>
           <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
@@ -320,13 +301,12 @@
 
 
 
-				<article>
 
-<!-- Tables -->
-	        <section id="tables">
-	          <h2 class="sherpa content-offset">Tables</h2>
+
+
+	        <article id="tables" class="bottom-offset">
+	          <h2 class="sherpa "> AJ Tables</h2>
 	          <hr>
-
 	          <h3 class="sherpa">Default styles</h3>
 	          <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
 
@@ -370,7 +350,13 @@
 &lt;/table&gt;
 </pre>
 
-					</section>
+
+				</article>
+
+
+				<article>
+
+
 				</article>
 
 
