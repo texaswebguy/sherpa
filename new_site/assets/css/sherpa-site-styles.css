@@ -483,3 +483,18 @@ Breakpoints
   }
 
 }
+
+
+/* these may eventually have to be added to the core */
+
+[class*=-toggle]:hover {
+  text-decoration:none
+}
+
+[class*=-toggle].open .hide {
+  display:inline-block;
+}
+
+[class*=-toggle].open .view {
+  display:none;
+}

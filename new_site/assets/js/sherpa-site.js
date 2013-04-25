@@ -25,8 +25,19 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    		id: 'components',
 	    		label : 'Components',
 	    		url : 'components.html'
+	    	},
+	    	{ 
+	    		id: 'configuration',
+	    		label : 'Configuration',
+	    		url : 'configuration.html'
+	    	},
+	    	{ 
+	    		id: 'functions',
+	    		label : 'Functions',
+	    		url : 'functions.html'
 	    	}
-	    ]
+	    ],
+	    show_sample_core_config : ko.observable(false)
 	    
 	};
 
@@ -67,6 +78,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		this.listen('li:not("[class=active]") a', "click", function(event){
 			event.preventDefault();
 			$.scrollTo($(event.currentTarget).attr('href'),300, {offset:{top:-60}}); //might have to be different in mobile
+			//TODO there is a bug that when you click on the top item it does not scroll high enough.  Might need to create a different event or add a condition.
 			if(!viewModel.isDesktop()){
 				$(event.target).parents(".bs-docs-sidenav").toggleClass('open');
 				$(event.target).parents(".bs-docs-sidenav").scrollspy('refresh');
@@ -75,11 +87,17 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	});
 
+
+
+
+
 	$('[data-spy="scroll"]').each(function () {
 	  var $spy = $(this).scrollspy('refresh');
+	  //when this fires we want the size of the sidebar to be the same as .da1-da3.
+	  //TODO need to figure out what we want to do for tablet and mobile.
 	  $('.bs-docs-sidenav').width($('.da1-da3').width()) ;
 	});
-	
+
 
 
 	/*********************************************************************************

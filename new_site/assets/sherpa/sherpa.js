@@ -118,24 +118,39 @@ Sherpa.js({ config: "assets/config/global_config.js"}, function(){
 	// GLOBAL Counter for troubleshooting bottlenecks:
 	//______________________________________________________________________________________
 
-	Sherpa.counter = function (e) {
+	Sherpa.counter = function (marker) {
 		if(SHERPA.ENABLE_COUNTER) {
-			if(!this.count) {
-				this.count = 0;
-				this.star_time = 0;
-				this.time_log = {};
-				this.see = "----------------->";
+			if(marker == "report") {
+				console.log(JSON.stringify(Sherpa.counter.obj.time_log,null,5));
 			} else {
-				this.count++;
+				if(!Sherpa.counter.obj) {
+					var obj = {
+						count: 0,
+						start_time: (new Date).getTime(),
+						time_log: {},
+						last_time: 0
+					};
+					obj.new_time = obj.start_time;
+				} else {
+					var obj = Sherpa.counter.obj;
+					obj.new_time = (new Date).getTime();
+				}
+				obj.count++;
+			    obj.elapsed_time = (obj.new_time - obj.last_time) / 1000;
+			    obj.last_time = obj.new_time;
+			    if(marker && obj.time_log[marker] == undefined) {
+			    	//never seen this marker
+			    	obj.time_log[marker]={};
+			    	obj.time_log[marker].start = obj.new_time;
+			    	console.log(obj.count + ": "+marker + " - starting timer at:" + (obj.last_time - obj.start_time )/1000 + " seconds");
+			    } else if (marker) {
+			    	obj.time_log[marker].elapsed_time = obj.last_time - obj.time_log[marker].start;
+			    	console.log(obj.count + ": "+marker + " - elapsed time:" + obj.time_log[marker].elapsed_time /1000 + " seconds")
+			    } else {
+			    	console.log(obj.count + ": elapsed/total time:" + obj.elapsed_time + "/"  + obj.last_time)
+			    }
+			    Sherpa.counter.obj = obj;
 			}
-		    this.t = " ";
-		    this.n = (new Date).getTime();
-		    this.r = (n - last_time) / 1e3;
-		    this.last_time = n;
-		    var i = (this.last_time - this.start_time) / 1e3 + " secs";
-		    console.log( e && (this.time_log[e] ? (this.r = this.r = (this.n - this.time_log[e].last_time) / 1e3, this.t = " END: " + e) : (this.time_log[e] = {
-		        last_time: this.last_time
-		    }, t = " START: " + e)), this.count + ": elapsed/total time:" + this.r + "/" + i + this.t );
 		}
 	}
 	// initiate counter to start login of entire app
@@ -255,7 +270,7 @@ var viewModel = {
 */
 
 
-Sherpa.ready("bootstrap", function(){
+Sherpa.ready("dateFormat", function(){
 
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	_.each(SHERPA.SHERPA_CORE_LOAD, function(lib){
@@ -264,13 +279,17 @@ Sherpa.ready("bootstrap", function(){
 	});
 
 
+
 	// Need to wait for i18n to load so that messages are in context (viewModel.content)
 	Sherpa.ready("sherpai18n", function(){
+
 
 		// load local app
 		Sherpa.js(
 			{ localJSApp: SHERPA.JS_PATH+SHERPA.PROTOTYPE_APP}
-		);
+		);				
+
+		
 
 	    Sherpa.ready("localJSApp", function(){
 
@@ -279,8 +298,10 @@ Sherpa.ready("bootstrap", function(){
 		    //apply view model to allknockout bindings 
 			ko.applyBindings(viewModel);
 
+
+
 			// turn on the page
-		    $('html').addClass('sherpaReady');
+		    	$('html').addClass('sherpaReady');
 
 			// Enables prototype QA if configured
 			// TODO this is way out in terms of building something.  It's just a placeholder for now

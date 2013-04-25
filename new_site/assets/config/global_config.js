@@ -9,9 +9,22 @@
 var SHERPA = {};
 
 SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
-// Please note that if you run local you run the risk of libraries and css being out of date.
+/* 
+ * By default, prototypes run as local.  This means that all files associated with the prototypes 
+ * are local and the prototype should be able to run locally without any internet connection.  
+ * This is important for the purpose of creating a prototype that is highly portable and requires 
+ * nothing but unziping a file to properly run even if not connected to the Internet. Doing a 
+ * usability test in China will make you appreciate this feature.
+ * 
+ * When you set the prototype to "run from remote" it means that core references such as javascript 
+ * and css files will be directed to whatever location is configured as the remote path. This does 
+ * not mean you are running it on a remote server, it means that it is using resources from the 
+ * remote server. Your copy of the prototype in a remote server can actually be configured to run 
+ * locally and that's perfectly ok. This feature is useful if you want to keep common resources 
+ * in one location so that your entire team uses the same resources.
+*/
 
-// Should not be changed, this is a core dependency
+// Should not be changed, these are core dependencies
 SHERPA.UNDERSCORE = "assets/sherpa/lib/underscore-min.js";
 
 // JS PATH Configuration;
@@ -28,7 +41,7 @@ SHERPA.DEFAULT_LOCALE = "en";
 
 // Configuration of framework informational functions
 SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
-SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
+SHERPA.ENABLE_COUNTER = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
@@ -70,9 +83,8 @@ SHERPA.JS_CORE_LOAD = [
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
 	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
-	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"},
-	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"}
-	
+	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},
+	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 
 SHERPA.PROTOTYPE_APP = "app.js";

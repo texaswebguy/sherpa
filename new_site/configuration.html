@@ -88,7 +88,7 @@
 		<div class="wrapper">
 			<div class="da-all ta-all mb-all white-text">
 				<h1 class="sherpa featured-white">Configuration</h1>
-				<h3 class="sherpa featured-white">Configuring your prototypes</h3>
+				<h3 class="sherpa featured-white">Sherpa is highly configurable to fit your specific needs.</h3>
 			</div>
 		</div>
 	</section>
@@ -98,102 +98,208 @@
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
-				      	<li class="active"><a href="#configure"><i class="icon-chevron-right"></i> Configuring your prototype</a></li>
-				      	<li><a href="#local-vs-remote"><i class="icon-chevron-right"></i> Local vs Remote</a></li>
-			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
-			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
-			          	<li><a href="#paths"><i class="icon-chevron-right"></i> Paths</a></li>
-			          	<li><a href="#proto-app"><i class="icon-chevron-right"></i> Prototype Default Application</a></li>
-			          	<li><a href="#js-core-load"><i class="icon-chevron-right"></i> Javascript Core Libraries</a></li>
-			          	<li><a href="#css-core-load"><i class="icon-chevron-right"></i> CSS Core</a></li>
-			          	<li><a href="#proto-css"><i class="icon-chevron-right"></i> Prototype Default CSS</a></li>
-			          	<li><a href="#i18n"><i class="icon-chevron-right"></i> Localization</a></li>
-			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
-			          	<li><a href="#information"><i class="icon-chevron-right"></i> Informational Functions</a></li>
+				      	<li class="active"><a href="#overview"><i class="icon-chevron-right"></i>Overview</a></li>
+				      	<li><a href="#core"><i class="icon-chevron-right"></i>Core Configuration</a></li>
 			          	<li><a href="#overrides"><i class="icon-chevron-right"></i> Cofiguration Overides</a></li>
+				      	<li><a href="#custom"><i class="icon-chevron-right"></i>Custom Configurations</a></li>
+				      	<li><a href="#localization"><i class="icon-chevron-right"></i>Localized Settings</a></li>
 	   				</ul>
 				</div>
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
-				<article id="configure">
-					<h2 class="sherpa">Configuring your prototype</h2>
+				<article id="overview">
+					<h2 class="sherpa">Overview</h2>
 					
 		          	<p>The Sherpa framework is highly configurable. Configurations are in place to adapt to the diverse needs in User eXperience (UX) prototype modeling. These configurations allow prototypes to run locally or from remote servers. In addition, different javascript libraries can be configured when the prototype page loads. This is done so the framework can be extended to fit your specific needs.</p>
-		          	<p>Out of the box, Sherpa is loaded with everything we use to build prototypes ourselves and very seldom you might need to add or remove things.</p>
-		          	<h3 class="sherpa">How to configure Sherpa</h3>
-		      		<p>There are two places to configure Sherpa:</p>
-		      		<ul>
-		      			<li>
-		      				<h5>Global Configuration:</h5>
-		      				<p></p>
-		      			</li>
-		      			<li>
-		      				<h5>Configuration Overrides:</h5>
-		      				<p></p>
-		      			</li>
-		      		</ul>
-			          
+		          	<p>Out of the box, Sherpa is loaded with everything we use to build prototypes ourselves and very seldom you might need to add or remove things. There are several places to configure Sherpa show below.</p>
+		        </article>
+				<article id="core">
+					<h2 class="sherpa">Core Configuration</h2>
+      				<p>By editing <code>assets/config/global_config.js</code> you can change core settings.
+      					This javascript file contains the core of Sherpa such as paths, prototype default application, Javascript core libraries, CSS core files, default css and default locale.</p>
+      					<p>This is what the Sherpa configuration object looks like once it is built on startup:</p>
+
+<pre data-bind="prettyprint:{}">
+{
+     "RUN_AS_LOCAL": true,
+     "UNDERSCORE": "assets/sherpa/lib/underscore-min.js",
+     "REMOTE_PATH": "https://rawgithub.com/DellGDC/sherpa/master/",
+     "LOCAL_PATH": "",
+     "JS_PATH": "assets/js/",
+     "JS_LIB_PATH": "assets/sherpa/lib/",
+     "CORE_PATH": "assets/sherpa/",
+     "COMPONENTS_PATH": "components/",
+     "DEFAULT_LOCALE": "en",
+     "DISABLE_CONSOLE_MESSAGES": false,
+     "ENABLE_COUNTER": true,
+     "ENABLE_GRIDSET_OVERLAY": true,
+     "ENABLE_NOTES": false,
+     "ENABLE_PROTOTYPE_QA": false,
+     "CSS_CORE_REMOTE_PATH": "https://rawgithub.com/DellGDC/sherpa/master/assets/css/",
+     "CSS_CORE_LOCAL_PATH": "assets/sherpa/css/",
+     "CSS_REMOTE_PATH": "https://rawgithub.com/DellGDC/sherpa/master/assets/css/",
+     "CSS_LOCAL_PATH": "assets/css/",
+     "CSS_CORE_PATH": "assets/sherpa/css/",
+     "CSS_PATH": "assets/css/",
+     "JS_CORE_LOAD": [
+          {
+               "jquery": "assets/sherpa/lib/jquery.min.js"
+          },
+          {
+               "knockout": "assets/sherpa/lib/knockout.min.js"
+          },
+          {
+               "amplify": "assets/sherpa/lib/amplify.min.js"
+          },
+          {
+               "pager": "assets/sherpa/lib/pager.min.js"
+          },
+          {
+               "history": "assets/sherpa/lib/jquery.history.js"
+          },
+          {
+               "scrollTo": "assets/sherpa/lib/jquery.scrollTo.min.js"
+          },
+          {
+               "underscoreString": "assets/sherpa/lib/underscore.string.min.js"
+          },
+          {
+               "queryString": "assets/sherpa/lib/query-string.js"
+          },
+          {
+               "jqueryUI": "assets/sherpa/lib/jquery-ui.min.js"
+          },
+          {
+               "bootstrap": "assets/sherpa/lib/bootstrap-min.js"
+          },
+          {
+               "dateFormat": "assets/sherpa/lib/date-format.js"
+          },
+          {
+               "prettify": "assets/sherpa/lib/google-code-prettify/prettify.js"
+          }
+     ],
+     "PROTOTYPE_APP": "sherpa-site.js",
+     "CSS_CORE_LOAD": [
+          {
+               "bootstrap": "assets/sherpa/css/bootstrap.css"
+          },
+          {
+               "sherpa_overides": "assets/sherpa/css/sherpa-override.css"
+          },
+          {
+               "prettify": "assets/sherpa/lib/google-code-prettify/prettify.css"
+          }
+     ],
+     "CSS_GRID": "assets/sherpa/css/grid/gridset.css",
+     "CSS_GRID_IE9": "assets/sherpa/css/grid/gridset-ie-9.cssgridset.css",
+     "CSS_GRID_LTIE9": "assets/sherpa/css/grid/gridset-ie-lte8.css",
+     "CSS_LOCAL_APP": "assets/css/sherpa-site-styles.css",
+     "IE_JS_LOAD": [
+          {
+               "html5printshiv": "assets/sherpa/lib/html5shiv-printshiv.js"
+          },
+          {
+               "html5Formshim": "assets/sherpa/lib/jquery.html5form.js"
+          }
+     ],
+     "SHERPA_CORE_LOAD": [
+          {
+               "sherpaEventManager": "assets/sherpa/lib/sherpa-event-manager.js"
+          },
+          {
+               "sherpaUtils": "assets/sherpa/lib/sherpa-utils.js"
+          },
+          {
+               "sherpai18n": "assets/sherpa/lib/sherpa-i18n.js"
+          },
+          {
+               "sherpaPseudoAuth": "assets/sherpa/lib/sherpa-pseudo-auth.js"
+          },
+          {
+               "sherpaCustomWidgets": "assets/sherpa/lib/sherpa-custom-widgets.js"
+          },
+          {
+               "sherpaGlobalEvents": "assets/sherpa/lib/sherpa-global-events.js"
+          }
+     ],
+     "PROTOTYPE_QA_JS": "assets/sherpa/lib/sherpa-prototype-qa.js"
+}
+</pre>
+				</article>
+				<article id="overrides">
+					<h2 class="sherpa">Configuration Overrides</h2>
+		      				<p>Each html file can contain override configurations.  This allows you to create different pages that might use different libraries or helper files.</p>
+
+      					<p>In the head of your HTML document you will notice a script tag. All of the override variables are commented out for your convenience:</p>
+
+<pre data-bind="prettyprint:{}">
+&lt;head>
+
+	...
+
+	&lt;script type="text/javascript">
+	    var SHERPA_CONFIG_OVERRIDES = {};
+		SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/myCustomStyles.css";
+		SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "myCustomApp.js";
+		SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = true;
+		SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+		    { myCustomJS: "assets/js/myCustomJSLibrary.js"}
+		]
+	&lt;/script>
+
+	... 
+
+&lt;/head>
+
+</pre>
+				</article>
+				<article id="custom">
+					<h2 class="sherpa">Custom Configurations</h2>
+		      				<p>The file <code>assets/js/app.js</code> is where your prototype application is. 
+		      					Here you can add custom configuration variables to the global data view model.  These can be used to set up conditionals to display certain components or not.</p>
+
+      					<p>All you have to do is add an element to the addToConfigs object. The sample below would be available in the view model (viewModel.config.sample_custom_config).</p>
+
+<pre data-bind="prettyprint:{}">
+addToConfigs = {
+	sample_custom_config : true
+}
+</pre>
+				</article>
+				<article id="localization">
+					<h2 class="sherpa">Localized Settings</h2>
+		      				<p>The JSON file <code>assets/config/settings_en.json</code> is one of many 
+		      					files that are specific to a locale and contain global configurations for things such as date formats, currency conversion, etc. The file settings_en.json loads by default unless a different locale is specified on the url or core configuration.</p>
+
+      					<p>The contents of this file get placed into the viewModel.config object along with custom configurations: </p>
+
+<pre data-bind="prettyprint:{}">
+{
+     "default_order_code": "fncwl44br",
+     "default_date_format": "mm/dd/yyyy",
+     "currency": {
+          "conversion_rate": 1,
+          "format_decimal": {
+               "decimals": 2,
+               "decimal_separator": ".",
+               "thousands_separator": ","
+          },
+          "format_nodecimal": {
+               "decimals": 0,
+               "decimal_separator": ".",
+               "thousands_separator": ","
+          },
+          "symbol": "$",
+          "symbol_position": "left"
+     },
+     "sample_custom_config": true
+}
+</pre>
+
 			    </article>
 
-
-
-				<article id="local-vs-remote">
-					<h2 class="sherpa">Local vs Remote</h2>
-					
-		          	<p>The Sherpa framework has two basic modes operating from your local drive: Run as local or run from remote.</p>
-
-          			<h3 class="sherpa">Run as local</h3>
-
-		          	<p>By default, prototypes run as local.  This means that all files associated with the prototypes are local and the prototype should be able to run locally without any internet connection.  This is important for the purpose of creating a prototype that is highly portable and requires nothing but unziping a file to properly run even if not connected to the Internet. Doing a usability test in China will make you appreciate this feature.</p>
-		      
-          			<hr>
-
-          			<h3 class="sherpa">Run from remote</h3>
-			        <p>When you set the prototype to "run from remote" it means that core references such as javascript and css files will be directed to whatever location is configured as the remote path. This does not mean you are running it on a remote server, it means that it is using resources from the remote server. Your copy of the prototype in a remote server can actually be configured to run locally and that's perfectly ok. This feature is useful if you want to keep common resources in one location so that your entire team uses the same resources.</p>
-			          
-			    </article>
-				<article id="js_path">
-					<h2 class="sherpa">Paths</h2>
-					
-		          	<p>The Sherpa framework sets up all of the different paths required to run properly. The following ar all the </p>
-		      
-          			
-
-
-					<hr>
-          			<h3 class="sherpa">SHERPA.LOCAL_PATH</h3>
-			        <p>This is typically empty. It is used to identify the local root directory of your prototype.</p>
-			          
-					<hr>
-          			<h3 class="sherpa">SHERPA.REMOTE_PATH</h3>
-			        <p>This would be set to wherever you have the root of your prototype hosted on the internet. Example:
-						SHERPA.REMOTE_PATH = "https://www.myserver.com/myprototype/";
-			         </p>
-			         <p>Note: It should end with a slash "/"</p>
-			        
-
-			        
-					<hr>
-          			<h3 class="sherpa">SHERPA.JS_PATH</h3>
-			        <p>This is where you save all your custom javascript files.  The default is set to "assets/js/" and there is really not reason change this but you can</p>
-			          
-			        
-					<hr>
-          			<h3 class="sherpa">SHERPA.JS_LIB_PATH</h3>
-			        <p></p>
-			          
-			        
-					<hr>
-          			<h3 class="sherpa">SHERPA.CORE_PATH</h3>
-			        <p></p>
-			          
-			        
-					<hr>
-          			<h3 class="sherpa">SHERPA.COMPONENTS_PATH</h3>
-			        <p></p>
-			          
-			    </article>
 
 
 			</section>
