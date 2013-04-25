@@ -1649,7 +1649,7 @@ legend + .control-group {
 /* Rounded corners
 -------------------------------------------------- */
 
-.rounded-big {
+.rounded-large {
   -webkit-border-radius: 10px; 
   -moz-border-radius: 10px; 
   border-radius: 10px;
@@ -1661,6 +1661,20 @@ legend + .control-group {
   -moz-border-radius: 5px; 
   border-radius: 5px;
 }
+
+/* Bottom offsets (padding bottom)
+-------------------------------------------------- */
+.bottom-offset-small {
+    margin-bottom: 20px;
+  }
+
+.bottom-offset-meduim {
+    margin-bottom: 40px;
+  }
+
+.bottom-offset-large {
+    margin-bottom: 60px;
+  }
 
 
 
