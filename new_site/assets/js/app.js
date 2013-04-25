@@ -9,7 +9,83 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			name:ko.observable("Carl Weatherspoon")
 		},
 	    question: ko.observable('How many roads must a man walk down before you can call him a man?'),
-	    test:true
+	    test:true,
+	    simple_dropdown_data : {
+		    label : 'Sample button dropdown',
+		    items: [
+		        {
+		            id : "action_1",
+		            label : "Action 1",
+		            url : "#action"
+		        },
+		        {
+		            id : "action_2",
+		            label : "Action 2",
+		            url : "#action"
+		        },
+		        {
+		            id : "action_3",
+		            label : "Action 3",
+		            url : "#action",
+		            disabled: true
+		        },
+		        {
+		            divider :  true
+		        },
+		        {
+		            id : "action_4",
+		            label : "Action 4",
+		            url : "#action"
+		        }
+		    ]
+		},
+		sample_dropdown_1 : {
+		    label : 'Dropdown with submenus',
+	        items: [
+	            {
+	                id : "action_1",
+	                label : "Action 1",
+	                url : "#action"
+	            },
+	            {
+	                id : "action_2",
+	                label : "Action 2",
+	                url : "#action"
+	            },
+	            {
+	                id : "action_3",
+	                label : "Action 3",
+	                url : "#action",
+	                disabled: true
+	            },
+	            {
+	                divider :  true
+	            },
+	            {
+	                id : "action_4",
+	                label : "Action 4",
+	                url : "#action",
+	                items: [
+	                    {
+	                		id : "action_4_1",
+	                        label : "Second Level Action 1",
+	                        url : "#action"
+	                    },
+	                    {
+	                		id : "action_4_2",
+	                        label : "Second Level Action 2",
+	                        url : "#action"
+	                    },
+	                    {
+	                		id : "action_4_3",
+	                        label : "Second Level Action 3",
+	                        url : "#action",
+	                        disabled: true
+	                    }
+	                ]
+	            }
+	        ]
+	    }
 	};
 
 	addToConfigs = {

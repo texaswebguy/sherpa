@@ -43,9 +43,24 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    		browser_title : "Sherpa - Javascript Functions"
 	    	}
 	    ],
+		user: {
+			name:ko.observable("Carl Weatherspoon")
+		},
+	    question: ko.observable('How many roads must a man walk down before you can call him a man?'),
+	    sample_date: "12/01/2014",
+	    sample_preformated_date: Sherpa.dateFormat("12/01/2014"),
+	    sample_price: "499.00",
+	    sample_preformated_price: Sherpa.formatCurrency("499.00"),
+	    checkbox_value: ko.observable(false),
+	    checkbox_fade_value: ko.observable(false),
+	    checkbox_slide_value: ko.observable(false),
+	    dropdown_values : ["alpha", "beta", "charlie"],
+	    selected_dropdown_value : ko.observable("alpha"),
+	    selected_fade_dropdown_value : ko.observable("alpha"),
+	    selected_slide_dropdown_value : ko.observable("alpha"),
 	    show_sample_core_config : ko.observable(false),
-	    simple_dropdown_data : {
-		    label : 'Sample button dropdown',
+	    simple_links_data : {
+		    label : 'Sample links',
 		    items: [
 		        {
 		            id : "action_1",
@@ -73,8 +88,8 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		        }
 		    ]
 		},
-		sample_dropdown_1 : {
-		    label : 'Dropdown with submenus',
+		sample_links_complex : {
+		    label : 'Sample complex links',
 	        items: [
 	            {
 	                id : "action_1",
@@ -119,14 +134,23 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	                ]
 	            }
 	        ]
-	    }
+	    },
+		some_boolean_function : function(){
+			var q = Sherpa.urlQuery();
+			if(q.boolean_example === "true") {
+				return true;
+			} else {
+				return false;
+			}
+		}
 	    
 	};
 
 	addToConfigs = {
-		sample_custom_config : true
+		sample_custom_config : true,
+	    some_boolean_variable : true,
+	    some_other_boolean_variable : false
 	}
-
 
 	$(window).resize(function() {
 		if(viewModel.isDesktop()){
@@ -172,7 +196,12 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	});
 
-
+	$('.code_sample_popup').click(function(event){
+		event.preventDefault();
+		var url = $(event.target).attr('href');
+		window.open(url,'app.js','width=700,height=500,toolbar=0,menubar=0,location=0,status=1,scrollbars=1,resizable=1,left=0,top=0');
+		return false;
+	});
 
 
 
