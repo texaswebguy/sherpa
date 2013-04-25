@@ -67,6 +67,7 @@
 
 			
 	</head>
+	
 <body data-spy="scroll" data-target=".bs-docs-sidenav" data-offset-top="-20">
 	
 	<!-- Start - Masthead
@@ -115,10 +116,9 @@
 			</aside>
 
 			<section class="da4-da12 ta-all mb-all">
+<!-- Typogoraphy -->
 				<article id="typography" class="bottom-offset">
-
-				<article id="typography">
-					<h2 class="sherpa">DAve Typography</h2>
+					<h2 class="sherpa">Typography</h2>
 					<hr>
 
 					<h3 class="sherpa">Headings</h3>
@@ -193,8 +193,6 @@
 					<h3 class="sherpa" id="emphasis">Emphasis</h3>
 					<p>Make use of HTML's default emphasis tags with lightweight styles.</p>
 
-
-
 					<h4 class="sherpa">Small</h4>
 					<p class="sherpa"><code>&lt;small&gt;</code></p>
 					<p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
@@ -203,6 +201,7 @@
 					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;</pre>
+
 					<h4 class="sherpa">Bold</h4>
 					<p>For emphasizing a snippet of text with a heavier font-weight.</p>
 					<div class="box gray-very-light sherpa-gray-stroke rounded-big">
@@ -211,158 +210,144 @@
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
 
-          <h4 class="sherpa">Italics</h4>
-          <p>For emphasizing a snippet of text with italics.</p>
-          <div class="bs-docs-example">
-            <p>The following snippet of text is <em>rendered as italicized text</em>.</p>
-          </div>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+					<h4 class="sherpa">Italics</h4>
+					<p>For emphasizing a snippet of text with italics.</p>
+					<div class="bs-docs-example">
+						<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
 				</article>				
 
 <!-- Lists -->
 				<article id="lists" class="bottom-offset">
-          <h2 class="sherpa">Lists</h2>
-          <hr>
-          <h3 class="sherpa">Unordered</h3>
-          <p>A list of items in which the order does <em>not</em> explicitly matter.</p>
-          <div class="bs-docs-example">
-            <ul>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Consectetur adipiscing elit</li>
-              <li>Integer molestie lorem at massa</li>
-              <li>Facilisis in pretium nisl aliquet</li>
-              <li>Nulla volutpat aliquam velit
-                <ul>
-                  <li>Phasellus iaculis neque</li>
-                  <li>Purus sodales ultricies</li>
-                  <li>Vestibulum laoreet porttitor sem</li>
-                  <li>Ac tristique libero volutpat at</li>
-                </ul>
-              </li>
-              <li>Faucibus porta lacus fringilla vel</li>
-              <li>Aenean sit amet erat nunc</li>
-              <li>Eget porttitor lorem</li>
-            </ul>
-          </div>
+					<h2 class="sherpa">Lists</h2>
+					<hr>
+
+					<h3 class="sherpa">Unordered</h3>
+					<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+					<div class="bs-docs-example">
+						<ul>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit
+								<ul>
+								<li>Phasellus iaculis neque</li>
+								<li>Purus sodales ultricies</li>
+								<li>Vestibulum laoreet porttitor sem</li>
+								<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;ul&gt;
   &lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+&lt;/ul&gt;</pre>
 
 					<h3 class="sherpa">Ordered</h3>
-          <p>A list of items in which the order <em>does</em> explicitly matter.</p>
-          <div class="bs-docs-example">
-            <ol>
-              <li>Lorem ipsum dolor sit amet</li>
-              <li>Consectetur adipiscing elit</li>
-              <li>Integer molestie lorem at massa</li>
-              <li>Facilisis in pretium nisl aliquet</li>
-              <li>Nulla volutpat aliquam velit</li>
-              <li>Faucibus porta lacus fringilla vel</li>
-              <li>Aenean sit amet erat nunc</li>
-              <li>Eget porttitor lorem</li>
-            </ol>
-          </div>
+					<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+					<div class="bs-docs-example">
+						<ol>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ol>
+					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;ol&gt;
   &lt;li&gt;...&lt;/li&gt;
-&lt;/ol&gt;
-</pre>
+&lt;/ol&gt;</pre>
 
-				<h3 class="sherpa">Unstyled</h3>
-        <p>A list of items with no <code>list-style</code> or additional left padding.</p>
-        <div class="bs-docs-example">
-          <ul class="unstyled">
-            <li>Lorem ipsum dolor sit amet</li>
-            <li>Consectetur adipiscing elit</li>
-            <li>Integer molestie lorem at massa</li>
-            <li>Facilisis in pretium nisl aliquet</li>
-            <li>Nulla volutpat aliquam velit
-              <ul>
-                <li>Phasellus iaculis neque</li>
-                <li>Purus sodales ultricies</li>
-                <li>Vestibulum laoreet porttitor sem</li>
-                <li>Ac tristique libero volutpat at</li>
-              </ul>
-            </li>
-            <li>Faucibus porta lacus fringilla vel</li>
-            <li>Aenean sit amet erat nunc</li>
-            <li>Eget porttitor lorem</li>
-          </ul>
-        </div>
+					<h3 class="sherpa">Unstyled</h3>
+					<p>A list of items with no <code>list-style</code> or additional left padding.</p>
+					<div class="bs-docs-example">
+						<ul class="unstyled">
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit
+								<ul>
+									<li>Phasellus iaculis neque</li>
+									<li>Purus sodales ultricies</li>
+									<li>Vestibulum laoreet porttitor sem</li>
+									<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;ul class="unstyled"&gt;
   &lt;li&gt;...&lt;/li&gt;
-&lt;/ul&gt;
-</pre>
+&lt;/ul&gt;</pre>
+
 				</article>
 
+<!-- Tables -->
+		        <article id="tables" class="bottom-offset">
+					<h2 class="sherpa ">Andrew loves Tables</h2>
+					<hr>
 
-
-
-
-
-
-	        <article id="tables" class="bottom-offset">
-	          <h2 class="sherpa ">Andrew loves Tables</h2>
-	          <hr>
-	          <h3 class="sherpa">Default styles</h3>
-	          <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
-
-	          <div class="box">
-	            <table class="table">
-	              <thead>
-	                <tr>
-	                  <th>#</th>
-	                  <th>First Name</th>
-	                  <th>Last Name</th>
-	                  <th>Username</th>
-	                </tr>
-	              </thead>
-	              <tbody>
-	                <tr>
-	                  <td>1</td>
-	                  <td>John</td>
-	                  <td>Smith</td>
-	                  <td>bigboy</td>
-	                </tr>
-	                <tr>
-	                  <td>2</td>
-	                  <td>Sara</td>
-	                  <td>Longlastname</td>
-	                  <td>slonglastname</td>
-	                </tr>
-	                <tr>
-	                  <td>3</td>
-	                  <td>Jim</td>
-	                  <td>Barker</td>
-	                  <td>barkerboy</td>
-	                </tr>
-	              </tbody>
-	            </table>
-	          </div>
-
-
+					<h3 class="sherpa">Default styles</h3>
+					<p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+					<div class="box">
+						<table class="table">
+							<thead>
+								<tr>
+									<th>#</th>
+									<th>First Name</th>
+									<th>Last Name</th>
+									<th>Username</th>
+								</tr>
+							</thead>
+							<tbody>
+								<tr>
+									<td>1</td>
+									<td>John</td>
+									<td>Smith</td>
+									<td>bigboy</td>
+								</tr>
+								<tr>
+									<td>2</td>
+									<td>Sara</td>
+									<td>Longlastname</td>
+									<td>slonglastname</td>
+								</tr>
+								<tr>
+									<td>3</td>
+									<td>Jim</td>
+									<td>Barker</td>
+									<td>barkerboy</td>
+								</tr>
+							</tbody>
+						</table>
+					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;table class="table"&gt;
   …
-&lt;/table&gt;
-</pre>
-
+&lt;/table&gt;</pre>
 
 				</article>
 
+			</section> <!-- Close Gridset Layout -->
 
-				<article>
-
-
-				</article>
-
-
-			</section>
-		</div>
-	</section>
+		</div> <!-- Close Wrapper -->
+	</section> <!-- Close Main content -->
 
 
 
