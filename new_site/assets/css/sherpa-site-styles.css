@@ -41,6 +41,12 @@
     padding-top:50px;
   }
 
+  .sherpa-gray-stroke {
+    border: 1px solid #e1e1e8;
+  }
+
+
+
 /* Links */
   a {
     color: #F0592C;
