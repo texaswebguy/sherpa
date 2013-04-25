@@ -120,7 +120,7 @@
       					This javascript file contains the core of Sherpa such as paths, prototype default application, Javascript core libraries, CSS core files, default css and default locale.</p>
       					<p>This is what the Sherpa configuration object looks like once it is built on startup:</p>
 
-<pre data-bind="prettyprint:{}">
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 {
      "RUN_AS_LOCAL": true,
      "UNDERSCORE": "assets/sherpa/lib/underscore-min.js",
@@ -234,7 +234,7 @@
 
       					<p>In the head of your HTML document you will notice a script tag. All of the override variables are commented out for your convenience:</p>
 
-<pre data-bind="prettyprint:{}">
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 &lt;head>
 
 	...
@@ -262,7 +262,7 @@
 
       					<p>All you have to do is add an element to the addToConfigs object. The sample below would be available in the view model (viewModel.config.sample_custom_config).</p>
 
-<pre data-bind="prettyprint:{}">
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 addToConfigs = {
 	sample_custom_config : true
 }
@@ -275,7 +275,7 @@ addToConfigs = {
 
       					<p>The contents of this file get placed into the viewModel.config object along with custom configurations: </p>
 
-<pre data-bind="prettyprint:{}">
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 {
      "default_order_code": "fncwl44br",
      "default_date_format": "mm/dd/yyyy",
