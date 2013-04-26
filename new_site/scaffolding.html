@@ -99,8 +99,8 @@
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
 			          <li class="active"><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
-			          <!-- <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li> -->
-			          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Grid system</a></li>
+			          <li><a href="#gridoverview"><i class="icon-chevron-right"></i> Grid overview</a></li>
+			          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Using the Grid</a></li>
 			          <!-- <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
 			          <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li> -->
 			        </ul>
@@ -108,7 +108,7 @@
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
-				<article class="bottom-offset" id="global">
+				<article class="bottom-offset-large" id="global">
 					<h2 class="sherpa">Global settings</h2>
 					<hr>
 					<h3 class="sherpa">Requires HTML5 doctype</h3>
@@ -196,40 +196,42 @@
 
 
 
-				<article id="fluidGridSystem">
-					<h2 class="sherpa">Grid system</h2>
+				<article class="bottom-offset-large" id="gridoverview">
+					<h2 class="sherpa">Grid overview</h2>
 					<hr>
-					<p>The grid system uses percents instead of pixels for column and gutter widths. It ensures proper proportions for key screen resolutions and devices.</p>
+					<p>Create multi-device layouts quickly and easily with the nestable grid. We have <strong>(6)</strong> different grids within the set that apply to a mobile (2), tablet (2), desktop (2) site layout.</p>
 
+					<h3 class="sherpa">Live grid example</h3>
+					<p>This example shows different combinations of layouts and how they change based on screen size.
 					<p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="sherpa-btn" type="button">Live grid example</button></a></p>
 
 
 					<h3 class="sherpa">Desktop grid</h3>
 					<p>The desktop grid utilizes <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
 
-					<h4 class="sherpa">Desktop 12 column grid HTML</h4>
+					<h4 class="sherpa">Desktop (A) - 12 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.da</code> for columns.</p>
 
-					<h4 class="sherpa">Desktop 15 column grid HTML</h4>
+					<h4 class="sherpa">Desktop (B) - 15 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.db</code> for columns.</p>
 					
 				<h3 class="sherpa">Tablet grid</h3>
 					<p>The tablet grid utilizes <strong>9 columns</strong> and <strong>8 columns</strong> with a max-width of 979px and a min-width of 768px.</p>
 
-					<h4 class="sherpa">Tablet 9 column grid HTML</h4>
+					<h4 class="sherpa">Tablet (A) - 9 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.ta</code> for columns.</p>
 
-					<h4 class="sherpa">Tablet 8 column grid HTML</h4>
+					<h4 class="sherpa">Tablet (B) - 8 column grid HTML</h4>
 					<p>The 12 column grid uses a class of <code>.tb</code> for columns.</p>
 
 			
 				<h3 class="sherpa">Mobile grid</h3>
 					<p>The mobile grid utilizes <strong>3 columns</strong> and <strong>4 columns</strong> with a max-width of 767px.</p>
 
-					<h4 class="sherpa">Mobile 3 column grid HTML</h4>
+					<h4 class="sherpa">Mobile (A) - 3 column grid HTML</h4>
 					<p>The 3 column grid uses <code>.ma</code> for columns.</p>
 
-					<h4 class="sherpa">Mobile 4 column grid HTML</h4>
+					<h4 class="sherpa">Mobile (B) - 4 column grid HTML</h4>
 					<p>The 12 column grid uses <code>.mb</code> for columns.</p>
 
 				<hr>
@@ -250,6 +252,94 @@
 					<p>For desktop we have <code>.da1-da3</code> and <code>.da4-da12</code>, making for 12 total columns and a complete row. For tablet we have <code>.ta1-ta3</code> and <code>.ta4-ta9</code>, making for 9 total columns and a complete row. For mobile we have <code>.ma-all</code> for both, making for 3 total columns and two complete row.</p>
 				
 				</article>
+
+
+
+
+				<article class="bottom-offset-large" id="fluidGridSystem">
+					<h2 class="sherpa">Using the grid</h2>
+					<hr>
+					<p>The grid system will generate all the classes you need to layout your page. For each grid, use the prefix plus the columns you want to span to define the width and margins of an element. So an element that needs to span columns 3 to 5 on your desktop grid would get a class of <code>da3-da5</code> (where <code>da</code> is your defined prefix for the desktop grid). An element that only spans the second column would be <code>da2</code>.</p>
+					<p>If that same element needs to span columns 1 to 2 on your tablet grid, just add a class like so: <code>ta1-ta2</code> to your <code>da3-da5</code>.</p>
+					<p><strong>Example code</strong></p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
+&lt;section&gt;
+ &lt;div class="wrapper"&gt;
+  &lt;article&gt;
+   &lt;div class="da1-da3 ta1-ta3 ma1"&gt;I will span the first to third columns of the desktop (a) grid, the 
+   first to third columns for the tablet (a) grid, and the first column for the mobile (a) grid.&lt;/div&gt;
+  &lt;/article&gt;
+ &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+
+					<h3 class="sherpa">Offsets</h3>
+					<p>The grid CSS calculates all offsets for you. There is no need to worry about how many columns should be spaced between elements: this is all automatically applied by the CSS. You only need to add the right class to the right element.</p>
+
+					<h3 class="sherpa">Predefined Classes</h3>
+					<p>For each grid, you also get some predefined classes that will help you with tricky layout situations. In these examples, * is the prefix defined for your grid:</p>
+
+					<ul class="unstyled">
+						<li>
+							<strong>*-all</strong>
+							<p>Span the full width of the grid. Helps with clearing, too. Equivalent of adding <small>width:100%</small>.</p>
+						</li>
+
+						<li>
+							<strong>*-hide</strong>
+							<p>Hide the element for this grid.</p>
+						</li>
+
+						<li>
+							<strong>*-clear</strong>
+							<p>Clear left and offset by the distance from column one to the first column the element spans.</p>
+						</li>
+
+						<li>
+							<strong>*-overlap</strong>
+							<p>Adds clear:none to an element for a grid. Use this class to place elements without being limited by source order.</p>
+						</li>
+
+						<li>
+							<strong>*-floatright, *-floatleft</strong>
+							<p>Floats the element in a direction, adding the proper gutter margin to the opposite side. Allows text to wrap element.</p>
+						</li>
+
+						<li>
+							<strong>*-clear</strong>
+							<p>Clear left and offset by the distance from column one to the first column the element spans.</p>
+						</li>
+
+						<li>
+							<strong>*-pad</strong>
+							<p>Add left and right padding of half the gutter width on the outside of the element.</p>
+						</li>
+
+						<li>
+							<strong>*-padfull</strong>
+							<p>Add left and right padding of the full gutter width on the outside of the element.</p>
+						</li>
+
+						<li>
+							<strong>*-padin</strong>
+							<p>Add left and right padding of half the gutter width on the inside of the element.</p>
+						</li>
+
+						<li>
+							<strong>*-padinfull</strong>
+							<p>Add left and right padding of the full gutter width on the inside of the element.</p>
+						</li>
+
+					</ul>
+
+					<p><strong>Here is a look at how the padding will work with your layout:</strong></P>
+					<p><img src="assets/img/class-padding.jpg"></p>
+
+					<!-- <p>The grid system uses percents instead of pixels for column and gutter widths. It ensures proper proportions for key screen resolutions and devices.</p> -->
+
+				</article>
+
+
 
 
 
