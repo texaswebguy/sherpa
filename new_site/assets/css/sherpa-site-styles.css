@@ -19,10 +19,6 @@
     overflow:hidden;
   }
 
-  .bottom-offset {
-    margin-bottom: 80px;
-  }
-
   .main-content {
     padding: 20px 0px 0px 0px;
     overflow: hidden;
@@ -41,13 +37,11 @@
     box-sizing: border-box;
   }
 
-  .content-offset {
-    padding-top:50px;
-  }
-
   .sherpa-gray-stroke {
     border: 1px solid #e1e1e8;
   }
+
+  
 
 
 
