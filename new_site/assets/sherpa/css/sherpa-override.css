@@ -1664,6 +1664,10 @@ legend + .control-group {
 
 /* Bottom offsets (padding bottom)
 -------------------------------------------------- */
+.bottom-offset-mini {
+    margin-bottom: 10px;
+  }
+
 .bottom-offset-small {
     margin-bottom: 20px;
   }
