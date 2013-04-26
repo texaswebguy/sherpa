@@ -98,8 +98,10 @@
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
+			          <li class="active"><a href="#overview"><i class="icon-chevron-right"></i> Overview</a></li>
+			          <li><a href="#page"><i class="icon-chevron-right"></i>Page</a></li>
 			          <li><a href="#dropdowns"><i class="icon-chevron-right"></i> Dropdowns</a></li>
-			          <li><a href="#navigation"><i class="icon-chevron-right"></i> Navigation</a></li>
+			          <li><a href="#tabs"><i class="icon-chevron-right"></i> Tabs</a></li>
 			          <!-- <li><a href="#navbar"><i class="icon-chevron-right"></i> Navbar</a></li> -->
 			          <li><a href="#breadcrumbs"><i class="icon-chevron-right"></i> Breadcrumbs</a></li>
 			          <li><a href="#pagination"><i class="icon-chevron-right"></i> Pagination</a></li>
@@ -115,11 +117,58 @@
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
 
+				<article id="overview">
+					<h2 class="sherpa">Overview</h2>
+
+					<p>Components in Sherpa are an abstraction of most of <a href="http://twitter.github.io/bootstrap/components.html" target="_new">Twitter Bootsrap components</a> through the use of <a href="http://knockoutjs.com/" target="_new">Knockout JS</a>. This was done to simplify coding of components and provide data integration to create dynamic prototypes.</p>
+					<p>In addition, Sherpa components can be customized once and used many times. When you update a component all instances within your prototype will change.</p>
+					<p>As you look at the components below you will single tags that render entire components. Behind the scenes the actual HTML exists but it is bound to data. Check out the raw component for <a href="components/dropdown/button.html" target="_new">dropdown buttons</a> and view the source.</p>
+
+					<h3 class="sherpa">The anatomy of a Sherpa Component:</h3>
+
+			          <h4 class="sherpa">name:</h4>
+			          <p>Whatever the name of the component, the system will look for the directory "components/{name}". In the case where, "foobar" is the name of the component, Sherpa will set the component directory to <code>components/foobar/</code>. </p>
+
+			          <h4 class="sherpa">type:</h4>
+			          <p>Type provides the specific name of the html file that renders the component. So let's say that in the reference to component "foobar" you also specify a type of "whatever". The system will get <code>components/foobar/whatever.html</code>. In the case where a type is not specified, the system will default the component name as type and look for the html in <code>components/foobar/foobar.html</code></p>
+
+			          <p><em>Note: Each component below may have various types that are standard to Sherpa in this current release.  You may create your own types or complete components as you build your prototypes.</em></p>
+
+			          <h4 class="sherpa">options:</h4>
+			          <p>Options provide further customization of each type of component. Each component will have a list of options available and which are defaulted when not specified.</p>
+
+			          <p><em>When building your own component you can create as many option variables as you want to provide logic for the component to handle. It is up to you how complex you want to make a component but we suggest that when prototyping in agile environment you might want to opt for more "dumb" types of components to create variants then refactor as time goes to make your components smarter.</em></p>
+
+				</article>
+		<article id="page">
+					<h2 class="sherpa">Page</h2>
+
+					<p>A page component in Sherpa is not necessarely  a whole page as you might think. It is rather a chunk of HTML that can be inserted into the screen. Why do we call this a "page" and not a module, component, view or something like that? These pages have the unique capability of being addressable as a page.</p>
+
+					<h4 class="sherpa">Explanation: </h4>
+						<p>Let's say you have a page in your prototype: http://www.myserver.com/foobar.html. Inside this page you have tabs that refer to three sections, section1, section2, section3. Furthermore, inside section 3 you have another set of tabs with subsection1 and subsection2.</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint">
+  http://www.myserver.com/
+  ├── pages/
+  │   ├── section1.html
+  │   ├── section2.html
+  │   ├── section3.html
+  │   ├── subsection1.html
+  │   ├── subsection2.html
+  │
+  foobar.html  
+				</pre>							
+					<p>A common requirement is to be able to address sub-section 2 directly (deep dive). This makes it a "page" and it is addressable by going to http://www.myserver.com/foobar.html#section3/subsection2</p>
+
+
+				</article>
+
 				<article id="dropdowns">
 					<h2 class="sherpa">Dropdown menus</h2>
 
 					<h3 class="sherpa">Example</h3>
-					<p>Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="./functions.html#dropdowns">dropdown JavaScript plugin</a>.</p>
+					<p>Toggleable, contextual menu for displaying lists of links. Fully integrated with data, the same code with different data refference will generate completely different menus.</p>
 					<div class="bs-docs-example">
 						<div class="dropdown clearfix">
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 20px; *width: 180px;">
@@ -215,7 +264,7 @@
 
 
           <h3 class="sherpa da-clear ta-clear ma-clear">Markup</h3>
-          <p>Rather than using the HTML provided in Bootstrap, Sherpa has custom code to better simplify and structure HTML. Paired with a data object such as the one above, one custom tag takes care of all of the work.</p>
+          <p>Rather than using the HTML provided in Bootstrap, Sherpa has custom code to better simplify and structure HTML. Paired with a data reference such as the one below, one custom tag takes care of all of the work.</p>
 
 
 <div data-bind="component: { 
@@ -244,7 +293,7 @@
 
 
 <h3 class="sherpa da-clear ta-clear ma-clear">Data behind dropdown</h3>
-          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Here is an example of a data object that could feed the dropdown samples above. This structure should be added to the prototype application <a href="assets/js/app.js" class="code_sample_popup">assets/js/app.js</a>.</p>
+          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Below is an example of a data object provided by the  <code>simple_dropdown_data</code> reference above. This structure should be added to the prototype application <a href="assets/js/app.js" class="code_sample_popup">assets/js/app.js</a>.</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 simple_links_data : {
@@ -283,10 +332,11 @@ simple_links_data : {
           <p>You may have noticed the data-bind tag above with various elements.</p>
 
           <h4 class="sherpa">name:</h4>
-          <p>This is always set "dropdown"</p>
+          <p>Whatever you put in the name, the system will look for the directory "components/{name}". In this case, "dropdown" will set the component directory to <code>components/dropdown/</code>.</p>
 
           <h4 class="sherpa">type:</h4>
-          <p>Type provides options for the trigger mechanism. Whatever you see in the type correspinds to an HTML file name inside <code>components/dropdown/whatever.html</code></p>
+          <p>Type provides options for the trigger mechanism. Whatever you see in the type corresponds to an HTML file name inside the component directory. So if type is set to "button" then the system will get <code>components/dropdown/button.html</code></p>
+
           <p>The current types available for dropdown are:</p>
           <ul>
           	<li>button</li>
@@ -294,6 +344,7 @@ simple_links_data : {
           	<li>button-select</li>
           	<li>link</li>
           </ul>
+          <em>Note: You can create your own version of a dropdown by creating a new file in the same directory
           <h4 class="sherpa">options:</h4>
           <p>Options provide further customization of each type. Defualt options will be in place if options is not provided.The current options available for dropdowns are:</p>
           <ul>
@@ -399,11 +450,13 @@ label : Sherpa.msg('textkey_label'),
 
 		        </article>
 
-				<article id="navigation">
-					<h2 class="sherpa">Navigation</h2>
+				<article id="tabs">
+					<h2 class="sherpa">Tabs</h2>
 
-					<h3 class="sherpa">Example</h3>
-					<p>Toggleable, contextual menu for displaying lists of links. Made interactive with the <a href="./functions.html#dropdowns">dropdown JavaScript plugin</a>.</p>
+					<h3 class="sherpa">Overview</h3>
+					<p>Tabs is a very complex component with various types.</p>
+
+
 
 				</article>
 
