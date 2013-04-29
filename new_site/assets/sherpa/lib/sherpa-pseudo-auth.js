@@ -18,11 +18,14 @@ Sherpa.ready("sherpaUtils", function(){
 
 	var q = Sherpa.urlQuery();
 	var auth = Sherpa.store("authenticated");
-
-	if( q.authenticated || auth == true ) {
-	  Sherpa.publish('authenticate',true);
-	} else {
+	if( q.authenticated == "false") {
 	  Sherpa.publish('authenticate',false);
+	} else {
+		if( q.authenticated == "true" || auth == true) {
+	  		Sherpa.publish('authenticate',true);
+	  	} else {
+	  		Sherpa.publish('authenticate',false);
+	  	}
 	}
 
 

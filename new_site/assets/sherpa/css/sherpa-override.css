@@ -1664,10 +1664,6 @@ legend + .control-group {
 
 /* Bottom offsets (padding bottom)
 -------------------------------------------------- */
-.bottom-offset-mini {
-    margin-bottom: 10px;
-  }
-
 .bottom-offset-small {
     margin-bottom: 20px;
   }
@@ -2248,6 +2244,25 @@ Changes to Tables (dell 308)
   font-weight: bold;
   /*TODO should we change to 700 font here?*/
 }
+
+/*
+================================================
+Pseudo Authentication
+================================================
+*/
+
+html.authenticated .authenticated-only, 
+html.not-authenticated .not-authenticated-only {
+  display:block;
+}
+
+
+html.authenticated .not-authenticated-only, 
+html.not-authenticated .authenticated-only {
+  display:none;
+}
+
+
 
 
 
