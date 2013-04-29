@@ -591,6 +591,12 @@ This works exactly as show /hide but it adds a slide transition.
 					    <p><strong>How to trigger:</strong></p>
 					    <p class="not-authenticated-only">html query string: <a href="functions.html?authenticated=true#pseudo-authentication">log in</a></p>
 					    <p class="authenticated-only">html query string: <a href="functions.html?authenticated=false#pseudo-authentication" >log out</a></p>
+					    <p>Pseudo login component:</p>
+						<div class="box sherpa-gray-stroke rounded-small" data-bind="component: { 
+							name :'forms', 
+							type :'pseudo-login',
+						}">
+						</div>
 					</div>
 					<h3 class="sherpa">Markup:</h3>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">Example:
@@ -620,6 +626,13 @@ Use when you want to conditionaly refer to different components:
 Trigger:
 &lt;a href="functions.html?authenticated=true#pseudo-authentication">log in&lt;/a>
 &lt;a href="functions.html?authenticated=false#pseudo-authentication" >log out&lt;/a>
+
+&lt;div class="box sherpa-gray-stroke rounded-small" data-bind="component: { 
+	name :'forms', 
+	type :'pseudo-login',
+}">
+&lt;/div>
+
 </pre>
 					
 					<h3 class="sherpa">How it works:</h3>
