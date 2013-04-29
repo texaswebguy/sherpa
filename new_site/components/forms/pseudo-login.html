@@ -13,11 +13,11 @@
     }
   });
 
-  if(!viewModel.content.text_login_first_name_placeholder) {
-    viewModel.content.text_login_first_name_placeholder = "First Name";
+  if(!viewModel.content.text_login_user_id_placeholder) {
+    viewModel.content.text_login_user_id_placeholder = "User ID or email";
   }
-  if(!viewModel.content.text_login_lastname_placeholder) {
-    viewModel.content.text_login_last_name_placeholder = "Last Name";
+  if(!viewModel.content.text_login_password_placeholder) {
+    viewModel.content.text_login_password_placeholder = "Password";
   }
   if(!viewModel.content.text_login_forgot_password) {
     viewModel.content.text_login_forgot_password = "Forgot Password";
@@ -73,10 +73,10 @@
 <form data-bind="with: getPseudoLoginOptions($data.component_options)">
   <fieldset>
     <div class="input-xlarge">
-      <input type="text" data-bind="msg: { placeholder:'text_login_first_name_placeholder'}">
+      <input type="text" data-bind="msg: { placeholder:'text_login_user_id_placeholder'}">
     </div>    
     <div class="input-xlarge">
-      <input type="text" data-bind="msg: { placeholder:'text_login_last_name_placeholder'}">
+      <input type="password" data-bind="msg: { placeholder:'text_login_password_placeholder'}">
     </div>  
     <!-- ko if: forgot_password -->
     <div class="da-all ta-all ma-all">
