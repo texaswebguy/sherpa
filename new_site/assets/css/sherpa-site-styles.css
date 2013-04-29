@@ -159,7 +159,7 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
     /*background: #1F1F1C url(../img/topo-pattern-nav.jpg);*/
     background-position: center 0;
     width: 100%;
-    z-index: 100;
+    z-index:9999;
     position: fixed;
   }
 
@@ -276,8 +276,19 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
 -------------------------------------------------- */
 
   .nav-list > .active > a, .nav-list > .active > a:hover {
-    color: #D4CA9B;
-    background-color: #12120F;
+    /*color: #D4CA9B;
+    background-color: #12120F;*/
+    color: #12120F;
+    background-color: #D4CA9B;
+   /*background: pink;*/
+   /*width:100%;*/
+   /*display: block;
+   margin:0 auto;*/
+  }
+
+  .nav > li > a:hover {
+    text-decoration: none;
+    background-color: #f7f6ed;
   }
 
   .bs-docs-sidenav {
@@ -298,12 +309,12 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
   }
   .tablet .bs-docs-sidenav.affix, .mobile .bs-docs-sidenav.affix {
     width:100%;
-    top: -20px;
+    top: 20px;
     left: 0px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
-    z-index:9999;
+    z-index:9998;
   }
   .tablet .bs-docs-sidenav.affix li.active a, .mobile .bs-docs-sidenav.affix li.active a, .tablet .bs-docs-sidenav.affix.open li a, .mobile .bs-docs-sidenav.affix.open li a {
     display:block;
@@ -400,9 +411,9 @@ Breakpoints
   /* Add your CSS here */
 
   /* masthead */
-  .masthead-sherpa {
+  /*.masthead-sherpa {
     position: relative;
-  }
+  }*/
 
   .title-content {
     padding:40px 0;
@@ -451,9 +462,9 @@ Breakpoints
   /* Add your CSS here */
 
   /* masthead */
-  .masthead-sherpa {
+  /*.masthead-sherpa {
     position: relative;
-  }
+  }*/
 
   .title-content {
     padding:40px 0;
