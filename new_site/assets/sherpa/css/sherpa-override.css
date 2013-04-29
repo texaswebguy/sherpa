@@ -2211,44 +2211,38 @@ Changes to Tables (dell 308)
 .table-striped tbody > tr:nth-child(odd) > td:first-child,
 .table-striped tbody > tr:nth-child(odd) > th:first-child {
   background-color: #eee;
-  -moz-border-radius: 10px 0px 0px 10px;
-  -webkit-border-radius: 10px 0px 0px 10px;
-  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
 }
 
 .table-striped tbody > tr:nth-child(odd) > td:last-child,
 .table-striped tbody > tr:nth-child(odd) > th:last-child {
   background-color: #eee;
-  -moz-border-radius: 0px 10px 10px 0px;
-  -webkit-border-radius: 0px 10px 10px 0px;
-  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 
-.table tbody > tr:nth-child(odd) > td {
+.table-striped tbody > tr:nth-child(odd) > td {
   background:#eee;
 }
 
-
-
-.table tbody > tr > td,
-.table tbody > tr > th {
+.table-striped th, .table-striped td {
   border:none;
-  padding:13px 10px 17px 10px;
 }
 
-
-.table thead > tr > th:first-child {
-  padding-left:30px;
+.table-bordered.table-striped tbody > tr:nth-child(odd) > td:last-child,
+.table-bordered.table-striped tbody > tr:nth-child(odd) > td:first-child
+ {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
 }
-.table tbody > tr > td:first-child {
-  border:none;
-  padding-left:30px;
-}
 
-.table th {
-  font-weight: bold;
-  /*TODO should we change to 700 font here?*/
+.table-bordered.table-striped {
+  border: 1px solid #dddddd;
 }
 
 /*
