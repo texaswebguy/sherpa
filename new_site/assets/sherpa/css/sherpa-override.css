@@ -2224,27 +2224,6 @@ Changes to Tables (dell 308)
 }
 
 
-
-.table tbody > tr > td,
-.table tbody > tr > th {
-  border:none;
-  padding:13px 10px 17px 10px;
-}
-
-
-.table thead > tr > th:first-child {
-  padding-left:30px;
-}
-.table tbody > tr > td:first-child {
-  border:none;
-  padding-left:30px;
-}
-
-.table th {
-  font-weight: bold;
-  /*TODO should we change to 700 font here?*/
-}
-
 /*
 ================================================
 Pseudo Authentication
