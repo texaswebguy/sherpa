@@ -2219,7 +2219,7 @@ Changes to Tables (dell 308)
 }
 
 
-.table tbody > tr:nth-child(odd) > td {
+.table-striped tbody > tr:nth-child(odd) > td {
   background:#eee;
 }
 

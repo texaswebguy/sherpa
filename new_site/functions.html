@@ -594,15 +594,27 @@ This works exactly as show /hide but it adds a slide transition.
 					</div>
 					<h3 class="sherpa">Markup:</h3>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">Example:
+
+Use to explicictly remove the element not used:						
 &lt;p data-bind="if: isAuthenticated">I display beacuse this page IS authenticated&lt;/p>
-&lt;<p data-bind="ifnot: isAuthenticated">I display beacuse this page IS NOT authenticated&lt;/p>
+&lt;p data-bind="ifnot: isAuthenticated">I display beacuse this page IS NOT authenticated&lt;/p>
+
+Use when you still want to access the other element:
 &lt;p class="authenticated-only">I display beacuse this page IS authenticated&lt;/p>
 &lt;p class="not-authenticated-only">I display beacuse this page IS NOT authenticated&lt;/p>
+
+Use when you want to conditionaly refer to different components:
 &lt;!-- ko if: isAuthenticated -->
-&lt;p>I display beacuse this page IS authenticated&lt;/p>
+&lt;div data-bind="component: { 
+	name :'foobar', 
+	type :'authenticated',
+}">&lt;/div>
 &lt;!-- /ko -->
 &lt;!-- ko ifnot: isAuthenticated -->
-&lt;p>I display beacuse this page IS NOT authenticated&lt;/p>
+&lt;div data-bind="component: { 
+	name :'foobar', 
+	type :'unauthenticated',
+}">&lt;/div>
 &lt;!-- /ko -->
 
 Trigger:
