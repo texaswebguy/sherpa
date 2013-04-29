@@ -1688,7 +1688,8 @@ legend + .control-group {
 -------------------------------------------------- */
 
 .color-block {
-  padding:30px 0px;
+  padding:20px 20px 0px 20px;
+  height: 80px;
   border: 1px solid #eeeeee;
 }
 
@@ -1714,28 +1715,28 @@ legend + .control-group {
 
 /* Blue */
 .blue {background-color: #0085c3;}
-.blue-stroke {padding: 30px 0px;border: 2px solid #0085c3;}
+.blue-stroke {border: 2px solid #0085c3;}
 
 /* Green */
 .green {background-color: #7ab800;}
-.green-stroke { padding: 30px 0px;border: 2px solid #7ab800;}
+.green-stroke {border: 2px solid #7ab800;}
 
 /* Yellow */
 .yellow {background-color: #F2AF00;}
-.yellow-stroke {padding: 30px 0px;border: 2px solid #F2AF00;}
+.yellow-stroke {border: 2px solid #F2AF00;}
 
 /* Orange */
 .orange {background-color: #FF7700;}
-.orange-stroke {padding: 30px 0px;border: 2px solid #FF7700;}
+.orange-stroke {border: 2px solid #FF7700;}
 
 /* Red */
 .red {background-color: #DC5034;}
-.red-stroke {padding: 30px 0px;border: 2px solid #DC5034;}
+.red-stroke {border: 2px solid #DC5034;}
 .red-dark {background-color: #CE1126;}
 
 /* Berry */
 .berry {background-color: #B7295A;}
-.berry-stroke {padding: 30px 0px;border: 2px solid #B7295A;}
+.berry-stroke {border: 2px solid #B7295A;}
 
 /* Purple */
 .purple {background-color: #6E2585;}
@@ -1770,7 +1771,8 @@ legend + .control-group {
 -------------------------------------------------- */
 
 .white-text {color:#ffffff;}
-.darkgray-text {color: #444444;}
+.gray-medium-text {color:#737373;} 
+/*.darkgray-text {color: #444444;}*/
 .gray-text {color: #aaaaaa;}
 .lightgray-text {color: #eeeeee;}
 .blue-text {color: #0085c3;}
