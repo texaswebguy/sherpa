@@ -1,0 +1,80 @@
+
+<script type="text/javascript">
+
+  if(!viewModel.content.text_login_first_name_placeholder) {
+    viewModel.content.text_login_first_name_placeholder = "First Name";
+  }
+  if(!viewModel.content.text_login_lastname_placeholder) {
+    viewModel.content.text_login_last_name_placeholder = "Last Name";
+  }
+  if(!viewModel.content.text_login_forgot_password) {
+    viewModel.content.text_login_forgot_password = "Forgot Password";
+  }
+  if(!viewModel.content.button_login_sign_in) {
+    viewModel.content.button_login_sign_in = "Sign In";
+  }
+  if(!viewModel.content.button_login_create_account) {
+    viewModel.content.button_login_create_account = "Create an account";
+  }
+  $('.pseudo-login-toggle').click(function(event){
+    /*TODO need to collect the username and compare to a record in config to put user data in context. 
+    It should also allow anything to be input and it would pick up a default profile.*/
+
+    event.preventDefault();
+    if(viewModel.isAuthenticated()){
+      if(location.href.match('authenticated')){
+        location.href = location.href.replace('authenticated=true','authenticated=false');
+      } else {
+        if(location.search){
+          location.href = location.href.replace(location.search, location.search+'&authenticated=false');
+        } else {
+          location.href = location.origin+location.pathname+'?authenticated=false'+location.hash;
+        }
+      }
+    } else {
+      if(location.href.match('authenticated')){
+        location.href = location.href.replace('authenticated=false','authenticated=true');
+      } else {
+        if(location.search){
+          location.href = location.href.replace(location.search, location.search+'&authenticated=true');
+        } else {
+          location.href = location.origin+location.pathname+'?authenticated=true'+location.hash;
+        }
+      }
+    }
+  });
+  $('.pseudo-create-account').click(function(event){
+    event.preventDefault();
+    alert("TODO: Direct to create account page");
+  });
+  $('.pseudo-forgot-password').click(function(event){
+    event.preventDefault();
+    alert("TODO: Direct to forgot password page");
+  });
+
+</script>
+
+<!-- ko if: isAuthenticated -->
+<p><a href="#" class="btn btn-tertiary pseudo-login-toggle">Sign Out</a></p>
+<!-- /ko -->
+<!-- ko ifnot: isAuthenticated -->
+
+<form>
+  <fieldset>
+    <div class="input-xlarge">
+      <input type="text" data-bind="msg: { placeholder:'text_login_first_name_placeholder'}">
+    </div>    
+    <div class="input-xlarge">
+      <input type="text" data-bind="msg: { placeholder:'text_login_last_name_placeholder'}">
+    </div>  
+    <div class="da-all ta-all ma-all">
+      <p class="blue_text"><a href="#" data-bind="msg: 'text_login_forgot_password'" class="pseudo-forgot-password">Forgot Password</a></p>
+      <!-- TODO need to create a modal or something here -->
+    </div> 
+    <div class="da-all ta-all ma-all">
+      <a href="#" class="btn btn-tertiary pseudo-create-account" data-bind="msg: 'button_login_create_account'">Create an Account</a>
+      <a href="#" class="btn btn-secondary pseudo-login-toggle" data-bind="msg: 'button_login_sign_in'">Sign In</a>
+    </div>
+  </fieldset>
+</form>
+<!-- /ko -->

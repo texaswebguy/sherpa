@@ -249,6 +249,44 @@ Sherpa.loadComponentJS = function(component_id, callback) {
 	Sherpa.js(SHERPA.COMPONENTS_PATH+component_id+"/"+component_id+".js", callback );
 }
 
+
+
+Sherpa.namespace = function ( source, framework, propList ) {
+
+    for (var property in source) {
+        //is the property in the approved propList?
+        if (_.contains(propList, property)) {
+            //Does the property already exist?
+            if (typeof Sherpa[property] == 'undefined') {
+                //TODO - clone to Sherpa - future goal
+                Sherpa[property] = source[property];
+            } else {
+                console.error(property + " of " + framework + " aready exists on Sherpa.");
+            }
+        } else {
+            console.log(property + " of " + framework + " is excluded from Sherpa namespace.");
+        }
+
+    }
+};
+
+
+/**
+ * A very modified version of this link:
+ *
+ * http://addyosmani.com/blog/essential-js-namespacing/
+ */
+Sherpa.ready("amplify", function() {
+    var includeProperties = ["publish", "subscribe", "unsubscribe", "store", "request"];
+
+    Sherpa.namespace(amplify, "amplify", includeProperties);
+})
+
+Sherpa.ready("sherpaEventManager", function() {
+    var props = ["debug", "register", "extend", "scope", "attach"];
+    Sherpa.namespace(Eve, "Eve", props);
+});
+
 _.extend(Sherpa, amplify); //puts all the amplify functions in the Sherpa namespace
 
 // AJAX Data services
