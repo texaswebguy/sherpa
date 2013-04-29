@@ -344,7 +344,7 @@ simple_links_data : {
           	<li>button-select</li>
           	<li>link</li>
           </ul>
-          <em>Note: You can create your own version of a dropdown by creating a new file in the same directory
+          <em>Note: You can create your own version of a dropdown by creating a new file in the same directory as the component name. </em>
           <h4 class="sherpa">options:</h4>
           <p>Options provide further customization of each type. Defualt options will be in place if options is not provided.The current options available for dropdowns are:</p>
           <ul>
@@ -445,8 +445,8 @@ label : Sherpa.msg('textkey_label'),
 
 </pre>
 
-          <h3 class="sherpa">Dropdown Select Button</h3>
-          <p>TODO: need to explain and show how a dropdown select works.</p>
+		          <h3 class="sherpa">Dropdown Select Button</h3>
+		          <p>TODO: need to explain and show how a dropdown select works.</p>
 
 		        </article>
 
@@ -454,7 +454,33 @@ label : Sherpa.msg('textkey_label'),
 					<h2 class="sherpa">Tabs</h2>
 
 					<h3 class="sherpa">Overview</h3>
-					<p>Tabs is a very complex component with various types.</p>
+					<p>Tabs is a prevalent navigation system throughout the web.  However, when we say "tabs" we mean any list of buttons, tabs, links, etc. that serve a purpose of switching panels or sub sections of content without leaving the page, not just something that looks like tabs.</p>
+
+
+<div data-bind="component: { 
+	name :'tabs',
+	data : sample_tab_section_data
+}"></div>
+
+
+					<h3 class="sherpa">Types of Tabs</h3>
+					<ul>
+						<li><a href="#tabs-standard">Tabs</a></li>
+						<li><a href="#tabs-pills">Pills</a></li>
+						<li><a href="#tabs-links">Links</a></li>
+					</ul>
+					
+
+					<h3 class="sherpa" id="#tabs-standard">Tabs</h3>
+					<p></p>
+
+
+					<h3 class="sherpa" id="#tabs-pills">Pills</h3>
+					<p></p>
+
+
+					<h3 class="sherpa" id="#tabs-links">Links</h3>
+					<p></p>
 
 
 

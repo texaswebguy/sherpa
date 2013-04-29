@@ -46,6 +46,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		user: {
 			name:ko.observable("Carl Weatherspoon")
 		},
+		mycustomVar:"hello world",
 	    question: ko.observable('How many roads must a man walk down before you can call him a man?'),
 	    sample_date: "12/01/2014",
 	    sample_preformated_date: Sherpa.dateFormat("12/01/2014"),
@@ -133,6 +134,26 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	                    }
 	                ]
 	            }
+	        ]
+	    },
+	    sample_tab_section_data: {
+	    	label: "Sample tab section",
+	    	items: [
+                {
+            		id : "sub-section-1",
+                    label : "Sub Section 1",
+                    page_id : "sub-section-1"
+                },
+                {
+            		id : "sub-section-2",
+                    label : "Sub Section 2",
+                    page_id : "sub-section-2"
+                },
+                {
+            		id : "sub-section-3",
+                    label : "Sub Section 3",
+                    page_id : "sub-section-3"
+                }
 	        ]
 	    },
 		some_boolean_function : function(){

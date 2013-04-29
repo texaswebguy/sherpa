@@ -50,6 +50,8 @@ if(location.hostname === "localhost") {
 }
 
 
+
+
 Eve.scope("*", function(){
 	this.listen("[class*=-toggle]","click", function(event){
 		event.preventDefault();
@@ -62,6 +64,10 @@ Eve.scope("*", function(){
 			console.error("The anchor tag must have a legitimate id/class target in the href");
 		}
 		
+	});
+	this.listen(".tabbable", "load", function(){
+		$('.tabbable .nav li').removeClass('active');
+		$('.tabbable .nav li:first').addClass('active');
 	});
 
 });

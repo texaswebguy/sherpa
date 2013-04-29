@@ -2196,5 +2196,54 @@ Breakpoints
 }
 
 
+/*
+================================================
+Changes to Tables (dell 308)
+================================================
+*/
+
+.table-striped tbody > tr:nth-child(odd) > td:first-child,
+.table-striped tbody > tr:nth-child(odd) > th:first-child {
+  background-color: #eee;
+  -moz-border-radius: 10px 0px 0px 10px;
+  -webkit-border-radius: 10px 0px 0px 10px;
+  border-radius: 10px 0px 0px 10px;
+}
+
+.table-striped tbody > tr:nth-child(odd) > td:last-child,
+.table-striped tbody > tr:nth-child(odd) > th:last-child {
+  background-color: #eee;
+  -moz-border-radius: 0px 10px 10px 0px;
+  -webkit-border-radius: 0px 10px 10px 0px;
+  border-radius: 0px 10px 10px 0px;
+}
+
+
+.table tbody > tr:nth-child(odd) > td {
+  background:#eee;
+}
+
+
+
+.table tbody > tr > td,
+.table tbody > tr > th {
+  border:none;
+  padding:13px 10px 17px 10px;
+}
+
+
+.table thead > tr > th:first-child {
+  padding-left:30px;
+}
+.table tbody > tr > td:first-child {
+  border:none;
+  padding-left:30px;
+}
+
+.table th {
+  font-weight: bold;
+  /*TODO should we change to 700 font here?*/
+}
+
 
 
