@@ -142,9 +142,6 @@ Sherpa.ready("sherpai18n", function(){
 		    	}
 		    	Sherpa.insertComponent(component.name, component.type, element, component.data,component.options);
 
-
-
-
 		    } else {
 		    	$(element).remove();
 		    	//if the condition is false then remove object from DOM

@@ -595,6 +595,11 @@ This works exactly as show /hide but it adds a slide transition.
 						<div class="box sherpa-gray-stroke rounded-small" data-bind="component: { 
 							name :'forms', 
 							type :'pseudo-login',
+							data:{},
+							options : {
+								forgot_password: false,
+						        create_account: false
+							}
 						}">
 						</div>
 					</div>
@@ -630,6 +635,10 @@ Trigger:
 &lt;div class="box sherpa-gray-stroke rounded-small" data-bind="component: { 
 	name :'forms', 
 	type :'pseudo-login',
+	options : {
+		forgot_password: false,
+        create_account: false
+	}
 }">
 &lt;/div>
 
