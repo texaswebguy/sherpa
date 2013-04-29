@@ -2205,17 +2205,17 @@ Changes to Tables (dell 308)
 .table-striped tbody > tr:nth-child(odd) > td:first-child,
 .table-striped tbody > tr:nth-child(odd) > th:first-child {
   background-color: #eee;
-  -moz-border-radius: 10px 0px 0px 10px;
-  -webkit-border-radius: 10px 0px 0px 10px;
-  border-radius: 10px 0px 0px 10px;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
 }
 
 .table-striped tbody > tr:nth-child(odd) > td:last-child,
 .table-striped tbody > tr:nth-child(odd) > th:last-child {
   background-color: #eee;
-  -moz-border-radius: 0px 10px 10px 0px;
-  -webkit-border-radius: 0px 10px 10px 0px;
-  border-radius: 0px 10px 10px 0px;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
 }
 
 
@@ -2223,6 +2223,21 @@ Changes to Tables (dell 308)
   background:#eee;
 }
 
+.table-striped th, .table-striped td {
+  border:none;
+}
+
+.table-bordered.table-striped tbody > tr:nth-child(odd) > td:last-child,
+.table-bordered.table-striped tbody > tr:nth-child(odd) > td:first-child
+ {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+
+.table-bordered.table-striped {
+  border: 1px solid #dddddd;
+}
 
 /*
 ================================================
