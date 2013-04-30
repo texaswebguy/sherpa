@@ -46,17 +46,17 @@
 
 
 /* Links */
-  a {
+  a.sherpa-link {
     color: #F0592C;
     text-decoration: none;
   }
 
-  a:hover {
+  a.sherpa-link:hover {
     color: #F0592C;
     text-decoration: underline;
   }
 
-  a:hover, a:active {
+  a.sherpa-link:hover, a.sherpa-link:active {
     outline: 0;
   }
 
@@ -280,6 +280,7 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
     background-color: #12120F;*/
     color: #12120F;
     background-color: #D4CA9B;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
    /*background: pink;*/
    /*width:100%;*/
    /*display: block;
