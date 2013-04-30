@@ -361,7 +361,7 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
 /* Sherpa button */
 
 
-  .sherpa-btn:hover, .btn:active, .btn.active, .btn.disabled, .btn[disabled] {
+  .sherpa-btn:hover, .sherpa-btn:active, .sherpa-btn.active, .sherpa-btn.disabled, .sherpa-btn[disabled] {
     color: #fff;
     background-color: #EF3B26;
 

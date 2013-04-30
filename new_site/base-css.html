@@ -100,18 +100,15 @@
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
-				      	<li class="active"><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
-			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
-			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
-			          	<li><a href="#lists"><i class="icon-chevron-right"></i> Lists</a></li>
-			          	<li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
-			          	<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
-			          	<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
-			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
-			          	<li><a href="#colors"><i class="icon-chevron-right"></i> Colors & Borders</a></li>
-			          	<li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
-			          	<li><a href="#containers"><i class="icon-chevron-right"></i> Containers</a></li>
-			          	<li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+				      	<li class="active"><a href="#typography">Typography</a></li>
+			          	<li><a href="#lists">Lists</a></li>
+			          	<li><a href="#tables">Tables</a></li>
+			          	<li><a href="#forms">Forms</a></li>
+			          	<li><a href="#buttons">Buttons</a></li>
+			          	<li><a href="#colors">Colors & Borders</a></li>
+			          	<li><a href="#images">Images</a></li>
+			          	<li><a href="#containers">Containers</a></li>
+			          	<li><a href="#icons">Icons</a></li>
 	   				</ul>
 				</div>
 			</aside>
@@ -1169,6 +1166,114 @@
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
+
+				</article>
+
+
+<!-- Buttons -->
+
+				<article id="buttons" class="bottom-offset-large">
+					<h2 class="sherpa">Buttons</h2>
+					<hr>
+
+					<h3 class="sherpa">Default</h3>
+					<p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>class=""</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><button type="button" class="btn">Default</button></td>
+								<td><code>btn</code></td>
+								<td>Standard gray button with gradient</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-primary">Primary</button></td>
+								<td><code>btn btn-primary</code></td>
+								<td>Used for purchase path, guiding a customer toward checkout.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-secondary">Secondary</button></td>
+								<td><code>btn btn-secondary</code></td>
+								<td>Used as a call-to-action that does not take the user down the purchase path.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-tertiary">Tertiary</button></td>
+								<td><code>btn btn-tertiary</code></td>
+								<td>Used for additional button needs.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-link">Link</button></td>
+								<td><code>btn btn-link</code></td>
+								<td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h4 class="sherpa">Button Sizes</h4>
+					<p>Need smaller buttons? Add <code>.btn-small</code> or <code>.btn-mini</code> for additional sizes.</p>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary btn-small">Small Button</button>
+								<button class="btn btn-secondary btn-small">Small Button</button>
+								<button class="btn btn-tertiary btn-small">Small Button</button>
+							</p>
+						</div>
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary btn-mini">Mini Button</button>
+								<button class="btn btn-secondary btn-mini">Mini Button</button>
+								<button class="btn btn-tertiary btn-mini">Mini Button</button>
+							</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;
+  &lt;button class="btn btn-primary btn-small"&gt;Small Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary btn-small"&gt;Small Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary btn-small"&gt;Small Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary btn-mini"&gt;Mini Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary btn-mini"&gt;Mini Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary btn-mini"&gt;Mini Button&lt;/button&gt;
+&lt;/p&gt;</pre>
+
+					<h4 class="sherpa">Disabled Buttons</h4>
+					<p>Make buttons look unclickable by fading them back 50%</p>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary disabled">Primary Button</button>
+								<button class="btn btn-secondary disabled">Secondary Button</button>
+								<button class="btn btn-tertiary disabled">Tertiary Button</button>
+							</p>
+						</div>
+						<div class="da4-da12">
+							<p>
+								<a href="#" class="btn btn-primary disabled">Primary Link</a>
+								<a href="#" class="btn btn-secondary disabled">Secondary Link</a>
+								<a href="#" class="btn btn-tertiary disabled">Tertiary Link</a>
+							</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;
+  &lt;button class="btn btn-primary disabled"&gt;Primary Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary disabled"&gt;Secondary Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary disabled"&gt;Tertiary Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href="#" class="btn btn-primary disabled"&gt;Primary Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-secondary disabled"&gt;Secondary Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-tertiary disabled"&gt;Tertiary Link&lt;/a&gt;
+&lt;/p&gt;</pre>
 
 				</article>
 
