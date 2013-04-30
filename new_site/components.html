@@ -458,7 +458,7 @@ label : Sherpa.msg('textkey_label'),
 				<article id="tabs" class="bottom-offset-large">
 					<h2 class="sherpa">Tabs</h2>
 					<hr>
-					
+
 					<h3 class="sherpa">Overview</h3>
 					<p>Tabs is a prevalent navigation system throughout the web.  However, when we say "tabs" we mean any list of buttons, tabs, links, etc. that serve a purpose of switching panels or sub sections of content without leaving the page, not just something that looks like tabs.</p>
 
@@ -497,67 +497,38 @@ label : Sherpa.msg('textkey_label'),
 				<article id="alerts" class="bottom-offset-large">
 					<h2 class="sherpa">Alerts</h2>
 					<hr>
+					<p>There are two category of alerts available: <p>
+					<ul>
+						<li>Page level alert: This is a rendering of the alert component on the top of each page which can be called at any time with javascript.<li>
+							<li>General alerts: Can be inserted anywhere on a page.</li>
+					</ul>
 
-					<h3 class="sherpa">Success Alert</h3>
-					<p>Combine the <code>.alert</code> and <code>.success</code> classes for a success alert message.</p>
-					<div class="box sherpa-gray-stroke rounded-small">
-						<div class="da-all">
-							<div class="alert success">
-								<span aria-hidden="true" class="icon-cart"></span>
-								<p><strong>Success!</strong> This is alert text.</p>
-							</div>
-						</div>
-					</div>
+					<h3 class="sherpa">Page Level Alerts</h3>
+
+					<p><a href="#" class="btn btn-tertiary test-page-level-alert">See a sample page level alert</a></p>
+					
+					<h3 class="sherpa">Markup</h3>
+
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="alert success"&gt;
-  &lt;span aria-hidden="true" class="icon-cart"&gt;&lt;/span&gt;
-  &lt;p&gt;&lt;strong&gt;Success!&lt;/strong&gt; This is alert text.&lt;/p&gt;
-&lt;/div&gt;</pre>
+Trigger:
 
-					<h3 class="sherpa">Information Alert</h3>
-					<p>Combine the <code>.alert</code> and <code>.information</code> classes for an information alert message.</p>
-					<div class="box sherpa-gray-stroke rounded-small">
-						<div class="da-all">
-							<div class="alert information">
-								<span aria-hidden="true" class="icon-cart"></span>
-								<p><strong>Information!</strong> This is alert text.</p>
-							</div>
-						</div>
-					</div>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="alert information"&gt;
-  &lt;span aria-hidden="true" class="icon-cart"&gt;&lt;/span&gt;
-  &lt;p&gt;&lt;strong&gt;Information!&lt;/strong&gt; This is alert text.&lt;/p&gt;
-&lt;/div&gt;</pre>
+&lt;a href="#" class="btn btn-tertiary test-page-level-alert">See a sample page level alert&lt;/a>
 
-					<h3 class="sherpa">Attention Alert</h3>
-					<p>Combine the <code>.alert</code> and <code>.attention</code> classes for an attention alert message.</p>
-					<div class="box sherpa-gray-stroke rounded-small">
-						<div class="da-all">
-							<div class="alert attention">
-								<span aria-hidden="true" class="icon-cart"></span>
-								<p><strong>Attention!</strong> This is alert text.</p>
-							</div>
-						</div>
-					</div>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="alert attention"&gt;
-  &lt;span aria-hidden="true" class="icon-cart"&gt;&lt;/span&gt;
-  &lt;p&gt;&lt;strong&gt;Attention!&lt;/strong&gt; This is alert text.&lt;/p&gt;
-&lt;/div&gt;</pre>
+Function to call page level alert:
 
-					<h3 class="sherpa">Error Alert</h3>
-					<p>Combine the <code>.alert</code> and <code>.error</code> classes for an error alert message.</p>
-					<div class="box sherpa-gray-stroke rounded-small">
-						<div class="da-all">
-							<div class="alert error">
-								<span aria-hidden="true" class="icon-cart"></span>
-								<p><strong>Error!</strong> This is alert text.</p>
-							</div>
-						</div>
-					</div>
+$('.test-page-level-alert').click(function(event){
+Sherpa.publish( "alert_message", {
+      "type": "error",
+      "title":"Sample Title",
+      "message": "This is a sample message",
+      "dismiss":true,
+      "icon":"icon-alert-notice"
+    });
+});
+</pre>
 
-
+					<h3 class="sherpa">General Alerts</h3>
+					<p>These can be inserted inside any container.</p>
 					<div class="box sherpa-gray-stroke rounded-small">
 						<div class="da-all">
 							<div data-bind="component: { 
@@ -566,20 +537,104 @@ label : Sherpa.msg('textkey_label'),
 							        type: 'error',
 							        icon:'icon-alert-notice',
 							        title: 'Error!',
-							        message: 'This is an error message.'
+							        message: 'This is an error message.',
+							        dismiss:false
 							    }
 						      }">
 							</div>
 						</div>
 					</div>
-
-
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="alert error"&gt;
-  &lt;span aria-hidden="true" class="icon-cart"&gt;&lt;/span&gt;
-  &lt;p&gt;&lt;strong&gt;Error!&lt;/strong&gt; This is alert text.&lt;/p&gt;
-&lt;/div&gt;</pre>
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+        type: 'error',
+        icon:'icon-alert-notice',
+        title: 'Error!',
+        message: 'This is an error message.',
+        dismiss:false
+    }
+  }">
+&lt;/div></pre>
 
+					<h3 class="sherpa">Options</h3>
+					<ul>
+						<li>type:
+							<ul>
+								<li>success</li>
+								<li>information</li>
+								<li>attention</li>
+								<li>error (default)</li>
+							</ul>
+						</li>
+						<li>icon: accepts any icon class name</li>
+						<li>title: Can be any text. Localized by using msg function Ex: Sherpa.msg('textkey_label')</li>
+						<li>message: Can be any text. Localized by using msg function Ex: Sherpa.msg('textkey_label')</li>
+						<li>dismiss: true (default) / false</li>
+					</ul>
+
+					<h3 class="sherpa">Examples</h3>
+					TODO: need to fix the types...
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							<div data-bind="component: { 
+								name :'alerts', 
+								options: {
+							        type: 'success',
+							        icon:'icon-alert-notice',
+							        title: 'Error!',
+							        message: 'This is an error message.',
+							        dismiss:false
+							    }
+						      }">
+							</div>
+						</div>
+					</div>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							<div data-bind="component: { 
+								name :'alerts', 
+								options: {
+							        type: 'information',
+							        icon:'icon-alert-info',
+							        title: 'Something you should know!',
+							        message: 'This is an informational message message.',
+							        dismiss:false
+							    }
+						      }">
+							</div>
+						</div>
+					</div>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							<div data-bind="component: { 
+								name :'alerts', 
+								options: {
+							        type: 'attention',
+							        icon:'icon-alert-notice',
+							        title: 'Warning!',
+							        message: 'This is an attention message.',
+							        dismiss:false
+							    }
+						      }">
+							</div>
+						</div>
+					</div>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							<div data-bind="component: { 
+								name :'alerts', 
+								options: {
+							        type: 'error',
+							        icon:'icon-alert-error',
+							        title: 'Error!',
+							        message: 'This is an error message.',
+							        dismiss:false
+							    }
+						      }">
+							</div>
+						</div>
+					</div>
 				</article>
 
 
