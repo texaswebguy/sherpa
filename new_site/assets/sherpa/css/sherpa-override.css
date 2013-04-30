@@ -1213,28 +1213,27 @@ legend + .control-group {
   margin-bottom:0px;
 }
 
-.alert span {
+
+.alert  [class^=icon] {
   float: left;
   font-size: 20px;
 }
 
-.alert.success span {
+.alert.success [class^=icon] {
   color: #7AB800;
 }
 
-.alert.information span {
+.alert.information  [class^=icon] {
   color: #0085C3;
 }
 
-.alert.attention span {
+.alert.attention  [class^=icon] {
   color: #DC5034;
 }
 
-.alert.error span {
+.alert.error  [class^=icon] {
   color: #CE1126;
 }
-
-
 
 
 

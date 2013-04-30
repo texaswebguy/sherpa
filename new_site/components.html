@@ -854,13 +854,13 @@ Sherpa.publish( "alert_message", {
 &lt;div data-bind="component: { 
 	name :'alerts', 
 	options: {
-        type: 'error',
-        icon:'icon-alert-notice',
-        title: 'Error!',
-        message: 'This is an error message.',
-        dismiss:false
-    }
-  }">
+		type: 'error',
+		icon:'icon-alert-notice',
+		title: 'Error!',
+		message: 'This is an error message.',
+		dismiss:false
+	}
+}">
 &lt;/div></pre>
 
 					<h3 class="sherpa">Options</h3>
@@ -880,20 +880,32 @@ Sherpa.publish( "alert_message", {
 					</ul>
 
 					<h3 class="sherpa">Examples</h3>
-					TODO: need to fix the types...
 					<div class="box sherpa-gray-stroke rounded-small">
 						<div class="da-all">
 							<div data-bind="component: { 
 								name :'alerts', 
 								options: {
 							        type: 'success',
-							        icon:'icon-alert-notice',
-							        title: 'Error!',
-							        message: 'This is an error message.',
+							        icon:'icon-checkmark',
+							        title: 'Success!',
+							        message: 'This is a successful message.',
 							        dismiss:false
 							    }
 						      }">
 							</div>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+	    type: 'success',
+	    icon:'icon-checkmark',
+	    title: 'Success!',
+	    message: 'This is a successful message.',
+	    dismiss:false
+	}
+}">
+&lt;/div></pre>
 						</div>
 					</div>
 					<div class="box sherpa-gray-stroke rounded-small">
@@ -909,6 +921,18 @@ Sherpa.publish( "alert_message", {
 							    }
 						      }">
 							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+        type: 'information',
+        icon:'icon-alert-info',
+        title: 'Something you should know!',
+        message: 'This is an informational message message.',
+        dismiss:false
+	}
+}">
+&lt;/div></pre>							
 						</div>
 					</div>
 					<div class="box sherpa-gray-stroke rounded-small">
@@ -924,6 +948,18 @@ Sherpa.publish( "alert_message", {
 							    }
 						      }">
 							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+	    type: 'attention',
+	    icon:'icon-alert-notice',
+	    title: 'Warning!',
+	    message: 'This is an attention message.',
+	    dismiss:false
+	}
+}">
+&lt;/div></pre>
 						</div>
 					</div>
 					<div class="box sherpa-gray-stroke rounded-small">
@@ -939,8 +975,36 @@ Sherpa.publish( "alert_message", {
 							    }
 						      }">
 							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+        type: 'error',
+        icon:'icon-alert-error',
+        title: 'Error!',
+        message: 'This is an error message.',
+        dismiss:false
+	}
+}">
+&lt;/div></pre>
+							
 						</div>
 					</div>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							TODO: default not working properly
+							<div data-bind="component: { name :'alerts' }">
+							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+
+No options, displays all default values
+&lt;div data-bind="component: { name :'alerts'}">
+&lt;/div></pre>
+							
+						</div>
+					</div>
+
 				</article>
 
 

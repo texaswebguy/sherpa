@@ -169,6 +169,8 @@ Sherpa.uuid = function() {
 }
 
 Sherpa.insertComponent = function(component_name, component_type, element, bindingContext, options) {
+
+
 	var filename, uuid = "",html;
 	if(viewModel.localhost) {
 		// TODO workaround to circumvent browser cache... need to look into this better
@@ -199,8 +201,10 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 			//console.log(element)
 			$(element).html(responseHTML);
 			if(options){
-				bindingContext.component_options = options;
+				bindingContext.$data.component_options = options;
 			}
+			console.log("options - bindingContext", bindingContext)
+
 			ko.applyBindingsToDescendants(bindingContext, element);
 			amplify.publish( "register_page_event", component_name );		    					
 		},

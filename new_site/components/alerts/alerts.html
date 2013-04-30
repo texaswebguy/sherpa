@@ -2,18 +2,20 @@
 
 <script type="text/javascript">
 
+
   var getAlertOptions = _.once(function(options){
+    //TODO put default options in config
+    var default_options = {
+          type: 'attention',
+          icon:'icon-alert-notice',
+          title: "Warning!",
+          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet scelerisque condimentum. Duis condimentum lorem at tellus aliquet a tempus lectus varius.",
+          dismiss: true
+    } 
     if(options){
-      return options;
+      return _.extend(default_options, options);
     } else {
-      var options_obj = {
-        type: 'error',
-        icon:'icon-alert-notice',
-        title: "Error!",
-        message: "This is an error message.",
-        dismiss: true
-      }
-      return options_obj;
+      return default_options;
     }
   });
 
