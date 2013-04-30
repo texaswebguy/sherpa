@@ -100,18 +100,15 @@
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
 					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
-				      	<li class="active"><a href="#typography"><i class="icon-chevron-right"></i> Typography</a></li>
-			          	<!-- <li><a href="#code"><i class="icon-chevron-right"></i> Code</a></li> -->
-			          	<!-- <li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li> -->
-			          	<li><a href="#lists"><i class="icon-chevron-right"></i> Lists</a></li>
-			          	<li><a href="#tables"><i class="icon-chevron-right"></i> Tables</a></li>
-			          	<li><a href="#forms"><i class="icon-chevron-right"></i> Forms</a></li>
-			          	<li><a href="#buttons"><i class="icon-chevron-right"></i> Buttons</a></li>
-			          	<!-- <li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li> -->
-			          	<li><a href="#colors"><i class="icon-chevron-right"></i> Colors & Borders</a></li>
-			          	<li><a href="#images"><i class="icon-chevron-right"></i> Images</a></li>
-			          	<li><a href="#containers"><i class="icon-chevron-right"></i> Containers</a></li>
-			          	<li><a href="#icons"><i class="icon-chevron-right"></i> Icons</a></li>
+				      	<li class="active"><a href="#typography">Typography</a></li>
+			          	<li><a href="#lists">Lists</a></li>
+			          	<li><a href="#tables">Tables</a></li>
+			          	<li><a href="#forms">Forms</a></li>
+			          	<li><a href="#buttons">Buttons</a></li>
+			          	<li><a href="#colors">Colors & Borders</a></li>
+			          	<li><a href="#images">Images</a></li>
+			          	<li><a href="#containers">Containers</a></li>
+			          	<li><a href="#icons">Icons</a></li>
 	   				</ul>
 				</div>
 			</aside>
@@ -302,9 +299,10 @@
 <!-- Tables -->
 
 		        <article id="tables" class="bottom-offset-large">
-		          <h2 class="sherpa ">Tables</h2>
+		          <h2 class="sherpa">Tables</h2>
 		          <hr>
-		          <h3 class="sherpa">Default styles</h3>
+
+		          <h3 class="sherpa">Default</h3>
 		          <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
 
 		          <div class="box">
@@ -349,11 +347,11 @@
 
 
 
-          <h2 class="sherpa ">Optional classes</h2>
+          <h3 class="sherpa">Optional Tables</h3>
           <p>Add any of the following classes to the <code>.table</code> base class.</p>
 
-          <h3><code>.table-striped</code></h3>
-          <p>Adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-8).</p>
+          <h4 class="sherpa">Striped</h4>
+          <p><code>.table-striped</code> adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-8).</p>
           <div class="bs-docs-example">
             <table class="table table-striped">
               <thead>
@@ -391,8 +389,8 @@
   …
 &lt;/table&gt;</pre>
 
-          <h3><code>.table-bordered</code></h3>
-          <p>Add borders and rounded corners to the table.</p>
+          <h4 class="sherpa">Bordered</h4>
+          <p><code>.table-bordered</code> adds borders and rounded corners to the table.</p>
           <div class="bs-docs-example">
             <table class="table table-bordered">
               <thead>
@@ -430,8 +428,8 @@
   …
 &lt;/table&gt;</pre>
 
-          <h3><code>.table-hover</code></h3>
-          <p>Enable a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+          <h4 class="sherpa">Hover</h4>
+          <p><code>.table-hover</code> enables a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
           <div class="bs-docs-example">
             <table class="table table-hover">
               <thead>
@@ -469,8 +467,8 @@
   …
 &lt;/table&gt;</pre>
 
-          <h3><code>.table-condensed</code></h3>
-          <p>Makes tables more compact by cutting cell padding in half.</p>
+          <h4 class="sherpa">Condensed</h4>
+          <p><code>.table-condensed</code> makes tables more compact by cutting cell padding in half.</p>
           <div class="bs-docs-example">
             <table class="table table-condensed">
               <thead>
@@ -510,7 +508,7 @@
 
 
 
-          <h2>Optional row classes</h2>
+          <h3 class="sherpa">Optional row classes</h3>
           <p>Use contextual classes to color table rows.</p>
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -589,10 +587,17 @@
             </table>
           </div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-<ol class="linenums"><li class="L0"><span class="pun">...</span></li><li class="L1"><span class="pln">  </span><span class="pun">&lt;</span><span class="pln">tr </span><span class="kwd">class</span><span class="pun">=</span><span class="str">"success"</span><span class="pun">&gt;</span></li><li class="L2"><span class="pln">    </span><span class="str">&lt;td&gt;</span><span class="lit">1</span><span class="pun">&lt;</span><span class="str">/td&gt;</span></li><li class="L3"><span class="str">    &lt;td&gt;TB - Monthly&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span></li><li class="L4"><span class="pln">    </span><span class="str">&lt;td&gt;</span><span class="lit">01</span><span class="pun">/</span><span class="lit">04</span><span class="pun">/</span><span class="lit">2012</span><span class="pun">&lt;</span><span class="str">/td&gt;</span></li><li class="L5"><span class="str">    &lt;td&gt;Approved&lt;/</span><span class="pln">td</span><span class="pun">&gt;</span></li><li class="L6"><span class="pln">  </span><span class="pun">&lt;/</span><span class="pln">tr</span><span class="pun">&gt;</span></li><li class="L7"><span class="pun">...</span></li></ol></pre>
+...
+&lt;tr class="success"&gt;
+  &lt;td&gt;1&lt;/td&gt;
+  &lt;td&gt;TB - Monthly&lt;/td&gt;
+  &lt;td&gt;01/04/2012&lt;/td&gt;
+  &lt;td&gt;Approved&lt;/td&gt;
+&lt;/tr&gt;
+...</pre>
 
 
-          <h2>Supported table markup</h2>
+          <h3 class="sherpa">Supported table markup</h3>
           <p>List of supported table HTML elements and how they should be used.</p>
           <table class="table table-bordered table-striped">
             <colgroup>
@@ -665,9 +670,21 @@
             </tbody>
           </table>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-<ol class="linenums"><li class="L0"><span class="tag">&lt;table&gt;</span></li><li class="L1"><span class="pln">  </span><span class="tag">&lt;caption&gt;</span><span class="pln">...</span><span class="tag">&lt;/caption&gt;</span></li><li class="L2"><span class="pln">  </span><span class="tag">&lt;thead&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;tr&gt;</span></li><li class="L4"><span class="pln">      </span><span class="tag">&lt;th&gt;</span><span class="pln">...</span><span class="tag">&lt;/th&gt;</span></li><li class="L5"><span class="pln">      </span><span class="tag">&lt;th&gt;</span><span class="pln">...</span><span class="tag">&lt;/th&gt;</span></li><li class="L6"><span class="pln">    </span><span class="tag">&lt;/tr&gt;</span></li><li class="L7"><span class="pln">  </span><span class="tag">&lt;/thead&gt;</span></li><li class="L8"><span class="pln">  </span><span class="tag">&lt;tbody&gt;</span></li><li class="L9"><span class="pln">    </span><span class="tag">&lt;tr&gt;</span></li><li class="L0"><span class="pln">      </span><span class="tag">&lt;td&gt;</span><span class="pln">...</span><span class="tag">&lt;/td&gt;</span></li><li class="L1"><span class="pln">      </span><span class="tag">&lt;td&gt;</span><span class="pln">...</span><span class="tag">&lt;/td&gt;</span></li><li class="L2"><span class="pln">    </span><span class="tag">&lt;/tr&gt;</span></li><li class="L3"><span class="pln">  </span><span class="tag">&lt;/tbody&gt;</span></li><li class="L4"><span class="tag">&lt;/table&gt;</span></li></ol></pre>
-
-
+&lt;table&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
 
 				</article>
 
@@ -1169,6 +1186,114 @@
     &lt;/div&gt;
   &lt;/fieldset&gt;
 &lt;/form&gt;</pre>
+
+				</article>
+
+
+<!-- Buttons -->
+
+				<article id="buttons" class="bottom-offset-large">
+					<h2 class="sherpa">Buttons</h2>
+					<hr>
+
+					<h3 class="sherpa">Default</h3>
+					<p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>class=""</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><button type="button" class="btn">Default</button></td>
+								<td><code>btn</code></td>
+								<td>Standard gray button with gradient</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-primary">Primary</button></td>
+								<td><code>btn btn-primary</code></td>
+								<td>Used for purchase path, guiding a customer toward checkout.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-secondary">Secondary</button></td>
+								<td><code>btn btn-secondary</code></td>
+								<td>Used as a call-to-action that does not take the user down the purchase path.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-tertiary">Tertiary</button></td>
+								<td><code>btn btn-tertiary</code></td>
+								<td>Used for additional button needs.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-link">Link</button></td>
+								<td><code>btn btn-link</code></td>
+								<td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h4 class="sherpa">Button Sizes</h4>
+					<p>Need smaller buttons? Add <code>.btn-small</code> or <code>.btn-mini</code> for additional sizes.</p>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary btn-small">Small Button</button>
+								<button class="btn btn-secondary btn-small">Small Button</button>
+								<button class="btn btn-tertiary btn-small">Small Button</button>
+							</p>
+						</div>
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary btn-mini">Mini Button</button>
+								<button class="btn btn-secondary btn-mini">Mini Button</button>
+								<button class="btn btn-tertiary btn-mini">Mini Button</button>
+							</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;
+  &lt;button class="btn btn-primary btn-small"&gt;Small Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary btn-small"&gt;Small Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary btn-small"&gt;Small Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary btn-mini"&gt;Mini Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary btn-mini"&gt;Mini Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary btn-mini"&gt;Mini Button&lt;/button&gt;
+&lt;/p&gt;</pre>
+
+					<h4 class="sherpa">Disabled Buttons</h4>
+					<p>Make buttons look unclickable by fading them back 50%</p>
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary disabled">Primary Button</button>
+								<button class="btn btn-secondary disabled">Secondary Button</button>
+								<button class="btn btn-tertiary disabled">Tertiary Button</button>
+							</p>
+						</div>
+						<div class="da4-da12">
+							<p>
+								<a href="#" class="btn btn-primary disabled">Primary Link</a>
+								<a href="#" class="btn btn-secondary disabled">Secondary Link</a>
+								<a href="#" class="btn btn-tertiary disabled">Tertiary Link</a>
+							</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;
+  &lt;button class="btn btn-primary disabled"&gt;Primary Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary disabled"&gt;Secondary Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary disabled"&gt;Tertiary Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href="#" class="btn btn-primary disabled"&gt;Primary Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-secondary disabled"&gt;Secondary Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-tertiary disabled"&gt;Tertiary Link&lt;/a&gt;
+&lt;/p&gt;</pre>
 
 				</article>
 
