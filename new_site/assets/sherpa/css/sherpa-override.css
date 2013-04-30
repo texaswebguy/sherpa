@@ -131,6 +131,16 @@ a:hover {
   text-decoration: underline;
 }
 
+a.gray_text {
+  color: #444444;
+  text-decoration: none;
+}
+
+a.gray_text:hover {
+  color: #444444;
+  text-decoration: underline;
+}
+
 a.white_text {
   color:#ffffff;
   text-decoration: none;
@@ -1203,28 +1213,27 @@ legend + .control-group {
   margin-bottom:0px;
 }
 
-.alert span {
+
+.alert  [class^=icon] {
   float: left;
   font-size: 20px;
 }
 
-.alert.success span {
+.alert.success [class^=icon] {
   color: #7AB800;
 }
 
-.alert.information span {
+.alert.information  [class^=icon] {
   color: #0085C3;
 }
 
-.alert.attention span {
+.alert.attention  [class^=icon] {
   color: #DC5034;
 }
 
-.alert.error span {
+.alert.error  [class^=icon] {
   color: #CE1126;
 }
-
-
 
 
 
@@ -2077,8 +2086,6 @@ you can use the generic selector below, but it's slower:
 
 /* BREADCRUMBS
 -------------------------------------------------- */
-
-
 .breadcrumb {
   padding: 8px 15px;
   margin: 0 0 20px;
@@ -2099,6 +2106,30 @@ you can use the generic selector below, but it's slower:
 .breadcrumb .divider {
   padding: 0 5px;
   color: #ccc;
+}
+
+/* PAGINATION
+-------------------------------------------------- */
+.pagination ul > li > a, .pagination ul > li > span {
+  float: left;
+  padding: 4px 12px;
+  line-height: 20px;
+  text-decoration: none;
+  background-color: #ffffff;
+  border: 1px solid #ffffff;
+  border-left-width: 0;
+}
+
+.pagination ul {
+  display: inline-block;
+  margin-left: 0;
+  margin-bottom: 0;
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+  -webkit-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  -moz-box-shadow: 0 0 0 rgba(0, 0, 0, 0);
+  box-shadow: 0 0 0 rgba(0, 0, 0, 0);
 }
 
 

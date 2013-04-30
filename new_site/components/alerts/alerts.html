@@ -2,17 +2,20 @@
 
 <script type="text/javascript">
 
+
   var getAlertOptions = _.once(function(options){
+    //TODO put default options in config
+    var default_options = {
+          type: 'attention',
+          icon:'icon-alert-notice',
+          title: "Warning!",
+          message: "Lorem ipsum dolor sit amet, consectetur adipiscing elit. Etiam imperdiet scelerisque condimentum. Duis condimentum lorem at tellus aliquet a tempus lectus varius.",
+          dismiss: true
+    } 
     if(options){
-      return options;
+      return _.extend(default_options, options);
     } else {
-      var options_obj = {
-        type: 'error',
-        icon:'icon-alert-notice',
-        title: "Error!",
-        message: "This is an error message.",
-      }
-      return options_obj;
+      return default_options;
     }
   });
 
@@ -22,8 +25,11 @@
 <!-- ko with: getAlertOptions($data.component_options) -->
 
 <div data-bind="attr: { class: 'alert '+type }">
+  <!-- ko if: dismiss -->
+  <button type="button" class="close" data-dismiss="alert">×</button>
+  <!-- /ko -->
   <span aria-hidden="true" data-bind="attr: { class: icon }"></span>
-  <p><strong data-bind="text: title"></strong> <span data-bind="text: message"></span></p>
+  <p><strong data-bind="text: title" class="alert-title"></strong> <span data-bind="text: message" class="alert-message"></span></p>
 </div>
 
 <!-- /ko -->

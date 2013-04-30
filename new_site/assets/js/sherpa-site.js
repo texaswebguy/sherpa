@@ -236,7 +236,16 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 
-
+	$('.test-page-level-alert').click(function(event){
+		event.preventDefault();
+		Sherpa.publish( "alert_message", {
+	      "type": "error",
+	      "title":"Sample Title",
+	      "message": "This is a sample message",
+	      "dismiss":true,
+	      "icon":"icon-alert-notice"
+	    });
+	});
 	/*********************************************************************************
 	Please don't touch below
 	*********************************************************************************/
