@@ -550,6 +550,24 @@ label : Sherpa.msg('textkey_label'),
 							</div>
 						</div>
 					</div>
+
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							<div data-bind="component: { 
+								name :'alerts', 
+								options: {
+							        type: 'error',
+							        icon:'icon-alert-notice',
+							        title: 'Error!',
+							        message: 'This is an error message.'
+							    }
+						      }">
+							</div>
+						</div>
+					</div>
+
+
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;div class="alert error"&gt;
   &lt;span aria-hidden="true" class="icon-cart"&gt;&lt;/span&gt;

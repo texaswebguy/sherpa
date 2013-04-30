@@ -1,3 +1,5 @@
+
+Sherpa.counter("sherpa-site-app");
 /* application for prototype */
 Sherpa.ready("sherpaGlobalEvents", function(){
 
@@ -286,4 +288,4 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 });
 
-console.log("app.js loaded");
+Sherpa.counter("sherpa-site-app");

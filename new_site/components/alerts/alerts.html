@@ -1,0 +1,29 @@
+
+
+<script type="text/javascript">
+
+  var getAlertOptions = _.once(function(options){
+    if(options){
+      return options;
+    } else {
+      var options_obj = {
+        type: 'error',
+        icon:'icon-alert-notice',
+        title: "Error!",
+        message: "This is an error message.",
+      }
+      return options_obj;
+    }
+  });
+
+
+</script>
+
+<!-- ko with: getAlertOptions($data.component_options) -->
+
+<div data-bind="attr: { class: 'alert '+type }">
+  <span aria-hidden="true" data-bind="attr: { class: icon }"></span>
+  <p><strong data-bind="text: title"></strong> <span data-bind="text: message"></span></p>
+</div>
+
+<!-- /ko -->

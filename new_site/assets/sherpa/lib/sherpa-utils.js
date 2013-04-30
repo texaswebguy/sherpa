@@ -201,7 +201,6 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 			if(options){
 				bindingContext.component_options = options;
 			}
-			console.log(bindingContext);
 			ko.applyBindingsToDescendants(bindingContext, element);
 			amplify.publish( "register_page_event", component_name );		    					
 		},
@@ -287,7 +286,7 @@ Sherpa.ready("sherpaEventManager", function() {
     Sherpa.namespace(Eve, "Eve", props);
 });
 
-_.extend(Sherpa, amplify); //puts all the amplify functions in the Sherpa namespace
+//_.extend(Sherpa, amplify); //puts all the amplify functions in the Sherpa namespace
 
 // AJAX Data services
 
