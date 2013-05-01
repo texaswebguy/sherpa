@@ -140,6 +140,13 @@ Sherpa.ready("sherpai18n", function(){
 		    		component.data = bindingContext;
 		    		//defaults to whatever data is in context. If not specified the the $root will be in context and the component might fail
 		    	}
+		    	if(!component.options){
+		    		component.options = {};
+		    		//defaults to empty options set
+		    	}
+
+
+		    	
 		    	Sherpa.insertComponent(component.name, component.type, element, component.data,component.options);
 
 		    } else {

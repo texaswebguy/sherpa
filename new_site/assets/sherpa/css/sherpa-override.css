@@ -1537,6 +1537,12 @@ legend + .control-group {
 
 
 
+
+
+
+/* DROPDOWNS
+-------------------------------------------------- */
+
 .btn-group > .btn + .dropdown-toggle {
   *padding-top: 5px;
   padding-right: 8px;
@@ -1604,6 +1610,10 @@ legend + .control-group {
   background-repeat: repeat-x;
   filter: none;
 
+}
+
+.dropdown-menu .divider {
+  height: 2px;
 }
 
 

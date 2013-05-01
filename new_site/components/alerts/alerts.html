@@ -4,6 +4,7 @@
 
 
   var getAlertOptions = _.once(function(options){
+    console.log("alert data",options)
     //TODO put default options in config
     var default_options = {
           type: 'attention',
@@ -22,7 +23,7 @@
 
 </script>
 
-<!-- ko with: getAlertOptions($data.component_options) -->
+<!-- ko with: getAlertOptions(component_options) -->
 
 <div data-bind="attr: { class: 'alert '+type }">
   <!-- ko if: dismiss -->
