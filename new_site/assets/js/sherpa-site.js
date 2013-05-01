@@ -246,6 +246,14 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	      "icon":"icon-alert-notice"
 	    });
 	});
+
+	//TODO: hack to make up the fact that active class gets stripped - the problem is with scroll-spy
+	Sherpa.ready("bootstrap", function(){
+		_.each($('.tabbable'), function(tabs){
+			$(tabs).find('li:first').addClass('active');
+		});
+	})
+	
 	/*********************************************************************************
 	Please don't touch below
 	*********************************************************************************/

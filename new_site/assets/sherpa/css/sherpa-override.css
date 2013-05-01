@@ -1569,20 +1569,61 @@ legend + .control-group {
 .btn-group.open .btn-tertiary.dropdown-toggle {
   background-color: #cfd9de;
 }
+.caret {
+  display: inline-block;
+  width: 0;
+  height: 0;
+  vertical-align: top;
+  border:none;
+}
 
+.btn .caret {
+  margin-top: 3px;
+  margin-left: 0;
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  font-family: 'icon-dell-mini';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  top: 0;
+  position: relative;
+  padding-right: 15px;
+  padding-left: 5px;
+}
+.btn .caret:before {
+  content: "l";
+}
 
+.btn-mini .caret  {
+  margin-top: 4px;
+  padding-right:12px;
+}
 
+.btn-small .caret {
+  margin-top: 4px;
+  padding-right:15px;
+}
+
+.btn-large .caret {
+  margin-top: 0;
+  border:none;
+  padding-right:20px;
+}
+
+.dropup .btn-large .caret {
+  border:none;
+}
 .btn-primary .caret,
-.btn-secondary .caret{
-	border-top-color: #ffffff;
-	border-bottom-color: #ffffff;
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+  border:none;
 }
-
-.btn-tertiary .caret{
-	border-top-color: #0085c3;
-	border-bottom-color: #0085c3;
-}
-
 
 .dropdown-menu li > a {
   display: block;
@@ -2105,8 +2146,293 @@ you can use the generic selector below, but it's slower:
 }
 
 
+/* TABS
+-------------------------------------------------- */
+
+.tab-content {
+  overflow: auto;
+  padding:20px 20px 0px 20px;
+  margin-top:-20px;
+  border: 1px solid #ddd;
+  -webkit-border-radius: 0px 0px 4px 4px;
+        border-radius: 0px 0px 4px 4px;
+  border-top:none;
+}
 
 
+/* Color tabs support */
+
+.tabbable.gray-dark,
+.tabbable.gray-medium,
+.tabbable.gray,
+.tabbable.gray-light,
+.tabbable.gray-very-light,
+.tabbable.white,
+.tabbable.blue,
+.tabbable.blue-stroke,
+.tabbable.green,
+.tabbable.green-stroke,
+.tabbable.yellow,
+.tabbable.yellow-stroke,
+.tabbable.orange,
+.tabbable.orange-stroke,
+.tabbable.red,
+.tabbable.red-stroke,
+.tabbable.red-dark,
+.tabbable.berry,
+.tabbable.berry-stroke,
+.tabbable.purple,
+.tabbable.purple-stroke,
+.tabbable.teal,
+.tabbable.teal-stroke,
+.tabbable.navyblue {
+  border:none;
+  background:none;
+}
+
+.tabbable.gray-dark .nav-tabs > li,
+.tabbable.gray-medium .nav-tabs > li,
+.tabbable.gray .nav-tabs > li,
+.tabbable.gray-light .nav-tabs > li,
+.tabbable.gray-very-light .nav-tabs > li,
+.tabbable.white .nav-tabs > li,
+.tabbable.blue .nav-tabs > li,
+.tabbable.blue-stroke .nav-tabs > li,
+.tabbable.green .nav-tabs > li,
+.tabbable.green-stroke .nav-tabs > li,
+.tabbable.yellow .nav-tabs > li,
+.tabbable.yellow-stroke .nav-tabs > li,
+.tabbable.orange .nav-tabs > li,
+.tabbable.orange-stroke .nav-tabs > li,
+.tabbable.red .nav-tabs > li,
+.tabbable.red-stroke .nav-tabs > li,
+.tabbable.red-dark .nav-tabs > li,
+.tabbable.berry .nav-tabs > li,
+.tabbable.berry-stroke .nav-tabs > li,
+.tabbable.purple .nav-tabs > li,
+.tabbable.purple-stroke .nav-tabs > li,
+.tabbable.teal .nav-tabs > li,
+.tabbable.teal-stroke .nav-tabs > li,
+.tabbable.navyblue .nav-tabs > li {
+  margin-bottom: -3px;
+}
+
+/* Gray tabs */
+
+.tabbable.gray-dark .tab-content {
+  border:none;
+  background-color: #444444;
+  color:#fff;
+}
+.tabbable.gray-medium .tab-content {
+  border:none;
+  background-color: #737373;
+  color:#fff;
+}
+.tabbable.gray .tab-content {
+  border:none;
+  background-color: #aaaaaa;
+}
+.tabbable.gray-light .tab-content {
+  border:none;
+  background-color: #eeeeee;
+}
+.tabbable.gray-very-light .tab-content {
+  border:none;
+  background-color: #f9f9f9;
+}
+.tabbable.gray-stroke .tab-content {border: 2px solid #cccccc;}
+.tabbable.white .tab-content {
+  border:none;
+  background-color: #ffffff;
+}
+
+/* Blue tabs */
+.tabbable.blue .tab-content,
+.tabbable.blue .nav-tabs > .active > a,
+.tabbable.blue .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #0085c3;
+  color:#fff;
+}
+.tabbable.blue-stroke .tab-content{
+  border: 2px solid #0085c3;
+}
+
+.tabbable.blue-stroke .nav-tabs > .active > a, .tabbable.blue-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #0085c3;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Green tabs */
+.tabbable.green .nav-tabs > li > a {
+  color: #7ab800;
+}
+.tabbable.green .tab-content ,
+.tabbable.green .nav-tabs > .active > a,
+.tabbable.green .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #7ab800;
+  color:#fff;
+}
+.tabbable.green-stroke .tab-content {border: 2px solid #7ab800;}
+.tabbable.green-stroke .nav-tabs > .active > a, .tabbable.green-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #7ab800;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Yellow tabs */
+.tabbable.yellow .tab-content ,
+.tabbable.yellow .nav-tabs > .active > a,
+.tabbable.yellow .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #F2AF00;
+}
+.tabbable.yellow-stroke .tab-content {border: 2px solid #F2AF00;}
+.tabbable.yellow-stroke .nav-tabs > .active > a, .tabbable.yellow-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #F2AF00;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Orange tabs */
+.tabbable.orange .nav-tabs > li > a {
+  color: #FF7700;
+}
+.tabbable.orange .tab-content ,
+.tabbable.orange .nav-tabs > .active > a,
+.tabbable.orange .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #FF7700;
+  color:#fff;
+}
+.tabbable.orange-stroke .tab-content {border: 2px solid #FF7700;}
+.tabbable.orange-stroke .nav-tabs > .active > a, .tabbable.orange-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #FF7700;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Red tabs */
+.tabbable.red .nav-tabs > li > a {
+  color: #DC5034;
+}
+.tabbable.red .tab-content ,
+.tabbable.red .nav-tabs > .active > a,
+.tabbable.red .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #DC5034;
+  color:#fff;
+}
+.tabbable.red-stroke .tab-content {border: 2px solid #DC5034;}
+.tabbable.red-stroke .nav-tabs > .active > a, .tabbable.red-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #DC5034;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+.tabbable.red-dark .nav-tabs > li > a {
+  color: #CE1126;
+}
+.tabbable.red-dark .tab-content ,
+.tabbable.red-dark .nav-tabs > .active > a,
+.tabbable.red-dark .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #CE1126;
+  color:#fff;
+}
+.tabbable.red-dark-stroke .tab-content {border: 2px solid #CE1126;}
+.tabbable.red-dark-stroke .nav-tabs > .active > a, .tabbable.red-dark-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #CE1126;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Berry tabs */
+.tabbable.berry .nav-tabs > li > a {
+  color: #CE1126;
+}
+.tabbable.berry .tab-content ,
+.tabbable.berry .nav-tabs > .active > a,
+.tabbable.berry .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #B7295A;
+  color:#fff;
+}
+.tabbable.berry-stroke .tab-content {border: 2px solid #B7295A;}
+.tabbable.berry-stroke .nav-tabs > .active > a, .tabbable.berry-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #B7295A;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+
+/* Purple tabs */
+.tabbable.purple .nav-tabs > li > a {
+  color: #CE2585;
+}
+.tabbable.purple .tab-content ,
+.tabbable.purple .nav-tabs > .active > a,
+.tabbable.purple .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #6E2585;
+  color:#fff;
+}
+.tabbable.purple-stroke .tab-content {border: 2px solid #6E2585;}
+.tabbable.purple-stroke .nav-tabs > .active > a, .tabbable.purple-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #6E2585;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Teal tabs */
+.tabbable.teal .nav-tabs > li > a {
+  color: #71C6C1;
+}
+.tabbable.teal .tab-content ,
+.tabbable.teal .nav-tabs > .active > a,
+.tabbable.teal .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #71C6C1;
+}
+.tabbable.teal-stroke .tab-content {border: 2px solid #71C6C1;}
+.tabbable.teal-stroke .nav-tabs > .active > a, .tabbable.teal-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #71C6C1;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
+
+/* Navy tabs */
+.tabbable.navyblue .nav-tabs > li > a {
+  color: #003758;
+}
+.tabbable.navyblue .tab-content ,
+.tabbable.navyblue .nav-tabs > .active > a,
+.tabbable.navyblue .nav-tabs > .active > a:hover {
+  border:none;
+  background-color: #003758;
+  color:#fff;
+}
+.tabbable.navyblue-stroke .tab-content {border: 2px solid #003758;}
+.tabbable.navyblue-stroke .nav-tabs > .active > a, .navyblue.teal-stroke .nav-tabs > .active > a:hover {
+  border: 2px solid #003758;
+  border-bottom: none;
+  position: relative;
+  z-index: 2;
+}
 
 
 
