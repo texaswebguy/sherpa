@@ -164,6 +164,7 @@ h1, h2 {
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
+  margin: 0px 0px 10px 0px;
 }
 
 /* Edits made by AJ Lohman */
@@ -172,6 +173,7 @@ h3, h4, h5 {
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
+  margin: 0px 0px 10px 0px;
 }
 
 h1      {font-size: 36px;line-height: 40px;}
@@ -181,7 +183,11 @@ h4      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, 
 h5      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 /* Header - featured*/
-h4.feature {font-size: 50px;line-height: 100px;font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h4.feature {font-size: 50px;line-height: 100px;font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;margin: 0px 0px 10px 0px;}
+
+
+
+
 
 /* Header - title*/
 .title {
