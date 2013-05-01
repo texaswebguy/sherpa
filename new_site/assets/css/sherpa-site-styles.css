@@ -46,21 +46,35 @@
 
 
 /* Links */
-  a.sherpa-link {
-    color: #F0592C;
-    text-decoration: none;
-  }
+a {
+  color: #F0592C;
+  text-decoration: none;
+}
 
-  a.sherpa-link:hover {
-    color: #F0592C;
-    text-decoration: underline;
-  }
+a:hover {
+  color: #F0592C;
+  text-decoration: underline;
+}
 
-  a.sherpa-link:hover, a.sherpa-link:active {
-    outline: 0;
-  }
+a:hover, a:active {
+  outline: 0;
+}
 
-  
+.example a {
+  color: #0085c3;
+  text-decoration: none;
+}
+
+.example a:hover {
+  color: #0085c3;
+  text-decoration: underline;
+}
+
+.example a:hover, a:active {
+  outline: 0;
+}
+
+
 
 
 /* Sherpa headings*/
