@@ -2667,6 +2667,10 @@ Breakpoints
   .input-prepend input[type="text"] {
     width: 92%;
   }
+
+  input.input-xxlarge {
+    width: 100%;
+  }
   /* END Sherpa forms*/
 
 }
@@ -2687,6 +2691,7 @@ Breakpoints
   .input-prepend input[type="text"]{
     width: 95.7%;
   }
+
   /* END Sherpa forms*/
 
 }
