@@ -247,6 +247,70 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    });
 	});
 
+
+//data-waypoint-trigger="true" data-waypoint-offsetUp="70" data-waypoint-offsetDown="100" data-waypoint-target="article"
+/*	$('[data-waypoint-trigger="true"]').each(function () {
+		var wp={};
+		wp.trigger = $(this);
+		wp.offsetUp = wp.trigger.attr('data-waypoint-offsetUp');
+		wp.offsetDown = wp.trigger.attr('data-waypoint-offsetDown');
+		wp.target = wp.trigger.attr('data-waypoint-target');
+		if(!wp.offsetUp){wp.offsetUp=0}
+		if(!wp.offsetDown){wp.offsetDown=0}
+		if(!wp.target){console.error('You need to include a target selector attribute such as data-waypoint-target=".foobar"')} else {
+			wp.activate = function(element){
+				console.log($(element).html())
+				wp.trigger.find('li.active').removeClass('active');
+				wp.id = '#'+$(element).attr('id');
+				wp.trigger.find('li a[href='+wp.id+']').parent().addClass('active');
+			}
+			$(wp.target).waypoint(function(direction) {
+				if(direction=="down") {
+					wp.activate($(this));
+				}
+				console.log(wp)
+			}, { offset: wp.offsetUp });
+
+			$(wp.target).waypoint(function(direction) {
+				if(direction=="up") {
+					wp.activate($(this));
+				}
+				console.log(wp.trigger.find('li a[href='+wp.id+']').parent().html())
+			}, { 
+				offset: function() { 
+					return -$(this).height()+wp.offsetDown;
+				}
+			});
+		}
+		console.log(wp)
+	});
+*/
+
+
+	$('article').waypoint(function(direction) {
+		if(direction=="down") {
+			console.log("going :",direction);
+			$('.nav.nav-list.bs-docs-sidenav li.active').removeClass('active');
+			var id = '#'+$(this).attr('id');
+			console.log($('#sherpa-nav li a[href='+id+']'));
+			$('.nav.nav-list.bs-docs-sidenav li a[href='+id+']').parent().addClass('active');
+		}
+	}, { offset: 80 });
+
+	$('article').waypoint(function(direction) {
+		if(direction=="up") {
+			console.log("going :",direction);
+			$('.nav.nav-list.bs-docs-sidenav li.active').removeClass('active');
+			var id = '#'+$(this).attr('id');
+			console.log($('#sherpa-nav li a[href='+id+']'));
+			$('.nav.nav-list.bs-docs-sidenav li a[href='+id+']').parent().addClass('active');
+		}
+	}, { 
+		offset: function() { 
+			return -$(this).height()+100
+		}
+	});
+
 	//TODO: hack to make up the fact that active class gets stripped - the problem is with scroll-spy
 	Sherpa.ready("bootstrap", function(){
 		_.each($('.tabbable'), function(tabs){
