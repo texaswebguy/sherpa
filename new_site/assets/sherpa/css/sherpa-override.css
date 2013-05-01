@@ -2192,6 +2192,80 @@ you can use the generic selector below, but it's slower:
     box-shadow: inset 0 1px 0 #ffffff;
 }
 
+
+/* Collapse
+-------------------------------------------------- */
+h3[data-toggle=collapse] {
+  cursor:pointer;
+}
+
+h3[data-toggle=collapse].collapse-ruled {
+  border-top:1px solid #ccc;
+  padding-top:10px;
+    clear:both;
+}
+h3[data-toggle=collapse].collapse-ruled + .collapse + h3[data-toggle=collapse].collapse-ruled,
+h3[data-toggle=collapse].collapse-ruled + .collapse.in + h3[data-toggle=collapse].collapse-ruled {
+    border-top: none;
+}
+
+h3[data-toggle=collapse].collapse-ruled + .collapse {
+    border-bottom:1px solid #ccc;
+    clear:both;
+}
+h3[data-toggle=collapse].collapsed:before {
+  content:"r";
+}
+
+h3[data-toggle=collapse]:before {
+  font-family: 'icon-dell-mini';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "q";
+  color:#0085c3;
+}
+
+.btn-link[data-toggle=collapse] {
+  padding-left: 0;
+  margin-left: -2px;
+  margin-top:-3px;
+}
+.btn-link[data-toggle=collapse] .caret {
+  display: inline-block;
+  vertical-align: top;
+  border: none;
+  font-family: 'icon-dell-mini';
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  top: 6px;
+  position: relative;
+  padding-right: 15px;
+  font-size: 10px;
+  padding-left: 5px;
+}
+.btn-link[data-toggle=collapse] .caret:before {
+  content: "m";
+}
+.btn-link[data-toggle=collapse].collapsed .caret:before {
+  content:"l";
+}
+
+.collapsed[data-toggle=collapse] .less, [data-toggle=collapse] .more {
+  display:none;
+}
+.collapsed[data-toggle=collapse] .more, [data-toggle=collapse] .less {
+  display:inline-block;
+}
+.collapsed[data-toggle=collapse]:hover .more, [data-toggle=collapse]:hover .less {
+  text-decoration:underline;
+}
+
+
 /*
 ================================================
 Breakpoints

@@ -163,6 +163,35 @@ Sherpa.ready("sherpai18n", function(){
 
 	Sherpa.components = {};
 
+	/*bootstrap accordion behavior modification
+		Simplifies the specification of an accordion by just adding an accordion class arround a group of collapible links and panels
+	*/
+	$('.accordion [data-toggle=collapse]').click(function(event){
+		event.preventDefault();
+		event.stopPropagation();
+		var accordion = {};
+		accordion.activeTrigger = $(event.currentTarget);
+		if(!$(accordion.activeTrigger).hasClass('collapsed')){
+			accordion.collapseAll=true;
+		}
+		accordion.activeTarget = $($(event.currentTarget).attr('data-target'));
+		accordion.targets = $(accordion.activeTrigger).parent().find('.collapse');
+		accordion.triggers = $(accordion.activeTrigger).parent().find('[data-toggle=collapse]');
+		_.each(accordion.targets, function(target){
+			$(target).removeClass('in');
+		});
+		_.each(accordion.triggers, function(trigger){
+			$(trigger).addClass('collapsed');
+		});
+		if(!accordion.collapseAll){
+			$(accordion.activeTarget).addClass('in');
+			$(accordion.activeTrigger).removeClass('collapsed');			
+		}
+
+		//TODO Add slide function
+
+
+	});
 
 });
 

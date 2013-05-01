@@ -203,7 +203,6 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 			if(options){
 				bindingContext.$data.component_options = options;
 			}
-			console.log("options - bindingContext", bindingContext)
 
 			ko.applyBindingsToDescendants(bindingContext, element);
 			amplify.publish( "register_page_event", component_name );		    					

@@ -117,6 +117,7 @@
 			          <li><a class="sherpa-link" href="#media">Media object</a></li>
 			          <li><a class="sherpa-link" href="#misc">Misc</a></li>
 			          <li><a class="sherpa-link" href="#modals">Modals</a></li>
+			          <li><a class="sherpa-link" href="#collapse">Collapse</a></li>
 	   				</ul>
 				</div>
 			</aside>
@@ -1209,6 +1210,215 @@ No options, displays all default values
             </tbody>
           </table>
 <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'hidden'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L1"><span class="pln">  </span><span class="com">// do something…</span></li><li class="L2"><span class="pun">})</span></li></ol></pre>
+
+				</article>
+				<article id="collapse" class="bottom-offset-large">
+					<h2 class="sherpa">Collapse</h2>
+					<hr>
+
+					<h3 class="sherpa">Examples</h3>
+
+					<h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed">
+					  Collapsible area from an h3 headline
+					</h3>
+					<div id="collapse-1" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed">
+  Collapsible area from an h3 headline
+&lt;/h3>
+&lt;div id="collapse-1" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>				
+
+					<h3>Collapsible area from an h3 headline with optional "collapse-ruled" class</h3>
+
+					<h3 data-toggle="collapse" data-target="#collapse-1-ruled" class="collapsed collapse-ruled">
+					  Collapsible area from an h3 headline 
+					</h3>
+					<div id="collapse-1-ruled" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<h3 data-toggle="collapse" data-target="#collapse-2-ruled" class="collapsed collapse-ruled">
+					  Collapsible area from an h3 headline
+					</h3>
+					<div id="collapse-2-ruled" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<h3 data-toggle="collapse" data-target="#collapse-3-ruled" class="collapsed collapse-ruled">
+					  Collapsible area from an h3 headline
+					</h3>
+					<div id="collapse-3-ruled" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed collapse-ruled">
+  Collapsible area from an h3 headline
+&lt;/h3>
+&lt;div id="collapse-1" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>				
+
+					<h3 class="sherpa">Accordion group with h3 headlines and optional "collapse-ruled" class</h3>
+					<div class="accordion">
+						<h3 data-toggle="collapse" data-target="#accordion-1-ruled" class="collapsed collapse-ruled">
+						  Collapsible area from an h3 headline 
+						</h3>
+						<div id="accordion-1-ruled" class="collapse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<h3 data-toggle="collapse" data-target="#accordion-2-ruled" class="collapsed collapse-ruled">
+						  Collapsible area from an h3 headline
+						</h3>
+						<div id="accordion-2-ruled" class="collapse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<h3 data-toggle="collapse" data-target="#accordion-3-ruled" class="collapsed collapse-ruled">
+						  Collapsible area from an h3 headline
+						</h3>
+						<div id="accordion-3-ruled" class="collapse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="accordion">
+	&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed collapse-ruled">
+	  ...
+	&lt;/h3>
+	&lt;div id="collapse-1" class="collapse">
+		&lt;p>...&lt;/p>
+	&lt;/div>
+	&lt;h3 data-toggle="collapse" data-target="#collapse-2" class="collapsed collapse-ruled">
+	  ...
+	&lt;/h3>
+	&lt;div id="collapse-2" class="collapse">
+		&lt;p>...&lt;/p>
+	&lt;/div>
+	&lt;h3 data-toggle="collapse" data-target="#collapse-3" class="collapsed collapse-ruled">
+	  ...
+	&lt;/h3>
+	&lt;div id="collapse-3" class="collapse">
+		&lt;p>...&lt;/p>
+	&lt;/div>		
+&lt;/div>
+</pre>		
+
+					<p>&nbsp;</p>	
+					<h3>Collapsible area from a link with arrow</h3>
+
+					<button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-2">
+					  Link <span class="caret"></span>
+					</button>
+					<div id="collapse-2" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-2">
+  link &lt;span class="caret">&lt;/span>
+&lt;/button>
+&lt;div id="collapse-2" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>			
+					<h3 class="sherpa">Collapsible area from a link that changes - </h3>
+					Lorem ispum - <button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-3">
+					  <span class="more">more</span><span class="less">less</span>
+					</button>
+					<div id="collapse-3" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+Lorem ispum - &lt;button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-3">
+  &lt;span class="more">more&lt;/span>&lt;span class="less">less&lt;/span>
+&lt;/button>
+&lt;div id="collapse-3" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>			
 
 				</article>
 
