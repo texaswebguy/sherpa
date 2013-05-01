@@ -1235,6 +1235,25 @@ legend + .control-group {
   color: #CE1126;
 }
 
+.alert .close {
+  position: relative;
+  top: -2px;
+  right: 0px;
+  line-height: 20px;
+}
+
+.alert .close:before {
+  font-family: 'icon-dell-mini';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content:"U";
+  font-size:10px;
+}
+
+
 
 
 /* TEXT
