@@ -12,7 +12,8 @@
 	    <script type="text/javascript">
             var SHERPA_CONFIG_OVERRIDES = {};
                 SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"},
+                  { waypoints: "assets/sherpa/lib/waypoints.min.js"}
             		];
 				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
 					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
@@ -67,7 +68,7 @@
 
 			
 	</head>
-<body data-spy="scroll" data-target=".bs-docs-sidenav" data-offset-top="-10">
+<body>
 	
 	<!-- Start - Masthead
   ================================================== -->
@@ -97,7 +98,13 @@
 		<div class="wrapper">
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
-					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
+					<ul class="nav nav-list bs-docs-sidenav" 
+            data-spy="affix" 
+            data-offset-top="270" 
+            data-waypoint-trigger="true" 
+            data-waypoint-offsetUp="70" 
+            data-waypoint-offsetDown="100" 
+            data-waypoint-target="article">
 				      	<li class="active"><a href="#overview"><i class="icon-chevron-right"></i>Overview</a></li>
 				      	<li><a href="#core"><i class="icon-chevron-right"></i>Core Configuration</a></li>
 			          	<li><a href="#overrides"><i class="icon-chevron-right"></i> Cofiguration Overides</a></li>
