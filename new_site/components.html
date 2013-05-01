@@ -12,8 +12,9 @@
 	    <script type="text/javascript">
             var SHERPA_CONFIG_OVERRIDES = {};
                 SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
-            		];
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"},
+                	{ waypoints: "assets/sherpa/lib/waypoints.min.js"}
+            	];
 				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
 					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
 					{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
@@ -67,7 +68,7 @@
 
 			
 	</head>
-<body data-spy="scroll" data-target=".bs-docs-sidenav" data-offset-top="-10">
+<body>
 	
 	<!-- Start - Masthead
   ================================================== -->
@@ -101,33 +102,49 @@
 		<div class="wrapper">
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
-					<ul class="nav nav-list bs-docs-sidenav" data-spy="affix" data-offset-top="270">
-			          <li class="active"><a class="sherpa-link" href="#overview">Overview</a></li>
-			          <li><a class="sherpa-link" href="#page">Page</a></li>
-			          <li><a class="sherpa-link" href="#dropdowns">Dropdowns</a></li>
-			          <li><a class="sherpa-link" href="#tabs">Tabs</a></li>
+					<ul class="nav nav-list bs-docs-sidenav" 
+						data-spy="affix" 
+						data-offset-top="270" 
+						data-waypoint-trigger="true" 
+						data-waypoint-offsetUp="70" 
+						data-waypoint-offsetDown="100" 
+						data-waypoint-target="article">
+			          <li class="active"><a  href="#overview">Overview</a></li>
+			          <li><a  href="#page">Page</a></li>
+			          <li><a  href="#dropdowns">Dropdowns</a></li>
+			          <li><a  href="#tabs">Tabs</a></li>
 			          <!-- <li><a href="#navbar">Navbar</a></li> -->
+<<<<<<< HEAD
 			          <li><a class="sherpa-link" href="#breadcrumbs">Breadcrumbs</a></li>
 			          <li><a class="sherpa-link" href="#pagination">Pagination</a></li>
 								<li><a class="sherpa-link" href="#labels-badges">Labels and badges</a></li>
+=======
+			          <li><a  href="#breadcrumbs">Breadcrumbs</a></li>
+			          <li><a  href="#pagination">Pagination</a></li>
+			<!--           <li><a href="#labels-badges">Labels and badges</a></li> -->
+>>>>>>> cdd5e8bf1f79a6b17ed16ed0b052dae08e3d2e8e
 			<!--           <li><a href="#typography">Typography</a></li> -->
 			<!--           <li><a href="#thumbnails">Thumbnails</a></li> -->
-			          <li><a class="sherpa-link" href="#alerts">Alerts</a></li>
-			          <li><a class="sherpa-link" href="#progress">Progress bars</a></li>
-			          <li><a class="sherpa-link" href="#media">Media object</a></li>
-			          <li><a class="sherpa-link" href="#misc">Misc</a></li>
+			          <li><a  href="#alerts">Alerts</a></li>
+			          <li><a  href="#progress">Progress bars</a></li>
+			          <li><a  href="#media">Media object</a></li>
+			          <li><a  href="#misc">Misc</a></li>
+			          <li><a  href="#modals">Modals</a></li>
+			          <li><a  href="#collapse">Collapse</a></li>
 	   				</ul>
 				</div>
 			</aside>
+
+
 			<section class="da4-da12 ta-all mb-all">
 
 				<article id="overview" class="bottom-offset-large">
 					<h2 class="sherpa">Overview</h2>
 					<hr>
 
-					<p>Components in Sherpa are an abstraction of most of <a href="http://twitter.github.io/bootstrap/components.html" target="_new">Twitter Bootsrap components</a> through the use of <a href="http://knockoutjs.com/" target="_new">Knockout JS</a>. This was done to simplify coding of components and provide data integration to create dynamic prototypes.</p>
+					<p>Components in Sherpa are an abstraction of most of <a href="http://twitter.github.io/bootstrap/components.html" target="_new" >Twitter Bootsrap components</a> through the use of <a href="http://knockoutjs.com/" target="_new" >Knockout JS</a>. This was done to simplify coding of components and provide data integration to create dynamic prototypes.</p>
 					<p>In addition, Sherpa components can be customized once and used many times. When you update a component all instances within your prototype will change.</p>
-					<p>As you look at the components below you will single tags that render entire components. Behind the scenes the actual HTML exists but it is bound to data. Check out the raw component for <a href="components/dropdown/button.html" target="_new">dropdown buttons</a> and view the source.</p>
+					<p>As you look at the components below you will single tags that render entire components. Behind the scenes the actual HTML exists but it is bound to data. Check out the raw component for <a href="components/dropdown/button.html" target="_new" >dropdown buttons</a> and view the source.</p>
 
 					<h3 class="sherpa">The anatomy of a Sherpa Component:</h3>
 
@@ -298,7 +315,7 @@
 
 
 <h3 class="sherpa da-clear ta-clear ma-clear">Data behind dropdown</h3>
-          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Below is an example of a data object provided by the  <code>simple_dropdown_data</code> reference above. This structure should be added to the prototype application <a href="assets/js/app.js" class="code_sample_popup">assets/js/app.js</a>.</p>
+          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Below is an example of a data object provided by the  <code>simple_dropdown_data</code> reference above. This structure should be added to the prototype application <a href="assets/js/app.js" class="code_sample_popup" >assets/js/app.js</a>.</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 simple_links_data : {
@@ -462,23 +479,220 @@ label : Sherpa.msg('textkey_label'),
 					<h3 class="sherpa">Overview</h3>
 					<p>Tabs is a prevalent navigation system throughout the web.  However, when we say "tabs" we mean any list of buttons, tabs, links, etc. that serve a purpose of switching panels or sub sections of content without leaving the page, not just something that looks like tabs.</p>
 
+					<h3 class="sherpa">Types of "Tabs"</h3>
+					<hr>			
 
-					<div data-bind="component: { 
-						name :'tabs',
-						data : sample_tab_section_data
-					}"></div>
+					<h3 class="sherpa" id="#tabs-standard">Standard Tabs</h3>
+					<h4 class="sherpa">Example</h4>
+          <div class="bs-docs-example">
+            <div class="tabbable">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#standard-tab1" data-toggle="tab">Section 1</a></li>
+                <li><a href="#standard-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#standard-tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="standard-tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane" id="standard-tab2">
+                  <p>Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="tab-pane" id="standard-tab3">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
 
-					<h3 class="sherpa">Types of Tabs</h3>
-					<hr>
-					<ul>
-						<li><a href="#tabs-standard">Tabs</a></li>
-						<li><a href="#tabs-pills">Pills</a></li>
-						<li><a href="#tabs-links">Links</a></li>
-					</ul>
-					
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="tabbable"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
+    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
 
-					<h3 class="sherpa" id="#tabs-standard">Tabs</h3>
-					<p></p>
+          <h4>Color in tabs</h4>
+          <p>You can color or stroke any tabs by addind the color to the tabbable class. For example: <code>tabbable blue</code></p>
+
+          <div class="bs-docs-example">
+            <div class="tabbable blue">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#colored-tab1" data-toggle="tab">Section 1</a></li>
+                <li><a href="#standard-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#standard-tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="colored-tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane" id="colored-tab2">
+                  <p>Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="tab-pane" id="colored-tab3">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="tabbable blue"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h4>Requires jQuery plugin</h4>
+          <p>All tabbable tabs are powered by our lightweight jQuery plugin. Read more about how to bring tabbable tabs to life <a href="./javascript.html#tabs" >on the JavaScript docs page</a>.</p>
+
+          <h3>Tabbable in any direction</h3>
+
+          <h4>Tabs on the bottom</h4>
+          <p>Flip the order of the HTML and add a class to put tabs on the bottom.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-below">
+              <div class="tab-content">
+                <div class="tab-pane active" id="A">
+                  <p>I'm in Section A.</p>
+                </div>
+                <div class="tab-pane" id="B">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="C">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+                <li><a href="#B" data-toggle="tab">Section 2</a></li>
+                <li><a href="#C" data-toggle="tab">Section 3</a></li>
+              </ul>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>Tabs on the left</h4>
+          <p>Swap the class to put tabs on the left.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
+                <li><a href="#lB" data-toggle="tab">Section 2</a></li>
+                <li><a href="#lC" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="lA">
+                  <p>I'm in Section A.</p>
+                </div>
+                <div class="tab-pane" id="lB">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="lC">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+          <h4>Tabs on the right</h4>
+          <p>Swap the class to put tabs on the right.</p>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-right">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#rA" data-toggle="tab">Section 1</a></li>
+                <li><a href="#rB" data-toggle="tab">Section 2</a></li>
+                <li><a href="#rC" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="rA">
+                  <p>I'm in Section A.</p>
+                </div>
+                <div class="tab-pane" id="rB">
+                  <p>Howdy, I'm in Section B.</p>
+                </div>
+                <div class="tab-pane" id="rC">
+                  <p>What up girl, this is Section C.</p>
+                </div>
+              </div>
+            </div> <!-- /tabbable -->
+          </div>
+<pre class="prettyprint linenums">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+  &lt;div class="tab-content"&gt;
+    ...
+  &lt;/div&gt;
+&lt;/div&gt;
+</pre>
+
+
+
+
+
+
 
 
 					<h3 class="sherpa" id="#tabs-pills">Pills</h3>
@@ -843,8 +1057,8 @@ label : Sherpa.msg('textkey_label'),
 					<hr>
 					<p>There are two category of alerts available: <p>
 					<ul>
-						<li>Page level alert: This is a rendering of the alert component on the top of each page which can be called at any time with javascript.<li>
-							<li>General alerts: Can be inserted anywhere on a page.</li>
+						<li>Page level alert: This is a rendering of the alert component on the top of each page which can be called at any time with javascript.</li>
+						<li>General alerts: Can be inserted anywhere on a page.</li>
 					</ul>
 
 					<h3 class="sherpa">Page Level Alerts</h3>
@@ -892,13 +1106,13 @@ Sherpa.publish( "alert_message", {
 &lt;div data-bind="component: { 
 	name :'alerts', 
 	options: {
-        type: 'error',
-        icon:'icon-alert-notice',
-        title: 'Error!',
-        message: 'This is an error message.',
-        dismiss:false
-    }
-  }">
+		type: 'error',
+		icon:'icon-alert-notice',
+		title: 'Error!',
+		message: 'This is an error message.',
+		dismiss:false
+	}
+}">
 &lt;/div></pre>
 
 					<h3 class="sherpa">Options</h3>
@@ -918,20 +1132,32 @@ Sherpa.publish( "alert_message", {
 					</ul>
 
 					<h3 class="sherpa">Examples</h3>
-					TODO: need to fix the types...
 					<div class="box sherpa-gray-stroke rounded-small">
 						<div class="da-all">
 							<div data-bind="component: { 
 								name :'alerts', 
 								options: {
 							        type: 'success',
-							        icon:'icon-alert-notice',
-							        title: 'Error!',
-							        message: 'This is an error message.',
+							        icon:'icon-checkmark',
+							        title: 'Success!',
+							        message: 'This is a successful message.',
 							        dismiss:false
 							    }
 						      }">
 							</div>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+	    type: 'success',
+	    icon:'icon-checkmark',
+	    title: 'Success!',
+	    message: 'This is a successful message.',
+	    dismiss:false
+	}
+}">
+&lt;/div></pre>
 						</div>
 					</div>
 					<div class="box sherpa-gray-stroke rounded-small">
@@ -943,10 +1169,22 @@ Sherpa.publish( "alert_message", {
 							        icon:'icon-alert-info',
 							        title: 'Something you should know!',
 							        message: 'This is an informational message message.',
-							        dismiss:false
+							        dismiss:true
 							    }
 						      }">
 							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+        type: 'information',
+        icon:'icon-alert-info',
+        title: 'Something you should know!',
+        message: 'This is an informational message message.',
+        dismiss:true
+	}
+}">
+&lt;/div></pre>							
 						</div>
 					</div>
 					<div class="box sherpa-gray-stroke rounded-small">
@@ -962,6 +1200,18 @@ Sherpa.publish( "alert_message", {
 							    }
 						      }">
 							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+	    type: 'attention',
+	    icon:'icon-alert-notice',
+	    title: 'Warning!',
+	    message: 'This is an attention message.',
+	    dismiss:false
+	}
+}">
+&lt;/div></pre>
 						</div>
 					</div>
 					<div class="box sherpa-gray-stroke rounded-small">
@@ -977,15 +1227,455 @@ Sherpa.publish( "alert_message", {
 							    }
 						      }">
 							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+	name :'alerts', 
+	options: {
+        type: 'error',
+        icon:'icon-alert-error',
+        title: 'Error!',
+        message: 'This is an error message.',
+        dismiss:false
+	}
+}">
+&lt;/div></pre>
+							
 						</div>
 					</div>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<div class="da-all">
+							<div data-bind="component: { name :'alerts' }">
+							</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+
+No options, displays all default values
+&lt;div data-bind="component: { name :'alerts'}">
+&lt;/div></pre>
+							
+						</div>
+					</div>
+
 				</article>
 
 
+<!-- Modals -->
+
+		<article id="modals" class="bottom-offset-large">
+          <h2 class="sherpa">Modals</h2>
+					<hr>
+
+
+          <h3>Examples</h3>
+          <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+
+          <h3>Static example</h3>
+          <p>A rendered modal with header, body, and set of actions in the footer.</p>
+
+          <div class="bs-docs-example">
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+                <h3>Modal header</h3>
+              </div>
+              <div class="modal-body">
+                <p>One fine body…</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn">Close</a>
+                <a href="#" class="btn btn-secondary">Save changes</a>
+              </div>
+            </div>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+
+&lt;div class="modal hide fade">
+  &lt;div class="modal-header">
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true">&times;&lt;/button>
+    &lt;h3>Modal header&lt;/h3>
+  &lt;/div>
+  &lt;div class="modal-body">
+    &lt;p>One fine body…&lt;/p>
+  &lt;/div>
+  &lt;div class="modal-footer">
+    &lt;a href="#" class="btn">Close&lt;/a>
+    &lt;a href="#" class="btn btn-secondary">Save changes&lt;/a>
+  &lt;/div>
+&lt;/div>
+
+</pre>
+
+          <h3>Live demo</h3>
+          <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+          <!-- sample modal content -->
+          <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+            <div class="modal-header">
+              <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+              <h3 id="myModalLabel">Modal Heading</h3>
+            </div>
+            <div class="modal-body">
+              <h4>Text in a modal</h4>
+              <p>Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem.</p>
+
+              <h4>Popover in a modal</h4>
+              <p>This <a href="#" role="button" class="btn popover-test" title="" data-content="And here's some amazing content. It's very engaging. right?" data-original-title="A Title">button</a> should trigger a popover on click.</p>
+
+              <h4>Tooltips in a modal</h4>
+              <p><a href="#" class="tooltip-test" title="" data-original-title="Tooltip">This link</a> and <a href="#" class="tooltip-test" title="" data-original-title="Tooltip">that link</a> should have tooltips on hover.</p>
+
+              <hr>
+
+              <h4>Overflowing text to show optional scrollbar</h4>
+              <p>We set a fixed <code>max-height</code> on the <code>.modal-body</code>. Watch it overflow with all this extra lorem ipsum text we've included.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+              <p>Cras mattis consectetur purus sit amet fermentum. Cras justo odio, dapibus ac facilisis in, egestas eget quam. Morbi leo risus, porta ac consectetur ac, vestibulum at eros.</p>
+              <p>Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor.</p>
+              <p>Aenean lacinia bibendum nulla sed consectetur. Praesent commodo cursus magna, vel scelerisque nisl consectetur et. Donec sed odio dui. Donec ullamcorper nulla non metus auctor fringilla.</p>
+            </div>
+            <div class="modal-footer">
+              <button class="btn" data-dismiss="modal">Close</button>
+              <button class="btn btn-primary">Save changes</button>
+            </div>
+          </div>
+          <div class="bs-docs-example" style="padding-bottom: 24px;">
+            <a data-toggle="modal" href="#myModal" class="btn btn-secondary btn-large">Launch demo modal</a>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;!-- Button to trigger modal -->
+&lt;a href="#myModal" role="button" class="btn" data-toggle="modal">Launch demo modal&lt;/a>
+ 
+&lt;!-- Modal -->
+&lt;div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
+  &lt;div class="modal-header">
+    &lt;button type="button" class="close" data-dismiss="modal" aria-hidden="true">×&lt;/button>
+    &lt;h3 id="myModalLabel">Modal header&lt;/h3>
+  &lt;/div>
+  &lt;div class="modal-body">
+    &lt;p>One fine body…&lt;/p>
+  &lt;/div>
+  &lt;div class="modal-footer">
+    &lt;button class="btn" data-dismiss="modal" aria-hidden="true">Close&lt;/button>
+    &lt;button class="btn btn-primary">Save changes&lt;/button>
+  &lt;/div>
+&lt;/div>
+
+</pre>
+
+
+          <hr class="bs-docs-separator">
+
+
+          <h2 class="sherpa">Usage</h2>
+
+          <h3>Via data attributes</h3>
+          <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#myModal"</span><span class="tag">&gt;</span><span class="pln">Launch modal</span><span class="tag">&lt;/button&gt;</span></li></ol></pre>
+
+          <h3>Via JavaScript</h3>
+          <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">(</span><span class="pln">options</span><span class="pun">)</span></li></ol></pre>
+
+          <h3>Options</h3>
+          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 100px;">Name</th>
+               <th style="width: 50px;">type</th>
+               <th style="width: 50px;">default</th>
+               <th>description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>backdrop</td>
+               <td>boolean</td>
+               <td>true</td>
+               <td>Includes a modal-backdrop element. Alternatively, specify <code>static</code> for a backdrop which doesn't close the modal on click.</td>
+             </tr>
+             <tr>
+               <td>keyboard</td>
+               <td>boolean</td>
+               <td>true</td>
+               <td>Closes the modal when escape key is pressed</td>
+             </tr>
+             <tr>
+               <td>show</td>
+               <td>boolean</td>
+               <td>true</td>
+               <td>Shows the modal when initialized.</td>
+             </tr>
+             <tr>
+               <td>remote</td>
+               <td>path</td>
+               <td>false</td>
+               <td><p>If a remote url is provided, content will be loaded via jQuery's <code>load</code> method and injected into the <code>.modal-body</code>. If you're using the data api, you may alternatively use the <code>href</code> tag to specify the remote source. An example of this is shown below:</p>
+              <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><code><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"remote.html"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#modal"</span><span class="tag">&gt;</span><span class="pln">click me</span><span class="tag">&lt;/a&gt;</span></code></li></ol></pre></td>
+             </tr>
+            </tbody>
+          </table>
+
+          <h3>Methods</h3>
+          <h4>.modal(options)</h4>
+          <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">({</span></li><li class="L1"><span class="pln">  keyboard</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span></li><li class="L2"><span class="pun">})</span></li></ol></pre>
+          <h4>.modal('toggle')</h4>
+          <p>Manually toggles a modal.</p>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">(</span><span class="str">'toggle'</span><span class="pun">)</span></li></ol></pre>
+          <h4>.modal('show')</h4>
+          <p>Manually opens a modal.</p>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">)</span></li></ol></pre>
+          <h4>.modal('hide')</h4>
+          <p>Manually hides a modal.</p>
+          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">(</span><span class="str">'hide'</span><span class="pun">)</span></li></ol></pre>
+          <h3>Events</h3>
+          <p>Bootstrap's modal class exposes a few events for hooking into modal functionality.</p>
+          <table class="table table-bordered table-striped">
+            <thead>
+             <tr>
+               <th style="width: 150px;">Event</th>
+               <th>Description</th>
+             </tr>
+            </thead>
+            <tbody>
+             <tr>
+               <td>show</td>
+               <td>This event fires immediately when the <code>show</code> instance method is called.</td>
+             </tr>
+             <tr>
+               <td>shown</td>
+               <td>This event is fired when the modal has been made visible to the user (will wait for css transitions to complete).</td>
+             </tr>
+             <tr>
+               <td>hide</td>
+               <td>This event is fired immediately when the <code>hide</code> instance method has been called.</td>
+             </tr>
+             <tr>
+               <td>hidden</td>
+               <td>This event is fired when the modal has finished being hidden from the user (will wait for css transitions to complete).</td>
+             </tr>
+            </tbody>
+          </table>
+<pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">on</span><span class="pun">(</span><span class="str">'hidden'</span><span class="pun">,</span><span class="pln"> </span><span class="kwd">function</span><span class="pln"> </span><span class="pun">()</span><span class="pln"> </span><span class="pun">{</span></li><li class="L1"><span class="pln">  </span><span class="com">// do something…</span></li><li class="L2"><span class="pun">})</span></li></ol></pre>
+
+				</article>
+				<article id="collapse" class="bottom-offset-large">
+					<h2 class="sherpa">Collapse</h2>
+					<hr>
+
+					<h3 class="sherpa">Examples</h3>
+
+					<h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed">
+					  Collapsible area from an h3 headline
+					</h3>
+					<div id="collapse-1" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+
+					<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed">
+  Collapsible area from an h3 headline
+&lt;/h3>
+&lt;div id="collapse-1" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>				
+
+					<h3>Collapsible area from an h3 headline with optional "collapse-ruled" class</h3>
+
+					<h3 data-toggle="collapse" data-target="#collapse-1-ruled" class="collapsed collapse-ruled">
+					  Collapsible area from an h3 headline 
+					</h3>
+					<div id="collapse-1-ruled" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<h3 data-toggle="collapse" data-target="#collapse-2-ruled" class="collapsed collapse-ruled">
+					  Collapsible area from an h3 headline
+					</h3>
+					<div id="collapse-2-ruled" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<h3 data-toggle="collapse" data-target="#collapse-3-ruled" class="collapsed collapse-ruled">
+					  Collapsible area from an h3 headline
+					</h3>
+					<div id="collapse-3-ruled" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed collapse-ruled">
+  Collapsible area from an h3 headline
+&lt;/h3>
+&lt;div id="collapse-1" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>				
+
+					<h3 class="sherpa">Accordion group with h3 headlines and optional "collapse-ruled" class</h3>
+					<div class="accordion">
+						<h3 data-toggle="collapse" data-target="#accordion-1-ruled" class="collapsed collapse-ruled">
+						  Collapsible area from an h3 headline 
+						</h3>
+						<div id="accordion-1-ruled" class="collapse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<h3 data-toggle="collapse" data-target="#accordion-2-ruled" class="collapsed collapse-ruled">
+						  Collapsible area from an h3 headline
+						</h3>
+						<div id="accordion-2-ruled" class="collapse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+						<h3 data-toggle="collapse" data-target="#accordion-3-ruled" class="collapsed collapse-ruled">
+						  Collapsible area from an h3 headline
+						</h3>
+						<div id="accordion-3-ruled" class="collapse">
+							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+							consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+						</div>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="accordion">
+	&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed collapse-ruled">
+	  ...
+	&lt;/h3>
+	&lt;div id="collapse-1" class="collapse">
+		&lt;p>...&lt;/p>
+	&lt;/div>
+	&lt;h3 data-toggle="collapse" data-target="#collapse-2" class="collapsed collapse-ruled">
+	  ...
+	&lt;/h3>
+	&lt;div id="collapse-2" class="collapse">
+		&lt;p>...&lt;/p>
+	&lt;/div>
+	&lt;h3 data-toggle="collapse" data-target="#collapse-3" class="collapsed collapse-ruled">
+	  ...
+	&lt;/h3>
+	&lt;div id="collapse-3" class="collapse">
+		&lt;p>...&lt;/p>
+	&lt;/div>		
+&lt;/div>
+</pre>		
+
+					<p>&nbsp;</p>	
+					<h3>Collapsible area from a link with arrow</h3>
+
+					<button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-2">
+					  Link <span class="caret"></span>
+					</button>
+					<div id="collapse-2" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-2">
+  link &lt;span class="caret">&lt;/span>
+&lt;/button>
+&lt;div id="collapse-2" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>			
+					<h3 class="sherpa">Collapsible area from a link that changes - </h3>
+					Lorem ispum - <button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-3">
+					  <span class="more">more</span><span class="less">less</span>
+					</button>
+					<div id="collapse-3" class="collapse">
+						<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+						tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+						quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+						consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+						cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+						proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+<p>&nbsp;</p>
+					<h4 class="sherpa">Markup</h4>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+Lorem ispum - &lt;button class="btn-link collapsed" data-toggle="collapse" data-target="#collapse-3">
+  &lt;span class="more">more&lt;/span>&lt;span class="less">less&lt;/span>
+&lt;/button>
+&lt;div id="collapse-3" class="collapse">
+	&lt;p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+	tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+	quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+	consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+	cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+	proident, sunt in culpa qui officia deserunt mollit anim id est laborum.&lt;/p>
+&lt;/div>
+
+</pre>			
+
+				</article>
 
 			</section>
 		</div>
 	</section>
+
+
 
 
 

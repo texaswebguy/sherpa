@@ -169,6 +169,8 @@ Sherpa.uuid = function() {
 }
 
 Sherpa.insertComponent = function(component_name, component_type, element, bindingContext, options) {
+
+
 	var filename, uuid = "",html;
 	if(viewModel.localhost) {
 		// TODO workaround to circumvent browser cache... need to look into this better

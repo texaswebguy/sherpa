@@ -53,18 +53,7 @@ if(location.hostname === "localhost") {
 
 
 Eve.scope("*", function(){
-	this.listen("[class*=-toggle]","click", function(event){
-		event.preventDefault();
-		$(event.target).toggleClass('open');
-		$(event.target).find('[class^=icon-triangle]').toggleClass('icon-triangle-down icon-triangle-up');
-		var id = $(event.target).attr('href');
-		if(id){
-			$(id).slideToggle();
-		} else {
-			console.error("The anchor tag must have a legitimate id/class target in the href");
-		}
-		
-	});
+
 	this.listen(".tabbable", "load", function(){
 		$('.tabbable .nav li').removeClass('active');
 		$('.tabbable .nav li:first').addClass('active');
