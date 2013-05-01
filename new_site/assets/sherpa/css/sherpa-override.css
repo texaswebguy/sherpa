@@ -735,7 +735,7 @@ input.input-xlarge {
 }
 
 input.input-xxlarge {
-  width: 530px;
+  width: 1530px;
 }
 
 .input-prepend input.input-mini {
@@ -2495,7 +2495,7 @@ you can use the generic selector below, but it's slower:
 }
 
 
-<<<<<<< HEAD
+
 /* Labels and badges*/
 
 .badge {
@@ -2504,7 +2504,8 @@ you can use the generic selector below, but it's slower:
   -webkit-border-radius: 9px;
   -moz-border-radius: 9px;
   border-radius: 9px;
-=======
+  }
+
 /* MODALS
 -------------------------------------------------- */
 
@@ -2635,7 +2636,6 @@ h3[data-toggle=collapse]:before {
 }
 .collapsed[data-toggle=collapse]:hover .more, [data-toggle=collapse]:hover .less {
   text-decoration:underline;
->>>>>>> cdd5e8bf1f79a6b17ed16ed0b052dae08e3d2e8e
 }
 
 
@@ -2652,6 +2652,10 @@ Breakpoints
   body {
     padding-right:0;
     padding-left:0;
+  }
+
+  input.input-xxlarge {
+    width: 100%;
   }
 
 
