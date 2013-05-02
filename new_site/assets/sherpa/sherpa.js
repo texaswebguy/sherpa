@@ -303,14 +303,6 @@ Sherpa.ready("dateFormat", function(){
 			// turn on the page
 		    	$('html').addClass('sherpaReady');
 
-			// Enables prototype QA if configured
-			// TODO this is way out in terms of building something.  It's just a placeholder for now
-			if(SHERPA.ENABLE_PROTOTYPE_QA){
-				Sherpa.js(
-					{ sherpaPrototypeQA: SHERPA.PROTOTYPE_QA_JS}
-				);
-
-			}
 			// Mark the end of the sherpa init sequence
 			Sherpa.counter("Sherpa INIT");
 		}); // end Sherpa.ready - local app

@@ -83,59 +83,66 @@ Sherpa.linkedmsg = function (textkey, t_data) {
     return msg;
 }
 
+
 Sherpa.formatCurrency = function(number_data){
-	var amount, format, position;
-	if(_.isObject(number_data)){
-				try {
-					amount = parseFloat(number_data.amount);
-					if(number_data.format) { 
-						if(number_data.format == 'decimal') {
-							format = number_data.format;
-						} else {
-							format = 'nodecimal';
-						}
-					}
-				} catch(err) {
-					console.error('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}')
-				}
-			} else {
-				format = 'nodecimal'
-				amount = Math.ceil(number_data);
-			}
+
+	Sherpa.ready("i18n", function(){
+
+		var amount, format, position;
+		if(_.isObject(number_data)){
 			try {
-				format = viewModel.config.currency['format_'+format];
-				// TODO what if viewModel.config.currency is not configured correctly?
-				amount = amount * viewModel.config.currency.conversion_rate;
-				amount = _.str.numberFormat(amount, format.decimals, format.decimal_separator, format.thousands_separator);
-				position = viewModel.config.currency.symbol_position;
-				if (position == "left") {
-					return viewModel.config.currency.symbol+amount;
-				} else {
-					return amount+viewModel.config.currency.symbol;
+				amount = parseFloat(number_data.amount);
+				if(number_data.format) { 
+					if(number_data.format == 'decimal') {
+						format = number_data.format;
+					} else {
+						format = 'nodecimal';
+					}
 				}
-			} catch (err) {
-				var error_msg = "Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json"
-				console.error(error_msg);
-				return { status: 'failed', error_msg: error_msg };
+			} catch(err) {
+				Sherpa.QA.logEntry('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}',"functions, format error,sherpa-utils:formatCurrency");
 			}
+		} else {
+			format = 'nodecimal'
+			amount = Math.ceil(number_data);
+		}
+		try {
+			format = viewModel.config.currency['format_'+format];
+			// TODO what if viewModel.config.currency is not configured correctly?
+			amount = amount * viewModel.config.currency.conversion_rate;
+			amount = _.str.numberFormat(amount, format.decimals, format.decimal_separator, format.thousands_separator);
+			position = viewModel.config.currency.symbol_position;
+			if (position == "left") {
+				return viewModel.config.currency.symbol+amount;
+			} else {
+				return amount+viewModel.config.currency.symbol;
+			}
+		} catch (err) {
+			Sherpa.QA.logEntry("Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json","i18n, ajax errors, sherpa-utils:formatCurrency");
+			return { status: 'failed', error_msg: error_msg };
+		}
+	});
 }
 Sherpa.dateFormat = function(date) {
-	var date_format;
-	if(_.isObject(date)){
-		try {
-			date_format = date.format;
-			date = date.date;
-		} catch(err) {
-			console.error('Bad formatdate: data-bind:="formatdate: {\'date\': date_var, \'format\' : \'dddd, mmmm dd, yyyy\'}')
+	Sherpa.ready("i18n", function(){
 
-			//data-bind:="formatdatedate: {'date': date_var, 'format' : 'dddd, mmmm dd, yyyy'}"
-			date = new Date();
+		var date_format;
+		if(_.isObject(date)){
+			try {
+				date_format = date.format;
+				date = date.date;
+			} catch(err) {
+				Sherpa.QA.logEntry('Bad formatdate: data-bind:="formatdate: {\'date\': date_var, \'format\' : \'dddd, mmmm dd, yyyy\'}',"functions, format error, sherpa-utils:dateFormat");
+
+				//data-bind:="formatdatedate: {'date': date_var, 'format' : 'dddd, mmmm dd, yyyy'}"
+				date = new Date();
+				date_format = viewModel.config.default_date_format;
+			}
+		} else {
 			date_format = viewModel.config.default_date_format;
 		}
-	} else {
-		date_format = viewModel.config.default_date_format;
-	}
-	return dateFormat(date, date_format);
+		return dateFormat(date, date_format);
+	});
 }
 Sherpa.urlQuery = function () {
 	if(location.search) {
@@ -193,7 +200,7 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 	}
 	//console.log("fetching :",filename)
 
-	amplify.request({
+	Sherpa.request({
 		resourceId: "getComponentHTML", 
 		data: {filename: "components/"+component_name+"/"+filename}, 
 		success: function(responseHTML, status){
@@ -204,11 +211,12 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 				bindingContext.component_options = options;
 			}
 			ko.applyBindingsToDescendants(bindingContext, element);
-			amplify.publish( "register_page_event", component_name );		    					
+			Sherpa.publish( "register_page_event", component_name );		    					
 		},
 		error: function( data, status ) {
 			//no module exists
 			filename = filename.split('#')[0];
+			Sherpa.QA.logEntry('Missing component: filename '+'components/'+component_name+'/'+filename+' does not exist',"missing component, sherpa-utils:insertComponent");
 			var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Component</h4> <p>'+'components/'+component_name+'/'+filename+' does not exist</p></div>';
 			$(element).html(responseHTML);
 		}
@@ -262,7 +270,7 @@ Sherpa.namespace = function ( source, framework, propList ) {
                 //TODO - clone to Sherpa - future goal
                 Sherpa[property] = source[property];
             } else {
-                console.error(property + " of " + framework + " aready exists on Sherpa.");
+                Sherpa.QA.logEntry(property + " of " + framework + " aready exists on Sherpa.","namespace collision, sherpa-utils:namespace");
             }
         } else {
             console.log(property + " of " + framework + " is excluded from Sherpa namespace.");
@@ -278,9 +286,9 @@ Sherpa.namespace = function ( source, framework, propList ) {
  * http://addyosmani.com/blog/essential-js-namespacing/
  */
 Sherpa.ready("amplify", function() {
-    var includeProperties = ["publish", "subscribe", "unsubscribe", "store", "request"];
+    var props = ["publish", "subscribe", "unsubscribe", "store", "request"];
 
-    Sherpa.namespace(amplify, "amplify", includeProperties);
+    Sherpa.namespace(amplify, "amplify", props);
 })
 
 Sherpa.ready("sherpaEventManager", function() {
@@ -288,7 +296,12 @@ Sherpa.ready("sherpaEventManager", function() {
     Sherpa.namespace(Eve, "Eve", props);
 });
 
-//_.extend(Sherpa, amplify); //puts all the amplify functions in the Sherpa namespace
+Sherpa.ready("csvParser", function() {
+    var props = ["defaults", "hooks", "parsers", "toArray", "toArrays", "toObjects", "fromArrays", "fromObjects2CSV"];
+    Sherpa.namespace($.csv, "jQuery-CSV", props);
+});
+
+
 
 // AJAX Data services
 
