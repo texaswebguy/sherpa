@@ -80,16 +80,16 @@
     </div>  
     <!-- ko if: forgot_password -->
     <div class="da-all ta-all ma-all">
-      <p class="blue_text"><a href="#" data-bind="msg: 'text_login_forgot_password'" class="pseudo-forgot-password">Forgot Password</a></p>
+      <p class="blue_text"><button data-bind="msg: 'text_login_forgot_password'" class="pseudo-forgot-password">Forgot Password</button></p>
       <!-- TODO need to create a modal or something here -->
     </div>
     <!-- /ko --> 
 
     <div class="da-all ta-all ma-all">
       <!-- ko if: create_account -->
-      <a href="#" class="btn btn-tertiary pseudo-create-account" data-bind="msg: 'button_login_create_account'">Create an Account</a>
+      <button class="btn btn-tertiary pseudo-create-account" data-bind="msg: 'button_login_create_account'">Create an Account</button>
       <!-- /ko -->
-      <a href="#" class="btn btn-secondary pseudo-login-toggle" data-bind="msg: 'button_login_sign_in'">Sign In</a>
+      <button class="btn btn-secondary pseudo-login-toggle" data-bind="msg: 'button_login_sign_in'">Sign In</button>
     </div>
   </fieldset>
 </form>
