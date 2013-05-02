@@ -1287,7 +1287,7 @@ legend + .control-group {
   display: inline-block;
   *display: inline;
   padding: 7px 11px;
-  margin-bottom: 0;
+  margin-bottom: 10px;
   *margin-left: .3em;
   line-height: 18px;
   *line-height: 18px;
@@ -2654,8 +2654,17 @@ you can use the generic selector below, but it's slower:
 }
 
 
+/* tooltips */
+.bs-docs-tooltip-examples {
+  text-align: center;
+  margin: 0 0 10px;
+  list-style: none;
+}
 
-
+.bs-docs-tooltip-examples li {
+  display: inline;
+  padding: 0 10px;
+}
 
 
 /* BREADCRUMBS
@@ -2721,6 +2730,10 @@ you can use the generic selector below, but it's slower:
 /* MODALS
 -------------------------------------------------- */
 
+.modal {
+  padding:20px;
+}
+
 .modal-header .close:before {
     font-family: 'icon-dell-mini';
     speak: none;
@@ -2730,51 +2743,59 @@ you can use the generic selector below, but it's slower:
     -webkit-font-smoothing: antialiased;
     content: "U";
     font-size:13px;
-    margin-right:40px
+    margin-right:0px
 }
 .modal-header {
-    margin-left:20px;
-    padding: 9px 0px 0px 0px;
+    position: relative;
+    margin-left:0px;
+    padding: 0px 0px 0px 0px;
     border-bottom: none;
+    /*border-bottom: 1px solid #ddd;*/
 }
 .modal-header h3 {
-    border-bottom: 1px solid #aaa;
-    margin-right:40px;
-    padding-bottom:10px;
+    /*border-bottom: 1px solid #aaa;*/
+    /*margin-right:40px;
+    padding-bottom:10px;*/
 }
 
 .modal-body {
     position: relative;
     overflow-y: auto;
     max-height: 400px;
-    margin:0px 20px 0 20px;
-    border-bottom: 1px solid #aaa;
-    width:520px;
-    padding:10px 0 0 0;
+    padding:10px 0;
+    margin:10px 0 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    /*width:520px;*/
 }
 
 .modal-body p {
-    margin-bottom:10px;
+    margin-bottom:0;
 }
 
-.modal-body:after { 
+/*.modal-body:after { 
     content:" "
     height:1px;
     background:red;
-}
+}*/
 
 .modal-footer {
-    padding: 15px 20px 30px;
+    padding: 0;
     margin-bottom: 0;
     text-align: right;
     background-color: #fff;
     border-top: none;
-    -webkit-border-radius: 0 0 6px 6px;
+    /*-webkit-border-radius: 0 0 6px 6px;
     -moz-border-radius: 0 0 6px 6px;
     border-radius: 0 0 6px 6px;
     -webkit-box-shadow: inset 0 1px 0 #ffffff;
     -moz-box-shadow: inset 0 1px 0 #ffffff;
-    box-shadow: inset 0 1px 0 #ffffff;
+    box-shadow: inset 0 1px 0 #ffffff;*/
+}
+
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 10px;
 }
 
 
