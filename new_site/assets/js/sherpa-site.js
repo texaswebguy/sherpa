@@ -329,7 +329,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
     // tooltip demo
-    $('.tooltip-demo').tooltip({
+    $('#tooltips').tooltip({
       selector: "a[rel=tooltip]"
     })
 
@@ -337,7 +337,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
     $('.popover-test').popover()
 
     // popover demo
-    $("a[data-toggle=popover]")
+    $("a[rel=popover]")
       .popover()
       .click(function(e) {
         e.preventDefault()
