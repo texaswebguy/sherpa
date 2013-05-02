@@ -243,7 +243,7 @@ ul.unstyled.icons li {
     list-style: none;
   }
 
-  .nav-sherpa a {
+  .nav-sherpa ul li a {
     color:#D4CA9B;
     text-decoration: none;
     margin:0;
@@ -253,13 +253,15 @@ ul.unstyled.icons li {
     -o-transition: color 0.2s ease-in; 
   }
 
-  .nav-sherpa a:hover {
+  .nav-sherpa ul li a:hover {
     color:#F0592C;
     text-decoration: none;
-    margin:0;
-    padding:20px;
   }
 
+  .nav-sherpa ul li.active a {
+    color:#ffffff;
+    text-decoration: none;
+  }
 
 /* intro */
 
