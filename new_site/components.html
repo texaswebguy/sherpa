@@ -12,8 +12,7 @@
 	    <script type="text/javascript">
             var SHERPA_CONFIG_OVERRIDES = {};
                 SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"},
-                	{ waypoints: "assets/sherpa/lib/waypoints.min.js"}
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
             	];
 				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
 					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
@@ -102,13 +101,7 @@
 		<div class="wrapper">
 			<aside class="da1-da3 ta-all mb-all">
 				<div class="bs-docs-sidebar">
-					<ul class="nav nav-list bs-docs-sidenav" 
-						data-spy="affix" 
-						data-offset-top="270" 
-						data-waypoint-trigger="true" 
-						data-waypoint-offsetUp="70" 
-						data-waypoint-offsetDown="100" 
-						data-waypoint-target="article">
+					<ul class="nav nav-list bs-docs-sidenav">
 			          <li class="active"><a class="sherpa-link" href="#overview">Overview</a></li>
 			          <li><a class="sherpa-link" href="#page">Page</a></li>
 			          <li><a class="sherpa-link" href="#dropdowns">Dropdowns</a></li>
@@ -197,7 +190,6 @@
 						</div>
 					</div>
 
-
 <style>
 .caret {
 	display: inline-block;
@@ -231,7 +223,7 @@
 
 				<h3 class="sherpa">Dropdown triggers</h3>
 					<p>Dropdowns are triggered by various elements such as links and buttons</p>
-					<div class="da-all">
+					<div class="da-all bs-docs-example">
 						<div class="da4-da6 ta1-ta3 ma1">
 							<div class="dropdown">
 								<a href="#" data-toggle="dropdown">From a link <span class="caret"></span></a>
@@ -473,9 +465,6 @@ label : Sherpa.msg('textkey_label'),
 					<h3 class="sherpa">Overview</h3>
 					<p>Tabs is a prevalent navigation system throughout the web.  However, when we say "tabs" we mean any list of buttons, tabs, links, etc. that serve a purpose of switching panels or sub sections of content without leaving the page, not just something that looks like tabs.</p>
 
-					<h3 class="sherpa">Types of "Tabs"</h3>
-					<hr>			
-
 					<h3 class="sherpa" id="#tabs-standard">Standard Tabs</h3>
 					<h4 class="sherpa">Example</h4>
           <div class="bs-docs-example">
@@ -531,16 +520,204 @@ label : Sherpa.msg('textkey_label'),
   &lt;/div&gt;
 &lt;/div&gt;
 </pre>
+<p>&nbsp;</p>
 
-          <h4>Color in tabs</h4>
-          <p>You can color or stroke any tabs by addind the color to the tabbable class. For example: <code>tabbable blue</code></p>
+		<h4 class="sherpa">Tabs below</h4>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-below">
+              <div class="tab-content">
+                <div class="tab-pane active" id="down-tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane" id="down-tab2">
+                  <p>Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="tab-pane" id="down-tab3">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#down-tab1" data-toggle="tab">Section 1</a></li>
+                <li><a href="#down-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#down-tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+            </div> <!-- /tabbable -->
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="tabbable tabs-below"&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+
+<h4 class="sherpa">Tabs left</h4>
+          <div class="bs-docs-example">
+            <div class="tabbable tabs-left">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#left-tab1" data-toggle="tab">Really long Section 1</a></li>
+                <li><a href="#left-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#left-tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="left-tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane" id="left-tab2">
+                  <p>Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="tab-pane" id="left-tab3">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+
+            </div> <!-- /tabbable -->
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;  
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+<p>&nbsp;</p>
+
+<h4 class="sherpa">Tabs right</h4>
 
           <div class="bs-docs-example">
-            <div class="tabbable blue">
+            <div class="tabbable tabs-right">
+              <div class="tab-content">
+                <div class="tab-pane active" id="right-tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane" id="right-tab2">
+                  <p>Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="tab-pane" id="right-tab3">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#right-tab1" data-toggle="tab">Really long Section 1</a></li>
+                <li><a href="#right-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#right-tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+            </div> <!-- /tabbable -->
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="tabbable tabs-right"&gt;
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;
+&lt;/div&gt;
+</pre>
+
+
+          <h4>Color in tabs</h4>
+          <p>You can color or stroke any tabs by addind the color to the tabbable class. For example: 
+          	<select class="input-medium tab_color_switcher">
+          		<option value="tabbable gray-dark">gray-dark</option>
+          		<option value="tabbable gray-medium">gray-medium</option>
+          		<option value="tabbable gray">gray</option>
+          		<option value="tabbable blue" selected>blue</option>
+          		<option value="tabbable teal">teal</option>
+          		<option value="tabbable green">green</option>
+          		<option value="tabbable yellow">yellow</option>
+          		<option value="tabbable orange">orange</option>
+          		<option value="tabbable red">red</option>
+          		<option value="tabbable berry">berry</option>
+          		<option value="tabbable purple">purple</option>
+          		<option value="tabbable darkred">darkred</option>
+          		<option value="tabbable navyblue">navyblue</option>
+          	</select>
+
+
+          </p>
+
+          <div class="bs-docs-example">
+            <div id="switch_my_color" class="tabbable blue">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#colored-tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#standard-tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#standard-tab3" data-toggle="tab">Section 3</a></li>
+                <li><a href="#colored-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#colored-tab3" data-toggle="tab">Section 3</a></li>
               </ul>
               <div class="tab-content">
                 <div class="tab-pane active" id="colored-tab1">
@@ -578,109 +755,6 @@ label : Sherpa.msg('textkey_label'),
 &lt;/div&gt;
 </pre>
 
-          <h4>Requires jQuery plugin</h4>
-          <p>All tabbable tabs are powered by our lightweight jQuery plugin. Read more about how to bring tabbable tabs to life <a href="./javascript.html#tabs">on the JavaScript docs page</a>.</p>
-
-          <h3>Tabbable in any direction</h3>
-
-          <h4>Tabs on the bottom</h4>
-          <p>Flip the order of the HTML and add a class to put tabs on the bottom.</p>
-          <div class="bs-docs-example">
-            <div class="tabbable tabs-below">
-              <div class="tab-content">
-                <div class="tab-pane active" id="A">
-                  <p>I'm in Section A.</p>
-                </div>
-                <div class="tab-pane" id="B">
-                  <p>Howdy, I'm in Section B.</p>
-                </div>
-                <div class="tab-pane" id="C">
-                  <p>What up girl, this is Section C.</p>
-                </div>
-              </div>
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
-                <li><a href="#B" data-toggle="tab">Section 2</a></li>
-                <li><a href="#C" data-toggle="tab">Section 3</a></li>
-              </ul>
-            </div> <!-- /tabbable -->
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable tabs-below"&gt;
-  &lt;div class="tab-content"&gt;
-    ...
-  &lt;/div&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    ...
-  &lt;/ul&gt;
-&lt;/div&gt;
-</pre>
-
-          <h4>Tabs on the left</h4>
-          <p>Swap the class to put tabs on the left.</p>
-          <div class="bs-docs-example">
-            <div class="tabbable tabs-left">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#lA" data-toggle="tab">Section 1</a></li>
-                <li><a href="#lB" data-toggle="tab">Section 2</a></li>
-                <li><a href="#lC" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="lA">
-                  <p>I'm in Section A.</p>
-                </div>
-                <div class="tab-pane" id="lB">
-                  <p>Howdy, I'm in Section B.</p>
-                </div>
-                <div class="tab-pane" id="lC">
-                  <p>What up girl, this is Section C.</p>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable tabs-left"&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    ...
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
-    ...
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-          <h4>Tabs on the right</h4>
-          <p>Swap the class to put tabs on the right.</p>
-          <div class="bs-docs-example">
-            <div class="tabbable tabs-right">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#rA" data-toggle="tab">Section 1</a></li>
-                <li><a href="#rB" data-toggle="tab">Section 2</a></li>
-                <li><a href="#rC" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="rA">
-                  <p>I'm in Section A.</p>
-                </div>
-                <div class="tab-pane" id="rB">
-                  <p>Howdy, I'm in Section B.</p>
-                </div>
-                <div class="tab-pane" id="rC">
-                  <p>What up girl, this is Section C.</p>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="tabbable tabs-right"&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    ...
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
-    ...
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
 
 
 

@@ -83,7 +83,9 @@ SHERPA.JS_CORE_LOAD = [
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
 	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
-	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},
+	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},,
+	{ waypoints: "assets/sherpa/lib/waypoints.min.js"},
+	{ waypointsSticky: "assets/sherpa/lib/waypoints-sticky.min.js"},
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 

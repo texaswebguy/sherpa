@@ -178,7 +178,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	$(window).resize(function() {
 		if(viewModel.isDesktop()){
 			$('#menu').show();
-			$('.bs-docs-sidenav').width($('.da1-da3').width());
 		} else {
 			//TODO Have to make sure that both tablet and mobile are indeed 100%
 			$('.bs-docs-sidenav').width('100%');
@@ -202,20 +201,20 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 	Eve.scope(".bs-docs-sidenav", function(){
-		this.listen("li.active a", "click", function(event){
+		this.listen(".bs-docs-sidenav li.active a", "click", function(event){
 			event.preventDefault();
 			event.stopPropagation();
 			$(event.target).parents(".bs-docs-sidenav").toggleClass('open');
 		});
-		this.listen('li:not("[class=active]") a', "click", function(event){
+		this.listen('.bs-docs-sidenav li:not("[class=active]") a', "click", function(event){
 			event.preventDefault();
 			$.scrollTo($(event.currentTarget).attr('href'),300, {offset:{top:-60}}); //might have to be different in mobile
 			//TODO there is a bug that when you click on the top item it does not scroll high enough.  Might need to create a different event or add a condition.
 			if(!viewModel.isDesktop()){
 				$(event.target).parents(".bs-docs-sidenav").toggleClass('open');
-				$(event.target).parents(".bs-docs-sidenav").scrollspy('refresh');
 			}
 		});
+
 
 	});
 
@@ -228,14 +227,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 
-	$('[data-spy="scroll"]').each(function () {
-	  var $spy = $(this).scrollspy('refresh');
-	  //when this fires we want the size of the sidebar to be the same as .da1-da3.
-	  //TODO need to figure out what we want to do for tablet and mobile.
-	  $('.bs-docs-sidenav').width($('.da1-da3').width()) ;
-	});
-
-
 	$('.test-page-level-alert').click(function(event){
 		event.preventDefault();
 		Sherpa.publish( "alert_message", {
@@ -246,6 +237,16 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	      "icon":"icon-alert-notice"
 	    });
 	});
+
+	$('.bs-docs-sidenav').waypoint('sticky', {
+	  stuckClass: 'affix',
+	  offset: 70,
+	  complete: function(){$(".bs-docs-sidenav.affix").width($('.da1-da3').width())}
+	});
+
+
+	
+
 
 
 //data-waypoint-trigger="true" data-waypoint-offsetUp="70" data-waypoint-offsetDown="100" data-waypoint-target="article"
@@ -289,20 +290,16 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	$('article').waypoint(function(direction) {
 		if(direction=="down") {
-			console.log("going :",direction);
 			$('.nav.nav-list.bs-docs-sidenav li.active').removeClass('active');
 			var id = '#'+$(this).attr('id');
-			console.log($('#sherpa-nav li a[href='+id+']'));
 			$('.nav.nav-list.bs-docs-sidenav li a[href='+id+']').parent().addClass('active');
 		}
 	}, { offset: 80 });
 
 	$('article').waypoint(function(direction) {
 		if(direction=="up") {
-			console.log("going :",direction);
 			$('.nav.nav-list.bs-docs-sidenav li.active').removeClass('active');
 			var id = '#'+$(this).attr('id');
-			console.log($('#sherpa-nav li a[href='+id+']'));
 			$('.nav.nav-list.bs-docs-sidenav li a[href='+id+']').parent().addClass('active');
 		}
 	}, { 
@@ -311,12 +308,18 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		}
 	});
 
+	$('.bs-docs-sidenav.affix').css('width',$('.da1-da3').width());
 	//TODO: hack to make up the fact that active class gets stripped - the problem is with scroll-spy
 	Sherpa.ready("bootstrap", function(){
 		_.each($('.tabbable'), function(tabs){
 			$(tabs).find('li:first').addClass('active');
 		});
 	})
+
+	$('.tab_color_switcher').change(function(event){
+		event.preventDefault();
+		$('#switch_my_color').attr('class',$(event.currentTarget).val());
+	});
 	
 	/*********************************************************************************
 	Please don't touch below

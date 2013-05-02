@@ -66,6 +66,4 @@ Eve.scope("*", function(){
 
 
 
-
-
 Sherpa.counter("Sherpa Global Events");
