@@ -46,23 +46,42 @@
 
 
 /* Links */
-  a {
-    color: #F0592C;
-    text-decoration: none;
-  }
 
-  a:hover {
-    color: #F0592C;
-    text-decoration: underline;
-  }
+a {
+  color: #F0592C;
+  text-decoration: none;
+}
 
-  a:active {
-    outline: 0;
-  }
+a:hover {
+  color: #F0592C;
+  text-decoration: underline;
+}
 
-  .bs-docs-example a, .bs-docs-example a:hover {
-    color:#0085c3;
-  }
+a:hover, a:active {
+  outline: 0;
+}
+
+.example a {
+  color: #0085c3;
+  text-decoration: none;
+}
+
+.example a:hover {
+  color: #0085c3;
+  text-decoration: underline;
+}
+
+.example a:hover, a:active {
+  outline: 0;
+}
+
+/* We already had a .bs-docs-example used in pages so it works nicely */
+.bs-docs-example a, .bs-docs-example a:hover {
+  color:#0085c3;
+}
+.bs-docs-example a:hover, a:active {
+  outline: 0;
+}
 
 
 /* Sherpa headings*/

@@ -164,6 +164,7 @@ h1, h2 {
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
+  margin: 0px 0px 10px 0px;
 }
 
 /* Edits made by AJ Lohman */
@@ -172,6 +173,7 @@ h3, h4, h5 {
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
+  margin: 0px 0px 10px 0px;
 }
 
 h1      {font-size: 36px;line-height: 40px;}
@@ -181,7 +183,11 @@ h4      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, 
 h5      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 /* Header - featured*/
-h4.feature {font-size: 50px;line-height: 100px;font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+h4.feature {font-size: 50px;line-height: 100px;font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;margin: 0px 0px 10px 0px;}
+
+
+
+
 
 /* Header - title*/
 .title {
@@ -226,8 +232,8 @@ Headers for mobile (Phone)
 
   h1      {font-size: 24px;line-height: 26px;}
   h2      {font-size: 20px;line-height: 24px;}
-  h3      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
-  h4      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
+  h3      {font-size: 17px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+  h4      {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
   h5      {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
 }
@@ -1674,6 +1680,24 @@ legend + .control-group {
           border-radius: 5px;
 }
 
+/* Container title*/
+h4.container-title {
+  display: inline-block;
+  top: -20px;
+  /*margin-top: -20px;*/
+  margin-bottom: -20px;
+  padding: 5px 15px;
+  position: relative;
+  color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+
+}
+
 /* Rounded corners
 -------------------------------------------------- */
 
@@ -1681,13 +1705,14 @@ legend + .control-group {
   -webkit-border-radius: 10px; 
   -moz-border-radius: 10px; 
   border-radius: 10px;
-  padding:10px;
+  padding:20px 20px 0px 20px;
 }
 
 .rounded-small {
   -webkit-border-radius: 5px; 
   -moz-border-radius: 5px; 
   border-radius: 5px;
+  padding:20px 20px 0px 20px;
 }
 
 /* Bottom offsets (padding bottom)
@@ -2682,6 +2707,17 @@ you can use the generic selector below, but it's slower:
 }
 
 
+
+/* Labels and badges*/
+
+.badge {
+  padding-left: 6px;
+  padding-right: 6px;
+  -webkit-border-radius: 9px;
+  -moz-border-radius: 9px;
+  border-radius: 9px;
+  }
+
 /* MODALS
 -------------------------------------------------- */
 
@@ -2830,6 +2866,10 @@ Breakpoints
     padding-left:0;
   }
 
+  input.input-xxlarge {
+    width: 100%;
+  }
+
 
   /* START Sherpa forms*/
   input[type="search"] {
@@ -2838,6 +2878,10 @@ Breakpoints
 
   .input-prepend input[type="text"] {
     width: 92%;
+  }
+
+  input.input-xxlarge {
+    width: 100%;
   }
   /* END Sherpa forms*/
 
@@ -2859,6 +2903,7 @@ Breakpoints
   .input-prepend input[type="text"]{
     width: 95.7%;
   }
+
   /* END Sherpa forms*/
 
 }
