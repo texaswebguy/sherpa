@@ -3,7 +3,7 @@
 <script type="text/javascript">
 
 
-  var getAlertOptions = _.once(function(options){
+  var getComponentData = _.once(function(options){
     //TODO put default options in config
     var default_options = {
           type: 'attention',
@@ -13,7 +13,6 @@
           dismiss: true
     } 
     if(!_.isEmpty(options)){
-console.log("hello",options);
       if(!options.icon && options.type){
         //assigns icon based on type
 
@@ -46,7 +45,7 @@ console.log("hello",options);
 
 </script>
 
-<!-- ko with: getAlertOptions(component_options) -->
+<!-- ko with: getComponentData(component_options) -->
 
 <div data-bind="attr: { class: 'alert '+type }">
   <!-- ko if: dismiss -->
