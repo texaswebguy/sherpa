@@ -3,6 +3,18 @@ Sherpa.counter("Sherpa Utils");
 
 "use strict";
 
+Sherpa.uuid = function() {
+	function s4() {
+	  return Math.floor((1 + Math.random()) * 0x10000)
+	             .toString(16)
+	             .substring(1);
+	};
+	 return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+	         s4() + '-' + s4() + s4() + s4();
+}
+Sherpa.sessionID = Sherpa.uuid();
+
+
 Sherpa.msg = function(textkey,t_data) {
 	
 	var msg = viewModel.content[textkey], 
@@ -165,16 +177,6 @@ Sherpa.urlQuery = function () {
 	}
 }
 
-Sherpa.uuid = function() {
-	function s4() {
-	  return Math.floor((1 + Math.random()) * 0x10000)
-	             .toString(16)
-	             .substring(1);
-	};
-	 return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
-	         s4() + '-' + s4() + s4() + s4();
-}
-
 Sherpa.insertComponent = function(component_name, component_type, element, bindingContext, options) {
 
 
@@ -331,6 +333,70 @@ Sherpa.request.define( "data", "ajax", {
     dataType: "text",
     type: "GET"
 });
+
+
+//Session Storage
+Sherpa.session = {};
+Sherpa.session.storeLog = function(key,id){
+	var log = Sherpa.store('sessionLog');
+	if(id) {
+		if(!log) {
+			log = {};
+		}
+		var temp_obj = {
+			key:key,
+			sessionID:Sherpa.sessionID,
+			id:id
+		}
+		log[id] = temp_obj;
+		Sherpa.store('sessionLog',log);
+	} else {
+		//return id
+		if(!log) {
+			return undefined;
+		} else {
+			try {
+				return _.find(log,function(item){return item.key == key && item.sessionID == Sherpa.sessionID}).id
+			} catch(err) {
+				return undefined;
+			}
+		}
+	}
+
+};
+Sherpa.session.store = function(key,obj){
+	if(obj){
+		//store
+		var temp_obj = {
+			key: key,
+			data: obj,
+			sessionID: Sherpa.sessionID
+		}, id = Sherpa.uuid();
+		Sherpa.store(id,temp_obj);
+		Sherpa.session.storeLog(key,id);
+		return id;
+	} else {
+		//retrieve
+		var id = Sherpa.session.storeLog(key);
+		if(id) {
+			return Sherpa.store(id).data;
+		} else {
+			return undefined;
+		}
+		
+	}
+}
+Sherpa.session.storeCleanUp = function(){
+	var log = Sherpa.store('sessionLog');
+	if(log) {
+		//Sherpa.store('sessionLog',_.filter(log, function(item){return item.sessionID == Sherpa.sessionID}));
+		_.each(log, function(item){
+			if(item.sessionID != Sherpa.sessionID){
+				Sherpa.store(item.id,null);
+			}
+		});		
+	}
+}
 
 Sherpa.counter("Sherpa Utils");
 

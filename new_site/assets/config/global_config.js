@@ -44,7 +44,7 @@ SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console
 SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
-SHERPA.ENABLE_PROTOTYPE_QA = true; //enables script to check html for sherpa errors
+SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
 // CSS Configuration
 SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/assets/css/";

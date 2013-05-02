@@ -330,7 +330,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
     // tooltip demo
     $('.tooltip-demo').tooltip({
-      selector: "a[data-toggle=tooltip]"
+      selector: "a[rel=tooltip]"
     })
 
     $('.tooltip-test').tooltip()

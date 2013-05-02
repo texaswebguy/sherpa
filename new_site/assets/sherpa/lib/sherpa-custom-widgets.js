@@ -128,6 +128,8 @@ Sherpa.ready("sherpai18n", function(){
 	};
 	ko.bindingHandlers['component'] = {
 	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+
 	    	// if the 
 			if(Sherpa.check_condition(allBindingsAccessor())) {
 
@@ -145,8 +147,6 @@ Sherpa.ready("sherpai18n", function(){
 		    		//defaults to empty options set
 		    	}
 
-
-		    	
 		    	Sherpa.insertComponent(component.name, component.type, element, component.data,component.options);
 
 		    } else {
@@ -168,7 +168,7 @@ Sherpa.ready("sherpai18n", function(){
     };
 
 
-	Sherpa.components = {};
+	
 
 	/*bootstrap accordion behavior modification
 		Simplifies the specification of an accordion by just adding an accordion class arround a group of collapible links and panels

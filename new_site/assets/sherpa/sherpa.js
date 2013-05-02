@@ -119,38 +119,43 @@ Sherpa.js({ config: "assets/config/global_config.js"}, function(){
 	//______________________________________________________________________________________
 
 	Sherpa.counter = function (marker) {
-		if(SHERPA.ENABLE_COUNTER) {
-			if(marker == "report") {
-				console.log(JSON.stringify(Sherpa.counter.obj.time_log,null,5));
+
+		if(marker == "report") {
+			console.log(JSON.stringify(Sherpa.counter.obj.time_log,null,5));
+		} else {
+			if(!Sherpa.counter.obj) {
+				var obj = {
+					count: 0,
+					start_time: (new Date).getTime(),
+					time_log: {},
+					last_time: 0
+				};
+				obj.new_time = obj.start_time;
 			} else {
-				if(!Sherpa.counter.obj) {
-					var obj = {
-						count: 0,
-						start_time: (new Date).getTime(),
-						time_log: {},
-						last_time: 0
-					};
-					obj.new_time = obj.start_time;
-				} else {
-					var obj = Sherpa.counter.obj;
-					obj.new_time = (new Date).getTime();
-				}
-				obj.count++;
-			    obj.elapsed_time = (obj.new_time - obj.last_time) / 1000;
-			    obj.last_time = obj.new_time;
-			    if(marker && obj.time_log[marker] == undefined) {
-			    	//never seen this marker
-			    	obj.time_log[marker]={};
-			    	obj.time_log[marker].start = obj.new_time;
-			    	console.log(obj.count + ": "+marker + " - starting timer at:" + (obj.last_time - obj.start_time )/1000 + " seconds");
-			    } else if (marker) {
-			    	obj.time_log[marker].elapsed_time = obj.last_time - obj.time_log[marker].start;
-			    	console.log(obj.count + ": "+marker + " - elapsed time:" + obj.time_log[marker].elapsed_time /1000 + " seconds")
-			    } else {
-			    	console.log(obj.count + ": elapsed/total time:" + obj.elapsed_time + "/"  + obj.last_time)
-			    }
-			    Sherpa.counter.obj = obj;
+				var obj = Sherpa.counter.obj;
+				obj.new_time = (new Date).getTime();
 			}
+			obj.count++;
+		    obj.elapsed_time = (obj.new_time - obj.last_time) / 1000;
+		    obj.last_time = obj.new_time;
+		    if(marker && obj.time_log[marker] == undefined) {
+		    	//never seen this marker
+		    	obj.time_log[marker]={};
+		    	obj.time_log[marker].start = obj.new_time;
+		    	if(SHERPA.ENABLE_COUNTER) {
+		    		console.log(obj.count + ": "+marker + " - starting timer at:" + (obj.last_time - obj.start_time )/1000 + " seconds");
+		    	}
+		    } else if (marker) {
+		    	obj.time_log[marker].elapsed_time = obj.last_time - obj.time_log[marker].start;
+		    	if(SHERPA.ENABLE_COUNTER) {
+		    		console.log(obj.count + ": "+marker + " - elapsed time:" + obj.time_log[marker].elapsed_time /1000 + " seconds");
+		    	}
+		    } else {
+		    	if(SHERPA.ENABLE_COUNTER) {
+			    	console.log(obj.count + ": elapsed/total time:" + obj.elapsed_time + "/"  + obj.last_time);
+			    }
+		    }
+		    Sherpa.counter.obj = obj;
 		}
 	}
 	// initiate counter to start login of entire app
@@ -301,7 +306,9 @@ Sherpa.ready("dateFormat", function(){
 
 
 			// turn on the page
-		    	$('html').addClass('sherpaReady');
+		    $('html').addClass('sherpaReady');
+		    
+		    Sherpa.session.storeCleanUp();
 
 			// Mark the end of the sherpa init sequence
 			Sherpa.counter("Sherpa INIT");
