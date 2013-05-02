@@ -4,7 +4,14 @@
 
 /* The main wrapper - don't touch */
     .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none; overflow:hidden;}
-    div {float: left;width: 100%;margin-bottom: 0px;display: block;position: relative;*zoom: 1;}
+    div {
+      float: left;
+      width: 100%;
+      margin-bottom: 0px;
+      display: block;
+/*      position: relative;*/
+      *zoom: 1;
+    }
     input, textarea, .uneditable-input {width: 75%;}
 
 /* Put your styles here */
