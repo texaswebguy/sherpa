@@ -82,6 +82,16 @@ a:hover, a:active {
   outline: 0;
 }
 
+.example .nav > li > a:hover {
+  text-decoration: none;
+  background-color: blue;
+}
+
+.example .nav-tabs > li > a:hover {
+  background:#fff;
+  /*border-color: #f9f9f9 #f9f9f9 #fff #f9f9f9;*/
+}
+
 /* We already had a .bs-docs-example used in pages so it works nicely */
 .bs-docs-example a, .bs-docs-example a:hover {
   color:#0085c3;
