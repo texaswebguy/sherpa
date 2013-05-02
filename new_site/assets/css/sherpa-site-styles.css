@@ -235,7 +235,7 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
     list-style: none;
   }
 
-  .nav-sherpa a {
+  .nav-sherpa ul li a {
     color:#D4CA9B;
     text-decoration: none;
     margin:0;
@@ -245,11 +245,14 @@ h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS',
     -o-transition: color 0.2s ease-in; 
   }
 
-  .nav-sherpa a:hover {
+  .nav-sherpa ul li a:hover {
     color:#F0592C;
     text-decoration: none;
-    margin:0;
-    padding:20px;
+  }
+
+  .nav-sherpa ul li.active a {
+    color:#ffffff;
+    text-decoration: none;
   }
 
 
