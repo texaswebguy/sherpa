@@ -326,6 +326,25 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		$('#switch_my_color').attr('class',$(event.currentTarget).val());
 	});
 	
+
+
+    // tooltip demo
+    $('.tooltip-demo').tooltip({
+      selector: "a[data-toggle=tooltip]"
+    })
+
+    $('.tooltip-test').tooltip()
+    $('.popover-test').popover()
+
+    // popover demo
+    $("a[data-toggle=popover]")
+      .popover()
+      .click(function(e) {
+        e.preventDefault()
+      })
+
+
+
 	/*********************************************************************************
 	Please don't touch below
 	*********************************************************************************/
