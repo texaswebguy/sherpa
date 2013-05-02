@@ -7,7 +7,7 @@
     //TODO put default options in config
     var default_options = {
           type: 'attention',
-          icon:'icon-alert-notice',
+          icon:'icon-small-alertnotice',
           title: "Lorem ipsum!",
           message: "Consectetur adipiscing elit. Etiam imperdiet scelerisque condimentum. Duis condimentum lorem at tellus aliquet a tempus lectus varius.",
           dismiss: true
@@ -18,16 +18,16 @@
 
         switch(options.type) {
           case "success":
-            options.icon = 'icon-checkmark';        
+            options.icon = 'icon-small-checkmark';        
             break;
           case "information":
-            options.icon = 'icon-alert-info';        
+            options.icon = 'icon-small-alertinfo';        
             break;
           case "error":
-            options.icon = 'icon-alert-error';        
+            options.icon = 'icon-small-alerterror';        
             break;
           default:
-            options.icon = 'icon-alert-notice';        
+            options.icon = 'icon-small-alertnotice';        
         }
         if(!options.type){
           Sherpa.QA.logEntry("You made reference to alert component and you provided options without a specific type. "+default_options.type+" was chosen by default","alerts, bad component reference")
