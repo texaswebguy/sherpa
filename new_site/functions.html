@@ -184,9 +184,9 @@ You can right click this page, click on "inspect element" and then click on "con
 Now type &gt; viewModel.content.sample_greeting &lt;
 You will see the text rendered above.
 
-Now, for real fun go to <a href="/tutorial/cookbook.html?l=cn#render_from_textkey">cookbook.html?l=cn</a> and watch your text change.
+Now, for real fun go to <a href="/tutorial/functions.html?l=cn#render_from_textkey">functions.html?l=cn</a> and watch your text change.
 
-Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#render_from_textkey">english</a>.
+Don't forget to go back to <a href="/tutorial/functions.html?l=en#render_from_textkey">english</a>.
 
 You can also pre-process a textkey in your app dataset (viewModel): "pre_processed_text" : Sherpa.msg('sample_greeting');
 &lt;span data-bind="text: 'pre_processed_text'">&lt;/span>
@@ -215,9 +215,9 @@ You can right click this page, click on "inspect element" and then click on "con
 Now type &gt; viewModel.content.sample_greeting &lt;
 You will see the text rendered above.
 
-Now, for real fun go to <a href="/tutorial/cookbook.html?l=cn#render_from_textkey_with_data">cookbook.html?l=cn</a> and watch your text change.
+Now, for real fun go to <a href="/tutorial/functions.html?l=cn#render_from_textkey_with_data">functions.html?l=cn</a> and watch your text change.
 
-Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#render_from_textkey_with_data">english</a>.
+Don't forget to go back to <a href="/tutorial/functions.html?l=en#render_from_textkey_with_data">english</a>.
 
 Note: the data inside msg is not reactive... yet
 
@@ -251,9 +251,9 @@ You can right click this page, click on "inspect element" and then click on "con
 Now type &gt; viewModel.content.sample_quantitative_with_data &lt;
 You will see that this results in "undefined". That's because instead you will find viewModel.content.sample_quantitative_with_data_singular and viewModel.content.sample_quantitative_with_data_plural.
 
-Now, for real fun go to <a href="/tutorial/cookbook.html?l=cn#render_from_textkey_with_data">cookbook.html?l=cn</a> and watch your text change.
+Now, for real fun go to <a href="/tutorial/functions.html?l=cn#render_from_textkey_with_data">functions.html?l=cn</a> and watch your text change.
 
-Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#render_from_textkey_with_data">english</a>.
+Don't forget to go back to <a href="/tutorial/functions.html?l=en#render_from_textkey_with_data">english</a>.
 
 Note: the data inside msg is not reactive... yet
 
@@ -290,9 +290,9 @@ You will also notice that this content uses square brackets (Which search engine
 And there are two corrensponding text keys sample_message_with_link_url0 and sample_message_with_link_url1.
 The content is a cross refference to the link resource file. 
 
-Now, for real fun go to <a href="/tutorial/cookbook.html?l=cn#rendering_a_textkey_with_links">cookbook.html?l=cn</a> and watch your text and links change.
+Now, for real fun go to <a href="/tutorial/functions.html?l=cn#rendering_a_textkey_with_links">functions.html?l=cn</a> and watch your text and links change.
 
-Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#rendering_a_textkey_with_links">english</a>.
+Don't forget to go back to <a href="/tutorial/functions.html?l=en#rendering_a_textkey_with_links">english</a>.
 
 Note: the data inside msglink is not reactive... yet
 					</pre>
@@ -323,9 +323,9 @@ You can right click this page, click on "inspect element" and then click on "con
 Now type &gt; viewModel.config.currency &lt;
 You will see the currency configuration object.
 
-Now, for real fun go to <a href="/tutorial/cookbook.html?l=cn#converting_currency">cookbook.html?l=cn</a> and watch your currency change.
+Now, for real fun go to <a href="/tutorial/functions.html?l=cn#converting_currency">functions.html?l=cn</a> and watch your currency change.
 
-Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#converting_currency">english</a>.
+Don't forget to go back to <a href="/tutorial/functions.html?l=en#converting_currency">english</a>.
 
 You can also pre-process a number in your app dataset (viewModel): "pre_processed_amount" : Sherpa.formatCurrency('499.00');
 &lt;span data-bind="text: 'pre_processed_amount'">&lt;/span>
@@ -356,9 +356,9 @@ You can right click this page, click on "inspect element" and then click on "con
 Now type &gt; viewModel.config.default_date_format &lt;
 You will see the default date format configuration.
 
-Now, for real fun go to <a href="/tutorial/cookbook.html?l=cn#formating_dates">cookbook.html?l=cn</a> and watch your date format change.
+Now, for real fun go to <a href="/tutorial/functions.html?l=cn#formating_dates">functions.html?l=cn</a> and watch your date format change.
 
-Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#formating_dates">english</a>.
+Don't forget to go back to <a href="/tutorial/functions.html?l=en#formating_dates">english</a>.
 
 NOTE: More options coming soon
 
@@ -380,7 +380,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 					<div class="bs-docs-example">
 					    <p data-bind="if: config.some_boolean_variable" class="purple-text">I display beacuse config.some_boolean_variable is set to true</p>
 					    <p data-bind="ifnot: config.some_other_boolean_variable" class="green-text">I display beacuse config.some_other_boolean_variable is set to false</p>
-					    <p data-bind="ifnot: some_boolean_function" class="red-text">I display because <a href="/tutorial/cookbook.html?boolean_example=true#dynamic_display">?boolean_example=true</a> is not in the url.  Add it to the url and watch me disappear!</p>
+					    <p data-bind="ifnot: some_boolean_function" class="red-text">I display because <a href="/tutorial/functions.html?boolean_example=true#dynamic_display">?boolean_example=true</a> is not in the url.  Add it to the url and watch me disappear!</p>
 					    <p data-bind="if: some_boolean_function" class="blue-text">I display because you added ?boolean_example=true to the url!</p>
 					    <!-- ko if: config.some_boolean_variable -->
 					    <p class="berry-text">I display beacuse config.some_boolean_variable is set to true (through ko comments)</p>
