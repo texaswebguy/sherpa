@@ -1,0 +1,50 @@
+
+
+<script type="text/javascript">
+
+
+  var getTableData = _.once(function(options){
+    var table_obj = {}
+    //TODO put default options in config
+    var default_options = {
+          parseTo: 'objects',
+          recordsPerPage: 20,
+          dataFileName : 'sample_customer_list_en.csv'
+    } 
+    if(options){
+      table_obj.component_options = _.extend(default_options, options);
+    }
+    Sherpa.request({
+      resourceId: "data", 
+      data: {
+        "filename" : table_obj.component_options.dataFileName,
+      },
+      success: function(responseCSV){
+        //Parse will depend on the data.parseTo options.
+        table_obj.items = $.csv.toObjects(responseCSV);
+        table_obj.keys = _.keys(table_obj.items[0]);
+      }
+    });
+    return table_obj;
+  });
+
+
+</script>
+
+<!-- ko with: getTableData(component_options) -->
+
+
+<table>
+  <thead>
+    <tr data-bind="foreach: $data.keys">
+      <th data-bind="text: 'hello'"></th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr data-bind="foreach: $data.items">
+      <th data-bind="text: 'hello'"></th>
+    </tr>
+  </tbody>
+</table>
+
+<!-- /ko -->

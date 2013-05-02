@@ -86,6 +86,7 @@ SHERPA.JS_CORE_LOAD = [
 	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},,
 	{ waypoints: "assets/sherpa/lib/waypoints.min.js"},
 	{ waypointsSticky: "assets/sherpa/lib/waypoints-sticky.min.js"},
+	{ csvParser: "assets/sherpa/lib/jquery.csv-0.71.min.js"},
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 

@@ -312,6 +312,13 @@ Sherpa.request.define( "assets", "ajax", {
     type: "GET"
 });
 
+
+Sherpa.request.define( "data", "ajax", {
+	url:"assets/data/{filename}",
+    dataType: "text",
+    type: "GET"
+});
+
 Sherpa.counter("Sherpa Utils");
 
 
