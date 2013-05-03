@@ -1601,6 +1601,17 @@ legend + .control-group {
 .btn-group.open .btn-tertiary.dropdown-toggle {
   background-color: #cfd9de;
 }
+
+.btn + .dropdown-menu {
+  margin-top:-6px;
+}
+.btn-link + .dropdown-menu {
+  margin-top:-15px;
+}
+.btn-group > .btn-link:first-child {
+  padding-left:0px;
+}
+
 .caret {
   display: inline-block;
   width: 0;
@@ -1624,17 +1635,8 @@ legend + .control-group {
   padding-right:15px;
 }
 
-.open .caret:before {
-  content: "\24";
-}
-
-
-
 .btn .caret:before {
-  margin-top: 3px;
-  margin-left: 0;
   display: inline-block;
-  vertical-align: top;
   border: none;
   font-family: 'icon-ui';
   font-style: normal;
@@ -1643,23 +1645,29 @@ legend + .control-group {
   -webkit-font-smoothing: antialiased;
   top: -4px;
   position: relative;
-  padding-right: 15px;
-  padding-left: 0px;
   content: "\24";
 }
 
-.btn-mini .caret  {
-  margin-top: 4px;
-  padding-right:12px;
+.btn .caret {
+   padding-right: 18px;
+}
+
+.open .btn .caret:before, .open .caret:before {
+  content: "\21";
 }
 
 .btn-small .caret {
-  margin-top: 4px;
+  margin-top: 8px;
   padding-right:15px;
 }
 
+.btn-mini .caret {
+  margin-top: 8px;
+  padding-right:13px;
+}
+
 .btn-large .caret {
-  margin-top: 0;
+  margin-top: 5px;
   border:none;
   padding-right:20px;
 }
@@ -1701,7 +1709,6 @@ legend + .control-group {
   background-image: none;
   background-repeat: repeat-x;
   filter: none;
-
 }
 
 .dropdown-menu .divider {
