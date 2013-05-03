@@ -114,7 +114,7 @@
 					<p>
 						In the old days of HTML we just slapped content inside html tags and ran with it. With Sherpa we want to stress the importance of building a prototype from data.
 					</p>
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p>
 						    <h2>Hello, <span data-bind="text: user.name"> </span>!</h2>
 						</p>
@@ -144,7 +144,7 @@ We'll explain "observable after this..."
 					</p>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p>User Name: <input data-bind="value: user.name" /></p>
 						<h2>Hello, <span data-bind="text: user.name"> </span>!</h2>
 					</div>
@@ -169,7 +169,7 @@ ko.observable wires the data to the page and anytime it changes the rendering on
 					</p>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg: 'sample_greeting'"></h2>
 					</div>
 					<h3 class="sherpa">Markup:</h3>
@@ -200,7 +200,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					</p>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg:  {textkey:'sample_greeting_with_data',data:user.name}"></h2>
 					</div>
 					<h3 class="sherpa">Markup:</h3>
@@ -233,7 +233,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 
 					</p>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:12}"></h2>
 					    <h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:1}"></h2>
 					</div>
@@ -270,7 +270,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					</p>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="linkedmsg:  'sample_message_with_link'"></h2>
 					</div>
 					<h3 class="sherpa">Markup:</h3>
@@ -307,7 +307,7 @@ Note: the data inside msglink is not reactive... yet
 					</p>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="formatcurrency: {amount:499.00,format:'decimal'}"></h2>
 					</div>
 					<h3 class="sherpa">Markup:</h3>
@@ -341,7 +341,7 @@ You can also pre-process a number in your app dataset (viewModel): "pre_processe
 
 					</p>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="formatdate: '12/01/2014'"></h2>
 					</div>
 					<h3 class="sherpa">Markup:</h3>
@@ -377,7 +377,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 							- Knockout JS if/ifnot bindings using boolean variable or conditional function
 					</p>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p data-bind="if: config.some_boolean_variable" class="purple-text">I display beacuse config.some_boolean_variable is set to true</p>
 					    <p data-bind="ifnot: config.some_other_boolean_variable" class="green-text">I display beacuse config.some_other_boolean_variable is set to false</p>
 					    <p data-bind="ifnot: some_boolean_function" class="red-text">I display because <a href="/tutorial/functions.html?boolean_example=true#dynamic_display">?boolean_example=true</a> is not in the url.  Add it to the url and watch me disappear!</p>
@@ -439,7 +439,7 @@ var some_boolean_function = function(){
 
 					</p>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<label><input type="checkbox" data-bind="checked: checkbox_value" /> Check me to see something</label>
 					    <p data-bind="visible: checkbox_value()">I'm visible because the checkbox is checked</p>
 					    <br/>
@@ -489,7 +489,7 @@ You should notice that once wired, the reactive nature of the rendering is much 
 					</p>
 	
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<label><input type="checkbox" data-bind="checked: checkbox_fade_value" /> Check me to see something</label>
 					    <p data-bind="visibleFade: checkbox_fade_value()">I'm visible because the checkbox is checked</p>
 					    <br/>
@@ -526,7 +526,7 @@ This works exactly as show /hide but it adds a fade transition.
 					</p>
 	
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<label><input type="checkbox" data-bind="checked: checkbox_slide_value" /> Check me to see something</label>
 					    <p data-bind="visibleSlide: checkbox_slide_value()">I'm visible because the checkbox is checked</p>
 					    <br/>
@@ -574,7 +574,7 @@ This works exactly as show /hide but it adds a slide transition.
 						<li>viewModel: <code>viewModel.isAuthenticated</code></li>
 					  </ul>
 					<p><strong>Examples:</strong></p>  
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p data-bind="if: isAuthenticated">I display beacuse this page IS authenticated</p>
 					    <p data-bind="ifnot: isAuthenticated">I display beacuse this page IS NOT authenticated</p>
 

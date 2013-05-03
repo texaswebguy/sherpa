@@ -40,7 +40,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	})
 
 
-	Eve.scope(".bs-docs-sidenav", function(){
+	Eve.scope(".sherpa-docs-sidenav", function(){
 		this.listen("li a", "click", function(event){
 			event.preventDefault();
 			$('body').scrollTo($(event.currentTarget).attr('href'),300);

@@ -78,7 +78,7 @@
 			<link rel="stylesheet" href="assets/css/doc.css" />
 
 			<style>
-				.bs-docs-example + .prettyprint {
+				.sherpa-docs-example + .prettyprint {
 				  margin-top: 25px;
 				  padding-top: 15px;
 				}
@@ -142,8 +142,8 @@
 		<div class="wrapper">
 			<div class="da-clear">
 				<div class="da1-da3 ta1-ta2 mb-all">
-					<div id="bs-docs-sidenav">
-						<ul class="nav nav-list bs-docs-sidenav affix">
+					<div id="sherpa-docs-sidenav">
+						<ul class="nav nav-list sherpa-docs-sidenav affix">
 				          <li class="active"><a href="#rendering_data_from_view_model"><i class="icon-chevron-right"></i> Rendering data from view model</a></li>
 				          <li><a href="#reactive_text"><i class="icon-chevron-right"></i> Reactive Text</a></li>
 				          <li><a href="#rendering_a_textkey"><i class="icon-chevron-right"></i> Rendering a textkey</a></li>
@@ -176,7 +176,7 @@
 					</p>
 					<h3 class="sherpa"><code>&lt;span data-bind="text: user.name"> </span></code></h3>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p>
 						    <h2>Hello, <span data-bind="text: user.name"> </span>!</h2>
 						</p>
@@ -200,7 +200,7 @@ Try changing the name property, save and reload.
 We'll explain "observable after this..."
 					</pre>
 
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 					<h2 class="sherpa" id="reactive_text">Reactive Text</h2>
 					<p>
 						In the example above, you created a text from data.  What you might have not known is that the data is wired to the page because of ko.observable
@@ -209,7 +209,7 @@ We'll explain "observable after this..."
 					<h3 class="sherpa"><code>&lt;input data-bind="value: user.name"> &lt;/span></code></h3>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p>User Name: <input data-bind="value: user.name" /></p>
 						<h2>Hello, <span data-bind="text: user.name"> </span>!</h2>
 					</div>
@@ -225,7 +225,7 @@ ko.observable wires the data to the page and anytime it changes the rendering on
 
 					</pre>
 
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 					<h2 class="sherpa" id="rendering_a_textkey">Rendering a textkey</h2>
 					<p>
 						Prototypes have to be tested around the globe. One of the most important things is to externalize all text so that content is easily translated.
@@ -235,7 +235,7 @@ ko.observable wires the data to the page and anytime it changes the rendering on
 					<h3 class="sherpa"><code>data-bind="msg: 'sample_greeting'"</code></h3>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg: 'sample_greeting'"></h2>
 					</div>
 					<pre class="prettyprint">&lt;h2 data-bind="msg: 'sample_greeting'">&lt;/h2>
@@ -258,7 +258,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 &lt;span data-bind="text: 'pre_processed_text'">&lt;/span>
 
 					</pre>
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 
 					<h2 class="sherpa" id="rendering_a_textkey_with_data">Rendering a textkey with data</h2>
 					<p>
@@ -269,7 +269,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					<h3 class="sherpa"><code>data-bind="msg:  {textkey:'sample_greeting_with_data',data:user.name}"</code></h3>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg:  {textkey:'sample_greeting_with_data',data:user.name}"></h2>
 					</div>
 					<pre class="prettyprint">&lt;h2 data-bind="msg:  {textkey:'sample_greeting_with_data',data:user.name}">&lt;/h2>
@@ -296,7 +296,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 
 					</pre>
 
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 
 					<h2 class="sherpa" id="rendering_a_textkey_with_quantitive_data">Rendering a textkey with quantitive data</h2>
 					<p>
@@ -307,7 +307,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					<h2 class="sherpa"><code>data-bind="msg:  {textkey:'sample_quantitative_with_data',data:1}"</code></h2>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:12}"></h2>
 					    <h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:1}"></h2>
 					</div>
@@ -335,7 +335,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 &lt;span data-bind="text: {textkey:'pre_processed_quantitative_text_with_data',data:12}">&lt;/span>
 
 					</pre>	
-<hr class="bs-docs-separator"/>
+<hr class="sherpa-docs-separator"/>
 
 					<h2 class="sherpa" id="rendering_a_textkey_with_links">Rendering a textkey with links</h2>
 					<p>
@@ -346,7 +346,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					<h3 class="sherpa"><code>data-bind="linkedmsg:  'sample_message_with_link'"</code></h3>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="linkedmsg:  'sample_message_with_link'"></h2>
 					</div>
 					<pre class="prettyprint">&lt;h2 data-bind="data-bind="linkedmsg:  'sample_message_with_link'>&lt;/h2>
@@ -372,7 +372,7 @@ Don't forget to go back to <a href="/tutorial/cookbook.html?l=en#rendering_a_tex
 Note: the data inside msglink is not reactive... yet
 					</pre>
 
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 					<h2 class="sherpa" id="converting_currency">Converting Currency</h2>
 					<p>
 						Prototypes have to be tested around the globe. Realistic rendering of price data is vital to the success of a test.
@@ -382,7 +382,7 @@ Note: the data inside msglink is not reactive... yet
 					<h3 class="sherpa"><code>formatcurrency: {amount:499.00,format:'decimal'}</code></h3>
 
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="formatcurrency: {amount:499.00,format:'decimal'}"></h2>
 					</div>
 					<pre class="prettyprint">&lt;h2 data-bind="formatcurrency: {amount:499.00,format:'decimal'}">&lt;/h2>
@@ -405,7 +405,7 @@ You can also pre-process a number in your app dataset (viewModel): "pre_processe
 &lt;span data-bind="text: 'pre_processed_amount'">&lt;/span>
 					</pre>
 
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 
 					<h2 class="sherpa" id="formating_dates">Formating Dates</h2>
 					<p>
@@ -415,7 +415,7 @@ You can also pre-process a number in your app dataset (viewModel): "pre_processe
 					</p>
 					<h3 class="sherpa"><code>formatdate: 'mm/dd/yyy'</code></h3>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <h2 data-bind="formatdate: '12/01/2014'"></h2>
 					</div>
 					<pre class="prettyprint">&lt;h2 data-bind="formatdate: '12/01/2014'">&lt;/h2>
@@ -442,7 +442,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 &lt;span data-bind="text: 'pre_processed_date'">&lt;/span>
 
 					</pre>
-	<hr class="bs-docs-separator"/>		
+	<hr class="sherpa-docs-separator"/>		
 					<h2 class="sherpa" id="dynamic_display">Dynamic Display</h2>
 					<p>
 						Sometimes in a prototypes you need a way to display things conditionaly.
@@ -455,7 +455,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 					<h3 class="sherpa"><code>if: some_boolean_function()</code></h3>
 					<h3 class="sherpa"><code>&lt;!-- ko if: config.some_boolean_variable -->&lt;!-- /ko --></code></h3>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 					    <p data-bind="if: config.some_boolean_variable" class="purple-text">I display beacuse config.some_boolean_variable is set to true</p>
 					    <p data-bind="ifnot: config.some_other_boolean_variable" class="green-text">I display beacuse config.some_other_boolean_variable is set to false</p>
 					    <p data-bind="ifnot: some_boolean_function()" class="red-text">I display because <a href="/tutorial/cookbook.html?boolean_example=true#dynamic_display">?boolean_example=true</a> is not in the url.  Add it to the url and watch me disappear!</p>
@@ -508,7 +508,7 @@ var some_boolean_function = function(){
 }
 
 					</pre>
-	<hr class="bs-docs-separator"/>
+	<hr class="sherpa-docs-separator"/>
 	<h2 class="sherpa" id="reactive_show_hide">Reactive Show / Hide</h2>
 					<p>
 						Show and hide is like dynamic display but it differs that whatever you bind with "visible" is still in the document and it is available to display later.
@@ -520,7 +520,7 @@ var some_boolean_function = function(){
 					<h3 class="sherpa"><code>visible: checkbox_value</code></h3>
 					<h3 class="sherpa"><code>visible: selected_dropdown_value() === 'alpha'</code></h3>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<label><input type="checkbox" data-bind="checked: checkbox_value" /> Check me to see something</label>
 					    <p data-bind="visible: checkbox_value()">I'm visible because the checkbox is checked</p>
 					    <br/>
@@ -558,7 +558,7 @@ Same thing is happening with the dropdown menu example: selected_dropdown_value(
 You should notice that once wired, the reactive nature of the rendering is much more natural than building custom jquery functions to explicitly call out elements to show and hide.
 
 					</pre>
-	<hr class="bs-docs-separator"/>	
+	<hr class="sherpa-docs-separator"/>	
 
 	<h2 class="sherpa" id="reactive_fade">Reactive Fade</h2>
 					<p>
@@ -572,7 +572,7 @@ You should notice that once wired, the reactive nature of the rendering is much 
 					<h3 class="sherpa"><code>visibleFade: checkbox_fade_value</code></h3>
 					<h3 class="sherpa"><code>visibleFadeToggle: selected_fade_dropdown_value() === 'alpha'</code></h3>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<label><input type="checkbox" data-bind="checked: checkbox_fade_value" /> Check me to see something</label>
 					    <p data-bind="visibleFade: checkbox_fade_value()">I'm visible because the checkbox is checked</p>
 					    <br/>
@@ -598,7 +598,7 @@ You should notice that once wired, the reactive nature of the rendering is much 
 This works exactly as show /hide but it adds a fade transition.
 
 					</pre>
-	<hr class="bs-docs-separator"/>	
+	<hr class="sherpa-docs-separator"/>	
 
 	<h2 class="sherpa" id="reactive_slide">Reactive slide</h2>
 					<p>
@@ -612,7 +612,7 @@ This works exactly as show /hide but it adds a fade transition.
 					<h3 class="sherpa"><code>visibleSlide: checkbox_slide_value</code></h3>
 					<h3 class="sherpa"><code>visibleSlideToggle: selected_slide_dropdown_value() === 'alpha'</code></h3>
 
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<label><input type="checkbox" data-bind="checked: checkbox_slide_value" /> Check me to see something</label>
 					    <p data-bind="visibleSlide: checkbox_slide_value()">I'm visible because the checkbox is checked</p>
 					    <br/>
@@ -638,7 +638,7 @@ This works exactly as show /hide but it adds a fade transition.
 This works exactly as show /hide but it adds a slide transition.
 
 					</pre>
-	<hr class="bs-docs-separator"/>	
+	<hr class="sherpa-docs-separator"/>	
 	<div class="btn-toolbar">
 		<div data-bind="component: { 
 			name:'dropdown', 
@@ -655,7 +655,7 @@ This works exactly as show /hide but it adds a slide transition.
 		<div data-bind="component: { name:'dropdown', type:'button-split-secondary',data:sample_dropdown_1}, if:true"></div>
 		<div data-bind="component: { name:'dropdown', type:'button-split-tertiary',data:sample_dropdown_1}, if:true"></div>-->
 	</div>
-	<hr class="bs-docs-separator"/>	
+	<hr class="sherpa-docs-separator"/>	
  <p style="height:200px"></p>
 			</div>
 		</div>
