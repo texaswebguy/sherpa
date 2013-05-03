@@ -99,22 +99,16 @@
 	<section class="main-content">
 		<div class="wrapper">
 			<aside class="da1-da3 ta-all mb-all">
-				<div class="bs-docs-sidebar">
-
-					<ul class="nav nav-list bs-docs-sidenav" 
-						data-spy="affix" 
-						data-offset-top="270" 
-						data-waypoint-trigger="true" 
-						data-waypoint-offsetUp="70" 
-						data-waypoint-offsetDown="100" 
-						data-waypoint-target="article">
+				<div class="sherpa-docs-sidebar aside">
+					<ul class="nav nav-list sherpa-docs-sidenav">
 			          <li class="active"><a  href="#overview">Overview</a></li>
 			          <li><a href="#page">Page</a></li>
 			          <li><a href="#dropdowns">Dropdowns</a></li>
 			          <li><a href="#tabs">Tabs</a></li>
+			          <li><a href="#aside">Aside</a></li>
 			          <li><a href="#breadcrumbs">Breadcrumbs</a></li>
 			          <li><a href="#pagination">Pagination</a></li>
-								<li><a href="#labels-badges">Labels and badges</a></li>
+					  <li><a href="#labels-badges">Labels and badges</a></li>
 			          <li><a href="#alerts">Alerts</a></li>
 			          <li><a href="#tooltips">Tooltips</a></li>
 			          <li><a href="#popovers">Popovers</a></li>
@@ -129,7 +123,7 @@
 
 
 			<section class="da4-da12 ta-all mb-all">
-
+				<div class="sherpa-docs aside-content">
 				<article id="overview" class="bottom-offset-large">
 					<h2 class="sherpa">Overview</h2>
 					<hr>
@@ -183,7 +177,7 @@
 					<hr>
 					<h3 class="sherpa">Example</h3>
 					<p>Toggleable, contextual menu for displaying lists of links. Fully integrated with data, the same code with different data refference will generate completely different menus.</p>
-					<div class="bs-docs-example">
+					<div class="sherpa-docs-example">
 						<div class="dropdown clearfix">
 						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 20px; *width: 180px;">
 						    <li><a tabindex="-1" href="#">Action</a></li>
@@ -199,7 +193,7 @@
 
 				<h3 class="sherpa">Dropdown triggers</h3>
 					<p>Dropdowns are triggered by various elements such as links and buttons</p>
-					<div class="da-all bs-docs-example">
+					<div class="da-all sherpa-docs-example">
 						<div class="da4-da6 ta1-ta3 ma1">
 							<div class="dropdown">
 								<a href="#" data-toggle="dropdown">From a link <span class="caret"></span></a>
@@ -443,7 +437,7 @@ label : Sherpa.msg('textkey_label'),
 
 					<h3 class="sherpa" id="#tabs-standard">Standard Tabs</h3>
 					<h4 class="sherpa">Example</h4>
-          <div class="bs-docs-example example">
+          <div class="sherpa-docs-example example">
             <div class="tabbable">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#standard-tab1" data-toggle="tab">Section 1</a></li>
@@ -499,7 +493,7 @@ label : Sherpa.msg('textkey_label'),
 <p>&nbsp;</p>
 
 		<h4 class="sherpa">Tabs below</h4>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div class="tabbable tabs-below">
               <div class="tab-content">
                 <div class="tab-pane active" id="down-tab1">
@@ -536,40 +530,6 @@ label : Sherpa.msg('textkey_label'),
           </div>
 
 <p>&nbsp;</p>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-
-&lt;div class="tabbable blue"&gt;
-  ...
-&lt;/div&gt;
-</pre>
-
-          <h4 class="sherpa">Requires jQuery plugin</h4>
-          <p>All tabbable tabs are powered by our lightweight jQuery plugin. Read more about how to bring tabbable tabs to life <a href="./javascript.html#tabs" >on the JavaScript docs page</a>.</p>
-
-          <h3 class="sherpa">Tabbable in any direction</h3>
-
-          <h4 class="sherpa">Tabs on the bottom</h4>
-          <p>Flip the order of the HTML and add a class to put tabs on the bottom.</p>
-          <div class="bs-docs-example ">
-            <div class="tabbable tabs-below">
-              <div class="tab-content">
-                <div class="tab-pane active" id="A">
-                  <p>I'm in Section A.</p>
-                </div>
-                <div class="tab-pane" id="B">
-                  <p>Howdy, I'm in Section B.</p>
-                </div>
-                <div class="tab-pane" id="C">
-                  <p>What up girl, this is Section C.</p>
-                </div>
-              </div>
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
-                <li><a href="#B" data-toggle="tab">Section 2</a></li>
-                <li><a href="#C" data-toggle="tab">Section 3</a></li>
-              </ul>
-            </div> <!-- /tabbable -->
-          </div>
 
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
@@ -590,10 +550,10 @@ label : Sherpa.msg('textkey_label'),
 <p>&nbsp;</p>
 
 <h4 class="sherpa">Tabs left</h4>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div class="tabbable tabs-left">
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#left-tab1" data-toggle="tab">Really long Section 1</a></li>
+                <li class="active"><a href="#left-tab1" data-toggle="tab">Section 1</a></li>
                 <li><a href="#left-tab2" data-toggle="tab">Section 2</a></li>
                 <li><a href="#left-tab3" data-toggle="tab">Section 3</a></li>
               </ul>
@@ -649,7 +609,7 @@ label : Sherpa.msg('textkey_label'),
 
 <h4 class="sherpa">Tabs right</h4>
 
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div class="tabbable tabs-right">
               <div class="tab-content">
                 <div class="tab-pane active" id="right-tab1">
@@ -678,7 +638,7 @@ label : Sherpa.msg('textkey_label'),
                 </div>
               </div>
               <ul class="nav nav-tabs">
-                <li class="active"><a href="#right-tab1" data-toggle="tab">Really long Section 1</a></li>
+                <li class="active"><a href="#right-tab1" data-toggle="tab">Section 1</a></li>
                 <li><a href="#right-tab2" data-toggle="tab">Section 2</a></li>
                 <li><a href="#right-tab3" data-toggle="tab">Section 3</a></li>
               </ul>
@@ -724,7 +684,7 @@ label : Sherpa.msg('textkey_label'),
 
           </p>
 
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div id="switch_my_color" class="tabbable blue">
               <ul class="nav nav-tabs">
                 <li class="active"><a href="#colored-tab1" data-toggle="tab">Section 1</a></li>
@@ -772,7 +732,7 @@ label : Sherpa.msg('textkey_label'),
 
 					<h3 class="sherpa" id="#tabs-standard">Standard Pills</h3>
 					<h4 class="sherpa">Example</h4>
-          <div class="bs-docs-example example">
+          <div class="sherpa-docs-example">
             <div class="tabbable">
               <ul class="nav nav-pills">
                 <li class="active"><a href="#standard-pills1" data-toggle="tab">Section 1</a></li>
@@ -830,7 +790,7 @@ label : Sherpa.msg('textkey_label'),
 					<h3 class="sherpa" id="#tabs-links">Links</h3>
 
 					<h4 class="sherpa">Example</h4>
-          <div class="bs-docs-example example">
+          <div class="sherpa-docs-example">
             <div class="tabbable">
               <ul class="nav nav-links">
                 <li class="active"><a href="#standard-links1" data-toggle="tab">Section 1</a></li>
@@ -885,6 +845,73 @@ label : Sherpa.msg('textkey_label'),
 </pre>
 <p>&nbsp;</p>
 
+</article>
+
+
+<!-- Aside -->
+
+				<article id="aside" class="bottom-offset-large">
+					<h2 class="sherpa">Aside</h2>
+					<hr>
+
+          <div class="sherpa-docs-example">
+          	<p>An aside is used as main page navigation</p>
+            <div class="tabbable aside">
+              <ul class="nav nav-tabs">
+                <li class="active"><a href="#main-tab1" data-toggle="tab">Section 1</a></li>
+                <li><a href="#main-tab2" data-toggle="tab">Section 2</a></li>
+                <li><a href="#main-tab3" data-toggle="tab">Section 3</a></li>
+              </ul>
+              <div class="tab-content">
+                <div class="tab-pane active" id="main-tab1">
+                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+                </div>
+                <div class="tab-pane" id="main-tab2">
+                  <p>Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. </p>
+                </div>
+                <div class="tab-pane" id="main-tab3">
+                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
+                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+                  consequat. </p>
+                </div>
+              </div>
+
+            </div> <!-- /tabbable -->
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="tabbable tabs-left"&gt;
+  &lt;ul class="nav nav-tabs"&gt;
+    ...
+  &lt;/ul&gt;  
+  &lt;div class="tab-content"&gt;
+    &lt;div class="tab-pane active" id="tab1"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+    &lt;div class="tab-pane" id="tab2"&gt;
+      &lt;p&gt;...&lt;/p&gt;
+    &lt;/div&gt;
+  &lt;/div&gt;
+
+&lt;/div&gt;
+</pre>
+
+<p>&nbsp;</p>
+
 				</article>
 
 
@@ -896,7 +923,7 @@ label : Sherpa.msg('textkey_label'),
 
 					<h3 class="sherpa">Examples</h3>
           <p>A single example shown as it might be displayed across multiple pages.</p>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <ul class="breadcrumb">
               <li class="active">Home</li>
             </ul>
@@ -961,7 +988,7 @@ label : Sherpa.msg('textkey_label'),
 
           <h4 class="sherpa">Disabled and active states</h4>
           <p>Links are customizable for different circumstances. Use <code>.disabled</code> for unclickable links and <code>.active</code> to indicate the current page.</p>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div class="example pagination pagination-centered">
               <ul>
                 <li class="disabled"><a href="#">&laquo;</a></li>
@@ -996,7 +1023,7 @@ label : Sherpa.msg('textkey_label'),
 
           <h3 class="sherpa">Sizes</h3>
           <p>Fancy larger or smaller pagination? Add <code>.pagination-large</code>, <code>.pagination-small</code>, or <code>.pagination-mini</code> for additional sizes.</p>
-          <div class="example bs-docs-example">
+          <div class="example sherpa-docs-example">
             <div class="pagination pagination-large">
               <ul>
                 <li><a href="#">&laquo;</a></li>
@@ -1067,7 +1094,7 @@ label : Sherpa.msg('textkey_label'),
 
           <h3 class="sherpa">Alignment</h3>
           <p>Add one of two optional classes to change the alignment of pagination links: <code>.pagination-centered</code> and <code>.pagination-right</code>.</p>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div class="pagination pagination-centered">
               <ul>
                 <li><a href="#">&laquo;</a></li>
@@ -1085,7 +1112,7 @@ label : Sherpa.msg('textkey_label'),
   ...
 &lt;/div&gt;
 </pre>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <div class="pagination pagination-right">
               <ul>
                 <li><a href="#">&laquo;</a></li>
@@ -1105,7 +1132,7 @@ label : Sherpa.msg('textkey_label'),
 </pre>
 
 
- <!--   <hr class="bs-docs-separator">
+ <!--   <hr class="sherpa-docs-separator">
 
 
            <h2 class="sherpa">Pager</h2>
@@ -1113,7 +1140,7 @@ label : Sherpa.msg('textkey_label'),
 
           <h3 class="sherpa">Default example</h3>
           <p>By default, the pager centers links.</p>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <ul class="pager">
               <li><a href="#">Previous</a></li>
               <li><a href="#">Next</a></li>
@@ -1128,7 +1155,7 @@ label : Sherpa.msg('textkey_label'),
 
           <h3 class="sherpa">Aligned links</h3>
           <p>Alternatively, you can align each link to the sides:</p>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <ul class="pager">
               <li class="previous"><a href="#">&larr; Older</a></li>
               <li class="next"><a href="#">Newer &rarr;</a></li>
@@ -1147,7 +1174,7 @@ label : Sherpa.msg('textkey_label'),
 
           <h3 class="sherpa">Optional disabled state</h3>
           <p>Pager links also use the general <code>.disabled</code> utility class from the pagination.</p>
-          <div class="bs-docs-example">
+          <div class="sherpa-docs-example">
             <ul class="pager">
               <li class="previous disabled"><a href="#">&larr; Older</a></li>
               <li class="next"><a href="#">Newer &rarr;</a></li>
@@ -1455,7 +1482,7 @@ No options, displays all default values
 
           <h3 class="sherpa">Four directions</h3>
           <div class="example box gray-very-light sherpa-gray-stroke rounded-small">
-            <ul class="bs-docs-tooltip-examples">
+            <ul class="sherpa-docs-tooltip-examples">
               <li><a href="#" rel="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</a></li>
               <li><a href="#" rel="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</a></li>
               <li><a href="#" rel="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a></li>
@@ -1579,8 +1606,8 @@ No options, displays all default values
         <h3 class="sherpa">Static popover</h3>
         <p>Four options are available: top, right, bottom, and left aligned.</p>
 
-        <!-- <div class="bs-docs-example bs-docs-example-popover"> -->
-        <div class="box gray-very-light sherpa-gray-stroke rounded-small bs-docs-example-popover">
+        <!-- <div class="sherpa-docs-example sherpa-docs-example-popover"> -->
+        <div class="box gray-very-light sherpa-gray-stroke rounded-small sherpa-docs-example-popover">
 
           <div class="popover top">
             <div class="arrow"></div>
@@ -1619,16 +1646,16 @@ No options, displays all default values
         <p>No markup shown as popovers are generated from JavaScript and content within a <code>data</code> attribute.</p>
 
         <h3 class="sherpa">Live demo</h3>
-        <!-- <div class="bs-docs-example"> -->
+        <!-- <div class="sherpa-docs-example"> -->
         <div class="box gray-very-light sherpa-gray-stroke rounded-small center-text">
           <a href="#" class="btn btn-secondary" rel="popover" title="A Title" data-content="And here's some amazing content. It's very engaging. right?">Click to toggle popover</a>
         </div>
 
         <h4 class="sherpa">Four directions</h4>
 
-        <!-- <div class="bs-docs-example tooltip-demo"> -->
+        <!-- <div class="sherpa-docs-example tooltip-demo"> -->
         <div class="box gray-very-light sherpa-gray-stroke rounded-small center-text">
-          <!-- <ul class="bs-docs-tooltip-examples unstyled"> -->
+          <!-- <ul class="sherpa-docs-tooltip-examples unstyled"> -->
             <a href="#" class="btn" rel="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on top">Popover on top</a>
             <a href="#" class="btn" rel="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on right">Popover on right</a>
             <a href="#" class="btn" rel="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="Popover on bottom">Popover on bottom</a>
@@ -1637,7 +1664,7 @@ No options, displays all default values
         </div>
 
 
-        <hr class="bs-docs-separator">
+        <hr class="sherpa-docs-separator">
 
 
         <h3 class="sherpa">Usage</h3>
@@ -1878,7 +1905,7 @@ No options, displays all default values
 </pre>
 
 
-          <hr class="bs-docs-separator">
+          <hr class="sherpa-docs-separator">
 
 
           <h2 class="sherpa">Usage</h2>
@@ -2184,7 +2211,7 @@ Lorem ispum - &lt;button class="btn-link collapsed" data-toggle="collapse" data-
 </pre>			
 
 				</article>
-
+			</div>
 			</section>
 		</div>
 	</section>

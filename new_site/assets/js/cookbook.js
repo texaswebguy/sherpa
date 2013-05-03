@@ -111,13 +111,13 @@ var some_boolean_function = function(){
 	}
 }
 
-Eve.scope(".bs-docs-sidenav", function(){
+Eve.scope(".sherpa-docs-sidenav", function(){
 	this.listen("li a", "click", function(event){
 		event.preventDefault();
 		$('body').scrollTo($(event.currentTarget).attr('href'),300);
-		$(event.currentTarget).parents(".bs-docs-sidenav").find("li").removeClass('active');
+		$(event.currentTarget).parents(".sherpa-docs-sidenav").find("li").removeClass('active');
 		$(event.currentTarget).parent().addClass('active');
-		$('#bs-docs-sidenav').scrollspy('refresh');
+		$('#sherpa-docs-sidenav').scrollspy('refresh');
 	})
 })
 

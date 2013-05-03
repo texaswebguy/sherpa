@@ -2533,116 +2533,7 @@ you can use the generic selector below, but it's slower:
 
 
 
-/*This is the small arrow below the nav pills, 308 style addition
--------------------------------------------------- */
-.nav-pills > .active > a:after {
-  font-family: icon-ui;
-  content: "\24";
-  position: absolute;
-  top: 92%;
-  left: 50%;
-  margin-left: -12px;
-  border:none;
-  color:#0085c3;
-  font-size:20px;
-}
-.nav-pills > .active:hover > a:after {
-  color:pink;
-}
-.nav-pills > .active:hover a {
-  background-color:pink;
-}
-/*-------------------------------------------------- */
 
-
-
-.nav-links a,
-.nav-links a:active,
-.nav-links a[disabled] {
- font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  font-size: 14px;
-  display: inline-block;
-  *display: inline;
-  padding: 7px 11px;
-  margin-bottom: 10px;
-  *margin-left: .3em;
-  line-height: 18px;
-  *line-height: 18px;
-  text-align: center;
-  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75);
-  vertical-align: middle;
-  cursor: pointer;
-  border: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
-  background-color: transparent;
-  background-image: none;
-  -webkit-box-shadow: none;
-     -moz-box-shadow: none;
-          box-shadow: none;
-  color: #0085c3;
-  cursor: pointer;
-  border-color: transparent;
-  -webkit-border-radius: 0;
-     -moz-border-radius: 0;
-          border-radius: 0;
-  float:left;
-}
-
-/*TODO AJ need your magic here it needs to look and behave like btn-link*/
-
-.nav-links a:hover {
-  color: #0085c3;
-  text-decoration: underline;
-  background-color: transparent;
-}
-.nav-links li:first-child a {
-padding-left:0;  
-}
-.nav-links li:first-child a:hover {
-background:none;  
-}
-
-.nav-links a[disabled]:hover {
-  color: #333333;
-  text-decoration: none;
-}
-
-
-.nav-links .active a {
-  font-weight:bold;
-}
-
-
-
-
-/*Removes small arrow below the nav pills for stacked pills
--------------------------------------------------- */
-.nav-pills.nav-stacked > .active > a:after {
-  display:none;
-}
-/*-------------------------------------------------- */
-
-
-
-.nav .dropdown-toggle .caret {
-  margin-top: 6px;
-  border-top-color: #0085c3;
-  border-bottom-color: #0085c3;
-}
-
-.nav .dropdown-toggle:hover .caret {
-  border-top-color: #0085c3;
-  border-bottom-color: #0085c3;
-}
-
-
-.nav-pills > .active > a,
-.nav-pills > .active > a:hover {
-  background-color:#0085c3;
-  position: relative;
-}
 
 
 /* TABS
@@ -2650,6 +2541,16 @@ background:none;
 
 .tabbable {
   clear:both
+}
+
+.tabbable .tab-content {
+  overflow: auto;
+  padding:20px 20px 0px 20px;
+  margin-top:-20px;
+  border: 2px solid #ddd;
+  -webkit-border-radius: 0px 0px 4px 4px;
+  border-radius: 0px 0px 4px 4px;
+  border-top:none;
 }
 
 .nav-tabs {
@@ -2668,18 +2569,7 @@ background:none;
 }
 
 
-.tab-content {
 
-}
-.nav-tabs .tab-content {
-  overflow: auto;
-  padding:20px 20px 0px 20px;
-  margin-top:-20px;
-  border: 2px solid #ddd;
-  -webkit-border-radius: 0px 0px 4px 4px;
-  border-radius: 0px 0px 4px 4px;
-  border-top:none;
-}
 .tabs-below > .nav-tabs > li {
   margin-top: -2px;
   margin-bottom: 0;
@@ -2751,11 +2641,16 @@ background:none;
     width:60%;
 }
 
+/*TODO need to work on tabs-right for pills and links*/
 
-
-.tabbable.tabs-right, .tabbable.tabs-left {
+.tabbable.tabs-right > .tab-content, .tabbable.tabs-left .nav-tabs + .tab-content {
   margin-top:20px;
 }
+
+.tabbable.tabs-right .nav-tabs, .tabbable.tabs-left .nav-tabs {
+  margin-top:40px;
+}
+
 .tabs-right .nav-tabs {
     position:relative;
     border:none;
@@ -2797,6 +2692,141 @@ background:none;
     width:60%;
 }
 
+
+.tabs-left > .nav-pills + .tab-content,
+.tabs-right > .nav-pills + .tab-content,
+.tabs-left > .nav-links + .tab-content,
+.tabs-right > .nav-links + .tab-content {
+    width:100%
+}
+
+.tabs-right > .nav-pills a,
+.tabs-right > .nav-links a {
+    float:right;
+}
+
+
+
+/*This is the small arrow below the nav pills, 308 style addition
+-------------------------------------------------- */
+.nav-pills > .active > a:after {
+  font-family: icon-ui;
+  content: "\24";
+  position: absolute;
+  top: 92%;
+  left: 50%;
+  margin-left: -12px;
+  border:none;
+  color:#0085c3;
+  font-size:20px;
+}
+
+.nav-pills > li {
+  margin-right:10px;
+}
+
+.nav-pills > .active > a,
+.nav-pills > .active > a:hover {
+  background-color:#0085c3;
+  position: relative;
+  cursor:default;
+}
+
+.nav-pills + .tab-content, .nav-links + .tab-content  {
+  overflow: auto;
+  padding:20px 20px 0px 0px;
+  margin-top:-20px;
+  border:none;
+}
+
+
+/*Removes small arrow below the nav pills for stacked pills
+-------------------------------------------------- */
+.nav-pills.nav-stacked > .active > a:after {
+  display:none;
+}
+/*-------------------------------------------------- */
+
+
+
+
+.nav-links a,
+.nav-links a:active,
+.nav-links a[disabled] {
+ font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  display: inline-block;
+  *display: inline;
+  padding: 7px 11px;
+  margin-bottom: 10px;
+  *margin-left: .3em;
+  line-height: 18px;
+  *line-height: 18px;
+  text-align: center;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75);
+  vertical-align: middle;
+  cursor: pointer;
+  border: none;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+  color: #0085c3;
+  cursor: pointer;
+  border-color: transparent;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+  float:left;
+}
+
+/*TODO AJ need your magic here it needs to look and behave like btn-link*/
+
+.nav-links a:hover {
+  color: #0085c3;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.nav-links li:first-child a {
+padding-left:0;  
+}
+.nav-links li:first-child a:hover {
+background:none;  
+}
+
+.nav-links a[disabled]:hover {
+  color: #333333;
+  text-decoration: none;
+}
+
+.nav-links li {
+  margin-right:10px;
+}
+
+.nav-links .active a {
+  font-weight:bold;
+}
+
+
+
+.nav .dropdown-toggle .caret {
+  margin-top: 6px;
+  border-top-color: #0085c3;
+  border-bottom-color: #0085c3;
+}
+
+.nav .dropdown-toggle:hover .caret {
+  border-top-color: #0085c3;
+  border-bottom-color: #0085c3;
+}
+
+/*TODO colors have not been specified for nav pills and nav links. 
+Even if we don't want to actually allow it then we need to stil 
+specify all the colors to override their intent to color them */
 
 /* Color tabs support */
 
@@ -3139,18 +3169,6 @@ background:none;
   z-index: 2;
 }
 
-
-/* tooltips */
-.bs-docs-tooltip-examples {
-  text-align: center;
-  margin: 0 0 10px;
-  list-style: none;
-}
-
-.bs-docs-tooltip-examples li {
-  display: inline;
-  padding: 0 10px;
-}
 
 
 /* BREADCRUMBS

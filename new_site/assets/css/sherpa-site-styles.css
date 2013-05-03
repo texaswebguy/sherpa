@@ -92,11 +92,11 @@ a:hover, a:active {
   /*border-color: #f9f9f9 #f9f9f9 #fff #f9f9f9;*/
 }
 
-/* We already had a .bs-docs-example used in pages so it works nicely */
-.bs-docs-example a, .bs-docs-example a:hover {
+/* We already had a .sherpa-docs-example used in pages so it works nicely */
+.sherpa-docs-example a, .sherpa-docs-example a:hover {
   color:#0085c3;
 }
-.bs-docs-example a:hover, a:active {
+.sherpa-docs-example a:hover, a:active {
   outline: 0;
 }
 
@@ -340,7 +340,7 @@ ul.unstyled.icons li {
     background-color: #f7f6ed;
   }
 
-  .bs-docs-sidenav {
+  .sherpa-docs-sidenav {
     /* width: 100%; messes up with affix */
     margin: 20px 0 40px 0;
     padding: 0;
@@ -349,13 +349,13 @@ ul.unstyled.icons li {
        -moz-border-radius: 6px;
             border-radius: 6px;
   }
-  .bs-docs-sidenav.affix {
+  .sherpa-docs-sidenav.affix {
     top:45px;
   }
-  .tablet .bs-docs-sidenav.affix li a, .mobile .bs-docs-sidenav.affix li a{
+  .tablet .sherpa-docs-sidenav.affix li a, .mobile .sherpa-docs-sidenav.affix li a{
     display:none;
   }
-  .tablet .bs-docs-sidenav.affix, .mobile .bs-docs-sidenav.affix {
+  .tablet .sherpa-docs-sidenav.affix, .mobile .sherpa-docs-sidenav.affix {
     width:100%;
     top: 20px;
     left: 0px;
@@ -364,13 +364,13 @@ ul.unstyled.icons li {
     border-radius: 0;
     z-index:9998;
   }
-  .tablet .bs-docs-sidenav.affix li.active a, .mobile .bs-docs-sidenav.affix li.active a, .tablet .bs-docs-sidenav.affix.open li a, .mobile .bs-docs-sidenav.affix.open li a {
+  .tablet .sherpa-docs-sidenav.affix li.active a, .mobile .sherpa-docs-sidenav.affix li.active a, .tablet .sherpa-docs-sidenav.affix.open li a, .mobile .sherpa-docs-sidenav.affix.open li a {
     display:block;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
   }
-  .tablet .bs-docs-sidenav.affix li.active a:after, .mobile .bs-docs-sidenav.affix li.active a:after {
+  .tablet .sherpa-docs-sidenav.affix li.active a:after, .mobile .sherpa-docs-sidenav.affix li.active a:after {
     font-family: 'icon-dell-mini';
     content:"s";
     color:#fff;
@@ -378,7 +378,7 @@ ul.unstyled.icons li {
   }
 
 
-  .bs-docs-sidenav > li > a {
+  .sherpa-docs-sidenav > li > a {
     display: block;
     /*width: 190px \9;*/
     margin: 0 0 -1px;
@@ -386,19 +386,19 @@ ul.unstyled.icons li {
     border: 1px solid #e5e5e5;
   }
 
-  .bs-docs-sidenav > li:first-child > a {
+  .sherpa-docs-sidenav > li:first-child > a {
     -webkit-border-radius: 6px 6px 0 0;
        -moz-border-radius: 6px 6px 0 0;
             border-radius: 6px 6px 0 0;
   }
 
-  .bs-docs-sidenav > li:last-child > a {
+  .sherpa-docs-sidenav > li:last-child > a {
     -webkit-border-radius: 0 0 6px 6px;
        -moz-border-radius: 0 0 6px 6px;
             border-radius: 0 0 6px 6px;
   }
 
-  .bs-docs-sidenav > .active > a {
+  .sherpa-docs-sidenav > .active > a {
     position: relative;
     z-index: 2;
     padding: 9px 15px;
@@ -451,8 +451,21 @@ ul.unstyled.icons li {
 /* Tooltips*/
 
 
+/* tooltips */
+.sherpa-docs-tooltip-examples {
+  text-align: center;
+  margin: 0 0 10px;
+  list-style: none;
+}
+
+.sherpa-docs-tooltip-examples li {
+  display: inline;
+  padding: 0 10px;
+}
+
+
 /* Popovers */
-  .bs-docs-example-popover .popover {
+  .sherpa-docs-example-popover .popover {
     position: relative;
     display: block;
     float: left;
