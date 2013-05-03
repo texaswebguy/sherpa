@@ -134,15 +134,37 @@
 &lt;h1&gt;...&lt;/h1&gt;</pre>
 
 		        	<h3 class="sherpa">Headings options</h3>
-			        <p>Create variants of the headings using <code>.white</code> and <code>.feature</code>. The <code>.white</code> class can be applied to change the text color to white and it can be used for all headings. The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading. </p>
-					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
-						<h4 class="feature"><code>&lt;h4 class="feature"&gt;</code> h4. Heading 4</h4>
-						<h1 class="blue box rounded-small white-text"><code>&lt;h1 class="white-text"&gt;</code> h1. Heading 1</h1>
+			        <p>Create variants of the headings using <code>.title</code> <code>.feature</code> and <code>.white</code> classes.</p>
+
+					<h4 class="sherpa">Page Title</h4>
+					<p>The Page Title is a <code>&lt;h1&gt;</code> contained within a <code>&lt;div class="title"&gt;</code></p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="title">
+							<h1>Page Title</h1>
+						</div>
 					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;h4 class="feature"&gt;...&lt;/h4&gt;
-&lt;h1 class="white-text" &gt;...&lt;/h1&gt;</pre>
-	        
+&lt;div class="title"&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;div&gt;</pre>
+
+			        <h4 class="sherpa">Feature Heading</h4>
+			        <p>The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<h4 class="feature">Feature Heading</h4>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h4 class="feature"&gt;Feature Heading&lt;/h4&gt;</pre>
+
+			        <h4 class="sherpa">White Heading</h4>
+			        <p>Create a White Heading using the <code>.white</code> class. The <code>.white</code> class can can be used for all headings.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<h1 class="blue box rounded-small white-text">White Heading</h1>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1 class="white-text"&gt;White Heading&lt;/h1&gt;</pre>
+
+ 
 					<h3 class="sherpa">Tablet headings</h3>
 					<p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>
 					<p class="sherpa"><span class="label label-info">Note</span> The below headings for tablet are for display only. You do not need to change anything in your heading tags. The heading will change to the appropriate size automatically.</p>
@@ -169,19 +191,6 @@
 					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;h1&gt;...&lt;/h1&gt;</pre>
-
-
-					<h3 class="sherpa">Page Title</h3>
-					<p>The Page Title is a <code>&lt;h1&gt;</code> contained within a <code>&lt;div class="title"&gt;</code></p>
-					<div class="example box sherpa-gray-stroke rounded-small">
-						<div class="title">
-							<h1>Page Title</h1>
-						</div>
-					</div>
-<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="title"&gt;
-  &lt;h1&gt;Page Title&lt;/h1&gt;
-&lt;div&gt;</pre>
 
 
 					<h3 class="sherpa">Body copy</h3>
