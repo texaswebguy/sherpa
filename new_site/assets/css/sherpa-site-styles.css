@@ -524,10 +524,6 @@ Breakpoints
   h5.sherpa {font-size: 14px;line-height: 14px;}
   h6.sherpa {font-size: 11px;line-height: 11px;}
 
-
-
-
-
   /* Nav */
   .nav-sherpa ul {
     text-align: left;
@@ -536,16 +532,19 @@ Breakpoints
 
   .nav-sherpa ul li {
     display: block;
+    
   }
 
-  .nav-sherpa a {
+  .nav-sherpa ul li a {
     width: 100%;
     display: block;
     margin:0;
     padding:10px 20px;
   }
 
-  .nav-sherpa a:hover {
+  .nav-sherpa ul li a:hover {
+    width: 100%;
+    display: block;
     margin:0;
     padding:10px 20px;
   }
@@ -575,9 +574,6 @@ Breakpoints
   h5.sherpa {font-size: 14px;line-height: 14px;}
   h6.sherpa {font-size: 11px;line-height: 11px;}
   
-
-
-
   /* Nav */
   .nav-sherpa ul {
     text-align: left;
@@ -586,20 +582,22 @@ Breakpoints
 
   .nav-sherpa ul li {
     display: block;
+    
   }
 
-  .nav-sherpa a {
+  .nav-sherpa ul li a {
     width: 100%;
     display: block;
     margin:0;
     padding:10px 20px;
   }
 
-  .nav-sherpa a:hover {
+  .nav-sherpa ul li a:hover {
+    width: 100%;
+    display: block;
     margin:0;
     padding:10px 20px;
   }
-
 }
 
 

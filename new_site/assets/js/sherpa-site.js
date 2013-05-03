@@ -243,7 +243,10 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	$('.sherpa-docs-sidenav').waypoint('sticky', {
 	  stuckClass: 'affix',
 	  offset: 70,
-	  complete: function(){$(".sherpa-docs-sidenav.affix").width($('.da1-da3').width())}
+	  complete: function(){
+	  	$(".sherpa-docs-sidenav.affix").width($('.da1-da3').width());
+	  	$(".sticky-wrapper").height("inherit");
+	  }
 	});
 	/* TODO: need to abstrack waypoints sticky to overtake data-spy="scroll" bootstrap selectors
 	The version of waypoints sticky loaded provides a call back function which is critical in hard setting the width of the affix element
@@ -252,45 +255,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	
 
-
-
-//data-waypoint-trigger="true" data-waypoint-offsetUp="70" data-waypoint-offsetDown="100" data-waypoint-target="article"
-/*	$('[data-waypoint-trigger="true"]').each(function () {
-		var wp={};
-		wp.trigger = $(this);
-		wp.offsetUp = wp.trigger.attr('data-waypoint-offsetUp');
-		wp.offsetDown = wp.trigger.attr('data-waypoint-offsetDown');
-		wp.target = wp.trigger.attr('data-waypoint-target');
-		if(!wp.offsetUp){wp.offsetUp=0}
-		if(!wp.offsetDown){wp.offsetDown=0}
-		if(!wp.target){console.error('You need to include a target selector attribute such as data-waypoint-target=".foobar"')} else {
-			wp.activate = function(element){
-				console.log($(element).html())
-				wp.trigger.find('li.active').removeClass('active');
-				wp.id = '#'+$(element).attr('id');
-				wp.trigger.find('li a[href='+wp.id+']').parent().addClass('active');
-			}
-			$(wp.target).waypoint(function(direction) {
-				if(direction=="down") {
-					wp.activate($(this));
-				}
-				console.log(wp)
-			}, { offset: wp.offsetUp });
-
-			$(wp.target).waypoint(function(direction) {
-				if(direction=="up") {
-					wp.activate($(this));
-				}
-				console.log(wp.trigger.find('li a[href='+wp.id+']').parent().html())
-			}, { 
-				offset: function() { 
-					return -$(this).height()+wp.offsetDown;
-				}
-			});
-		}
-		console.log(wp)
-	});
-*/
 
 
 	$('article').waypoint(function(direction) {
