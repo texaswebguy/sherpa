@@ -3177,6 +3177,11 @@ background:none;
   color: #ccc;
 }
 
+.divider {
+  padding: 0 5px;
+  color: #ccc;
+}
+
 /* PAGINATION
 -------------------------------------------------- */
 .pagination ul > li > a, .pagination ul > li > span {
