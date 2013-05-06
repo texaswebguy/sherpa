@@ -1,7 +1,6 @@
 Sherpa.counter("Sherpa Custom Widgets");
 Sherpa.ready("sherpai18n", function(){
 
-
 	ko.bindingHandlers['msg'] = {
 	    init: function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 

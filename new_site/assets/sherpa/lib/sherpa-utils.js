@@ -3,6 +3,8 @@ Sherpa.counter("Sherpa Utils");
 
 "use strict";
 
+Sherpa.componentJS = {};
+
 Sherpa.uuid = function() {
 	function s4() {
 	  return Math.floor((1 + Math.random()) * 0x10000)
@@ -176,11 +178,12 @@ Sherpa.urlQuery = function () {
 		return false;
 	}
 }
-
+var responseHTMLSample = ""
 Sherpa.insertComponent = function(component_name, component_type, element, bindingContext, options) {
 
 
-	var filename, uuid = "",html;
+	var filename, uuid = "",html, componentJS = component_name+"_"+component_type+"_js";
+
 	if(viewModel.localhost) {
 		// TODO workaround to circumvent browser cache... need to look into this better
 		uuid = "#"+Sherpa.uuid();
@@ -207,8 +210,17 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 		data: {filename: "components/"+component_name+"/"+filename}, 
 		success: function(responseHTML, status){
 			//console.log(status);
-			//console.log(element)
-			$(element).html(responseHTML);
+			if(!_.isUndefined(Sherpa.componentJS[componentJS])) {
+				//Don't inject a script that already exists
+				responseHTML = responseHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,"");
+				//$(responseHTML).find('#'+componentJS).remove();
+				$(element).html(responseHTML);
+			} else {
+				//set it right away because ajax takes its time
+				Sherpa.componentJS[componentJS] = true;
+				$(element).html(responseHTML);
+			}
+
 			if(options){
 				bindingContext.component_options = options;
 			}

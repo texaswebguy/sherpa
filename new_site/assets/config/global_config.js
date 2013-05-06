@@ -41,7 +41,7 @@ SHERPA.DEFAULT_LOCALE = "en";
 
 // Configuration of framework informational functions
 SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
-SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
+SHERPA.ENABLE_COUNTER = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors

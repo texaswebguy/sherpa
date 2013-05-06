@@ -1,9 +1,8 @@
 
 
-<script type="text/javascript">
+<script type="text/javascript" id="alerts_alerts_js">
 
-
-  var getComponentData = _.once(function(options){
+  Sherpa.componentJS.alerts_alerts_js = function(options){
     //TODO put default options in config
     var default_options = {
           type: 'attention',
@@ -40,12 +39,12 @@
       Sherpa.QA.logEntry("Alert component rendered with default options. Please make sure to put real content in your alert.","content, alerts")
       return default_options;
     }
-  });
+  };
 
 
 </script>
 
-<!-- ko with: getComponentData(component_options) -->
+<!-- ko with: Sherpa.componentJS.alerts_alerts_js(component_options) -->
 
 <div data-bind="attr: { class: 'alert '+type }">
   <!-- ko if: dismiss -->

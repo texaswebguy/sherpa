@@ -256,7 +256,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	
 
 
-
+	//TODO need all this functionality to be generic so that it works on all prototypes
 	$('article').waypoint(function(direction) {
 		if(direction=="down") {
 			$('.nav.nav-list.sherpa-docs-sidenav li.active').removeClass('active');
@@ -296,6 +296,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
     $('#tooltips').tooltip({
       selector: "a[rel=tooltip]"
     })
+    $('a[data-toggle=tooltip]').tooltip();
 
     $('.tooltip-test').tooltip()
     $('.popover-test').popover()
@@ -307,6 +308,18 @@ Sherpa.ready("sherpaGlobalEvents", function(){
         e.preventDefault()
       })
 
+    $('.showDefaultAside').click(function(event){
+		event.preventDefault();
+		$(this).hide();
+		$('.hideDefaultAside').show();
+		$('.aside').addClass('sherpa-docs-example');
+	});
+    $('.hideDefaultAside').click(function(event){
+		event.preventDefault();
+		$(this).hide();
+		$('.showDefaultAside').show();
+		$('.aside').removeClass('sherpa-docs-example');
+	});
 
 
 	/*********************************************************************************

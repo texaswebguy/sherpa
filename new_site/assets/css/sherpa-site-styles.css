@@ -101,6 +101,12 @@ a:hover, a:active {
 }
 
 
+/* Base class */
+.sherpa-docs-example {
+  position: relative;
+}
+
+
 /* Sherpa headings*/
 h1.sherpa,h2.sherpa,h3.sherpa,h4.sherpa,h5.sherpa,h6.sherpa {
   margin: 10px 0;
@@ -335,6 +341,13 @@ ul.unstyled.icons li {
    margin:0 auto;*/
   }
 
+  .sherpa-docs-example .nav-list > .active > a, .sherpa-docs-example .nav-list > .active > a:hover {
+    background:#0085c3;
+    color:#fff;
+  }
+
+
+
   .nav > li > a:hover {
     text-decoration: none;
     background-color: #f7f6ed;
@@ -458,9 +471,15 @@ ul.unstyled.icons li {
 }
 
 .sherpa-docs-tooltip-examples li {
+  position:relative;
   display: inline;
   padding: 0 10px;
 }
+
+a[rel=tooltip], a[data-toggle=tooltip], {
+  position:relative;
+}
+
 
 
 /* Popovers */
