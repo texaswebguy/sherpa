@@ -8,7 +8,7 @@
 
 var SHERPA = {};
 
-SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
+SHERPA.RUN_AS_LOCAL = false; //set to false if you want this prototype to refer to Sherpa site
 /* 
  * By default, prototypes run as local.  This means that all files associated with the prototypes 
  * are local and the prototype should be able to run locally without any internet connection.  
@@ -24,9 +24,6 @@ SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer t
  * in one location so that your entire team uses the same resources.
 */
 SHERPA.RUN_SHERPA_PROD = true; //runs mimified versions of sherpa code
-
-// Should not be changed, these are core dependencies
-SHERPA.UNDERSCORE = "assets/sherpa/lib/underscore-min.js";
 
 // JS PATH Configuration;
 SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
@@ -64,12 +61,13 @@ if(SHERPA.RUN_AS_LOCAL) {
 	SHERPA.CSS_PATH = SHERPA.CSS_LOCAL_PATH;
 } else {
 	SHERPA.JS_LIB_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_LIB_PATH;
-	SHERPA.JS_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_PATH;
+	SHERPA.JS_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_PATH;
 	SHERPA.CSS_CORE_PATH = SHERPA.CSS_CORE_REMOTE_PATH;
 	SHERPA.CSS_PATH = SHERPA.CSS_REMOTE_PATH;
 }
 
-
+// Should not be changed, this is a core dependencies
+SHERPA.UNDERSCORE = SHERPA.JS_LIB_PATH+"underscore-min.js";
 
 // JS Files
 //______________________________________________________________________________________
@@ -85,9 +83,9 @@ SHERPA.JS_CORE_LOAD = [
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
 	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
 	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},,
-	{ waypoints: "assets/sherpa/lib/waypoints.min.js"},
-	{ waypointsSticky: "assets/sherpa/lib/waypoints-sticky.min.js"},
-	{ csvParser: "assets/sherpa/lib/jquery.csv-0.71.min.js"},
+	{ waypoints: SHERPA.JS_LIB_PATH+"waypoints.min.js"},
+	{ waypointsSticky: SHERPA.JS_LIB_PATH+"waypoints-sticky.min.js"},
+	{ csvParser: SHERPA.JS_LIB_PATH+"jquery.csv-0.71.min.js"},
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 
