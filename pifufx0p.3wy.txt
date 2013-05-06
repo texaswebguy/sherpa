@@ -1,0 +1,409 @@
+﻿Moved new site to sherpa site root. Fixed starter template html file. Added minified versions of sherpa code and a config setting to enable.
+
+# Please enter the commit message for your changes. Lines starting
+# with '#' will be ignored, and an empty message aborts the commit.
+# On branch gh-pages
+# Changes to be committed:
+#   (use "git reset HEAD <file>..." to unstage)
+#
+#	new file:   assets/config/global_config.js
+#	new file:   assets/config/settings_cn.json
+#	new file:   assets/config/settings_en.json
+#	new file:   assets/content/messages_cn.json
+#	new file:   assets/content/messages_en.json
+#	new file:   assets/css/doc.css
+#	new file:   assets/css/sherpa-site-styles.css
+#	new file:   assets/data/sample_customer_list_en.csv
+#	modified:   assets/img/Thumbs.db
+#	new file:   assets/img/class-padding.jpg
+#	new file:   assets/img/lifestyle.jpg
+#	new file:   assets/img/topo-pattern-nav.jpg
+#	new file:   assets/img/topo-pattern.jpg
+#	new file:   assets/js/app.js
+#	new file:   assets/js/cookbook.js
+#	new file:   assets/js/sherpa-site.js
+#	new file:   assets/js/testAdditionalJS.js
+#	new file:   assets/sherpa/README.md
+#	new file:   assets/sherpa/bin/mongoose_web_server.exe
+#	new file:   assets/sherpa/css/bootstrap.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-9.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-da-floats.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-da-paddings.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-da-relationships.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-da-spans1.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-da-spans2.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-db-floats.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-db-paddings.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-db-relationships.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-db-spans1.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-db-spans2.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-lte8.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ma-floats.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ma-paddings.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ma-relationships.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ma-spans1.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ma-spans2.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-mb-floats.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-mb-paddings.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-mb-relationships.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-mb-spans1.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-mb-spans2.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ta-floats.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ta-paddings.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ta-relationships.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ta-spans1.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-ta-spans2.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-tb-floats.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-tb-paddings.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-tb-relationships.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-tb-spans1.css
+#	new file:   assets/sherpa/css/grid/gridset-ie-tb-spans2.css
+#	new file:   assets/sherpa/css/grid/gridset.css
+#	new file:   assets/sherpa/css/sherpa-override.css
+#	new file:   assets/sherpa/fonts/MuseoForDell-100.otf
+#	new file:   assets/sherpa/fonts/MuseoForDell-300.otf
+#	new file:   assets/sherpa/fonts/MuseoForDell-700.otf
+#	new file:   assets/sherpa/fonts/icon-large.dev.svg
+#	new file:   assets/sherpa/fonts/icon-large.eot
+#	new file:   assets/sherpa/fonts/icon-large.svg
+#	new file:   assets/sherpa/fonts/icon-large.ttf
+#	new file:   assets/sherpa/fonts/icon-large.woff
+#	new file:   assets/sherpa/fonts/icon-small.dev.svg
+#	new file:   assets/sherpa/fonts/icon-small.eot
+#	new file:   assets/sherpa/fonts/icon-small.svg
+#	new file:   assets/sherpa/fonts/icon-small.ttf
+#	new file:   assets/sherpa/fonts/icon-small.woff
+#	new file:   assets/sherpa/fonts/icon-ui.dev.svg
+#	new file:   assets/sherpa/fonts/icon-ui.eot
+#	new file:   assets/sherpa/fonts/icon-ui.svg
+#	new file:   assets/sherpa/fonts/icon-ui.ttf
+#	new file:   assets/sherpa/fonts/icon-ui.woff
+#	new file:   assets/sherpa/fonts/museofordell-100-webfont.eot
+#	new file:   assets/sherpa/fonts/museofordell-100-webfont.svg
+#	new file:   assets/sherpa/fonts/museofordell-100-webfont.ttf
+#	new file:   assets/sherpa/fonts/museofordell-100-webfont.woff
+#	new file:   assets/sherpa/fonts/museofordell-300-webfont.eot
+#	new file:   assets/sherpa/fonts/museofordell-300-webfont.svg
+#	new file:   assets/sherpa/fonts/museofordell-300-webfont.ttf
+#	new file:   assets/sherpa/fonts/museofordell-300-webfont.woff
+#	new file:   assets/sherpa/fonts/museofordell-700-webfont.eot
+#	new file:   assets/sherpa/fonts/museofordell-700-webfont.svg
+#	new file:   assets/sherpa/fonts/museofordell-700-webfont.ttf
+#	new file:   assets/sherpa/fonts/museofordell-700-webfont.woff
+#	new file:   assets/sherpa/fonts/museosansfordell-100-webfont.eot
+#	new file:   assets/sherpa/fonts/museosansfordell-100-webfont.svg
+#	new file:   assets/sherpa/fonts/museosansfordell-100-webfont.ttf
+#	new file:   assets/sherpa/fonts/museosansfordell-100-webfont.woff
+#	new file:   assets/sherpa/fonts/museosansfordell-300-webfont.eot
+#	new file:   assets/sherpa/fonts/museosansfordell-300-webfont.svg
+#	new file:   assets/sherpa/fonts/museosansfordell-300-webfont.ttf
+#	new file:   assets/sherpa/fonts/museosansfordell-300-webfont.woff
+#	new file:   assets/sherpa/fonts/museosansfordell-700-webfont.eot
+#	new file:   assets/sherpa/fonts/museosansfordell-700-webfont.svg
+#	new file:   assets/sherpa/fonts/museosansfordell-700-webfont.ttf
+#	new file:   assets/sherpa/fonts/museosansfordell-700-webfont.woff
+#	new file:   assets/sherpa/img/sherpa_page_loader.gif
+#	new file:   assets/sherpa/lib/amplify.min.js
+#	new file:   assets/sherpa/lib/bootstrap-min.js
+#	new file:   assets/sherpa/lib/date-format.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-apollo.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-basic.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-clj.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-css.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-dart.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-erlang.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-go.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-hs.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-lisp.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-llvm.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-lua.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-matlab.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-ml.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-mumps.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-n.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-pascal.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-proto.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-r.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-rd.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-scala.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-sql.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-tcl.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-tex.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-vb.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-vhdl.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-wiki.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-xq.js
+#	new file:   assets/sherpa/lib/google-code-prettify/lang-yaml.js
+#	new file:   assets/sherpa/lib/google-code-prettify/prettify.css
+#	new file:   assets/sherpa/lib/google-code-prettify/prettify.js
+#	new file:   assets/sherpa/lib/google-code-prettify/run_prettify.js
+#	new file:   assets/sherpa/lib/greensock/TimelineLite.min.js
+#	new file:   assets/sherpa/lib/greensock/TimelineMax.min.js
+#	new file:   assets/sherpa/lib/greensock/TweenLite.min.js
+#	new file:   assets/sherpa/lib/greensock/TweenMax.min.js
+#	new file:   assets/sherpa/lib/greensock/easing/EasePack.min.js
+#	new file:   assets/sherpa/lib/greensock/jquery.gsap.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/AttrPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/BezierPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/CSSPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/CSSRulePlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/ColorPropsPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/DirectionalRotationPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/EaselPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/KineticPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/RaphaelPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/RoundPropsPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/ScrollToPlugin.min.js
+#	new file:   assets/sherpa/lib/greensock/plugins/TextPlugin.min.js
+#	new file:   assets/sherpa/lib/gridset-overlay.js
+#	new file:   assets/sherpa/lib/head.min.js
+#	new file:   assets/sherpa/lib/html5shiv-printshiv.js
+#	new file:   assets/sherpa/lib/html5shiv.js
+#	new file:   assets/sherpa/lib/jquery-ui.min.js
+#	new file:   assets/sherpa/lib/jquery.csv-0.71.min.js
+#	new file:   assets/sherpa/lib/jquery.history.js
+#	new file:   assets/sherpa/lib/jquery.html5form.js
+#	new file:   assets/sherpa/lib/jquery.min.js
+#	new file:   assets/sherpa/lib/jquery.scrollTo.min.js
+#	new file:   assets/sherpa/lib/jquery.ui.core.min.js
+#	new file:   assets/sherpa/lib/jquery.ui.rcarousel.min.js
+#	new file:   assets/sherpa/lib/knockout.min.js
+#	new file:   assets/sherpa/lib/masonry.min.js
+#	new file:   assets/sherpa/lib/pager.min.js
+#	new file:   assets/sherpa/lib/query-string.js
+#	new file:   assets/sherpa/lib/sherpa-custom-widgets-min.js
+#	new file:   assets/sherpa/lib/sherpa-custom-widgets.js
+#	new file:   assets/sherpa/lib/sherpa-event-manager-min.js
+#	new file:   assets/sherpa/lib/sherpa-event-manager.js
+#	new file:   assets/sherpa/lib/sherpa-global-events-min.js
+#	new file:   assets/sherpa/lib/sherpa-global-events.js
+#	new file:   assets/sherpa/lib/sherpa-i18n-min.js
+#	new file:   assets/sherpa/lib/sherpa-i18n.js
+#	new file:   assets/sherpa/lib/sherpa-notes-min.js
+#	new file:   assets/sherpa/lib/sherpa-notes.js
+#	new file:   assets/sherpa/lib/sherpa-prototype-qa-min.js
+#	new file:   assets/sherpa/lib/sherpa-prototype-qa.js
+#	new file:   assets/sherpa/lib/sherpa-pseudo-auth-min.js
+#	new file:   assets/sherpa/lib/sherpa-pseudo-auth.js
+#	new file:   assets/sherpa/lib/sherpa-utils-min.js
+#	new file:   assets/sherpa/lib/sherpa-utils.js
+#	new file:   assets/sherpa/lib/showdown.js
+#	new file:   assets/sherpa/lib/underscore-min.js
+#	new file:   assets/sherpa/lib/underscore.string.min.js
+#	new file:   assets/sherpa/lib/waypoints-infinite.min.js
+#	new file:   assets/sherpa/lib/waypoints-sticky.min.js
+#	new file:   assets/sherpa/lib/waypoints.min.js
+#	new file:   assets/sherpa/sherpa.js
+#	new file:   assets/xref/resources_cn.json
+#	new file:   assets/xref/resources_en.json
+#	modified:   base-css.html
+#	modified:   components.html
+#	new file:   components/alerts/README.md
+#	new file:   components/alerts/alerts.html
+#	new file:   components/alerts/page-level.html
+#	new file:   components/dropdown/button.html
+#	new file:   components/dropdown/dropdown.html
+#	new file:   components/footer/sherpa_site.html
+#	new file:   components/forms/pseudo-login.html
+#	new file:   components/masthead/sherpa_site.html
+#	new file:   components/mycomponent/foobar.html
+#	new file:   components/pagination/pagination.html
+#	new file:   components/table/table.html
+#	new file:   components/tabs/tabs.html
+#	new file:   configuration.html
+#	new file:   examples/layout.html
+#	new file:   examples/rounded_corners.html
+#	new file:   functions.html
+#	modified:   how-to.html
+#	modified:   index.html
+#	new file:   pages/404.html
+#	new file:   pages/absolute_path.html
+#	new file:   pages/api.html
+#	new file:   pages/api_config.html
+#	new file:   pages/api_page.html
+#	new file:   pages/api_pager.html
+#	new file:   pages/async.html
+#	new file:   pages/binding_error.html
+#	new file:   pages/binding_wildcard_to_observable.html
+#	new file:   pages/change_binding_context.html
+#	new file:   pages/configure_iframe.html
+#	new file:   pages/crawling.html
+#	new file:   pages/custom_hide_show.html
+#	new file:   pages/custom_js_when_navigating.html
+#	new file:   pages/custom_navigation_binding.html
+#	new file:   pages/custom_view_loader.html
+#	new file:   pages/custom_widgets.html
+#	new file:   pages/deep_load_content_into_wildcard.html
+#	new file:   pages/deep_navigation.html
+#	new file:   pages/deep_navigation_with_wildcards.html
+#	new file:   pages/failed_navigation.html
+#	new file:   pages/guards.html
+#	new file:   pages/href_with_params.html
+#	new file:   pages/html5_history.html
+#	new file:   pages/index.html
+#	new file:   pages/intro.html
+#	new file:   pages/lazy_bind_view_model.html
+#	new file:   pages/load_into_iframe.html
+#	new file:   pages/loader.html
+#	new file:   pages/matching_wildcards.html
+#	new file:   pages/modals.html
+#	new file:   pages/page2.html
+#	new file:   pages/page3.html
+#	new file:   pages/page4.html
+#	new file:   pages/params.html
+#	new file:   pages/params_and_object.html
+#	new file:   pages/relative_path.html
+#	new file:   pages/send_wildcard_to_source.html
+#	new file:   pages/setup.html
+#	new file:   pages/source_error.html
+#	new file:   pages/start.html
+#	new file:   pages/structure.html
+#	new file:   pages/sub-section-1.html
+#	new file:   pages/sub-section-2.html
+#	new file:   pages/sub-section-3.html
+#	new file:   pages/tabpanel.html
+#	new file:   pages/url_toggle_show.html
+#	new file:   pages/vars.html
+#	modified:   scaffolding.html
+#	new file:   start_here.url
+#	new file:   start_server.bat
+#	new file:   starter_template.html
+#	new file:   tables.html
+#	new file:   templates/blank_template_1.html
+#	new file:   tutorial/assets/css/doc.css
+#	new file:   tutorial/assets/img/Thumbs.db
+#	new file:   tutorial/cookbook.html
+#	new file:   tutorial/tutorial.html
+#
+# Changes not staged for commit:
+#   (use "git add/rm <file>..." to update what will be committed)
+#   (use "git checkout -- <file>..." to discard changes in working directory)
+#
+#	deleted:    .gitignore
+#	deleted:    435derkm.2bj.txt
+#	deleted:    assets/css/grid/gridset-ie-9.css
+#	deleted:    assets/css/grid/gridset-ie-da-floats.css
+#	deleted:    assets/css/grid/gridset-ie-da-paddings.css
+#	deleted:    assets/css/grid/gridset-ie-da-relationships.css
+#	deleted:    assets/css/grid/gridset-ie-da-spans1.css
+#	deleted:    assets/css/grid/gridset-ie-da-spans2.css
+#	deleted:    assets/css/grid/gridset-ie-db-floats.css
+#	deleted:    assets/css/grid/gridset-ie-db-paddings.css
+#	deleted:    assets/css/grid/gridset-ie-db-relationships.css
+#	deleted:    assets/css/grid/gridset-ie-db-spans1.css
+#	deleted:    assets/css/grid/gridset-ie-db-spans2.css
+#	deleted:    assets/css/grid/gridset-ie-lte8.css
+#	deleted:    assets/css/grid/gridset-ie-ma-floats.css
+#	deleted:    assets/css/grid/gridset-ie-ma-paddings.css
+#	deleted:    assets/css/grid/gridset-ie-ma-relationships.css
+#	deleted:    assets/css/grid/gridset-ie-ma-spans1.css
+#	deleted:    assets/css/grid/gridset-ie-ma-spans2.css
+#	deleted:    assets/css/grid/gridset-ie-mb-floats.css
+#	deleted:    assets/css/grid/gridset-ie-mb-paddings.css
+#	deleted:    assets/css/grid/gridset-ie-mb-relationships.css
+#	deleted:    assets/css/grid/gridset-ie-mb-spans1.css
+#	deleted:    assets/css/grid/gridset-ie-mb-spans2.css
+#	deleted:    assets/css/grid/gridset-ie-ta-floats.css
+#	deleted:    assets/css/grid/gridset-ie-ta-paddings.css
+#	deleted:    assets/css/grid/gridset-ie-ta-relationships.css
+#	deleted:    assets/css/grid/gridset-ie-ta-spans1.css
+#	deleted:    assets/css/grid/gridset-ie-ta-spans2.css
+#	deleted:    assets/css/grid/gridset-ie-tb-floats.css
+#	deleted:    assets/css/grid/gridset-ie-tb-paddings.css
+#	deleted:    assets/css/grid/gridset-ie-tb-relationships.css
+#	deleted:    assets/css/grid/gridset-ie-tb-spans1.css
+#	deleted:    assets/css/grid/gridset-ie-tb-spans2.css
+#	deleted:    assets/css/grid/gridset.css
+#	deleted:    assets/css/sherpa-responsive.css
+#	deleted:    assets/css/sherpa.css
+#	deleted:    assets/css/sherpa_override.css
+#	deleted:    assets/css/sherpa_site_style.css
+#	deleted:    assets/fonts/museosansfordell-100-webfont.eot
+#	deleted:    assets/fonts/museosansfordell-100-webfont.svg
+#	deleted:    assets/fonts/museosansfordell-100-webfont.ttf
+#	deleted:    assets/fonts/museosansfordell-100-webfont.woff
+#	deleted:    assets/fonts/museosansfordell-300-webfont.eot
+#	deleted:    assets/fonts/museosansfordell-300-webfont.svg
+#	deleted:    assets/fonts/museosansfordell-300-webfont.ttf
+#	deleted:    assets/fonts/museosansfordell-300-webfont.woff
+#	deleted:    assets/fonts/museosansfordell-700-webfont.eot
+#	deleted:    assets/fonts/museosansfordell-700-webfont.svg
+#	deleted:    assets/fonts/museosansfordell-700-webfont.ttf
+#	deleted:    assets/fonts/museosansfordell-700-webfont.woff
+#	deleted:    assets/js/README.md
+#	deleted:    assets/js/application.js
+#	deleted:    assets/js/bootstrap-affix.js
+#	deleted:    assets/js/bootstrap-alert.js
+#	deleted:    assets/js/bootstrap-button.js
+#	deleted:    assets/js/bootstrap-carousel.js
+#	deleted:    assets/js/bootstrap-collapse.js
+#	deleted:    assets/js/bootstrap-dropdown.js
+#	deleted:    assets/js/bootstrap-modal.js
+#	deleted:    assets/js/bootstrap-popover.js
+#	deleted:    assets/js/bootstrap-scrollspy.js
+#	deleted:    assets/js/bootstrap-tab.js
+#	deleted:    assets/js/bootstrap-tooltip.js
+#	deleted:    assets/js/bootstrap-transition.js
+#	deleted:    assets/js/bootstrap-typeahead.js
+#	deleted:    assets/js/bootstrap.js
+#	deleted:    assets/js/bootstrap.min.js
+#	deleted:    assets/js/gridset-overlay.js
+#	deleted:    assets/js/jquery.js
+#	deleted:    assets/less/base/code.less
+#	deleted:    assets/less/base/forms.less
+#	deleted:    assets/less/base/reset.less
+#	deleted:    assets/less/base/tables.less
+#	deleted:    assets/less/base/type.less
+#	deleted:    assets/less/base/utilities.less
+#	deleted:    assets/less/bootstrap.less
+#	deleted:    assets/less/brands/dell_308/fonts.less
+#	deleted:    assets/less/brands/dell_308/mixins.less
+#	deleted:    assets/less/brands/dell_308/variables.less
+#	deleted:    assets/less/brands/white_label/mixins.less
+#	deleted:    assets/less/brands/white_label/variables.less
+#	deleted:    assets/less/components/accordion.less
+#	deleted:    assets/less/components/alerts.less
+#	deleted:    assets/less/components/bootstrap.less
+#	deleted:    assets/less/components/breadcrumbs.less
+#	deleted:    assets/less/components/button-groups.less
+#	deleted:    assets/less/components/buttons.less
+#	deleted:    assets/less/components/carousel.less
+#	deleted:    assets/less/components/close.less
+#	deleted:    assets/less/components/component-animations.less
+#	deleted:    assets/less/components/dropdowns.less
+#	deleted:    assets/less/components/hero-unit.less
+#	deleted:    assets/less/components/labels-badges.less
+#	deleted:    assets/less/components/media.less
+#	deleted:    assets/less/components/modals.less
+#	deleted:    assets/less/components/navbar.less
+#	deleted:    assets/less/components/navs.less
+#	deleted:    assets/less/components/pager.less
+#	deleted:    assets/less/components/pagination.less
+#	deleted:    assets/less/components/popovers.less
+#	deleted:    assets/less/components/progress-bars.less
+#	deleted:    assets/less/components/sprites.less
+#	deleted:    assets/less/components/thumbnails.less
+#	deleted:    assets/less/components/tooltip.less
+#	deleted:    assets/less/components/wells.less
+#	deleted:    assets/less/grid/grid.less
+#	deleted:    assets/less/grid/layouts.less
+#	deleted:    assets/less/grid/scaffolding.less
+#	deleted:    assets/less/responsive.less
+#	deleted:    assets/less/responsive/responsive-1200px-min.less
+#	deleted:    assets/less/responsive/responsive-767px-max.less
+#	deleted:    assets/less/responsive/responsive-768px-979px.less
+#	deleted:    assets/less/responsive/responsive-navbar.less
+#	deleted:    assets/less/responsive/responsive-utilities.less
+#	deleted:    assets/less/sherpa-responsive.less
+#	deleted:    assets/less/sherpa.less
+#	deleted:    grid.html
+#	deleted:    index-2.html
+#	deleted:    javascript.html
+#	deleted:    new_site/components/dropdown/button-primary.html
+#	deleted:    new_site/components/dropdown/button-secondary.html
+#	deleted:    new_site/components/dropdown/button-split-primary.html
+#	deleted:    new_site/components/dropdown/button-split-secondary.html
+#	deleted:    new_site/components/dropdown/button-split-tertiary.html
+#	deleted:    new_site/components/dropdown/button-tertiary.html
+#
+

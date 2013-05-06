@@ -1,0 +1,49 @@
+!-- TODO need to add fail safe for when data is not in context -->
+<script type="text/javascript">
+	
+	var getDropdownClasses = _.once(function(options){
+
+		var classInfo = 'btn dropdown-toggle';
+		if(options.color) {
+			classInfo += ' btn-'+options.color;
+		}
+		if(options.size) {
+			classInfo += ' btn-'+options.size;
+		}
+		return classInfo;
+
+	});
+	
+</script>
+
+<div class="btn-group">
+
+	<button 
+		data-toggle="dropdown" 
+		data-bind="attr : { class : getDropdownClasses($data.component_options) }"><span data-bind="text : label"></span> <span class="caret"></span></button>
+
+
+	<ul class="dropdown-menu" data-bind="foreach: $data.items">
+
+		<!-- ko if: $data.items -->
+		<li class="dropdown-submenu">
+			<a tabindex="-1" data-bind="attr: { 'rel': id, 'href' : url }, text: label"></a>
+			<ul class="dropdown-menu" data-bind="foreach: $data.items">
+			  <li><a href="#" data-bind="attr: { 'rel': id, 'href' : url }, text: label"></a></li>
+			</ul>
+		</li>
+		<!-- /ko -->
+		<!-- ko ifnot: $data.items -->
+			<!-- ko ifnot: $data.divider -->
+			<li><a href="#" data-bind="attr: { 'rel': id, 'href' : url }, text: label"></a></li>
+			<!-- /ko -->
+			<!-- ko if: $data.divider -->
+		  	<li class="divider"></li>
+			<!-- /ko -->
+		<!-- /ko -->
+
+	</ul>
+
+
+</div>
+

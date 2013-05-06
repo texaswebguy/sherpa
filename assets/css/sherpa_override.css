@@ -885,13 +885,13 @@ border-radius: 6px;
 
 .btn-primary .caret,
 .btn-secondary .caret{
-	border-top-color: #ffffff;
-	border-bottom-color: #ffffff;
+  border-top-color: #ffffff;
+  border-bottom-color: #ffffff;
 }
 
 .btn-tertiary .caret{
-	border-top-color: #0085c3;
-	border-bottom-color: #0085c3;
+  border-top-color: #0085c3;
+  border-bottom-color: #0085c3;
 }
 
 

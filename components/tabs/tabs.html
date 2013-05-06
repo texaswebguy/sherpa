@@ -1,0 +1,30 @@
+<!-- TODO need to add fail safe for when data is not in context -->
+<script type="text/javascript">
+	
+	var getTabClasses = _.once(function(options){
+
+		var classInfo = 'btn dropdown-toggle';
+		if(options.color) {
+			classInfo += ' btn-'+options.color;
+		}
+		if(options.size) {
+			classInfo += ' btn-'+options.size;
+		}
+		return classInfo;
+
+	});
+	
+</script>
+
+<div class="tabbable">
+  <ul class="nav nav-tabs" data-bind="foreach: $data.items">
+    <li class=""><a data-toggle="tab" data-bind="text: label, attr: {'href':'#'+id}"></a></li>
+  </ul>
+  <div class="tab-content" data-bind="foreach: $data.items">
+    <div class="tab-pane" data-bind="attr: { 'id' : id }">
+    	<p data-bind="text: 'I am '+label"></p>
+    </div>
+
+
+  </div>
+</div>

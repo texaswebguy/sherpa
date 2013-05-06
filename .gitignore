@@ -5,8 +5,7 @@
 # IntelliJ IDEA files and folders #
 ###################
 .idea/
-.idea
-sherpa.iml
+sherpa-starterkit.iml
 
 
 

@@ -1,0 +1,20 @@
+	<ul class="dropdown-menu" data-bind="foreach: items">
+
+		<!-- ko if: $data.items -->
+		<li class="dropdown-submenu">
+			<a tabindex="-1" data-bind="attr: { 'rel': id, 'href' : url }, text: label">Action</a>
+			<ul class="dropdown-menu" data-bind="foreach: items">
+			  <li><a href="#" data-bind="attr: { 'rel': id, 'href' : url }, text: label">Action</a></li>
+			</ul>
+		</li>
+		<!-- /ko -->
+		<!-- ko ifnot: $data.items -->
+			<!-- ko ifnot: $data.divider -->
+			<li><a href="#" data-bind="attr: { 'rel': id, 'href' : url }, text: label">Action</a></li>
+			<!-- /ko -->
+			<!-- ko if: $data.divider -->
+		  	<li class="divider"></li>
+			<!-- /ko -->
+		<!-- /ko -->
+
+	</ul>
