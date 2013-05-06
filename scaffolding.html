@@ -1,134 +1,131 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <meta charset="utf-8">
-    <title>Sherpa - A Dell web development framework</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <meta name="description" content="web development framework">
-    <meta name="author" content="Dell">
 
-    <!-- Bootstrap styles -->
-    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/bootstrap.css" type="text/css"
-     rel="stylesheet">
+	<head>
+		<meta charset="utf-8">
+	    <title>Sherpa - Template</title>
+	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+	    
+	    <meta name="description" content="">
+	    <meta name="author" content="">
 
-    <!-- Sherpa styles -->
-    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_override.css" type="text/css"
-     rel="stylesheet">
+	    <script type="text/javascript">
+            var SHERPA_CONFIG_OVERRIDES = {};
+                SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
+            		];
+				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
+					{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
+					{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.css" }
+				];
+				SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/sherpa-site-styles.css";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa-site.js";
 
-    <!-- Sherpa site styles -->
-    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_site_style.css" type="text/css"
-     rel="stylesheet">
-        
-    <!-- Code in a page styles -->
-    <link href="https://rawgithub.com/DellGDC/sherpa/master/assets/js/google-code-prettify/prettify.css" type="text/css"
-     rel="stylesheet">
+                /*
+                 To add your own JS with core js load:
 
-    <!-- Le HTML5 shim, for IE6-8 support of HTML5 elements -->
-    <!--[if lt IE 9]>
-      <script src="http://html5shim.googlecode.com/svn/trunk/html5.js"></script>
-    <![endif]-->
+                var SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                        { myCustomJS: "assets/js/myCustomJS.js"}
+				]
 
-    <!-- fav and touch icons 
-    <link rel="shortcut icon" href="assets/ico/favicon.ico">
-    <link rel="apple-touch-icon-precomposed" sizes="144x144" href="assets/ico/apple-touch-icon-144-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="114x114" href="assets/ico/apple-touch-icon-114-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" sizes="72x72" href="assets/ico/apple-touch-icon-72-precomposed.png">
-    <link rel="apple-touch-icon-precomposed" href="assets/ico/apple-touch-icon-57-precomposed.png">
-    -->
+				This is a palce to overide sherpa default configurations.
+				WARNING: If you don't know what this is, don't touch it! Ask someone!
 
-  </head>
+				SHERPA_CONFIG_OVERRIDES.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
+				// Please note that if you run local you run the risk of libraries and css being out of date.
 
-  <body data-spy="scroll" data-target=".bs-docs-sidebar">
+				SHERPA_CONFIG_OVERRIDES.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
+				SHERPA_CONFIG_OVERRIDES.LOCAL_PATH = "/";
+				SHERPA_CONFIG_OVERRIDES.JS_PATH = "assets/js/";
+				SHERPA_CONFIG_OVERRIDES.JS_LIB_PATH = "assets/sherpa/lib/";
+				SHERPA_CONFIG_OVERRIDES.CSS_PATH = "assets/css/";
+				SHERPA_CONFIG_OVERRIDES.CORE_PATH = "assets/sherpa/";
+				SHERPA_CONFIG_OVERRIDES.COMPONENTS_PATH = "components/";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "app.js";
+				SHERPA_CONFIG_OVERRIDES.DEFAULT_LOCALE = "en";
+				SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+					{ myCustomLib: "assets/js/myCustomLib.js"}
+				]
+				SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = false; //enables hot key for showing grid overlay
+				SHERPA_CONFIG_OVERRIDES.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
+				SHERPA_CONFIG_OVERRIDES.ENABLE_PROTOTYPE_QA = true; //enables script to check html for sherpa errors
 
-    <!-- Navbar
-    ================================================== -->
-    <div class="navbar navbar-inverse navbar-fixed-top">
-      <div class="navbar-inner">
-        <div class="container-fluid">
-          <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-            <span class="icon-bar"></span>
-          </button>
-          <a class="brand" href="./index.html">Sherpa</a>
-          <div class="nav-collapse collapse">
-             <ul class="nav">
-              <li class="">
-                <a href="./index.html">Home</a>
-              </li>
-<!--               <li class="">
-                <a href="./getting-started.html">Get started</a>
-              </li> -->
-              <li class="">
-                <a href="./how-to.html">Get started</a>
-              </li>
-              <li class="active">
-                <a href="./scaffolding.html">Scaffolding</a>
-              </li>
-              <li class="">
-                <a href="./base-css.html">Basic Elements</a>
-              </li>
-              <!-- <li class="">
-                <a href="./components.html">Components</a>
-              </li> -->
-              <!-- <li class="">
-                <a href="./javascript.html">JavaScript</a>
-              </li> -->
-             <!--  <li class="divider-vertical"></li> -->
-              
-<!--               <li class="">
-                <a href="./customize.html">Customize</a>
-              </li> -->
-            </ul>
-          </div>
-        </div>
-      </div>
-    </div>
+	    	*/
+	    </script>
 
-<!-- Subhead
-================================================== -->
-<header class="jumbotron subhead" id="overview">
-  <div class="container-fluid">
-    <h1 class="sherpa">Scaffolding</h1>
-    <p class="lead">Sherpa is built on fluid grids, layouts, and components.</p>
-  </div>
-</header>
+	    <style>body {opacity: 0;}</style>
+		<!-- Framework CSS files - Don't touch
+		********************************************************************************
+		-->
+			<script src="assets/sherpa/sherpa.js"></script>	
 
-  <div class="container-fluid">
 
-    <!-- Docs nav
-    ================================================== -->
-    <div class="row-fluid">
-      <div class="span3 bs-docs-sidebar">
-        <ul class="nav nav-list bs-docs-sidenav">
-          <li><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
-          <!-- <li><a href="#gridSystem"><i class="icon-chevron-right"></i> Grid system</a></li> -->
-          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Fluid grid system</a></li>
-          <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
-          <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li>
-        </ul>
-      </div>
-      <div class="span9">
+		<!-- Your CSS files - Please touch
+		********************************************************************************
+		-->	
+
+			
+	</head>
+<body>
+	
+	<!-- Start - Masthead
+  ================================================== -->
+
+  <header class="masthead-sherpa" data-bind="component: { 
+			name :'masthead', 
+			type :'sherpa_site',
+			data : sherpa_masthead
+		}">
+  </header>
+
+  <!-- End - Masthead
+  ================================================== -->
+
+ 
+	<!-- Main content area -->
+	<section class="title-content">
+		<div class="wrapper">
+			<div class="da-all ta-all mb-all white-text">
+				<h1 class="sherpa featured-white">Scaffolding</h1>
+				<h3 class="sherpa featured-white">Sherpa is built on fluid grids, layouts, and components.</h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-content">
+		<div class="wrapper">
+
+			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
+				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
+					<ul class="nav nav-list sherpa-docs-sidenav">
+			          <li class="active"><a href="#global"><i class="icon-chevron-right"></i> Global styles</a></li>
+			          <li><a href="#gridoverview"><i class="icon-chevron-right"></i> Grid overview</a></li>
+			          <li><a href="#fluidGridSystem"><i class="icon-chevron-right"></i> Using the Grid</a></li>
+			          <!-- <li><a href="#layouts"><i class="icon-chevron-right"></i> Layouts</a></li>
+			          <li><a href="#responsive"><i class="icon-chevron-right"></i> Responsive design</a></li> -->
+			        </ul>
+				</div>
+			</aside>
 
 
 
-        <!-- Global Sherpa settings
-        ================================================== -->
-        <section id="global">
-          <div class="page-header">
-            <h1 class="sherpa">Global settings</h1>
-          </div>
+			<section class="da4-da12 ta-all mb-all">
 
-          <h3 class="sherpa">Requires HTML5 doctype</h3>
-          <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
-<pre class="prettyprint linenums">
+				<article class="bottom-offset-large" id="global">
+					<h2 class="sherpa">Global settings</h2>
+					<hr>
+					<h3 class="sherpa">Requires HTML5 doctype</h3>
+				  <p>Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
 &lt;!DOCTYPE html&gt;
-&lt;html lang="en"&gt;
   ...
 &lt;/html&gt;
 </pre>
 
-          <h3 class="sherpa">Typography and links</h3>
+				
+					<h3 class="sherpa">Typography and links</h3>
           <p>Sherpa sets basic global display, typography, and link styles. Specifically, we:</p>
           <ul>
             <li>Remove <code>margin</code> on the body</li>
@@ -141,481 +138,257 @@
           <p>These styles can be found within <strong>sherpa_override.css</strong>.</p>
 
           <h3 class="sherpa">Reset via Normalize</h3>
-          <p>Sherpa uses <a href="http://necolas.github.com/normalize.css/" target="_blank">Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank">Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank">HTML5 Boilerplate</a>. Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
-
-        </section>
+          <p>Sherpa uses <a href="http://necolas.github.com/normalize.css/" target="_blank" >Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank" >Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank" >HTML5 Boilerplate</a>. Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
 
 
-
-
-        <!-- Grid system
-        ================================================== -->
-        <!-- <section id="gridSystem">
-          <div class="page-header">
-            <h1 class="sherpa">Default grid system</h1>
-          </div>
-
-          <h2 class="sherpa">Live grid example</h2>
-          <p>The default Sherpa grid system utilizes <strong>12 columns</strong>, making for a 940px wide container-fluid without responsive features enabled. With the responsive CSS file added, the grid adapts to be 724px and 1170px wide depending on your viewport. Below 767px viewports, the columns become fluid and stack vertically.</p>
-          <div class="bs-docs-grid">
-            <div class="row show-grid">
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span2">2</div>
-              <div class="span3">3</div>
-              <div class="span4">4</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span4">4</div>
-              <div class="span5">5</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span9">9</div>
-            </div>
-          </div>
-
-          <h3 class="sherpa">Basic grid HTML</h3>
-          <p>For a simple two column layout, create a <code>.row</code> and add the appropriate number of <code>.span*</code> columns. As this is a 12-column grid, each <code>.span*</code> spans a number of those 12 columns, and should always add up to 12 for each row (or the number of columns in the parent).</p>
-<pre class="prettyprint linenums">
-&lt;div class="row"&gt;
-  &lt;div class="span4"&gt;...&lt;/div&gt;
-  &lt;div class="span8"&gt;...&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-          <p>Given this example, we have <code>.span4</code> and <code>.span8</code>, making for 12 total columns and a complete row.</p>
-
-          <h2 class="sherpa">Offsetting columns</h2>
-          <p>Move columns to the right using <code>.offset*</code> classes. Each class increases the left margin of a column by a whole column. For example, <code>.offset4</code> moves <code>.span4</code> over four columns.</p>
-          <div class="bs-docs-grid">
-            <div class="row show-grid">
-              <div class="span4">4</div>
-              <div class="span3 offset2">3 offset 2</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span3 offset1">3 offset 1</div>
-              <div class="span3 offset2">3 offset 2</div>
-            </div>
-            <div class="row show-grid">
-              <div class="span6 offset3">6 offset 3</div>
-            </div>
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="row"&gt;
-  &lt;div class="span4"&gt;...&lt;/div&gt;
-  &lt;div class="span3 offset2"&gt;...&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-          <h2 class="sherpa">Nesting columns</h2>
-          <p>To nest your content with the default grid, add a new <code>.row</code> and set of <code>.span*</code> columns within an existing <code>.span*</code> column. Nested rows should include a set of columns that add up to the number of columns of its parent.</p>
-          <div class="row show-grid">
-            <div class="span9">
-              Level 1 column
-              <div class="row show-grid">
-                <div class="span6">
-                  Level 2
-                </div>
-                <div class="span3">
-                  Level 2
-                </div>
-              </div>
-            </div>
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="row"&gt;
-  &lt;div class="span9"&gt;
-    Level 1 column
-    &lt;div class="row"&gt;
-      &lt;div class="span6"&gt;Level 2&lt;/div&gt;
-      &lt;div class="span3"&gt;Level 2&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-        </section> -->
-
-
-
-        <!-- Fluid grid system
-        ================================================== -->
-        <section id="fluidGridSystem">
-          <div class="page-header">
-            <h1 class="sherpa">The grid system</h1>
-          </div>
-
-          <!-- <h2 class="sherpa">Live fluid grid example</h2> -->
-          <p>The fluid grid system uses percents instead of pixels for column widths. It ensures proper proportions for key screen resolutions and devices.</p>
-
-          <p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="btn btn-large btn-secondary" type="button">Live grid example</button></a></p>
-          <p>When viewing the live example, Ctrl+G will show a grid overlay.</p>
-
-
-          <!-- <div class="bs-docs-grid">
-            <div class="row-fluid show-grid">
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-              <div class="span1">1</div>
-            </div>
-            <div class="row-fluid show-grid">
-              <div class="span4">4</div>
-              <div class="span4">4</div>
-              <div class="span4">4</div>
-            </div>
-            <div class="row-fluid show-grid">
-              <div class="span4">4</div>
-              <div class="span8">8</div>
-            </div>
-            <div class="row-fluid show-grid">
-              <div class="span6">6</div>
-              <div class="span6">6</div>
-            </div>
-            <div class="row-fluid show-grid">
-              <div class="span12">12</div>
-            </div>
-          </div> -->
-          <h2 class="sherpa">The grid has 6 different grid layouts</h2>
-          <h3 class="sherpa">Desktop A = 12 columns</h3><code>.da1-da12</code>
-          <h3 class="sherpa">Desktop B = 15 columns</h3>
-          <p>The desktop screensize has a max-width of <b>1140px</b> and a min-width of <b>980px</b>.</p>
-
-          <h3 class="sherpa">Tablet A = 9 columns</h3>
-          <h3 class="sherpa">Tablet B = 8 columns</h3>
-          <p>The desktop screensize has a max-width of <b>979px</b> and a min-width of <b>768px</b>.</p>
-
-          <h3 class="sherpa">Mobile A = 3 columns</h3>
-          <h3 class="sherpa">Mobile B = 4 columns</h3>
-          <p>The desktop screensize has a max-width of <b>767px</b>.</p>
-
-
-          <h3 class="sherpa">Basic grid structure</h3>
-          <p>By default rows are "fluid" by using <code>.row-fluid</code>. If you need to change to a fixed width layout just change <code>.row-fluid</code> to <code>.row</code>.
-
-            The column classes stay the exact same, making it easy to flip between fixed and fluid grids.</p>
-<pre class="prettyprint linenums">
-&lt;div class="wrapper"&gt;
-  &lt;div class="da1-da4"&gt;...&lt;/div&gt;
-  &lt;div class="da5-da12"&gt;...&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-          <h2 class="sherpa">Fluid offsetting</h2>
-          <p>Operates the same way as the fixed grid system offsetting: add <code>.offset*</code> to any column to offset by that many columns.</p>
-          <div class="bs-docs-grid">
-            <div class="row-fluid show-grid">
-              <div class="span4">4</div>
-              <div class="span4 offset4">4 offset 4</div>
-            </div><!-- /row -->
-            <div class="row-fluid show-grid">
-              <div class="span3 offset3">3 offset 3</div>
-              <div class="span3 offset3">3 offset 3</div>
-            </div><!-- /row -->
-            <div class="row-fluid show-grid">
-              <div class="span6 offset6">6 offset 6</div>
-            </div><!-- /row -->
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="row-fluid"&gt;
-  &lt;div class="span4"&gt;...&lt;/div&gt;
-  &lt;div class="span4 offset2"&gt;...&lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-          <h2 class="sherpa">Fluid nesting</h2>
-          <p>Nesting with fluid grids is a bit different: the number of nested columns should not match the parent's number of columns. Instead, each level of nested columns are reset because each row takes up 100% of the parent column.</p>
-          <div class="row-fluid show-grid">
-            <div class="span12">
-              Fluid 12
-              <div class="row-fluid show-grid">
-                <div class="span6">
-                  Fluid 6
-                </div>
-                <div class="span6">
-                  Fluid 6
-                </div>
-              </div>
-            </div>
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="row-fluid"&gt;
-  &lt;div class="span12"&gt;
-    Fluid 12
-    &lt;div class="row-fluid"&gt;
-      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
-      &lt;div class="span6"&gt;Fluid 6&lt;/div&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-
-        </section>
-
-
-
-
-        <!-- Layouts (Default and fluid)
-        ================================================== -->
-        <section id="layouts">
-          <div class="page-header">
-            <h1 class="sherpa">Layouts</h1>
-          </div>
-
-          <!-- <h2 class="sherpa">Fixed layout</h2>
-          <p>Provides a common fixed-width (and optionally responsive) layout with only <code>&lt;div class="container-fluid"&gt;</code> required.</p>
-          <div class="mini-layout">
-            <div class="mini-layout-body"></div>
-          </div>
-<pre class="prettyprint linenums">
-&lt;body&gt;
-  &lt;div class="container-fluid"&gt;
-    ...
-  &lt;/div&gt;
-&lt;/body&gt;
-</pre> -->
-
-          <h2 class="sherpa">Fluid layout</h2>
-          <p>Create a fluid, two-column page with <code>&lt;div class="container-fluid-fluid"&gt;</code>.</p>
-          <div class="mini-layout fluid">
-            <div class="mini-layout-sidebar"></div>
-            <div class="mini-layout-body"></div>
-          </div>
-<pre class="prettyprint linenums">
-&lt;div class="container-fluid-fluid"&gt;
-  &lt;div class="row-fluid"&gt;
-    &lt;div class="span2"&gt;
-      &lt;!--Sidebar content--&gt;
-    &lt;/div&gt;
-    &lt;div class="span10"&gt;
-      &lt;!--Body content--&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
-</pre>
-        </section>
-
-
-
-
-        <!-- Responsive design
-        ================================================== -->
-        <section id="responsive">
-          <div class="page-header">
-            <h1 class="sherpa">Responsive design</h1>
-          </div>
-
-          <h2 class="sherpa">Enabling responsive features</h2>
-          <p>By defualt the responsive CSS is included in your project. It consists of the proper meta tag and additional stylesheet.</p>
-          <!-- <p>Turn on responsive CSS in your project by including the proper meta tag and additional stylesheet within the <code>&lt;head&gt;</code> of your document. If you've compiled Sherpa from the Customize page, you need only include the meta tag.</p> -->
-<pre class="prettyprint linenums">
-&lt;meta name="viewport" content="width=device-width, initial-scale=1.0"&gt;
-&lt;link href="assets/css/bootstrap-responsive.css" rel="stylesheet"&gt;
-</pre>
-          <!-- <p><span class="label label-info">Heads up!</span>  Sherpa doesn't include responsive features by default at this time as not everything needs to be responsive. Instead of encouraging developers to remove this feature, we figure it best to enable it as needed.</p>
- -->
-          <h2 class="sherpa">About responsive Sherpa</h2>
-          <img src="assets/img/responsive-illustrations.png" alt="Responsive devices" style="float: right; margin: 0 0 20px 20px;">
-          <p>Media queries allow for custom CSS based on a number of conditions&mdash;ratios, widths, display type, etc&mdash;but usually focuses around <code>min-width</code> and <code>max-width</code>.</p>
+          <h3 class="sherpa">Responsive Classes</h3>
+          <p>Sherpa uses <a href="http://http://headjs.com" target="_blank" >head.js</a> to manage the loading of all javascript and css. Using head.js Sherpa adds responsive css classes to the html element which can help </p>
+          <p>The following classes are automatically assigned to the html element when the page loads and resizes:</p>
           <ul>
-            <li>Modify the width of column in our grid</li>
-            <li>Stack elements instead of float wherever necessary</li>
-            <li>Resize headings and text to be more appropriate for devices</li>
+          		<li>desktop</li>
+          		<li>no-desktop</li>
+          		<li>tablet</li>
+          		<li>no-tablet</li>
+          		<li>mobile</li>
+          		<li>no-mobile</li>
           </ul>
-          <p>Use media queries responsibly and only as a start to your mobile audiences. For larger projects, do consider dedicated code bases and not layers of media queries.</p>
 
-          <h2 class="sherpa">Supported devices</h2>
-          <p>Sherpa supports a handful of media queries in a single file to help make your projects more appropriate on different devices and screen resolutions. Here's what's included:</p>
-          <table class="table table-bordered table-striped">
-            <thead>
-              <tr>
-                <th>Label</th>
-                <th>Layout width</th>
-                <th>Column width</th>
-                <th>Gutter width</th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <td>Large display</td>
-                <td>1200px and up</td>
-                <td>70px</td>
-                <td>30px</td>
-              </tr>
-              <tr>
-                <td>Default</td>
-                <td>980px and up</td>
-                <td>60px</td>
-                <td>20px</td>
-              </tr>
-              <tr>
-                <td>Portrait tablets</td>
-                <td>768px and above</td>
-                <td>42px</td>
-                <td>20px</td>
-              </tr>
-              <tr>
-                <td>Phones to tablets</td>
-                <td>767px and below</td>
-                <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
-              </tr>
-              <tr>
-                <td>Phones</td>
-                <td>480px and below</td>
-                <td class="muted" colspan="2">Fluid columns, no fixed widths</td>
-              </tr>
-            </tbody>
-          </table>
-          <p>media queries graph</p>
-          <p><img src="assets/img/media-sizes.png" /></p>
-<pre class="prettyprint linenums">
-/* Large desktop */
-@media (min-width: 1200px) { ... }
+          <h3 class="sherpa">Device Specific Classes</h3>
+          <p>The following classes are automatically assigned to the html element when the page loads:</p>
+          <ul>
+          		<li>touch</li>
+          		<li>no-touch</li>
+          		<li>retina</li>
+          		<li>no-retina</li>
+          </ul>
 
-/* Portrait tablet to landscape and desktop */
-@media (min-width: 768px) and (max-width: 979px) { ... }
+          <h3 class="sherpa">Device Orientation Specific Classes</h3>
+          <p>The following classes are automatically assigned to the html element when the page orientation changes:</p>
+          <ul>
+          		<li>landscape</li>
+          		<li>no-lansdscape</li>
+          		<li>portrait</li>
+          		<li>no-portrait</li>
+          </ul>
 
-/* Landscape phone to portrait tablet */
-@media (max-width: 767px) { ... }
+          <h3 class="sherpa">Browser Specific Classes</h3>
+          <p>The following classes are automatically assigned to the html element when the page loads:</p>
 
-/* Landscape phones and down */
-@media (max-width: 480px) { ... }
+
+          <ul>
+          		<li>borderimage: define an image to be used instead of the normal border of an element</li>
+          		<li>borderradius: support for rounded borders</li>
+          		<li>boxshadow: a simple shadow for a box</li>
+          		<li>cssreflections: a reflection effect for an object</li>
+          		<li>csstransforms: ability to scale</li>
+          		<li>csstransitions: ability to animate changes to CSS properties</li>
+          		<li>fontface: ability to use custom fonts</li>
+          		<li>multiplebgs: ability to define multiple background properties for a box</li>
+          		<li>opacity: transparency support</li>
+          		<li>rgba: allows to specify an opacity value for a color</li>
+          		<li>textshadow; a simple shadow for a text</li>
+          	</ul>
+          	<p>a "no-" version shows when above items are not supported</p>
+
+          <h3 class="sherpa">Localization attribute</h3>
+          <p>Based on the language/locale which the prototype is set for the "lang" attribute is automatically added to the html element.</p>
+
+          <h3 class="sherpa">Pseudo Authentication</h3>
+          <p>Sherpa has a pseudo authentication method that allows you to easily mock a logged-in scenario using two css classes.</p>
+          <ul>
+			<li>authenticated-only: Only displays when the prototype is :"authenticated"</li>
+			<li>not-authenticated-only: Only displays when the prototype is NOT :"authenticated"</li>
+		  </ul>
+          <p>See <a href="functions.html#pseudo-authentication">functions</a> to learn ways to trigger the pseudo authentication.</p>
+
+
+
+
+				</article>
+
+
+
+
+				<article class="bottom-offset-large" id="gridoverview">
+					<h2 class="sherpa">Grid overview</h2>
+					<hr>
+					<p>Create multi-device layouts quickly and easily with the nestable grid. We have <strong>(6)</strong> different grids within the set that apply to a mobile (2), tablet (2), desktop (2) site layout.</p>
+
+					<h3 class="sherpa">Live grid example</h3>
+					<p>This example shows different combinations of layouts and how they change based on screen size.
+					<p><a href="http://dellgdc.github.io/sherpa/grid.html"><button class="sherpa-btn" type="button">Live grid example</button></a></p>
+
+
+					<h3 class="sherpa">Desktop grid</h3>
+					<p>The desktop grid utilizes <strong>12 columns</strong> and <strong>15 columns</strong> with a max-width of 1140px and a min-width of 980px.</p>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<h4 class="sherpa">Desktop (A) - 12 columns</h4>
+						<p>The 12 column grid uses a class of <code>.da</code> for columns.</p>
+					</div>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<h4 class="sherpa">Desktop (B) - 15 columns</h4>
+						<p>The 15 column grid uses a class of <code>.db</code> for columns.</p>
+					</div>
+					
+				<h3 class="sherpa">Tablet grid</h3>
+					<p>The tablet grid utilizes <strong>9 columns</strong> and <strong>8 columns</strong> with a max-width of 979px and a min-width of 768px.</p>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<h4 class="sherpa">Tablet (A) - 9 columns</h4>
+						<p>The 12 column grid uses a class of <code>.ta</code> for columns.</p>
+					</div>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<h4 class="sherpa">Tablet (B) - 8 columns</h4>
+						<p>The 12 column grid uses a class of <code>.tb</code> for columns.</p>
+					</div>
+
+			
+				<h3 class="sherpa">Mobile grid</h3>
+					<p>The mobile grid utilizes <strong>3 columns</strong> and <strong>4 columns</strong> with a max-width of 767px.</p>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<h4 class="sherpa">Mobile (A) - 3 columns</h4>
+						<p>The 3 column grid uses <code>.ma</code> for columns.</p>
+					</div>
+
+					<div class="box sherpa-gray-stroke rounded-small">
+						<h4 class="sherpa">Mobile (B) - 4 columns</h4>
+						<p>The 12 column grid uses <code>.mb</code> for columns.</p>
+					</div>
+
+				<hr>
+
+				<h3 class="sherpa">Basic grid HTML</h3>
+
+					<p>For a simple two column layout, create a <code>.wrapper</code> and add the appropriate number of columns. Remember that you have to add the grid classes for desktop <code>.da</code> or <code>.db</code>, tablet <code>.ta</code> or <code>.tb</code> and mobile <code>.ma</code> or <code>.mb</code>.</p>
+
+					<h4 class="sherpa">Your HTML should look something like this:</h4>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
+&lt;div class="wrapper"&gt;
+  &lt;div class="da1-da3 ta1-ta3 ma-all"&gt;...&lt;/div&gt;
+  &lt;div class="da4-da12 ta4-ta9 ma-all"&gt;...&lt;/div&gt;
+&lt;/div&gt;
 </pre>
 
-
-          <h2 class="sherpa">Responsive utility classes</h2>
-          <p>For faster mobile-friendly development, use these utility classes for showing and hiding content by device. Below is a table of the available classes and their effect on a given media query layout (labeled by device). They can be found in <code>bootstrap-responsive.css</code>.</p>
-          <table class="table table-bordered table-striped responsive-utilities">
-            <thead>
-              <tr>
-                <th>Class</th>
-                <th>Phones <small>767px and below</small></th>
-                <th>Tablets <small>979px to 768px</small></th>
-                <th>Desktops <small>Default</small></th>
-              </tr>
-            </thead>
-            <tbody>
-              <tr>
-                <th><code>.visible-phone</code></th>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-hidden">Hidden</td>
-              </tr>
-              <tr>
-                <th><code>.visible-tablet</code></th>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
-              </tr>
-              <tr>
-                <th><code>.visible-desktop</code></th>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
-              </tr>
-              <tr>
-                <th><code>.hidden-phone</code></th>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
-                <td class="is-visible">Visible</td>
-              </tr>
-              <tr>
-                <th><code>.hidden-tablet</code></th>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
-                <td class="is-visible">Visible</td>
-              </tr>
-              <tr>
-                <th><code>.hidden-desktop</code></th>
-                <td class="is-visible">Visible</td>
-                <td class="is-visible">Visible</td>
-                <td class="is-hidden">Hidden</td>
-              </tr>
-            </tbody>
-          </table>
-
-          <h3 class="sherpa">When to use</h3>
-          <p>Use on a limited basis and avoid creating entirely different versions of the same site. Instead, use them to complement each device's presentation. Responsive utilities should not be used with tables, and as such are not supported.</p>
-
-          <h3 class="sherpa">Responsive utilities test case</h3>
-          <p>Resize your browser or load on different devices to test the above classes.</p>
-          <h4 class="sherpa">Visible on...</h4>
-          <p>Green checkmarks indicate that class is visible in your current viewport.</p>
-          <ul class="responsive-utilities-test">
-            <li>Phone<span class="visible-phone">&#10004; Phone</span></li>
-            <li>Tablet<span class="visible-tablet">&#10004; Tablet</span></li>
-            <li>Desktop<span class="visible-desktop">&#10004; Desktop</span></li>
-          </ul>
-          <h4 class="sherpa">Hidden on...</h4>
-          <p>Here, green checkmarks indicate that class is hidden in your current viewport.</p>
-          <ul class="responsive-utilities-test hidden-on">
-            <li>Phone<span class="hidden-phone">&#10004; Phone</span></li>
-            <li>Tablet<span class="hidden-tablet">&#10004; Tablet</span></li>
-            <li>Desktop<span class="hidden-desktop">&#10004; Desktop</span></li>
-          </ul>
-
-        </section>
+					<p>For desktop we have <code>.da1-da3</code> and <code>.da4-da12</code>, making for 12 total columns and a complete row. For tablet we have <code>.ta1-ta3</code> and <code>.ta4-ta9</code>, making for 9 total columns and a complete row. For mobile we have <code>.ma-all</code> for both, making for 3 total columns and two complete row.</p>
+				
+				</article>
 
 
 
-      </div>
-    </div>
 
-  </div>
+				<article class="bottom-offset-large" id="fluidGridSystem">
+					<h2 class="sherpa">Using the grid</h2>
+					<hr>
+					<p>The grid system will generate all the classes you need to layout your page. For each grid, use the prefix plus the columns you want to span to define the width and margins of an element. So an element that needs to span columns 3 to 5 on your desktop grid would get a class of <code>da3-da5</code> (where <code>da</code> is your defined prefix for the desktop grid). An element that only spans the second column would be <code>da2</code>.</p>
+					<p>If that same element needs to span columns 1 to 2 on your tablet grid, just add a class like so: <code>ta1-ta2</code> to your <code>da3-da5</code>.</p>
+					<p><strong>Example code</strong></p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
+&lt;section&gt;
+ &lt;div class="wrapper"&gt;
+  &lt;article&gt;
+   &lt;div class="da1-da3 ta1-ta3 ma1"&gt;I will span the first to third columns of the desktop (a) grid, the 
+   first to third columns for the tablet (a) grid, and the first column for the mobile (a) grid.&lt;/div&gt;
+  &lt;/article&gt;
+ &lt;/div&gt;
+&lt;/section&gt;
+</pre>
+
+					<h3 class="sherpa">Offsets</h3>
+					<p>The grid CSS calculates all offsets for you. There is no need to worry about how many columns should be spaced between elements: this is all automatically applied by the CSS. You only need to add the right class to the right element.</p>
+
+					<h3 class="sherpa">Predefined Classes</h3>
+					<p>For each grid, you also get some predefined classes that will help you with tricky layout situations. In these examples, * is the prefix defined for your grid:</p>
+
+					<ul class="unstyled">
+						<li>
+							<strong>*-all</strong>
+							<p>Span the full width of the grid. Helps with clearing, too. Equivalent of adding <small>width:100%</small>.</p>
+						</li>
+
+						<li>
+							<strong>*-hide</strong>
+							<p>Hide the element for this grid.</p>
+						</li>
+
+						<li>
+							<strong>*-clear</strong>
+							<p>Clear left and offset by the distance from column one to the first column the element spans.</p>
+						</li>
+
+						<li>
+							<strong>*-overlap</strong>
+							<p>Adds clear:none to an element for a grid. Use this class to place elements without being limited by source order.</p>
+						</li>
+
+						<li>
+							<strong>*-floatright, *-floatleft</strong>
+							<p>Floats the element in a direction, adding the proper gutter margin to the opposite side. Allows text to wrap element.</p>
+						</li>
+
+						<li>
+							<strong>*-clear</strong>
+							<p>Clear left and offset by the distance from column one to the first column the element spans.</p>
+						</li>
+
+						<li>
+							<strong>*-pad</strong>
+							<p>Add left and right padding of half the gutter width on the outside of the element.</p>
+						</li>
+
+						<li>
+							<strong>*-padfull</strong>
+							<p>Add left and right padding of the full gutter width on the outside of the element.</p>
+						</li>
+
+						<li>
+							<strong>*-padin</strong>
+							<p>Add left and right padding of half the gutter width on the inside of the element.</p>
+						</li>
+
+						<li>
+							<strong>*-padinfull</strong>
+							<p>Add left and right padding of the full gutter width on the inside of the element.</p>
+						</li>
+
+					</ul>
+
+					<p><strong>Here is a look at how the padding will work with your layout:</strong></P>
+					<p><img src="assets/img/class-padding.jpg"></p>
+
+					<!-- <p>The grid system uses percents instead of pixels for column and gutter widths. It ensures proper proportions for key screen resolutions and devices.</p> -->
+
+				</article>
 
 
 
-    <!-- Footer
-    ================================================== -->
-    <footer class="footer">
-      <div class="container-fluid">
-        <p class="pull-right"><a href="#">Back to top</a></p>
-        <p>Sherpa is designed and built using <a href="http://twitter.github.com/bootstrap/">Bootstrap by Twitter</a>.</p>
-      </div>
-    </footer>
 
 
 
-    <!-- javascript
-    ================================================== -->
-    <!-- Placed at the end of the document so the pages load faster -->
-    <!--<script type="text/javascript" src="http://platform.twitter.com/widgets.js"></script> -->
-    
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/jquery.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/google-code-prettify/prettify.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-transition.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-alert.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-modal.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-dropdown.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-scrollspy.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-tab.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-tooltip.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-popover.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-button.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-collapse.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-carousel.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-typeahead.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/bootstrap-affix.js"></script>
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/application.js"></script>
-
-    <!-- Gridset overlay script - toggles grid overlay on and off - You can remove this if you want. -->
-    <script src="https://rawgithub.com/DellGDC/sherpa/master/assets/js/gridset-overlay.js"></script>
 
 
-  </body>
+
+
+
+
+			</section>
+		</div>
+	</section>
+
+
+
+
+	<!-- footer area -->
+	<footer class="gray-light" data-bind="component: { 
+			name :'footer', 
+			type :'sherpa_site'
+		}">
+	</footer>
+
+
+</body>
 </html>
