@@ -1,3 +1,4 @@
+
 /* Add additional stylesheets below
 -------------------------------------------------- */
 /*
@@ -20,7 +21,6 @@
 -------------------------------------------------- */
 
 
-
 @font-face {
     font-family: 'museo-sans-for-dell-100Rg';
     src: url('../fonts/museosansfordell-100-webfont.eot');
@@ -32,8 +32,6 @@
     font-style: normal;
 
 }
-
-
 
 @font-face {
     font-family: 'museo-sans-for-dell-300Rg';
@@ -47,8 +45,6 @@
 
 }
 
-
-
 @font-face {
     font-family: 'museo-sans-for-dell-700Rg';
     src: url('../fonts/museosansfordell-700-webfont.eot');
@@ -60,9 +56,6 @@
     font-style: normal;
 
 }
-
-
-
 
 @font-face {
     font-family: 'museo-for-dell-100regular';
@@ -97,8 +90,6 @@
     font-weight: normal;
     font-style: normal;
   }
-
-
 
 @font-face {
   font-family: 'icon-dell-mini';
@@ -302,10 +293,14 @@ blockquote small {
 }
 
 
-/* CENTER TEXT
+/* TEXT
 -------------------------------------------------- */
 .center-text {
   text-align: center;
+}
+
+.right-text {
+  text-align: right;
 }
 
 
