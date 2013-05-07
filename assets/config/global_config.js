@@ -8,7 +8,7 @@
 
 var SHERPA = {};
 
-SHERPA.RUN_AS_LOCAL = false; //set to false if you want this prototype to refer to Sherpa site
+SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
 /* 
  * By default, prototypes run as local.  This means that all files associated with the prototypes 
  * are local and the prototype should be able to run locally without any internet connection.  
