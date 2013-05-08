@@ -207,7 +207,7 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 
 	Sherpa.request({
 		resourceId: "getComponentHTML", 
-		data: {filename: SHERPA.COMPONENTS_PATH+component_name+"/"+filename}, 
+		data: {filename: "components/"+component_name+"/"+filename}, 
 		success: function(responseHTML, status){
 			//console.log(status);
 			if(!_.isUndefined(Sherpa.componentJS[componentJS])) {
@@ -230,8 +230,8 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 		error: function( data, status ) {
 			//no module exists
 			filename = filename.split('#')[0];
-			Sherpa.QA.logEntry('Missing component: filename '+SHERPA.COMPONENTS_PATH+component_name+'/'+filename+' does not exist',"missing component, sherpa-utils:insertComponent");
-			var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Component</h4> <p>'+SHERPA.COMPONENTS_PATH+component_name+'/'+filename+' does not exist</p></div>';
+			Sherpa.QA.logEntry('Missing component: filename '+'components/'+component_name+'/'+filename+' does not exist',"missing component, sherpa-utils:insertComponent");
+			var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Component</h4> <p>'+'components/'+component_name+'/'+filename+' does not exist</p></div>';
 			$(element).html(responseHTML);
 		}
 	});
@@ -327,21 +327,21 @@ Sherpa.request.define( "getComponentHTML", "ajax", {
 
 
 Sherpa.request.define( "supportAutocomplete", "ajax", {
-	url: SHERPA.ROOT+"data-api/support_products.json",
+	url:"data-api/support_products.json",
     dataType: "json",
     type: "GET"
 });
 
 
 Sherpa.request.define( "assets", "ajax", {
-	url: SHERPA.ASSETS_PATH+"{directory}/{type}_{locale}.json",
+	url:"assets/{directory}/{type}_{locale}.json",
     dataType: "json",
     type: "GET"
 });
 
 
 Sherpa.request.define( "data", "ajax", {
-	url: SHERPA.ASSETS_PATH+"data/{filename}",
+	url:"assets/data/{filename}",
     dataType: "text",
     type: "GET"
 });

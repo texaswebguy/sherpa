@@ -112,14 +112,8 @@ return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 //______________________________________________________________________________________
 
 Sherpa.VERSION = "0.1";
-var SHERPA= {};
 
-if(SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG) {
-	SHERPA.GLOBAL_CONFIG = SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG;
-} else {
-	SHERPA.GLOBAL_CONFIG = "assets/config/global_config.js";
-}
-Sherpa.js({ config: SHERPA.GLOBAL_CONFIG}, function(){
+Sherpa.js({ config: "assets/config/global_config.js"}, function(){
 
 	// GLOBAL Counter for troubleshooting bottlenecks:
 	//______________________________________________________________________________________
@@ -260,7 +254,7 @@ Sherpa.ready("underscore", function() {
 		Sherpa.load({grid: SHERPA.CSS_GRID});
 		console.log("loaded css: grid");
 	}
-	Sherpa.load({local_css: SHERPA.PROTOTYPE_CSS});
+	Sherpa.load({local_css: SHERPA.CSS_LOCAL_APP});
 	console.log("loaded css: local_css");
 
 
@@ -297,7 +291,7 @@ Sherpa.ready("dateFormat", function(){
 
 		// load local app
 		Sherpa.js(
-			{ localJSApp: SHERPA.PROTOTYPE_APP}
+			{ localJSApp: SHERPA.JS_PATH+SHERPA.PROTOTYPE_APP}
 		);				
 
 		

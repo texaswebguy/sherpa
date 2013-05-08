@@ -25,35 +25,14 @@ SHERPA.RUN_AS_LOCAL = true //set to false if you want this prototype to refer to
 */
 SHERPA.RUN_SHERPA_PROD = true; //runs mimified versions of sherpa code
 
-// PATH ROOT VALUES;
-SHERPA.REMOTE_ROOT = "https://rawgithub.com/DellGDC/sherpa/master/"; //you can make this wherever you store your golden copy
-SHERPA.LOCAL_ROOT = "";
+// JS PATH Configuration;
+SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
+SHERPA.LOCAL_PATH = "";
+SHERPA.JS_PATH = "assets/js/";
+SHERPA.JS_LIB_PATH = "assets/sherpa/lib/";
+SHERPA.CORE_PATH = "assets/sherpa/";
+SHERPA.COMPONENTS_PATH = "components/";
 
-
-// GLOBAL Sherpa ROOT:
-//______________________________________________________________________________________
-// DO NOT EVER TOUCH!!!
-
-if(SHERPA.RUN_AS_LOCAL) {
-	SHERPA.ROOT = SHERPA.LOCAL_ROOT;
-	SHERPA.CORE_PATH = SHERPA.LOCAL_ROOT+"assets/sherpa/";
-} else {
-	SHERPA.ROOT = SHERPA.LOCAL_ROOT;
-	SHERPA.CORE_PATH = SHERPA.REMOTE_ROOT+"assets/sherpa/";
-}
-
-// GLOBAL Sherpa Globals:
-//______________________________________________________________________________________
-
-
-SHERPA.ASSETS_PATH = SHERPA.ROOT+"assets/";
-SHERPA.JS_PATH = SHERPA.ASSETS_PATH+"js/";
-SHERPA.JS_LIB_PATH = SHERPA.CORE_PATH+"lib/";
-SHERPA.COMPONENTS_PATH = SHERPA.ASSETS_PATH+"components/";
-
-// CSS Configuration
-SHERPA.CSS_CORE_PATH = SHERPA.CORE_PATH+"css/";
-SHERPA.CSS_PATH = SHERPA.ASSETS_PATH+"css/";
 
 // i18n Configuration
 SHERPA.DEFAULT_LOCALE = "en";
@@ -65,13 +44,28 @@ SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
-//Prototype Custom files
-SHERPA.PROTOTYPE_APP = SHERPA.JS_PATH+"app.js";
-SHERPA.PROTOTYPE_CSS = SHERPA.CSS_PATH+"doc.css";
+// CSS Configuration
+SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/css/";
+SHERPA.CSS_CORE_LOCAL_PATH = "assets/sherpa/css/";
+SHERPA.CSS_REMOTE_PATH = "assets/css/";
+SHERPA.CSS_LOCAL_PATH = "assets/css/";
 
-
-// UNDERSCORE:
+// GLOBAL Sherpa Computed Globals:
 //______________________________________________________________________________________
+// DO NOT EVER TOUCH!!!
+
+if(SHERPA.RUN_AS_LOCAL) {
+	SHERPA.JS_LIB_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_LIB_PATH;
+	SHERPA.JS_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_PATH;
+	SHERPA.CSS_CORE_PATH = SHERPA.CSS_CORE_LOCAL_PATH;
+	SHERPA.CSS_PATH = SHERPA.CSS_LOCAL_PATH;
+} else {
+	SHERPA.JS_LIB_PATH = SHERPA.REMOTE_PATH+SHERPA.JS_LIB_PATH;
+	SHERPA.JS_PATH = SHERPA.LOCAL_PATH+SHERPA.JS_PATH;
+	SHERPA.CSS_CORE_PATH = SHERPA.CSS_CORE_REMOTE_PATH;
+	SHERPA.CSS_PATH = SHERPA.CSS_REMOTE_PATH;
+}
+
 // Should not be changed, this is a core dependencies
 SHERPA.UNDERSCORE = SHERPA.JS_LIB_PATH+"underscore-min.js";
 
@@ -96,6 +90,7 @@ SHERPA.JS_CORE_LOAD = [
 
 //	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
 
+SHERPA.PROTOTYPE_APP = "app.js";
 
 // CSS Files
 //______________________________________________________________________________________
@@ -107,6 +102,7 @@ SHERPA.CSS_CORE_LOAD = [
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";
 SHERPA.CSS_GRID_IE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-9.cssgridset.css";
 SHERPA.CSS_GRID_LTIE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-lte8.css";
+SHERPA.CSS_LOCAL_APP = SHERPA.CSS_PATH+"doc.css";
 
 
 SHERPA.IE_JS_LOAD = [
