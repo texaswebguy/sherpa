@@ -12,37 +12,37 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    		id: 'get_started',
 	    		label : 'Get Started',
 	    		url : 'how-to.html',
-	    		browser_title : "Sherpa - How to get started"
+	    		browser_title : "Sherpa UX Prototyping - How to get started"
 	    	},
 	    	{ 
 	    		id: 'scaffolding',
 	    		label : 'Scaffolding',
 	    		url : 'scaffolding.html',
-	    		browser_title : "Sherpa - Scaffolding"
+	    		browser_title : "Sherpa UX Prototyping - Scaffolding"
 	    	},
 	    	{ 
 	    		id: 'base_css',
 	    		label : 'Basic Elements',
 	    		url : 'base-css.html',
-	    		browser_title : "Sherpa - Basis CSS Elements"
+	    		browser_title : "Sherpa UX Prototyping - Basic HTML/CSS elements"
 	    	},
 	    	{ 
 	    		id: 'components',
 	    		label : 'Components',
 	    		url : 'components.html',
-	    		browser_title : "Sherpa - Components"
+	    		browser_title : "Sherpa UX Prototyping - Components"
 	    	},
 	    	{ 
 	    		id: 'configuration',
 	    		label : 'Configuration',
 	    		url : 'configuration.html',
-	    		browser_title : "Sherpa - Configuring your prototypes"
+	    		browser_title : "Sherpa UX Prototyping - Configuring your prototypes"
 	    	},
 	    	{ 
 	    		id: 'functions',
 	    		label : 'Functions',
 	    		url : 'functions.html',
-	    		browser_title : "Sherpa - Javascript Functions"
+	    		browser_title : "Sherpa UX Prototyping - Javascript Functions"
 	    	}
 	    ],
 		user: {
