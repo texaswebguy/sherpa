@@ -231,7 +231,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					<h3 id="rendering_a_textkey_with_links" class="sherpa">Rendering a textkey with links</h3>
 					<p>
 						While the msg provides a way to internationalize text you probably don't want to embed html links within the content.
-						For this reason Sherpa provides the "msglink" tag. This tag works exactly like the "msg" tag exept it will automatically look for related urls and embed them inside the translated text. This also allows for each linked text key to have different links for each locale.
+						For this reason Sherpa provides the "linkedmsg" tag. This tag works exactly like the "msg" tag exept it will automatically look for related urls and embed them inside the translated text. This also allows for each linked text key to have different links for each locale.
 
 					</p>
 
@@ -253,8 +253,8 @@ Now type &gt; viewModel.content.sample_message_with_link &lt;
 You will see the text rendered above.
 
 You will also notice that this content uses square brackets (Which search engine do you like best? [Google] or [Bing]?).
-And there are two corrensponding text keys sample_message_with_link_url0 and sample_message_with_link_url1.
-The content is a cross refference to the link resource file. 
+And there are two corrensponding cross references sample_message_with_link_url_0 and sample_message_with_link_url_1
+which you will find in the cross reference file <a href="assets/xref/resources_en.json">resources_en.json</a>. 
 
 Now, for real fun go to <a href="functions.html?l=cn#rendering_a_textkey_with_links">functions.html?l=cn</a> and watch your text and links change.
 
