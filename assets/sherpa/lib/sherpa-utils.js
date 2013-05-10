@@ -112,7 +112,9 @@ Sherpa.formatCurrency = function(number_data){
 				}
 			}
 		} catch(err) {
-			Sherpa.QA.logEntry('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}',"functions, format error,sherpa-utils:formatCurrency");
+			var error_msg = 'Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}';
+			Sherpa.QA.logEntry(error_msg,"functions, format error,sherpa-utils:formatCurrency");
+			return { status: 'failed', error_msg: error_msg };
 		}
 	} else {
 		format = 'nodecimal'
@@ -130,7 +132,8 @@ Sherpa.formatCurrency = function(number_data){
 			return amount+viewModel.config.currency.symbol;
 		}
 	} catch (err) {
-		Sherpa.QA.logEntry("Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json","i18n, ajax errors, sherpa-utils:formatCurrency");
+		var error_msg = "Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json";
+		Sherpa.QA.logEntry(error_msg,"i18n, ajax errors, sherpa-utils:formatCurrency");
 		return { status: 'failed', error_msg: error_msg };
 	}
 }
