@@ -23,7 +23,7 @@ SHERPA.RUN_AS_LOCAL = false; //set to false if you want this prototype to refer 
  * locally and that's perfectly ok. This feature is useful if you want to keep common resources 
  * in one location so that your entire team uses the same resources.
 */
-SHERPA.RUN_SHERPA_PROD = true; //runs mimified versions of sherpa code
+SHERPA.RUN_SHERPA_PROD = false; //runs mimified versions of sherpa code
 
 // JS PATH Configuration;
 SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
