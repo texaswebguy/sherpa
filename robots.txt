@@ -1,5 +1,5 @@
 User-agent: *
-Disallow: http://dellgdc.github.io/sherpa/components/
-Disallow: http://dellgdc.github.io/sherpa/assets/
-Disallow: http://dellgdc.github.io/sherpa/starter_template.html
+Disallow: /sherpa/components/
+Disallow: /sherpa/assets/
+Disallow: /sherpa/starter_template.html
 Sitemap: http://dellgdc.github.io/sherpa/sitemap.xml
