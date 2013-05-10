@@ -100,45 +100,41 @@ Sherpa.linkedmsg = function (textkey, t_data) {
 
 Sherpa.formatCurrency = function(number_data){
 
-	Sherpa.ready("i18n", function(){
-
-		var amount, format, position;
-		if(_.isObject(number_data)){
-			try {
-				amount = parseFloat(number_data.amount);
-				if(number_data.format) { 
-					if(number_data.format == 'decimal') {
-						format = number_data.format;
-					} else {
-						format = 'nodecimal';
-					}
-				}
-			} catch(err) {
-				Sherpa.QA.logEntry('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}',"functions, format error,sherpa-utils:formatCurrency");
-			}
-		} else {
-			format = 'nodecimal'
-			amount = Math.ceil(number_data);
-		}
+	var amount, format, position;
+	if(_.isObject(number_data)){
 		try {
-			format = viewModel.config.currency['format_'+format];
-			// TODO what if viewModel.config.currency is not configured correctly?
-			amount = amount * viewModel.config.currency.conversion_rate;
-			amount = _.str.numberFormat(amount, format.decimals, format.decimal_separator, format.thousands_separator);
-			position = viewModel.config.currency.symbol_position;
-			if (position == "left") {
-				return viewModel.config.currency.symbol+amount;
-			} else {
-				return amount+viewModel.config.currency.symbol;
+			amount = parseFloat(number_data.amount);
+			if(number_data.format) { 
+				if(number_data.format == 'decimal') {
+					format = number_data.format;
+				} else {
+					format = 'nodecimal';
+				}
 			}
-		} catch (err) {
-			Sherpa.QA.logEntry("Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json","i18n, ajax errors, sherpa-utils:formatCurrency");
-			return { status: 'failed', error_msg: error_msg };
+		} catch(err) {
+			Sherpa.QA.logEntry('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}',"functions, format error,sherpa-utils:formatCurrency");
 		}
-	});
+	} else {
+		format = 'nodecimal'
+		amount = Math.ceil(number_data);
+	}
+	try {
+		format = viewModel.config.currency['format_'+format];
+		// TODO what if viewModel.config.currency is not configured correctly?
+		amount = amount * viewModel.config.currency.conversion_rate;
+		amount = _.str.numberFormat(amount, format.decimals, format.decimal_separator, format.thousands_separator);
+		position = viewModel.config.currency.symbol_position;
+		if (position == "left") {
+			return viewModel.config.currency.symbol+amount;
+		} else {
+			return amount+viewModel.config.currency.symbol;
+		}
+	} catch (err) {
+		Sherpa.QA.logEntry("Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json","i18n, ajax errors, sherpa-utils:formatCurrency");
+		return { status: 'failed', error_msg: error_msg };
+	}
 }
 Sherpa.dateFormat = function(date) {
-	Sherpa.ready("i18n", function(){
 
 		var date_format;
 		if(_.isObject(date)){
@@ -155,8 +151,8 @@ Sherpa.dateFormat = function(date) {
 		} else {
 			date_format = viewModel.config.default_date_format;
 		}
+
 		return dateFormat(date, date_format);
-	});
 }
 Sherpa.urlQuery = function () {
 	if(location.search) {
