@@ -279,11 +279,9 @@ Sherpa.ready("dateFormat", function(){
 
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	_.each(SHERPA.SHERPA_CORE_LOAD, function(lib){
-		console.log("loaded js: ",_.keys(lib)[0]);
+		//console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
 	});
-
-
 
 	// Need to wait for i18n to load so that messages are in context (viewModel.content)
 	Sherpa.ready("sherpai18n", function(){

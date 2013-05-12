@@ -171,8 +171,6 @@ Sherpa.ready("sherpai18n", function(){
 		Sherpa.QA.logEntry('Missing page file: filename '+event.url+' does not exist',"missing page, pager.js:page");
 		var responseHTML = '<div class="wrapper"><div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Page</h4> <p>'+event.url+' does not exist</p></div></div>';
 		$(page.element).empty().append(responseHTML);
-
-	    //$(page.element).empty().append($('<div></div>', {text: 'Error loading page ' + event.url, "class" : 'alert'}));
 	});
 	pager.onBindingError.add(function(event) {
 	    var page = event.page;
