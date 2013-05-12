@@ -1,6 +1,5 @@
 /* application for prototype */
 Sherpa.ready("sherpaGlobalEvents", function(){
-
 	var addToViewModel = {}, addToConfigs = {};
 
 	//add any specific data/functions to view model

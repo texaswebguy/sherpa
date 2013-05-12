@@ -8,7 +8,7 @@
 
 var SHERPA = {};
 
-SHERPA.RUN_AS_LOCAL = false; //set to false if you want this prototype to refer to Sherpa site
+SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
 /* 
  * By default, prototypes run as local.  This means that all files associated with the prototypes 
  * are local and the prototype should be able to run locally without any internet connection.  
@@ -77,7 +77,7 @@ SHERPA.JS_CORE_LOAD = [
 	{ knockout: SHERPA.JS_LIB_PATH+"knockout.min.js"},
 	{ amplify: SHERPA.JS_LIB_PATH+"amplify.min.js"}, 
 	{ pager: SHERPA.JS_LIB_PATH+"pager.min.js"}, 
-	{ history: SHERPA.JS_LIB_PATH+"jquery.history.js"},
+	{ history: SHERPA.JS_LIB_PATH+"jquery.ba-hashchange.min.js"},
 	{ scrollTo: SHERPA.JS_LIB_PATH+"jquery.scrollTo.min.js"}, 
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},

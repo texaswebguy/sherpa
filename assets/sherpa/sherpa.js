@@ -302,11 +302,18 @@ Sherpa.ready("dateFormat", function(){
 				//if configured, load gridset overlay
 				Sherpa.js(SHERPA.GRIDSET_OVERLAY_JS);
 			}
-	    	// TODO will need to decide if pager.js plugin is needed
 
+
+	    	// extend viewModel with a $__page__ that points to pager.page that points to a new Page
+
+	    	pager.Href.hash = '#!/';
+
+			pager.extendWithPage(viewModel);
 		    //apply view model to allknockout bindings 
 			ko.applyBindings(viewModel);
-
+			// run this method - listening to hashchange
+			pager.start();
+			pager.start({id:'available_templates'});
 
 
 			// turn on the page
