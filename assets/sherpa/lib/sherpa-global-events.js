@@ -16,39 +16,22 @@ function check_ff(){
 	win.isDesktop = win.w > head_conf.screens[1];
 	win.isTablet = win.w >= head_conf.screens[0] && win.w<= head_conf.screens[1];
 	win.isMobile = win.w < head_conf.screens[0];
-	// to compensate that head.ls does not add a tablet class
-	if(win.isDesktop){
-		$('html').addClass('desktop');
-		$('html').removeClass('no-desktop');
-	} else {
-		$('html').removeClass('desktop');
-		$('html').addClass('no-desktop');
-	}
-	if(win.isTablet){
-		$('html').addClass('tablet');
-		$('html').removeClass('no-tablet');
-	} else {
-		$('html').removeClass('tablet');
-		$('html').addClass('no-tablet');
-	}
-	if(win.isMobile){
-		$('html').addClass('mobile');
-		$('html').removeClass('no-mobile');
-	} else {
-		$('html').removeClass('mobile');
-		$('html').addClass('no-mobile');
-	}
 	viewModel.isDesktop = ko.observable(win.isDesktop);
 	viewModel.isTablet = ko.observable(win.isTablet);
 	viewModel.isMobile = ko.observable(win.isMobile);
+	Sherpa.feature("desktop", viewModel.isDesktop);
+	Sherpa.feature("tablet", viewModel.isTablet);
+	Sherpa.feature("mobile", viewModel.isMobile);
 
 }
+
 if(location.hostname === "localhost") {
 	viewModel.localhost = true;
 } else {
 	viewModel.localhost = false;
 }
 
+Sherpa.feature("localhost", viewModel.localhost);
 
 
 
@@ -61,7 +44,23 @@ Eve.scope("*", function(){
 
 });
 
+viewModel.breadcrumb_path = breadcrumb();
 
+$(window).on('hashchange', function() {
+	viewModel.breadcrumb_path = breadcrumb();
+});
+
+function breadcrumb(){
+  if(location.hash.match("#!/")){
+  	 var path = location.hash.split("/");
+  	 path[0] = "home";
+  	 $('html').attr('id',path[path.length-1]);
+  	 return path;
+  } else {
+  	$('html').attr('id',"home");
+  	return ["home"];
+  }
+}
 
 
 
