@@ -1947,11 +1947,11 @@ h4.container-title {
 
 /* Purple */
 .purple {background-color: #6E2585;}
-.purple-stroke {padding: 30px 0px;border: 2px solid #6E2585;}
+.purple-stroke {border: 2px solid #6E2585;}
 
 /* Teal */
 .teal {background-color: #42AEAF;}
-.teal-stroke {padding: 30px 0px;border: 2px solid #42AEAF;}
+.teal-stroke {border: 2px solid #42AEAF;}
 
 /* Navy */
 .navyblue {background-color: #003758;}
@@ -1979,8 +1979,7 @@ h4.container-title {
 
 .white-text {color:#ffffff;}
 .gray-medium-text {color:#737373;} 
-/*.darkgray-text {color: #444444;}*/
-.gray-text {color: #aaaaaa;}
+.gray-text {color: #737373;}
 .lightgray-text {color: #eeeeee;}
 .blue-text {color: #007db8;}
 .green-text {color: #6EA204;}
@@ -1993,8 +1992,6 @@ h4.container-title {
 .teal-text {color: #42AEAF;}
 .navyblue-text {color: #003758;}
 .lightblue-text {color: #CCE7F3;}
-.orange-text {color: #fd5400;}
-.gray-text {color: #737373;}
 
 
 
