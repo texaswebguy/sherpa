@@ -243,6 +243,10 @@ Headers for mobile (Phone)
     line-height: 20px;
   }
 
+  .title {
+    background-position: 50% 13px;
+  }
+
 }
 
 /*
