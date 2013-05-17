@@ -1,0 +1,31 @@
+
+<script type="text/javascript">
+
+
+  var getComponentData = _.once(function(options){
+    console.log(options);
+    var component_obj = {};
+    component_obj.msg = "crapola";
+    component_obj.items = _.filter(viewModel.sample_links_complex.items, function(item){return _.isUndefined(item.divider)});
+    if(!_.isUndefined(options.type)){
+      switch(options.type){
+        case "foobar1":
+          component_obj.msg = "Wonderful crapola"
+          break;
+        default:
+          component_obj.msg = options.type+" "+component_obj.msg;
+      }
+    } 
+    return component_obj;
+  });
+
+
+</script>
+
+<!-- ko with: getComponentData(component_options) -->
+
+<p data-bind="text: $data.msg"></p>
+<select data-bind="foreach: $data.items">
+  <option data-bind="text: label"></option>
+</select>
+<!-- /ko -->
