@@ -6,7 +6,7 @@
 
 //______________________________________________________________________________________*/
 
-var SHERPA = {};
+
 
 SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
 /* 
@@ -67,7 +67,7 @@ if(SHERPA.RUN_AS_LOCAL) {
 }
 
 // Should not be changed, this is a core dependencies
-SHERPA.UNDERSCORE = SHERPA.JS_LIB_PATH+"underscore-min.js";
+SHERPA.UNDERSCORE = SHERPA.JS_LIB_PATH+"underscore.js";
 
 // JS Files
 //______________________________________________________________________________________

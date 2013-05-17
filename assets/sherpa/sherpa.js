@@ -76,7 +76,6 @@ var head_conf = {
 	}
 };
 
-
 //______________________________________________________________________________________
 
 /*!
@@ -110,8 +109,14 @@ return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 //______________________________________________________________________________________
 
 Sherpa.VERSION = "0.1";
+var SHERPA = {};
 
-Sherpa.js({ config: "assets/config/global_config.js"}, function(){
+if(SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG) {
+	SHERPA.GLOBAL_CONFIG = SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG;
+} else {
+	SHERPA.GLOBAL_CONFIG = "assets/config/global_config.js";
+}
+Sherpa.js({ config: SHERPA.GLOBAL_CONFIG }, function(){
 
 	// GLOBAL Counter for troubleshooting bottlenecks:
 	//______________________________________________________________________________________
@@ -189,7 +194,6 @@ Sherpa.ready("config", function(){
 		We decided that underscore is such a vital part of this framework, we better load 
 		it before anything else. Who wants to do for loops??
 	*/
-
 	Sherpa.js({ underscore: SHERPA.UNDERSCORE});
 });
 
