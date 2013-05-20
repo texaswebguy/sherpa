@@ -122,6 +122,8 @@ div {
   font-style: normal;
 }
 
+
+
 @font-face {
   font-family: 'icon-large';
   src:url('../fonts/icon-large.eot');
@@ -2091,7 +2093,7 @@ you can use the generic selector below, but it's slower:
 
 /*---Small Icons---*/
 
-/* Use the following CSS code if you want to use data attributes for inserting your icons */
+//* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icon-small';
   content: attr(data-icon);
@@ -2109,7 +2111,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
-.icon-small-zoomout, .icon-small-zoomin, .icon-small-wireless, .icon-small-whitepaper, .icon-small-webcam, .icon-small-warranty, .icon-small-videocard, .icon-small-video, .icon-small-useraccount, .icon-small-trash, .icon-small-towergeneric, .icon-small-touchpad, .icon-small-touch, .icon-small-tablet, .icon-small-surgeprotection, .icon-small-secure, .icon-small-search, .icon-small-save, .icon-small-recycle, .icon-small-protection, .icon-small-projector, .icon-small-processor, .icon-small-printer, .icon-small-powersupply, .icon-small-ports, .icon-small-play, .icon-small-photos, .icon-small-package, .icon-small-opticaldrive, .icon-small-operatingsystem, .icon-small-keyboard, .icon-small-inktoner, .icon-small-help, .icon-small-harddrive, .icon-small-giftcard, .icon-small-favorite, .icon-small-energyefficient, .icon-small-employee, .icon-small-edit, .icon-small-drivers, .icon-small-download, .icon-small-display, .icon-small-dimensionsweight, .icon-small-deals, .icon-small-data, .icon-small-chat, .icon-small-cart, .icon-small-carryingcase, .icon-small-calendar, .icon-small-calculator, .icon-small-cables, .icon-small-battery, .icon-small-award, .icon-small-audiospeaker, .icon-small-audiocard, .icon-small-alertnotice, .icon-small-alertinfo, .icon-small-alerterror, .icon-small-alertcomplete, .icon-small-add, .icon-small-support, .icon-small-storage, .icon-small-speakers, .icon-small-software, .icon-small-shipsfast, .icon-small-shipping, .icon-small-share, .icon-small-securesoftware, .icon-small-network, .icon-small-music, .icon-small-mouse, .icon-small-mobile, .icon-small-missingimage, .icon-small-memorycardreader, .icon-small-memory, .icon-small-mail, .icon-small-copy, .icon-small-contact, .icon-small-computergeneric, .icon-small-color, .icon-small-cloud, .icon-small-clock, .icon-small-chipset, .icon-small-checkmark {
+.icon-small-zoomout, .icon-small-zoomin, .icon-small-wireless, .icon-small-whitepaper, .icon-small-webcam, .icon-small-warranty, .icon-small-videocard, .icon-small-video, .icon-small-useraccount, .icon-small-trash, .icon-small-towergeneric, .icon-small-touchpad, .icon-small-touch, .icon-small-tablet, .icon-small-surgeprotection, .icon-small-secure, .icon-small-search, .icon-small-save, .icon-small-recycle, .icon-small-protection, .icon-small-projector, .icon-small-processor, .icon-small-printer, .icon-small-powersupply, .icon-small-ports, .icon-small-play, .icon-small-photos, .icon-small-package, .icon-small-opticaldrive, .icon-small-operatingsystem, .icon-small-keyboard, .icon-small-inktoner, .icon-small-help, .icon-small-harddrive, .icon-small-giftcard, .icon-small-favorite, .icon-small-energyefficient, .icon-small-employee, .icon-small-edit, .icon-small-drivers, .icon-small-download, .icon-small-display, .icon-small-dimensionsweight, .icon-small-deals, .icon-small-data, .icon-small-chat, .icon-small-cart, .icon-small-carryingcase, .icon-small-calendar, .icon-small-calculator, .icon-small-cables, .icon-small-battery, .icon-small-award, .icon-small-audiospeaker, .icon-small-audiocard, .icon-small-alertnotice, .icon-small-alertinfo, .icon-small-alerterror, .icon-small-alertcomplete, .icon-small-add, .icon-small-support, .icon-small-storage, .icon-small-speakers, .icon-small-software, .icon-small-shipsfast, .icon-small-shipping, .icon-small-share, .icon-small-securesoftware, .icon-small-network, .icon-small-music, .icon-small-mouse, .icon-small-mobile, .icon-small-missingimage, .icon-small-memorycardreader, .icon-small-memory, .icon-small-mail, .icon-small-copy, .icon-small-contact, .icon-small-computergeneric, .icon-small-color, .icon-small-cloud, .icon-small-clock, .icon-small-chipset, .icon-small-checkmark, .icon-small-bell, .icon-small-performance, .icon-small-server, .icon-small-serverrack, .icon-small-thinclient {
   font-family: 'icon-small';
   speak: none;
   font-style: normal;
@@ -2371,6 +2373,21 @@ you can use the generic selector below, but it's slower:
 .icon-small-checkmark:before {
   content: "\74";
 }
+.icon-small-bell:before {
+  content: "\75";
+}
+.icon-small-performance:before {
+  content: "\76";
+}
+.icon-small-server:before {
+  content: "\77";
+}
+.icon-small-serverrack:before {
+  content: "\78";
+}
+.icon-small-thinclient:before {
+  content: "\79";
+}
 
 
 /*---Large Icons---*/
@@ -2393,7 +2410,7 @@ Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
 [class*="your-class-prefix"] {
 */
-.icon-large-zoomout, .icon-large-zoomin, .icon-large-wifi, .icon-large-whitepaper, .icon-large-webcam, .icon-large-warranty, .icon-large-videocard, .icon-large-video, .icon-large-useraccount, .icon-large-trash, .icon-large-towergeneric, .icon-large-touchpad, .icon-large-touch, .icon-large-toner, .icon-large-tablet, .icon-large-surgeprotection, .icon-large-support, .icon-large-storage, .icon-large-speakers, .icon-large-software, .icon-large-shipsfast, .icon-large-shipping, .icon-large-share, .icon-large-securesoftware, .icon-large-secure, .icon-large-searchright, .icon-large-searchleft, .icon-large-save, .icon-large-recycle, .icon-large-protection, .icon-large-projector, .icon-large-processor, .icon-large-printer, .icon-large-powersupply, .icon-large-ports, .icon-large-play, .icon-large-photos, .icon-large-package, .icon-large-opticaldrive, .icon-large-operatingsystem, .icon-large-network, .icon-large-music, .icon-large-mouse, .icon-large-mobile, .icon-large-missingimage, .icon-large-memorycardreader, .icon-large-memory, .icon-large-mail, .icon-large-keyboard, .icon-large-help, .icon-large-harddrive, .icon-large-giftcard, .icon-large-favorite, .icon-large-energyefficient, .icon-large-employee, .icon-large-edit, .icon-large-drivers, .icon-large-download, .icon-large-display, .icon-large-dimensionsweight, .icon-large-deals, .icon-large-data, .icon-large-copy, .icon-large-contact, .icon-large-computergeneric, .icon-large-color, .icon-large-cloud, .icon-large-clock, .icon-large-chipset, .icon-large-checkmark, .icon-large-chat, .icon-large-cart, .icon-large-carryingcase, .icon-large-calendar, .icon-large-calculator, .icon-large-cables, .icon-large-battery, .icon-large-award, .icon-large-audiospeaker, .icon-large-audiocard, .icon-large-alertnotice, .icon-large-alertinfo, .icon-large-alerterror, .icon-large-alertcomplete, .icon-large-add {
+.icon-large-zoomout, .icon-large-zoomin, .icon-large-wifi, .icon-large-whitepaper, .icon-large-webcam, .icon-large-warranty, .icon-large-videocard, .icon-large-video, .icon-large-useraccount, .icon-large-trash, .icon-large-towergeneric, .icon-large-touchpad, .icon-large-touch, .icon-large-toner, .icon-large-tablet, .icon-large-surgeprotection, .icon-large-support, .icon-large-storage, .icon-large-speakers, .icon-large-software, .icon-large-shipsfast, .icon-large-shipping, .icon-large-share, .icon-large-securesoftware, .icon-large-secure, .icon-large-searchright, .icon-large-searchleft, .icon-large-save, .icon-large-recycle, .icon-large-protection, .icon-large-projector, .icon-large-processor, .icon-large-printer, .icon-large-powersupply, .icon-large-ports, .icon-large-play, .icon-large-photos, .icon-large-package, .icon-large-opticaldrive, .icon-large-operatingsystem, .icon-large-network, .icon-large-music, .icon-large-mouse, .icon-large-mobile, .icon-large-missingimage, .icon-large-memorycardreader, .icon-large-memory, .icon-large-mail, .icon-large-keyboard, .icon-large-help, .icon-large-harddrive, .icon-large-giftcard, .icon-large-favorite, .icon-large-energyefficient, .icon-large-employee, .icon-large-edit, .icon-large-drivers, .icon-large-download, .icon-large-display, .icon-large-dimensionsweight, .icon-large-deals, .icon-large-data, .icon-large-copy, .icon-large-contact, .icon-large-computergeneric, .icon-large-color, .icon-large-cloud, .icon-large-clock, .icon-large-chipset, .icon-large-checkmark, .icon-large-chat, .icon-large-cart, .icon-large-carryingcase, .icon-large-calendar, .icon-large-calculator, .icon-large-cables, .icon-large-battery, .icon-large-award, .icon-large-audiospeaker, .icon-large-audiocard, .icon-large-alertnotice, .icon-large-alertinfo, .icon-large-alerterror, .icon-large-alertcomplete, .icon-large-add, .icon-large-bell, .icon-large-performance, .icon-large-server, .icon-large-serverrack, .icon-large-thinclient {
   font-family: 'icon-large';
   speak: none;
   font-style: normal;
@@ -2657,6 +2674,21 @@ you can use the generic selector below, but it's slower:
 }
 .icon-large-add:before {
   content: "\75";
+}
+.icon-large-bell:before {
+  content: "\76";
+}
+.icon-large-performance:before {
+  content: "\77";
+}
+.icon-large-server:before {
+  content: "\78";
+}
+.icon-large-serverrack:before {
+  content: "\79";
+}
+.icon-large-thinclient:before {
+  content: "\7a";
 }
 
 
