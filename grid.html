@@ -3,93 +3,35 @@
 
 	<head>
 		<meta charset="utf-8">
-	    <title>Sherpa UX Prototyping - Grid Example </title>
+	    <title>Sherpa UX Prototyping - Proportional grid </title>
 	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
 	    
-	    <meta name="description" content="This is an example of the Sherpa grid system.">
+	    <meta name="description" content="The Sherpa UX Prototyping Framework is a UX modeling system that enables rapid responsive HTML prototyping to create a best-in-class user experience design process.">
 	    <meta name="author" content="DELL, Inc.">
 
-		<!-- Framework CSS files - Don't touch
-		********************************************************************************
-		-->
+	    <script type="text/javascript">
+            var SHERPA_CONFIG_OVERRIDES = {};
+                SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+                	{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.js"}
+            		];
+				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+					{ bootstrap: "assets/sherpa/css/bootstrap.css" },
+					{ sherpa_overides: "assets/sherpa/css/sherpa-override.css" },
+					{ prettify: "assets/sherpa/lib/google-code-prettify/prettify.css" }
+				];
+				SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/sherpa-site-styles.css";
+				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa-site.js";
 
-			<!-- Bootstrap styles -->
-	    	<link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/bootstrap.css" type="text/css" rel="stylesheet">
+	    </script>
 
-			<!-- Sherpa styles -->
-	    	<link href="https://rawgithub.com/DellGDC/sherpa/master/assets/css/sherpa_override.css" type="text/css" rel="stylesheet">
+	    <style>body {opacity: 0;}</style>
+		<!-- Framework  - Don't touch
+		******************************************************************************** -->
+			<script src="https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/sherpa.js"></script>	
+		<!-- 
+		******************************************************************************** -->	
 
-			<!--[if (!IE) | (gt IE 9)]><!-->
-			<link rel="stylesheet" href="https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/css/grid/gridset.css" />
-			<!--<![endif]-->
-			<!--[if IE 9]>
-			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset-ie-9.css" />
-			<![endif]-->
-			<!--[if lte IE 8]>
-			<link rel="stylesheet" href="assets/sherpa/css/grid/gridset-ie-lte8.css" />
-			<![endif]-->
-
-
-
-		<!-- Your CSS files - Please touch
-		********************************************************************************
-		-->	
-
-		<!-- Your CSS - Add your new styles to this file -->
-		<style type="text/css">
-
-		/* The main wrapper - don't touch */
-
-		.wrapper {
-			margin: 0 auto;
-			width: 90%;
-			max-width:1140px;
-			float: none;
-		}
-
-		div {
-			float: left;
-			width: 100%;
-			margin-bottom: 0px;
-			display: block;
-			position: relative;
-			*zoom: 1;
-		}
-
-
-		/* Put your styles here */
-
-		header {
-			padding-top:20px;
-			overflow: hidden;
-		}
-
-		section {
-			overflow:hidden;
-		}
-
-		.main-content {
-			padding-top:20px;
-			overflow: hidden;
-		}
-
-		footer {
-			padding-top:20px;
-			overflow: hidden;
-		}
-		
-		.box {
-			margin-bottom: 20px;
-			padding: 20px 20px 0px 20px;
-			-webkit-box-sizing: border-box; /* Safari/Chrome, other WebKit */
-			-moz-box-sizing: border-box;    /* Firefox, other Gecko */
-			box-sizing: border-box;         /* Opera/IE 8+ */
-		}
-
-
-
-			</style>
-
+			
 	</head>
 
 	<body style="padding:60px 0;">
