@@ -1901,7 +1901,7 @@ h4.container-title {
     margin-bottom: 20px;
   }
 
-.bottom-offset-meduim {
+.bottom-offset-medium {
     margin-bottom: 40px;
   }
 
@@ -1937,7 +1937,7 @@ h4.container-title {
 .gray {background-color: #aaaaaa;}
 .gray-light {background-color: #eeeeee;}
 .gray-very-light {background-color: #f9f9f9;}
-.gray-stroke {padding: 30px 0px;border: 2px solid #cccccc;}
+.gray-stroke {border: 2px solid #cccccc;}
 .white {background-color: #ffffff;}
 
 /* Blue */
