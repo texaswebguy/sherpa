@@ -130,8 +130,7 @@ Sherpa.formatCurrency = function(number_data){
 			return amount+viewModel.config.currency.symbol;
 		}
 	} catch (err) {
-		var error_msg = "Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json";
-		Sherpa.QA.logEntry(error_msg, "i18n, ajax errors, sherpa-utils:formatCurrency");
+		Sherpa.QA.logEntry("Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json","i18n, ajax errors, sherpa-utils:formatCurrency");
 		return { status: 'failed', error_msg: error_msg };
 	}
 }

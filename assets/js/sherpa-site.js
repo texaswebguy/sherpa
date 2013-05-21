@@ -171,6 +171,10 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			} else {
 				return false;
 			}
+		},
+		affixSideBar : function(){
+			$('.sherpa-docs-sidenav').addClass('affix');
+			$('.sherpa-docs-sidenav').width($('.sherpa-docs-sidenav').parents('aside').width());
 		}
 	    
 	};
@@ -280,6 +284,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		$('.showDefaultAside').show();
 		$('.aside').removeClass('sherpa-docs-example');
 	});
+
 
 
 
