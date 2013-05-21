@@ -271,6 +271,8 @@ var viewModel = {
 	config:{}
 };
 
+
+
 /*
 	The viewModel holds the context for the entire application/page. It has to be declared 
 	here since all the sherpa core js files use it to store information.
@@ -294,7 +296,12 @@ Sherpa.ready("dateFormat", function(){
 			{ localJSApp: SHERPA.JS_PATH+SHERPA.PROTOTYPE_APP}
 		);				
 
-		
+		Sherpa.request({
+			resourceId: "core_config", 
+			success: function(responseJSON){
+				viewModel.core_config = responseJSON;
+			}
+		});		
 
 	    Sherpa.ready("localJSApp", function(){
 

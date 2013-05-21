@@ -1159,25 +1159,26 @@ label : Sherpa.msg('textkey_label'),
 
 					<h3 class="sherpa">Page Level Alerts</h3>
 
-					<p><a href="#" class="btn btn-tertiary test-page-level-alert">See a sample page level alert</a></p>
+					<p><a href="#" class="btn btn-tertiary" data-trigger="page-level-alert" data-title="Sample Title for Alert" data-type="error" data-message="This is a sample message!">See a sample page level alert</a></p>
 					
 					<h3 class="sherpa">Markup</h3>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 Trigger:
 
-&lt;a href="#" class="btn btn-tertiary test-page-level-alert">See a sample page level alert&lt;/a>
+&lt;a href="#" class="btn btn-tertiary page-level-alert-trigger" data-title="Sample Title for Alert" data-type="error" data-message="This is a sample message!">See a sample page level alert&lt;/a>
 
-Function to call page level alert:
+Attributes to pass information to page alert:
+	data-title
+	data-type
+	data-message
+	data-dismiss
 
-$('.test-page-level-alert').click(function(event){
-Sherpa.publish( "alert_message", {
-      "type": "error",
-      "title":"Sample Title",
-      "message": "This is a sample message",
-      "dismiss":true
-    });
-});
+data-alert_data can also be used instead to pass a data object from the view model.
+
+If no data is passed then default data is displayed.
+
+
 </pre>
 
 

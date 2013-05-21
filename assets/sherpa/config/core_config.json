@@ -1,0 +1,17 @@
+{
+	"default_alerts_data": {
+          "type": "attention",
+          "icon":"icon-small-alertnotice",
+          "title": "Lorem ipsum!",
+          "message": "Consectetur adipiscing elit. Etiam imperdiet scelerisque condimentum. Duis condimentum lorem at tellus aliquet a tempus lectus varius.",
+          "dismiss": true
+    },
+    "alert_icons": {
+    	"success":"icon-small-checkmark",
+    	"information":"icon-small-alertinfo",
+    	"error":"icon-small-alerterror",
+    	"default":"icon-small-alertnotice"
+    }
+
+
+}

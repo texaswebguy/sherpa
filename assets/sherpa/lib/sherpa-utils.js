@@ -344,6 +344,12 @@ Sherpa.request.define( "data", "ajax", {
 });
 
 
+Sherpa.request.define( "core_config", "ajax", {
+	url:"assets/sherpa/config/core_config.json",
+    dataType: "json",
+    type: "GET"
+});
+
 //Session Storage
 Sherpa.session = {};
 Sherpa.session.storeLog = function(key,id){

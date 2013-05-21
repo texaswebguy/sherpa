@@ -221,8 +221,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 				$(event.target).parents(".sherpa-docs-sidenav").toggleClass('open');
 			}
 		});
-
-
 	});
 
 	$('.code_sample_popup').click(function(event){
@@ -234,16 +232,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 
-	$('.test-page-level-alert').click(function(event){
-		event.preventDefault();
-		Sherpa.publish( "alert_message", {
-	      "type": "error",
-	      "title":"Sample Title",
-	      "message": "This is a sample message",
-	      "dismiss":true,
-	      "icon":"icon-alert-notice"
-	    });
-	});
 
 	$('.tab_color_switcher').change(function(event){
 		event.preventDefault();
