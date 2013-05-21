@@ -11,7 +11,27 @@
     	"information":"icon-small-alertinfo",
     	"error":"icon-small-alerterror",
     	"default":"icon-small-alertnotice"
-    }
+    },
+    "default_dropdown_data" : {
+          "label" : "Sample links",
+          "items": [
+              {
+                  "id" : "action_1",
+                  "label" : "Action 1",
+                  "url" : "#action"
+              },
+              {
+                  "id" : "action_2",
+                  "label" : "Action 2",
+                  "url" : "#action"
+              },
+              {
+                  "id" : "action_3",
+                  "label" : "Action 3",
+                  "url" : "#action"
+              }
+          ]
+      }
 
 
 }
