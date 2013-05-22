@@ -141,7 +141,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
-h1.tablet, h2.tablet {
+h1.tablet, h2.tablet, h5.tablet {
   font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -149,7 +149,7 @@ h1.tablet, h2.tablet {
 }
 
 /* Edits made by AJ Lohman */
-h3.tablet, h4.tablet, h5.tablet {
+h3.tablet, h4.tablet {
   font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
   font-weight: normal;
   color: inherit;
@@ -158,9 +158,21 @@ h3.tablet, h4.tablet, h5.tablet {
 
 h1.tablet      {font-size: 32px;line-height: 38px;}
 h2.tablet      {font-size: 26px;line-height: 30px;}
-h3.tablet      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
-h4.tablet      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-h5.tablet      {font-size: 16px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h3.tablet      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h4.tablet      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h5.tablet      {font-size: 16px;line-height: 20px;}
+
+
+
+.lead.tablet {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight:bold;
+  line-height: 20px;
+  color:#999;
+}
+
+
 
 
 /* Edits made by:; AJ Lohman - just organized them a bit*/
@@ -180,18 +192,22 @@ h3.mobile, h4.mobileh, h5.mobile {
   text-rendering: optimizelegibility;
 }
 
-/*h1.mobile      {font-size: 22px;line-height: 26px;}
-h2.mobile      {font-size: 20px;line-height: 24px;}
-h3.mobile      {font-size: 18px;line-height: 22px; font-family: 'museo_for_dell_700regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-h4.mobile      {font-size: 18px;line-height: 22px;}
-h5.mobile      {font-size: 14px;line-height: 20px;}
-h6.mobile      {font-size: 14px;line-height: 20px;}*/
 
-h1.mobile       {font-size: 22px;line-height: 26px;}
+h1.mobile       {font-size: 24px;line-height: 28px;}
 h2.mobile       {font-size: 20px;line-height: 24px;}
-h3.mobile       {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
-h4.mobile       {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;}
-h5.mobile       {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h3.mobile       {font-size: 17px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h4.mobile       {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h5.mobile       {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+
+.lead.mobile {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight:bold;
+  line-height: 20px;
+  color:#999;
+}
+
+
 
  .white-text {
   color:#fff;
@@ -257,10 +273,6 @@ ul.unstyled.icons li {
   .nav-sherpa ul li {
     display: inline;
     list-style: none;
-  }
-
-  .nav-sherpa ul li:first-child {
-    display: none;
   }
 
   .nav-sherpa ul li a {
