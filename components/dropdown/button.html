@@ -3,18 +3,32 @@
 	
 	Sherpa.componentJS.dropdown_button_js = function(data){
 
-		var data.button_class = 'btn dropdown-toggle';
-		if(data.component_options.color) {
-			data.button_class += ' btn-'+data.component_options.color;
-		}
-		if(data.component_options.size) {
-			data.button_class += ' btn-'+data.component_options.size;
-		}
-		if(!data.items){
-			data.items = viewModel.core_config.default_dropdown_data;
-		}
-		return data;
+		if(data) {
+			data.button_class = "btn dropdown-toggle";
+			if(data.component_options) {
+				if(data.component_options.color) {
+					data.button_class += ' btn-'+data.component_options.color;
+				}
+				if(data.component_options.size) {
+					data.button_class += ' btn-'+data.component_options.size;
+				}			
+			} else {
+				data.button_class += ' btn-tertiary';
+			}
+			
+			if(!data.items){
+				data.items = viewModel.core_config.default_dropdown_data.items;
+			}
+			
+			if(!data.label){
+				data.label = viewModel.core_config.default_dropdown_data.label;
+			}
 
+		} else {
+			data = viewModel.core_config.default_dropdown_data;
+		}
+		
+		return data;
 	};
 	
 </script>
@@ -25,7 +39,7 @@
 
 	<button 
 		data-toggle="dropdown" 
-		data-bind="attr : { class : button_class) }"><span data-bind="text : label"></span> <span class="caret"></span></button>
+		data-bind="attr : { class : button_class }"><span data-bind="text : label"></span> <span class="caret"></span></button>
 
 
 	<ul class="dropdown-menu" data-bind="foreach: items">
