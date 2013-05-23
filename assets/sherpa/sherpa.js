@@ -160,6 +160,7 @@ Sherpa.js({ config: SHERPA.GLOBAL_CONFIG }, function(){
 		    }
 		    Sherpa.counter.obj = obj;
 		}
+		return obj.new_time;
 	}
 	// initiate counter to start login of entire app
 	Sherpa.counter("Sherpa INIT");

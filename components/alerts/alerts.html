@@ -22,11 +22,10 @@
           default:
             options.icon = viewModel.core_config.alert_icons.default;        
         }
-        if(!options.type){
-          Sherpa.QA.logEntry("You made reference to alert component and you provided options without a specific type. "+default_options.type+" was chosen by default","alerts, bad component reference")
-        } else {
-          Sherpa.QA.logEntry("Each alert type has a standard icon but you overwrote it. Please make sure this is an approved variant","Unapproved icon, alerts")
-        }
+      } else if(!options.type) {
+        Sherpa.QA.logEntry("You made reference to alert component and you provided options without a specific type. "+default_options.type+" was chosen by default","alerts, bad component reference")
+      } else {
+        Sherpa.QA.logEntry("Each alert type has a standard icon but you overwrote it. Please make sure this is an approved variant","Unapproved icon, alerts")
       }
       return _.extend(default_options, options);
     } else {
