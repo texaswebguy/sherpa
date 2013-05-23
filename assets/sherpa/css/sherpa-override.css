@@ -122,8 +122,6 @@ div {
   font-style: normal;
 }
 
-
-
 @font-face {
   font-family: 'icon-large';
   src:url('../fonts/icon-large.eot');
@@ -2015,7 +2013,6 @@ h4.container-title {
 
 
 
-
 /* ICONS
 -------------------------------------------------- */
 
@@ -2093,7 +2090,7 @@ you can use the generic selector below, but it's slower:
 
 /*---Small Icons---*/
 
-//* Use the following CSS code if you want to use data attributes for inserting your icons */
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icon-small';
   content: attr(data-icon);
