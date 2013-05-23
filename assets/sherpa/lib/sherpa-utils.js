@@ -191,7 +191,7 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 	} else {
 		filename = component_name+".html"+uuid
 	}
-	console.log("fetching :",filename)
+	//console.log("fetching :",filename)
 
 	Sherpa.request({
 		resourceId: "getComponentHTML", 
@@ -334,6 +334,11 @@ Sherpa.request.define( "data", "ajax", {
     type: "GET"
 });
 
+Sherpa.request.define( "project_info", "ajax", {
+	url:"{filename}",
+    dataType: "text",
+    type: "GET"
+});
 
 Sherpa.request.define( "core_config", "ajax", {
 	url:"assets/sherpa/config/core_config.json",

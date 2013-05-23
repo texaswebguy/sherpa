@@ -32,18 +32,20 @@
 
 <body>
 
+
 <!-- Masthead section -->
-	<header class="blue bottom-offset-small">
+	<header class="masthead-sherpa">
 		<div class="wrapper">
 			<nav class="da-all ta-all ma-all">
 				<!-- Start of masthead component -->
-				<div class="box navyblue">
-					<p class="center-text white-text">masthead</p>
+				<div data-bind="component: {name:'uxmf', type:'masthead'}">
 				</div>
 				<!-- End of masthead component -->
 			</nav>
 		</div>
 	</header>
+
+	<div data-bind="component: {name:'uxmf', type:'project_info'}"></div>
 
 <!-- Content section -->
 <section data-bind="page: {id: 'start', title: 'Sherpa: Available templates'}">
@@ -86,18 +88,13 @@
 </div>
 
 
+
 &nbsp;
 <!-- footer section -->
-	<footer class="blue">
-		<div class="wrapper">
-			<div class="da-all ta-all ma-all">
-				<!-- Start of footer component -->
-				<footer class="box navyblue">
-					<p class="center-text white-text">footer</p>
-				</footer>
-				<!-- End of footer component -->
-			</div>
-		</div>
+	<footer class="gray-light" data-bind="component: { 
+			name :'uxmf', 
+			type :'footer'
+		}">
 	</footer>
 
 </body>

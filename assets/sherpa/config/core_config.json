@@ -33,7 +33,6 @@
                   "url" : "#action"
               }
           ]
-      }
-
-
+      },
+      "project_info_filename":"assets/config/project_info.csv"
 }
