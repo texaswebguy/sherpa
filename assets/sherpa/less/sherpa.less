@@ -1,0 +1,65 @@
+/*!
+ *
+ * Dell Sherpa v0.2
+ * Global Design Creative, Dell, Inc.
+ * 2013
+ *
+ * Based on Bootstrap v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+
+// Core variables, mixins and fonts
+@import "core.less";
+
+// CSS Reset
+@import "base/reset.less";
+
+
+
+// Base CSS
+@import "base/type.less";
+@import "base/code.less";
+@import "base/forms.less";
+@import "base/tables.less";
+@import "base/icons.less";
+
+// Components: common
+//@import "components/sprites.less"; //icons need to be re-specified in a new icons.less file 
+@import "components/dropdowns.less";
+@import "components/wells.less";
+@import "components/component-animations.less";
+@import "components/close.less";
+
+// Components: Buttons & Alerts
+@import "components/buttons.less";
+@import "components/button-groups.less";
+@import "components/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "components/navs.less";
+@import "components/navbar.less";
+@import "components/breadcrumbs.less";
+@import "components/pagination.less";
+@import "components/pager.less";
+
+// Components: Popovers
+@import "components/modals.less";
+@import "components/tooltip.less";
+@import "components/popovers.less";
+
+// Components: Misc
+@import "components/thumbnails.less";
+@import "components/media.less";
+@import "components/labels-badges.less";
+@import "components/progress-bars.less";
+@import "components/accordion.less";
+@import "components/carousel.less";
+@import "components/hero-unit.less";
+
+// Utility classes
+@import "base/utilities.less"; // Has to be last to override when necessary

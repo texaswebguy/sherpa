@@ -32,50 +32,87 @@
       })
     });
 
-
-    Sherpa.subscribe( "alert_message", function(options) {
-      if(options === 'hide') {
-        $('#page-level-alert').hide();
-      } else {
-        if (options.title) {
-          $('#page-level-alert .alert-title').html(options.title);
-        } else {
-          $('#page-level-alert .alert-title').hide()
-        }
-        if (options.message) {
-          $('#page-level-alert .alert-message').html(options.message);
-        } else {
-          $('#page-level-alert .alert-message').hide()
-        }
-        if (options.dismiss === false) {
-          $('#page-level-alert .close').hide();
-        } else {
-          $('#page-level-alert .close').show()
-        }
-        if (options.type) {
-          $('#page-level-alert alert').attr('class','alert '+options.type);
-          //TODO need to move these values to config - duplicate in alert module
-          switch(options.type) {
-            case "success":
-              options.icon = 'icon-small-checkmark';        
-              break;
-            case "information":
-              options.icon = 'icon-small-alertinfo';        
-              break;
-            case "error":
-              options.icon = 'icon-small-alerterror';        
-              break;
-            default:
-              options.icon = 'icon-small-alertnotice';        
-          }
-          $('#page-level-alert [class^=icon]').attr('class',options.icon);
-
-        }
-        $('#page-level-alert').show();
-        $.scrollTo('#page-level-alert',300, {offset:{top:-1000}});
+  $('[data-trigger=page-level-alert]').click(function(event){
+    event.preventDefault();
+    var alert_data = {};
+    var attributes = $(event.currentTarget)[0].attributes;
+    if(attributes["data-alert_data"]) {
+      alert_data = attributes["data-alert_data"].value;
+    } else {
+      alert_data = _.clone(viewModel.core_config.default_alerts_data);
+      if(attributes["data-title"]){
+        alert_data.title = attributes["data-title"].value;
       }
-      
-    });
+      if(attributes["data-message"]){
+        alert_data.message = attributes["data-message"].value;
+      }
+      if(attributes["data-type"]){
+        alert_data.type = attributes["data-type"].value;
+        switch(alert_data.type) {
+          case "success":
+            alert_data.icon = viewModel.core_config.alert_icons.success;        
+            break;
+          case "information":
+            alert_data.icon = viewModel.core_config.alert_icons.information;        
+            break;
+          case "error":
+            alert_data.icon = viewModel.core_config.alert_icons.error;        
+            break;
+          default:
+            alert_data.icon = viewModel.core_config.alert_icons.default;        
+        }
+      }
+      if(attributes["data-dismiss"]){
+        alert_data.dismiss = attributes["data-dismiss"];
+      }
+    }
+
+    Sherpa.publish( "alert_message", alert_data);
+  });
+
+  Sherpa.subscribe( "alert_message", function(options) {
+    if(options === 'hide') {
+      $('#page-level-alert').hide();
+    } else {
+      if (options.title) {
+        $('#page-level-alert .alert-title').html(options.title);
+      } else {
+        $('#page-level-alert .alert-title').hide()
+      }
+      if (options.message) {
+        $('#page-level-alert .alert-message').html(options.message);
+      } else {
+        $('#page-level-alert .alert-message').hide()
+      }
+      if (options.dismiss === false) {
+        $('#page-level-alert .close').hide();
+      } else {
+        $('#page-level-alert .close').show()
+      }
+      if (options.type) {
+        $('#page-level-alert alert').attr('class','alert '+options.type);
+        //TODO need to move these values to config - duplicate in alert module
+        switch(options.type) {
+          case "success":
+            options.icon = viewModel.core_config.alert_icons.success;        
+            break;
+          case "information":
+            options.icon = viewModel.core_config.alert_icons.information;        
+            break;
+          case "error":
+            options.icon = viewModel.core_config.alert_icons.error;        
+            break;
+          default:
+            options.icon = viewModel.core_config.alert_icons.default;        
+        }
+        $('#page-level-alert [class^=icon]').attr('class',options.icon);
+
+      }
+      $('#page-level-alert').show();
+      $.scrollTo('#page-level-alert',300, {offset:{top:-1000}});
+    }
+    
+  });
 
     /* Sherpa.publish( "alert_message", {
         "type": "error",
@@ -87,7 +124,6 @@
 
       Sherpa.publish("alert_message",'hide') to remove alert on page.
 
-      TODO the dismiss alert actually removes the element in the dom. So we will have to overide that function to just hide it.
     */
   }
   Sherpa.componentJS.alerts_page_level_js();

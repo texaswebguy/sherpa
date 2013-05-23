@@ -2,7 +2,7 @@
   <script type="text/javascript">
 
     var sherpa_masthead_active = function(data){
-        if(_.last(location.pathname.split("/"))== data.url){
+        if(_.last(location.hash.split("/"))== data.id){
           $('head title').html(data.browser_title);
           return 'active';
         } else {
@@ -10,6 +10,14 @@
         }
     }
 
+    $(window).on('hashchange', function() {
+      $('.nav-sherpa li').removeClass('active');
+      if(!_.isEmpty(_.last(location.hash.split("/")))) {
+        $('[rel='+_.last(location.hash.split("/"))+']').parent().addClass('active');
+      }
+      
+
+    });
 
   </script>
 
@@ -19,7 +27,7 @@
     <!-- Logo -->
     <div class="da1-da2 ta1-ta2 mb1">
       <div class="brand-sherpa">
-        <a href="index.html">Sherpa</a>
+        <a href="#">Sherpa</a>
       </div>
     </div>
 
@@ -32,7 +40,7 @@
     <div id="menu" class="da3-da12 ta-hide ma-hide">
     	<nav class="nav-sherpa">
         <ul data-bind="foreach: $data">
-          <li data-bind="attr: {'class' : sherpa_masthead_active($data) }"><a href="" data-bind="text: label, attr: { 'href' : url }">Get started</a></li>
+          <li data-bind="attr: {'class' : sherpa_masthead_active($data) }"><a href="" data-bind="text: label, attr: { 'href' : url, 'rel' : id }">Get started</a></li>
         </ul>
       </nav>
     </div>

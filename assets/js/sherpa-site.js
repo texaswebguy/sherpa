@@ -11,37 +11,43 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    	{ 
 	    		id: 'get_started',
 	    		label : 'Get Started',
-	    		url : 'how-to.html',
+	    		file_name : 'pages/sherpa-site/how-to.html',
+	    		url : '#!/get_started',
 	    		browser_title : "Sherpa UX Prototyping - How to get started"
 	    	},
 	    	{ 
 	    		id: 'scaffolding',
 	    		label : 'Scaffolding',
-	    		url : 'scaffolding.html',
+	    		file_name : 'pages/sherpa-site/scaffolding.html',
+	    		url : '#!/scaffolding',
 	    		browser_title : "Sherpa UX Prototyping - Scaffolding"
 	    	},
 	    	{ 
 	    		id: 'base_css',
 	    		label : 'Basic Elements',
-	    		url : 'base-css.html',
+	    		file_name : 'pages/sherpa-site/base-css.html',
+	    		url : '#!/base_css',
 	    		browser_title : "Sherpa UX Prototyping - Basic HTML/CSS elements"
 	    	},
 	    	{ 
 	    		id: 'components',
 	    		label : 'Components',
-	    		url : 'components.html',
+	    		file_name : 'pages/sherpa-site/components.html',
+	    		url : '#!/components',
 	    		browser_title : "Sherpa UX Prototyping - Components"
 	    	},
 	    	{ 
 	    		id: 'configuration',
 	    		label : 'Configuration',
-	    		url : 'configuration.html',
+	    		file_name : 'pages/sherpa-site/configuration.html',
+	    		url : '#!/configuration',
 	    		browser_title : "Sherpa UX Prototyping - Configuring your prototypes"
 	    	},
 	    	{ 
 	    		id: 'functions',
 	    		label : 'Functions',
-	    		url : 'functions.html',
+	    		file_name : 'pages/sherpa-site/functions.html',
+	    		url : '#!/functions',
 	    		browser_title : "Sherpa UX Prototyping - Javascript Functions"
 	    	}
 	    ],
@@ -215,8 +221,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 				$(event.target).parents(".sherpa-docs-sidenav").toggleClass('open');
 			}
 		});
-
-
 	});
 
 	$('.code_sample_popup').click(function(event){
@@ -228,61 +232,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 
-	$('.test-page-level-alert').click(function(event){
-		event.preventDefault();
-		Sherpa.publish( "alert_message", {
-	      "type": "error",
-	      "title":"Sample Title",
-	      "message": "This is a sample message",
-	      "dismiss":true,
-	      "icon":"icon-alert-notice"
-	    });
-	});
-
-	$('.sherpa-docs-sidenav').waypoint('sticky', {
-	  stuckClass: 'affix',
-	  offset: 70,
-	  complete: function(){
-	  	$(".sherpa-docs-sidenav.affix").width($('.da1-da3').width());
-	  	$(".sticky-wrapper").height("inherit");
-	  }
-	});
-	/* TODO: need to abstrack waypoints sticky to overtake data-spy="scroll" bootstrap selectors
-	The version of waypoints sticky loaded provides a call back function which is critical in hard setting the width of the affix element
-	*/
-
-
-	
-
-
-	//TODO need all this functionality to be generic so that it works on all prototypes
-	$('article').waypoint(function(direction) {
-		if(direction=="down") {
-			$('.nav.nav-list.sherpa-docs-sidenav li.active').removeClass('active');
-			var id = '#'+$(this).attr('id');
-			$('.nav.nav-list.sherpa-docs-sidenav li a[href='+id+']').parent().addClass('active');
-		}
-	}, { offset: 80 });
-
-	$('article').waypoint(function(direction) {
-		if(direction=="up") {
-			$('.nav.nav-list.sherpa-docs-sidenav li.active').removeClass('active');
-			var id = '#'+$(this).attr('id');
-			$('.nav.nav-list.sherpa-docs-sidenav li a[href='+id+']').parent().addClass('active');
-		}
-	}, { 
-		offset: function() { 
-			return -$(this).height()+100
-		}
-	});
-
-	$('.sherpa-docs-sidenav.affix').css('width',$('.da1-da3').width());
-	//TODO: hack to make up the fact that active class gets stripped - the problem is with scroll-spy
-	Sherpa.ready("bootstrap", function(){
-		_.each($('.tabbable'), function(tabs){
-			$(tabs).find('li:first').addClass('active');
-		});
-	})
 
 	$('.tab_color_switcher').change(function(event){
 		event.preventDefault();

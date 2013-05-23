@@ -11,7 +11,7 @@ Sherpa.QA.logEntry = function (description, tags) {
 		tags: tags,
 		description: description,
 		url: location.href,
-		timestamp:Sherpa.counter()
+		timestamp:dateFormat(Sherpa.counter())
 	};
 	Sherpa.QA.msg(id);
 }

@@ -73,10 +73,8 @@ var head_conf = {
         "lt" : false,
         "lte": false,
         "eq" : false
-	},
-	page: ''
+	}
 };
-
 
 //______________________________________________________________________________________
 
@@ -107,13 +105,18 @@ function(a,b,c,g){a="object"===typeof a?a:{test:a,success:b?k("Array",b)?b:[b]:!
 return d};d.ready(b,function(){g()&&m(x.ALL,function(a){r(a)});d.feature&&d.feature("domloaded",!0)});if("complete"===b.readyState)p();else if(b.addEventListener)b.addEventListener("DOMContentLoaded",c,!1),a.addEventListener("load",p,!1);else{b.attachEvent("onreadystatechange",c);a.attachEvent("onload",p);var z=!1;try{z=null==a.frameElement&&b.documentElement}catch(F){}z&&z.doScroll&&function E(){if(!u){try{z.doScroll("left")}catch(b){a.clearTimeout(d.readyTimeout);d.readyTimeout=a.setTimeout(E,50);
 return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 
-
 // GLOBAL Sherpa Configuration:
 //______________________________________________________________________________________
 
 Sherpa.VERSION = "0.1";
+var SHERPA = {};
 
-Sherpa.js({ config: "assets/config/global_config.js"}, function(){
+if(SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG) {
+	SHERPA.GLOBAL_CONFIG = SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG;
+} else {
+	SHERPA.GLOBAL_CONFIG = "assets/config/global_config.js";
+}
+Sherpa.js({ config: SHERPA.GLOBAL_CONFIG }, function(){
 
 	// GLOBAL Counter for troubleshooting bottlenecks:
 	//______________________________________________________________________________________
@@ -157,6 +160,7 @@ Sherpa.js({ config: "assets/config/global_config.js"}, function(){
 		    }
 		    Sherpa.counter.obj = obj;
 		}
+		return obj.new_time;
 	}
 	// initiate counter to start login of entire app
 	Sherpa.counter("Sherpa INIT");
@@ -191,7 +195,6 @@ Sherpa.ready("config", function(){
 		We decided that underscore is such a vital part of this framework, we better load 
 		it before anything else. Who wants to do for loops??
 	*/
-
 	Sherpa.js({ underscore: SHERPA.UNDERSCORE});
 });
 
@@ -269,6 +272,8 @@ var viewModel = {
 	config:{}
 };
 
+
+
 /*
 	The viewModel holds the context for the entire application/page. It has to be declared 
 	here since all the sherpa core js files use it to store information.
@@ -279,11 +284,9 @@ Sherpa.ready("dateFormat", function(){
 
 	//Load all sherpa core js files: utilities, custom widgets for knockout, pager, amplify, etc.
 	_.each(SHERPA.SHERPA_CORE_LOAD, function(lib){
-		console.log("loaded js: ",_.keys(lib)[0]);
+		//console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
 	});
-
-
 
 	// Need to wait for i18n to load so that messages are in context (viewModel.content)
 	Sherpa.ready("sherpai18n", function(){
@@ -294,7 +297,12 @@ Sherpa.ready("dateFormat", function(){
 			{ localJSApp: SHERPA.JS_PATH+SHERPA.PROTOTYPE_APP}
 		);				
 
-		
+		Sherpa.request({
+			resourceId: "core_config", 
+			success: function(responseJSON){
+				viewModel.core_config = responseJSON;
+			}
+		});		
 
 	    Sherpa.ready("localJSApp", function(){
 
@@ -302,11 +310,18 @@ Sherpa.ready("dateFormat", function(){
 				//if configured, load gridset overlay
 				Sherpa.js(SHERPA.GRIDSET_OVERLAY_JS);
 			}
-	    	// TODO will need to decide if pager.js plugin is needed
 
+
+	    	// extend viewModel with a $__page__ that points to pager.page that points to a new Page
+
+	    	pager.Href.hash = '#!/';
+
+			pager.extendWithPage(viewModel);
 		    //apply view model to allknockout bindings 
 			ko.applyBindings(viewModel);
-
+			// run this method - listening to hashchange
+			pager.start();
+			pager.start({id:'available_templates'});
 
 
 			// turn on the page

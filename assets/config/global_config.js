@@ -6,9 +6,9 @@
 
 //______________________________________________________________________________________*/
 
-var SHERPA = {};
 
-SHERPA.RUN_AS_LOCAL = true //set to false if you want this prototype to refer to Sherpa site
+
+SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
 /* 
  * By default, prototypes run as local.  This means that all files associated with the prototypes 
  * are local and the prototype should be able to run locally without any internet connection.  
@@ -67,7 +67,7 @@ if(SHERPA.RUN_AS_LOCAL) {
 }
 
 // Should not be changed, this is a core dependencies
-SHERPA.UNDERSCORE = SHERPA.JS_LIB_PATH+"underscore-min.js";
+SHERPA.UNDERSCORE = SHERPA.JS_LIB_PATH+"underscore.js";
 
 // JS Files
 //______________________________________________________________________________________
@@ -77,18 +77,17 @@ SHERPA.JS_CORE_LOAD = [
 	{ knockout: SHERPA.JS_LIB_PATH+"knockout.min.js"},
 	{ amplify: SHERPA.JS_LIB_PATH+"amplify.min.js"}, 
 	{ pager: SHERPA.JS_LIB_PATH+"pager.min.js"}, 
-	{ history: SHERPA.JS_LIB_PATH+"jquery.history.js"},
+	{ history: SHERPA.JS_LIB_PATH+"jquery.ba-hashchange.min.js"},
 	{ scrollTo: SHERPA.JS_LIB_PATH+"jquery.scrollTo.min.js"}, 
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
+	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
 	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},,
 	{ waypoints: SHERPA.JS_LIB_PATH+"waypoints.min.js"},
 	{ waypointsSticky: SHERPA.JS_LIB_PATH+"waypoints-sticky.min.js"},
 	{ csvParser: SHERPA.JS_LIB_PATH+"jquery.csv-0.71.min.js"},
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
-
-//	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
 
 SHERPA.PROTOTYPE_APP = "app.js";
 

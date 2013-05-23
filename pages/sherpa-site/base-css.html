@@ -1,0 +1,2297 @@
+
+	<!-- Main content area -->
+	<section class="title-content">
+		<div class="wrapper">
+			<div class="da-all ta-all mb-all white-text">
+				<h1 class="sherpa featured-white">Base CSS</h1>
+				<h3 class="sherpa featured-white">Fundamental HTML elements styled and enhanced with extensible classes.</h3>
+			</div>
+		</div>
+	</section>
+
+	<section class="main-content">
+		<div class="wrapper">
+
+			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
+				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
+					<ul class="nav nav-list sherpa-docs-sidenav">
+				      	<li class="active"><a href="#typography">Typography</a></li>
+			          	<li><a href="#lists">Lists</a></li>
+			          	<li><a href="#tables">Tables</a></li>
+			          	<li><a href="#forms">Forms</a></li>
+			          	<li><a href="#buttons">Buttons</a></li>
+			          	<li><a href="#colors">Colors & Borders</a></li>
+			          	<li><a href="#images">Images</a></li>
+			          	<li><a href="#containers">Containers</a></li>
+			          	<li><a href="#icons">Icons</a></li>
+						<li><a href="#modifiers">Modifiers</a></li>
+	   				</ul>
+				</div>
+			</aside>
+
+			<section class="da4-da12 ta-all mb-all">
+<!-- Typogoraphy -->
+				<article id="typography" class="bottom-offset-large">
+					<h2 class="sherpa">Typography</h2>
+					<hr>
+
+					<h3 class="sherpa">Headings</h3>
+					<p>All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code> are available.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<h1><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+						<h2><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+						<h3><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+						<h4><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+						<h5><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+						<!-- <h6><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1&gt;...&lt;/h1&gt;</pre>
+
+		        	<h3 class="sherpa">Headings options</h3>
+			        <p>Create variants of the headings using <code>.title</code> <code>.feature</code> and <code>.white</code> classes.</p>
+
+					<h4 class="sherpa">Page Title</h4>
+					<p>The Page Title is a <code>&lt;h1&gt;</code> contained within a <code>&lt;div class="title"&gt;</code></p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="title">
+							<h1>Page Title</h1>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="title"&gt;
+  &lt;h1&gt;Page Title&lt;/h1&gt;
+&lt;div&gt;</pre>
+
+			        <h4 class="sherpa">Feature Heading</h4>
+			        <p>The <code>.feature</code> class can only be used for the <code>&lt;h4&gt;</code> heading.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<h4 class="feature">Feature Heading</h4>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h4 class="feature"&gt;Feature Heading&lt;/h4&gt;</pre>
+
+			        <h4 class="sherpa">White Heading</h4>
+			        <p>Create a White Heading using the <code>.white</code> class. The <code>.white</code> class can can be used for all headings.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="blue box rounded-small">
+							<h1 class="white-text">White Heading</h1>
+							<p class="white-text">Lorem ipsum dolor sit amet Consectetur adipiscing elit Integer molestie lorem at massa Facilisis in pretium nisl aliquet Nulla volutpat aliquam velit</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1 class="white-text"&gt;White Heading&lt;/h1&gt;</pre>
+
+ 
+					<h3 class="sherpa">Tablet headings</h3>
+					<p>These are headers for screen size 979px to 768px. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>
+					<p class="sherpa"><span class="label label-info">Note</span> The below headings for tablet are for display only. You do not need to change anything in your heading tags. The heading will change to the appropriate size automatically.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<h1 class="tablet"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+						<h2 class="tablet"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+						<h3 class="tablet"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+						<h4 class="tablet"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+						<h5 class="tablet"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+						<!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1&gt;...&lt;/h1&gt;</pre>
+
+					<h3 class="sherpa">Phone headings</h3>
+					<p>These are headers for screen size 767px and smaller. All HTML headings, <code>&lt;h1&gt;</code> through <code>&lt;h5&gt;</code>.</p>	<p class="sherpa"><span class="label label-info">Note</span> The below headings for mobile are for display only. You do not need to change anything in your heading tags. The heading will change to the appropriate size automatically.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<h1 class="mobile"><code>&lt;h1&gt;</code> h1. Heading 1</h1>
+						<h2 class="mobile"><code>&lt;h2&gt;</code> h2. Heading 2</h2>
+						<h3 class="mobile"><code>&lt;h3&gt;</code> h3. Heading 3</h3>
+						<h4 class="mobile"><code>&lt;h4&gt;</code> h4. Heading 4</h4>
+						<h5 class="mobile"><code>&lt;h5&gt;</code> h5. Heading 5</h6>
+						<!-- <h6 class="mobile"><code>&lt;h6&gt;</code> h6. Heading 6</h6> -->
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;h1&gt;...&lt;/h1&gt;</pre>
+
+
+					<h3 class="sherpa">Body copy</h3>
+					<p>Sherpa's global default <code>font-size</code> is <strong>14px</strong>, with a <code>line-height</code> of <strong>20px</strong>. This is applied to the <code>&lt;body&gt;</code> and all paragraphs. In addition, <code>&lt;p&gt;</code> (paragraphs) receive a bottom margin of half their line-height (10px by default).</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula.</p>
+						<p>Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Donec ullamcorper nulla non metus auctor fringilla. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec ullamcorper nulla non metus auctor fringilla.</p>
+						<p>Maecenas sed diam eget risus varius blandit sit amet non magna. Donec id elit non mi porta gravida at eget metus. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;...&lt;/p&gt;</pre>
+
+
+					<h3 class="sherpa">Lead body copy</h3>
+					<p>Make a paragraph stand out by adding <code>.lead</code>.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p class="lead"&gt;...&lt;/p&gt;</pre>
+					
+
+					<h3 class="sherpa" id="emphasis">Emphasis</h3>
+					<p>Make use of HTML's default emphasis tags with lightweight styles.</p>
+
+					<h4 class="sherpa">Small</h4>
+					<p class="sherpa"><code>&lt;small&gt;</code></p>
+					<p>For de-emphasizing inline or blocks of text, <small>use the small tag.</small></p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<p><small>This line of text is meant to be treated as fine print.</small></p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;</pre>
+
+					<h4 class="sherpa">Bold</h4>
+					<p>For emphasizing a snippet of text with a heavier font-weight.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
+
+					<h4 class="sherpa">Italics</h4>
+					<p>For emphasizing a snippet of text with italics.</p>
+					<div class="sherpa-docs-example">
+						<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
+				</article>				
+
+<!-- Lists -->
+				<article id="lists" class="bottom-offset-large">
+					<h2 class="sherpa">Lists</h2>
+					<hr>
+
+					<h3 class="sherpa">Unordered</h3>
+					<p>A list of items in which the order does <em>not</em> explicitly matter.</p>
+					<div class="sherpa-docs-example">
+						<ul>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit
+								<ul>
+								<li>Phasellus iaculis neque</li>
+								<li>Purus sodales ultricies</li>
+								<li>Vestibulum laoreet porttitor sem</li>
+								<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;ul&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+					<h3 class="sherpa">Ordered</h3>
+					<p>A list of items in which the order <em>does</em> explicitly matter.</p>
+					<div class="sherpa-docs-example">
+						<ol>
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ol>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;ol&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ol&gt;</pre>
+
+					<h3 class="sherpa">Unstyled</h3>
+					<p>A list of items with no <code>list-style</code> or additional left padding.</p>
+					<div class="sherpa-docs-example">
+						<ul class="unstyled">
+							<li>Lorem ipsum dolor sit amet</li>
+							<li>Consectetur adipiscing elit</li>
+							<li>Integer molestie lorem at massa</li>
+							<li>Facilisis in pretium nisl aliquet</li>
+							<li>Nulla volutpat aliquam velit
+								<ul>
+									<li>Phasellus iaculis neque</li>
+									<li>Purus sodales ultricies</li>
+									<li>Vestibulum laoreet porttitor sem</li>
+									<li>Ac tristique libero volutpat at</li>
+								</ul>
+							</li>
+							<li>Faucibus porta lacus fringilla vel</li>
+							<li>Aenean sit amet erat nunc</li>
+							<li>Eget porttitor lorem</li>
+						</ul>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;ul class="unstyled"&gt;
+  &lt;li&gt;...&lt;/li&gt;
+&lt;/ul&gt;</pre>
+
+				</article>
+
+<!-- Tables -->
+
+		        <article id="tables" class="bottom-offset-large">
+		          <h2 class="sherpa">Tables</h2>
+		          <hr>
+
+		          <h3 class="sherpa">Default</h3>
+		          <p>For basic styling&mdash;light padding and only horizontal dividers&mdash;add the base class <code>.table</code> to any <code>&lt;table&gt;</code>.</p>
+
+		          <div class="box">
+		            <table class="table">
+		              <thead>
+		                <tr>
+		                  <th>#</th>
+		                  <th>First Name</th>
+		                  <th>Last Name</th>
+		                  <th>Username</th>
+		                </tr>
+		              </thead>
+		              <tbody>
+		                <tr>
+		                  <td>1</td>
+		                  <td>John</td>
+		                  <td>Smith</td>
+		                  <td>bigboy</td>
+		                </tr>
+		                <tr>
+		                  <td>2</td>
+		                  <td>Sara</td>
+		                  <td>Longlastname</td>
+		                  <td>slonglastname</td>
+		                </tr>
+		                <tr>
+		                  <td>3</td>
+		                  <td>Jim</td>
+		                  <td>Barker</td>
+		                  <td>barkerboy</td>
+		                </tr>
+		              </tbody>
+		            </table>
+		          </div>
+
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;table class="table"&gt;
+  …
+&lt;/table&gt;</pre>
+
+
+
+
+          <h3 class="sherpa">Optional Tables</h3>
+          <p>Add any of the following classes to the <code>.table</code> base class.</p>
+
+          <h4 class="sherpa">Striped</h4>
+          <p><code>.table-striped</code> adds zebra-striping to any table row within the <code>&lt;tbody&gt;</code> via the <code>:nth-child</code> CSS selector (not available in IE7-8).</p>
+          <div class="sherpa-docs-example">
+            <table class="table table-striped">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+	              <tbody>
+	                <tr>
+	                  <td>1</td>
+	                  <td>John</td>
+	                  <td>Smith</td>
+	                  <td>bigboy</td>
+	                </tr>
+	                <tr>
+	                  <td>2</td>
+	                  <td>Sara</td>
+	                  <td>Longlastname</td>
+	                  <td>slonglastname</td>
+	                </tr>
+	                <tr>
+	                  <td>3</td>
+	                  <td>Jim</td>
+	                  <td>Barker</td>
+	                  <td>barkerboy</td>
+	                </tr>
+	              </tbody>
+            </table>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;table class="table table-striped"&gt;
+  …
+&lt;/table&gt;</pre>
+
+          <h4 class="sherpa">Bordered</h4>
+          <p><code>.table-bordered</code> adds borders and rounded corners to the table.</p>
+          <div class="sherpa-docs-example">
+            <table class="table table-bordered">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+			<tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Smith</td>
+                  <td>bigboy</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Sara</td>
+                  <td>Longlastname</td>
+                  <td>slonglastname</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Jim</td>
+                  <td>Barker</td>
+                  <td>barkerboy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;table class="table table-bordered"&gt;
+  …
+&lt;/table&gt;</pre>
+
+          <h4 class="sherpa">Hover</h4>
+          <p><code>.table-hover</code> enables a hover state on table rows within a <code>&lt;tbody&gt;</code>.</p>
+          <div class="sherpa-docs-example">
+            <table class="table table-hover">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+			<tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Smith</td>
+                  <td>bigboy</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Sara</td>
+                  <td>Longlastname</td>
+                  <td>slonglastname</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Jim</td>
+                  <td>Barker</td>
+                  <td>barkerboy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;table class="table table-hover"&gt;
+  …
+&lt;/table&gt;</pre>
+
+          <h4 class="sherpa">Condensed</h4>
+          <p><code>.table-condensed</code> makes tables more compact by cutting cell padding in half.</p>
+          <div class="sherpa-docs-example">
+            <table class="table table-condensed">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>First Name</th>
+                  <th>Last Name</th>
+                  <th>Username</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr>
+                  <td>1</td>
+                  <td>John</td>
+                  <td>Smith</td>
+                  <td>bigboy</td>
+                </tr>
+                <tr>
+                  <td>2</td>
+                  <td>Sara</td>
+                  <td>Longlastname</td>
+                  <td>slonglastname</td>
+                </tr>
+                <tr>
+                  <td>3</td>
+                  <td>Jim</td>
+                  <td>Barker</td>
+                  <td>barkerboy</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;table class="table table-condensed"&gt;
+  …
+&lt;/table&gt;</pre>
+
+
+
+          <h3 class="sherpa">Optional row classes</h3>
+          <p>Use contextual classes to color table rows.</p>
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Class</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>.success</code>
+                </td>
+                <td>Indicates a successful or positive action.</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.error</code>
+                </td>
+                <td>Indicates a dangerous or potentially negative action.</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.warning</code>
+                </td>
+                <td>Indicates a warning that might need attention.</td>
+              </tr>
+              <tr>
+                <td>
+                  <code>.info</code>
+                </td>
+                <td>Used as an alternative to the default styles.</td>
+              </tr>
+            </tbody>
+          </table>
+          <div class="sherpa-docs-example">
+            <table class="table">
+              <thead>
+                <tr>
+                  <th>#</th>
+                  <th>Product</th>
+                  <th>Payment Taken</th>
+                  <th>Status</th>
+                </tr>
+              </thead>
+              <tbody>
+                <tr class="success">
+                  <td>1</td>
+                  <td>TB - Monthly</td>
+                  <td>01/04/2012</td>
+                  <td>Approved</td>
+                </tr>
+                <tr class="error">
+                  <td>2</td>
+                  <td>TB - Monthly</td>
+                  <td>02/04/2012</td>
+                  <td>Declined</td>
+                </tr>
+                <tr class="warning">
+                  <td>3</td>
+                  <td>TB - Monthly</td>
+                  <td>03/04/2012</td>
+                  <td>Pending</td>
+                </tr>
+                <tr class="info">
+                  <td>4</td>
+                  <td>TB - Monthly</td>
+                  <td>04/04/2012</td>
+                  <td>Call in to confirm</td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+...
+&lt;tr class="success"&gt;
+  &lt;td&gt;1&lt;/td&gt;
+  &lt;td&gt;TB - Monthly&lt;/td&gt;
+  &lt;td&gt;01/04/2012&lt;/td&gt;
+  &lt;td&gt;Approved&lt;/td&gt;
+&lt;/tr&gt;
+...</pre>
+
+
+          <h3 class="sherpa">Supported table markup</h3>
+          <p>List of supported table HTML elements and how they should be used.</p>
+          <table class="table table-bordered table-striped">
+            <colgroup>
+              <col class="span1">
+              <col class="span7">
+            </colgroup>
+            <thead>
+              <tr>
+                <th>Tag</th>
+                <th>Description</th>
+              </tr>
+            </thead>
+            <tbody>
+              <tr>
+                <td>
+                  <code>&lt;table&gt;</code>
+                </td>
+                <td>
+                  Wrapping element for displaying data in a tabular format
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;thead&gt;</code>
+                </td>
+                <td>
+                  Container element for table header rows (<code>&lt;tr&gt;</code>) to label table columns
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tbody&gt;</code>
+                </td>
+                <td>
+                  Container element for table rows (<code>&lt;tr&gt;</code>) in the body of the table
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;tr&gt;</code>
+                </td>
+                <td>
+                  Container element for a set of table cells (<code>&lt;td&gt;</code> or <code>&lt;th&gt;</code>) that appears on a single row
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;td&gt;</code>
+                </td>
+                <td>
+                  Default table cell
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;th&gt;</code>
+                </td>
+                <td>
+                  Special table cell for column (or row, depending on scope and placement) labels
+                </td>
+              </tr>
+              <tr>
+                <td>
+                  <code>&lt;caption&gt;</code>
+                </td>
+                <td>
+                  Description or summary of what the table holds, especially useful for screen readers
+                </td>
+              </tr>
+            </tbody>
+          </table>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;table&gt;
+  &lt;caption&gt;...&lt;/caption&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;...&lt;/th&gt;
+      &lt;th&gt;...&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;...&lt;/td&gt;
+        &lt;td&gt;...&lt;/td&gt;
+      &lt;/tr&gt;
+    &lt;/tbody&gt;
+&lt;/table&gt;</pre>
+
+				</article>
+
+<!-- Forms -->
+
+				<article id="forms" class="bottom-offset-large">
+					<h2 class="sherpa">Forms</h2>
+					<hr>
+
+					<h3 class="sherpa">Text Fields</h3>
+					<p>A one-line input field that a user can enter text into.</p>
+
+					<h4 class="sherpa">With Label</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<label>First name</label>
+							<input type="text">
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;label&gt;First Name&lt;/label&gt;
+&lt;input type="text"&gt;</pre>
+
+					<h4 class="sherpa">Without Label</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<input type="text" placeholder="First Name">
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;input type="text" placeholder="First Name"&gt;</pre>
+
+					<h3 class="sherpa">Radio Buttons</h3>
+					<p>Radio buttons let a user select ONLY ONE of a limited number of choices.</p>
+
+					<h4 class="sherpa">Stacked</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6 bottom-offset-mini">
+							<label class="radio">
+								<input type="radio" name="optionsRadio" value="Option one" checked> Option one
+							</label>
+							<label class="radio">
+								<input type="radio" name="optionsRadio" value="Option two"> Option two
+							</label>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadio" value="Option one" checked&gt; Option one
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadio" value="Option two"&gt; Option two
+&lt;/label&gt;</pre>
+
+					<h4 class="sherpa">Inline</h4>
+					<p>Add the <code>.inline</code> class to display a series of radios on one line.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da9 bottom-offset-mini">
+							<label class="radio inline">
+								<input type="radio" name="optionsRadio" value="Option one" checked>
+								Option one
+							</label>
+							<label class="radio inline">
+								<input type="radio" name="optionsRadio" value="Option two">
+								Option two
+							</label>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;label class="radio inline"&gt;
+  &lt;input type="radio" name="optionsRadio" value="Option one" checked&gt; Option one
+&lt;/label&gt;
+&lt;label class="radio inline"&gt;
+  &lt;input type="radio" name="optionsRadio" value="Option two"&gt; Option two
+&lt;/label&gt;</pre>
+					
+					<h3 class="sherpa">Checkboxes</h3>
+					<p>Checkboxes enable the user to make multiple selections.</p>
+
+					<h4 class="sherpa">Stacked</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6 bottom-offset-mini">
+							<label class="checkbox">
+								<input type="checkbox" name="optionsCheckbox" value="Option one" checked> Option one
+							</label>
+							<label class="checkbox">
+								<input type="checkbox" name="optionsCheckbox" value="Option two"> Option two
+							</label>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="optionsCheckbox" value="Option one" checked&gt; Option one
+&lt;/label&gt;
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="optionsCheckbox" value="Option two"&gt; Option two
+&lt;/label&gt;</pre>
+
+					<h4 class="sherpa">Inline</h4>
+					<p>Add the <code>.inline</code> class to display a series of checkboxes on one line.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da9 bottom-offset-mini">
+							<label class="checkbox inline">
+								<input type="checkbox" name="optionsCheckbox" value="Option one" checked>
+								Option one
+							</label>
+							<label class="checkbox inline">
+								<input type="checkbox" name="optionsCheckbox" value="Option two">
+								Option two
+							</label>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" name="optionsCheckbox" value="Option one" checked&gt; Option one
+&lt;/label&gt;
+&lt;label class="checkbox inline"&gt;
+  &lt;input type="checkbox" name="optionsCheckbox" value="Option two"&gt; Option two
+&lt;/label&gt;</pre>
+
+					<h3 class="sherpa">Select Lists</h3>
+					<p>Select Lists allow the user to select one option from a list of pre-defined options.</p>
+
+					<h4 class="sherpa">With Label</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<label>State</label>
+							<select>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+								<option>5</option>
+							</select>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;label&gt;State&lt;/label&gt;
+&lt;select&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+  &lt;option&gt;5&lt;/option&gt;
+&lt;/select&gt;</pre>
+
+					<h4 class="sherpa">Without Label</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<select>
+								<option>State</option>
+								<option>1</option>
+								<option>2</option>
+								<option>3</option>
+								<option>4</option>
+							</select>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;select&gt;
+  &lt;option&gt;State&lt;/option&gt;
+  &lt;option&gt;1&lt;/option&gt;
+  &lt;option&gt;2&lt;/option&gt;
+  &lt;option&gt;3&lt;/option&gt;
+  &lt;option&gt;4&lt;/option&gt;
+&lt;/select&gt;</pre>
+
+					<h3 class="sherpa">Search Form</h3>
+					<p>A one-line input field with an appended button. Wrap the <code>input</code> and <code>&lt;button&gt;</code> inside <code>&lt;div class="input-append"&gt;</code>.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<div class="input-append">
+								<input type="search">
+								<button type="button" class="btn btn-tertiary"><span aria-hidden="true" class="icon-small-search"></span></button> 
+							</div>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="input-append"&gt;
+  &lt;input type="search"&gt;
+  &lt;button type="button" class="btn btn-tertiary"&gt;
+  &lt;span aria-hidden="true" class="icon-small-search"&gt;&lt;/span&gt;
+  &lt;/button&gt;
+&lt;/div&gt;</pre>
+
+					<h3 class="sherpa">Prepended Input</h3>
+					<p>A one-line text field with pre-populated content before the input. Wrap the <code>&lt;span class="add-on"&gt;</code> and <code>input</code> inside <code>&lt;div class="input-prepend"&gt;</code>.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<div class="input-prepend">
+								<span class="add-on">$</span>
+								<input type="text" placeholder="Username">
+							</div>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="input-prepend"&gt;
+  &lt;span class="add-on"&gt;$&lt;/span&gt;
+  &lt;input type="text" placeholder="Username"&gt;
+&lt;/div&gt;</pre>
+
+					<h3 class="sherpa">Sizing</h3>
+					<p>Match your inputs to the grid using the grid classes <code>da-* ta-* ma-*</code>. Or use relative sizing classes like <code>.input-large</code></p>
+
+					<h4 class="sherpa">Grid Sizing</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4">
+							<input type="text" placeholder="da4">
+						</div>
+						<div class="da5-da12">
+							<input type="text" placeholder="da5-da12">
+						</div>
+						<div class="da4-da5">
+							<input type="text" placeholder="da4-da5">
+						</div>
+						<div class="da6-da12">
+							<input type="text" placeholder="da6-da12">
+						</div>
+						<div class="da4-da6">
+							<input type="text" placeholder="da4-da6">
+						</div>
+						<div class="da7-da12">
+							<input type="text" placeholder="da7-da12">
+						</div>						
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="da4"&gt;
+  &lt;input type="text" placeholder="da4"&gt;
+&lt;/div&gt;
+&lt;div class="da5-da12"&gt;
+  &lt;input type="text" placeholder="da5-da12"&gt;
+&lt;/div&gt;
+&lt;div class="da4-da5"&gt;
+  &lt;input type="text" placeholder="da4-da5"&gt;
+&lt;/div&gt;
+&lt;div class="da6-da12"&gt;
+  &lt;input type="text" placeholder="da6-da12"&gt;
+&lt;/div&gt;
+&lt;div class="da4-da6"&gt;
+  &lt;input type="text" placeholder="da4-da6"&gt;
+&lt;/div&gt;
+&lt;div class="da7-da12"&gt;
+  &lt;input type="text" placeholder="da7-da12"&gt;
+&lt;/div&gt;</pre>
+
+					<h4 class="sherpa">Relative Sizing</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da-clear">
+							<label><code>&lt;input class="input-mini"&gt;</code></label>
+							<input class="input-mini" type="text"> 
+						</div>
+						<div class="da-clear">
+							<label><code>&lt;input class="input-small"&gt;</code></label>
+							<input class="input-small" type="text">
+						</div>
+						<div class="da-clear">
+							<label><code>&lt;input class="input-medium"&gt;</code></label>
+							<input class="input-medium" type="text">
+						</div>
+						<div class="da-clear">
+							<label><code>&lt;input class="input-large"&gt;</code></label>
+							<input class="input-large" type="text">
+						</div>
+						<div class="da-clear">
+							<label><code>&lt;input class="input-xlarge"&gt;</code></label>
+							<input class="input-xlarge" type="text">
+						</div>
+						<div class="da-clear">
+							<label><code>&lt;input class="input-xxlarge"&gt;</code></label>
+							<input class="input-xxlarge" type="text">
+						</div>						
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;input class="input-mini" type="text"&gt;
+&lt;input class="input-small" type="text"&gt;
+&lt;input class="input-medium" type="text"&gt;
+&lt;input class="input-large" type="text"&gt;
+&lt;input class="input-xlarge" type="text"&gt;
+&lt;input class="input-xxlarge" type="text"&gt;</pre>
+
+					<h3 class="sherpa">Help Text</h3>
+					<p>Block and Inline support for help and info text that appears within forms.</p>
+
+					<h4 class="sherpa">Block Help</h4>
+					<p>To display Block Help Text add a <code>&lt;span class="help-block"&gt;</code> after <code>input</code>.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<input type="text" placeholder="Username">
+							<span class="help-block">This is block help text</span>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;input type="text" placeholder="Username"&gt;
+&lt;span class="help-block"&gt;This is block help text&lt;/span&gt;</pre>
+
+					<h4 class="sherpa">Inline Help</h4>
+					<p>To display Inline Help Text add a <code>&lt;span class="help-inline"&gt;</code> after <code>input</code>.</p>
+					<p class="sherpa"><span class="label label-info">Note</span> Inline Help text <strong>must</strong> use a relative sized <code>input</code> class.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da8">
+							<input class="input-large" type="text" placeholder=".input-large">
+							<span class="help-inline">
+								<span aria-hidden="true" class="icon-finance"> Inline help text</span>
+							</span>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;input class="input-large" type="text" placeholder=".input-large"&gt;
+&lt;span class="help-inline"&gt;
+  &lt;span aria-hidden="true" class="icon-finance"&gt; Inline help text&lt;/span&gt;
+&lt;/span&gt;
+</pre>
+
+					<h3 class="sherpa">Disabled</h3>
+					<p>Add the <code>disabled</code> attribute on an input, radio button or checkbox to prevent user input and trigger a disabled display.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="d4-da9 bottom-offset-mini">
+							<input type="text" placeholder="Disabled Input" disabled>
+							<label class="checkbox">
+								<input type="checkbox" name="optionsCheckbox" value="Option one" disabled> Disabled Checkbox
+							</label>
+							<label class="radio">
+								<input type="radio" name="optionsRadio" value="Option one" disabled> Disabled Radio Button
+							</label>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;input type="text" placeholder="Disabled Input" disabled&gt;
+&lt;label class="checkbox"&gt;
+  &lt;input type="checkbox" name="optionsCheckbox" value="Option one" disabled&gt; Disabled Checkbox
+&lt;/label&gt;
+&lt;label class="radio"&gt;
+  &lt;input type="radio" name="optionsRadio" value="Option one" disabled&gt; Disabled Radio Button
+&lt;/label&gt;</pre>
+
+					<h3 class="sherpa">Default Layouts</h3>
+					<p>Individual form controls receive styling, but without any required base class on the <code>&lt;form&gt;</code> and <code>&lt;fieldset&gt;</code> layouts will be affected.</p>
+					<p>The <code>&lt;form&gt;</code> tag is used to create an HTML form for user input. Any form element must be within the <code>&lt;form&gt;</code> tag.</p>
+					<p>The <code>&lt;fieldset&gt;</code> tag is used to group related elements in a form. Sherpa adds a 10px margin to the bottom of a <code>&lt;fieldset&gt;</code></p>
+
+					<h4 class="sherpa">Sign in</h4>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<form>
+							<fieldset>
+								<div class="da4-da7">
+									<input type="text" placeholder="First Name">
+								</div>
+								<div class="da4-da7">
+									<input type="text" placeholder="Last Name">
+								</div>
+								<div class="da4-da7">
+									<p><a href="#">Forgot Password</a></p>
+								</div>
+								<div class="da-all">
+									<button type="submit" class="btn btn-primary">Submit</button>
+									<button type="submit" class="btn btn-tertiary">Create an Account</button>
+								</div>
+							</fieldset>
+						</form>
+					</div>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;div class="da4-da7"&gt;
+      &lt;input type="text" placeholder="First Name"&gt;
+    &lt;/div&gt;    
+    &lt;div class="da4-da7"&gt;
+      &lt;input type="text" placeholder="Last Name"&gt;
+    &lt;/div&gt;  
+    &lt;div class="da4-da7"&gt;
+      &lt;p&gt;&lt;a href="#"&gt;Forgot Password&lt;/a&gt;&lt;/p&gt;
+    &lt;/div&gt; 
+    &lt;div class="da-all"&gt;
+      &lt;button type="submit" class="btn btn-primary"&lt;Submit&lt;/button&lt;
+      &lt;button type="submit" class="btn btn-tertiary"&lt;Create an Account&lt;/button&lt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+
+					<h4 class="sherpa">Shipping</h4>
+					<p>The example below showcases the use of the <code>.form-radio</code> and the <code>.form-checkbox</code> classes. These are in place to give the radio and checkbox sections a 20px bottom mragin.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<form>
+							<fieldset>
+								<div class="form-radio">
+									<p>Will you be exporting the products you order today outside of the United States of America?</p>
+									<label class="radio">
+										<input type="radio" name="optionRadio" value="yes" checked>
+										YES
+									</label>
+									<label class="radio">
+										<input type="radio" name="optionRadio" value="no">
+										NO
+									</label>
+								</div>
+								<div class="form-checkbox">
+									<p>Will you be exporting the products you order today outside of the United States of America?</p>
+									<label class="checkbox">
+										<input type="checkbox" name="optionCheckbox" value="yes" checked>
+										YES
+									</label>
+									<label class="checkbox">
+										<input type="checkbox" name="optionCheckbox" value="no">
+										NO
+									</label>
+								</div>
+								<div class="da4-da6">
+									<label>First name</label>
+									<input type="text">
+								</div>
+								<div class="da7-da9">
+									<label>Last name</label>
+									<input type="text">
+								</div>
+								<div class="da-all">
+									<label>Address 1</label>
+									<input type="text">
+								</div>
+								<div class="da-all">
+									<label>Address 2 (Optional)</label>
+									<input type="text">
+								</div>
+								<div class="da4-da6">
+									<label>City</label>
+									<input type="text">
+								</div>
+								<div class="da7-da9">
+									<label>State</label>
+									<select>
+									  <option>1</option>
+									  <option>2</option>
+									  <option>3</option>
+									  <option>4</option>
+									  <option>5</option>
+									</select>
+								</div>
+								<div class="da10-da11">
+									<label>Zip Code</label>
+									<input type="text">
+								</div>
+							</fieldset>
+						</form>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;form&gt;
+  &lt;fieldset&gt;
+    &lt;div class="form-radio"&gt;
+      &lt;p&gt;Will you be exporting the products you order today outside of the United States of America?&lt;p&gt;
+      &lt;label class="radio"&gt;
+      &lt;input type="radio" name="optionRadio" value="yes" checked&gt;YES
+      &lt;/label&gt;
+      &lt;label class="radio"&gt;
+      &lt;input type="radio" name="optionRadio" value="no"&gt;NO
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="form-checkbox"&gt;
+      &lt;p&gt;Will you be exporting the products you order today outside of the United States of America?&lt;p&gt;
+      &lt;label class="checkbox"&gt;
+      &lt;input type="checkbox" name="optioncheckbox" value="yes" checked&gt;YES
+      &lt;/label&gt;
+      &lt;label class="checkbox"&gt;
+      &lt;input type="checkbox" name="optioncheckbox" value="no"&gt;NO
+      &lt;/label&gt;
+    &lt;/div&gt;
+    &lt;div class="da4-da6"&gt;
+      &lt;label&gt;First Name&lt;/label&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+    &lt;div class="da7-da9"&gt;
+      &lt;label&gt;Last Name&lt;/label&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+    &lt;div class="da-all"&gt;
+      &lt;label&gt;Address 1&lt;/label&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+    &lt;div class="da-all"&gt;
+      &lt;label&gt;Address 2 (Optional)&lt;/label&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+    &lt;div class="da4-da6"&gt;
+      &lt;label&gt;City&lt;/label&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+    &lt;div class="da7-da9"&gt;
+      &lt;label&gt;State&lt;/label&gt;
+      &lt;select&gt;
+        &lt;option&gt;1&lt;/option&gt;
+        &lt;option&gt;2&lt;/option&gt;
+        &lt;option&gt;3&lt;/option&gt;
+        &lt;option&gt;4&lt;/option&gt;
+        &lt;option&gt;5&lt;/option&gt;
+      &lt;/select&gt;   
+    &lt;/div&gt;
+    &lt;div class="da10-da11"&gt;
+      &lt;label&gt;Zip Code&lt;/label&gt;
+      &lt;input type="text"&gt;
+    &lt;/div&gt;
+  &lt;/fieldset&gt;
+&lt;/form&gt;</pre>
+
+				</article>
+
+
+<!-- Buttons -->
+
+				<article id="buttons" class="bottom-offset-large">
+					<h2 class="sherpa">Buttons</h2>
+					<hr>
+
+					<h3 class="sherpa">Default</h3>
+					<p>Button styles can be applied to anything with the <code>.btn</code> class applied. However, typically you'll want to apply these to only <code>&lt;a&gt;</code> and <code>&lt;button&gt;</code> elements for the best rendering.</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>Button</th>
+								<th>class=""</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><button type="button" class="btn">Default</button></td>
+								<td><code>btn</code></td>
+								<td>Standard gray button with gradient</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-primary">Primary</button></td>
+								<td><code>btn btn-primary</code></td>
+								<td>Used for purchase path, guiding a customer toward checkout.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-secondary">Secondary</button></td>
+								<td><code>btn btn-secondary</code></td>
+								<td>Used as a call-to-action that does not take the user down the purchase path.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-tertiary">Tertiary</button></td>
+								<td><code>btn btn-tertiary</code></td>
+								<td>Used for additional button needs.</td>
+							</tr>
+							<tr>
+								<td><button type="button" class="btn btn-link">Link</button></td>
+								<td><code>btn btn-link</code></td>
+								<td>Deemphasize a button by making it look like a link while maintaining button behavior</td>
+							</tr>
+						</tbody>
+					</table>
+
+					<h4 class="sherpa">Button Sizes</h4>
+					<p>Need smaller buttons? Add <code>.btn-small</code> or <code>.btn-mini</code> for additional sizes.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary btn-small">Small Button</button>
+								<button class="btn btn-secondary btn-small">Small Button</button>
+								<button class="btn btn-tertiary btn-small">Small Button</button>
+							</p>
+						</div>
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary btn-mini">Mini Button</button>
+								<button class="btn btn-secondary btn-mini">Mini Button</button>
+								<button class="btn btn-tertiary btn-mini">Mini Button</button>
+							</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;
+  &lt;button class="btn btn-primary btn-small"&gt;Small Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary btn-small"&gt;Small Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary btn-small"&gt;Small Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;button class="btn btn-primary btn-mini"&gt;Mini Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary btn-mini"&gt;Mini Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary btn-mini"&gt;Mini Button&lt;/button&gt;
+&lt;/p&gt;</pre>
+
+					<h4 class="sherpa">Disabled Buttons</h4>
+					<p>Make buttons look unclickable by fading them back 50%</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12">
+							<p>
+								<button class="btn btn-primary disabled">Primary Button</button>
+								<button class="btn btn-secondary disabled">Secondary Button</button>
+								<button class="btn btn-tertiary disabled">Tertiary Button</button>
+							</p>
+						</div>
+						<div class="da4-da12">
+							<p>
+								<a href="#" class="btn btn-primary disabled">Primary Link</a>
+								<a href="#" class="btn btn-secondary disabled">Secondary Link</a>
+								<a href="#" class="btn btn-tertiary disabled">Tertiary Link</a>
+							</p>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;p&gt;
+  &lt;button class="btn btn-primary disabled"&gt;Primary Button&lt;/button&gt;
+  &lt;button class="btn btn-secondary disabled"&gt;Secondary Button&lt;/button&gt;
+  &lt;button class="btn btn-tertiary disabled"&gt;Tertiary Button&lt;/button&gt;
+&lt;/p&gt;
+&lt;p&gt;
+  &lt;a href="#" class="btn btn-primary disabled"&gt;Primary Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-secondary disabled"&gt;Secondary Link&lt;/a&gt;
+  &lt;a href="#" class="btn btn-tertiary disabled"&gt;Tertiary Link&lt;/a&gt;
+&lt;/p&gt;</pre>
+
+				</article>
+
+
+
+
+<!-- Colors & Borders
+================================================== -->
+				<article id="colors" class="bottom-offset-large">
+					<h2 class="sherpa ">Colors & Borders</h2>
+					<hr>
+
+<!-- Grays -->
+          <h3>Grays</h3>
+          <div class="da-clear bottom-offset-small">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block gray-dark"></div>
+	            <small>Dell Gray Dark #444444</small>
+	            <div><code>.gray-dark</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block gray-medium"></div>
+	            <small>Gray Medium #737373</small>
+	            <div><code>.gray-medium</code></div>
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block gray"></div>
+	            <small>Dell Gray #AAAAAA</small>
+	            <div><code>.gray</code></div>
+	          </div>
+	        </div>
+
+        	<div class="da-clear bottom-offset-small">
+            <div class="da4-da6 ta1-ta3 ma-all">
+              <div class="color-block gray-light"></div>
+              <small>Dell Gray Light  #EEEEEE</small>
+              <div><code>.gray-light</code></div>
+            </div>
+            <div class="da7-da9 ta4-ta6 ma-all">
+              <div class="color-block gray-very-light"></div>
+              <small>Gray Very Light #f9f9f9</small>
+              <div><code>.gray-very-light</code></div>
+            </div>
+            <div class="da10-da12 ta7-ta9 ma-all">
+              <div class="color-block white"></div>
+              <small>White #FFFFFF</small>
+              <div><code>.white</code></div>
+            </div>
+          </div> 
+
+          <div class="da-clear da-clear bottom-offset-small">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block gray-stroke"></div>
+	            <small>Gray Stroke #CCCCCC</small>
+	            <div><code>.gray-stroke</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block gray-medium-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Gray Medium text #737373</small>
+	            <div><code>.gray-medium-text</code></div>
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	          	<div class="color-block white-text gray-dark">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+              <small>White #FFFFFF</small>
+              <div><code>.white-text</code></div>
+            </div>
+	        </div>
+
+<!-- Blue -->
+					<h3>Blue</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block blue"></div>
+              <small>Dell Blue #007db8</small>
+              <div><code>.blue</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block blue-stroke"></div>
+              <small>Blue Stroke #007db8</small>
+              <div><code>.blue-stroke</code></div> 
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block blue-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Blue text #007db8</small>
+	            <div><code>.blue-text</code></div>
+	          </div>
+	        </div>
+
+
+<!-- Teal -->
+					<h3>Teal</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block teal"></div>
+              <small>Dell Teal #42AEAF</small>
+              <div><code>.teal</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block teal-stroke"></div>
+              <small>Teal Stroke #42AEAF</small>
+              <div><code>.teal-stroke</code></div>
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block teal-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Teal text #42AEAF</small>
+	            <div><code>.teal-text</code></div>
+	          </div>
+	        </div>
+
+<!-- Green -->
+					<h3>Green</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block green"></div>
+              <small>Dell Green #6EA204</small>
+              <div><code>.green</code></div> 
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block green-stroke"></div>
+              <small>Green Stroke #6EA204</small>
+              <div><code>.green-stroke</code></div> 
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block green-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Green text #6EA204</small>
+	            <div><code>.green-text</code></div>
+	          </div>
+	        </div>
+
+<!-- Yellow -->
+					<h3>Yellow</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block yellow"></div>
+              <small>Dell Yellow #F2AF00</small>
+              <div><code>.yellow</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block yellow-stroke"></div>
+              <small>Yellow Stroke #F2AF00</small>
+              <div><code>.yellow-stroke</code></div>
+	          </div>
+	        </div>
+
+<!-- Orange -->
+					<h3>Orange</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block orange"></div>
+              <small>Dell Orange #EE6411</small>
+              <div><code>.orange</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block orange-stroke"></div>
+              <small>Orange Stroke #EE6411</small>
+              <div><code>.orange-stroke</code></div>
+	          </div>
+	        </div>
+
+<!-- Red -->
+					<h3>Red</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block red"></div>
+              <small>Dell Red #D74324</small>
+              <div><code>.red</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block red-stroke"></div>
+              <small>Red Stroke #D74324</small>
+              <div><code>.red-stroke</code></div>
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block red-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Red text #D74324</small>
+	            <div><code>.red-text</code></div>
+	          </div>
+	        </div>
+
+<!-- Berry -->
+					<h3>Berry</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block berry"></div>
+              <small>Dell Berry #B7295A</small>
+              <div><code>.berry</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block berry-stroke"></div>
+              <small>Berry Stroke #B7295A</small>
+              <div><code>.berry-stroke</code></div>
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block berry-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Berry text #B7295A</small>
+	            <div><code>.berry-text</code></div>
+	          </div>
+	        </div>
+
+<!-- Purple -->
+					<h3>Purple</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block purple"></div>
+              <small>Dell Purple #6E2585</small>
+              <div><code>.purple</code></div>
+	          </div>
+	          <div class="da7-da9 ta4-ta6 ma-all">
+	            <div class="color-block purple-stroke"></div>
+              <small>Purple Stroke #6E2585</small>
+              <div><code>.purple-stroke</code></div>
+	          </div>
+	          <div class="da10-da12 ta7-ta9 ma-all">
+	            <div class="color-block purple-text">Nullam quis risus eget urna mollis ornare vel eu leo...</div>
+	            <small>Purple text #6E2585</small>
+	            <div><code>.purple-text</code></div>
+	          </div>
+	        </div>
+
+<!-- Dark red --> 
+					<h3>Dark Red</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block red-dark"></div>
+              <small>Dell Dark Red #CE1126</small>
+              <div><code>.darkred</code></div>
+	          </div>
+	        </div>
+
+<!-- Navy Blue --> 
+					<h3>Navy Blue</h3>
+          <div class="da-clear bottom-offset-large">
+	          <div class="da4-da6 ta1-ta3 ma-all">
+	            <div class="color-block navyblue"></div>
+              <small>Navy Blue #003758</small>
+              <div><code>.navyblue</code></div>
+	          </div>
+	        </div>
+				</article>
+
+
+<!-- Images -->
+				<article id="images" class="bottom-offset-large">
+					<h2 class="sherpa">Images</h2>
+					<hr>
+					<p>Add classes to an <code>img</code> element to easily style images in any project.</p>
+					<h3>Image rounded large</h3>
+					<p><img class="img-rounded-large" src="assets/img/lifestyle.jpg"></p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;img src="..." class="img-rounded-large"&gt;
+</pre>
+
+					<h3>Image rounded small</h3>
+					<p><img class="img-rounded-small" src="assets/img/lifestyle.jpg"></p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;img src="..." class="img-rounded-small"&gt;
+</pre>
+
+
+				</article>
+
+
+				<!-- Containers
+        ================================================== -->
+        <article id="containers" class="bottom-offset-large">
+          <h2 class="sherpa">Containers</h2>
+          <hr>
+          <p>Add classes to a <code>.div</code> element to easily add rounded corners in any project.</p>
+          
+          <h3 class="sherpa">Container with large rounded corners</h3>
+          <div class="blue rounded-large bottom-offset-small white-text">
+          	<h2>Headline</h2>
+          	<p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="rounded-large"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          <h3 class="sherpa">Container with small rounded corners</h3>
+          <div class="blue rounded-small bottom-offset-small white-text">
+          	<h2>Headline</h2>
+          	<p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="rounded-small"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+					<h3 class="sherpa">Container with large rounded border</h3>
+					<div class="blue-stroke rounded-large bottom-offset-small">
+          	<h2 class="blue-text">Headline</h2>
+          	<p class="gray-text">Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="blue-stroke rounded-large"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+				<h3 class="sherpa">Container with small rounded border</h3>
+					<div class="blue-stroke rounded-small bottom-offset-small">
+          	<h2 class="blue-text">Headline</h2>
+          	<p class="gray-text">Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="blue-stroke rounded-small"&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+				<h3 class="sherpa">Container with large rounded border and title</h3>
+					<div class="blue-stroke rounded-large bottom-offset-small">
+						<h4 class="container-title blue">A really long title Default</h4>
+          	<h2 class="blue-text">Headline</h2>
+          	<p class="gray-text">Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="blue-stroke rounded-large bottom-offset-small"&gt;
+  &lt;h4 class="container-title blue"&gt;Default&lt;/h4&gt;
+  ...
+&lt;/div&gt;
+</pre>
+
+          
+        </article>
+
+<!-- Icons -->
+
+				<article id="icons" class="bottom-offset-large">
+					<h2 class="sherpa">Icons</h2>
+					<hr>
+
+					<h3 class="sherpa">UI Icons</h3>
+					<p>Use the UI Icons for user interface elements. For crisper UI Icons use the following sizes: 14px, 28px and 42px.</p></p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-ui-arrowleft"></span> icon-ui-arrowleft
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-arrowright"></span> icon-ui-arrowright
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-close"></span> icon-ui-close
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-closecircle"></span> icon-ui-closecircle
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-collapse"></span> icon-ui-collapse
+								</li>
+							</ul>
+						</div>
+
+						<div class="da7-da9">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-ui-dell"></span> icon-ui-dell
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-expand"></span> icon-ui-expand
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-menucollapsed"></span> icon-ui-menucollapsed
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-plus"></span> icon-ui-plus
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-triangledown"></span> icon-ui-triangledown
+								</li>
+							</ul>
+						</div>
+
+						<div class="da10-da12">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-ui-triangleleft"></span> icon-ui-triangleleft
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-triangleright"></span> icon-ui-triangleright
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-ui-triangleup"></span> icon-ui-triangleup
+								</li>
+							</ul>
+						</div>
+
+					</div>
+
+					<h3 class="sherpa">Small Icons</h3>
+					<p>The Small Icons have less detail and are intended to be used at the default font size of 14px. Please use the Small Icons for task based communications. For crisper Small Icons use the following sizes: 14px, 28px and 42px.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-small-add"></span> icon-small-add
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-alertcomplete"></span> icon-small-alertcomplete
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-alerterror"></span> icon-small-alerterror
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-alertinfo"></span> icon-small-alertinfo
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-alertnotice"></span> icon-small-alertnotice
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-audiocard"></span> icon-small-audiocard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-audiospeaker"></span> icon-small-audiospeaker
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-award"></span> icon-small-award
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-battery"></span> icon-small-battery
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-bell"></span> icon-small-bell
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-cables"></span> icon-small-cables
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-calculator"></span> icon-small-calculator
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-calendar"></span> icon-small-calendar
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-carryingcase"></span> icon-small-carryingcase
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-cart"></span> icon-small-cart
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-chat"></span> icon-small-chat
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-checkmark"></span> icon-small-checkmark
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-chipset"></span> icon-small-chipset
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-clock"></span> icon-small-clock
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-cloud"></span> icon-small-cloud
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-color"></span> icon-small-color
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-computergeneric"></span> icon-small-computergeneric
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-contact"></span> icon-small-contact
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-copy"></span> icon-small-copy
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-data"></span> icon-small-data
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-deals"></span> icon-small-deals
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-dimensionsweight"></span> icon-small-dimensionsweight
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-display"></span> icon-small-display
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-download"></span> icon-small-download
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-drivers"></span> icon-small-drivers
+								</li>
+							</ul>
+						</div>
+
+
+
+						<div class="da7-da9">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-small-edit"></span> icon-small-edit
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-employee"></span> icon-small-employee
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-energyefficient"></span> icon-small-energyefficient
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-favorite"></span> icon-small-favorite
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-giftcard"></span> icon-small-giftcard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-harddrive"></span> icon-small-harddrive
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-help"></span> icon-small-help
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-inktoner"></span> icon-small-inktoner
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-keyboard"></span> icon-small-keyboard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-mail"></span> icon-small-mail
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-memory"></span> icon-small-memory
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-memorycardreader"></span> icon-small-memorycardreader
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-missingimage"></span> icon-small-missingimage
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-mobile"></span> icon-small-mobile
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-mouse"></span> icon-small-mouse
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-music"></span> icon-small-music
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-network"></span> icon-small-network
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-operatingsystem"></span> icon-small-operatingsystem
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-opticaldrive"></span> icon-small-opticaldrive
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-package"></span> icon-small-package
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-performance"></span> icon-small-performance
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-photos"></span> icon-small-photos
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-play"></span> icon-small-play
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-ports"></span> icon-small-ports
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-powersupply"></span> icon-small-powersupply
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-printer"></span> icon-small-printer
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-processor"></span> icon-small-processor
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-projector"></span> icon-small-projector
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-protection"></span> icon-small-protection
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-recycle"></span> icon-small-recycle
+								</li>
+							</ul>
+						</div>
+
+
+						<div class="da10-da12">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-small-save"></span> icon-small-save
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-search"></span> icon-small-search
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-secure"></span> icon-small-secure
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-securesoftware"></span> icon-small-securesoftware
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-server"></span> icon-small-server
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-serverrack"></span> icon-small-serverrack
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-share"></span> icon-small-share
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-shipping"></span> icon-small-shipping
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-shipsfast"></span> icon-small-shipsfast
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-software"></span> icon-small-software
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-speakers"></span> icon-small-speakers
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-storage"></span> icon-small-storage
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-support"></span> icon-small-support
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-surgeprotection"></span> icon-small-surgeprotection
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-tablet"></span> icon-small-tablet
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-thinclient"></span> icon-small-thinclient
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-touch"></span> icon-small-touch
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-touchpad"></span> icon-small-touchpad
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-towergeneric"></span> icon-small-towergeneric
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-trash"></span> icon-small-trash
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-useraccount"></span> icon-small-useraccount
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-video"></span> icon-small-video
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-videocard"></span> icon-small-videocard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-warranty"></span> icon-small-warranty
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-webcam"></span> icon-small-webcam
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-whitepaper"></span> icon-small-whitepaper
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-wireless"></span> icon-small-wireless
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-zoomin"></span> icon-small-zoomin
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-zoomout"></span> icon-small-zoomout
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h3 class="sherpa">Large Icons</h3>
+					<p>The Large Icons have more detail then the Small Icons. These should be used to support content only. For crisper Large Icons use the following sizes: 36px, 72px and 108px.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da6">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-large-add"></span> icon-large-add
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-alertcomplete"></span> icon-large-alertcomplete
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-alerterror"></span> icon-large-alerterror
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-alertinfo"></span> icon-large-alertinfo
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-alertnotice"></span> icon-large-alertnotice
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-audiocard"></span> icon-large-audiocard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-audiospeaker"></span> icon-large-audiospeaker
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-award"></span> icon-large-award
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-battery"></span> icon-large-battery
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-bell"></span> icon-large-bell
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-cables"></span> icon-large-cables
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-calculator"></span> icon-large-calculator
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-calendar"></span> icon-large-calendar
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-carryingcase"></span> icon-large-carryingcase
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-cart"></span> icon-large-cart
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-chat"></span> icon-large-chat
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-checkmark"></span> icon-large-checkmark
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-chipset"></span> icon-large-chipset
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-clock"></span> icon-large-clock
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-cloud"></span> icon-large-cloud
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-color"></span> icon-large-color
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-computergeneric"></span> icon-large-computergeneric
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-contact"></span> icon-large-contact
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-copy"></span> icon-large-copy
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-data"></span> icon-large-data
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-deals"></span> icon-large-deals
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-dimensionsweight"></span> icon-large-dimensionsweight
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-display"></span> icon-large-display
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-download"></span> icon-large-download
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-drivers"></span> icon-large-drivers
+								</li>
+							</ul>
+						</div>
+
+						<div class="da7-da9">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-large-edit"></span> icon-large-edit
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-employee"></span> icon-large-employee
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-energyefficient"></span> icon-large-energyefficient
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-favorite"></span> icon-large-favorite
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-giftcard"></span> icon-large-giftcard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-harddrive"></span> icon-large-harddrive
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-help"></span> icon-large-help
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-keyboard"></span> icon-large-keyboard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-mail"></span> icon-large-mail
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-memory"></span> icon-large-memory
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-memorycardreader"></span> icon-large-memorycardreader
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-missingimage"></span> icon-large-missingimage
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-mobile"></span> icon-large-mobile
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-mouse"></span> icon-large-mouse
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-music"></span> icon-large-music
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-network"></span> icon-large-network
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-operatingsystem"></span> icon-large-operatingsystem
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-opticaldrive"></span> icon-large-opticaldrive
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-package"></span> icon-large-package
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-performance"></span> icon-large-performance
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-photos"></span> icon-large-photos
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-play"></span> icon-large-play
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-ports"></span> icon-large-ports
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-powersupply"></span> icon-large-powersupply
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-printer"></span> icon-large-printer
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-processor"></span> icon-large-processor
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-projector"></span> icon-large-projector
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-protection"></span> icon-large-protection
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-recycle"></span> icon-large-recycle
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-save"></span> icon-large-save
+								</li>
+							</ul>
+						</div>
+
+						<div class="da10-da12">
+							<ul class="unstyled icons">
+								<li>
+									<span aria-hidden="true" class="icon-large-searchleft"></span> icon-large-searchleft
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-searchright"></span> icon-large-searchright
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-secure"></span> icon-large-secure
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-securesoftware"></span> icon-large-securesoftware
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-server"></span> icon-large-server
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-serverrack"></span> icon-large-serverrack
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-share"></span> icon-large-share
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-shipping"></span> icon-large-shipping
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-shipsfast"></span> icon-large-shipsfast
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-software"></span> icon-large-software
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-speakers"></span> icon-large-speakers
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-storage"></span> icon-large-storage
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-support"></span> icon-large-support
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-surgeprotection"></span> icon-large-surgeprotection
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-tablet"></span> icon-large-tablet
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-thinclient"></span> icon-large-thinclient
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-small-add"></span> icon-large-toner
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-touch"></span> icon-large-touch
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-touchpad"></span> icon-large-touchpad
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-towergeneric"></span> icon-large-towergeneric
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-trash"></span> icon-large-trash
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-useraccount"></span> icon-large-useraccount
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-video"></span> icon-large-video
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-videocard"></span> icon-large-videocard
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-warranty"></span> icon-large-warranty
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-webcam"></span> icon-large-webcam
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-whitepaper"></span> icon-large-whitepaper
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-wifi"></span> icon-large-wifi
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-zoomin"></span> icon-large-zoomin
+								</li>
+								<li>
+									<span aria-hidden="true" class="icon-large-zoomout"></span> icon-large-zoomout
+								</li>
+							</ul>
+						</div>
+					</div>
+
+					<h3 class="sherpa">How to Use</h3>
+					<p>All icons require an <code>aria-hidden="true"</code> attribute with a unique class. The <code>aria-hidden="true"</code> prevents VoiceOver on OSX. To use, place the following code just about anywhere:</p>
+					<p class="sherpa"><span class="label label-info">Note</span> Since we are treating icons as fonts, we can color and size with ease and without degradation.</p>
+					<div class="example box sherpa-gray-stroke rounded-small">
+						<div class="da4-da12 bottom-offset-mini">
+							<span aria-hidden="true" class="icon-small-computergeneric">
+						</div>
+						<div class="da4-da12">
+							<h3><span aria-hidden="true" class="icon-small-computergeneric green-text"><h3>
+						</div>
+						<div class="da4-da12">
+							<h1><span aria-hidden="true" class="icon-large-computergeneric red-text"></h1>
+						</div>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;span aria-hidden="true" class="icon-small-computergeneric&gt;
+&lt;h3&gt;&lt;span aria-hidden="true" class="icon-small-computergeneric green-text"&gt;&lt;h3&gt;
+&lt;h1&gt;&lt;span aria-hidden="true" class="icon-large-computergeneric red-text"&gt;&lt;h1&gt;</pre>
+
+				</article>
+
+
+<!-- Modifiers -->
+
+				<article id="modifiers" class="bottom-offset-large">
+					<h2 class="sherpa">Modifiers</h2>
+					<hr>
+
+					<h3 class="sherpa">Offsets</h3>
+					<p>Sherpa includes built in margin offset classes that enable you to create additional space between elements.</p>
+					<table class="table">
+						<thead>
+							<tr>
+								<th>class=""</th>
+								<th>Description</th>
+							</tr>
+						</thead>
+						<tbody>
+							<tr>
+								<td><code>bottom-offset-mini</code></td>
+								<td>Adds 10px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>bottom-offset-small</code></td>
+								<td>Adds 20px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>bottom-offset-medium</code></td>
+								<td>Adds 40px bottom margin</td>
+							</tr>
+							<tr>
+								<td><code>bottom-offset-large</code></td>
+								<td>Adds 60px bottom margin</td>
+							</tr>
+						</tbody>
+					</table>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div class="bottom-offset-mini"&gt;</pre>
+
+				</article>
+
+			</section> <!-- Close Gridset Layout -->
+
+		</div> <!-- Close Wrapper -->
+	</section> <!-- Close Main content -->
+

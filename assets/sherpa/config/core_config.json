@@ -1,0 +1,39 @@
+{
+	"default_alerts_data": {
+          "type": "attention",
+          "icon":"icon-small-alertnotice",
+          "title": "Lorem ipsum!",
+          "message": "Consectetur adipiscing elit. Etiam imperdiet scelerisque condimentum. Duis condimentum lorem at tellus aliquet a tempus lectus varius.",
+          "dismiss": true
+    },
+    "alert_icons": {
+    	"success":"icon-small-checkmark",
+    	"information":"icon-small-alertinfo",
+    	"error":"icon-small-alerterror",
+    	"default":"icon-small-alertnotice"
+    },
+    "default_dropdown_data" : {
+          "label" : "Lorem ispum",
+          "button_class":"tertiary",
+
+          "items": [
+              {
+                  "id" : "action_1",
+                  "label" : "Lorem ispum",
+                  "url" : "#action"
+              },
+              {
+                  "id" : "action_2",
+                  "label" : "Dolor sit amet",
+                  "url" : "#action"
+              },
+              {
+                  "id" : "action_3",
+                  "label" : "Adipiscing elit",
+                  "url" : "#action"
+              }
+          ]
+      }
+
+
+}
