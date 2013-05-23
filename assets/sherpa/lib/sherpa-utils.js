@@ -405,6 +405,3 @@ Sherpa.session.storeCleanUp = function(){
 }
 
 Sherpa.counter("Sherpa Utils");
-
-
-
