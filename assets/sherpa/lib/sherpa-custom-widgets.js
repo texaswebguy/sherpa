@@ -166,8 +166,19 @@ Sherpa.ready("sherpai18n", function(){
         }
     };
 
+	pager.onSourceError.add(function(event) {
+	    var page = event.page;
+		Sherpa.QA.logEntry('Missing page file: filename '+event.url+' does not exist',"missing page, pager.js:page");
+		var responseHTML = '<div class="wrapper"><div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Page</h4> <p>'+event.url+' does not exist</p></div></div>';
+		$(page.element).empty().append(responseHTML);
+	});
+	pager.onBindingError.add(function(event) {
+	    var page = event.page;
+		Sherpa.QA.logEntry('Error loading page file: '+event.url+' has a data binding error.',"data binding error, pager.js:page");
+		var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Error Loading Page</h4> <p>'+event.url+' has a data binding error.</p></div>';
+		$(page.element).empty().append(responseHTML);
+	});	
 
-	
 
 	/*bootstrap accordion behavior modification
 		Simplifies the specification of an accordion by just adding an accordion class arround a group of collapible links and panels

@@ -1,29 +1,48 @@
 <!-- TODO need to add fail safe for when data is not in context -->
 <script type="text/javascript">
 	
-	var getDropdownClasses = _.once(function(options){
+	Sherpa.componentJS.dropdown_button_js = function(data){
 
-		var classInfo = 'btn dropdown-toggle';
-		if(options.color) {
-			classInfo += ' btn-'+options.color;
-		}
-		if(options.size) {
-			classInfo += ' btn-'+options.size;
-		}
-		return classInfo;
+		if(data) {
+			data.button_class = "btn dropdown-toggle";
+			if(data.component_options) {
+				if(data.component_options.color) {
+					data.button_class += ' btn-'+data.component_options.color;
+				}
+				if(data.component_options.size) {
+					data.button_class += ' btn-'+data.component_options.size;
+				}			
+			} else {
+				data.button_class += ' btn-tertiary';
+			}
+			
+			if(!data.items){
+				data.items = viewModel.core_config.default_dropdown_data.items;
+			}
+			
+			if(!data.label){
+				data.label = viewModel.core_config.default_dropdown_data.label;
+			}
 
-	});
+		} else {
+			data = viewModel.core_config.default_dropdown_data;
+		}
+		
+		return data;
+	};
 	
 </script>
+
+<!-- ko with: Sherpa.componentJS.dropdown_button_js($data) -->
 
 <div class="btn-group">
 
 	<button 
 		data-toggle="dropdown" 
-		data-bind="attr : { class : getDropdownClasses($data.component_options) }"><span data-bind="text : label"></span> <span class="caret"></span></button>
+		data-bind="attr : { class : button_class }"><span data-bind="text : label"></span> <span class="caret"></span></button>
 
 
-	<ul class="dropdown-menu" data-bind="foreach: $data.items">
+	<ul class="dropdown-menu" data-bind="foreach: items">
 
 		<!-- ko if: $data.items -->
 		<li class="dropdown-submenu">
@@ -46,4 +65,4 @@
 
 
 </div>
-
+<!-- /ko -->

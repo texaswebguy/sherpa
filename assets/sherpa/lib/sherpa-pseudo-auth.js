@@ -4,14 +4,11 @@ Sherpa.ready("sherpaUtils", function(){
 		if( auth == true ) {
 		  viewModel.isAuthenticated = ko.observable(true);
 		  Sherpa.store("authenticated", true);
-		  $('html').addClass('authenticated');
-		  $('html').removeClass('not-authenticated');
 		} else {
 		  viewModel.isAuthenticated = ko.observable(false);
 		  Sherpa.store("authenticated", false);
-		  $('html').removeClass('authenticated');
-		  $('html').addClass('not-authenticated');
-		}	
+		}
+		Sherpa.feature("authenticated",viewModel.isAuthenticated)
 	});
 
 	//TODO Need to add sample user data here to create fake logins. The user data should be stored in the locale specific config

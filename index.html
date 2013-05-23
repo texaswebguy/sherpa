@@ -1,161 +1,97 @@
 <!DOCTYPE html>
 <html lang="en">
 
-	<head>
-		<meta charset="utf-8">
-	    <title>Sherpa UX Prototyping Framework - A responsive prototyping framework for user experience design.</title>
-	    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-	    
-	    <meta name="description" content="The Sherpa UX Prototyping Framework is a UX modeling system that enables rapid responsive HTML prototyping to create a best-in-class user experience design process.">
-	    <meta name="author" content="DELL, Inc.">
+<head>
+	<meta charset="utf-8">
+    <title>Sherpa - Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
 
+    <script type="text/javascript">
+        var SHERPA_CONFIG_OVERRIDES = {};
 
-	    <script type="text/javascript">
-            var SHERPA_CONFIG_OVERRIDES = {};
-                SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-                	{ prettify: "https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/lib/google-code-prettify/prettify.js"}
-            		];
-				SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
-					{ bootstrap: "https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/css/bootstrap.css" },
-					{ sherpa_overides: "https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/css/sherpa-override.css" },
-					{ prettify: "https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/lib/google-code-prettify/prettify.css" }
-				];
-				SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/sherpa-site-styles.css";
-				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "sherpa-site.js";
+		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/site_config.js";
+        /*
+			This is a place to overide sherpa default configurations for this html file.
+			To change the default configurations for all files in this folder please edit assets/config/global_config.js
 
-                /*
-                 To add your own JS with core js load:
+			WARNING: If you don't know what this is, don't touch it! Ask someone!
 
-                var SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-                        { myCustomJS: "assets/js/myCustomJS.js"}
-				]
+			To learn more about configuration go to http://sherpa.gsdprototypes.com/configuration.html
 
-				This is a palce to overide sherpa default configurations.
-				WARNING: If you don't know what this is, don't touch it! Ask someone!
+    	*/
+    </script>
+	<!-- Don't touch 
+	******************************************************************************** -->
+    <style>body {opacity: 0;}
+    .nav-sherpa li:first-child {display:none}
+    </style>
+	<script src="assets/sherpa/sherpa.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+</head>
 
-				SHERPA_CONFIG_OVERRIDES.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
-				// Please note that if you run local you run the risk of libraries and css being out of date.
-
-				SHERPA_CONFIG_OVERRIDES.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
-				SHERPA_CONFIG_OVERRIDES.LOCAL_PATH = "/";
-				SHERPA_CONFIG_OVERRIDES.JS_PATH = "assets/js/";
-				SHERPA_CONFIG_OVERRIDES.JS_LIB_PATH = "assets/sherpa/lib/";
-				SHERPA_CONFIG_OVERRIDES.CSS_PATH = "assets/css/";
-				SHERPA_CONFIG_OVERRIDES.CORE_PATH = "assets/sherpa/";
-				SHERPA_CONFIG_OVERRIDES.COMPONENTS_PATH = "components/";
-				SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "app.js";
-				SHERPA_CONFIG_OVERRIDES.DEFAULT_LOCALE = "en";
-				SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
-					{ myCustomLib: "assets/js/myCustomLib.js"}
-				]
-				SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = false; //enables hot key for showing grid overlay
-				SHERPA_CONFIG_OVERRIDES.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
-				SHERPA_CONFIG_OVERRIDES.ENABLE_PROTOTYPE_QA = true; //enables script to check html for sherpa errors
-
-	    	*/
-	    </script>
-
-	    <style>body {opacity: 0;}</style>
-		<!-- Framework CSS files - Don't touch
-		********************************************************************************
-		-->
-			<script src="https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/sherpa.js"></script>	
-			
-	</head>
 <body>
-	
-	<!-- Start - Masthead
-  ================================================== -->
 
-  <header class="masthead-sherpa" data-bind="component: { 
-			name :'masthead', 
-			type :'sherpa_site',
-			data : sherpa_masthead
-		}">
-  </header>
-
-  <!-- End - Masthead
-  ================================================== -->
-
-
-
-
-
-	<!-- Intro -->
-	<section class="intro" itemscope itemtype="http://schema.org/Product">
+<!-- Masthead section -->
+	<header class="masthead-sherpa">
 		<div class="wrapper">
-				<div class="da-all ta-all mb-all">
-      			<img src="assets/img/sherpa-logo-all.png" itemprop="image"/>
-      			<div class="intro-banner">
-	      			<h1 class="sherpa featured" itemprop="name">Sherpa</h1>
-	      			<h2 class="sherpa featured">A responsive prototyping framework for user experience design.</h2>
-	      			<!-- <h2 class="sherpa featured">A responsive front-end framework for web development.</h2> -->
-	      		</div>
+			<nav class="da-all ta-all ma-all">
+				<!-- Start of masthead component -->
+				<div data-bind="component: {name:'masthead', type:'sherpa-site'}">
 				</div>
-			</div>
+				<!-- End of masthead component -->
+			</nav>
 		</div>
-	</section>
+	</header>
 
-	<!-- Intro -->
-
-	<section class="overview" itemscope itemtype="http://schema.org/Product">
-		<div class="wrapper">
-			<div class="da-all ta-all mb-all white-text bottom-offset-large center-text">
-	  			<h2 class="sherpa featured">Introducing <span itemprop="name">Sherpa</span>.</h2>
-	  			<div class="da3-da10 da-clear ta-all mb-all white-text">
-	  				<h4 itemprop="description">Sherpa is an HTML prototyping framework for rapid creation of responsive, data driven and internationalized prototypes that enables best-in-class user experience design processes.</h4>
-	  			</div>
-			</div>
-
-			<div class="da1-da6 tb1-tb4 mb-all white-text bottom-offset-large">
-	  			<h3 class="featured">The Problem</h3>
-	  			<p>If you are involved in the UX design process you can relate to this story; you've spent months in meetings, countless wireframes, comps, spreadsheets full of requirements, content documents, etcetera. </p>
-	  			<p>Now the project is in the hands of developer, armed with the documentation you painstakingly took a lot of time to prepare and throw over the wall. The developer, just into the project, has to distill a diversity of "deliverables" and conclude with the same picture, form and function the UX people had in mind.</p>
-	  			<p>Much to your dismay, the developer hardly reads any of the documentation and with an onslaught of meetings, you now have to reinvest in the project time to catch "defects" which ultimately are labeled "enhancements" by dev and out your project goes into production looking very different than what was designed.</p>
-	  			<p>Sound familiar?</p>
-			</div>
-
-			<div class="da7-da12 tb5-tb8 mb-all white-text bottom-offset-large">
-	  			<h3 class="featured">The Solution</h3>
-	  			<p>Sherpa is about simplifying the typical plethora of UX deliverables into a homogeneous design ecosystem that provides a singular point of focus for business, design and development to communicate and agree.</p> 
-	  			<p>Sherpa was built and maintained by UX people collaborating with business people and developers. It is built to fill the needs of the UX, business and development communities equaly and usher a process that is focused on velocity, accuracy and reuse.</p>
-	  			<p>Sherpa is built using open source technologies such as Twitter Boostrap, Knockout.js, underscore.js, gridset and many more. It is highly configurable and open source itself so you can also customize to your needs. Sherpa continues to evolve with one goal in mind, provide the best way to prototype web designs.</p>
-		  		<p>Are you ready to get started?</p>
-			</div>
-
-
+<!-- Content section 
+<section data-bind="page: {id: 'start', title: 'Sherpa: Available templates'}">
+	<div class="wrapper">
+		<div class="da-all ta-all ma-all">
+			<h2>Sherpa Site</h2>
+			<ul>
+				<li><a href="#!/sherpa-site/">Home </a></li>
+				<li><a href="#!/sherpa-site/how-to">Get Started </a></li>
+				<li><a href="#!/sherpa-site/scaffolding">Scaffolding </a></li>
+				<li><a href="#!/sherpa-site/base-css">Basic Elements </a></li>
+				<li><a href="#!/sherpa-site/components">Components </a></li>
+				<li><a href="#!/sherpa-site/configuration">Configuration </a></li>
+				<li><a href="#!/sherpa-site/functions">Functions </a></li>
+			</ul>
 		</div>
-	</section>
-
-	<!-- Get started -->
-	<section class="get-started">
-		<div class="wrapper">
-			<div class="da-all ta-all mb-all">
-      			<h2 class="sherpa">Let's get started</h2>
-      			<h5 class="sherpa">Fastest way to get started: get the original files of all CSS, JS, images and sample.html.</h5>
-      			<a href="https://github.com/DellGDC/sherpa/archive/master.zip"><button class="sherpa-btn" type="button">Download Starter Kit</button></a>
-			</div>
-			<div class="da-all ta-all mb-all">
-				<p>&nbsp;</p>
-			</div>
-			<div class="da-all ta-all mb-all">
-      			<h2 class="sherpa">Get involved</h2>
-      			<h5 class="sherpa">We want your input and collaboration! Let's make the framework better together.</h5>
-      			<a href="http://github.com/DellGDC/sherpa/"><button class="sherpa-btn" type="button">Go to Github</button></a>
-			</div>
-		</div>
-	</section>
+	</div>
+</section>
+-->
 
 
 
+<div data-bind="page: {id: 'start', title: 'Sherpa UX Prototyping', desc: 'Sherpa', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/index.html'}"></div>
 
-	<!-- footer area -->
+<div data-bind="page: {id: 'how-to', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Get Started', desc: 'Get Started', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/how-to.html'}"></div>
+
+<div data-bind="page: {id: 'scaffolding', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Scaffolding', desc: 'Scaffolding', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/scaffolding.html'}"></div>
+
+
+<div data-bind="page: {id: 'base-css', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Basic Elements', desc: 'Basic Elements', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/base-css.html'}"></div>
+
+
+<div data-bind="page: {id: 'components', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Components', desc: 'Components', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/components.html'}"></div>
+
+
+<div data-bind="page: {id: 'configuration', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Configuration', desc: 'Configuration', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/configuration.html'}"></div>
+
+<div data-bind="page: {id: 'functions', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Functions', desc: 'Functions', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/functions.html'}"></div>
+
+&nbsp;
+<!-- footer section -->
 	<footer class="gray-light" data-bind="component: { 
 			name :'footer', 
 			type :'sherpa_site'
 		}">
 	</footer>
-
 
 </body>
 </html>

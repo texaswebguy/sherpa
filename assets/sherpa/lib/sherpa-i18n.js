@@ -23,6 +23,7 @@ Sherpa.ready("sherpaUtils", function(){
 	  locale = SHERPA.DEFAULT_LOCALE;
 	  Sherpa.store("locale", locale);
 	}
+	Sherpa.feature("locale-"+locale, true);
 
 	viewModel.locale = locale;
 	Sherpa.locale = locale;

@@ -112,9 +112,7 @@ Sherpa.formatCurrency = function(number_data){
 				}
 			}
 		} catch(err) {
-			var error_msg = 'Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}';
-			Sherpa.QA.logEntry(error_msg,"functions, format error,sherpa-utils:formatCurrency");
-			return { status: 'failed', error_msg: error_msg };
+			Sherpa.QA.logEntry('Bad formatcurrency: data-bind:="formatcurrency: {\'amount\': amount_var, \'format\' : \'decimal\'}',"functions, format error,sherpa-utils:formatCurrency");
 		}
 	} else {
 		format = 'nodecimal'
@@ -133,7 +131,7 @@ Sherpa.formatCurrency = function(number_data){
 		}
 	} catch (err) {
 		var error_msg = "Looks like you don't have currency configuration in assets/config/settings_"+viewModel.locale+".json";
-		Sherpa.QA.logEntry(error_msg,"i18n, ajax errors, sherpa-utils:formatCurrency");
+		Sherpa.QA.logEntry(error_msg, "i18n, ajax errors, sherpa-utils:formatCurrency");
 		return { status: 'failed', error_msg: error_msg };
 	}
 }
@@ -187,16 +185,7 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 		// TODO workaround to circumvent browser cache... need to look into this better
 		uuid = "#"+Sherpa.uuid();
 	}
-	/*
-	//TODO don't think we want to really allow this
-	if(component_name.match("/")){
-		//allows to pass a full deep path to a specific file inside the component folder
-		var path = component_name.split("/");
-		component_type = path[path.length-1];
-		path.pop();
-		component_name = path.join("/")
-	}
-	*/
+
 	if(component_type) {
 		filename = component_type+".html"+uuid;
 	} else {
@@ -345,6 +334,12 @@ Sherpa.request.define( "data", "ajax", {
     type: "GET"
 });
 
+
+Sherpa.request.define( "core_config", "ajax", {
+	url:"assets/sherpa/config/core_config.json",
+    dataType: "json",
+    type: "GET"
+});
 
 //Session Storage
 Sherpa.session = {};
