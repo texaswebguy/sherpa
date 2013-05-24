@@ -310,6 +310,10 @@ Sherpa.ready("dateFormat", function(){
 				//if configured, load gridset overlay
 				Sherpa.js(SHERPA.GRIDSET_OVERLAY_JS);
 			}
+			if(SHERPA.ENABLE_NOTES){
+				//if configured, load sherpa notes
+				Sherpa.js(SHERPA.NOTES_JS);
+			}
 
 
 	    	// extend viewModel with a $__page__ that points to pager.page that points to a new Page

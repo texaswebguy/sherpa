@@ -171,7 +171,29 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			} else {
 				return false;
 			}
-		}
+		},
+		"default_tabs_data" : {
+          "tab_class":"tabbable",
+          "nav_class":"nav nav-tabs",
+          "inverted" : false,
+          "items": [
+              {
+                  "id" : "section_1",
+                  "label" : "Lorem ispum",
+                  "url" : "#section_1"
+              },
+              {
+                  "id" : "section_2",
+                  "label" : "Dolor sit amet",
+                  "url" : "#section_2"
+              },
+              {
+                  "id" : "section_3",
+                  "label" : "Adipiscing elit",
+                  "url" : "#section_3"
+              }
+          ]
+      }
 	    
 	};
 
@@ -231,13 +253,12 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 
-
-
-	$('.tab_color_switcher').change(function(event){
-		event.preventDefault();
-		$('#switch_my_color').attr('class',$(event.currentTarget).val());
+	Eve.scope("#color_in_tabs", function(){
+		this.listen(".tab_color_switcher", "change", function(event){
+			event.preventDefault();
+			$('#switch_my_color').attr('class',$(event.currentTarget).val());
+		});
 	});
-	
 
 
     // tooltip demo

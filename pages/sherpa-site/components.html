@@ -362,235 +362,88 @@ label : Sherpa.msg('textkey_label'),
 					<p>Tabs is a prevalent navigation system throughout the web.  However, when we say "tabs" we mean any list of buttons, tabs, links, etc. that serve a purpose of switching panels or sub sections of content without leaving the page, not just something that looks like tabs.</p>
 
 					<h3 class="sherpa" id="#tabs-standard">Standard Tabs</h3>
-					<h4 class="sherpa">Example</h4>
+					<h4 class="sherpa">Example (minimal with default data)</h4>
           <div class="sherpa-docs-example example">
-            <div class="tabbable">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#standard-tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#standard-tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#standard-tab3" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="standard-tab1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="standard-tab2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="standard-tab3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
-          </div>
+
+			<div data-bind="component: { name :'tabs'}"></div>
+
 
 <p>&nbsp;</p>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable"&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    &lt;li class="active"&gt;&lt;a href="#tab1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#tab2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="tab1"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="tab2"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;div data-bind="component: { name :'tabs'}">&lt;/div>
 </pre>
 <p>&nbsp;</p>
 
 		<h4 class="sherpa">Tabs below</h4>
           <div class="sherpa-docs-example">
-            <div class="tabbable tabs-below">
-              <div class="tab-content">
-                <div class="tab-pane active" id="down-tab1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="down-tab2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="down-tab3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#down-tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#down-tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#down-tab3" data-toggle="tab">Section 3</a></li>
-              </ul>
-            </div> <!-- /tabbable -->
-          </div>
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+					type : 'below'
+	        	}
+	        }"></div>
 
 <p>&nbsp;</p>
 
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable tabs-below"&gt;
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="tab1"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="tab2"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    ...
-  &lt;/ul&gt;
-&lt;/div&gt;
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+		type : 'below'
+	}
+}">&lt;/div>
 </pre>
 <p>&nbsp;</p>
 
 <h4 class="sherpa">Tabs left</h4>
           <div class="sherpa-docs-example">
-            <div class="tabbable tabs-left">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#left-tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#left-tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#left-tab3" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="left-tab1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="left-tab2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="left-tab3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-
-            </div> <!-- /tabbable -->
-          </div>
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+					type : 'left'
+	        	}
+	        }"></div>
 
 <p>&nbsp;</p>
+
+
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable tabs-left"&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    ...
-  &lt;/ul&gt;  
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="tab1"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="tab2"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-
-&lt;/div&gt;
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+		type : 'below'
+	}
+}">&lt;/div>
 </pre>
-
 <p>&nbsp;</p>
+
 
 <h4 class="sherpa">Tabs right</h4>
-
           <div class="sherpa-docs-example">
-            <div class="tabbable tabs-right">
-              <div class="tab-content">
-                <div class="tab-pane active" id="right-tab1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="right-tab2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="right-tab3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#right-tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#right-tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#right-tab3" data-toggle="tab">Section 3</a></li>
-              </ul>
-            </div> <!-- /tabbable -->
-          </div>
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+					type : 'right'
+	        	}
+	        }"></div>
 
 <p>&nbsp;</p>
+
+
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable tabs-right"&gt;
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="tab1"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="tab2"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-  &lt;ul class="nav nav-tabs"&gt;
-    ...
-  &lt;/ul&gt;
-&lt;/div&gt;
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+		type : 'right'
+	}
+}">&lt;/div>
 </pre>
+<p>&nbsp;</p>
 
 
           <h4>Color in tabs</h4>
-          <p>You can color or stroke any tabs by addind the color to the tabbable class. For example: 
+          <p id="color_in_tabs">You can color or stroke any tabs by addind the color to the tabbable class. For example: 
           	<select class="input-medium tab_color_switcher">
           		<option value="tabbable gray-dark">gray-dark</option>
           		<option value="tabbable gray-medium">gray-medium</option>
@@ -610,47 +463,25 @@ label : Sherpa.msg('textkey_label'),
 
           </p>
 
-          <div class="sherpa-docs-example">
-            <div id="switch_my_color" class="tabbable blue">
-              <ul class="nav nav-tabs">
-                <li class="active"><a href="#colored-tab1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#colored-tab2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#colored-tab3" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="colored-tab1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="colored-tab2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="colored-tab3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
-          </div>
+        <div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+	            	color: 'blue',
+	            	id : 'switch_my_color'
+	        	}
+	        }"></div>
+		</div>
 
 <p>&nbsp;</p>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable blue"&gt;
-  ...
-&lt;/div&gt;
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	color: 'blue',
+    	id : 'switch_my_color'
+	}
+}">&lt;/div&gt;
 </pre>
 
 
@@ -659,117 +490,96 @@ label : Sherpa.msg('textkey_label'),
 					<h3 class="sherpa" id="#tabs-standard">Standard Pills</h3>
 					<h4 class="sherpa">Example</h4>
           <div class="sherpa-docs-example">
-            <div class="tabbable">
-              <ul class="nav nav-pills">
-                <li class="active"><a href="#standard-pills1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#standard-pills2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#standard-pills3" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="standard-pills1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="standard-pills2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="standard-pills3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+	            	type: 'pills'
+	        	}
+	        }"></div>
           </div>
 
 <p>&nbsp;</p>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable"&gt;
-  &lt;ul class="nav nav-pills"&gt;
-    &lt;li class="active"&gt;&lt;a href="#pills1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#pills2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="pills1"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="pills2"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	type: 'pills'
+	}
+}">&lt;/div&gt;
 </pre>
 <p>&nbsp;</p>
 
 					<h3 class="sherpa" id="#tabs-links">Links</h3>
 
 					<h4 class="sherpa">Example</h4>
-          <div class="sherpa-docs-example">
-            <div class="tabbable">
-              <ul class="nav nav-links">
-                <li class="active"><a href="#standard-links1" data-toggle="tab">Section 1</a></li>
-                <li><a href="#standard-links2" data-toggle="tab">Section 2</a></li>
-                <li><a href="#standard-links3" data-toggle="tab">Section 3</a></li>
-              </ul>
-              <div class="tab-content">
-                <div class="tab-pane active" id="standard-links1">
-                  <p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
-                </div>
-                <div class="tab-pane" id="standard-links2">
-                  <p>Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. </p>
-                </div>
-                <div class="tab-pane" id="standard-links3">
-                  <p>Duis aute irure dolor in reprehenderit in voluptate velit esse
-                  cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
-                  proident, sunt in culpa qui officia deserunt mollit anim id est laborum. Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-                  tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
-                  quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-                  consequat. </p>
-                </div>
-              </div>
-            </div> <!-- /tabbable -->
+<div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+	            	type: 'links'
+	        	}
+	        }"></div>
           </div>
 
 <p>&nbsp;</p>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
-&lt;div class="tabbable"&gt;
-  &lt;ul class="nav nav-pills"&gt;
-    &lt;li class="active"&gt;&lt;a href="#pills1" data-toggle="tab"&gt;Section 1&lt;/a&gt;&lt;/li&gt;
-    &lt;li&gt;&lt;a href="#pills2" data-toggle="tab"&gt;Section 2&lt;/a&gt;&lt;/li&gt;
-  &lt;/ul&gt;
-  &lt;div class="tab-content"&gt;
-    &lt;div class="tab-pane active" id="pills1"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-    &lt;div class="tab-pane" id="pills2"&gt;
-      &lt;p&gt;...&lt;/p&gt;
-    &lt;/div&gt;
-  &lt;/div&gt;
-&lt;/div&gt;
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	type: 'links'
+	}
+}">&lt;/div&gt;
 </pre>
 <p>&nbsp;</p>
+
+			<h3 class="sherpa" id="#tabs-data">Beyond default data</h3>
+          	<p>All the examples above show the default sample data with three tabs. But what if you needed more tabs? What if you want actual content inside the tabs, etc. Follow instructions below to customize your tabs:</p>
+
+			<h4 class="sherpa" id="#tabs-data">Specifying number of tabs (quantity)</h4>
+
+		<div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+			    	color: 'blue',
+					quantity: 4
+			    }
+	        }"></div>
+         </div>
+<p>&nbsp;</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	color: 'blue',
+	quantity: 4
+}
+}">&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+
+			<h4 class="sherpa" id="#tabs-data">Loading tabs with content (tab labels)</h4>
+
+		<div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs'
+	        }"></div>
+         </div>
+<p>&nbsp;</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	color: 'blue',
+	quantity: 4
+}
+}">&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+
+
 
 			</article>
 

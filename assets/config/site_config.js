@@ -41,7 +41,7 @@ SHERPA.DEFAULT_LOCALE = "en";
 SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
 SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
-SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
+SHERPA.ENABLE_NOTES = true; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
 // CSS Configuration
@@ -135,4 +135,5 @@ if(SHERPA.RUN_SHERPA_PROD){
 }
 
 SHERPA.GRIDSET_OVERLAY_JS = { gridsetOverlay: SHERPA.JS_LIB_PATH+"gridset-overlay.js"};
+SHERPA.NOTES_JS = { sherpaNotes: SHERPA.JS_LIB_PATH+"sherpa-notes.js"};
 

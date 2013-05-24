@@ -1,30 +1,116 @@
 <!-- TODO need to add fail safe for when data is not in context -->
 <script type="text/javascript">
 	
-	var getTabClasses = _.once(function(options){
 
-		var classInfo = 'btn dropdown-toggle';
-		if(options.color) {
-			classInfo += ' btn-'+options.color;
-		}
-		if(options.size) {
-			classInfo += ' btn-'+options.size;
-		}
-		return classInfo;
+  Sherpa.componentJS.tabs_tabs_js = function(component_options){
+    //TODO put default options in config
+    var data = {};
 
-	});
+    var default_data = _.clone(viewModel.core_config.default_tabs_data);
+    data.inverted = default_data.inverted;
+    var load_sample_items = function(number){
+    	console.log("constructing data.items", data)
+    	data.items = [];
+    	_.each(_.range(number), function(){
+    		var item = {};
+    		item.content = "<p>"+_.str.prune(viewModel.core_config.lorem_ispum[_.random(viewModel.core_config.lorem_ispum.length-1)],500,"")+"</p>";
+    		item.label = item.content.match(/(\w+)\s+(\w+)\s*/)[0]; //first two words of random text
+    		item.id = Sherpa.uuid();
+    		item.url = "#"+item.id;
+    		item.pane_class = "tab-pane";
+    		item.li_class = "";
+    		data.items.push(item);
+    	});
+    }
+    if(!component_options) {
+    	data = default_data;
+    	load_sample_items(3);
+    	Sherpa.QA.logEntry("Tabs component rendered with default options and data. Please make sure to put real content in your tabs.","content, tabs")
+    } else {
+    	
+    	data.tab_class = default_data.tab_class;
+    	data.nav_class = default_data.nav_class;
+    	/*
+		options: {
+			type: below | left | right | pills | links
+			color:
+		}
+    	*/
+		if(_.isNumber(component_options.quantity)) {
+			load_sample_items(parseInt(component_options.quantity));
+		} else {
+			load_sample_items(3);
+		}
+		if(component_options.data) {
+	    	//TODO
+	    }
+		if(component_options.type){
+			switch(component_options.type) {
+				case "pills":
+					data.nav_class = "nav nav-"+component_options.type;
+				break;
+				case "links":
+					data.nav_class = "nav nav-"+component_options.type;
+				break;
+				default:
+					data.tab_class += " tabs-"+component_options.type;
+	    			if(component_options.color) {
+		    			data.tab_class += " "+component_options.color;
+		    		}
+		    		if(component_options.type == 'below' || component_options.type == 'right') {
+		    			data.inverted = true;
+		    		}
+	     	}
+			
+		} else {
+			if(component_options.color) {
+    			data.tab_class += " "+component_options.color;
+    		}
+		}
+		if(component_options.id) {
+	    	data.id = component_options.id;
+	    } else {
+	    	data.id = Sherpa.uuid();
+	    }
+
+
+    console.log("no need for constructing data.items", data)	
+    	//TODO need to fetch content from url via pager.js
+	    
+    }
+    console.log("items",data.items)
+    data.items[0].pane_class = "tab-pane active";
+    data.items[0].li_class = "active";
+    return data;
+
+  };
+
+
 	
 </script>
+<!-- ko with: Sherpa.componentJS.tabs_tabs_js(component_options) -->
 
-<div class="tabbable">
-  <ul class="nav nav-tabs" data-bind="foreach: $data.items">
-    <li class=""><a data-toggle="tab" data-bind="text: label, attr: {'href':'#'+id}"></a></li>
+<div data-bind="attr: { class : tab_class, id : id }">
+
+<!-- ko if:inverted == false -->
+  <ul data-bind="attr: { class : nav_class}, foreach: items">
+    <li data-bind="attr: { class : li_class }"><a data-toggle="tab" data-bind="text: label, attr: {'href':url}"></a></li>
   </ul>
-  <div class="tab-content" data-bind="foreach: $data.items">
-    <div class="tab-pane" data-bind="attr: { 'id' : id }">
-    	<p data-bind="text: 'I am '+label"></p>
+<!-- /ko -->
+
+  <div class="tab-content" data-bind="foreach: items">
+    <div data-bind="attr: { 'id' : id, class : pane_class }, html: content">
     </div>
-
-
   </div>
+
+ <!-- ko if:inverted == true -->
+  <ul data-bind="attr: { class : nav_class}, foreach: items">
+    <li data-bind="attr: { class : li_class }"><a data-toggle="tab" data-bind="text: label, attr: {'href':url}"></a></li>
+  </ul>
+<!-- /ko -->
+
+
+
 </div>
+
+<!-- /ko -->

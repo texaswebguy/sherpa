@@ -84,8 +84,20 @@ a:hover, a:active {
 
 .example .nav > li > a:hover {
   text-decoration: none;
-  background-color: blue;
+  background-color: #eeeeee;
+  -webkit-border-radius: 3px;
+  border-radius: 3px;
 }
+.example .nav-pills > li.active > a:hover {
+  text-decoration: none;
+  background-color: #0085c3;
+}
+.example .nav-links > li.active > a:hover {
+  text-decoration: none;
+  background-color: transparent;
+  cursor:default;
+}
+
 
 .example .nav-tabs > li > a:hover {
   background:#fff;
