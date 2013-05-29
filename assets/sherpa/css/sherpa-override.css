@@ -1456,9 +1456,9 @@ legend + .control-group {
   *border: 0;
   border-color: none;
   border-bottom-color: none;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
   filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#edf1f3', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
   *zoom: 1;
@@ -1605,16 +1605,16 @@ legend + .control-group {
 
 
 .btn-tertiary {
-  color: #0085c3;
+  color: #0d72b2;
   text-shadow: none;
-  background-color: #edf1f3;
-  *background-color: #edf1f3;
-  background-image: -moz-linear-gradient(top, #fefefe, #edf1f3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#edf1f3));
-  background-image: -webkit-linear-gradient(top, #fefefe, #edf1f3);
-  background-image: -o-linear-gradient(top, #fefefe, #edf1f3);
-  background-image: linear-gradient(to bottom, #fefefe, #edf1f3);
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#edf1f3', GradientType=0);
+  background-color: #DADADA;
+  *background-color: #DADADA;
+  background-image: -moz-linear-gradient(top, #E7ECEE, #DADADA);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E7ECEE), to(#DADADA));
+  background-image: -webkit-linear-gradient(top, #E7ECEE, #DADADA);
+  background-image: -o-linear-gradient(top, #E7ECEE, #DADADA);
+  background-image: linear-gradient(to bottom, #E7ECEE, #DADADA);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E7ECEE', endColorstr='#DADADA', GradientType=0);
   filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
 }
 
@@ -1623,14 +1623,44 @@ legend + .control-group {
 .btn-tertiary.active,
 .btn-tertiary.disabled,
 .btn-tertiary[disabled] {
-  color: #0085c3;
-  background-color: #edf1f3;
-  *background-color: #edf1f3;
+  color: #0d72b2;
+  background-color: #DADADA;
+  *background-color: #DADADA;
 }
 
 .btn-tertiary:active,
 .btn-tertiary.active {
-  background-color: #edf1f3 \9;
+  background-color: #DADADA \9;
+}
+
+
+.btn-secondarypurchase {
+  color: #47951E;
+  text-shadow: none;
+  background-color: #DADADA;
+  *background-color: #DADADA;
+  background-image: -moz-linear-gradient(top, #E7ECEE, #DADADA);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#E7ECEE), to(#DADADA));
+  background-image: -webkit-linear-gradient(top, #E7ECEE, #DADADA);
+  background-image: -o-linear-gradient(top, #E7ECEE, #DADADA);
+  background-image: linear-gradient(to bottom, #E7ECEE, #DADADA);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#E7ECEE', endColorstr='#DADADA', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+}
+
+.btn-secondarypurchase:hover,
+.btn-secondarypurchase:active,
+.btn-secondarypurchase.active,
+.btn-secondarypurchase.disabled,
+.btn-secondarypurchase[disabled] {
+  color: #47951E;
+  background-color: #DADADA;
+  *background-color: #DADADA;
+}
+
+.btn-secondarypurchase:active,
+.btn-secondarypurchase.active {
+  background-color: #DADADA \9;
 }
 
 
@@ -1673,18 +1703,18 @@ legend + .control-group {
 .btn-small {
   padding: 4px 8px;
   font-size: 12px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
 
 .btn-mini {
   padding: 1px 6px 0px 6px;
   font-size: 11px;
-  -webkit-border-radius: 3px;
-     -moz-border-radius: 3px;
-          border-radius: 3px;
+  -webkit-border-radius: 2px;
+     -moz-border-radius: 2px;
+          border-radius: 2px;
 }
 
 
