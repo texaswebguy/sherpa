@@ -2,4 +2,4 @@
 
 /* mobile_a grid spans ----- */
 
-.ma1-ma2 .ma2{width:47.82537407%;}.ma1-ma2{width:65.42770523%;}.ma2-ma3{width:65.70708955%;}.ma-all{width:100%;margin-left:0;clear:left;}
+.ma1-ma2,.ma2-ma3{width:65.625%;}.ma-all{width:100%;margin-left:0;margin-right:0;clear:left;}
