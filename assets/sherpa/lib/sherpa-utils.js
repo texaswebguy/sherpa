@@ -4,6 +4,7 @@ Sherpa.counter("Sherpa Utils");
 "use strict";
 
 Sherpa.componentJS = {};
+Sherpa.includesJS = {};
 
 Sherpa.uuid = function() {
 	function s4() {
@@ -223,6 +224,51 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 			$(element).html(responseHTML);
 		}
 	});
+}
+
+Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+
+	var filename,includeID,html, includeJS, values = valueAccessor();
+console.log("values",values)
+	if(_.isObject(values)){
+		filename = values.sourceUrl;
+	} else {
+		if(values) {
+			filename = values;
+		}
+	}
+	if(filename) {
+		includeID = _.str.underscored(filename.replace(/\/|.html/g," "));
+		Sherpa.request({
+			resourceId: "getComponentHTML", 
+			data: {filename: filename}, 
+			success: function(responseHTML, status){
+				//console.log(status);
+				if(!_.isUndefined(Sherpa.includesJS[includeID])) {
+					//Don't inject a script that already exists
+					responseHTML = responseHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,"");
+					//$(responseHTML).find('#'+componentJS).remove();
+					$(element).html(responseHTML);
+				} else {
+					//set it right away because ajax takes its time
+					Sherpa.includesJS[includeID] = true;
+					$(element).html(responseHTML);
+				}
+
+				ko.applyBindingsToDescendants(bindingContext, element);
+			},
+			error: function( data, status ) {
+				//no module exists
+				filename = filename.split('#')[0];
+				Sherpa.QA.logEntry('Missing include: filename '+filename+' does not exist',"missing include, sherpa-utils:insertInclude");
+				var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Include</h4> <p>'+filename+' does not exist</p></div>';
+				$(element).html(responseHTML);
+			}
+		});
+	} else {
+		console.error("Need to provide a source url (sourceUrl) for the include")
+	}
 }
 
 Sherpa.equalizeHeight = function(selector, add_px) {

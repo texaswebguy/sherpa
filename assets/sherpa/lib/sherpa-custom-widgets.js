@@ -127,9 +127,6 @@ Sherpa.ready("sherpai18n", function(){
 	};
 	ko.bindingHandlers['component'] = {
 	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
-
-
-	    	// if the 
 			if(Sherpa.check_condition(allBindingsAccessor())) {
 
 		    	var component = valueAccessor();
@@ -155,7 +152,17 @@ Sherpa.ready("sherpai18n", function(){
 		    }
 	    }
 	};
-
+	ko.bindingHandlers['include'] = {
+	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+			if(Sherpa.check_condition(allBindingsAccessor())) {
+		    	Sherpa.insertInclude(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext);
+		    } else {
+		    	$(element).remove();
+		    	//if the condition is false then remove object from DOM
+		    	//TODO... the condition should be based on an observable which would automatically remove element when set to false
+		    }
+	    }
+	};
 	// For documentation of code examples
 	ko.bindingHandlers['prettyprint'] = {
         init:function(element) {

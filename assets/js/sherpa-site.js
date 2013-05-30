@@ -179,21 +179,100 @@ Sherpa.ready("sherpaGlobalEvents", function(){
           "items": [
               {
                   "id" : "section_1",
-                  "label" : "Lorem ispum",
+                  "label" : "Section 1",
                   "url" : "#section_1"
               },
               {
                   "id" : "section_2",
-                  "label" : "Dolor sit amet",
+                  "label" : "Section 2",
                   "url" : "#section_2"
               },
               {
                   "id" : "section_3",
-                  "label" : "Adipiscing elit",
+                  "label" : "Section 3",
                   "url" : "#section_3"
               }
           ]
-      }
+    	},
+    	"components_aside": {
+		    "id": "",
+		    "type": "list",
+		    "items": [
+		        {
+		            "label": "Overview",
+		            "label_textkey": "",
+		            "id": "overview",
+		            "sourceUrl": "pages/sherpa-site/includes/overview.html"
+		        },
+		        {
+		            "label": "Dropdowns",
+		            "label_textkey": "",
+		            "id": "dropdowns",
+		            "sourceUrl": "pages/sherpa-site/includes/dropdowns.html"
+		        },
+		        {
+		            "label": "Tabs",
+		            "label_textkey": "",
+		            "id": "tabs",
+		            "sourceUrl": "pages/sherpa-site/includes/tabs.html"
+		        },
+		        {
+		            "label": "Aside",
+		            "label_textkey": "",
+		            "id": "aside",
+		            "sourceUrl": "pages/sherpa-site/includes/aside.html"
+		        },
+		        {
+		            "label": "Breadcrumbs",
+		            "label_textkey": "",
+		            "id": "breadcrumbs",
+		            "sourceUrl": "pages/sherpa-site/includes/breadcrumbs.html"
+		        },
+		        {
+		            "label": "Pagination",
+		            "label_textkey": "",
+		            "id": "pagination",
+		            "sourceUrl": "pages/sherpa-site/includes/pagination.html"
+		        },
+		        {
+		            "label": "Labels and badges",
+		            "label_textkey": "",
+		            "id": "labels-badges",
+		            "sourceUrl": "pages/sherpa-site/includes/labels.html"
+		        },
+		        {
+		            "label": "Alerts",
+		            "label_textkey": "",
+		            "id": "alerts",
+		            "sourceUrl": "pages/sherpa-site/includes/alerts.html"
+		        },
+		        {
+		            "label": "Tooltips",
+		            "label_textkey": "",
+		            "id": "tooltips",
+		            "sourceUrl": "pages/sherpa-site/includes/tooltips.html"
+		        },
+		        {
+		            "label": "Popovers",
+		            "label_textkey": "",
+		            "id": "popovers",
+		            "sourceUrl": "pages/sherpa-site/includes/popovers.html"
+		        },
+		        {
+		            "label": "Modals",
+		            "label_textkey": "",
+		            "id": "modals",
+		            "sourceUrl": "pages/sherpa-site/includes/modals.html"
+		        },
+		        {
+		            "label": "Collapse and expand",
+		            "label_textkey": "",
+		            "id": "collapse",
+		            "sourceUrl": "pages/sherpa-site/includes/collapse.html"
+		        }
+
+		    ]
+		}
 	    
 	};
 
@@ -261,34 +340,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 
-    // tooltip demo
-    $('#tooltips').tooltip({
-      selector: "a[rel=tooltip]"
-    })
-    $('a[data-toggle=tooltip]').tooltip();
 
-    $('.tooltip-test').tooltip()
-    $('.popover-test').popover()
-
-    // popover demo
-    $("a[rel=popover]")
-      .popover()
-      .click(function(e) {
-        e.preventDefault()
-      })
-
-    $('.showDefaultAside').click(function(event){
-		event.preventDefault();
-		$(this).hide();
-		$('.hideDefaultAside').show();
-		$('.aside').addClass('sherpa-docs-example');
-	});
-    $('.hideDefaultAside').click(function(event){
-		event.preventDefault();
-		$(this).hide();
-		$('.showDefaultAside').show();
-		$('.aside').removeClass('sherpa-docs-example');
-	});
 
 
 	/*********************************************************************************

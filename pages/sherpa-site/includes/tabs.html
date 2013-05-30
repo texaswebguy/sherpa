@@ -1,0 +1,227 @@
+					<h2 class="sherpa">Tabs</h2>
+					<hr>
+
+					<h3 class="sherpa">Overview</h3>
+					<p>Tabs is a prevalent navigation system throughout the web.  However, when we say "tabs" we mean any list of buttons, tabs, links, etc. that serve a purpose of switching panels or sub sections of content without leaving the page, not just something that looks like tabs.</p>
+
+					<h3 class="sherpa" id="#tabs-standard">Standard Tabs</h3>
+					<h4 class="sherpa">Example (minimal with default data)</h4>
+          <div class="sherpa-docs-example example">
+
+			<div data-bind="component: { name :'tabs'}"></div>
+
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { name :'tabs'}">&lt;/div>
+</pre>
+<p>&nbsp;</p>
+
+		<h4 class="sherpa">Tabs below</h4>
+          <div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+					type : 'below'
+	        	}
+	        }"></div>
+
+<p>&nbsp;</p>
+
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+		type : 'below'
+	}
+}">&lt;/div>
+</pre>
+<p>&nbsp;</p>
+
+<h4 class="sherpa">Tabs left</h4>
+          <div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+					type : 'left'
+	        	}
+	        }"></div>
+
+<p>&nbsp;</p>
+
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+		type : 'below'
+	}
+}">&lt;/div>
+</pre>
+<p>&nbsp;</p>
+
+
+<h4 class="sherpa">Tabs right</h4>
+          <div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+					type : 'right'
+	        	}
+	        }"></div>
+
+<p>&nbsp;</p>
+
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+		type : 'right'
+	}
+}">&lt;/div>
+</pre>
+<p>&nbsp;</p>
+
+
+          <h4>Color in tabs</h4>
+          <p id="color_in_tabs">You can color or stroke any tabs by addind the color to the tabbable class. For example: 
+          	<select class="input-medium tab_color_switcher">
+          		<option value="tabbable gray-dark">gray-dark</option>
+          		<option value="tabbable gray-medium">gray-medium</option>
+          		<option value="tabbable gray">gray</option>
+          		<option value="tabbable blue" selected>blue</option>
+          		<option value="tabbable teal">teal</option>
+          		<option value="tabbable green">green</option>
+          		<option value="tabbable yellow">yellow</option>
+          		<option value="tabbable orange">orange</option>
+          		<option value="tabbable red">red</option>
+          		<option value="tabbable berry">berry</option>
+          		<option value="tabbable purple">purple</option>
+          		<option value="tabbable darkred">darkred</option>
+          		<option value="tabbable navyblue">navyblue</option>
+          	</select>
+
+
+          </p>
+
+        <div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+	            	color: 'blue',
+	            	id : 'switch_my_color'
+	        	}
+	        }"></div>
+		</div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	color: 'blue',
+    	id : 'switch_my_color'
+	}
+}">&lt;/div&gt;
+</pre>
+
+
+
+
+					<h3 class="sherpa" id="#tabs-standard">Standard Pills</h3>
+					<h4 class="sherpa">Example</h4>
+          <div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+	            	type: 'pills'
+	        	}
+	        }"></div>
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	type: 'pills'
+	}
+}">&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+
+					<h3 class="sherpa" id="#tabs-links">Links</h3>
+
+					<h4 class="sherpa">Example</h4>
+<div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+	            	type: 'links'
+	        	}
+	        }"></div>
+          </div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	type: 'links'
+	}
+}">&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+
+			<h3 class="sherpa" id="#tabs-data">Beyond default data</h3>
+          	<p>All the examples above show the default sample data with three tabs. But what if you needed more tabs? What if you want actual content inside the tabs, etc. Follow instructions below to customize your tabs:</p>
+
+			<h4 class="sherpa" id="#tabs-data">Specifying number of tabs (quantity)</h4>
+
+		<div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options : {
+			    	color: 'blue',
+					quantity: 4
+			    }
+	        }"></div>
+         </div>
+<p>&nbsp;</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	color: 'blue',
+	quantity: 4
+}
+}">&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+
+			<h4 class="sherpa" id="#tabs-data">Loading tabs with content (tab labels)</h4>
+
+		<div class="sherpa-docs-example">
+            <div data-bind="component: { 
+	            name :'tabs',
+	            options: {
+					data: viewModel.core_config.default_tabs_data
+	        	}
+	        }"></div>
+         </div>
+<p>&nbsp;</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { 
+    name :'tabs',
+    options : {
+    	color: 'blue',
+	quantity: 4
+}
+}">&lt;/div&gt;
+</pre>
+<p>&nbsp;</p>
+

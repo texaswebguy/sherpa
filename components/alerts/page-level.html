@@ -23,52 +23,50 @@
 
     $('#page-level-alert').hide();
     //Sherpa scope allows a DOM related event function on something that does not exist yet
-    Sherpa.scope('#page-level-alert', function(){
-      this.listen('[data-dismiss="alert"]', 'click', function(event){
+    Sherpa.scope('*', function() {
+      this.listen('#page-level-alert [data-dismiss="alert"]', 'click', function(event){
         event.preventDefault();
         event.stopPropagation();
         //overide bootstrap's dismiss action which destroys the element
         $('#page-level-alert').fadeOut();
-      })
-    });
-
-  $('[data-trigger=page-level-alert]').click(function(event){
-    event.preventDefault();
-    var alert_data = {};
-    var attributes = $(event.currentTarget)[0].attributes;
-    if(attributes["data-alert_data"]) {
-      alert_data = attributes["data-alert_data"].value;
-    } else {
-      alert_data = _.clone(viewModel.core_config.default_alerts_data);
-      if(attributes["data-title"]){
-        alert_data.title = attributes["data-title"].value;
-      }
-      if(attributes["data-message"]){
-        alert_data.message = attributes["data-message"].value;
-      }
-      if(attributes["data-type"]){
-        alert_data.type = attributes["data-type"].value;
-        switch(alert_data.type) {
-          case "success":
-            alert_data.icon = viewModel.core_config.alert_icons.success;        
-            break;
-          case "information":
-            alert_data.icon = viewModel.core_config.alert_icons.information;        
-            break;
-          case "error":
-            alert_data.icon = viewModel.core_config.alert_icons.error;        
-            break;
-          default:
-            alert_data.icon = viewModel.core_config.alert_icons.default;        
+      })      
+      this.listen('[data-trigger=page-level-alert]', 'click', function(event){
+        event.preventDefault();
+        var alert_data = {};
+        var attributes = $(event.currentTarget)[0].attributes;
+        if(attributes["data-alert_data"]) {
+          alert_data = attributes["data-alert_data"].value;
+        } else {
+          alert_data = _.clone(viewModel.core_config.default_alerts_data);
+          if(attributes["data-title"]){
+            alert_data.title = attributes["data-title"].value;
+          }
+          if(attributes["data-message"]){
+            alert_data.message = attributes["data-message"].value;
+          }
+          if(attributes["data-type"]){
+            alert_data.type = attributes["data-type"].value;
+            switch(alert_data.type) {
+              case "success":
+                alert_data.icon = viewModel.core_config.alert_icons.success;        
+                break;
+              case "information":
+                alert_data.icon = viewModel.core_config.alert_icons.information;        
+                break;
+              case "error":
+                alert_data.icon = viewModel.core_config.alert_icons.error;        
+                break;
+              default:
+                alert_data.icon = viewModel.core_config.alert_icons.default;        
+            }
+          }
+          if(attributes["data-dismiss"]){
+            alert_data.dismiss = attributes["data-dismiss"];
+          }
         }
-      }
-      if(attributes["data-dismiss"]){
-        alert_data.dismiss = attributes["data-dismiss"];
-      }
-    }
-
-    Sherpa.publish( "alert_message", alert_data);
-  });
+        Sherpa.publish( "alert_message", alert_data);
+      })
+    })
 
   Sherpa.subscribe( "alert_message", function(options) {
     if(options === 'hide') {

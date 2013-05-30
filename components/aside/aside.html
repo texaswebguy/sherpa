@@ -1,13 +1,10 @@
-<!-- TODO need to add fail safe for when data is not in context -->
 <script type="text/javascript">
 	
 
-  Sherpa.componentJS.tabs_js = function(component_options){
+  Sherpa.componentJS.aside_js = function(component_options){
     //TODO put default options in config
     var data = {};
-
     var default_data = _.clone(viewModel.core_config.default_tabs_data);
-    data.inverted = default_data.inverted;
     var load_sample_items = function(number){
     	//console.log("constructing data.items", data)
     	data.items = [];
@@ -17,30 +14,19 @@
     		item.label = item.content.match(/(\w+)\s+(\w+)\s*/)[0]; //first two words of random text
     		item.id = Sherpa.uuid();
     		item.url = "#"+item.id;
-    		item.pane_class = "tab-pane";
-    		item.li_class = "";
     		data.items.push(item);
     	});
     }
     if(!component_options) {
     	data = default_data;
     	load_sample_items(3);
-    	Sherpa.QA.logEntry("Tabs component rendered with default options and data. Please make sure to put real content in your tabs.","content, tabs")
+    	Sherpa.QA.logEntry("Aside component rendered with default options and data. Please make sure to put real content in your aside component.","content, aside")
     } else {
         if(component_options.data) {
             //TODO
-            //console.log("component_options.data>>>>>",component_options.data);
             data = component_options.data;
         }
 
-    	data.tab_class = default_data.tab_class;
-    	data.nav_class = default_data.nav_class;
-    	/*
-		options: {
-			type: below | left | right | pills | links
-			color:
-		}
-    	*/
 		if(_.isNumber(component_options.quantity) && !data.items) {
 			load_sample_items(parseInt(component_options.quantity));
 		} else {
@@ -49,10 +35,10 @@
 
 		if(component_options.type){
 			switch(component_options.type) {
-				case "pills":
+				case "list":
 					data.nav_class = "nav nav-"+component_options.type;
 				break;
-				case "links":
+				case "tabs":
 					data.nav_class = "nav nav-"+component_options.type;
 				break;
 				default:
@@ -91,29 +77,24 @@
 
 	
 </script>
-<!-- ko with: Sherpa.componentJS.tabs_js(component_options) -->
+<!-- ko with: Sherpa.componentJS.aside_js(component_options) -->
 
-<div data-bind="attr: { class : tab_class, id : id }">
-
-<!-- ko if:inverted == false -->
-  <ul data-bind="attr: { class : nav_class}, foreach: items">
-    <li data-bind="attr: { class : li_class }"><a data-toggle="tab" data-bind="text: label, attr: {'href':url}"></a></li>
-  </ul>
-<!-- /ko -->
-
-  <div class="tab-content" data-bind="foreach: items">
-    <div data-bind="attr: { 'id' : id, class : pane_class }, html: content">
-    </div>
-  </div>
-
- <!-- ko if:inverted == true -->
-  <ul data-bind="attr: { class : nav_class}, foreach: items">
-    <li data-bind="attr: { class : li_class }"><a data-toggle="tab" data-bind="text: label, attr: {'href':url}"></a></li>
-  </ul>
-<!-- /ko -->
+		<div class="wrapper aside">
+			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
+				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
+					<ul class="nav nav-list sherpa-docs-sidenav" data-bind="foreach: items">
+						<li class=""><a data-bind="text: label,attr:{href: '#'+id}"></a></li>
+	   				</ul>
+				</div>
+			</aside>
 
 
+			<section class="da4-da12 ta-all mb-all">
+				<div class="aside-content" data-bind="foreach: items">
+					<article id="overview" class="bottom-offset-large" data-bind="attr:{'data-bind':'include: sourceUrl',id:id}
+					"></article>
 
-</div>
-
+				</div>
+			</section>
+		</div>
 <!-- /ko -->

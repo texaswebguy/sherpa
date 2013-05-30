@@ -25,9 +25,7 @@
     </script>
 	<!-- Don't touch 
 	******************************************************************************** -->
-    <style>body {opacity: 0;}
-    .nav-sherpa li:first-child {display:none}
-    </style>
+    <style>body {opacity: 0;}</style>
 	<script src="assets/sherpa/sherpa.js"></script>	
 	<!-- Sherpa js adds all the js and css files you need.
 	******************************************************************************** -->	
@@ -70,20 +68,22 @@
 
 <div data-bind="page: {id: 'start', title: 'Sherpa UX Prototyping', desc: 'Sherpa', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/index.html'}"></div>
 
-<div data-bind="page: {id: 'how-to', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Get Started', desc: 'Get Started', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/how-to.html'}"></div>
+<div data-bind="page: {id: 'how-to', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Get Started', desc: 'Get Started', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/how-to.html'}"></div>
 
-<div data-bind="page: {id: 'scaffolding', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Scaffolding', desc: 'Scaffolding', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/scaffolding.html'}"></div>
-
-
-<div data-bind="page: {id: 'base-css', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Basic Elements', desc: 'Basic Elements', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/base-css.html'}"></div>
+<div data-bind="page: {id: 'scaffolding', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Scaffolding', desc: 'Scaffolding', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/scaffolding.html'}"></div>
 
 
-<div data-bind="page: {id: 'components', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Components', desc: 'Components', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/components.html'}"></div>
+<div data-bind="page: {id: 'base-css', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Basic Elements', desc: 'Basic Elements', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/base-css.html'}"></div>
 
 
-<div data-bind="page: {id: 'configuration', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Configuration', desc: 'Configuration', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/configuration.html'}"></div>
+<div data-bind="page: {id: 'components', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Components', desc: 'Components', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/components.html'}"></div>
 
-<div data-bind="page: {id: 'functions', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Functions', desc: 'Functions', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/functions.html'}"></div>
+
+<div data-bind="page: {id: 'configuration', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Configuration', desc: 'Configuration', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/configuration.html'}"></div>
+
+<div data-bind="page: {id: 'functions', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Functions', desc: 'Functions', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/functions.html'}"></div>
+
+<div data-bind="page: {id: 'grid', sourceLoaded:setUpAside, title: 'Sherpa UX Prototyping - Grid Example', desc: 'Grid Example', showInMasthead:false, scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/sherpa-site/grid.html'}"></div>
 
 &nbsp;
 <!-- footer section -->

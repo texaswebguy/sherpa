@@ -39,20 +39,24 @@
           "tab_class":"tabbable",
           "nav_class":"nav nav-tabs",
           "inverted" : false,
+          "id": "sample_tab",
           "items": [
               {
                   "id" : "section_1",
-                  "label" : "Lorem ispum",
+                  "label" : "Section 1",
+                  "label_textkey" : "title_sample_tab_section_1",
                   "url" : "#section_1"
               },
               {
                   "id" : "section_2",
-                  "label" : "Dolor sit amet",
+                  "label" : "Section 2",
+                  "label_textkey" : "title_sample_tab_section_2",
                   "url" : "#section_2"
               },
               {
                   "id" : "section_3",
-                  "label" : "Adipiscing elit",
+                  "label" : "Section 3",
+                  "label_textkey" : "title_sample_tab_section_3",
                   "url" : "#section_3"
               }
           ]

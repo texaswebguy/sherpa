@@ -32,42 +32,51 @@
 
 <body>
 
+<div data-bind="page: {id: 'start', title: 'Sherpa Project Template', desc: 'Template', scrollToTop: true, sourceCache:  true}">
 
-<!-- Masthead section -->
-	<header class="masthead-sherpa">
-		<div class="wrapper">
-			<nav class="da-all ta-all ma-all">
-				<!-- Start of masthead component -->
-				<div data-bind="component: {name:'masthead'}">
-				</div>
-				<!-- End of masthead component -->
-			</nav>
-		</div>
-	</header>
-
-
-<!-- Content section -->
-<section data-bind="page: {id: 'start', title: 'Sherpa: Available templates'}">
-	<div class="wrapper">
-		<div class="da-all ta-all ma-all">
-			<h2>Available templates</h2>
-			<ul>
-				<li><a href="#!/templates/banner-left-nav">banner-left-nav </a></li>
-				<li><a href="#!/templates/banner-left-rail">banner-left-rail </a></li>
-				<li><a href="#!/templates/banner-right-rail">banner-right-rail </a></li>
-				<li><a href="#!/templates/banner">banner </a></li>
-				<li><a href="#!/templates/content-left-rail">content-left-rail </a></li>
-				<li><a href="#!/templates/content-right-rail">content-right-rail </a></li>
-			</ul>
-		</div>
-		<div class="da-all ta-all ma-all">
-			<a href="site.html">Sherpa Site</div>
-		</div>
+	<div data-bind="component: {
+		name:'uxmf', 
+		type:'masthead'
+	}">
 	</div>
-</section>
 
 
-<div data-bind="page: {id: '?'}">
+	<!-- Content section -->
+	<section data-bind="page: {id: 'start', title: 'Sherpa: Available templates'}">
+		<div class="wrapper">
+			<div class="da-all ta-all ma-all">
+				<h2>Available templates</h2>
+				<ul>
+					<li><a href="#!/templates/banner-left-nav">banner-left-nav </a></li>
+					<li><a href="#!/templates/banner-left-rail">banner-left-rail </a></li>
+					<li><a href="#!/templates/banner-right-rail">banner-right-rail </a></li>
+					<li><a href="#!/templates/banner">banner </a></li>
+					<li><a href="#!/templates/content-left-rail">content-left-rail </a></li>
+					<li><a href="#!/templates/content-right-rail">content-right-rail </a></li>
+				</ul>
+			</div>
+			<div class="da-all ta-all ma-all">
+				<a href="site.html">Sherpa Site</a>
+			</div>
+		</div>
+	</section>
+
+
+	&nbsp;
+	<!-- footer section -->
+	<footer class="gray-light" data-bind="component: { 
+			name :'uxmf', 
+			type :'footer'
+		}">
+	</footer>
+
+</div>
+
+<div data-bind="page: {id: 'templates'}">
+
+	<div data-bind="component: {name:'masthead', type:'starter-kit'}">
+	</div>
+
 
 	<div data-bind="page: {id: 'banner-left-nav', title: 'Banner Left Nav Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/templates/banner-left-nav.html'}"></div>
 
@@ -88,13 +97,6 @@
 
 
 
-&nbsp;
-<!-- footer section -->
-	<footer class="gray-light" data-bind="component: { 
-			name :'uxmf', 
-			type :'footer'
-		}">
-	</footer>
 
 </body>
 </html>
