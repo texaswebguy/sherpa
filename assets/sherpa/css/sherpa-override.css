@@ -1,4 +1,3 @@
-
 /* Add additional stylesheets below
 -------------------------------------------------- */
 /*
@@ -22,6 +21,9 @@ div {
   width: 100%;
   margin-bottom: 0px;
   display: block;
+    -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+   box-sizing: border-box;
 }
 
 
