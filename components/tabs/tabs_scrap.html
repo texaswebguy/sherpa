@@ -6,7 +6,6 @@
     //TODO put default options in config
     var data = {};
     var default_data = _.clone(viewModel.core_config.default_tabs_data);
-    console.log("default_data",default_data);
     data.inverted = default_data.inverted;
     var load_sample_items = function(number){
     	//console.log("constructing data.items", data)
@@ -27,40 +26,10 @@
     	load_sample_items(3);
     	Sherpa.QA.logEntry("Tabs component rendered with default options and data. Please make sure to put real content in your tabs.","content, tabs");
     } else {
-        if(component_options.type){
-            switch(component_options.type) {
-                case "pills":
-                    data.nav_class = "nav nav-"+component_options.type;
-                break;
-                case "links":
-                    data.nav_class = "nav nav-"+component_options.type;
-                break;
-                default:
-                    data.tab_class += " tabs-"+component_options.type;
-                    if(component_options.color) {
-                        data.tab_class += " "+component_options.color;
-                    }
-                    if(component_options.type == 'below' || component_options.type == 'right') {
-                        data.inverted = true;
-                    }
-            }
-        } else {
-            if(component_options.color) {
-                data.tab_class += " "+component_options.color;
-            }
-        }
-        if(component_options.id) {
-            data.id = component_options.id;
-        } else {
-            data.id = Sherpa.uuid();
-        }
-        //console.log("no need for constructing data.items", data)  
-        //TODO need to fetch content from url via pager.js
-
         if(component_options.data) {
             //TODO
-            console.log("component_options>>>>>",component_options);
-            data = _.clone(component_options.data);
+            console.log("component_options.data>>>>>",component_options.data);
+            data = component_options.data;
         } 
         if(!data.tab_class) {
             data.tab_class = default_data.tab_class;
@@ -68,6 +37,17 @@
         if(!data.nav_class) {
             data.nav_class = default_data.nav_class;
         }
+        if(item.label_textkey) {
+            item.label = Sherpa.msg(item.label_textkey);
+        } else if(!item.label) {
+            item.label = item.content.match(/(\w+)\s+(\w+)\s*/)[0]; //first two words of random text
+        }
+        if(!item.id) {
+            item.id = Sherpa.uuid();
+        }               
+        item.url = "#"+item.id;
+        item.pane_class = "tab-pane";
+        item.li_class = "";
 
 		if(_.isNumber(component_options.quantity) && !data.items) {
 			load_sample_items(parseInt(component_options.quantity));
@@ -75,18 +55,7 @@
 			load_sample_items(3);
 		} else {
             _.each(data.items, function(item){
-                if(item.label_textkey) {
-                    item.label = Sherpa.msg(item.label_textkey);
-                } else if(!item.label) {
-                    item.label = item.content.match(/(\w+)\s+(\w+)\s*/)[0]; //first two words of random text
-                }
-                if(!item.id) {
-                    item.id = Sherpa.uuid();
-                }               
-                item.url = "#"+item.id;
-                item.pane_class = "tab-pane";
-                item.li_class = "";
-
+                
                 if(item.source) {
                     var filename = item.source;
                     var includeID = _.str.underscored(filename.replace(/\/|.html/g," "));
@@ -97,64 +66,94 @@
                             //console.log(status);
                             if(!_.isUndefined(Sherpa.includesJS[includeID])) {
                                 //Don't inject a script that already exists
-                                responseHTML = responseHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,"");
-                                //$(responseHTML).find('#'+componentJS).remove();
-                                item.content = responseHTML;
-                                data.items.push(item);
-                                console.log("hello 1",item.content)
+                                item.content =  responseHTML.replace(/<script\b[^<]*(?:(?!<\/script>)<[^<]*)*<\/script>/gi,"");
                             } else {
                                 //set it right away because ajax takes its time
                                 Sherpa.includesJS[includeID] = true;
-                                item.content = responseHTML;
-                                data.items.push(item);
-                                console.log("hello 2",item.content)
+                                item.content =  responseHTML;
                             }
+                            data.items.push(item);
+                            //ko.applyBindingsToDescendants(bindingContext, element);
                         },
                         error: function( data, status ) {
                             //no module exists
+                            console.log("error", data, status )
                             filename = filename.split('#')[0];
                             Sherpa.QA.logEntry('Missing include: filename '+filename+' does not exist',"missing include, sherpa-utils:insertInclude");
-                            var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Include</h4> <p>'+filename+' does not exist</p></div>';
-                            item.content = responseHTML;
+                            item.content = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Include</h4> <p>'+filename+' does not exist</p></div>';
                             data.items.push(item);
-                            console.log("hello",item.content)
                         }
                     });
+
+
+
+
                 } else {
                     item.content = "<p>"+_.str.prune(viewModel.core_config.lorem_ispum[_.random(viewModel.core_config.lorem_ispum.length-1)],500,"")+"</p>";
                     data.items.push(item);
                 }
+                
             });
 
         }
 
+		if(component_options.type){
+			switch(component_options.type) {
+				case "pills":
+					data.nav_class = "nav nav-"+component_options.type;
+				break;
+				case "links":
+					data.nav_class = "nav nav-"+component_options.type;
+				break;
+				default:
+					data.tab_class += " tabs-"+component_options.type;
+	    			if(component_options.color) {
+		    			data.tab_class += " "+component_options.color;
+		    		}
+		    		if(component_options.type == 'below' || component_options.type == 'right') {
+		    			data.inverted = true;
+		    		}
+	     	}
+		} else {
+			if(component_options.color) {
+    			data.tab_class += " "+component_options.color;
+    		}
+		}
+		if(component_options.id) {
+	    	data.id = component_options.id;
+	    } else {
+	    	data.id = Sherpa.uuid();
+	    }
+        //console.log("no need for constructing data.items", data)	
+        //TODO need to fetch content from url via pager.js
     }
-    //console.log("items",data.items)
+    console.log("items",data.items)
     data.items[0].pane_class = "tab-pane active";
     data.items[0].li_class = "active";
     return data;
 
   };
 
-
-	
 </script>
+
+
+
 <!-- ko with: Sherpa.componentJS.tabs_js(component_options) -->
 
 <div data-bind="attr: { class : tab_class, id : id }">
 
-<!-- ko if:inverted == false -->
+<!-- ko if:inverted === false -->
   <ul data-bind="attr: { class : nav_class}, foreach: items">
     <li data-bind="attr: { class : li_class }"><a data-toggle="tab" data-bind="html: label, attr: {'href':url}"></a></li>
   </ul>
 <!-- /ko -->
 
   <div class="tab-content" data-bind="foreach: items">
-    <div data-bind="attr: { 'id' : id, class : pane_class }, html: content">
+    <div data-bind="attr: { id : id, class : pane_class }, html: content">
     </div>
   </div>
 
- <!-- ko if:inverted == true -->
+ <!-- ko if:inverted === true -->
   <ul data-bind="attr: { class : nav_class}, foreach: items">
     <li data-bind="attr: { class : li_class }"><a data-toggle="tab" data-bind="html: label, attr: {'href':url}"></a></li>
   </ul>

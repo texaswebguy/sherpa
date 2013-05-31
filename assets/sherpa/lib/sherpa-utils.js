@@ -228,9 +228,8 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 
 Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-
 	var filename,includeID,html, includeJS, values = valueAccessor();
-console.log("values",values)
+//console.log("values",values)
 	if(_.isObject(values)){
 		filename = values.sourceUrl;
 	} else {
