@@ -36,7 +36,7 @@
         <ul data-bind="foreach: $__page__.children">
           <!-- ko if: val('showInMasthead') -->
           <li data-bind="css: {active: isVisible}">
-            <a class="lead" data-bind="page-href: $data">
+            <a data-bind="page-href: $data">
                 <span data-bind="text: val('desc')"></span>
             </a>
           </li>
