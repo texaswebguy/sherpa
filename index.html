@@ -34,12 +34,11 @@
 
 <div data-bind="page: {id: 'start', title: 'Sherpa Project Template', desc: 'Template', scrollToTop: true, sourceCache:  true}">
 
-	<div data-bind="component: {
+	<header class="gray bottom-offset-small" data-bind="component: {
 		name:'uxmf', 
 		type:'masthead'
 	}">
-	</div>
-
+	</header>
 
 	<!-- Content section -->
 	<section data-bind="page: {id: 'start', title: 'Sherpa: Available templates'}">
@@ -56,7 +55,18 @@
 				</ul>
 			</div>
 			<div class="da-all ta-all ma-all">
-				<a href="site.html">Sherpa Site</a>
+				<h2>Sherpa Documentation</h2>
+				
+				<ul>
+					<li><a href="site.html">Home Page</a></li>
+					<li><a href="site.html#!/how-to">Getting Started</a></li>
+					<li><a href="site.html#!/scaffolding">Scaffolding</a></li>
+					<li><a href="site.html#!/grid">Grid Example</a></li>
+					<li><a href="site.html#!/base-css">Basic Elements</a></li>
+					<li><a href="site.html#!/components">Components</a></li>
+					<li><a href="site.html#!/configurations">Configuration</a></li>
+					<li><a href="site.html#!/functions">Functions</a></li>
+				</ul>
 			</div>
 		</div>
 	</section>
@@ -93,6 +103,10 @@
 	<div data-bind="page: {id: 'content-left-rail', title: 'Content Left Rail Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/templates/content-left-rail.html'}"></div>
 
 	<div data-bind="page: {id: 'content-right-rail', title: 'Banner Right Rail Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/templates/content-right-rail.html'}"></div>
+
+
+	<div data-bind="component: {name:'footer', type:'starter-kit'}">
+	</div>
 </div>
 
 

@@ -12,17 +12,23 @@ p {
 }
 .lead {
   margin-bottom: @baseLineHeight;
-  font-size: @baseFontSize * 1.5;
-  font-weight: 200;
-  line-height: @baseLineHeight * 1.5;
+  font-size: @baseFontSize + 4px;
+  font-weight: @baseFontWeight;
+  line-height: @baseLineHeight + 2px;
 }
 
 
 // Emphasis & misc
 // -------------------------
 
-// Ex: 14px base font * 85% = about 12px
-small   { font-size: 85%; }
+
+
+small {
+  font-size: @baseFontSize - 2px;
+  font-weight: @baseFontWeight;
+  line-height: @baseLineHeight - 4px;
+}
+
 
 strong  { font-weight: bold; }
 em      { font-style: italic; }
@@ -94,7 +100,7 @@ h4 small { font-size: @baseFontSize; }
 .page-header {
   padding-bottom: (@baseLineHeight / 2) - 1;
   margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
-  border-bottom: 1px solid @grayLighter;
+  border-bottom: 1px solid @grayVeryLight;
 }
 
 
@@ -193,40 +199,40 @@ abbr.initialism {
 blockquote {
   padding: 0 0 0 15px;
   margin: 0 0 @baseLineHeight;
-  border-left: 5px solid @grayLighter;
+  border-left: 5px solid @grayVeryLight;
+
   p {
     margin-bottom: 0;
-    font-size: @baseFontSize * 1.25;
-    font-weight: 300;
-    line-height: 1.25;
+    font-size: @baseFontSize + 2px;
+    font-weight: @baseFontWeight;
+    line-height: @baseLineHeight + 2px;
   }
+
   small {
     display: block;
     line-height: @baseLineHeight;
-    color: @grayLight;
-    &:before {
-      content: '\2014 \00A0';
-    }
+    color: @gray;
   }
+
 
   // Float right with text-align: right
   &.pull-right {
     float: right;
     padding-right: 15px;
     padding-left: 0;
-    border-right: 5px solid @grayLighter;
+    border-right: 5px solid @grayVeryLight;
     border-left: 0;
-    p,
-    small {
-      text-align: right;
+    p {
+      margin-bottom: 0;
+      font-size: @baseFontSize + 2px;
+      font-weight: @baseFontWeight;
+      line-height: @baseLineHeight + 2px;
     }
+
     small {
-      &:before {
-        content: '';
-      }
-      &:after {
-        content: '\00A0 \2014';
-      }
+      display: block;
+      line-height: @baseLineHeight;
+      color: @gray;
     }
   }
 }
@@ -279,12 +285,12 @@ a:hover {
 }
 
 a.gray_text {
-  color: @grayDarker;
+  color: @grayDark;
   text-decoration: none;
 }
 
 a.gray_text:hover {
-  color: @grayDarker;
+  color: @grayDark;
   text-decoration: underline;
 }
 
@@ -349,7 +355,7 @@ h5 {
 h4.feature {
   font-size: 50px;
   line-height: 60px;
-  font-family: headingsSerifFontFamily;
+  font-family: @headingsSerifFontFamily;
 }
 
 
@@ -359,7 +365,7 @@ h4.feature {
 /* Header - title*/
 .title {
   text-align: center;
-  background: url(https://rawgithub.com/DellGDC/sherpa/master/assets/img/gray_dark_title_line.png) repeat-x;
+  background: @headingsTitleBackground;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
@@ -379,36 +385,34 @@ Headers for mobile (Phone)
 ================================================
 */
 
-@media only screen and (max-width:767px) {
+@media only screen and (max-width:@breakPointMobileMax) {
 
-  /* Edits made by:; AJ Lohman - just organized them a bit*/
   /* headers - All*/
   h1, h2 {
-    font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-weight: normal;
+    font-family: @headingsSerifFontFamily;
+    font-weight: @headingsFontWeight;
     color: inherit;
     text-rendering: optimizelegibility;
   }
 
-  /* Edits made by AJ Lohman */
   h3, h4, h5 {
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-weight: normal;
+    font-family: @headingsFontFamily;
+    font-weight: @headingsFontWeight;
     color: inherit;
     text-rendering: optimizelegibility;
   }
 
   h1      {font-size: 24px;line-height: 28px;}
   h2      {font-size: 20px;line-height: 24px;}
-  h3      {font-size: 17px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
-  h4      {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
-  h5      {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+  h3      {font-size: 17px;line-height: 20px; font-family: @headingsFontFamily;font-weight: @headingsFontWeightMobile;}
+  h4      {font-size: 16px;line-height: 20px; font-family: @headingsFontFamily;font-weight: @headingsFontWeight;}
+  h5      {font-size: 16px;line-height: 20px; font-family: @headingsFontFamily;font-weight: @headingsFontWeightMobile;}
 
   .lead {
-    margin-bottom: 20px;
-    font-size: 14px;
-    font-weight: bold;
-    line-height: 20px;
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize;
+    font-weight: @headingsFontWeightMobile;
+    line-height: @baseLineHeight;
   }
 
   .title {
@@ -423,68 +427,51 @@ Headers for tablet
 ================================================
 */
 
-@media only screen and (min-width:768px) and (max-width:979px) {
+@media only screen and (min-width:@breakPointTabletMin) and (max-width:@breakPointTabletMax) {
 
   h1, h2, h5 {
-  font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
-  font-weight: normal;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
   color: inherit;
   text-rendering: optimizelegibility;
   }
 
-  /* Edits made by AJ Lohman */
   h3, h4 {
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
-    font-weight: normal;
+    font-family: @headingsFontFamily;
+    font-weight: @headingsFontWeight;
     color: inherit;
     text-rendering: optimizelegibility;
   }
 
   h1      {font-size: 32px;line-height: 38px;}
   h2      {font-size: 26px;line-height: 30px;}
-  h3      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
-  h4      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+  h3      {font-size: 20px;line-height: 24px; font-family: @headingsFontFamily; font-weight: @headingsFontWeight;}
+  h4      {font-size: 18px;line-height: 22px; font-family: @headingsFontFamily; font-weight: @headingsFontWeight;}
   h5      {font-size: 16px;line-height: 20px;}
 
   .lead {
-    margin-bottom: 20px;
-    font-size: 16px;
-    font-weight: bold;
-    line-height: 20px;
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize+2px;
+    font-weight: @headingsFontWeightMobile;
+    line-height: @baseLineHeight;
   }
 
 }
 
 
+/* TEXT COLORS
+-------------------------------------------------- */
 
 
+.gray-medium-text { color: @gray };
+.white-text { color: @white };
+.blue-text { color: @blue };
+.green-text { color: @green };
+.red-text { color: @red };
+.purple-text { color: @purple };
+.berry-text { color: @berry };
+.teal-text { color: @teal };
 
-
-.lead {
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 22px;
-}
-
-small {
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 16px;
-}
-
-blockquote p {
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
-}
-
-blockquote small {
-  display: block;
-  line-height: 20px;
-  color: #999999;
-}
 
 
 

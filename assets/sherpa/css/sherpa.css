@@ -281,12 +281,14 @@ p {
 }
 .lead {
   margin-bottom: 20px;
-  font-size: 21px;
-  font-weight: 200;
-  line-height: 30px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
 }
 small {
-  font-size: 85%;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
 }
 strong {
   font-weight: bold;
@@ -497,17 +499,14 @@ blockquote {
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: 17.5px;
-  font-weight: 300;
-  line-height: 1.25;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
 }
 blockquote small {
   display: block;
   line-height: 20px;
-  color: #eeeeee;
-}
-blockquote small:before {
-  content: '\2014 \00A0';
+  color: #aaaaaa;
 }
 blockquote.pull-right {
   float: right;
@@ -516,15 +515,16 @@ blockquote.pull-right {
   border-right: 5px solid #f9f9f9;
   border-left: 0;
 }
-blockquote.pull-right p,
+blockquote.pull-right p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+}
 blockquote.pull-right small {
-  text-align: right;
-}
-blockquote.pull-right small:before {
-  content: '';
-}
-blockquote.pull-right small:after {
-  content: '\00A0 \2014';
+  display: block;
+  line-height: 20px;
+  color: #aaaaaa;
 }
 q:before,
 q:after,
@@ -584,7 +584,7 @@ Headers for desktop
 /* headers - All*/
 h1,
 h2 {
-  font-family: 'museo-dell-serif-300', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -624,12 +624,12 @@ h5 {
 h4.feature {
   font-size: 50px;
   line-height: 60px;
-  font-family: headingsSerifFontFamily;
+  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
 }
 /* Header - title*/
 .title {
   text-align: center;
-  background: url(https://rawgithub.com/DellGDC/sherpa/master/assets/img/gray_dark_title_line.png) repeat-x;
+  background: url(../../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
@@ -648,20 +648,18 @@ Headers for mobile (Phone)
 ================================================
 */
 @media only screen and (max-width: 767px) {
-  /* Edits made by:; AJ Lohman - just organized them a bit*/
   /* headers - All*/
   h1,
   h2 {
-    font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
   }
-  /* Edits made by AJ Lohman */
   h3,
   h4,
   h5 {
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
@@ -677,19 +675,19 @@ Headers for mobile (Phone)
   h3 {
     font-size: 17px;
     line-height: 20px;
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: bold;
   }
   h4 {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
   }
   h5 {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: bold;
   }
   .lead {
@@ -711,15 +709,14 @@ Headers for tablet
   h1,
   h2,
   h5 {
-    font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
   }
-  /* Edits made by AJ Lohman */
   h3,
   h4 {
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
@@ -735,13 +732,13 @@ Headers for tablet
   h3 {
     font-size: 20px;
     line-height: 24px;
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
   }
   h4 {
     font-size: 18px;
     line-height: 22px;
-    font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
   }
   h5 {
@@ -755,27 +752,31 @@ Headers for tablet
     line-height: 20px;
   }
 }
-.lead {
-  margin-bottom: 20px;
-  font-size: 18px;
-  font-weight: normal;
-  line-height: 22px;
+/* TEXT COLORS
+-------------------------------------------------- */
+.gray-medium-text {
+  color: #aaaaaa;
 }
-small {
-  font-size: 12px;
-  font-weight: normal;
-  line-height: 16px;
+.white-text {
+  color: #ffffff;
 }
-blockquote p {
-  margin-bottom: 0;
-  font-size: 16px;
-  font-weight: normal;
-  line-height: 22px;
+.blue-text {
+  color: #0085c3;
 }
-blockquote small {
-  display: block;
-  line-height: 20px;
-  color: #999999;
+.green-text {
+  color: #7ab800;
+}
+.red-text {
+  color: #dc5034;
+}
+.purple-text {
+  color: #6e2585;
+}
+.berry-text {
+  color: #b7295a;
+}
+.teal-text {
+  color: #71c6c1;
 }
 code,
 pre {
@@ -891,7 +892,7 @@ input[type="color"],
   margin-bottom: 10px;
   font-size: 14px;
   line-height: 20px;
-  color: #737373;
+  color: #aaaaaa;
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
@@ -1912,6 +1913,41 @@ table th[class*="span"],
 .table-hover tbody tr.info:hover > td {
   background-color: #c4e3f3;
 }
+/*
+================================================
+Changes to Tables (dell 308)
+================================================
+*/
+.table-striped tbody > tr:nth-child(odd) > td:first-child,
+.table-striped tbody > tr:nth-child(odd) > th:first-child {
+  background-color: #eee;
+  -moz-border-radius: 4px 0px 0px 4px;
+  -webkit-border-radius: 4px 0px 0px 4px;
+  border-radius: 4px 0px 0px 4px;
+}
+.table-striped tbody > tr:nth-child(odd) > td:last-child,
+.table-striped tbody > tr:nth-child(odd) > th:last-child {
+  background-color: #eeeeee;
+  -moz-border-radius: 0px 4px 4px 0px;
+  -webkit-border-radius: 0px 4px 4px 0px;
+  border-radius: 0px 4px 4px 0px;
+}
+.table-striped tbody > tr:nth-child(odd) > td {
+  background: #eeeeee;
+}
+.table-striped th,
+.table-striped td {
+  border: none;
+}
+.table-bordered.table-striped tbody > tr:nth-child(odd) > td:last-child,
+.table-bordered.table-striped tbody > tr:nth-child(odd) > td:first-child {
+  -moz-border-radius: 0px;
+  -webkit-border-radius: 0px;
+  border-radius: 0px;
+}
+.table-bordered.table-striped {
+  border: 1px solid #cccccc;
+}
 /* ICONS
 -------------------------------------------------- */
 /*---UI Icons---*/
@@ -2722,6 +2758,135 @@ you can use the generic selector below, but it's slower:
 }
 .icon-large-add:before {
   content: "\75";
+}
+.gray-dark {
+  background-color: #444444;
+}
+.gray-medium {
+  background-color: #737373;
+}
+.gray {
+  background-color: #aaaaaa;
+}
+.gray-light {
+  background-color: #eeeeee;
+}
+.gray-very-light {
+  background-color: #f9f9f9;
+}
+.white {
+  background-color: #ffffff;
+}
+.blue {
+  background-color: #0085c3;
+}
+.navyblue {
+  background-color: #003758;
+}
+.green {
+  background-color: #7ab800;
+}
+.red {
+  background-color: #dc5034;
+}
+.red-dark {
+  background-color: #ce1126;
+}
+.yellow {
+  background-color: #f2af00;
+}
+.orange {
+  background-color: #ff7700;
+}
+.purple {
+  background-color: #6e2585;
+}
+.berry {
+  background-color: #b7295a;
+}
+.teal {
+  background-color: #71c6c1;
+}
+.gray-stroke {
+  border: 1px solid #cccccc !important;
+}
+.blue-stroke {
+  border: 1px solid #0085c3 !important;
+}
+.green-stroke {
+  border: 1px solid #7ab800 !important;
+}
+.red-stroke {
+  border: 1px solid #dc5034 !important;
+}
+.yellow-stroke {
+  border: 1px solid #f2af00 !important;
+}
+.orange-stroke {
+  border: 1px solid #ff7700 !important;
+}
+.purple-stroke {
+  border: 1px solid #6e2585 !important;
+}
+.berry-stroke {
+  border: 1px solid #b7295a !important;
+}
+.teal-stroke {
+  border: 1px solid #71c6c1 !important;
+}
+/* Rounded corners
+-------------------------------------------------- */
+.rounded-large {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  padding: 20px 20px 0px 20px;
+}
+.rounded-small {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  padding: 20px 20px 0px 20px;
+}
+/* Bottom offsets (padding bottom)
+-------------------------------------------------- */
+.bottom-offset-mini {
+  margin-bottom: 10px;
+}
+.bottom-offset-small {
+  margin-bottom: 20px;
+}
+.bottom-offset-medium {
+  margin-bottom: 40px;
+}
+.bottom-offset-large {
+  margin-bottom: 60px;
+}
+/* Container title*/
+h4.container-title {
+  display: inline-block;
+  top: -20px;
+  margin-bottom: -20px;
+  padding: 5px 15px;
+  position: relative;
+  color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+  -webkit-border-radius: 0px 0px 10px 10px;
+  -moz-border-radius: 0px 0px 10px 10px;
+  border-radius: 0px 0px 10px 10px;
+}
+/* IMAGES
+-------------------------------------------------- */
+.img-rounded-large {
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+}
+.img-rounded-small {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .dropup,
 .dropdown {
@@ -3811,7 +3976,7 @@ input[type="submit"].btn.btn-mini {
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
-  color: #737373;
+  color: #aaaaaa;
   background-color: #ffffff;
   border: 1px solid #ddd;
   border-bottom-color: transparent;
@@ -3903,8 +4068,8 @@ input[type="submit"].btn.btn-mini {
   border-bottom-color: #fff;
 }
 .nav-tabs .active .dropdown-toggle .caret {
-  border-top-color: #737373;
-  border-bottom-color: #737373;
+  border-top-color: #aaaaaa;
+  border-bottom-color: #aaaaaa;
 }
 .nav > .dropdown.active > a:hover,
 .nav > .dropdown.active > a:focus {
@@ -4271,7 +4436,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav > .active > a,
 .navbar .nav > .active > a:hover,
 .navbar .nav > .active > a:focus {
-  color: #737373;
+  color: #aaaaaa;
   text-decoration: none;
   background-color: #e5e5e5;
   -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
@@ -4376,7 +4541,7 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.active > .dropdown-toggle,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle {
   background-color: #e5e5e5;
-  color: #737373;
+  color: #aaaaaa;
 }
 .navbar .nav li.dropdown > .dropdown-toggle .caret {
   border-top-color: #777777;
@@ -4385,8 +4550,8 @@ input[type="submit"].btn.btn-mini {
 .navbar .nav li.dropdown.open > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.active > .dropdown-toggle .caret,
 .navbar .nav li.dropdown.open.active > .dropdown-toggle .caret {
-  border-top-color: #737373;
-  border-bottom-color: #737373;
+  border-top-color: #aaaaaa;
+  border-bottom-color: #aaaaaa;
 }
 .navbar .pull-right > li > .dropdown-menu,
 .navbar .nav > li > .dropdown-menu.pull-right {
@@ -5110,7 +5275,7 @@ a.thumbnail:focus {
 }
 .thumbnail .caption {
   padding: 9px;
-  color: #737373;
+  color: #aaaaaa;
 }
 .media,
 .media-body {
@@ -5606,4 +5771,18 @@ a.badge:focus {
 }
 .affix {
   position: fixed;
+}
+/* Bottom offsets (padding bottom)
+-------------------------------------------------- */
+.bottom-offset-mini {
+  margin-bottom: 10px;
+}
+.bottom-offset-small {
+  margin-bottom: 20px;
+}
+.bottom-offset-medium {
+  margin-bottom: 40px;
+}
+.bottom-offset-large {
+  margin-bottom: 60px;
 }

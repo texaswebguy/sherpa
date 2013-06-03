@@ -45,18 +45,21 @@
                   "id" : "section_1",
                   "label" : "Section 1",
                   "label_textkey" : "title_sample_tab_section_1",
+                  "source" : "includes/sample/loremispum.html",
                   "url" : "#section_1"
               },
               {
                   "id" : "section_2",
                   "label" : "Section 2",
                   "label_textkey" : "title_sample_tab_section_2",
+                  "source" : "includes/sample/loremispum.html",
                   "url" : "#section_2"
               },
               {
                   "id" : "section_3",
                   "label" : "Section 3",
                   "label_textkey" : "title_sample_tab_section_3",
+                  "source" : "includes/sample/loremispum.html",
                   "url" : "#section_3"
               }
           ]
