@@ -2999,6 +2999,7 @@ button.close {
   -webkit-appearance: none;
 }
 .btn {
+  font-family: 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
