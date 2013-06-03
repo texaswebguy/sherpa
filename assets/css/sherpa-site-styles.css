@@ -661,3 +661,10 @@ Breakpoints
 [class*=-toggle].open .view {
   display:none;
 }
+
+
+.color-block {
+  padding: 20px 20px 0px 20px;
+  height: 80px;
+  border: 1px solid #eeeeee;
+}
