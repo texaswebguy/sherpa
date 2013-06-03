@@ -3170,8 +3170,8 @@ button.close {
   /* IE7 inline-block hack */
 
   *zoom: 1;
-  padding: 4px 12px;
-  margin-bottom: 0;
+  padding: 7px 11px;
+  margin-bottom: 10px;
   font-size: 14px;
   line-height: 20px;
   text-align: center;
@@ -3203,6 +3203,34 @@ button.close {
   -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
   box-shadow: inset 0 1px 0 rgba(255,255,255,.2), 0 1px 2px rgba(0,0,0,.05);
+  /*
+  
+  color: #444444;
+  text-align: center;
+  text-shadow: 0 0px 0px rgba(255, 255, 255, 0.75);
+
+  background-color: #edf1f3;
+  *background-color: #edf1f3;
+  background-image: -moz-linear-gradient(top, #fefefe, #edf1f3);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#edf1f3));
+  background-image: -webkit-linear-gradient(top, #fefefe, #edf1f3);
+  background-image: -o-linear-gradient(top, #fefefe, #edf1f3);
+  background-image: linear-gradient(to bottom, #fefefe, #edf1f3);
+  background-repeat: repeat-x;
+  border: 1px solid #DDD;
+  *border: 0;
+  border-color: none;
+  border-bottom-color: none;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fefefe', endColorstr='#edf1f3', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(enabled=false);
+  *zoom: 1;
+  -webkit-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
+     -moz-box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);
+          box-shadow: inset 0 0px 0 rgba(255, 255, 255, 0.2), 0 0px 0px rgba(0, 0, 0, 0.05);*/
+
 }
 .btn:hover,
 .btn:focus,
