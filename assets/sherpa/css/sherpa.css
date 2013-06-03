@@ -584,7 +584,7 @@ Headers for desktop
 /* headers - All*/
 h1,
 h2 {
-  font-family: 'museo-dell-serif-300', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -624,12 +624,12 @@ h5 {
 h4.feature {
   font-size: 50px;
   line-height: 60px;
-  font-family: headingsSerifFontFamily;
+  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
 }
 /* Header - title*/
 .title {
   text-align: center;
-  background: url(https://rawgithub.com/DellGDC/sherpa/master/assets/img/gray_dark_title_line.png) repeat-x;
+  background: url(../../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
