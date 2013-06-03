@@ -68,7 +68,14 @@
 					<li><a href="site.html#!/functions">Functions</a></li>
 				</ul>
 			</div>
+			<div class="da-all ta-all ma-all">
+				<h2>Tutorial</h2>
+				<ul>
+					<li><a href="#!/tutorial/">Example Page</a></li>
+				</ul>
+			</div>
 		</div>
+
 	</section>
 
 
@@ -109,7 +116,9 @@
 	</div>
 </div>
 
-
+<div data-bind="page: {id: 'tutorial'}">
+	<div data-bind="page: {id: 'start', title: 'Sherpa Tutorial - Example Page', desc: 'Example Page', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/tutorial/example.html'}"></div>
+</div>
 
 
 </body>
