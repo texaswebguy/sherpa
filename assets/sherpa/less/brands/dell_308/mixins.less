@@ -29,10 +29,8 @@
 // ------------------
 .tab-focus() {
   // Default
-  outline: thin dotted #333;
-  // Webkit
-  outline: 5px auto -webkit-focus-ring-color;
-  outline-offset: -2px;
+  outline: thin dotted @blue;
+  outline-offset: 0px;
 }
 
 // Center-align a block level element
@@ -194,6 +192,14 @@
     color: @textColor;
     background-color: @backgroundColor;
     border-color: @textColor;
+    height: @formLineHeight;
+    min-width: 16px;
+    line-height: @baseLineHeight;
+    padding: 7px 11px;
+    border: 1px solid #dddddd;
+  -moz-box-sizing:border-box;
+  -webkit-box-sizing:border-box;
+  box-sizing:border-box;
   }
 }
 
