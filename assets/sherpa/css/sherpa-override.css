@@ -227,7 +227,7 @@ h4.feature {font-size: 50px;line-height: 60px;font-family: 'museo-for-dell-300re
 /* Header - title*/
 .title {
   text-align: center;
-  background: url(https://rawgithub.com/DellGDC/sherpa/master/assets/img/gray_dark_title_line.png) repeat-x;
+  background: url(../../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
