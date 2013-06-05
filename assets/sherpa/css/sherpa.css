@@ -135,7 +135,7 @@ html {
   -ms-text-size-adjust: 100%;
 }
 a:focus {
-  outline: thin dotted #0085c3;
+  outline: thin dotted #007db8;
   outline-offset: 0px;
 }
 a:hover,
@@ -349,7 +349,7 @@ h4,
 h5,
 h6 {
   margin: 10px 0;
-  font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-weight: normal;
   line-height: 20px;
   color: inherit;
@@ -541,7 +541,7 @@ address {
 -------------------------------------------------- */
 body {
   margin: 0;
-  font-family: 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-size: 14px;
   line-height: 20px;
   color: #444444;
@@ -551,11 +551,11 @@ p {
   margin: 0 0 20px 0;
 }
 a {
-  color: #0085c3;
+  color: #007db8;
   text-decoration: none;
 }
 a:hover {
-  color: #0085c3;
+  color: #007db8;
   text-decoration: underline;
 }
 a.gray_text {
@@ -583,7 +583,7 @@ Headers for desktop
 /* headers - All*/
 h1,
 h2 {
-  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -593,7 +593,7 @@ h2 {
 h3,
 h4,
 h5 {
-  font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-weight: normal;
   color: inherit;
   text-rendering: optimizelegibility;
@@ -623,7 +623,7 @@ h5 {
 h4.feature {
   font-size: 50px;
   line-height: 60px;
-  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
 }
 /* Header - title*/
 .title {
@@ -650,7 +650,7 @@ Headers for mobile (Phone)
   /* headers - All*/
   h1,
   h2 {
-    font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'museo-for-dell-300regular', 'museo-for-dell-100regular', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
@@ -658,7 +658,7 @@ Headers for mobile (Phone)
   h3,
   h4,
   h5 {
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
@@ -674,19 +674,19 @@ Headers for mobile (Phone)
   h3 {
     font-size: 17px;
     line-height: 20px;
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: bold;
   }
   h4 {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
   }
   h5 {
     font-size: 16px;
     line-height: 20px;
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: bold;
   }
   .lead {
@@ -708,14 +708,14 @@ Headers for tablet
   h1,
   h2,
   h5 {
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
   }
   h3,
   h4 {
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
     color: inherit;
     text-rendering: optimizelegibility;
@@ -731,13 +731,13 @@ Headers for tablet
   h3 {
     font-size: 20px;
     line-height: 24px;
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
   }
   h4 {
     font-size: 18px;
     line-height: 22px;
-    font-family: 'Trebuchet MS', 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+    font-family: 'Trebuchet MS', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
     font-weight: normal;
   }
   h5 {
@@ -760,7 +760,7 @@ Headers for tablet
   color: #ffffff;
 }
 .blue-text {
-  color: #0085c3;
+  color: #007db8;
 }
 .green-text {
   color: #7ab800;
@@ -862,7 +862,7 @@ input,
 button,
 select,
 textarea {
-  font-family: 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
 }
 button,
 input,
@@ -1014,7 +1014,7 @@ select:focus,
 input[type="file"]:focus,
 input[type="radio"]:focus,
 input[type="checkbox"]:focus {
-  outline: thin dotted #0085c3;
+  outline: thin dotted #007db8;
   outline-offset: 0px;
 }
 .uneditable-input,
@@ -1598,6 +1598,7 @@ select:focus:invalid:focus {
   -webkit-border-radius: 3px 0 0 3px;
   -moz-border-radius: 3px 0 0 3px;
   border-radius: 3px 0 0 3px;
+  margin-right: -4px;
 }
 .input-append input:focus,
 .input-prepend input:focus,
@@ -2885,7 +2886,7 @@ you can use the generic selector below, but it's slower:
   background-color: #ffffff;
 }
 .blue {
-  background-color: #0085c3;
+  background-color: #007db8;
 }
 .navyblue {
   background-color: #003758;
@@ -2918,7 +2919,7 @@ you can use the generic selector below, but it's slower:
   border: 2px solid #cccccc !important;
 }
 .blue-stroke {
-  border: 2px solid #0085c3 !important;
+  border: 2px solid #007db8 !important;
 }
 .green-stroke {
   border: 2px solid #7ab800 !important;
@@ -3074,14 +3075,14 @@ h4.container-title {
 .dropdown-submenu:focus > a {
   text-decoration: none;
   color: #ffffff;
-  background-color: #007eb9;
-  background-image: -moz-linear-gradient(top, #0085c3, #0074aa);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0085c3), to(#0074aa));
-  background-image: -webkit-linear-gradient(top, #0085c3, #0074aa);
-  background-image: -o-linear-gradient(top, #0085c3, #0074aa);
-  background-image: linear-gradient(to bottom, #0085c3, #0074aa);
+  background-color: #0076ae;
+  background-image: -moz-linear-gradient(top, #007db8, #006c9f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#007db8), to(#006c9f));
+  background-image: -webkit-linear-gradient(top, #007db8, #006c9f);
+  background-image: -o-linear-gradient(top, #007db8, #006c9f);
+  background-image: linear-gradient(to bottom, #007db8, #006c9f);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0085c3', endColorstr='#ff0074aa', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007db8', endColorstr='#ff006c9f', GradientType=0);
 }
 .dropdown-menu > .active > a,
 .dropdown-menu > .active > a:hover,
@@ -3089,14 +3090,14 @@ h4.container-title {
   color: #ffffff;
   text-decoration: none;
   outline: 0;
-  background-color: #007eb9;
-  background-image: -moz-linear-gradient(top, #0085c3, #0074aa);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0085c3), to(#0074aa));
-  background-image: -webkit-linear-gradient(top, #0085c3, #0074aa);
-  background-image: -o-linear-gradient(top, #0085c3, #0074aa);
-  background-image: linear-gradient(to bottom, #0085c3, #0074aa);
+  background-color: #0076ae;
+  background-image: -moz-linear-gradient(top, #007db8, #006c9f);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#007db8), to(#006c9f));
+  background-image: -webkit-linear-gradient(top, #007db8, #006c9f);
+  background-image: -o-linear-gradient(top, #007db8, #006c9f);
+  background-image: linear-gradient(to bottom, #007db8, #006c9f);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0085c3', endColorstr='#ff0074aa', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007db8', endColorstr='#ff006c9f', GradientType=0);
 }
 .dropdown-menu > .disabled > a,
 .dropdown-menu > .disabled > a:hover,
@@ -3271,7 +3272,7 @@ button.close {
   -webkit-appearance: none;
 }
 .btn {
-  font-family: 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   display: inline-block;
   *display: inline;
   /* IE7 inline-block hack */
@@ -3367,7 +3368,7 @@ button.close {
   transition: background-position 0.1s linear;
 }
 .btn:focus {
-  outline: thin dotted #0085c3;
+  outline: thin dotted #007db8;
   outline-offset: 0px;
 }
 .btn.active,
@@ -3449,17 +3450,17 @@ input[type="button"].btn-block {
 .btn-primary {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #006bc3;
-  background-image: -moz-linear-gradient(top, #0085c3, #0044c3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0085c3), to(#0044c3));
-  background-image: -webkit-linear-gradient(top, #0085c3, #0044c3);
-  background-image: -o-linear-gradient(top, #0085c3, #0044c3);
-  background-image: linear-gradient(to bottom, #0085c3, #0044c3);
+  background-color: #0064b8;
+  background-image: -moz-linear-gradient(top, #007db8, #0040b8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#007db8), to(#0040b8));
+  background-image: -webkit-linear-gradient(top, #007db8, #0040b8);
+  background-image: -o-linear-gradient(top, #007db8, #0040b8);
+  background-image: linear-gradient(to bottom, #007db8, #0040b8);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0085c3', endColorstr='#ff0044c3', GradientType=0);
-  border-color: #0044c3 #0044c3 #002976;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007db8', endColorstr='#ff0040b8', GradientType=0);
+  border-color: #0040b8 #0040b8 #00256c;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #0044c3;
+  *background-color: #0040b8;
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
@@ -3471,12 +3472,12 @@ input[type="button"].btn-block {
 .btn-primary.disabled,
 .btn-primary[disabled] {
   color: #ffffff;
-  background-color: #0044c3;
-  *background-color: #003baa;
+  background-color: #0040b8;
+  *background-color: #00379f;
 }
 .btn-primary:active,
 .btn-primary.active {
-  background-color: #003290 \9;
+  background-color: #002e85 \9;
 }
 .btn-warning {
   color: #ffffff;
@@ -3577,14 +3578,14 @@ input[type="button"].btn-block {
 .btn-info {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
-  background-color: #339dcf;
-  background-image: -moz-linear-gradient(top, #0085c3, #7fc2e1);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0085c3), to(#7fc2e1));
-  background-image: -webkit-linear-gradient(top, #0085c3, #7fc2e1);
-  background-image: -o-linear-gradient(top, #0085c3, #7fc2e1);
-  background-image: linear-gradient(to bottom, #0085c3, #7fc2e1);
+  background-color: #3399c8;
+  background-image: -moz-linear-gradient(top, #007db8, #7fc2e1);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#007db8), to(#7fc2e1));
+  background-image: -webkit-linear-gradient(top, #007db8, #7fc2e1);
+  background-image: -o-linear-gradient(top, #007db8, #7fc2e1);
+  background-image: linear-gradient(to bottom, #007db8, #7fc2e1);
   background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff0085c3', endColorstr='#ff7fc2e1', GradientType=0);
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007db8', endColorstr='#ff7fc2e1', GradientType=0);
   border-color: #7fc2e1 #7fc2e1 #41a4d2;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #7fc2e1;
@@ -3675,14 +3676,14 @@ input[type="submit"].btn.btn-mini {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: #0085c3;
+  color: #007db8;
   -webkit-border-radius: 0;
   -moz-border-radius: 0;
   border-radius: 0;
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: #0085c3;
+  color: #007db8;
   text-decoration: underline;
   background-color: transparent;
 }
@@ -3823,7 +3824,7 @@ input[type="submit"].btn.btn-mini {
   background-color: #e6e6e6;
 }
 .btn-group.open .btn-primary.dropdown-toggle {
-  background-color: #0044c3;
+  background-color: #0040b8;
 }
 .btn-group.open .btn-warning.dropdown-toggle {
   background-color: #ff7700;
@@ -4018,7 +4019,7 @@ input[type="submit"].btn.btn-mini {
 .nav-list > .active > a:focus {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
-  background-color: #0085c3;
+  background-color: #007db8;
 }
 .nav-list [class^="icon-"],
 .nav-list [class*=" icon-"] {
@@ -4101,7 +4102,7 @@ input[type="submit"].btn.btn-mini {
 .nav-pills > .active > a:hover,
 .nav-pills > .active > a:focus {
   color: #ffffff;
-  background-color: #0085c3;
+  background-color: #007db8;
 }
 .nav-stacked > li {
   float: none;
@@ -4156,14 +4157,14 @@ input[type="submit"].btn.btn-mini {
   border-radius: 6px;
 }
 .nav .dropdown-toggle .caret {
-  border-top-color: #0085c3;
-  border-bottom-color: #0085c3;
+  border-top-color: #007db8;
+  border-bottom-color: #007db8;
   margin-top: 6px;
 }
 .nav .dropdown-toggle:hover .caret,
 .nav .dropdown-toggle:focus .caret {
-  border-top-color: #0085c3;
-  border-bottom-color: #0085c3;
+  border-top-color: #007db8;
+  border-bottom-color: #007db8;
 }
 /* move down carets for tabs */
 .nav-tabs .dropdown-toggle .caret {
@@ -4447,7 +4448,7 @@ input[type="submit"].btn.btn-mini {
 .navbar-search .search-query {
   margin-bottom: 0;
   padding: 4px 14px;
-  font-family: 'Trebuchet MS Reg', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-family: 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
   font-size: 13px;
   font-weight: normal;
   line-height: 1;
@@ -5368,7 +5369,7 @@ input[type="submit"].btn.btn-mini {
 }
 a.thumbnail:hover,
 a.thumbnail:focus {
-  border-color: #0085c3;
+  border-color: #007db8;
   -webkit-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   -moz-box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);
   box-shadow: 0 1px 4px rgba(0, 105, 214, 0.25);

@@ -668,3 +668,9 @@ Breakpoints
   height: 80px;
   border: 1px solid #eeeeee;
 }
+
+.breadcrumb {
+  margin: 40px 0 20px;
+  list-style: none;
+  background: none;
+}
