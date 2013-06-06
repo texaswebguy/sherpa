@@ -628,7 +628,7 @@ h4.feature {
 /* Header - title*/
 .title {
   text-align: center;
-  background: url(../../img/gray_dark_title_line.png) repeat-x;
+  background: url(../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;

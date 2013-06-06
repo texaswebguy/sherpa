@@ -84,7 +84,8 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	                ]
 	            }
 	        ]
-	    }
+	    },
+	    projectInfo: ko.observable({})
 	};
 
 	addToConfigs = {

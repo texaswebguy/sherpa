@@ -8,17 +8,17 @@
     </div>
 
 
-    <div class="da5-da8 ta4-ta6 ma-all">
-      <h2>Project Name</h2>
-    </div>
-
-
-    <div class="da9-da12 ta7-ta9 ma-all">
-      <a href="#" 
+    <div class="da9-da12 ta7-ta9 ma-all right-text">
+      <a href="#"
+        id="project_info" 
         class="btn btn-tertiary" 
         rel="popover" 
-        data-placement="bottom" 
-        data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." 
-        data-original-title="Popover on bottom">Project Information</a>
+        selector=".project_info"
+        data-placement="bottom">Project Information</a>
     </div>
+    <div class="hide project_info" data-bind="component: {name:'uxmf', type:'project_info'}"></div>
   </div>
+
+<script type="text/javascript">
+  $('#project_info').popover();
+</script>

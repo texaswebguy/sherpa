@@ -45,9 +45,11 @@ Eve.scope("*", function(){
 });
 
 viewModel.breadcrumb_path = breadcrumb();
+viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 
 $(window).on('hashchange', function() {
 	viewModel.breadcrumb_path = breadcrumb();
+	viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 });
 
 function breadcrumb(){

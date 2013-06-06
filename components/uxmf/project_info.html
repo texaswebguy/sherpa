@@ -2,47 +2,42 @@
 
 <script type="text/javascript">
 
-
-  Sherpa.componentJS.uxmf_project_info_js = function(options){
-    var table_obj = {};
-    Sherpa.request({
-      resourceId: "project_info", 
-      data: {
-        "filename" : viewModel.core_config.project_info_filename
-      },
-      success: function(responseCSV){
-        //Parse will depend on the data.parseTo options.
-        var data_obj = $.csv.toObjects(responseCSV);
-        table_obj.keys = _.keys(data_obj[0]);
-        table_obj.items = [];
-        data_obj.shift();
-        console.log("data_obj",data_obj)
-        _.each(data_obj, function(item){
-          table_obj.items.push(_.values(item));
-        })
-      }
-    });
-    console.log(table_obj);
-    return table_obj;
-  };
+  var table_obj = {};
+  Sherpa.request({
+    resourceId: "project_info", 
+    data: {
+      "filename" : viewModel.core_config.project_info_filename
+    },
+    success: function(responseCSV){
+      //Parse will depend on the data.parseTo options.
+      var data_obj = $.csv.toObjects(responseCSV);
+      table_obj.keys = _.keys(data_obj[0]);
+      table_obj.items = [];
+      data_obj.shift();
+      console.log("data_obj",data_obj)
+      _.each(data_obj, function(item){
+        table_obj.items.push(_.values(item));
+      })
+    }
+  });
+  viewModel.projectInfo = ko.observable(table_obj);
 
 
 </script>
 
-<!-- ko with: Sherpa.componentJS.uxmf_project_info_js() -->
+<!-- ko with: projectInfo() -->
 
- <p data-bind="text: $data.keys"></p>
-<table>
-  <thead>
-    <tr data-bind="foreach: $data.keys">
-      <th data-bind="text: $data"></th>
-    </tr>
-  </thead>
-  <tbody>
-    <tr data-bind="foreach: $data.items">
-      <th data-bind="text: $data"></th>
-    </tr>
-  </tbody>
-</table>
+  <table>
+    <thead>
+      <tr data-bind="foreach: $data.items">
+        <th data-bind="text: Key"></th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr data-bind="foreach: $data.items">
+        <td data-bind="text: Value"></td>
+      </tr>
+    </tbody>
+  </table>
 
 <!-- /ko -->
