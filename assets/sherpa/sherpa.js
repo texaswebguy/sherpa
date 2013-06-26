@@ -216,6 +216,7 @@ Sherpa.ready("underscore", function() {
     if(_.isObject(SHERPA_CONFIG_OVERRIDES) && !_.isEmpty(SHERPA_CONFIG_OVERRIDES) ) {
     	if(SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD){
 	        SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = _.union(SHERPA.JS_CORE_LOAD, SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD);
+	    	SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = _.reject(SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD, function(num){ return num == undefined; });
 	    }
         _.extend(SHERPA, SHERPA_CONFIG_OVERRIDES);
 
