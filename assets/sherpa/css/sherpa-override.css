@@ -3685,5 +3685,7 @@ html.not-authenticated .authenticated-only {
 /*turns page on when prototype framework is ready */
 .sherpaReady body {opacity: 1;}
 
-
+.design-notes {
+  display:none;
+}
 
