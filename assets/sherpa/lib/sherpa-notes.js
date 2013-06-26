@@ -62,7 +62,7 @@ Sherpa.notes = {
 	buildHTML : function() {
 
 		var notes_body ='<p class="red-text">No design notes found for this page<p>'+
-		'<p>To add design notes to this panel add markdown text inside a <code>&lt;div class="design-notes">&lt;/div></code> in whatever page you want to add notes to.'
+		'<p>To add design notes to this panel add markdown text inside a <code>&lt;div class="design-notes">&lt;/div></code> in whatever page you want to add notes to. Note: Make sure all your markdown text is not indented. Indentation in markdown gets interpreted as a code block.'
 		if($("div:visible .design-notes")[0]){
 			notes_body = "";
 			var convertMD = new Sherpa.Markdown.converter();
