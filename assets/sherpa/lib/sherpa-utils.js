@@ -99,6 +99,67 @@ Sherpa.linkedmsg = function (textkey, t_data) {
 }
 
 
+Sherpa.truncate = function(element, options){
+
+	var number_of_chars, 
+	string = $(element).text(), 
+	showMore = false, 
+	truncated_string, 
+	more_string, 
+	truncate_id = Sherpa.uuid(),
+	elipse = Sherpa.msg('text_truncate_elipse'),
+	more_text = Sherpa.msg('text_truncate_more'),
+	less_text = Sherpa.msg('text_truncate_less'),
+	number_of_chars = 100,
+	isValid = function(number){
+		if(string.length > number_of_chars ) {
+			return true;
+		} else {
+			return false;
+		}		
+	}
+
+	if(_.isObject(options) && isValid()){
+		try {
+			if(options.length){
+				number_of_chars = options.length;
+			};
+			if(options.showMore){showMore = true}
+			if(options.moreText){more_text = options.moreText} // NOTE: if this option is used it will not be internationalized
+			if(options.lessText){less_text = options.lessText} // NOTE: if this option is used it will not be internationalized
+			if(options.elipse){elipse = options.elipse} // NOTE: if this option is used it will not be internationalized
+		} catch(err) {
+			Sherpa.QA.logEntry('Bad truncate syntax: data-bind:="format: {\'length\': length_var, \'showMore\' : true}',"functions, format error,sherpa-utils:truncate");
+		}
+	} else {
+		if(_.isNumber(options) && !_.isEmpty(options) ){
+			number_of_chars = options;
+		} else {
+			Sherpa.QA.logEntry('Bad truncate syntax: data-bind:="format: {\'length\': length_var, \'showMore\' : true}',"functions, format error,sherpa-utils:truncate");
+		}
+	}
+	if(showMore && isValid()){
+		truncated_string = _.str.prune(string,number_of_chars,"");
+		more_string = string.replace(truncated_string,'');
+
+		Eve.scope("#"+truncate_id+" + a", function(){
+			this.listen("span", "click", function(event){
+				event.preventDefault();
+				//console.log($(event.currentTarget).parent().attr('data-target'))
+				$(event.currentTarget).parent().toggleClass('truncate truncated');
+				$("#"+$(event.currentTarget).parent().attr('data-target')).fadeToggle();
+			});
+		});
+		return truncated_string+'<span class="hide" id="'+truncate_id+'">'+more_string+'</span><a class="truncate" data-target="'+truncate_id+'"><span class="more">'+elipse+' '+more_text+'</span><span class="less">&nbsp;'+less_text+'</span></a>'
+	} else {
+		if(!isValid()){
+			return string;
+		} else {
+			return _.str.prune(string,number_of_chars,elipse);
+		}
+	}
+}
+
 Sherpa.formatCurrency = function(number_data){
 
 	var amount, format, position;

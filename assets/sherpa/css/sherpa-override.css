@@ -270,11 +270,11 @@ Headers for mobile (Phone)
   h2      {font-size: 20px;line-height: 24px;}
   h3      {font-size: 17px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
   h4      {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
-  h5      {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+  h5      {font-size: 14px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
 
   .lead {
     margin-bottom: 20px;
-    font-size: 14px;
+    font-size: 16px;
     font-weight: bold;
     line-height: 20px;
   }
@@ -316,9 +316,9 @@ Headers for tablet
 
   .lead {
     margin-bottom: 20px;
-    font-size: 16px;
+    font-size: 18px;
     font-weight: bold;
-    line-height: 20px;
+    line-height: 22px;
   }
 
 }
@@ -3686,5 +3686,15 @@ html.not-authenticated .authenticated-only {
 /*turns page on when prototype framework is ready */
 .sherpaReady body {opacity: 1;}
 
+a.truncate .less, a.truncated .more {
+  display:none;
+}
 
+a.truncated .less, a.truncate .more {
+  display:inline-block;
+  cursor:pointer;
+}
 
+.design-notes {
+  display:none;
+}

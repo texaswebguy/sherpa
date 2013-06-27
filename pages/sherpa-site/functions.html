@@ -212,7 +212,42 @@ Don't forget to go back to <a href="functions.html?l=en#rendering_a_textkey_with
 
 Note: the data inside msglink is not reactive... yet
 					</pre>
+					<h3 id="rendering_a_textkey" class="sherpa">Truncating text</h3>
+					<p>
+						Sometimes there is a need to truncate text that comes from a data source. Optionaly you might have a need for the truncated text to show a more/less link.
 
+					</p>
+
+
+					<div class="sherpa-docs-example">
+					    <p data-bind="truncate: {length:50,showMore:true}">Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+					    tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+					    quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+					    consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+					    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+					    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
+					</div>
+					<h3 class="sherpa">Markup:</h3>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;p data-bind="truncate: {length:50,showMore:true}"> ... &lt;/p></pre>
+										
+					<h3 class="sherpa">How it works:</h3>
+					<pre>
+The configuration object is used to determine the length by characters of truncation and several options. It is possible to use the function with no options which then the system will default to 100 characters.
+
+Examples of possible options:
+
+&lt;p data-bind="truncate: {}"> ... &lt;/p>
+&lt;p data-bind="truncate: {length:50,showMore:true}"> ... &lt;/p>
+&lt;p data-bind="truncate: {
+	length:50,
+	showMore:true, 
+	moreText:'show more', 
+	lessText:'show less', 
+	elipse:'...'
+}"> ... &lt;/p>
+
+If not specified, moreText, lessText, and elipse are looked for in the messages file (<a href="assets/content/messages_en.json" target="_new">assets/content/messages_en.json</a>) under text_truncate_more, text_truncate_less and text_truncate_elipse.
+					</pre>
 	</article>
 	<article id="converting_currency">
 					<h2 class="sherpa">Converting Currency</h2>

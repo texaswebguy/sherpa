@@ -77,6 +77,13 @@ Sherpa.ready("sherpai18n", function(){
 	    }
 	};
 
+	ko.bindingHandlers['truncate'] = {
+	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+			$(element).html(Sherpa.truncate(element, valueAccessor()));
+			//TODO need to write an update function to make this reactive
+	    }
+	};
+
 	ko.bindingHandlers['visibleFade'] = {
 	    init: function(element, valueAccessor) {
 	        // Initially set the element to be instantly visible/hidden depending on the value

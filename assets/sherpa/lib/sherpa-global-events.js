@@ -109,6 +109,8 @@ function setUpAside(){
 	});
 	$('.nav.nav-list.sherpa-docs-sidenav:visible li:first-child').addClass('active');
 
+
+
 }
 
 

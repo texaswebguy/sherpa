@@ -9,5 +9,8 @@
 	"title_sample_tab_section_1":"Section 1",
 	"title_sample_tab_section_2":"Section 2",
 	"title_sample_tab_section_3":"Section 3",
-	"title_page_home":"Project Name"
+	"title_page_home":"Project Name",
+	"text_truncate_elipse":"...",
+	"text_truncate_more":"more",
+	"text_truncate_less":"less"
 }
