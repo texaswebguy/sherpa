@@ -11,7 +11,7 @@
 //
 // The full source distribution is at:
 //
-//				A A L
+//  			A A L
 //				T C A
 //				T K B
 //
@@ -314,3 +314,4 @@ Sherpa.Markdown.converter = function (a) {
 }, typeof module != "undefined" && (module.exports = Sherpa.Markdown), typeof define == "function" && define.amd && define("Sherpa.Markdown", function () {
     return Sherpa.Markdown
 });
+
