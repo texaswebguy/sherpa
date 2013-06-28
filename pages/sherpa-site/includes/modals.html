@@ -47,6 +47,7 @@
 
 </pre>
 
+
           <h3>Live demo</h3>
           <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
 
@@ -113,18 +114,92 @@
 </pre>
 
 
-          <hr class="sherpa-docs-separator">
+          <h3>Global generic modal</h3>
+          <p>The easiest way to create modals is to leverage a Sherpa configuration that enables a global generic modal that is ready to use at any time (on by default).  In <code><a href="assets/config/global_config.js" target="_new">assets/config/global_config.js</a></code> you will see <code>SHERPA.ENABLE_GLOBAL_MODAL = true;</code>. This enables the global generic modal that can be activated via javascript or through html attributes.</p>
 
-
-          <h2 class="sherpa">Usage</h2>
+          <h2 class="sherpa">Activating modals</h2>
 
           <h3>Via data attributes</h3>
-          <p>Activate a modal without writing JavaScript. Set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+          <p>If you want to activate a custom hiden modal without writing JavaScript you can set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+
           <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#myModal"</span><span class="tag">&gt;</span><span class="pln">Launch modal</span><span class="tag">&lt;/button&gt;</span></li></ol></pre>
 
+          <h4>Activating the generic modal</h4>
+          <p>To activate a the global generic modal without writing JavaScript you can set <code>data-toggle="modal"</code> on a controller element, like a button. The generic modal is devided into three distinct areas, header, body and footer.</p>
+
+          <p>You can provide a title and title description via attributes by using <code>data-title="This is the title of the modal"</code> and <code>data-titledescription="description of title"</code> respectively. Title and description attributes are optional but the title is required if description is used.</p>
+
+          <p>For the body of the modal you can provide text via <code>data-body="This is text that will be inserted in the body of the modal"</code> or you can also inject the contents of a hidden html element (div) via selector such as <code>data-bodyhtml="#some_id"</code>.</p>
+
+          <p>The footer of the modal works exactly as the body using <code>data-body="&lt;a href='#' class='btn'>Continue&lt;/a>"</code> or<code>data-footerhtml="#some_other_id"</code>.</p>
+
+          <pre class="prettyprint linenums">
+&lt;button type="button" 
+  data-toggle="modal" 
+  data-title="This is the title of the modal"
+  data-titledescription="description of title"
+  data-bodyhtml="#some_id"
+  data-footerhtml="#some_other_id"
+>Launch modal&lt;/button>
+          </pre>
+
           <h3>Via JavaScript</h3>
-          <p>Call a modal with id <code>myModal</code> with a single line of JavaScript:</p>
-          <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">(</span><span class="pln">options</span><span class="pun">)</span></li></ol></pre>
+          <p>You can call a modal with id <code>myModal</code> within a JavaScript function:</p>
+          <pre class="prettyprint linenums">
+Lets say you have:
+&lt;a href="#" class="btn btn-secondary" id="launchMyModal">Launch my modal&lt;/a>
+
+A javascript function would be used to handle the click event:
+
+$("#launchMyModal").click(function(event){
+  event.preventDefault();
+  $('#myModal').modal('show');
+})
+
+Explanation:
+$("#launchMyModal") refers to the element that is the trigger to launching the modal.
+event.preventDefault(); prevents the browser from actually attempting to go to #myModal as it would normaly would.
+$('#myModal').modal('show'); is what actually activates the modal.
+('show') is one of a number of methods detailed below.
+
+
+Tip: 
+&lt;div id="myModal" ... should have a class="hide" so that it remains hidden until it is activated.
+</a>
+
+          </pre>
+
+
+          <h3>Generic modal via JavaScript</h3>
+          <p>You can call the generic modal with within a JavaScript function:</p>
+          <pre class="prettyprint linenums">
+Lets say you have:
+&lt;a href="#" class="btn btn-secondary" id="launchMyModal">Launch my modal&lt;/a>
+
+A javascript function would be used to handle the click event:
+
+$("#launchMyModal").click(function(event){
+  event.preventDefault();
+  Sherpa.publish("modal", {
+    title:'Title of Modal (optional)',
+    title_description:'description that goes under title (optional)',
+    body_html: '#some_id',
+    footer_html: '#some_other_id',
+  })
+
+})
+
+Explanation:
+$("#launchMyModal") refers to the element that is the trigger to launching the modal.
+event.preventDefault(); prevents the browser from actually attempting to go to #myModal as it would normaly would.
+Sherpa.publish("modal" activates the generic modal and lets you pass configuration attributes which match the same as the html attributes described above.
+
+
+Tip: 
+&lt;div id="some_id" and &lt;div id="some_other_id" used for the body and footer should have a class="hide" so that they remain hidden.
+</a>
+
+          </pre>
 
           <h3>Options</h3>
           <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>

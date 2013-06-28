@@ -43,6 +43,7 @@ SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = true; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
+SHERPA.ENABLE_GLOBAL_MODAL = true; //automatically inserts a global modal component that can be used at any time
 
 // CSS Configuration
 SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/assets/sherpa/css/";

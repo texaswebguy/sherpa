@@ -221,8 +221,13 @@ Sherpa.ready("sherpai18n", function(){
 
 		//TODO Add slide function
 
-
+	//global modal 
 	});
+	if(SHERPA.ENABLE_GLOBAL_MODAL) {
+		var b = document.getElementsByTagName('body')[0],
+   		modal = "<div data-bind=\"component: {name:'modal',type:'global'}\"></div>";
+   		$(b).append(modal);
+	}
 
 });
 
