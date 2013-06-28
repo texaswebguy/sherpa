@@ -1,0 +1,262 @@
+<h2 class="sherpa">Dropdown menus</h2>
+					<hr>
+					<h3 class="sherpa">Example</h3>
+					<p>Toggleable, contextual menu for displaying lists of links. Fully integrated with data, the same code with different data refference will generate completely different menus.</p>
+					<div class="sherpa-docs-example">
+						<div class="dropdown clearfix">
+						  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" style="display: block; position: static; margin-bottom: 20px; *width: 180px;">
+						    <li><a tabindex="-1" href="#">Action</a></li>
+						    <li><a tabindex="-1" href="#">Another action</a></li>
+						    <li><a tabindex="-1" href="#">Something else here</a></li>
+						    <li class="divider"></li>
+						    <li><a tabindex="-1" href="#">Separated link</a></li>
+						  </ul>
+						</div>
+					</div>
+
+
+
+				<h3 class="sherpa">Dropdown triggers</h3>
+					<p>Dropdowns are triggered by various elements such as links and buttons</p>
+					<div class="da-all sherpa-docs-example">
+						<div class="da4-da6 ta1-ta3 ma1">
+							<div class="btn-group">
+								<a href="#" data-toggle="dropdown" class="btn btn-link">From a link <span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							    <li><a tabindex="-1" href="#">Action</a></li>
+							    <li><a tabindex="-1" href="#">Another action</a></li>
+							    <li><a tabindex="-1" href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a tabindex="-1" href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+						<div class="da7-da9 ta4-ta6 ma2">
+							<div class="btn-group">
+								<a href="#" class="btn btn-tertiary dropdown-toggle" data-toggle="dropdown">From a button <span class="caret"></span></a>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu" >
+							    <li><a tabindex="-1" href="#">Action</a></li>
+							    <li><a tabindex="-1" href="#">Another action</a></li>
+							    <li><a tabindex="-1" href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a tabindex="-1" href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+						<div class="da10-da12 ta7-ta9 ma3">
+							<div class="btn-group btn-split">
+								  <button class="btn btn-secondary">From a Split Button</button>
+								  <button class="btn btn-secondary dropdown-toggle" data-toggle="dropdown">
+								    <span class="caret"></span>
+								  </button>
+							  <ul class="dropdown-menu" role="menu" aria-labelledby="dropdownMenu">
+							    <li><a tabindex="-1" href="#">Action</a></li>
+							    <li><a tabindex="-1" href="#">Another action</a></li>
+							    <li><a tabindex="-1" href="#">Something else here</a></li>
+							    <li class="divider"></li>
+							    <li><a tabindex="-1" href="#">Separated link</a></li>
+							  </ul>
+							</div>
+						</div>
+						
+					</div>
+
+
+<p></p>
+
+
+
+
+
+          <h3 class="sherpa da-clear ta-clear ma-clear">Markup</h3>
+          <p>Rather than using the HTML provided in Bootstrap, Sherpa has custom code to better simplify and structure HTML. Paired with a data reference such as the one below, one custom tag takes care of all of the work.</p>
+
+
+<div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : simple_links_data,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}"></div>
+
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt; div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : viewModel.simple_links_data,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}">&lt;/div>
+</pre>
+
+<h4>Dropdown button with minimal markup (no data) </h4>
+<div data-bind="component: { name :'dropdown', type :'button'}"></div>
+
+
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+&lt;div data-bind="component: { name :'dropdown', type :'button'}">&lt;/div>
+</pre>
+
+
+<h3 class="sherpa da-clear ta-clear ma-clear">Data behind dropdown</h3>
+          <p>Puting data behind the dropdown makes this component dynamic and always easy to change without altering HTML code. Below is an example of a data object provided by the  <code>simple_links_data</code> reference above. This structure should be added to the prototype application <a href="assets/js/app.js" class="code_sample_popup" >assets/js/app.js</a>.</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+simple_links_data : {
+    label : 'Sample links',
+    items: [
+        {
+            id : "action_1",
+            label : "Action 1",
+            url : "#action"
+        },
+        {
+            id : "action_2",
+            label : "Action 2",
+            url : "#action"
+        },
+        {
+            id : "action_3",
+            label : "Action 3",
+            url : "#action",
+            disabled: true
+        },
+        {
+            divider :  true
+        },
+        {
+            id : "action_4",
+            label : "Action 4",
+            url : "#action"
+        }
+    ]
+}
+</pre>
+
+
+          <h3 class="sherpa">Options</h3>
+          <p>You may have noticed the data-bind tag above with various elements.</p>
+
+          <h4 class="sherpa">name:</h4>
+          <p>Whatever you put in the name, the system will look for the directory "components/{name}". In this case, "dropdown" will set the component directory to <code>components/dropdown/</code>.</p>
+
+          <h4 class="sherpa">type:</h4>
+          <p>Type provides options for the trigger mechanism. Whatever you see in the type corresponds to an HTML file name inside the component directory. So if type is set to "button" then the system will get <code>components/dropdown/button.html</code></p>
+
+          <p>The current types available for dropdown are:</p>
+          <ul>
+          	<li>button</li>
+          	<li>button-split</li>
+          	<li>button-select</li>
+          	<li>link</li>
+          </ul>
+          <em>Note: You can create your own version of a dropdown by creating a new file in the same directory as the component name. </em>
+          <h4 class="sherpa">options:</h4>
+          <p>Options provide further customization of each type. Defualt options will be in place if options is not provided.The current options available for dropdowns are:</p>
+          <ul>
+          	<li>color: 
+          		<ul>
+		        	<li>primary</li>
+		        	<li>secondary</li>
+		        	<li>tertiary (default)</li>
+		        </ul>          			
+          	</li>
+          	<li>size: 
+          		<ul>
+		        	<li>large</li>
+		        	<li>default (default)</li>
+		        	<li>small</li>
+		        	<li>mini</li>
+		        </ul>          			
+          	</li>
+          	<li>orientation: 
+          		<ul>
+		        	<li>dropdown (default)</li>
+		        	<li>dropup</li>
+		        </ul>          			
+          	</li>
+          </ul>
+
+
+          <h3 class="sherpa">Sub menus on dropdowns</h3>
+          <p>To add an extra level of dropdown menus the markup already takes care of it.  All you have to do is have a different data set with nested elements.</p>
+
+<div data-bind="component: { 
+	name :'dropdown', 
+	type :'button',
+	data : $root.sample_links_complex,
+	options:{
+		color : 'primary',
+		size : 'large'
+	}
+}"></div>
+
+<p>&nbsp;</p>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+sample_complex_links : {
+    label : 'Sample complex links',
+    items: [
+        {
+            id : "action_1",
+            label : "Action 1",
+            url : "#action"
+        },
+        {
+            id : "action_2",
+            label : "Action 2",
+            url : "#action"
+        },
+        {
+            id : "action_3",
+            label : "Action 3",
+            url : "#action",
+            disabled: true
+        },
+        {
+            divider :  true
+        },
+        {
+            id : "action_4",
+            label : "Action 4",
+            url : "#action",
+            items: [
+                {
+            		id : "action_4_1",
+                    label : "Second Level Action 1",
+                    url : "#action"
+                },
+                {
+            		id : "action_4_2",
+                    label : "Second Level Action 2",
+                    url : "#action"
+                },
+                {
+            		id : "action_4_3",
+                    label : "Second Level Action 3",
+                    url : "#action",
+                    disabled: true
+                }
+            ]
+        }
+    ]
+}
+</pre>
+
+          <h3 class="sherpa">Localization of dropdown menus</h3>
+          <p>In the sample data sets above you will notice the content for each menu items and button/link text. If you want all these to be localized, set the value of each labels to a textkey:</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+
+label : Sherpa.msg('textkey_label'),
+
+</pre>
+
+		          <h3 class="sherpa">Dropdown Select Button</h3>
+		          <!-- >TODO: need to explain and show how a dropdown select works.</-->
