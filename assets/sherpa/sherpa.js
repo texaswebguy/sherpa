@@ -108,7 +108,7 @@ return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 // GLOBAL Sherpa Configuration:
 //______________________________________________________________________________________
 
-Sherpa.VERSION = "0.2";
+Sherpa.VERSION = "0.3-6.28.2013";
 var SHERPA = {};
 
 if(SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG) {
