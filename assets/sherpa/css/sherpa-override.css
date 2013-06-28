@@ -3423,6 +3423,7 @@ specify all the colors to override their intent to color them */
 
 .modal {
   padding:20px;
+  border: none; /* per issue 52 */
 }
 
 .modal-header .close:before {
