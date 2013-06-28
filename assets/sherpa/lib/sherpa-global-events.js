@@ -57,10 +57,19 @@ function breadcrumb(){
   	 var path = location.hash.split("/");
   	 path[0] = "home";
   	 $('html').attr('id',path[path.length-1]);
-  	 return path;
+  	 var breadcrumbs = [];
+  	 _.each(path, function(id){
+  	 	var temp_obj = {
+  	 		id:id,
+  	 		label_textkey:'text_breadcrumb_'+id,
+  	 		label: _.str.humanize(id)
+  	 	}
+  	 	breadcrumbs.push(temp_obj);
+  	 })
+  	 return breadcrumbs;
   } else {
   	$('html').attr('id',"home");
-  	return ["home"];
+  	return ["{id:'home',label_textkey:'text_breadcrumb_home',label:'Home'}"];
   }
 }
 
