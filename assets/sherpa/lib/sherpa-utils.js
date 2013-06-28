@@ -515,6 +515,36 @@ Sherpa.session.storeCleanUp = function(){
 	}
 }
 
+
+// Project specific information
+Sherpa.ready("localJSApp", function() {
+	window.setTimeout(function(){
+		Sherpa.request({
+			resourceId: "project_info", 
+			data: {
+			  "filename" : viewModel.core_config.project_info_filename
+			},
+			success: function(responseCSV){
+			  //Parse will depend on the data.parseTo options.
+			  var table_obj = {};
+			  var data_obj = $.csv.toObjects(responseCSV);
+			  table_obj.keys = _.keys(data_obj[0]);
+			  table_obj.items = [];
+			  data_obj.shift();
+			  console.log("data_obj",data_obj)
+			  _.each(data_obj, function(item){
+			    table_obj.items.push(_.values(item));
+			  });
+			  viewModel.projectInfo = ko.observable(table_obj);
+			  viewModel.project_title = table_obj.items[1][1]+" - "+table_obj.items[0][1];
+			  $('.project_title').text(viewModel.project_title)
+			}
+		});
+
+	},300);
+});
+
+
 Sherpa.counter("Sherpa Utils");
 
 

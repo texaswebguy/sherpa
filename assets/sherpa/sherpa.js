@@ -292,7 +292,7 @@ Sherpa.ready("dateFormat", function(){
 	// Need to wait for i18n to load so that messages are in context (viewModel.content)
 	Sherpa.ready("sherpai18n", function(){
 
-
+		
 		// load local app
 		Sherpa.js(
 			{ localJSApp: SHERPA.JS_PATH+SHERPA.PROTOTYPE_APP}

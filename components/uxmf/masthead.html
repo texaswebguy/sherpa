@@ -9,14 +9,18 @@
 
 
     <div class="da9-da12 ta7-ta9 ma-all right-text">
-      <a href="#"
+      <a href="#project_info_modal"
         id="project_info" 
         class="btn btn-tertiary" 
-        rel="popover" 
-        selector=".project_info"
-        data-placement="bottom">Project Information</a>
+        data-toggle="modal"
+        >Project Information</a>
     </div>
-    <div class="hide project_info" data-bind="component: {name:'uxmf', type:'project_info'}"></div>
+
+
+
+
+
+    <div data-bind="component: {name:'uxmf', type:'project_info'}"></div>
   </div>
 
 <script type="text/javascript">
