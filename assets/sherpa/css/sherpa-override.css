@@ -3520,11 +3520,11 @@ specify all the colors to override their intent to color them */
 }
 
 
-[data-toggle=collapse].collapsed:before {
+h3[data-toggle=collapse].collapsed:before {
   content:"'";
 }
 
-[data-toggle=collapse]:before {
+h3[data-toggle=collapse]:before {
   font-family: 'icon-ui';
   speak: none;
   font-style: normal;
