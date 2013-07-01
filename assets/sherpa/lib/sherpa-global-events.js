@@ -1,6 +1,7 @@
 Sherpa.counter("Sherpa Global Events");
 //sherpa-global-events
 
+
 check_ff();
 
 $(window).resize(function() {
@@ -118,9 +119,23 @@ function setUpAside(){
 	});
 	$('.nav.nav-list.sherpa-docs-sidenav:visible li:first-child').addClass('active');
 
-
-
 }
 
+Sherpa.scope(".accordion", function(){
+	this.listen("[data-toggle=collapse]","click",function(event){
+		event.preventDefault();
+		event.stopPropagation(); //overrides the default bootstrap action for the accordion version
+		//slide up all the link lists
+		$(event.currentTarget).parents(".accordion").find("div.collapsible").slideUp('fast');
+		$(event.currentTarget).parents(".accordion").find("[data-toggle=collapse]").addClass("collapsed");
+		$(event.currentTarget).parents(".accordion").find("div.collapsible").removeClass("in");
+		//slide down the link list below the h3 clicked - only if its closed
+		if(!$(event.currentTarget).next().is(":visible")) {
+			$(event.currentTarget).next().slideDown('fast');
+			$(event.currentTarget).next().addClass("in");
+			$(event.currentTarget).removeClass("collapsed");
+		}
+	});
+});
 
 Sherpa.counter("Sherpa Global Events");

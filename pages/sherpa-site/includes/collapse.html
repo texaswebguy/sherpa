@@ -122,11 +122,12 @@
 </pre>				
 
 					<h3 class="sherpa">Accordion group with h3 headlines and optional "collapse-ruled" class</h3>
+
 					<div class="accordion">
-						<h3 data-toggle="collapse" data-target="#accordion-1-ruled" class="collapsed collapse-ruled">
+						<h3 data-toggle="collapse" class="collapse-ruled">
 						  Collapsible area from an h3 headline 
 						</h3>
-						<div id="accordion-1-ruled" class="collapse">
+						<div class="collapsible">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -134,10 +135,10 @@
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
-						<h3 data-toggle="collapse" data-target="#accordion-2-ruled" class="collapsed collapse-ruled">
+						<h3 data-toggle="collapse" class="collapsed collapse-ruled">
 						  Collapsible area from an h3 headline
 						</h3>
-						<div id="accordion-2-ruled" class="collapse">
+						<div class="hide collapsible">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -145,10 +146,10 @@
 							cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
-						<h3 data-toggle="collapse" data-target="#accordion-3-ruled" class="collapsed collapse-ruled">
+						<h3 data-toggle="collapse" class="collapsed collapse-ruled">
 						  Collapsible area from an h3 headline
 						</h3>
-						<div id="accordion-3-ruled" class="collapse">
+						<div class="hide collapsible">
 							<p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
 							tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
 							quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
@@ -157,26 +158,35 @@
 							proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 						</div>
 					</div>
+
+
+					<style>
+
+					</style>
 <p>&nbsp;</p>
 					<h4 class="sherpa">Markup</h4>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+
+Note: 
+ - No need to provide data-target
+ - use of hide and collapsible classes for each content associated with trigger	
 &lt;div class="accordion">
-	&lt;h3 data-toggle="collapse" data-target="#collapse-1" class="collapsed collapse-ruled">
+	&lt;h3 data-toggle="collapse" class="collapsed collapse-ruled">
 	  ...
 	&lt;/h3>
-	&lt;div id="collapse-1" class="collapse">
+	&lt;div class="collapsible">
 		&lt;p>...&lt;/p>
 	&lt;/div>
-	&lt;h3 data-toggle="collapse" data-target="#collapse-2" class="collapsed collapse-ruled">
+	&lt;h3 data-toggle="collapse" class="collapsed collapse-ruled">
 	  ...
 	&lt;/h3>
-	&lt;div id="collapse-2" class="collapse">
+	&lt;div class="hide collapsible">
 		&lt;p>...&lt;/p>
 	&lt;/div>
-	&lt;h3 data-toggle="collapse" data-target="#collapse-3" class="collapsed collapse-ruled">
+	&lt;h3 data-toggle="collapse" class="collapsed collapse-ruled">
 	  ...
 	&lt;/h3>
-	&lt;div id="collapse-3" class="collapse">
+	&lt;div class="hide collapsible">
 		&lt;p>...&lt;/p>
 	&lt;/div>		
 &lt;/div>

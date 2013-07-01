@@ -3490,32 +3490,41 @@ specify all the colors to override their intent to color them */
   margin-bottom: 10px;
 }
 
-
 /* Collapse
 -------------------------------------------------- */
-h3[data-toggle=collapse] {
+[data-toggle=collapse] {
   cursor:pointer;
 }
 
-h3[data-toggle=collapse].collapse-ruled {
+[data-toggle=collapse].collapse-ruled {
   border-top:1px solid #ccc;
   padding-top:10px;
-    clear:both;
-}
-h3[data-toggle=collapse].collapse-ruled + .collapse + h3[data-toggle=collapse].collapse-ruled,
-h3[data-toggle=collapse].collapse-ruled + .collapse.in + h3[data-toggle=collapse].collapse-ruled {
-    border-top: none;
+  clear:both;
 }
 
-h3[data-toggle=collapse].collapse-ruled + .collapse {
-    border-bottom:1px solid #ccc;
-    clear:both;
+[data-toggle=collapse].collapsed.collapse-ruled {
+  border-top:1px solid #ccc;
+  border-bottom:1px solid #ccc;
+  padding-top:10px;
+  padding-bottom:10px;
+  margin-bottom:0px;
+  clear:both;
+    margin-bottom:-1px;
+
 }
-h3[data-toggle=collapse].collapsed:before {
+
+.collapse-ruled + .in.collapse, .collapse-ruled + .collapsible {
+  border-bottom:1px solid #ccc;
+  margin-bottom:-1px;
+  clear:both;
+}
+
+
+[data-toggle=collapse].collapsed:before {
   content:"'";
 }
 
-h3[data-toggle=collapse]:before {
+[data-toggle=collapse]:before {
   font-family: 'icon-ui';
   speak: none;
   font-style: normal;
