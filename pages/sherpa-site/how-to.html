@@ -30,7 +30,7 @@
 					<p class="lead">Before downloading, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/" >Sublime Text</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the Sherpa files.</p>
 
 					<h3 class="sherpa">Download starter kit</h3>
-					<p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and starter-template.html.</p>
+					<p><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and html templates.</p>
 					<a href="https://github.com/DellGDC/sherpa/archive/master.zip" >
             <button class="sherpa-btn" type="button">Download starter kit</button>
           </a>
@@ -49,24 +49,57 @@
 					<pre class="prettyprint">
   sherpa/
   ├── assets/
-      ├── starter_template.html
       ├── assets/
       │   ├── config/
       │   ├── content/
       │   ├── css/
       │   │    ├──doc.css
       │   ├── data/
-      │   ├── fonts/
       │   ├── img/
       │   ├── js/
       │   │    ├──app.js
       │   ├── sherpa/
       │   ├── xref/
-
-      
+      ├── components/
+      │   ├── alerts/
+      │   ├── aside/
+      │   ├── dropdown/
+      │   ├── footer/
+      │   ├── masthead/
+      │   ├── modal/
+      │   ├── mycomponent/
+      │   ├── page_title/
+      │   ├── table/
+      │   ├── tabs/
+      │   ├── uxmf/
+      ├── includes/
+      │   ├── sample/
+      ├── pages/
+      │   ├── sherpa-site/
+      │   ├── templates/
+      │   ├── tutorial/
+      ├── index.html
+      ├── sample_project_index.html
+      ├── site.html
 				</pre>
 
-				<p>This is the most basic form of Sherpa: These files allow for quick drop-in usage in nearly any web project.</p>
+				<p>Please review the explanation of files and folders below:</p>
+				<ul>
+					<li><strong>assets</strong>: Here all prototype and framework support files are stored.</li>
+					<li><strong>assets/config</strong>: Config is a folder where configuration files for each prototype application is stored in for of JavaScript (.js) files.</li>
+					<li><strong>assets/content</strong>: Contains messages files that are in JSON format.  All files follow the same naming convention which is messages_locale.json. locale can be a language or local code such as""en" or "en_US" respectively. </li>
+					<li><strong>assets/css</strong>: These are the project specific css files. You will see sherpa_overrides and bootstrap files. Please ignore these. They are here because of legacy purposes but will be removed eventually.  The key document here is doc.css which by default it automatically gets loaded with every prototype page.</li>
+					<li><strong>assets/data</strong>: A place where sample data can be stored in any format such as json, csv, etc.</li>
+					<li><strong>assets/img</strong>: General location for all project specific images.  The images in this directory are related to the Sherpa website.  They will eventually be removed so that the folder is completely empty and only have project specific images.</li>
+					<li><strong>assets/js</strong>:  General location for all project JavaScript files.  You should notice a sherpa-site.js file that is related to the Sherpa website.  This file will eventually be removed so that the folder is completely empty and only have project specific JavaScript files. app.js automatically gets loaded with every prototype page. app.js contains sample data that will be eventually deleted.</li>
+					<li><strong>assets/xref</strong>: Contains cross reference files that are in JSON format.  All files follow the same naming convention as messages like resources_locale.json. locale can be a language or local code such as""en" or "en_US" respectively. These files are used to provide link and image references.</li>
+					<li><strong>assets/sherpa</strong>: This is the core files for the Sherpa prototyping framework.  When updating the core to a new release, this is the folder that would bereplaced.</li>
+					<li><strong>components</strong>: All established components will be in this forlder. No project work should be done in this folder unless the work is to improve or create established components.</li>
+					<li><strong>includes</strong>: Very similar to components but project specific.  It is possible that an include in a particular project be made into a component.</li>
+					<li><strong>pages</strong>: These are virtual pages that can be organized in any number of folders.  Notice the templates folders which has page definitions that help you achieve certain layouts. These can be copied into other folders and be used.</li>
+					<li><strong>index.html</strong>: index.html and site.html are exactly the same. site.html is used for when index.html is wre writen from sample_project_index.html </li>
+					<li><strong>sample_project_index.html</strong>: sample_project_index.html can be renamed as index.html</li>
+				</ul>
 
 					<hr>
 				</article>
