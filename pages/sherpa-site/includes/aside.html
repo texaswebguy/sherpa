@@ -1,9 +1,12 @@
-					<h2 class="sherpa">Aside</h2>
-					<hr>
+			<h2 class="sherpa">Aside</h2>
+			<hr>
 
           	<p>An aside is used as main page navigation in two forms: a list (which uses anchors to scroll to sections) and tabs which flip between "pages". </p>
 
           	<p>This page uses aside navigation but it is customized for this site's use. <a href="#" class="showDefaultAside">See default look.</a><a href="#" class="hideDefaultAside hide">Hide default look.</a> </p>
+
+          	<p>In addition, the default look can be modified to look dramatically different. <a href="#" class="showFancyAside">See enhanced look.</a><a href="#" class="hideFancyAside hide">Hide enhanced look.</a> </p>
+
 
             <!-- TODO when we make this a component we will have the back to top link as an option -->
 
@@ -30,3 +33,184 @@
 </pre>
 
 <p>&nbsp;</p>
+
+
+<script type="text/javascript">
+	setUpAside();
+	Sherpa.scope('*',function(){
+		this.listen('.showDefaultAside', 'click', function(event){
+			event.preventDefault();
+			$(event.currentTarget).hide();
+			$('.hideDefaultAside').show();
+			$('.hideFancyAside').hide();
+			$('.showFancyAside').show();
+			$('.aside').addClass('sherpa-docs-example');
+			$('.aside').removeClass('aside-enhanced');
+		});
+		this.listen('.hideDefaultAside', 'click', function(event){
+			event.preventDefault();
+			$(event.currentTarget).hide();
+			$('.showDefaultAside').show();
+			$('.aside').removeClass('sherpa-docs-example');
+		});
+		this.listen('.showFancyAside', 'click', function(event){
+			event.preventDefault();
+			$(event.currentTarget).hide();
+			$('.hideFancyAside').show();
+			$('.aside').addClass('aside-enhanced');
+			$('.showDefaultAside').show();
+			$('.hideDefaultAside').hide();
+			$('.aside').removeClass('sherpa-docs-example');
+		});
+		this.listen('.hideFancyAside', 'click', function(event){
+			event.preventDefault();
+			$(event.currentTarget).hide();
+			$('.showFancyAside').show();
+			$('.aside').removeClass('aside-enhanced');
+		});
+	});
+</script>
+
+<style>
+
+
+/* Sidenav for Docs
+-------------------------------------------------- */
+
+.aside.aside-enhanced  aside .nav-list > .active > a, .aside.aside-enhanced aside .nav-list > .active > a:hover {
+    /*color: #D4CA9B;
+    background-color: #12120F;*/
+    color: #12120F;
+    background-color: #D4CA9B;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+   /*background: pink;*/
+   /*width:100%;*/
+   /*display: block;
+   margin:0 auto;*/
+  }
+
+  .aside.aside-enhanced aside .nav > li > a:hover {
+    text-decoration: none;
+    background-color: #f7f6ed;
+  }
+
+  aside .nav.affix {
+    top:45px;
+  }
+  .tablet .aside.aside-enhanced  aside .nav.affix li a, .mobile .aside.aside-enhanced  aside .nav.affix li a{
+    display:none;
+  }
+  .tablet .aside.aside-enhanced  aside .nav.affix, .mobile .aside.aside-enhanced aside .nav.affix {
+    width:100%;
+    top: 20px;
+    left: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index:9998;
+  }
+  .tablet .aside.aside-enhanced  aside .nav.affix li.active a, .mobile .aside.aside-enhanced  aside .nav.affix li.active a, .tablet .aside.aside-enhanced  aside .nav.affix.open li a, .mobile .aside.aside-enhanced  aside .nav.affix.open li a {
+    display:block;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+  }
+  .tablet .aside.aside-enhanced  aside .navside.affix li.active a:after, .mobile .aside.aside-enhanced  aside .nav.affix li.active a:after {
+    font-family: 'icon-dell-mini';
+    content:"s";
+    color:#fff;
+    float:right;
+  }
+
+
+  .aside.aside-enhanced  aside .nav li > a {
+    display: block;
+    /*width: 190px \9;*/
+    margin: 0 0 -1px;
+    padding: 8px 14px;
+    border: 1px solid #e5e5e5;
+  }
+
+  .aside.aside-enhanced  aside .nav li:first-child > a {
+    -webkit-border-radius: 6px 6px 0 0;
+       -moz-border-radius: 6px 6px 0 0;
+            border-radius: 6px 6px 0 0;
+  }
+
+  .aside.aside-enhanced  aside .nav li:last-child > a {
+    -webkit-border-radius: 0 0 6px 6px;
+       -moz-border-radius: 0 0 6px 6px;
+            border-radius: 0 0 6px 6px;
+  }
+
+  .aside.aside-enhanced  aside .nav .active > a {
+    position: relative;
+    z-index: 2;
+    padding: 9px 15px;
+    border: 0;
+  }
+
+
+
+.aside.aside-enhanced {
+	margin-bottom: 50px;
+	padding: 0;
+}
+
+.aside.aside-enhanced aside .nav-list h2 {
+	-webkit-margin-before: 0px; /*override user agent sytle sheet*/
+	-webkit-margin-after: 0em !important; /*override user agent sytle sheet*/
+	margin-left: 0px;
+	padding: 15px 30px 0 15px;
+}
+.aside.aside-enhanced aside .nav-list ul {
+	list-style-type: none;
+	margin: 0; /*added by Kathy Emsoff to override margin added to ul, ol in Sherpa-override.css*/
+}
+.aside.aside-enhanced aside .nav-list p {
+	-webkit-margin-before: 0px; /*override user agent sytle sheet*/
+	-webkit-margin-after: 0em !important; /*override user agent sytle sheet*/
+	padding: 0 30px 20px 15px;
+}
+
+/*for desktop*/
+/* ******************************************************************************* */
+.aside.aside-enhanced aside ul.nav.nav-list {
+	/*text-decoration: none;
+	background-color: #444;
+	box-shadow: inset -10px 0px 10px -9px rgba(0, 0, 0, .8);
+	border-bottom: #666 1px solid;*/
+
+} 
+.aside.aside-enhanced aside ul.nav.nav-list li {		
+	text-decoration: none;
+	background-color: #444;
+	box-shadow: inset -10px 0px 10px -9px rgba(0, 0, 0, .8);
+	border-bottom: #666 1px solid;
+}
+.aside.aside-enhanced aside ul.nav.nav-list li:hover {
+	background-color: #cce7f3; /*light blue*/
+	box-shadow: inset -10px 0px 10px -10px rgba(0, 0, 0, .35);
+}
+.aside.aside-enhanced aside ul.nav.nav-list li:last-child {	
+	/*border-bottom-color: transparent;	*/			
+	border-bottom: 0px;
+	-webkit-border-bottom-left-radius: 20px;
+}
+.aside.aside-enhanced aside ul.nav.nav-list li a {	
+	text-decoration: none;
+	color: #fff;
+}
+.aside.aside-enhanced aside ul.nav.nav-list li a:hover {
+	color: #444;
+	text-decoration: none;
+}
+.aside.aside-enhanced aside  ul.nav.nav-list .active {
+	background-color: #007db8;
+	box-shadow: inset -10px 0px 10px -10px rgba(0, 0, 0, .7);
+}
+
+
+
+
+</style>

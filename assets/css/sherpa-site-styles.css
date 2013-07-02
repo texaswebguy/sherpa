@@ -374,14 +374,17 @@ ul.unstyled.icons li {
     color:#fff;
   }
 
-
+  .nav.nav-list {
+    padding-left:0px;
+    padding-right:0px;
+  }
 
   .nav > li > a:hover {
     text-decoration: none;
     background-color: #f7f6ed;
   }
 
-  .sherpa-docs-sidenav {
+  aside, aside .nav {
     /* width: 100%; messes up with affix */
     margin: 20px 0 40px 0;
     padding: 0;
@@ -390,13 +393,13 @@ ul.unstyled.icons li {
        -moz-border-radius: 6px;
             border-radius: 6px;
   }
-  .sherpa-docs-sidenav.affix {
+  aside .nav.affix {
     top:45px;
   }
-  .tablet .sherpa-docs-sidenav.affix li a, .mobile .sherpa-docs-sidenav.affix li a{
+  .tablet aside .nav.affix li a, .mobile aside .nav.affix li a{
     display:none;
   }
-  .tablet .sherpa-docs-sidenav.affix, .mobile .sherpa-docs-sidenav.affix {
+  .tablet aside .nav.affix, .mobile aside .nav.affix {
     width:100%;
     top: 20px;
     left: 0px;
@@ -405,13 +408,13 @@ ul.unstyled.icons li {
     border-radius: 0;
     z-index:9998;
   }
-  .tablet .sherpa-docs-sidenav.affix li.active a, .mobile .sherpa-docs-sidenav.affix li.active a, .tablet .sherpa-docs-sidenav.affix.open li a, .mobile .sherpa-docs-sidenav.affix.open li a {
+  .tablet aside .nav.affix li.active a, .mobile aside .nav.affix li.active a, .tablet aside .nav.affix.open li a, .mobile aside .nav.affix.open li a {
     display:block;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
   }
-  .tablet .sherpa-docs-sidenav.affix li.active a:after, .mobile .sherpa-docs-sidenav.affix li.active a:after {
+  .tablet aside .navside.affix li.active a:after, .mobile aside .nav.affix li.active a:after {
     font-family: 'icon-dell-mini';
     content:"s";
     color:#fff;
@@ -419,7 +422,7 @@ ul.unstyled.icons li {
   }
 
 
-  .sherpa-docs-sidenav > li > a {
+  aside .nav li > a {
     display: block;
     /*width: 190px \9;*/
     margin: 0 0 -1px;
@@ -427,19 +430,19 @@ ul.unstyled.icons li {
     border: 1px solid #e5e5e5;
   }
 
-  .sherpa-docs-sidenav > li:first-child > a {
+  aside .nav li:first-child > a {
     -webkit-border-radius: 6px 6px 0 0;
        -moz-border-radius: 6px 6px 0 0;
             border-radius: 6px 6px 0 0;
   }
 
-  .sherpa-docs-sidenav > li:last-child > a {
+  aside .nav li:last-child > a {
     -webkit-border-radius: 0 0 6px 6px;
        -moz-border-radius: 0 0 6px 6px;
             border-radius: 0 0 6px 6px;
   }
 
-  .sherpa-docs-sidenav > .active > a {
+  aside .nav .active > a {
     position: relative;
     z-index: 2;
     padding: 9px 15px;
