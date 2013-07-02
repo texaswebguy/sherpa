@@ -20,10 +20,10 @@
 
 
     Sherpa.componentJS.modal_global_js = function(options) {
-      console.log("body html",$(options.body_html).html())
+      //console.log("body html",$(options.body_html).html())
       try {
         if(_.isObject(options) && !options.modal_html_selector) {
-          console.log("correct way", options)
+          //console.log("correct way", options)
           if (options.body_html) {
             $('#generic_modal .modal-body').html($(options.body_html).html());
           } else if(options.body) {

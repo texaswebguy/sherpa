@@ -5,7 +5,7 @@
 <div class="modal hide fade" id="project_info_modal">
   <div class="modal-header">
     <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
-    <h3>Project Information: <span data-bind="text: project_title"></span></h3>
+    <h3>Project Information: <span data-bind="text: (function(){try{return project_title} catch(err){return ''}})()" class="project_title"></span></h3>
   </div>
   <div class="modal-body">
     <table class="table table-striped">
