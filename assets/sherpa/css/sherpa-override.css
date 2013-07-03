@@ -1908,6 +1908,23 @@ h4.container-title {
     margin-bottom: 60px;
   }
 
+.top-offset-mini {
+    margin-top: 10px;
+  }
+
+.top-offset-small {
+    margin-top: 20px;
+  }
+
+.top-offset-medium {
+    margin-top: 40px;
+  }
+
+.top-offset-large {
+    margin-top: 60px;
+  }
+
+
 
 
 /* COLORS from sherpa_override.css
