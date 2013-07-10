@@ -1,6 +1,66 @@
 
 
-  .sherpaReady body {opacity: 1;}
+  .sherpaReady body {
+    opacity: 1;
+}
+
+
+.alert-sherpa {
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #000;
+border: 1px solid rgba(0, 0, 0, 0.15);
+background-color: rgb(255, 255, 0);
+padding: 10px;
+text-shadow: none;
+margin-bottom: 20px;
+-webkit-border-radius: 5px;
+-moz-border-radius: 5px;
+border-radius: 5px;
+}
+
+
+code, pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #000;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
+
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+}
+
+
+pre {
+  display: block;
+  padding: 9.5px;
+  margin: 0 0 10px;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #f5f5f5;
+  border: 1px solid #ccc;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  -webkit-border-radius: 4px;
+  -moz-border-radius: 4px;
+  border-radius: 4px;
+}
+
+
+
+
+
 
 /* The main wrapper - don't touch */
     .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none; overflow:hidden;}
@@ -55,18 +115,22 @@
 /* Links */
 
 a {
-  color: #F0592C;
+/*  color: #0085c3;*/
+  color: #3434ff;
   text-decoration: none;
 }
 
 a:hover {
-  color: #F0592C;
+/*  color: #0085c3;*/
+  color: #3434ff;
   text-decoration: underline;
 }
 
 a:hover, a:active {
   outline: 0;
 }
+
+
 
 .example a {
   color: #0085c3;
@@ -119,14 +183,81 @@ a:hover, a:active {
 }
 
 
+
+
+
+.label-sherpa, .badge-sherpa {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+display: inline-block;
+padding: 2px 6px;
+font-size: 11.844px;
+font-weight: bold;
+line-height: 14px;
+color: #ffffff;
+vertical-align: baseline;
+white-space: nowrap;
+text-shadow: 0 -1px 0 rgba(0, 0, 0, 0);
+background-color: #000;
+}
+
+
+strong.sherpa {
+font-weight: bold;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #000;
+}
+
+
+ul.sherpa {
+line-height: 20px;
+color: #000;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+}
+
+
+
+small.sherpa {
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #000;
+font-size: 12px;
+font-weight: normal;
+line-height: 16px;
+}
+
+p.sherpa {
+margin: 0 0 20px 0;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #000;
+}
+
+
+p.sherpa-white {
+margin: 0 0 20px 0;
+font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+color: #fff;
+}
+
+
+
 /* Sherpa headings*/
 h1.sherpa,h2.sherpa,h3.sherpa,h4.sherpa,h5.sherpa,h6.sherpa {
   margin: 10px 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  color: #12120F;
+  color: #000;
   text-rendering: optimizelegibility;
 }
+
+
+h1.sherpa-white,h2.sherpa-white,h3.sherpa-white,h4.sherpa-white,h5.sherpa-white,h6.sherpa-white {
+  margin: 10px 0;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+  font-weight: bold;
+  color: #fff;
+  text-rendering: optimizelegibility;
+}
+
+
 
 h1.sherpa {font-size: 60px;line-height: 70px;}
 h1.featured {font-size: 120px; line-height: 130px;}
@@ -145,6 +276,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   font-weight: normal;
   line-height: 28px;
   color:#999;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
 
@@ -248,17 +380,19 @@ ul.unstyled.icons li {
   .brand-sherpa {
     font-size: 20px;
     line-height: 40px;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+
   }
 
   .brand-sherpa a {
-    color:#D4CA9B;
+    color: #fff;
     -webkit-transition: color 0.2s ease-in;
     -moz-transition: color 0.2s ease-in;
     -o-transition: color 0.2s ease-in; 
   }
 
   .brand-sherpa a:hover {
-    color:#F0592C;
+    color:#999;
     text-decoration: none;
   }
 
@@ -288,7 +422,8 @@ ul.unstyled.icons li {
   }
 
   .nav-sherpa ul li a {
-    color:#D4CA9B;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
+    color:#fff;
     text-decoration: none;
     margin:0;
     padding:20px;
@@ -298,13 +433,15 @@ ul.unstyled.icons li {
   }
 
   .nav-sherpa ul li a:hover {
-    color:#F0592C;
+    color:#999;
     text-decoration: none;
   }
 
   .nav-sherpa ul li.active a {
     color:#ffffff;
     text-decoration: none;
+    font-weight: bold;
+    cursor: default;
   }
 
 /* intro */
@@ -360,9 +497,10 @@ ul.unstyled.icons li {
   .nav-list > .active > a, .nav-list > .active > a:hover {
     /*color: #D4CA9B;
     background-color: #12120F;*/
-    color: #12120F;
-    background-color: #D4CA9B;
+    color: #fff;
+    background-color: #000;
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    font-weight: bold;
    /*background: pink;*/
    /*width:100%;*/
    /*display: block;
@@ -381,7 +519,7 @@ ul.unstyled.icons li {
 
   .nav > li > a:hover {
     text-decoration: none;
-    background-color: #f7f6ed;
+    background-color: #eee;
   }
 
   aside, aside .nav {
@@ -427,7 +565,7 @@ ul.unstyled.icons li {
     /*width: 190px \9;*/
     margin: 0 0 -1px;
     padding: 8px 14px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #999;
   }
 
   aside .nav li:first-child > a {
@@ -455,7 +593,7 @@ ul.unstyled.icons li {
 
   .sherpa-btn:hover, .sherpa-btn:active, .sherpa-btn.active, .sherpa-btn.disabled, .sherpa-btn[disabled] {
     color: #fff;
-    background-color: #EF3B26;
+    background-color: #999;
     text-decoration: none;
 
     -webkit-transition: background-color 0.2s ease-in;
@@ -469,6 +607,7 @@ ul.unstyled.icons li {
   }
 
   .sherpa-btn {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 10px;
@@ -478,7 +617,7 @@ ul.unstyled.icons li {
     vertical-align: middle;
     cursor: pointer;
     color: #fff;
-    background-color: #F0592C;
+    background-color: #000;
     border: 0px solid #bbbbbb;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
