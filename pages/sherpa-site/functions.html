@@ -19,6 +19,7 @@
 				          <li><a href="#formating_dates"><i class="icon-chevron-right"></i> Formating Dates</a></li>
 				          <li><a href="#dynamic_display"><i class="icon-chevron-right"></i> Dynamic Display</a></li>
 				          <li><a href="#pseudo_authentication"><i class="icon-chevron-right"></i>Pseudo Authentication</a></li>
+				          <li><a href="#hotkeys"><i class="icon-chevron-right"></i> Creating Hotkey Functions</a></li>
 	   				</ul>
 				</div>
 			</aside>
@@ -613,7 +614,31 @@ html.not-authenticated .authenticated-only {
 					</pre>
 		</article>
 
-	
+<article id="hotkeys">	
+
+		<h2 class="sherpa">Creating Hotkey Functions</h2>
+					<p>In a prototype you might have a need to create hotkeys for either supporting information regarding the prototype or as part of functionality required in the design itself.</p>
+
+					<p>The hotkey functionality is provided by <a href="http://keithcirkel.co.uk/jwerty/" target="_new">Keith Cirkel's jwerty jQuery plugin.</a></p>
+
+			        <p>Specifying hotkey functionality can be done inside javascript.  The best place would be your app.js file.</p>
+					<p><strong>Examples:</strong></p>  
+					<div class="sherpa-docs-example">
+					    <p class="btn btn-secondary">Press ctrl-x for demo</p>
+					</div>
+					<script type="text/javascript">Sherpa.key('ctrl+x', function () { alert("Hello x!") });</script>
+
+					<h3 class="sherpa">Markup:</h3>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+&lt;p class="btn btn-secondary">Press ctrl-x for demo&lt;/p>
+&lt;script type="text/javascript">Sherpa.key('ctrl+x', function () { alert("Hello x!") });&lt;/script>
+</pre>
+					
+					<h3 class="sherpa">How it works:</h3>
+					<pre>
+The code for the button does not do anything functional. Only the javascript is what makes this function.
+Complex key combinations are possible, refer to the jwerty link above for details.</pre>
+		</article>	
 			</section>
 		</div>
 	</section>
