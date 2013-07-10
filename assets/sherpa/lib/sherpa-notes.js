@@ -70,13 +70,21 @@ Sherpa.notes = {
 				notes_body += convertMD.makeHtml($(markdown).text());
 			});
 		}
-		var notes = '<div id="sherpa_notes">'+
+
+        var dynamicNotes;
+        if (Sherpa.dynamicNotes != null) {
+            dynamicNotes = Sherpa.dynamicNotes.getHTML();
+        } else {
+            dynamicNotes = "";
+        }
+
+        var notes = '<div id="sherpa_notes">'+
 		'	<h3 class="design_notes_title">'+
 		'		<span id="design_notes_dragger">Design Notes</span>'+
 		'		<div id="design_notes_closer" class="pull-right"><span class="icon-remove white_text"></span></div>'+
 		'	</h3>'+
 		'	<div id="collapsible_notes" style="overflow: hidden; display: block; ">'+
-            Sherpa.dynamicNotes.getHTML() +
+            dynamicNotes +
 		notes_body+
 		'     <p class="da-clear ta-clear ma-clear"><small class="template_info pull-right da-clear ta-clear ma-clear">Sherpa Version: '+Sherpa.VERSION+'</small></p>'+
 		'	</div>'+
