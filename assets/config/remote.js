@@ -29,9 +29,9 @@ SHERPA.RUN_SHERPA_PROD = false; //runs mimified versions of sherpa code
 SHERPA.REMOTE_PATH = "http://open.gsdprototypes.com/sherpa/";
 SHERPA.LOCAL_PATH = "";
 SHERPA.JS_PATH = "assets/js/";
-SHERPA.JS_LIB_PATH = "assets/sherpa/lib/";
-SHERPA.CORE_PATH = "assets/sherpa/";
-SHERPA.COMPONENTS_PATH = "components/";
+SHERPA.JS_LIB_PATH = ".sherpa/lib/";
+SHERPA.CORE_PATH = ".sherpa/";
+SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 
 
 // i18n Configuration
@@ -45,8 +45,8 @@ SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = true; //enables script to check html for sherpa errors
 
 // CSS Configuration
-SHERPA.CSS_CORE_REMOTE_PATH = "http://open.gsdprototypes.com/sherpa/assets/sherpa/css/";
-SHERPA.CSS_CORE_LOCAL_PATH = "assets/sherpa/css/";
+SHERPA.CSS_CORE_REMOTE_PATH = "http://open.gsdprototypes.com/sherpa/.sherpa/css/";
+SHERPA.CSS_CORE_LOCAL_PATH = ".sherpa/css/";
 SHERPA.CSS_REMOTE_PATH = "assets/css/";
 SHERPA.CSS_LOCAL_PATH = "assets/css/";
 

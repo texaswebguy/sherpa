@@ -1,0 +1,100 @@
+<script type="text/javascript">
+	
+
+  Sherpa.componentJS.aside_js = function(component_options){
+    //TODO put default options in config
+    var data = {};
+    var default_data = _.clone(viewModel.core_config.default_tabs_data);
+    var load_sample_items = function(number){
+    	//console.log("constructing data.items", data)
+    	data.items = [];
+    	_.each(_.range(number), function(){
+    		var item = {};
+    		item.content = "<p>"+_.str.prune(viewModel.core_config.lorem_ispum[_.random(viewModel.core_config.lorem_ispum.length-1)],500,"")+"</p>";
+    		item.label = item.content.match(/(\w+)\s+(\w+)\s*/)[0]; //first two words of random text
+    		item.id = Sherpa.uuid();
+    		item.url = "#"+item.id;
+    		data.items.push(item);
+    	});
+    }
+    if(!component_options) {
+    	data = default_data;
+    	load_sample_items(3);
+    	Sherpa.QA.logEntry("Aside component rendered with default options and data. Please make sure to put real content in your aside component.","content, aside")
+    } else {
+        if(component_options.data) {
+            //TODO
+            data = component_options.data;
+        }
+
+		if(_.isNumber(component_options.quantity) && !data.items) {
+			load_sample_items(parseInt(component_options.quantity));
+		} else {
+			load_sample_items(3);
+		}
+
+		if(component_options.type){
+			switch(component_options.type) {
+				case "list":
+					data.nav_class = "nav nav-"+component_options.type;
+				break;
+				case "tabs":
+					data.nav_class = "nav nav-"+component_options.type;
+				break;
+				default:
+					data.tab_class += " tabs-"+component_options.type;
+	    			if(component_options.color) {
+		    			data.tab_class += " "+component_options.color;
+		    		}
+		    		if(component_options.type == 'below' || component_options.type == 'right') {
+		    			data.inverted = true;
+		    		}
+	     	}
+			
+		} else {
+			if(component_options.color) {
+    			data.tab_class += " "+component_options.color;
+    		}
+		}
+		if(component_options.id) {
+	    	data.id = component_options.id;
+	    } else {
+	    	data.id = Sherpa.uuid();
+	    }
+
+
+    //console.log("no need for constructing data.items", data)	
+    	//TODO need to fetch content from url via pager.js
+	    
+    }
+    //console.log("items",data.items)
+    data.items[0].pane_class = "tab-pane active";
+    data.items[0].li_class = "active";
+    return data;
+
+  };
+
+
+	
+</script>
+<!-- ko with: Sherpa.componentJS.aside_js(component_options) -->
+
+		<div class="wrapper aside">
+			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
+				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
+					<ul class="nav nav-list sherpa-docs-sidenav" data-bind="foreach: items">
+						<li class=""><a data-bind="text: label,attr:{href: '#'+id}"></a></li>
+	   				</ul>
+				</div>
+			</aside>
+
+
+			<section class="da4-da12 ta-all mb-all">
+				<div class="aside-content" data-bind="foreach: items">
+					<article id="overview" class="bottom-offset-large" data-bind="attr:{'data-bind':'include: sourceUrl',id:id}
+					"></article>
+
+				</div>
+			</section>
+		</div>
+<!-- /ko -->
