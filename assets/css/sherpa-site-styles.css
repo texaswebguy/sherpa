@@ -7,15 +7,15 @@
 
 .alert-sherpa {
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
-color: #000;
-border: 1px solid rgba(0, 0, 0, 0.15);
-background-color: rgb(255, 255, 0);
-padding: 10px;
-text-shadow: none;
-margin-bottom: 20px;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
+  color: #000;
+  border: 1px solid rgba(0, 0, 0, 0.15);
+  background-color: rgb(255, 255, 0);
+  padding: 10px;
+  text-shadow: none;
+  margin-bottom: 20px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 
 
@@ -116,13 +116,13 @@ pre {
 
 a {
 /*  color: #0085c3;*/
-  color: #3434ff;
+  color: #0085c3;
   text-decoration: none;
 }
 
 a:hover {
 /*  color: #0085c3;*/
-  color: #3434ff;
+  color: #0085c3;
   text-decoration: underline;
 }
 
