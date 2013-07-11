@@ -2,11 +2,11 @@
 					<hr>
 
 
-          <h3>Examples</h3>
-          <p>Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
+          <h3 class="sherpa">Examples</h3>
+          <p class="sherpa">Modals are streamlined, but flexible, dialog prompts with the minimum required functionality and smart defaults.</p>
 
-          <h3>Static example</h3>
-          <p>A rendered modal with header, body, and set of actions in the footer.</p>
+          <h3 class="sherpa">Static example</h3>
+          <p class="sherpa">A rendered modal with header, body, and set of actions in the footer.</p>
 
           <div class="box gray-very-light sherpa-gray-stroke rounded-small">
 
@@ -48,8 +48,8 @@
 </pre>
 
 
-          <h3>Live demo</h3>
-          <p>Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
+          <h3 class="sherpa">Live demo</h3>
+          <p class="sherpa">Toggle a modal via JavaScript by clicking the button below. It will slide down and fade in from the top of the page.</p>
 
           <!-- sample modal content -->
           <div id="myModal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="myModalLabel" aria-hidden="true">
@@ -114,24 +114,24 @@
 </pre>
 
 
-          <h3>Global generic modal</h3>
-          <p>The easiest way to create modals is to leverage a Sherpa configuration that enables a global generic modal that is ready to use at any time (on by default).  In <code><a href="assets/config/global_config.js" target="_new">assets/config/global_config.js</a></code> you will see <code>SHERPA.ENABLE_GLOBAL_MODAL = true;</code>. This enables the global generic modal that can be activated via javascript or through html attributes.</p>
+          <h3 class="sherpa">Global generic modal</h3>
+          <p class="sherpa">The easiest way to create modals is to leverage a Sherpa configuration that enables a global generic modal that is ready to use at any time (on by default).  In <code><a href="assets/config/global_config.js" target="_new">assets/config/global_config.js</a></code> you will see <code>SHERPA.ENABLE_GLOBAL_MODAL = true;</code>. This enables the global generic modal that can be activated via javascript or through html attributes.</p>
 
           <h2 class="sherpa">Activating modals</h2>
 
-          <h3>Via data attributes</h3>
-          <p>If you want to activate a custom hiden modal without writing JavaScript you can set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
+          <h3 class="sherpa">Via data attributes</h3>
+          <p class="sherpa">If you want to activate a custom hiden modal without writing JavaScript you can set <code>data-toggle="modal"</code> on a controller element, like a button, along with a <code>data-target="#foo"</code> or <code>href="#foo"</code> to target a specific modal to toggle.</p>
 
           <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#myModal"</span><span class="tag">&gt;</span><span class="pln">Launch modal</span><span class="tag">&lt;/button&gt;</span></li></ol></pre>
 
-          <h4>Activating the generic modal</h4>
-          <p>To activate a the global generic modal without writing JavaScript you can set <code>data-toggle="modal"</code> on a controller element, like a button. The generic modal is devided into three distinct areas, header, body and footer.</p>
+          <h4 class="sherpa">Activating the generic modal</h4>
+          <p class="sherpa">To activate a the global generic modal without writing JavaScript you can set <code>data-toggle="modal"</code> on a controller element, like a button. The generic modal is devided into three distinct areas, header, body and footer.</p>
 
-          <p>You can provide a title and title description via attributes by using <code>data-title="This is the title of the modal"</code> and <code>data-titledescription="description of title"</code> respectively. Title and description attributes are optional but the title is required if description is used.</p>
+          <p class="sherpa">You can provide a title and title description via attributes by using <code>data-title="This is the title of the modal"</code> and <code>data-titledescription="description of title"</code> respectively. Title and description attributes are optional but the title is required if description is used.</p>
 
-          <p>For the body of the modal you can provide text via <code>data-body="This is text that will be inserted in the body of the modal"</code> or you can also inject the contents of a hidden html element (div) via selector such as <code>data-bodyhtml="#some_id"</code>.</p>
+          <p class="sherpa">For the body of the modal you can provide text via <code>data-body="This is text that will be inserted in the body of the modal"</code> or you can also inject the contents of a hidden html element (div) via selector such as <code>data-bodyhtml="#some_id"</code>.</p>
 
-          <p>The footer of the modal works exactly as the body using <code>data-body="&lt;a href='#' class='btn'>Continue&lt;/a>"</code> or<code>data-footerhtml="#some_other_id"</code>.</p>
+          <p class="sherpa">The footer of the modal works exactly as the body using <code>data-body="&lt;a href='#' class='btn'>Continue&lt;/a>"</code> or<code>data-footerhtml="#some_other_id"</code>.</p>
 
           <pre class="prettyprint linenums">
 &lt;button type="button" 
@@ -143,8 +143,8 @@
 >Launch modal&lt;/button>
           </pre>
 
-          <h3>Via JavaScript</h3>
-          <p>You can call a modal with id <code>myModal</code> within a JavaScript function:</p>
+          <h3 class="sherpa">Via JavaScript</h3>
+          <p class="sherpa">You can call a modal with id <code>myModal</code> within a JavaScript function:</p>
           <pre class="prettyprint linenums">
 Lets say you have:
 &lt;a href="#" class="btn btn-secondary" id="launchMyModal">Launch my modal&lt;/a>
@@ -170,8 +170,8 @@ Tip:
           </pre>
 
 
-          <h3>Generic modal via JavaScript</h3>
-          <p>You can call the generic modal with within a JavaScript function:</p>
+          <h3 class="sherpa">Generic modal via JavaScript</h3>
+          <p class="sherpa">You can call the generic modal with within a JavaScript function:</p>
           <pre class="prettyprint linenums">
 Lets say you have:
 &lt;a href="#" class="btn btn-secondary" id="launchMyModal">Launch my modal&lt;/a>
@@ -201,8 +201,8 @@ Tip:
 
           </pre>
 
-          <h3>Options</h3>
-          <p>Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
+          <h3 class="sherpa">Options</h3>
+          <p class="sherpa">Options can be passed via data attributes or JavaScript. For data attributes, append the option name to <code>data-</code>, as in <code>data-backdrop=""</code>.</p>
           <table class="table table-bordered table-striped">
             <thead>
              <tr>
@@ -241,9 +241,9 @@ Tip:
             </tbody>
           </table>
 
-          <h3>Methods</h3>
-          <h4>.modal(options)</h4>
-          <p>Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
+          <h3 class="sherpa">Methods</h3>
+          <h4 class="sherpa">.modal(options)</h4>
+          <p class="sherpa">Activates your content as a modal. Accepts an optional options <code>object</code>.</p>
 <pre class="prettyprint linenums"><ol class="linenums"><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'#myModal'</span><span class="pun">).</span><span class="pln">modal</span><span class="pun">({</span></li><li class="L1"><span class="pln">  keyboard</span><span class="pun">:</span><span class="pln"> </span><span class="kwd">false</span></li><li class="L2"><span class="pun">})</span></li></ol></pre>
           <h4>.modal('toggle')</h4>
           <p>Manually toggles a modal.</p>

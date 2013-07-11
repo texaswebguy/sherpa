@@ -13,7 +13,7 @@
     <div class="wrapper">
       <aside class="da1-da3 ta-all mb-all bottom-offset-large">
         <div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
-          <ul class="nav nav-list sherpa-docs-sidenav">
+          <ul class="sherpa nav nav-list sherpa-docs-sidenav">
             <li class="active"><a href="#overview"><i class="icon-chevron-right"></i>Overview</a></li>
             <li><a href="#core"><i class="icon-chevron-right"></i>Core Configuration</a></li>
               <li><a href="#overrides"><i class="icon-chevron-right"></i> Cofiguration Overides</a></li>
@@ -27,14 +27,14 @@
         <article id="overview">
           <h2 class="sherpa">Overview</h2>
           
-                <p>The Sherpa framework is highly configurable. Configurations are in place to adapt to the diverse needs in User eXperience (UX) prototype modeling. These configurations allow prototypes to run locally or from remote servers. In addition, different javascript libraries can be configured when the prototype page loads. This is done so the framework can be extended to fit your specific needs.</p>
-                <p>Out of the box, Sherpa is loaded with everything we use to build prototypes ourselves and very seldom you might need to add or remove things. There are several places to configure Sherpa show below.</p>
+                <p class="sherpa">The Sherpa framework is highly configurable. Configurations are in place to adapt to the diverse needs in User eXperience (UX) prototype modeling. These configurations allow prototypes to run locally or from remote servers. In addition, different javascript libraries can be configured when the prototype page loads. This is done so the framework can be extended to fit your specific needs.</p>
+                <p class="sherpa">Out of the box, Sherpa is loaded with everything we use to build prototypes ourselves and very seldom you might need to add or remove things. There are several places to configure Sherpa show below.</p>
             </article>
         <article id="core">
           <h2 class="sherpa">Core Configuration</h2>
-              <p>By editing <code>assets/config/global_config.js</code> you can change core settings.
+              <p class="sherpa">By editing <code>assets/config/global_config.js</code> you can change core settings.
                 This javascript file contains the core of Sherpa such as paths, prototype default application, Javascript core libraries, CSS core files, default css and default locale.</p>
-                <p>This is what the Sherpa configuration object looks like once it is built on startup:</p>
+                <p class="sherpa">This is what the Sherpa configuration object looks like once it is built on startup:</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums">
 {
@@ -146,9 +146,9 @@
         </article>
         <article id="overrides">
           <h2 class="sherpa">Configuration Overrides</h2>
-                  <p>Each html file can contain override configurations.  This allows you to create different pages that might use different libraries or helper files.</p>
+                  <p class="sherpa">Each html file can contain override configurations.  This allows you to create different pages that might use different libraries or helper files.</p>
 
-                <p>In the head of your HTML document you will notice a script tag. All of the override variables are commented out for your convenience:</p>
+                <p class="sherpa">In the head of your HTML document you will notice a script tag. All of the override variables are commented out for your convenience:</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums">
 &lt;head>
@@ -173,10 +173,10 @@
         </article>
         <article id="custom">
           <h2 class="sherpa">Custom Configurations</h2>
-                  <p>The file <code>assets/js/app.js</code> is where your prototype application is. 
+                  <p class="sherpa">The file <code>assets/js/app.js</code> is where your prototype application is. 
                     Here you can add custom configuration variables to the global data view model.  These can be used to set up conditionals to display certain components or not.</p>
 
-                <p>All you have to do is add an element to the addToConfigs object. The sample below would be available in the view model (viewModel.config.sample_custom_config).</p>
+                <p class="sherpa">All you have to do is add an element to the addToConfigs object. The sample below would be available in the view model (viewModel.config.sample_custom_config).</p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums">
 addToConfigs = {
@@ -186,10 +186,10 @@ addToConfigs = {
         </article>
         <article id="localization">
           <h2 class="sherpa">Localized Settings</h2>
-                  <p>The JSON file <code>assets/config/settings_en.json</code> is one of many 
+                  <p class="sherpa">The JSON file <code>assets/config/settings_en.json</code> is one of many 
                     files that are specific to a locale and contain global configurations for things such as date formats, currency conversion, etc. The file settings_en.json loads by default unless a different locale is specified on the url or core configuration.</p>
 
-                <p>The contents of this file get placed into the viewModel.config object along with custom configurations: </p>
+                <p class="sherpa">The contents of this file get placed into the viewModel.config object along with custom configurations: </p>
 
 <pre data-bind="prettyprint:{}" class="prettyprint linenums">
 {

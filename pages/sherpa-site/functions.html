@@ -13,7 +13,7 @@
 		<div class="wrapper">
 			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
 				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
-					<ul class="nav nav-list sherpa-docs-sidenav">
+					<ul class="sherpa nav nav-list sherpa-docs-sidenav">
 				          <li class="active"><a href="#rendering_text"><i class="icon-chevron-right"></i> Rendering Text</a></li>
 				          <li><a href="#converting_currency"><i class="icon-chevron-right"></i> Converting Currency</a></li>
 				          <li><a href="#formating_dates"><i class="icon-chevron-right"></i> Formating Dates</a></li>
@@ -28,13 +28,13 @@
 				<article id="rendering_text">
 				<h2 class="sherpa">Rendering Text</h2>
 				<h3 class="sherpa">Rendering data from view model</h3>
-					<p>
+					<p class="sherpa">
 						In the old days of HTML we just slapped content inside html tags and ran with it. With Sherpa we want to stress the importance of building a prototype from data.
 					</p>
 					<div class="sherpa-docs-example">
-					    <p>
+					    
 						    <h2>Hello, <span data-bind="text: $root.user.name()"> </span>!</h2>
-						</p>
+						
 					</div>
 					<h3 class="sherpa">Markup:</h3>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2>Hello, &lt;span data-bind="text: $root.user.name()"> &lt;/span>!&lt;/h2></pre>
@@ -55,7 +55,7 @@ Try changing the name property, save and reload.
 We'll explain "observable after this..."
 					</pre>
 					<h3 class="sherpa" id="reactive_text">Reactive Text</h3>
-					<p>
+					<p class="sherpa">
 						In the example above, you created a text from data.  What you might have not known is that the data is wired to the page because of ko.observable
 
 					</p>
@@ -79,7 +79,7 @@ ko.observable wires the data to the page and anytime it changes the rendering on
 					</pre>
 
 					<h3 id="rendering_a_textkey" class="sherpa">Rendering a textkey</h3>
-					<p>
+					<p class="sherpa">
 						Prototypes have to be tested around the globe. One of the most important things is to externalize all text so that content is easily translated.
 						For this, Sherpa provide the "msg" tag.
 
@@ -110,7 +110,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 
 					</pre>
 					<h3 id="rendering_a_textkey_with_data" class="sherpa">Rendering a textkey with data</h3>
-					<p>
+					<p class="sherpa">
 						Prototypes have to be tested around the globe. One of the most important things is to externalize all text so that content is easily translated.
 						For this, Sherpa provide the "msg" tag.
 
@@ -145,7 +145,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					</pre>
 
 					<h3 id="rendering_a_textkey_with_quantitive_data" class="sherpa">Rendering a textkey with quantitive data</h3>
-					<p>
+					<p class="sherpa">
 						The "msg" tag can handle singular and plural versions of a textkey depending of the quantative aspect of the data. For example, let's say you want to display "12 laptops" or "1 laptop".
 
 					</p>
@@ -180,7 +180,7 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 
 					</pre>	
 					<h3 id="rendering_a_textkey_with_links" class="sherpa">Rendering a textkey with links</h3>
-					<p>
+					<p class="sherpa">
 						While the msg provides a way to internationalize text you probably don't want to embed html links within the content.
 						For this reason Sherpa provides the "msglink" tag. This tag works exactly like the "msg" tag exept it will automatically look for related urls and embed them inside the translated text. This also allows for each linked text key to have different links for each locale.
 
@@ -214,7 +214,7 @@ Don't forget to go back to <a href="functions.html?l=en#rendering_a_textkey_with
 Note: the data inside msglink is not reactive... yet
 					</pre>
 					<h3 id="rendering_a_textkey" class="sherpa">Truncating text</h3>
-					<p>
+					<p class="sherpa">
 						Sometimes there is a need to truncate text that comes from a data source. Optionaly you might have a need for the truncated text to show a more/less link.
 
 					</p>
@@ -252,7 +252,7 @@ If not specified, moreText, lessText, and elipse are looked for in the messages 
 	</article>
 	<article id="converting_currency">
 					<h2 class="sherpa">Converting Currency</h2>
-					<p>
+					<p class="sherpa">
 						Prototypes have to be tested around the globe. Realistic rendering of price data is vital to the success of a test.
 						For this, Sherpa provides the "formatcurrency" tag.
 
@@ -287,7 +287,7 @@ You can also pre-process a number in your app dataset (viewModel): "pre_processe
 	<article id="formating_dates">
 
 					<h2 class="sherpa">Formating Dates</h2>
-					<p>
+					<p class="sherpa">
 						Prototypes have to be tested around the globe. Realistic rendering of date data is vital to the success of a test.
 						For this, Sherpa provides the "formatdate" tag.
 
@@ -322,7 +322,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 	</article>
 	<article id="dynamic_display">		
 					<h2 class="sherpa">Dynamic Display</h2>
-					<p>
+					<p class="sherpa">
 						Sometimes in a prototypes you need a way to display things conditionaly.
 						There are couple of ways to do this:
 							- Knockout JS if/ifnot ko comments using boolean variable or conditional function
@@ -383,7 +383,7 @@ var some_boolean_function = function(){
 
 					</pre>
 	<h3 id="reactive_show_hide" class="sherpa">Reactive Show / Hide</h3>
-					<p>
+					<p class="sherpa">
 						Show and hide is like dynamic display but it differs that whatever you bind with "visible" is still in the document and it is available to display later.
 
 						Take for example a checkbox that reveals something when it is checked:
@@ -431,7 +431,7 @@ You should notice that once wired, the reactive nature of the rendering is much 
 
 					</pre>
 	<h3 id="reactive_fade" class="sherpa">Reactive Fade</h3>
-					<p>
+					<p class="sherpa">
 						Reactive Fade is like show / hide. only difference is that the elements fade in and out rater than just show and hide.
 						There are two options: visibleFade and visibleFadeToggle.
 
@@ -468,7 +468,7 @@ This works exactly as show /hide but it adds a fade transition.
 
 					</pre>
 		<h3 id="reactive_slide" class="sherpa">Reactive slide</h3>
-					<p>
+					<p class="sherpa">
 						Reactive Slide is like show / hide. only difference is that the elements fade in and out rater than just show and hide.
 						There are two options: visibleSlide and visibleSlideToggle.
 
@@ -509,23 +509,23 @@ This works exactly as show /hide but it adds a slide transition.
 <article id="pseudo_authentication">	
 
 		<h2 class="sherpa">Pseudo Authentication</h2>
-					<p>
+					<p class="sherpa">
 						In a prototype you often have to show what a component might look like when a user is logged in vs not logged in.  For this reason we have implemented a very simple system that tags the page as authenticated or not. This is used in conjunction with two css classes that can be used on any elements on the page.</p>
-			          <ul>
+			          <ul class="sherpa">
 						<li>authenticated-only: Only displays when the prototype is :"authenticated"</li>
 						<li>not-authenticated-only: Only displays when the prototype is NOT :"authenticated"</li>
 					  </ul>
-					<p>There are two ways to trigger a page's pseudo authentication:</p>
-			          <ul>
+					<p class="sherpa">There are two ways to trigger a page's pseudo authentication:</p>
+			          <ul class="sherpa">
 						<li>Query string parameter: <code>myPrototypePage.html?authenticated=true</code> or <code>myPrototypePage.html?authenticated=false</code></li>
 						<li>Javscript: <code>Sherpa.publish("authenticated",true)</code></li>
 					  </ul>
-					<p>Both of these methods will set the page class and viewModel variable to enable dynamic display:</p>
-			          <ul>
+					<p class="sherpa">Both of these methods will set the page class and viewModel variable to enable dynamic display:</p>
+			          <ul class="sherpa">
 						<li>HTML Page classes: authenticated or not-authenticated</li>
 						<li>viewModel: <code>$root.isAuthenticated</code></li>
 					  </ul>
-					<p><strong>Examples:</strong></p>  
+					<p class="sherpa"><strong>Examples:</strong></p>  
 					<div class="sherpa-docs-example">
 					    <p data-bind="if: $root.isAuthenticated">I display beacuse this page IS authenticated</p>
 					    <p data-bind="ifnot: $root.isAuthenticated">I display beacuse this page IS NOT authenticated</p>
@@ -540,7 +540,7 @@ This works exactly as show /hide but it adds a slide transition.
 					    <p>I display beacuse this page IS NOT authenticated</p>
 					    <!-- /ko -->
 
-					    <p><strong>How to trigger:</strong></p>
+					    <p class="sherpa"><strong>How to trigger:</strong></p>
 					    <p class="not-authenticated-only">html query string: <a href="site.html?authenticated=true#!/functions/pseudo-authentication">log in</a></p>
 					    <p class="authenticated-only">html query string: <a href="site.html?authenticated=false#!/functions/pseudo-authentication" >log out</a></p>
 					    <p>Pseudo login component:</p>
