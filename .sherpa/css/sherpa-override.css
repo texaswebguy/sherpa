@@ -17,11 +17,14 @@
 .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none; overflow:hidden;}
 
 div {
-  float: left;
-  width: 100%;
-  margin-bottom: 0px;
-  display: block;
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
 }
+
 
 
 /* FONTS
