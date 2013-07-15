@@ -36,7 +36,7 @@ Sherpa.feature("localhost", viewModel.localhost);
 
 
 
-Eve.scope("*", function(){
+Sherpa.scope("*", function(){
 
 	this.listen(".tabbable", "load", function(){
 		$('.tabbable .nav li').removeClass('active');
@@ -137,5 +137,27 @@ Sherpa.scope(".accordion", function(){
 		}
 	});
 });
+
+
+Sherpa.scope("*", function(){
+	//This is a temporary fix to data-toggle=tooltip
+	this.listen("[data-toggle=tooltip]", "mouseenter", function(event){
+		if(!$(event.currentTarget).attr("data-placement")){
+			var pointer_left = $(event.currentTarget).offset().left+30;
+			var offset = $(event.currentTarget).next().find(".tooltip-inner").width()/2+10;
+			var new_left = pointer_left-offset;
+			if(pointer_left-new_left>100) {
+				$(event.currentTarget).next().css('left',new_left);
+				$(event.currentTarget).next().find(".tooltip-inner").css('left',0);
+				$(event.currentTarget).next().find(".tooltip-arrow").css('left',offset);
+				console.log(new_left, $(event.currentTarget).next().find(".tooltip-inner").offset().left)
+			}			
+		}
+	});
+});
+
+
+
+ 
 
 Sherpa.counter("Sherpa Global Events");
