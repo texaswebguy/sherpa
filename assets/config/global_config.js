@@ -97,7 +97,8 @@ SHERPA.PROTOTYPE_APP = "app.js";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },
-	{ sherpa_overides: SHERPA.CSS_CORE_PATH+"sherpa-override.css" }
+	{ sherpa_overides: SHERPA.CSS_CORE_PATH+"sherpa-override.css" },
+	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";
 SHERPA.CSS_GRID_IE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-9.cssgridset.css";

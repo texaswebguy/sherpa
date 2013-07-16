@@ -1,0 +1,145 @@
+/*!
+ *
+ * Dell Sherpa v0.4
+ * Global Design Creative, Dell, Inc.
+ * 2013
+ *
+ *
+ * UX Modeling Framework Specific Styles
+ *
+ * Based on Bootstrap v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+// Core fonts,variables and mixins
+@import "uxmf/variables.less"; 
+
+
+// Project Info Modal
+#project_info_modal {
+	width: @projectInfoModalWidth;
+	margin: @projectInfoModalMargin;
+}
+#project_info_modal th {
+	width: @projectInfoModalThWidth;
+}
+#project_info_modal table {
+	width: @projectInfoModalTableWidth;
+}
+
+
+// Design Notes
+
+#sherpa_notes
+{
+	background: #fff;
+	border: solid 1px #ccc;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	box-shadow: 2px 2px 10px #999;
+	float: right;
+	margin: 0;
+	moz-border-radius-bottomleft: 3px;
+	moz-border-radius-topleft: 3px;
+	padding: 10px 10px 0 10px;
+	position: fixed;
+	right: 0;
+	top: 45px;
+	webkit-border-bottom-left-radius: 3px;
+	webkit-border-top-left-radius: 3px;
+	webkit-box-shadow: 2px 2px 10px #999;
+	width: 400px;
+	z-index: 9999;
+}
+.design_notes_title
+{
+	background: #333;
+	color: #fff;
+	cursor: move;
+	margin: -31px -11px 0 -12px;
+	moz-border-radius-topleft: 3px;
+	padding: 7px 5px 5px 27px;
+	webkit-border-top-left-radius: 3px;
+	overflow:hidden;
+}
+.callout_number
+{
+	background: orange;
+	border-radius: 50%;
+	color: #fff;
+	display: none;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0 0 0 -10px;
+	padding: 6px 10px 6px 10px;
+	position: absolute;
+}
+#sherpa_notes ol
+{
+	counter-reset: li;
+	margin-left: 10px;
+	padding-left: 0;
+}
+#sherpa_notes ol>li
+{
+	list-style: none;
+	margin: 0 0 6px 2em;
+	padding: 4px 8px;
+	position: relative;
+}
+#sherpa_notes ol>li:before
+{
+	background: orange;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #fff;
+	content: counter(li);
+	counter-increment: li;
+	font-size: 15px;
+	font-weight: bold;
+	height: 1.8em;
+	left: -2em;
+	margin-right: 8px;
+	moz-box-sizing: border-box;
+	padding: 4px;
+	position: absolute;
+	text-align: center;
+	top: -2px;
+	webkit-box-sizing: border-box;
+	width: 1.8em;
+}
+#sherpa_notes li ol,#sherpa_notes li ul
+{
+	margin-top: 6px;
+}
+#sherpa_notes ol ol li:last-child
+{
+	margin-bottom: 0;
+}
+
+#collapsible_notes
+{
+	display: block;
+}
+
+#design_notes_closer {
+	cursor:pointer;
+}
+
+#design_notes_docker {
+	cursor:pointer;
+	display:none;
+}
+
+#sherpa_notes[style*=left] #design_notes_docker {
+	display:inline-block;
+}
+
+#design_notes_control {
+	margin-top:-25px;
+	font-size:15px
+}
