@@ -2736,15 +2736,20 @@ you can use the generic selector below, but it's slower:
   border-bottom: 2px solid #ddd;
 }
 
+ul.nav.nav-tabs > li > a:hover {
+  background-color: #eee;
+  -webkit-border-radius:4px 4px 0px 0px;
+  border-radius: 4px 4px 0px 0px;
+}
 
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover {
+ul.nav.nav-tabs > li.active > a,
+ul.nav.nav-tabs > li.active > a:hover {
   color: #444444;
   cursor: default;
   background-color: #ffffff;
   border: 2px solid #ddd;
   border-bottom-color: transparent;
-  margin-bottom: -1px;
+  margin-bottom: -2px;
 }
 
 
@@ -2760,6 +2765,7 @@ you can use the generic selector below, but it's slower:
   border-radius: 4px 4px 0px 0px;
   border-bottom:none;
   position:relative;
+  padding:20px 20px 0px 20px;
   z-index:1;
 }
 
