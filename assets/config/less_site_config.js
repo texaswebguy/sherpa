@@ -98,7 +98,7 @@ SHERPA.PROTOTYPE_APP = "sherpa-site.js";
 SHERPA.PROTOTYPE_CSS = "sherpa-site-styles.css";
 
 SHERPA.CSS_CORE_LOAD = [
-	{ sherpa_css: SHERPA.CSS_CORE_PATH+"sherpa.css" },
+	{ css_theme: SHERPA.CSS_CORE_PATH+"sherpa-dell-308.css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";

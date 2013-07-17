@@ -238,12 +238,7 @@ Sherpa.ready("underscore", function() {
 		Sherpa.js(lib);
 	});
 
-	// Load CSS Files:
-	//______________________________________________________________________
-	_.each(SHERPA.CSS_CORE_LOAD, function(css){
-		console.log("loaded css: ",_.keys(css)[0]);
-		Sherpa.load(css);
-	});
+
 
 	// IE Workarounds:
 	//______________________________________________________________________________________
@@ -265,9 +260,6 @@ Sherpa.ready("underscore", function() {
 		Sherpa.load({grid: SHERPA.CSS_GRID});
 		console.log("loaded css: grid");
 	}
-	Sherpa.load({local_css: SHERPA.CSS_LOCAL_APP});
-	console.log("loaded css: local_css");
-
 
 });
 
@@ -295,6 +287,33 @@ Sherpa.ready("dateFormat", function(){
 		//console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
 	});
+
+	// Load CSS Files:
+	//______________________________________________________________________
+
+	Sherpa.ready("sherpaUtils", function(){
+		if(Sherpa.urlQuery().theme) {
+			Sherpa.store("theme", Sherpa.urlQuery().theme);
+		}
+		_.each(SHERPA.CSS_CORE_LOAD, function(css){
+			//theme implementation
+			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme"){
+				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
+			}
+			console.log("loaded css: ",_.keys(css)[0]);
+			Sherpa.load(css);
+		});
+
+		// Load Local CSS File:
+		//______________________________________________________________________
+
+		Sherpa.load({local_css: SHERPA.CSS_LOCAL_APP});
+		console.log("loaded css: local_css");
+
+	});
+
+
+
 
 	// Need to wait for i18n to load so that messages are in context (viewModel.content)
 	Sherpa.ready("sherpai18n", function(){

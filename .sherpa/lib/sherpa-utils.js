@@ -366,6 +366,10 @@ Sherpa.loadComponentJS = function(component_id, callback) {
 	Sherpa.js(SHERPA.COMPONENTS_PATH+component_id+"/"+component_id+".js", callback );
 }
 
+Sherpa.themeSwitcher = function(theme_id) {
+	Sherpa.store("theme",theme_id);
+	location.reload();
+}
 
 
 Sherpa.namespace = function ( source, framework, propList ) {
