@@ -61,6 +61,13 @@ Sherpa.ready("sherpai18n", function(){
 		    //TODO need to write an update function to make this reactive
 	    }
 	};
+	ko.bindingHandlers['loremispum'] = {
+	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+	    	console.log("dummy text envoked", valueAccessor())
+			$(element).html(Sherpa.lorem(valueAccessor()));
+	    }
+	};
+
 
 	ko.bindingHandlers['formatdate'] = {
 	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {

@@ -215,7 +215,7 @@ Don't forget to go back to <a href="functions.html?l=en#rendering_a_textkey_with
 
 Note: the data inside msglink is not reactive... yet
 					</pre>
-					<h3 id="rendering_a_textkey" class="sherpa">Truncating text</h3>
+					<h3 id="truncating_text" class="sherpa">Truncating text</h3>
 					<p class="sherpa">
 						Sometimes there is a need to truncate text that comes from a data source. Optionaly you might have a need for the truncated text to show a more/less link.
 
@@ -251,6 +251,36 @@ Examples of possible options:
 
 If not specified, moreText, lessText, and elipse are looked for in the messages file (<a href="assets/content/messages_en.json" target="_new">assets/content/messages_en.json</a>) under text_truncate_more, text_truncate_less and text_truncate_elipse.
 					</pre>
+					<h3 id="dummy_text" class="sherpa">Dummy text</h3>
+					<p class="sherpa">
+						Sometimes there is a need to render dummy text. Dummy text can be rendered by number of characters or number of paragraphs.
+
+					</p>
+
+
+					<div class="sherpa-docs-example rounded-large gray-light bottom-offset-medium">
+					    <p data-bind="loremispum: 200"></p>
+					</div>
+					<h4 class="sherpa">Markup:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;p data-bind="loremipsum: 200"> ... &lt;/p></pre>
+										
+					<h4 class="sherpa">How it works:</h4>
+					<pre>
+There is an array of pre-loaded dummy text in Sherpa found in <code>viewModel.core_config.lorem_ispum</code>. It is possible to use the function with options to provide paragraphs of dummy text.
+
+Examples of possible options:
+
+&lt;p data-bind="loremipsum: 200"> ... &lt;/p>
+&lt;div data-bind="loremipsum: {paragraphs:5}"> ... &lt;/div>
+&lt;div data-bind="loremipsum: {paragraphs:5,length:300}"> ... &lt;/div>
+&lt;p data-bind="loremipsum: {startLorem:true,length:300}"> ... &lt;/p>
+
+startLorem will assure that the dummy text starts with "Lorem ispum dolor sit amet "
+length refers to the length in characters in each paragraphs.
+Notice the use of div whenever paragraphs option is present.  This is because Sherpa will return dummy text inside p tags.
+					</pre>
+
+
 	</article>
 	<article id="converting_currency">
 					<h2 class="sherpa">Converting Currency</h2>

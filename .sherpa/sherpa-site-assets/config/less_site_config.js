@@ -32,6 +32,7 @@ SHERPA.JS_PATH = "assets/js/";
 SHERPA.JS_LIB_PATH = ".sherpa/lib/";
 SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
+SHERPA.ASSETS_PATH = ".sherpa/sherpa-site-assets/";
 
 
 // i18n Configuration
@@ -47,8 +48,8 @@ SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa er
 // CSS Configuration
 SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/css/";
 SHERPA.CSS_CORE_LOCAL_PATH = ".sherpa/css/";
-SHERPA.CSS_REMOTE_PATH = "assets/css/";
-SHERPA.CSS_LOCAL_PATH = "assets/css/";
+SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/sherpa-site-assets/css/";
+SHERPA.CSS_LOCAL_PATH = ".sherpa/sherpa-site-assets/css/";
 
 // GLOBAL Sherpa Computed Globals:
 //______________________________________________________________________________________

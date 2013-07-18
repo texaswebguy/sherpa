@@ -376,6 +376,44 @@ Sherpa.themeSwitcher = function(theme_id) {
 }
 
 
+Sherpa.lorem = function(options){
+	var regex = new RegExp("([\\w]+\\s+){"+_.random(10)+"}");
+	if(_.isNumber(options) || _.isUndefined(options) ) {
+		// no options just character count
+		if(_.isUndefined(options)) {
+			options = viewModel.core_config.lorem_ispum_default;
+		}
+		return _.str.capitalize(_.str.prune((_.shuffle(viewModel.core_config.lorem_ispum).join(" ")).replace(",","").replace(regex,""),options,"."));
+	} else {
+		if(options.startLorem) {
+			options.startLorem = "Lorem ipsum dolor sit amet "
+		} else {
+			options.startLorem = ""
+		}
+		if(!options.paragraphs) {
+			if(_.isUndefined(options.length) || !_.isNumber(options.length) ) {
+				options.length = viewModel.core_config.lorem_ispum_default;
+			}
+			return _.str.capitalize(options.startLorem+_.str.prune((_.shuffle(viewModel.core_config.lorem_ispum).join(" ")).replace(",","").replace(regex,""),options.length,"."));
+		} else {
+			if(_.isUndefined(options.length) || !_.isNumber(options.length) ) {
+				options.length = viewModel.core_config.lorem_ispum_default;
+			}
+			if(!_.isNumber(options.paragraphs) ) {
+				options.length = viewModel.core_config.lorem_ispum_default;
+			}
+			var temp_html = ""
+			_.each(options.length, function(arr){
+				temp_html += '<p>'+viewModel.core_config.lorem_ispum[_.random(viewModel.core_config.lorem_ispum.length)]+'</p>'
+			})
+			return temp_html;
+		}
+		
+	}
+
+}
+
+
 Sherpa.namespace = function ( source, framework, propList ) {
 
     for (var property in source) {
@@ -437,9 +475,12 @@ Sherpa.request.define( "supportAutocomplete", "ajax", {
     type: "GET"
 });
 
+if(!SHERPA.ASSETS_PATH) {
+	SHERPA.ASSETS_PATH = "assets/";
+}
 
 Sherpa.request.define( "assets", "ajax", {
-	url:"assets/{directory}/{type}_{locale}.json",
+	url: SHERPA.ASSETS_PATH+"{directory}/{type}_{locale}.json",
     dataType: "json",
     type: "GET"
 });

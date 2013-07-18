@@ -32,7 +32,7 @@ SHERPA.JS_PATH = "assets/js/";
 SHERPA.JS_LIB_PATH = ".sherpa/lib/";
 SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
-
+SHERPA.ASSETS_PATH = ".sherpa/sherpa-site-assets/";
 
 // i18n Configuration
 SHERPA.DEFAULT_LOCALE = "en";
@@ -48,8 +48,9 @@ SHERPA.ENABLE_GLOBAL_MODAL = true; //automatically inserts a global modal compon
 // CSS Configuration
 SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/css/";
 SHERPA.CSS_CORE_LOCAL_PATH = ".sherpa/css/";
-SHERPA.CSS_REMOTE_PATH = "assets/css/";
-SHERPA.CSS_LOCAL_PATH = "assets/css/";
+SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/sherpa-site-assets/css/";
+SHERPA.CSS_LOCAL_PATH = ".sherpa/sherpa-site-assets/css/";
+
 
 // GLOBAL Sherpa Computed Globals:
 //______________________________________________________________________________________
@@ -100,7 +101,7 @@ SHERPA.PROTOTYPE_CSS = "sherpa-site-styles.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },
-	{ sherpa_overides: SHERPA.CSS_CORE_PATH+"sherpa-override.css" },
+	{ css_theme: SHERPA.CSS_CORE_PATH+"sherpa-override.css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";
