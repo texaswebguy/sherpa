@@ -400,13 +400,24 @@ Sherpa.lorem = function(options){
 				options.length = viewModel.core_config.lorem_ispum_default;
 			}
 			if(!_.isNumber(options.paragraphs) ) {
-				options.length = viewModel.core_config.lorem_ispum_default;
+				options.paragraphs = 5;
 			}
-			var temp_html = ""
-			_.each(options.length, function(arr){
-				temp_html += '<p>'+viewModel.core_config.lorem_ispum[_.random(viewModel.core_config.lorem_ispum.length)]+'</p>'
-			})
-			return temp_html;
+			return (function(){
+				var temp_html = "";
+				_.each(_.range(options.paragraphs), function(para) {
+					regex = new RegExp("([\\w]+\\s+){"+_.random(10)+"}");
+					if(para == 0 && options.startLorem) {
+						options.startLorem = "Lorem ipsum dolor sit amet ";
+					} else {
+						options.startLorem = "";
+					}
+					temp_html += '<p>'+options.startLorem+_.str.capitalize(_.str.prune((_.shuffle(viewModel.core_config.lorem_ispum).join(" ")).replace(",","").replace(regex,""),options.length,"."))+'</p>\n';
+				});
+				return temp_html;				
+			})();
+
+
+			
 		}
 		
 	}
