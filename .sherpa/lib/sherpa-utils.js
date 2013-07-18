@@ -240,7 +240,6 @@ Sherpa.urlQuery = function () {
 var responseHTMLSample = ""
 Sherpa.insertComponent = function(component_name, component_type, element, bindingContext, options) {
 
-
 	var filename, uuid = "",html, componentJS = component_name+"_"+component_type+"_js";
 
 	if(viewModel.localhost) {
@@ -368,7 +367,12 @@ Sherpa.loadComponentJS = function(component_id, callback) {
 
 Sherpa.themeSwitcher = function(theme_id) {
 	Sherpa.store("theme",theme_id);
-	location.reload();
+	if(Sherpa.urlQuery().theme) {
+		location.search=location.search.replace('theme='+Sherpa.urlQuery().theme, 'theme='+theme_id);
+	} else {
+		location.reload();
+	}
+	//NOTE: sherpa.js add a theme class name to the html element
 }
 
 

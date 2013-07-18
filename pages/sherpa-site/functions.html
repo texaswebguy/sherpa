@@ -20,7 +20,8 @@
 				          <li><a href="#dynamic_display"><i class="icon-chevron-right"></i> Dynamic Display</a></li>
 				          <li><a href="#pseudo_authentication"><i class="icon-chevron-right"></i>Pseudo Authentication</a></li>
 				          <li><a href="#hotkeys"><i class="icon-chevron-right"></i> Creating Hotkey Functions</a></li>
-				          <li><a href="#creating_pages"><i class="icon-chevron-right"></i> Creating a "page"</a></li>
+				          <li><a href="#creating_pages"><i class="icon-chevron-right"></i> Creating a "Page"</a></li>
+				          <li><a href="#creating_theme"><i class="icon-chevron-right"></i> Creating a Theme</a></li>
 	   				</ul>
 				</div>
 			</aside>
@@ -37,10 +38,10 @@
 						    <h2>Hello, <span data-bind="text: $root.user.name()"> </span>!</h2>
 						
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2>Hello, &lt;span data-bind="text: $root.user.name()"> &lt;/span>!&lt;/h2></pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre class="prettyprint">
 user.name:
 user is an element in the "viewModel". It is at the top level data set on the page available to Sherpa.<br/>
@@ -66,11 +67,11 @@ We'll explain "observable after this..."
 					    <p>User Name: <input data-bind="value: $root.user.name()" /></p>
 						<h2>Hello, <span data-bind="text: $root.user.name()"> </span>!</h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;p>User Name: &lt;input data-bind="value: $root.user.name()" />&lt;/p>
 &lt;h2>Hello, &lt;span data-bind="text: $root.user.name()"> &lt;/span>!&lt;/h2></pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 Above you might have noticed that instead of name:"Carl Weatherspoon" we used name:ko.observable("Carl Weatherspoon").
 
@@ -90,10 +91,10 @@ ko.observable wires the data to the page and anytime it changes the rendering on
 					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg: 'sample_greeting'"></h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="msg: 'sample_greeting'">&lt;/h2></pre>
 										
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 msg is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
 The msg tag takes 'sample_greeting' and looks for it in the viewModel.
@@ -121,10 +122,10 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					<div class="sherpa-docs-example">
 					    <h2 data-bind="msg:  {textkey:'sample_greeting_with_data',data:$root.user.name()}"></h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="msg:  {textkey:'sample_greeting_with_data',data:$root.user.name()}">&lt;/h2></pre>
 										
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 msg is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
 The msg tag takes 'sample_greeting' and looks for it in the viewModel.
@@ -155,12 +156,12 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					    <h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:12}"></h2>
 					    <h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:1}"></h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:12}">&lt;/h2>
 &lt;h2 data-bind="msg:  {textkey:'sample_quantitative_with_data',data:1}">&lt;/h2></pre>
 					
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 msg is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
 The msg tag takes 'sample_quantitative_with_data' and looks for it in the viewModel.
@@ -191,11 +192,11 @@ You can also pre-process a textkey in your app dataset (viewModel): "pre_process
 					<div class="sherpa-docs-example">
 					    <h2 data-bind="linkedmsg:  'sample_message_with_link'"></h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="data-bind="linkedmsg:  'sample_message_with_link'>&lt;/h2></pre>
 					
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 linkedmsg is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
 The linkedmsg tag takes 'sample_message_with_link' and looks for it in the viewModel.
@@ -229,10 +230,10 @@ Note: the data inside msglink is not reactive... yet
 					    cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
 					    proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;p data-bind="truncate: {length:50,showMore:true}"> ... &lt;/p></pre>
 										
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 The configuration object is used to determine the length by characters of truncation and several options. It is possible to use the function with no options which then the system will default to 100 characters.
 
@@ -263,11 +264,11 @@ If not specified, moreText, lessText, and elipse are looked for in the messages 
 					<div class="sherpa-docs-example">
 					    <h2 data-bind="formatcurrency: {amount:499.00,format:'decimal'}"></h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="formatcurrency: {amount:499.00,format:'decimal'}">&lt;/h2></pre>
 					
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 formatcurrency is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
 The formatcurrency tag takes '499.00' or any data referencing a number and converts is in accordance to the configuration for each locale.
@@ -297,10 +298,10 @@ You can also pre-process a number in your app dataset (viewModel): "pre_processe
 					<div class="sherpa-docs-example">
 					    <h2 data-bind="formatdate: '12/01/2014'"></h2>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="formatdate: '12/01/2014'">&lt;/h2></pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 formatdate is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
 The formatdate tag takes in either a simple date string or an object with formating. If only the date is provided, the system will use the default date format as set in accordance to the configuration for each locale.
@@ -342,7 +343,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 					    <p class="orange-text">I display beacuse $root.config.some_other_boolean_variable is set to false (through ko comments)</p>
 					    <!-- /ko -->
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
 &lt;p data-bind="if: $root.config.some_boolean_variable" class="purple-text">I display beacuse $root.config.some_boolean_variable is set to true&lt;/p>
 
@@ -360,7 +361,7 @@ You can also pre-process a date in your app dataset (viewModel): "pre_processed_
 &lt;p class="red-text">I display beacuse $root.config.some_other_boolean_variable is set to false (through ko comments)&lt;/p>
 &lt;!-- /ko --></pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 Conditionals will remove the html when the condition fails. In cases where you want to hide the html but use it later the visible binding should be used.
 
@@ -403,7 +404,7 @@ var some_boolean_function = function(){
 					    <p data-bind="visible: $root.selected_dropdown_value() === 'charlie'">Hi! I'm <strong>charlie</strong>, alpha and beta are hiding right now!</p>
 
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;label>&lt;input type="checkbox" data-bind="checked: $root.checkbox_value" /> Check me to see something&lt;/label>
 &lt;p data-bind="visible: $root.checkbox_value()">I'm visible because the checkbox is checked&lt;/p>
 
@@ -414,7 +415,7 @@ var some_boolean_function = function(){
 &lt;p data-bind="visible: $root.selected_dropdown_value() === 'charlie'">Hi! I'm &lt;strong>charlie&lt;/strong>, alpha and beta are hiding right now!&lt;/p></pre>
 
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 Typically you see this sort of action built in a jquery show, hide, or toggle functions.
 
@@ -453,7 +454,7 @@ You should notice that once wired, the reactive nature of the rendering is much 
 					    <p data-bind="visibleFadeToggle: $root.selected_fade_dropdown_value() === 'charlie'">Hi! I'm <strong>charlie</strong>, alpha and beta are hiding right now!</p>
 
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;label>&lt;input type="checkbox" data-bind="checked: $root.checkbox_fade_value" /> Check me to see something&lt;/label>
 &lt;p data-bind="visibleFade: $root.checkbox_fade_value()">I'm visible because the checkbox is checked&lt;/p>
 
@@ -463,7 +464,7 @@ You should notice that once wired, the reactive nature of the rendering is much 
 &lt;p data-bind="visibleFadeToggle: $root.selected_fade_dropdown_value() === 'beta'">Hi! I'm &lt;strong>beta&lt;/strong>, alpha and charlie are hiding right now!&lt;/p>
 &lt;p data-bind="visibleFadeToggle: $root.selected_fade_dropdown_value() === 'charlie'">Hi! I'm &lt;strong>charlie&lt;/strong>, alpha and beta are hiding right now!&lt;/p></pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 This works exactly as show /hide but it adds a fade transition.
 
@@ -490,7 +491,7 @@ This works exactly as show /hide but it adds a fade transition.
 					    <p data-bind="visibleSlideToggle: $root.selected_slide_dropdown_value() === 'charlie'">Hi! I'm <strong>charlie</strong>, alpha and beta are hiding right now!</p>
 
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;label>&lt;input type="checkbox" data-bind="checked: $root.checkbox_slide_value" /> Check me to see something&lt;/label>
 &lt;p data-bind="visibleSlide: $root.checkbox_slide_value()">I'm visible because the checkbox is checked&lt;/p>
 
@@ -500,7 +501,7 @@ This works exactly as show /hide but it adds a fade transition.
 &lt;p data-bind="visibleSlideToggle: $root.selected_slide_dropdown_value() === 'beta'">Hi! I'm &lt;strong>beta&lt;/strong>, alpha and charlie are hiding right now!&lt;/p>
 &lt;p data-bind="visibleSlideToggle: $root.selected_slide_dropdown_value() === 'charlie'">Hi! I'm &lt;strong>charlie&lt;/strong>, alpha and beta are hiding right now!&lt;/p></pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 This works exactly as show /hide but it adds a slide transition.
 
@@ -556,7 +557,7 @@ This works exactly as show /hide but it adds a slide transition.
 						}">
 						</div>
 					</div>
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">Example:
 
 Use to explicictly remove the element not used:						
@@ -597,7 +598,7 @@ Trigger:
 
 </pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 The trigger mechanism adds either "authenticated" or "not-authenticated" to the html element.  There is css in Sherpa to work with this to provide classes that automatically:
 
@@ -629,13 +630,13 @@ html.not-authenticated .authenticated-only {
 					</div>
 					<script type="text/javascript">Sherpa.key('ctrl+x', function () { alert("Hello x!") });</script>
 
-					<h3 class="sherpa">Markup:</h3>
+					<h4 class="sherpa">Markup:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
 &lt;p class="btn btn-secondary">Press ctrl-x for demo&lt;/p>
 &lt;script type="text/javascript">Sherpa.key('ctrl+x', function () { alert("Hello x!") });&lt;/script>
 </pre>
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 The code for the button does not do anything functional. Only the javascript is what makes this function.
 Complex key combinations are possible, refer to the jwerty link above for details.</pre>
@@ -643,7 +644,7 @@ Complex key combinations are possible, refer to the jwerty link above for detail
 
 <article id="creating_pages">	
 
-		<h2 class="sherpa">Creating a "page"</h2>
+		<h2 class="sherpa">Creating a "Page"</h2>
 					<p>The Sherpa Starter Kit comes with a sample <a href="project_index.html" target="_new">project index page</a>.</p>
 
 					<p>A project index page has several critical functions:</p>
@@ -663,7 +664,7 @@ Complex key combinations are possible, refer to the jwerty link above for detail
 						<li>Other "pages" in the prototype</li>
 					</ul>					
 
-					<h3 class="sherpa">Index page content:</h3>
+					<h4 class="sherpa">Index page content:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
 Note this line:
 &lt;section data-bind="page: {id: 'start', title: 'project name'}">
@@ -672,7 +673,7 @@ This section sets up all the links you see in the page when it loads.
 id: 'start' designates this section as the default page that will display when the page loads.
 </pre>
 
-					<h3 class="sherpa">Other "pages" in the prototype:</h3>
+					<h4 class="sherpa">Other "pages" in the prototype:</h4>
 					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
 Note this link:
 &lt;a href="#!/templates/banner-left-nav">banner-left-nav &lt;/a>
@@ -690,10 +691,72 @@ Now look under the masthead and you will see &lt;div data-bind="page: {id: 'bann
 </pre>
 
 					
-					<h3 class="sherpa">How it works:</h3>
+					<h4 class="sherpa">How it works:</h4>
 					<pre>
 All this code is using a knockout.js library called pager.js.  You can learn more about it at <a href="http://pagerjs.com/">http://pagerjs.com/</a> </pre>
 		</article>	
+
+
+
+<article id="creating_theme">	
+
+		<h2 class="sherpa">Creating a Theme</h2>
+					<p>The Sherpa Starter Kit comes with the default Sherpa css theme.</p>
+
+					<p>CSS themes can be built using less and provide control of global elements such as colors, heights, widths, paddings, etc.</p>
+
+			        <p>In addition, some component level variables are provided to make theme adjustments.</p>
+
+			        <p>If further customization is provided, a theme can also declarations that override Sherpa classes or a whole new non sherpa css can be specified.</p>
+
+					<p>There are three ways to specify or switch a theme:</p>
+					<ul>
+						<li>Configuration of default theme</li>
+						<li>In the url</li>
+						<li>Via JavaScript</li>
+					</ul>					
+
+					<h3 class="sherpa">Configuration of default theme:</h3>
+              		<p class="sherpa">By editing <code>assets/config/global_config.js</code> you can change the default theme.</p>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+Note this line contains the default them css to be loaded:
+<code>{ css_theme: SHERPA.CSS_CORE_PATH+"sherpa.css" }</code>
+</pre>
+
+
+					<h3 class="sherpa">Switch theme through url:</h3>
+              		<p class="sherpa">You might want to provide a link on your project index page that would switch the theme.</p>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+For example: <a href="?theme=foobar#!/functions">See foobar theme.</a> <a href="?theme=sherpa#!/functions">See Sherpa theme.</a>
+</pre>
+
+
+					<h3 class="sherpa">Via JavaScript:</h3>
+              		<p class="sherpa">You can have any function execute this to initiate a page reload with the new theme.</p>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+<code>Sherpa.themeSwitcher("foobar");</code>
+</pre>
+
+					<h3 class="sherpa">Special classes for theme logic:</h3>
+              		<p class="sherpa">If you create a theme called "foobar" you have two classes available that will provide show/hide logic capability:</p>
+					<ul>
+						<li>theme-hide-foobar</li>
+						<li>theme-only-foobar</li>
+					</ul>		
+              		<p class="sherpa">Note: this uses a <code>display: block;</code> so you can't really use it in an in-line display (word in a middle of a sentence).</p>
+					<h4 class="sherpa">Markup:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+&lt;div class="theme-hide-foobar">
+	This element will only display only when any theme other than "foobar" is in context.
+&lt;/div>
+&lt;div class="theme-only-foobar">
+	This element will only display when the "foobar" theme is in context.
+&lt;/div>
+</pre>
+
+
+		</article>
+
 
 			</section>
 		</div>

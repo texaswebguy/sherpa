@@ -298,7 +298,12 @@ Sherpa.ready("dateFormat", function(){
 		_.each(SHERPA.CSS_CORE_LOAD, function(css){
 			//theme implementation
 			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme"){
+
 				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
+				var theme_id = Sherpa.store("theme");
+				$('html').addClass("theme-"+theme_id);
+				$('#theme-logic-css').remove();
+				$('body').prepend('<style id="theme-logic-css">[class^=theme-only] {display:none;};[class^=theme-hide] {display:block;};.theme-'+theme_id+' .theme-only-'+theme_id+' {display:block;};.theme-'+theme_id+' .theme-hide-'+theme_id+' {display:none;}</style>');
 			}
 			console.log("loaded css: ",_.keys(css)[0]);
 			Sherpa.load(css);
