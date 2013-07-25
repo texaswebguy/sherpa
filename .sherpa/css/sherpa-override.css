@@ -3620,9 +3620,8 @@ specify all the colors to override their intent to color them */
   clear:both;
 }
 
-
 h3[data-toggle=collapse].collapsed:before {
-  content:"'";
+  content:"\28";
 }
 
 h3[data-toggle=collapse]:before {
@@ -3632,7 +3631,7 @@ h3[data-toggle=collapse]:before {
   font-weight: normal;
   line-height: 1;
   -webkit-font-smoothing: antialiased;
-  content: ")";
+  content: "\2a";
   color:#0085c3;
 }
 
