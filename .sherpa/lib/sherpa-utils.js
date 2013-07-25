@@ -288,10 +288,11 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 
 Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-	var filename,includeID,html, includeJS, values = valueAccessor();
+	var filename,includeID,html, includeJS, values = valueAccessor(), scrollTo;
 //console.log("values",values)
 	if(_.isObject(values)){
 		filename = values.sourceUrl;
+		scrollTo = values.scrollTo;
 	} else {
 		if(values) {
 			filename = values;
@@ -313,8 +314,14 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 					//set it right away because ajax takes its time
 					Sherpa.includesJS[includeID] = true;
 					$(element).html(responseHTML);
+					console.log("scrolling?",$(element).attr('id'), scrollTo, viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id'))
+					window.setTimeout(function(){
+						if(scrollTo && viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id')){
+							console.log("scrolling man!")
+							$.scrollTo('#'+$(element).attr('id'),300,{offset:{top:-60}});
+						}
+					},1000);
 				}
-
 				ko.applyBindingsToDescendants(bindingContext, element);
 			},
 			error: function( data, status ) {
@@ -374,7 +381,19 @@ Sherpa.themeSwitcher = function(theme_id) {
 	}
 	//NOTE: sherpa.js add a theme class name to the html element
 }
-
+Sherpa.keygen = function(){
+	var temp_obj={};
+	_.each($('p.sherpa, h2, h3, h4, h5, h6'), function(item){ 
+		var prefix;
+		if($(item).is('h2,h3,h4')){
+			prefix = "title_";
+		} else {
+			prefix = "text_"
+		}
+		temp_obj[_.str.underscored(_.str.humanize(prefix+$('html').attr('id')+"-"+$(item).parents('[id]').attr('id')+_.str.truncate($(item).text(),10).replace("...|&lt;|&gt;","")))]=$(item).html(); 
+	})
+	JSON.stringify(temp_obj,null,5)
+}
 
 Sherpa.lorem = function(options){
 	var regex = new RegExp("([\\w]+\\s+){"+_.random(10)+"}");

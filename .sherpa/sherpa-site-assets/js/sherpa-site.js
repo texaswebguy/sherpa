@@ -318,6 +318,18 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			event.preventDefault();
 			$.scrollTo($(event.currentTarget).attr('href'),300, {offset:{top:-60}}); //might have to be different in mobile
 			//TODO there is a bug that when you click on the top item it does not scroll high enough.  Might need to create a different event or add a condition.
+			var nav_id = "/"+$(event.currentTarget).attr('href').replace('#','');
+
+			if(viewModel.breadcrumb_path.length>2) {
+				nav_id = "#!";
+				_.each(_.range(1,viewModel.breadcrumb_path.length-1),function(item){
+					nav_id += "/"+viewModel.breadcrumb_path[item].id;
+				});
+				nav_id += "/"+$(event.currentTarget).attr('href').replace('#','');
+				location.hash = nav_id;
+			} else {
+				location.hash = location.hash+nav_id;
+			}
 			if(!viewModel.isDesktop()){
 				$(event.target).parents(".sherpa-docs-sidenav").toggleClass('open');
 			}
@@ -391,6 +403,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	**********************************************************************************/
 
+	
 
 });
 

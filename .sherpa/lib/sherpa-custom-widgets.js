@@ -169,7 +169,7 @@ Sherpa.ready("sherpai18n", function(){
 	ko.bindingHandlers['include'] = {
 	    init:function (element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 			if(Sherpa.check_condition(allBindingsAccessor())) {
-		    	Sherpa.insertInclude(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext);
+		    	Sherpa.insertInclude(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext);	    	
 		    } else {
 		    	$(element).remove();
 		    	//if the condition is false then remove object from DOM

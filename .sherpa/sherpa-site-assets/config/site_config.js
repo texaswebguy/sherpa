@@ -28,7 +28,7 @@ SHERPA.RUN_SHERPA_PROD = false; //runs mimified versions of sherpa code
 // JS PATH Configuration;
 SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
 SHERPA.LOCAL_PATH = "";
-SHERPA.JS_PATH = "assets/js/";
+SHERPA.JS_PATH = ".sherpa/sherpa-site-assets/js/";
 SHERPA.JS_LIB_PATH = ".sherpa/lib/";
 SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
