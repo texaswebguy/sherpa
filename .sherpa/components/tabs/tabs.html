@@ -89,6 +89,8 @@
 
                 if(item.source) {
                     var filename = item.source;
+                    item.content = '<div data-bind="include: \''+filename+'\'"></div>';
+                    /*
                     var includeID = _.str.underscored(filename.replace(/\/|.html/g," "));
                     Sherpa.request({
                         resourceId: "getComponentHTML", 
@@ -120,6 +122,8 @@
                             console.log("hello",item.content)
                         }
                     });
+                    */
+
                 } else {
                     item.content = "<p>"+_.str.prune(viewModel.core_config.lorem_ispum[_.random(viewModel.core_config.lorem_ispum.length-1)],500,"")+"</p>";
                     data.items.push(item);

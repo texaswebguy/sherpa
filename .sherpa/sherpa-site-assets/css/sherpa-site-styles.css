@@ -494,18 +494,6 @@ ul.unstyled.icons li {
 /* Sidenav for Docs
 -------------------------------------------------- */
 
-  .nav-list > .active > a, .nav-list > .active > a:hover {
-    /*color: #D4CA9B;
-    background-color: #12120F;*/
-    color: #fff;
-    background-color: #000;
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    font-weight: bold;
-   /*background: pink;*/
-   /*width:100%;*/
-   /*display: block;
-   margin:0 auto;*/
-  }
 
   .sherpa-docs-example .nav-list > .active > a, .sherpa-docs-example .nav-list > .active > a:hover {
     background:#0085c3;
@@ -534,30 +522,18 @@ ul.unstyled.icons li {
   aside .nav.affix {
     top:45px;
   }
-  .tablet aside .nav.affix li a, .mobile aside .nav.affix li a{
-    display:none;
-  }
-  .tablet aside .nav.affix, .mobile aside .nav.affix {
-    width:100%;
-    top: 20px;
-    left: 0px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    z-index:9998;
-  }
-  .tablet aside .nav.affix li.active a, .mobile aside .nav.affix li.active a, .tablet aside .nav.affix.open li a, .mobile aside .nav.affix.open li a {
-    display:block;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-  }
-  .tablet aside .navside.affix li.active a:after, .mobile aside .nav.affix li.active a:after {
-    font-family: 'icon-dell-mini';
-    content:"s";
-    color:#fff;
-    float:right;
-  }
+  aside .nav > li.active > a, aside .nav > li.active > a:hover {
+    /*color: #D4CA9B;
+    background-color: #12120F;*/
+    color: #fff;
+    background-color: #000;
+    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    font-weight: bold;
+   /*background: pink;*/
+   /*width:100%;*/
+   /*display: block;
+   margin:0 auto;*/
+  }  
 
 
   aside .nav li > a {
@@ -586,6 +562,69 @@ ul.unstyled.icons li {
     padding: 9px 15px;
     border: 0;
   }
+
+
+  .tablet aside .nav.affix li a, .mobile aside .nav.affix li a{
+    display:none;
+  }
+
+  .tablet aside .nav.affix, .mobile aside .nav.affix {
+    width:100%;
+    top: 20px;
+    left: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index:9999;
+  }
+  .tablet aside .nav.affix li.active a, .mobile aside .nav.affix li.active a, .tablet aside .nav.affix.open li a, .mobile aside .nav.affix.open li a {
+    display:block;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    padding: 9px 0px 9px 36px;
+
+  }
+  .tablet aside .nav.affix li.active a:before, .mobile aside .nav.affix li.active a:before {
+    font-family: 'icon-ui';
+    content:"\25";
+    float:left;
+    padding-right:10px;
+    font-weight:normal;
+  }
+  .tablet aside .nav.affix.open li.active a:before, .mobile aside .nav.affix.open li.active a:before {
+    font-family: 'icon-ui';
+    content:"\26";
+    float:left;
+    padding-right:10px;
+    font-weight:normal;
+  }
+
+
+
+
+  .tablet aside .nav > li.active > a, .tablet aside .nav > li.active > a:hover, .mobile aside .nav > li.active > a, .mobile aside .nav > li.active > a:hover {
+    /*color: #D4CA9B;
+    background-color: #12120F;*/
+    color: #444;
+    background-color: #DDD;
+    text-shadow: none;
+    font-weight: bold;
+    width:100%;
+  }
+
+
+  .tablet aside .nav > li.active, .mobile aside .nav > li.active {
+    /*color: #D4CA9B;
+    background-color: #12120F;*/
+    color: #444;
+    width:100%;
+  }
+
+
+
+
+
 
 
 /* Sherpa button */
@@ -737,7 +776,7 @@ Breakpoints
     margin:0;
     padding:10px 20px;
   }
-    
+
 }
 
 /* Mobile (Phone)*/

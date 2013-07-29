@@ -282,17 +282,9 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	    some_other_boolean_variable : false
 	}
 
-	$(window).resize(function() {
-		if(viewModel.isDesktop()){
-			$('#menu').show();
-			$(".sherpa-docs-sidenav.affix").width($('.da1-da3').width());
-		} else {
-			//TODO Have to make sure that both tablet and mobile are indeed 100%
-			$('.sherpa-docs-sidenav').width('100%');
-		}
-	});
 
-	Eve.scope("#menu-toggle", function(){
+
+	Sherpa.scope("#menu-toggle", function(){
 		this.listen("span", "click", function(event){
 			event.preventDefault();
 			if($('#menu').hasClass('ta-hide ma-hide')){
@@ -308,33 +300,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	})
 
 
-	Eve.scope(".sherpa-docs-sidenav", function(){
-		this.listen("li.active a", "click", function(event){
-			event.preventDefault();
-			event.stopPropagation();
-			$(event.target).parents(".sherpa-docs-sidenav").toggleClass('open');
-		});
-		this.listen('li:not("[class=active]") a', "click", function(event){
-			event.preventDefault();
-			$.scrollTo($(event.currentTarget).attr('href'),300, {offset:{top:-60}}); //might have to be different in mobile
-			//TODO there is a bug that when you click on the top item it does not scroll high enough.  Might need to create a different event or add a condition.
-			var nav_id = "/"+$(event.currentTarget).attr('href').replace('#','');
-
-			if(viewModel.breadcrumb_path.length>2) {
-				nav_id = "#!";
-				_.each(_.range(1,viewModel.breadcrumb_path.length-1),function(item){
-					nav_id += "/"+viewModel.breadcrumb_path[item].id;
-				});
-				nav_id += "/"+$(event.currentTarget).attr('href').replace('#','');
-				location.hash = nav_id;
-			} else {
-				location.hash = location.hash+nav_id;
-			}
-			if(!viewModel.isDesktop()){
-				$(event.target).parents(".sherpa-docs-sidenav").toggleClass('open');
-			}
-		});
-	});
 
 	$('.code_sample_popup').click(function(event){
 		event.preventDefault();
@@ -344,7 +309,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 
-	Eve.scope("#color_in_tabs", function(){
+	Sherpa.scope("#color_in_tabs", function(){
 		this.listen(".tab_color_switcher", "change", function(event){
 			event.preventDefault();
 			$('#switch_my_color').attr('class',$(event.currentTarget).val());
@@ -352,7 +317,15 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 
+	$('.download-starter-kit').click(function(event){
+		_trackEvent("Get Started", "download", "Downloaded Starter Kit", 1, true)
+	});
 
+
+
+	$('.go-to-github').click(function(event){
+		_trackEvent("Get Started", "go_to_github", "Go to GitHub", 1, true)
+	});
 
 
 	/*********************************************************************************

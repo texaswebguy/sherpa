@@ -314,7 +314,7 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 					//set it right away because ajax takes its time
 					Sherpa.includesJS[includeID] = true;
 					$(element).html(responseHTML);
-					console.log("scrolling?",$(element).attr('id'), scrollTo, viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id'))
+					//console.log("scrolling?",$(element).attr('id'), scrollTo, viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id'))
 					window.setTimeout(function(){
 						if(scrollTo && viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id')){
 							console.log("scrolling man!")
@@ -597,6 +597,8 @@ Sherpa.session.storeCleanUp = function(){
 	}
 }
 
+//sets up an android boolean
+Sherpa.feature("android", !_.isEmpty((window.navigator.userAgent.toLowerCase()).match("android")));
 
 // Project specific information
 Sherpa.ready("localJSApp", function() {
