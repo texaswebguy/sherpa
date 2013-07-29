@@ -1,4 +1,3 @@
-
 Sherpa.counter("sherpa-site-app");
 /* application for prototype */
 Sherpa.ready("sherpaGlobalEvents", function(){
@@ -341,6 +340,15 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 
+	$('.download-starter-kit').click(function(event){
+		_trackEvent("Get Started", "download", "Downloaded Starter Kit", 1, true)
+	});
+
+
+
+	$('.go-to-github').click(function(event){
+		_trackEvent("Get Started", "go_to_github", "Go to GitHub", 1, true)
+	});
 
 
 	/*********************************************************************************
