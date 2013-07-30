@@ -44,10 +44,20 @@ Sherpa.globalEvents = {
 	  	return ["{id:'home',label_textkey:'text_breadcrumb_home',label:'Home'}"];
 	  }
 	},
-	setupAside: function(){
+	updateAside: function(){
 
 		$('aside .nav.affix').removeClass('affix');
+		/* TODO: need to abstrack waypoints sticky to overtake data-spy="scroll" bootstrap selectors
+		The version of waypoints sticky loaded provides a call back function which is critical in hard setting the width of the affix element
+		*/
 		$("aside .nav.affix li a").css('width','inherit');
+
+		$('aside .nav.affix').css('width',Sherpa.globalEvents.aside_config().width);
+		$("aside .nav li.active a .icon-ui-triangleleft").css('top',($("aside .nav li.active a").height()/2)-($("aside .nav li.active .icon-ui-triangleleft").height()/2)+5);
+
+		
+	},
+	setupAside: function(){
 		$('aside .nav:visible').waypoint('sticky', {
 		  stuckClass: 'affix',
 		  offset: Sherpa.globalEvents.aside_config().offset,
@@ -61,10 +71,6 @@ Sherpa.globalEvents = {
 		  	$(".sticky-wrapper").height("inherit");
 		  }
 		});
-		/* TODO: need to abstrack waypoints sticky to overtake data-spy="scroll" bootstrap selectors
-		The version of waypoints sticky loaded provides a call back function which is critical in hard setting the width of the affix element
-		*/
-
 		//TODO need all this functionality to be generic so that it works on all prototypes
 		$('article').waypoint(function(direction) {
 			if(direction=="down") {
@@ -90,24 +96,17 @@ Sherpa.globalEvents = {
 
 
 
-		$('aside .nav.affix').css('width',Sherpa.globalEvents.aside_config().width);
-		//TODO: hack to make up the fact that active class gets stripped - the problem is with scroll-spy
-		Sherpa.ready("bootstrap", function(){
-			_.each($('.tabbable'), function(tabs){
-				$(tabs).find('li:first').addClass('active');
-			});
-		});
-		$('aside .nav:visible li:first-child').addClass('active');
 		$(window).resize(function() {
 			if(viewModel.isDesktop()){
-				$('#menu').show();
-				$("aside .nav.affix").width(Sherpa.globalEvents.aside_config().width);
-			} else {
-				//TODO Have to make sure that both tablet and mobile are indeed 100%
-				$('.sherpa-docs-sidenav').width('100%');
-			}
+				$('#menu').show(); //TODO not sure what this is
+			} 
+			Sherpa.globalEvents.updateAside();
 		});
-		$("aside .nav li.active a .icon-ui-triangleleft").css('top',($("aside .nav li.active a").height()/2)-($("aside .nav li.active .icon-ui-triangleleft").height()/2)+5);
+
+		Sherpa.globalEvents.updateAside();
+		if($('aside .nav:visible li.active').length == 0) {
+			$('aside .nav:visible li:first-child').addClass('active');
+		}
 
 	},
 	aside_config:function(){
@@ -140,11 +139,10 @@ Sherpa.globalEvents = {
 		viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 		
 		Sherpa.globalEvents.checkFormFactor();
-		Sherpa.globalEvents.setupAside();
+		
 
 		$(window).resize(function() {
 			Sherpa.globalEvents.checkFormFactor();
-			Sherpa.globalEvents.setupAside();
 		});
 
 		Sherpa.scope("*", function(){
@@ -159,6 +157,8 @@ Sherpa.globalEvents = {
 		$(window).on('hashchange', function() {
 			viewModel.breadcrumb_path = Sherpa.globalEvents.breadcrumb();
 			viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
+			console.log("change page")
+			window.setTimeout(function(){Sherpa.globalEvents.updateAside();},500);
 		});
 
 		Sherpa.scope("aside .nav", function(){
@@ -187,6 +187,7 @@ Sherpa.globalEvents = {
 				if(!viewModel.isDesktop()){
 					$(event.target).parents("aside .nav").toggleClass('open');
 				}
+				//TODO this is really specific to the Dell 308 look aside... need to figure out how this could be implemente
 				$("aside .nav li.active a .icon-ui-triangleleft").css('top',($("aside .nav li.active a").height()/2)-($("aside .nav li.active .icon-ui-triangleleft").height()/2)+5);
 			});
 		});
@@ -224,10 +225,13 @@ Sherpa.globalEvents = {
 				}
 			});
 		});
+
+		window.setTimeout(function(){Sherpa.globalEvents.setupAside();},300);
+
 	}
 }
 
-Sherpa.globalEvents.init()
+Sherpa.globalEvents.init();
 
 
 

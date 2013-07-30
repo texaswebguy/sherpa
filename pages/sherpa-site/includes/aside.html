@@ -8,7 +8,10 @@
           	<p class="sherpa">In addition, the default look can be modified to look dramatically different. <a href="#" class="showFancyAside">See enhanced look.</a><a href="#" class="hideFancyAside hide">Hide enhanced look.</a> </p>
 
 
-            <!-- TODO when we make this a component we will have the back to top link as an option -->
+            <!-- TODO when we make this a component we will have the back to top link as an option 
+				 all this needs to be refactored. nav-list is going away for BS3 and we need to create an aside-main instead of aside-enhanced
+
+ 			-->
 
 <p>&nbsp;</p>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
@@ -36,7 +39,7 @@
 
 
 <script type="text/javascript">
-	setUpAside();
+
 	Sherpa.scope('*',function(){
 		this.listen('.showDefaultAside', 'click', function(event){
 			event.preventDefault();

@@ -370,6 +370,7 @@ Sherpa.ready("dateFormat", function(){
 		    
 		    Sherpa.session.storeCleanUp();
 
+
 			// Mark the end of the sherpa init sequence
 			Sherpa.counter("Sherpa INIT");
 		}); // end Sherpa.ready - local app

@@ -292,7 +292,7 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 //console.log("values",values)
 	if(_.isObject(values)){
 		filename = values.sourceUrl;
-		scrollTo = values.scrollTo;
+		scrollTo = values.bookmarkable;
 	} else {
 		if(values) {
 			filename = values;
@@ -318,7 +318,9 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 					window.setTimeout(function(){
 						if(scrollTo && viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id')){
 							console.log("scrolling man!")
+							Sherpa.globalEvents.setupAside();
 							$.scrollTo('#'+$(element).attr('id'),300,{offset:{top:-60}});
+							
 						}
 					},1000);
 				}
@@ -594,6 +596,20 @@ Sherpa.session.storeCleanUp = function(){
 				Sherpa.store(item.id,null);
 			}
 		});		
+	}
+}
+Sherpa.generateBookmarkData = function(){
+	var bookmarks = $('[data-bind*=bookmarkable]:visible')
+	if(!_.isEmpty(bookmarks)){
+		var temp_arr = [];
+		_.each(bookmarks, function(bookmark){
+			var id = "#"+$(bookmark).attr("id");
+			var label = _.str.titleize(_.str.humanize(id));
+			temp_arr.push ({id: id, label: label});
+		})
+		return temp_arr;
+	} else {
+		return bookmarks;
 	}
 }
 
