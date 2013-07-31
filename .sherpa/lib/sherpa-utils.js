@@ -318,7 +318,7 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 					window.setTimeout(function(){
 						if(scrollTo && viewModel.breadcrumb_path[viewModel.breadcrumb_path.length-1].id === $(element).attr('id')){
 							console.log("scrolling man!")
-							Sherpa.globalEvents.setupAside();
+							Sherpa.globalEvents.updateAside();
 							$.scrollTo('#'+$(element).attr('id'),300,{offset:{top:-60}});
 							
 						}
