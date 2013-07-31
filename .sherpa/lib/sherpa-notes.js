@@ -3,6 +3,8 @@ Sherpa.counter("Sherpa Notes");
 // console.log("hello notes")
 // load markdown converter
 Sherpa.js({showdown:SHERPA.JS_LIB_PATH+"showdown.js"});
+Sherpa.feature("sherpa-notes",false);
+Sherpa.store("notes-collapsed",false);
 Sherpa.notes = {
 
 	init: function () {
@@ -16,13 +18,14 @@ Sherpa.notes = {
 				switch (e.which || e.keyCode) {
 					case 78:
 						//alt n
-						var notes = document.getElementById('sherpa_notes');
+						var notes = document.getElementById('sherpa-notes');
 						if (!notes) {
 							Sherpa.notes.show();
-							Sherpa.store("showNotes", true)
+							Sherpa.store("showNotes", true);
 						} else {
-							document.body.removeChild(notes);
-							Sherpa.store("showNotes", null)
+							Sherpa.notes.cleanUpNotes();
+							Sherpa.store("showNotes", null);
+							Sherpa.feature("sherpa-notes",false);
 						}
 						Sherpa.notes.prevent(e);
 						break;
@@ -56,11 +59,14 @@ Sherpa.notes = {
 		b = document.getElementsByTagName('body')[0],
 		notes = Sherpa.notes.buildHTML();
 		$(b).append(notes);
-		$("#sherpa_notes").draggable({
+		$('#sherpa-notes').draggable({
+			handle: ".design_notes_title",
 			stop: function(){
 				Sherpa.store("notes_location", $(this).attr("style"));
 			}
 		});
+		Sherpa.feature("sherpa-notes",true); // adds sherpa-notes to html element
+		window.setTimeout(Sherpa.notes.checkAnnotations,200);
 	},
 	buildHTML : function() {
 
@@ -87,18 +93,20 @@ Sherpa.notes = {
         } else {
         	notes_location = "";
         }
-        var notes = '<div id="sherpa_notes" '+notes_location+'>'+
+        var notes = '<div id="sherpa-notes" '+notes_location+'>'+
 		'	<h3 class="design_notes_title">'+
-		'		<span id="design_notes_dragger">Design Notes</span>'+
-		'		<div id="design_notes_control" class="text-right">'+
-		'       	<span id="design_notes_closer" class="icon-ui-closecircle white_text"></span>'+
-		'			<span id="design_notes_docker" class="icon-ui-triangleright white_text"></span>'+
+		'		<span>Design Notes</span>'+
+		'		<div id="design-notes-control" class="right-text">'+
+		'       	<span id="design-notes-collapser" data-toggle="collapse" data-target="#collapsible-notes"><span class="icon-ui-collapse"></span><span class="icon-ui-expand"></span></span>'+
+		'       	<span id="design_notes_closer" class="icon-ui-closecircle"></span>'+
+		'			<span id="design_notes_docker" class="icon-ui-triangleright"></span>'+
 		'       </div>'+
 		'	</h3>'+
-		'	<div id="collapsible_notes" style="overflow: hidden; display: block; ">'+
+		'	<div id="collapsible-notes" class="collapse">'+
             dynamicNotes +
 		notes_body+
-		'     <p class="da-clear ta-clear ma-clear"><small class="template_info pull-right da-clear ta-clear ma-clear">Sherpa Version: '+Sherpa.VERSION+'</small></p>'+
+		'     <div id="sherpa-notes-annotations"><h3>Annotations</h3><ol></ol></div>'+
+		'     <p  id="sherpa-notes-version" class="da-clear ta-clear ma-clear"><small class="template_info pull-right da-clear ta-clear ma-clear">Sherpa Version: '+Sherpa.VERSION+'</small></p>'+
 		'	</div>'+
 		'</div>'
 		return notes;
@@ -110,14 +118,57 @@ Sherpa.notes = {
 	
 	},
 	update : function () {
-		$($("#sherpa_notes")[0]).html($(Sherpa.notes.buildHTML()).html()).draggable({
+		$($("#sherpa-notes")[0]).html($(Sherpa.notes.buildHTML()).html());
+		$('#sherpa-notes').draggable({
+			handle: ".design_notes_title",
 			stop: function(){
 				Sherpa.store("notes_location", $(this).attr("style"));
 			}
 		});
+		Sherpa.notes.checkAnnotations();
+	},
+	checkAnnotations: function(){
+		console.log($('.sherpa-notes [data-notes=true]').length,"notes");
+		var $annotations = $('.sherpa-notes [data-notes=true]:visible');
+		if($annotations.length) {
+			_.each($annotations, function(el,index){
+				var id = $(el).attr('id'),
+					list_item = '<li><span class="sherpa-notes-find" data-notes-id="'+id+'"></span><span class="sherpa-notes-title" data-notes-id="'+id+'">',
+					title = $(el).attr('data-notes-title'),
+					description = $(el).attr('data-notes-description'),
+					callout_number = index+1,
+					callout = '';
+				
+				if(title) {
+					list_item += title+'</span>';
+				} else {
+					//TODO check for id
+					title = _.str.titleize(_.str.humanize(id));
+					list_item += title+'</span>';
+				}
+				
+				if(description) {
+					list_item += '<p class="sherpa-notes-description" data-notes-id="'+id+'">'+description+'</p>';
+				}
+				list_item += '</li>';
 
+				callout = '<div class="sherpa-notes-callout" title="'+title+'">'+callout_number+'</div>';
 
-		
+				$(el).prepend(callout);
+
+				$('#sherpa-notes-annotations ol').append(list_item);
+			});
+			$("#sherpa-notes-annotations").show();
+		} else {
+			$("#sherpa-notes-annotations").hide();
+		}
+
+	},
+	cleanUpNotes: function(){
+		$('#sherpa-notes').remove();
+		$('.sherpa-callout-number').remove();
+		Sherpa.feature("sherpa-notes",false);
+		Sherpa.store("showNotes", null);
 	}
 
 };
@@ -142,14 +193,37 @@ else {
 	Sherpa.notes.init();
 }
 
-Sherpa.scope("#sherpa_notes",function(){
+Sherpa.scope("#sherpa-notes",function(){
 	this.listen("#design_notes_closer","click",function(event){
-		$('#sherpa_notes').remove();
-		Sherpa.store("showNotes", null)
-	}),
+		Sherpa.notes.cleanUpNotes();
+	});
 	this.listen("#design_notes_docker","click",function(event){
-		$('#sherpa_notes').removeAttr("style");
+		$('#sherpa-notes').removeAttr("style");
 		Sherpa.store("notes_location",null);
-	})
+	});
+	this.listen(".sherpa-notes-find","click", function(event){
+		event.preventDefault();
+		$.scrollTo('#'+$(event.currentTarget).attr('data-notes-id'),300,{offset:{top: -100}});
+	});
+
+	this.listen(".sherpa-notes-title, [data-notes=true]","click", function(event){
+		event.preventDefault();
+		console.log("display help");
+		 Sherpa.publish("modal", {
+		    title:'Documentation',
+		    title_description:'description that goes under title (optional)',
+		    body: 'contents go here'
+		  })
+
+	});
+	this.listen("#design-notes-collapser","click",function(event){
+		if($(event.currentTarget).hasClass("collapsed")){
+			Sherpa.store("notes-collapsed",true);
+		} else {
+			Sherpa.store("notes-collapsed",false);
+		}
+	});
+
+
 })
 Sherpa.counter("Sherpa Notes");

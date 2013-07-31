@@ -46,15 +46,14 @@ Sherpa.globalEvents = {
 	},
 	updateAside: function(){
 
-		$('aside .nav.affix').removeClass('affix');
+		//$('aside .nav.affix').removeClass('affix');
 		/* TODO: need to abstrack waypoints sticky to overtake data-spy="scroll" bootstrap selectors
 		The version of waypoints sticky loaded provides a call back function which is critical in hard setting the width of the affix element
 		*/
 		$("aside .nav.affix li a").css('width','inherit');
-
 		$('aside .nav.affix').css('width',Sherpa.globalEvents.aside_config().width);
 		$("aside .nav li.active a .icon-ui-triangleleft").css('top',($("aside .nav li.active a").height()/2)-($("aside .nav li.active .icon-ui-triangleleft").height()/2)+5);
-
+		$.waypoints('refresh');
 		
 	},
 	setupAside: function(){

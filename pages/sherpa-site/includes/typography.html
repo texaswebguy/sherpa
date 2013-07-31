@@ -89,7 +89,8 @@
 
 
 					<h3 class="sherpa">Lead body copy</h3>
-					<p class="sherpa">Make a paragraph stand out by adding <code>.lead</code>.</p>
+					<p class="sherpa"><code>&lt;p class="lead"&gt;</code></p>
+					<p class="sherpa">For making a paragraph stand out.</p>
 					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
 						<p class="lead">Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus.</p>
 					</div>
@@ -110,6 +111,7 @@
 &lt;p&gt;&lt;small&gt;This line of text is meant to be treated as fine print.&lt;/small&gt;&lt;/p&gt;</pre>
 
 					<h4 class="sherpa">Bold</h4>
+					<p class="sherpa"><code>&lt;strong&gt;</code></p>
 					<p class="sherpa">For emphasizing a snippet of text with a heavier font-weight.</p>
 					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
 						<p>The following snippet of text is <strong>rendered as bold text</strong>.</p>
@@ -118,9 +120,31 @@
 &lt;strong&gt;rendered as bold text&lt;/strong&gt;</pre>
 
 					<h4 class="sherpa">Italics</h4>
+					<p class="sherpa"><code>&lt;em&gt;</code></p>
 					<p class="sherpa">For emphasizing a snippet of text with italics.</p>
-					<div class="sherpa-docs-example">
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
 						<p>The following snippet of text is <em>rendered as italicized text</em>.</p>
 					</div>
 <pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
 &lt;em&gt;rendered as italicized text&lt;/em&gt;</pre>
+
+
+					<h4 class="sherpa">Centered Text</h4>
+					<p class="sherpa"><code>&lt;p class="center-text"&gt;</code></p>
+					<p class="sherpa">For centering a snippet of text inside an element.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<p class="lead center-text">The following snippet of text is centered inside this element</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+<code>&lt;p class="lead center-text">The following snippet of text is centered on this element&lt;/p&gt;</code></pre>
+
+
+					<h4 class="sherpa">Right Aligned Text</h4>
+					<p class="sherpa"><code>&lt;p class="right-text"&gt;</code></p>
+					<p class="sherpa">For right aligning a snippet of text inside an element.</p>
+					<div class="example box gray-very-light sherpa-gray-stroke rounded-small">
+						<p class="lead right-text">The following snippet of text is right aligned inside this element</p>
+					</div>
+<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+<code>&lt;p class="lead right-text">The following snippet of text is centered on this element&lt;/p&gt;</code></pre>
+
