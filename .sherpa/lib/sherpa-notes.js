@@ -117,6 +117,13 @@ Sherpa.notes = {
 		else event.returnValue = false;
 	
 	},
+	checkCollapsibleState : function() {
+		if(Sherpa.store("notes-collapsed")) {
+
+		} else {
+			
+		}
+	},
 	update : function () {
 		$($("#sherpa-notes")[0]).html($(Sherpa.notes.buildHTML()).html());
 		$('#sherpa-notes').draggable({
