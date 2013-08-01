@@ -50,7 +50,6 @@ SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sher
 SHERPA.CSS_CORE_LOCAL_PATH = ".sherpa/css/";
 SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/sherpa-site-assets/css/";
 SHERPA.CSS_LOCAL_PATH = ".sherpa/sherpa-site-assets/css/";
-SHERPA.CSS_ANDROID = ".sherpa/css/android_fonts.css";
 
 // GLOBAL Sherpa Computed Globals:
 //______________________________________________________________________________________

@@ -296,10 +296,6 @@ Sherpa.ready("dateFormat", function(){
 			Sherpa.store("theme", Sherpa.urlQuery().theme);
 		}
 
-		if(Sherpa.android && SHERPA.CSS_ANDROID){
-			Sherpa.load(SHERPA.CSS_ANDROID);
-		}
-
 		_.each(SHERPA.CSS_CORE_LOAD, function(css){
 			//theme implementation
 			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme"){
