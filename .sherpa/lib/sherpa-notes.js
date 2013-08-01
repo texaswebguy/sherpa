@@ -93,7 +93,7 @@ Sherpa.notes = {
         } else {
         	notes_location = "";
         }
-        var notes = '<div id="sherpa-notes" '+notes_location+'>'+
+        var notes = '<div id="sherpa-notes" class="sherpa-notes-container"'+notes_location+'>'+
 		'	<h3 class="design_notes_title">'+
 		'		<span>Design Notes</span>'+
 		'		<div id="design-notes-control" class="right-text">'+
@@ -119,9 +119,11 @@ Sherpa.notes = {
 	},
 	checkCollapsibleState : function() {
 		if(Sherpa.store("notes-collapsed")) {
-
+			$('#collapsible-notes').collapse('hide');
+			$('#design-notes-collapser').addClass("collapsed");
 		} else {
-			
+			$('#collapsible-notes').collapse('show')
+			$('#design-notes-collapser').removeClass("collapsed");
 		}
 	},
 	update : function () {
@@ -169,7 +171,7 @@ Sherpa.notes = {
 		} else {
 			$("#sherpa-notes-annotations").hide();
 		}
-
+		Sherpa.notes.checkCollapsibleState();
 	},
 	cleanUpNotes: function(){
 		$('#sherpa-notes').remove();
