@@ -33,6 +33,7 @@ SHERPA.JS_LIB_PATH = ".sherpa/lib/";
 SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 SHERPA.ASSETS_PATH = ".sherpa/sherpa-site-assets/";
+SHERPA.DEFAULT_THEME = "dell-308";
 
 
 // i18n Configuration
@@ -99,7 +100,7 @@ SHERPA.PROTOTYPE_APP = "sherpa-site.js";
 SHERPA.PROTOTYPE_CSS = "sherpa-site-styles.css";
 
 SHERPA.CSS_CORE_LOAD = [
-	{ css_theme: SHERPA.CSS_CORE_PATH+"sherpa-dell-308.css" },
+	{ css_theme: SHERPA.CSS_CORE_PATH+SHERPA.DEFAULT_THEME+".css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";
