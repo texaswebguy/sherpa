@@ -65,7 +65,7 @@ Sherpa.notes = {
 				Sherpa.store("notes_location", $(this).attr("style"));
 			}
 		});
-		Sherpa.feature("sherpa-notes",true); // adds sherpa-notes to html element
+		Sherpa.feature("sherpa-notes",true); // adds sherpa-notes to html element	
 		window.setTimeout(Sherpa.notes.checkAnnotations,200);
 	},
 	buildHTML : function() {
@@ -134,6 +134,7 @@ Sherpa.notes = {
 				Sherpa.store("notes_location", $(this).attr("style"));
 			}
 		});
+
 		Sherpa.notes.checkAnnotations();
 	},
 	checkAnnotations: function(){
@@ -232,7 +233,5 @@ Sherpa.scope("#sherpa-notes",function(){
 			Sherpa.store("notes-collapsed",false);
 		}
 	});
-
-
-})
+});
 Sherpa.counter("Sherpa Notes");
