@@ -1,15 +1,18 @@
+/* Add additional stylesheets below
+-------------------------------------------------- */
+/*
+  Please create all Bootstrap overrides here.
+*/
 
-/*!
- *
- * Dell Sherpa v0.4
- * Global Design Creative, Dell, Inc.
- * 2013
- *
- *
- * Sherpa overides
- * TODO: right now this is pretty much a non less file with the old overides
- */
-
+/* 
+-------------------------------------------------- */
+.container-fluid {
+  max-width: 1180px;
+  margin:0 auto;
+  padding-right: 0px;
+  padding-left: 0px;
+  *zoom: 1;
+}
 
 .wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none; overflow:hidden;}
 
@@ -23,36 +26,52 @@ div {
 
 }
 
-
-
 /* TYPOGRAPHY
 -------------------------------------------------- */
 
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  background-color: #ffffff;
+}
+
+p {
+  margin: 0 0 20px 0;
+}
+
 a {
+  color: #0085c3;
   text-decoration: none;
 }
 
 a:hover {
+  color: #0085c3;
   text-decoration: underline;
 }
 
 a.gray_text {
-  color:@grayDark;
+  color: #444444;
+  text-decoration: none;
 }
 
 a.gray_text:hover {
-  color: @grayDark;
+  color: #444444;
+  text-decoration: underline;
 }
 
 a.white_text {
-  color:@white;
+  color:#ffffff;
+  text-decoration: none;
 }
 
 a:hover.white_text {
-  color: @white;
+  color: #ffffff;
+  text-decoration: underline;
 }
-
-
 
 /*
 ================================================
@@ -60,30 +79,42 @@ Headers for desktop
 ================================================
 */
 
-
-
 /* Edits made by:; AJ Lohman - just organized them a bit*/
 /* headers - All*/
-
-
 h1, h2 {
-  font-family: @themeSerifFontFamily;
+  font-family: 'museo-for-dell-300', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+  margin: 0px 0px 10px 0px;
 }
 
+/* Edits made by AJ Lohman */
+h3, h4, h5 {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+  margin: 0px 0px 10px 0px;
+}
+
+h1      {font-size: 36px;line-height: 40px;}
+h2      {font-size: 28px;line-height: 32px;}
+h3      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h4      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h5      {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
 
 /* Header - featured*/
-h4.feature {
-  font-size: 50px;
-  line-height: 60px;
-  font-family: @themeSerifFontFamily;
-  margin: 0px 0px 10px 0px;
-  }
+h4.feature {font-size: 50px;line-height: 60px;font-family: 'museo-for-dell-300', 'Trebuchet MS', Arial, Helvetica, sans-serif;margin: 0px 0px 10px 0px;}
+
+
+
 
 
 /* Header - title*/
 .title {
   text-align: center;
-  background: url(../images/gray-dark-title-line.png) repeat-x;
+  background: url(../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
@@ -91,15 +122,13 @@ h4.feature {
 
 .title h1 {
   display: inline-block;
-  background: @white;
+  background: #fff;
   padding: 0px 10px;
   max-width: 80%;
+  /*display: block;*/
 }
 
 /*
-
-
-
 ================================================
 Headers for mobile (Phone)
 ================================================
@@ -180,6 +209,42 @@ Headers for tablet
   }
 
 }
+
+
+
+
+
+
+.lead {
+  margin-bottom: 20px;
+  font-size: 18px;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+small {
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 16px;
+}
+
+blockquote p {
+  margin-bottom: 0;
+  font-size: 16px;
+  font-weight: normal;
+  line-height: 22px;
+}
+
+blockquote small {
+  display: block;
+  line-height: 20px;
+  color: #999999;
+}
+
+
+
+
+
 
 
 
