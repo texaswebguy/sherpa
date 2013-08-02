@@ -1,0 +1,44 @@
+<h2 class="sherpa">Overview</h2>
+					<hr>
+
+					<p class="sherpa">Components in Sherpa are an abstraction of most of <a href="http://twitter.github.io/bootstrap/components.html" target="_new" >Twitter Bootsrap components</a> through the use of <a href="http://knockoutjs.com/" target="_new" >Knockout JS</a>. This was done to simplify coding of components and provide data integration to create dynamic prototypes.</p>
+					<p class="sherpa">In addition, Sherpa components can be customized once and used many times. When you update a component all instances within your prototype will change.</p>
+					<p class="sherpa">As you look at the components below you will single tags that render entire components. Behind the scenes the actual HTML exists but it is bound to data. Check out the raw component for <a href="components/dropdown/button.html" target="_new" >dropdown buttons</a> and view the source.</p>
+
+					<h3 class="sherpa">The anatomy of a Sherpa Component:</h3>
+
+			          <h4 class="sherpa">name:</h4>
+			          <p class="sherpa">Whatever the name of the component, the system will look for the directory "components/{name}". In the case where, "foobar" is the name of the component, Sherpa will set the component directory to <code>components/foobar/</code>. </p>
+
+			          <h4 class="sherpa">type:</h4>
+			          <p class="sherpa">Type provides the specific name of the html file that renders the component. So let's say that in the reference to component "foobar" you also specify a type of "whatever". The system will get <code>components/foobar/whatever.html</code>. In the case where a type is not specified, the system will default the component name as type and look for the html in <code>components/foobar/foobar.html</code></p>
+
+			          <p class="sherpa"><em>Note: Each component below may have various types that are standard to Sherpa in this current release.  You may create your own types or complete components as you build your prototypes.</em></p>
+
+			          <h4 class="sherpa">options:</h4>
+			          <p class="sherpa">Options provide further customization of each type of component. Each component will have a list of options available and which are defaulted when not specified.</p>
+
+			          <p class="sherpa"><em>When building your own component you can create as many option variables as you want to provide logic for the component to handle. It is up to you how complex you want to make a component but we suggest that when prototyping in agile environment you might want to opt for more "dumb" types of components to create variants then refactor as time goes to make your components smarter.</em></p>
+
+				</article>
+		<article id="page" class="bottom-offset-large hide">
+			<!--TODO Need to work on this on phase 2 -->
+					<h2 class="sherpa">Page</h2>
+					<hr>
+					<p class="sherpa">A page component in Sherpa is not necessarely  a whole page as you might think. It is rather a chunk of HTML that can be inserted into the screen. Why do we call this a "page" and not a module, component, view or something like that? These pages have the unique capability of being addressable as a page.</p>
+
+					<h4 class="sherpa">Explanation: </h4>
+						<p>Let's say you have a page in your prototype: http://www.myserver.com/foobar.html. Inside this page you have tabs that refer to three sections, section1, section2, section3. Furthermore, inside section 3 you have another set of tabs with subsection1 and subsection2.</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint">
+  http://www.myserver.com/
+  ├── pages/
+  │   ├── section1.html
+  │   ├── section2.html
+  │   ├── section3.html
+  │   ├── subsection1.html
+  │   ├── subsection2.html
+  │
+  foobar.html  
+				</pre>							
+					<p class="sherpa">A common requirement is to be able to address sub-section 2 directly (deep dive). This makes it a "page" and it is addressable by going to http://www.myserver.com/foobar.html#section3/subsection2</p>
