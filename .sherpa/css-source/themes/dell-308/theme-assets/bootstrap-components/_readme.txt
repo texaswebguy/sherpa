@@ -1,0 +1,1 @@
+These are copies of the bootstrap component files. These could override the boostrap core if imported into the overrides.less file.
