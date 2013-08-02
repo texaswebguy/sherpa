@@ -34,6 +34,6 @@ Documentation is available at http://bit.ly/uxprototyping
 
 - On Mac:
 
-    - Go to terminal in directory
+    - Go to terminal in directory - Note: You can enable these services with System Preferences > Keyboard > Keyboard Shortcuts > Services. Look for "New Terminal at Folder". That's an easy way to get to the terminal inside a particular directory.
     - In the command line, type in: *python -m SimpleHTTPServer 8080*
     - [Launch prototype in browser](http://localhost:8080/project_index.html "Launch sample project index page") 
