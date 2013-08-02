@@ -1,0 +1,311 @@
+/*!
+ *
+ * Dell Sherpa v0.4
+ * Global Design Creative, Dell, Inc.
+ * 2013
+ *
+ *
+ * UX Modeling Framework Specific Styles
+ *
+ * Based on Bootstrap v2.3.1
+ *
+ * Copyright 2012 Twitter, Inc
+ * Licensed under the Apache License v2.0
+ * http://www.apache.org/licenses/LICENSE-2.0
+ *
+ */
+
+// Core fonts,variables and mixins
+@import "variables.less"; 
+
+
+// Project Info Modal
+#project_info_modal {
+	width: @projectInfoModalWidth;
+	margin: @projectInfoModalMargin;
+}
+#project_info_modal th {
+	width: @projectInfoModalThWidth;
+}
+#project_info_modal table {
+	width: @projectInfoModalTableWidth;
+}
+
+
+// Design Notes
+
+.sherpa-notes-container
+{
+	background: #fff;
+	border: solid 1px #ccc;
+	border-bottom-left-radius: 3px;
+	border-top-left-radius: 3px;
+	box-shadow: 2px 2px 10px #999;
+	float: right;
+	margin: 0;
+	moz-border-radius-bottomleft: 3px;
+	moz-border-radius-topleft: 3px;
+	padding: 10px 10px 0 10px;
+	position: fixed;
+	right: 0;
+	top: 65px;
+	webkit-border-bottom-left-radius: 3px;
+	webkit-border-top-left-radius: 3px;
+	webkit-box-shadow: 2px 2px 10px #999;
+	width: 400px;
+	z-index: 9900;
+}
+
+.sherpa-notes-container {
+
+  h1, h2, h3, h4, h5, h6 {
+  	font-family: 'Trebuchet MS', Tahoma, 'Arial Unicode', sans-serif;
+  }
+  h1 {
+  		font-size: 20px;
+  		line-height: 40px;
+  }
+  h2 {
+  		font-size: 18px;
+  		line-height: 20px;
+  }
+  h3 {
+  		font-size: 16px;
+  		line-height: 18px;
+  }
+  h4, h5, h6 {
+  		font-size: 14px;
+  		line-height: 16px;
+  }
+
+}
+
+
+.design_notes_title
+{
+	background: #333;
+	color: #fff;
+	cursor: move;
+	margin: -11px;
+	padding: 10px;
+	overflow:hidden;
+}
+.callout_number
+{
+	background: orange;
+	border-radius: 50%;
+	color: #fff;
+	display: none;
+	font-size: 15px;
+	font-weight: bold;
+	margin: 0 0 0 -10px;
+	padding: 6px 10px 6px 10px;
+	position: absolute;
+}
+.sherpa-notes-container ol
+{
+	counter-reset: li;
+	margin-left: 10px;
+	padding-left: 0;
+}
+.sherpa-notes-container ol>li
+{
+	list-style: none;
+	margin: 0 0 6px 2em;
+	padding: 4px 8px;
+	position: relative;
+}
+.sherpa-notes-container ol>li:before
+{
+	background: orange;
+	border-radius: 50%;
+	box-sizing: border-box;
+	color: #fff;
+	content: counter(li);
+	counter-increment: li;
+	font-size: 15px;
+	font-weight: bold;
+	height: 1.8em;
+	left: -2em;
+	margin-right: 8px;
+	moz-box-sizing: border-box;
+	padding: 4px;
+	position: absolute;
+	text-align: center;
+	top: -2px;
+	webkit-box-sizing: border-box;
+	width: 1.8em;
+}
+.sherpa-notes-container li ol,.sherpa-notes-container li ul
+{
+	margin-top: 6px;
+}
+.sherpa-notes-container ol ol li:last-child
+{
+	margin-bottom: 0;
+}
+
+#collapsible-notes
+{
+	display: block;
+	overflow: hidden; 
+	height:auto;
+}
+#design-notes-control {
+	margin-top:-15px;
+	font-size:15px
+}
+#design-notes-control .collapsed .icon-ui-collapse, #design-notes-control .icon-ui-expand
+{
+	display: none;
+}
+
+#design-notes-control .collapsed .icon-ui-expand
+{
+	display: inline-block;
+}
+
+
+#design_notes_closer {
+	cursor:pointer;
+}
+
+#design_notes_docker {
+	cursor:pointer;
+	display:none;
+}
+
+.sherpa-notes-container[style*=left] #design_notes_docker {
+	display:inline-block;
+}
+
+
+
+body {
+	opacity:0;
+}
+
+.sherpaReady body {
+	opacity:1;
+}
+
+.sherpa-notes-container-annotations, .sherpa-notes-container-version {
+	border-top:1px #ddd solid;
+}
+
+.sherpa-notes-container-annotations {
+	display:none;
+}
+
+.sherpa-notes-container-annotations ol {
+    counter-reset:li; /* Initiate a counter */
+    margin-left:0; /* Remove the default left margin */
+    padding-left:0; /* Remove the default left padding */
+}
+.sherpa-notes-container-annotations ol > li {
+    position:relative; /* Create a positioning context */
+    list-style:none; /* Disable the normal item numbering */
+    margin: 0 0 11px 30px;
+	padding: 1px 5px;
+}
+
+.sherpa-notes-container-annotations ol > li:before {
+    content:counter(li); /* Use the counter as content */
+    counter-increment:li; /* Increment the counter by 1 */
+    /* Position and style the number */
+    position:absolute;
+    top:-2px;
+    left:-2em;
+    background: #F2AF00;
+	padding: 6px 10px 6px 10px;
+	border-radius: 50%;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+    cursor:help;
+}
+.sherpa-notes-container-annotations li ol,
+.sherpa-notes-container-annotations li ul {margin-top:6px;}
+.sherpa-notes-container-annotations ol ol li:last-child {margin-bottom:0;}
+
+.sherpa-notes [data-notes=true]:before {
+	content:counter('.sherpa-notes [data-notes=true]'); /* Use the counter as content */
+    counter-increment:'.sherpa-notes [data-notes=true]'; /* Increment the counter by 1 */
+     position:absolute;
+    top:-2px;
+    left:-2em;
+    background: #F2AF00;
+	padding: 6px 10px 6px 10px;
+	border-radius: 50%;
+    /* Some space between the number and the content in browsers that support
+       generated content but not positioning it (Camino 2 is one example) */
+    margin-right:8px;
+    padding:4px;
+    color:#fff;
+    font-weight:bold;
+    text-align:center;
+}
+ .sherpa-notes [data-notes=true]:hover {
+   outline: 2px dashed orange; 
+   outline-offset:-2px;
+   cursor:help;  
+ }
+
+.sherpa-notes-callout {
+	display:none
+}
+ .sherpa-notes .sherpa-notes-callout {
+ 	display:block;
+    position:absolute;
+    background: orange;
+    color: #fff;
+    font-weight: 700;
+    font-size: 15px;
+    line-height:25px;
+    padding: 0;
+    border-radius: 50%;
+    margin: 0;
+    cursor: help;
+    width:25px;
+    height:25px;
+    text-align:center;
+    margin-top:-15px;
+    margin-left:-10px;
+ }
+ .sherpa-notes-title:hover {
+ 	border-bottom:1px dashed orange;
+ 	cursor:help;
+ }
+ .sherpa-notes-description {
+ 	font-style:italic;
+ 	font-size:10px;
+ 	color:#666;
+ }
+
+ .sherpa-notes-find {
+    background:transparent;
+    width:25px;
+    height:25px;
+    position:absolute;
+    left:-29px;
+    top:-1px;
+    cursor:pointer;
+}
+.sherpa-notes .modal-backdrop {
+	z-index:9990;
+}
+.sherpa-notes .modal {
+	z-index:9999;
+	width:100%;
+	top:1%;
+	margin:0;
+	left:0;
+}
+
+.sherpa-notes .modal.fade.in {
+	top:1%;
+}
