@@ -58,7 +58,9 @@ pre {
 }
 
 
-
+.unstyled.icons li span {
+  margin-right:5px;
+}
 
 
 
@@ -484,6 +486,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
     padding: 9px 15px;
     border: 0;
   }
+
 
 
   .tablet aside .nav.affix li a, .mobile aside .nav.affix li a{

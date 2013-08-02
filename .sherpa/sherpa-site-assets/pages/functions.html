@@ -14,14 +14,15 @@
 			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
 				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
 					<ul class="sherpa nav nav-list sherpa-docs-sidenav">
-				          <li class="active"><a href="#rendering_text"><i class="icon-chevron-right"></i> Rendering Text</a></li>
-				          <li><a href="#converting_currency"><i class="icon-chevron-right"></i> Converting Currency</a></li>
-				          <li><a href="#formating_dates"><i class="icon-chevron-right"></i> Formating Dates</a></li>
-				          <li><a href="#dynamic_display"><i class="icon-chevron-right"></i> Dynamic Display</a></li>
-				          <li><a href="#pseudo_authentication"><i class="icon-chevron-right"></i>Pseudo Authentication</a></li>
-				          <li><a href="#hotkeys"><i class="icon-chevron-right"></i> Creating Hotkey Functions</a></li>
-				          <li><a href="#creating_pages"><i class="icon-chevron-right"></i> Creating a "Page"</a></li>
-				          <li><a href="#creating_theme"><i class="icon-chevron-right"></i> Creating a Theme</a></li>
+				          <li class="active"><a href="#rendering_text">Rendering Text</a></li>
+				          <li><a href="#converting_currency">Converting Currency</a></li>
+				          <li><a href="#formating_dates">Formating Dates</a></li>
+				          <li><a href="#dynamic_display">Dynamic Display</a></li>
+				          <li><a href="#pseudo_authentication">Pseudo Authentication</a></li>
+				         <!-- <li><a href="#storing_information">Storing Information</a></li>-->
+				          <li><a href="#hotkeys">Creating Hotkey Functions</a></li>
+				          <li><a href="#creating_pages">Creating a "Page"</a></li>
+				          <li><a href="#creating_theme">Creating a Theme</a></li>
 	   				</ul>
 				</div>
 			</aside>
@@ -650,7 +651,91 @@ html.not-authenticated .authenticated-only {
 
 					</pre>
 		</article>
+<!--
+<article id="storing_information">	
 
+		<h2 class="sherpa">Storing Information</h2>
+					<p class="sherpa">
+						In a prototype you often need to temporarely store information so you can display in other pages. Getting caught up with server based databases would complicate matters in terms of portability so Sherpa gives you the ability to easily store information for later use.</p>
+
+					<p class="sherpa">There are two ways to store information:</p>
+			          <ul class="sherpa">
+						<li>Temporary: Gets cleared when browser reloads.</li>
+						<li>Persistent: Remains in storage after browser reloads.</li>
+					  </ul>
+					
+					<p class="sherpa"><strong>Examples:</strong></p>  
+					<div class="sherpa-docs-example">
+						<div class="example box sherpa-gray-stroke rounded-small">
+							<div class="da4-da6">
+								<label>Enter</label>
+								<input type="text">
+							</div>
+						</div>
+	<pre data-bind="prettyprint:{}" class="prettyprint linenums da-clear ta-clear ma-clear">
+	&lt;label&gt;First Name&lt;/label&gt;
+	&lt;input type="text"&gt;</pre>
+					</div>
+					<h4 class="sherpa">Markup:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">Example:
+
+Use to explicictly remove the element not used:						
+&lt;p data-bind="if: $root.isAuthenticated">I display beacuse this page IS authenticated&lt;/p>
+&lt;p data-bind="ifnot: $root.isAuthenticated">I display beacuse this page IS NOT authenticated&lt;/p>
+
+Use when you still want to access the other element:
+&lt;p class="authenticated-only">I display beacuse this page IS authenticated&lt;/p>
+&lt;p class="not-authenticated-only">I display beacuse this page IS NOT authenticated&lt;/p>
+
+Use when you want to conditionaly refer to different components:
+&lt;!-- ko if: $root.isAuthenticated --&gt;
+&lt;div data-bind="component: { 
+	name :'foobar', 
+	type :'authenticated',
+}">&lt;/div>
+&lt;!-- /ko --&gt;
+&lt;!-- ko ifnot: $root.isAuthenticated --&gt;
+&lt;div data-bind="component: { 
+	name :'foobar', 
+	type :'unauthenticated',
+}">&lt;/div>
+&lt;!-- /ko --&gt;
+
+Trigger:
+&lt;a href="functions.html?authenticated=true#pseudo-authentication">log in&lt;/a>
+&lt;a href="functions.html?authenticated=false#pseudo-authentication" >log out&lt;/a>
+
+&lt;div class="box sherpa-gray-stroke rounded-small" data-bind="component: { 
+	name :'forms', 
+	type :'pseudo-login',
+	options : {
+		forgot_password: false,
+        create_account: false
+	}
+}">
+&lt;/div>
+
+</pre>
+					
+					<h4 class="sherpa">How it works:</h4>
+					<pre>
+The trigger mechanism adds either "authenticated" or "not-authenticated" to the html element.  There is css in Sherpa to work with this to provide classes that automatically:
+
+html.authenticated .authenticated-only, 
+html.not-authenticated .not-authenticated-only {
+  display:block;
+}
+
+
+html.authenticated .not-authenticated-only, 
+html.not-authenticated .authenticated-only {
+  display:none;
+}
+
+					</pre>
+		</article>
+
+-->
 <article id="hotkeys">	
 
 		<h2 class="sherpa">Creating Hotkey Functions</h2>
