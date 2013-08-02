@@ -1,0 +1,477 @@
+/// <reference path="../core.less"/>
+//
+// Typography
+// --------------------------------------------------
+
+
+// Body text
+// -------------------------
+
+p {
+  margin: 0 0 @baseLineHeight / 2;
+}
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize + 4px;
+  font-weight: @baseFontWeight;
+  line-height: @baseLineHeight + 2px;
+}
+
+
+// Emphasis & misc
+// -------------------------
+
+
+
+small {
+  font-size: @baseFontSize - 2px;
+  font-weight: @baseFontWeight;
+  line-height: @baseLineHeight - 4px;
+}
+
+
+strong  { font-weight: bold; }
+em      { font-style: italic; }
+cite    { font-style: normal; }
+
+// Utility classes
+.muted               { color: @grayLight; }
+a.muted:hover,
+a.muted:focus        { color: darken(@grayLight, 10%); }
+
+.text-warning        { color: @warningText; }
+a.text-warning:hover,
+a.text-warning:focus { color: darken(@warningText, 10%); }
+
+.text-error          { color: @errorText; }
+a.text-error:hover,
+a.text-error:focus   { color: darken(@errorText, 10%); }
+
+.text-info           { color: @infoText; }
+a.text-info:hover,
+a.text-info:focus    { color: darken(@infoText, 10%); }
+
+.text-success        { color: @successText; }
+a.text-success:hover,
+a.text-success:focus { color: darken(@successText, 10%); }
+
+.text-left           { text-align: left; }
+.text-right          { text-align: right; }
+.text-center         { text-align: center; }
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: (@baseLineHeight / 2) 0;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: @baseLineHeight;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
+}
+
+h1,
+h2,
+h3 { line-height: @baseLineHeight * 2; }
+
+h1 { font-size: @baseFontSize * 2.75; } // ~38px
+h2 { font-size: @baseFontSize * 2.25; } // ~32px
+h3 { font-size: @baseFontSize * 1.75; } // ~24px
+h4 { font-size: @baseFontSize * 1.25; } // ~18px
+h5 { font-size: @baseFontSize; }
+h6 { font-size: @baseFontSize * 0.85; } // ~12px
+
+h1 small { font-size: @baseFontSize * 1.75; } // ~24px
+h2 small { font-size: @baseFontSize * 1.25; } // ~18px
+h3 small { font-size: @baseFontSize; }
+h4 small { font-size: @baseFontSize; }
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  padding-bottom: (@baseLineHeight / 2) - 1;
+  margin: @baseLineHeight 0 (@baseLineHeight * 1.5);
+  border-bottom: 1px solid @grayVeryLight;
+}
+
+
+
+// Lists
+// --------------------------------------------------
+
+// Unordered and Ordered lists
+ul, ol {
+  padding: 0;
+  margin: 0 0 @baseLineHeight / 2 25px;
+}
+ul ul,
+ul ol,
+ol ol,
+ol ul {
+  margin-bottom: 0;
+}
+li {
+  line-height: @baseLineHeight;
+}
+
+// Remove default list styles
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+
+// Single-line list items
+ul.inline,
+ol.inline {
+  margin-left: 0;
+  list-style: none;
+  > li {
+    display: inline-block;
+    .ie7-inline-block();
+    padding-left: 5px;
+    padding-right: 5px;
+  }
+}
+
+// Description Lists
+dl {
+  margin-bottom: @baseLineHeight;
+}
+dt,
+dd {
+  line-height: @baseLineHeight;
+}
+dt {
+  font-weight: bold;
+}
+dd {
+  margin-left: @baseLineHeight / 2;
+}
+// Horizontal layout (like forms)
+.dl-horizontal {
+  .clearfix(); // Ensure dl clears floats if empty dd elements present
+  dt {
+    float: left;
+    width: @horizontalComponentOffset - 20;
+    clear: left;
+    text-align: right;
+    .text-overflow();
+  }
+  dd {
+    margin-left: @horizontalComponentOffset;
+  }
+}
+
+// MISC
+// ----
+
+// Horizontal rules
+hr {
+  margin: @baseLineHeight 0;
+  border: 0;
+  border-top: 1px solid @hrBorder;
+  border-bottom: 1px solid @white;
+}
+
+// Abbreviations and acronyms
+abbr[title],
+// Added data-* attribute to help out our tooltip plugin, per https://github.com/twitter/bootstrap/issues/5257
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayLight;
+}
+abbr.initialism {
+  font-size: 90%;
+  text-transform: uppercase;
+}
+
+// Blockquotes
+blockquote {
+  padding: 0 0 0 15px;
+  margin: 0 0 @baseLineHeight;
+  border-left: 5px solid @grayVeryLight;
+
+  p {
+    margin-bottom: 0;
+    font-size: @baseFontSize + 2px;
+    font-weight: @baseFontWeight;
+    line-height: @baseLineHeight + 2px;
+  }
+
+  small {
+    display: block;
+    line-height: @baseLineHeight;
+    color: @gray;
+  }
+
+
+  // Float right with text-align: right
+  &.pull-right {
+    float: right;
+    padding-right: 15px;
+    padding-left: 0;
+    border-right: 5px solid @grayVeryLight;
+    border-left: 0;
+    p {
+      margin-bottom: 0;
+      font-size: @baseFontSize + 2px;
+      font-weight: @baseFontWeight;
+      line-height: @baseLineHeight + 2px;
+    }
+
+    small {
+      display: block;
+      line-height: @baseLineHeight;
+      color: @gray;
+    }
+  }
+}
+
+// Quotes
+q:before,
+q:after,
+blockquote:before,
+blockquote:after {
+  content: "";
+}
+
+// Addresses
+address {
+  display: block;
+  margin-bottom: @baseLineHeight;
+  font-style: normal;
+  line-height: @baseLineHeight;
+}
+
+
+
+
+/* TYPOGRAPHY
+-------------------------------------------------- */
+
+
+body {
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  background-color: @bodyBackground;
+}
+
+
+p {
+  margin: @paragraphMargin;
+}
+
+a {
+  color: @linkColor;
+  text-decoration: none;
+}
+
+a:hover {
+  color: @linkColorHover;
+  text-decoration: underline;
+}
+
+a.gray_text {
+  color: @grayDark;
+  text-decoration: none;
+}
+
+a.gray_text:hover {
+  color: @grayDark;
+  text-decoration: underline;
+}
+
+a.white_text {
+  color:@white;
+  text-decoration: none;
+}
+
+a:hover.white_text {
+  color: @white;
+  text-decoration: underline;
+}
+
+/*
+================================================
+Headers for desktop
+================================================
+*/
+
+/* Edits made by:; AJ Lohman - just organized them a bit*/
+/* headers - All*/
+
+h1, h2 {
+  font-family: @headingsSerifFontFamily;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
+  text-rendering: optimizelegibility;
+  margin: @headingsMargin;
+}
+
+/* Edits made by AJ Lohman */
+h3, h4, h5 {
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  color: @headingsColor;
+  text-rendering: optimizelegibility;
+  margin: @headingsMargin;
+}
+
+h1 {
+  font-size: 36px;
+  line-height: 40px;
+}
+h2 {
+  font-size: 28px;
+  line-height: 32px;
+}
+h3 {
+  font-size: 20px;
+  line-height: 24px; 
+}
+h4 {
+  font-size: 18px;
+  line-height: 22px; 
+}
+h5 {
+  font-size: 16px;
+  line-height: 20px; 
+}
+
+/* Header - featured*/
+h4.feature {
+  font-size: 50px;
+  line-height: 60px;
+  font-family: @headingsSerifFontFamily;
+}
+
+
+
+
+
+/* Header - title*/
+.title {
+  text-align: center;
+  background: @headingsTitleBackground;
+  background-position: 50% 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.title h1 {
+  display: inline-block;
+  background: #fff;
+  padding: 0px 10px;
+  max-width: 80%;
+  /*display: block;*/
+}
+
+/*
+================================================
+Headers for mobile (Phone)
+================================================
+*/
+
+@media only screen and (max-width:@breakPointMobileMax) {
+
+  /* headers - All*/
+  h1, h2 {
+    font-family: @headingsSerifFontFamily;
+    font-weight: @headingsFontWeight;
+    color: inherit;
+    text-rendering: optimizelegibility;
+  }
+
+  h3, h4, h5 {
+    font-family: @headingsFontFamily;
+    font-weight: @headingsFontWeight;
+    color: inherit;
+    text-rendering: optimizelegibility;
+  }
+
+  h1      {font-size: 24px;line-height: 28px;}
+  h2      {font-size: 20px;line-height: 24px;}
+  h3      {font-size: 17px;line-height: 20px; font-family: @headingsFontFamily;font-weight: @headingsFontWeightMobile;}
+  h4      {font-size: 16px;line-height: 20px; font-family: @headingsFontFamily;font-weight: @headingsFontWeight;}
+  h5      {font-size: 16px;line-height: 20px; font-family: @headingsFontFamily;font-weight: @headingsFontWeightMobile;}
+
+  .lead {
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize;
+    font-weight: @headingsFontWeightMobile;
+    line-height: @baseLineHeight;
+  }
+
+  .title {
+    background-position: 50% 13px;
+  }
+
+}
+
+/*
+================================================
+Headers for tablet
+================================================
+*/
+
+@media only screen and (min-width:@breakPointTabletMin) and (max-width:@breakPointTabletMax) {
+
+  h1, h2, h5 {
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  color: inherit;
+  text-rendering: optimizelegibility;
+  }
+
+  h3, h4 {
+    font-family: @headingsFontFamily;
+    font-weight: @headingsFontWeight;
+    color: inherit;
+    text-rendering: optimizelegibility;
+  }
+
+  h1      {font-size: 32px;line-height: 38px;}
+  h2      {font-size: 26px;line-height: 30px;}
+  h3      {font-size: 20px;line-height: 24px; font-family: @headingsFontFamily; font-weight: @headingsFontWeight;}
+  h4      {font-size: 18px;line-height: 22px; font-family: @headingsFontFamily; font-weight: @headingsFontWeight;}
+  h5      {font-size: 16px;line-height: 20px;}
+
+  .lead {
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize+2px;
+    font-weight: @headingsFontWeightMobile;
+    line-height: @baseLineHeight;
+  }
+
+}
+
+
+/* TEXT COLORS
+-------------------------------------------------- */
+
+
+.gray-medium-text { color: @gray };
+.white-text { color: @white };
+.blue-text { color: @blue };
+.green-text { color: @green };
+.red-text { color: @red };
+.purple-text { color: @purple };
+.berry-text { color: @berry };
+.teal-text { color: @teal };
+
+
+
+

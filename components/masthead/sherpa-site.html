@@ -1,0 +1,47 @@
+
+
+<script type="text/javascript">
+  
+  Sherpa.componentJS.masthead_sherpa_site_js = function(data){
+    Sherpa.scope(".nav-sherpa", function(){
+      this.listen("li a", "click", function(){
+
+          console.log("hello")
+          setUpAside();
+
+      })
+    });
+ 
+  };
+  Sherpa.componentJS.masthead_sherpa_site_js();
+  
+</script>
+
+  <div class="wrapper">
+    <!-- Logo -->
+    <div class="da1-da2 ta1-ta2 mb1">
+      <div class="brand-sherpa">
+        <a href="#">Sherpa</a>
+      </div>
+    </div>
+
+    <!-- menu collapse (tablet and phone) -->
+    <div class="da-hide ta3-ta9 mb2-mb4 right-text">
+      <a href="#" id="menu-toggle" class="nav-sherpa-collapse"><span aria-hidden="true" class="icon-ui-menucollapsed"></span></a>
+    </div>
+
+    <!-- menu -->
+    <div id="menu" class="da3-da12 ta-hide ma-hide">
+      <nav class="nav-sherpa">
+        <ul data-bind="foreach: $__page__.children">
+          <!-- ko if: val('showInMasthead') -->
+          <li data-bind="css: {active: isVisible}">
+            <a data-bind="page-href: $data">
+                <span data-bind="text: val('desc')"></span>
+            </a>
+          </li>
+          <!-- /ko -->
+        </ul>
+      </nav>
+    </div>
+  </div>

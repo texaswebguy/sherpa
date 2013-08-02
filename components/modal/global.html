@@ -1,0 +1,137 @@
+<div id="generic_modal" class="modal hide fade" tabindex="-1" role="dialog" aria-labelledby="generic_modal" aria-hidden="true">
+  <div class="modal-header">
+    <button type="button" class="close" data-dismiss="modal" aria-hidden="true"><span class="icon-close"></span></button>
+    <h3 id="generic_modal_title" class="centered"></h3>
+    <p id="generic_modal_title_description" class="centered"></p>
+  </div>
+  <div class="modal-body">
+    
+  </div>
+  <div class="modal-footer">
+    
+  </div>
+</div>
+
+
+
+<script type="text/javascript">
+//TODO sherpa QA statements.
+    //generic modal listener function
+
+
+    Sherpa.componentJS.modal_global_js = function(options) {
+      console.log("body html",$(options.body_html).html())
+      try {
+        if(_.isObject(options) && !options.modal_html_selector) {
+          console.log("correct way", options)
+          if (options.body_html) {
+            $('#generic_modal .modal-body').html($(options.body_html).html());
+          } else if(options.body) {
+            $('#generic_modal .modal-body').html(options.body)
+          } else {
+            err = "You have to at least supply body html for the modal to work"
+          }
+          if(options.title) {
+            $('#generic_modal_title').text(options.title);
+            //should not have a title description without title
+            if(options.title_description) {
+              $('#generic_modal_title_description').text(options.title_description);
+            } else {
+              $('#generic_modal_title_description').hide();
+            }
+          } else {
+            $('#generic_modal .modal-body').prepend($('#generic_modal .modal-header .close'))
+            $('#generic_modal .modal-header').hide();
+          }
+          if(options.footer_html) {
+            $('#generic_modal .modal-footer').html($(options.footer_html).html());
+          } else if(options.footer) {
+            $('#generic_modal .modal-footer').html(options.footer);
+          } else {
+            $('#generic_modal .modal-footer').hide();
+          }
+            
+            $('#generic_modal').modal('show');
+            if(options.toggle) { window.setTimeout(function(){$($(".modal-backdrop")[1]).remove()},100)} //TODO this is a total kludge. Just need to figure out where th esecond backdrop is firing.
+          
+        } else {
+          if(options === 'hide') {
+            $('#generic_modal').modal('hide');
+          }
+          if(options.modal_html_selector) {
+            //$(options.modal_html_selector).modal('show');
+            //TODO standard bootstrap already fires the modal method.  Need to decouple later to include standard bootstrap function here.
+          } else if($(options).length) {
+              $(options).modal('show');
+          }
+        }
+      } catch (err) {
+        console.error(err);
+      }
+    }
+
+    Sherpa.subscribe( "modal", function(options) {
+      Sherpa.componentJS.modal_global_js(options);
+    });
+
+/* To invoke generic modal follow the following format
+
+Sherpa.publish("modal", {
+  title:'Title of Modal (optional)',
+  title_description:'description that goes under title (optional)',
+  body: 'You can put <strong>HTML</strong> in here',
+  footer:'You can put <button class="btn">buttons</button> in here (optional)'
+})
+
+you can populate the body and/or footer with contents from a hidden div
+
+Sherpa.publish("modal", {
+  title:'Title of Modal (optional)',
+  title_description:'description that goes under title (optional)',
+  body_html: '#some_id',
+  footer_html: '#some_other_id',
+})
+
+
+//to call a specific custom modal: 
+Sherpa.publish("modal", '#some_custome_modal_id')
+
+
+attributes can also be used so no javascript coding is required
+<a href="#" data-title="Title of Modal (optional)"
+  title_description="description that goes under title (optional)"
+  body_html="#some_id"
+  footer_html="#some_other_id"
+>link to launch modal</a>
+
+*/
+
+
+    Sherpa.scope('*', function(){
+      this.listen("[data-toggle=modal]", "click", function(event){
+        event.preventDefault();
+        var options = {
+          body: $(event.currentTarget).attr('data-body'),
+          body_html: $(event.currentTarget).attr('data-bodyhtml'),
+          title: $(event.currentTarget).attr('data-title'),
+          title_description: $(event.currentTarget).attr('data-titledescription'),
+          footer: $(event.currentTarget).attr('data-footer'),
+          toggle:true
+        }
+        if(!options.body && !options.body_html) {
+          options.modal_html_selector = $(event.currentTarget).attr('href');
+        }
+
+        Sherpa.componentJS.modal_global_js(options);
+
+      });
+
+      this.listen("[data-dismiss=modal]", "click", function(event){
+        Sherpa.publish( 'modal','hide');
+      });
+
+    })
+
+
+
+</script>
