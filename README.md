@@ -17,7 +17,7 @@ Documentation is available at http://bit.ly/uxprototyping
 
 ###Download Sherpa Starter Kit:
 
-[https://github.com/DellGDC/sherpa/archive/v0.4.zip](https://github.com/DellGDC/sherpa/archive/v0.4.zip "Download v0.4 Starter Kit") 
+[https://github.com/DellGDC/sherpa/archive/v0.4.1.zip](https://github.com/DellGDC/sherpa/archive/v0.4.1.zip "Download v0.4 Starter Kit") 
 
 ###Seting up the prototype:
 
