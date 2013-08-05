@@ -1,4 +1,4 @@
-# Sherpa (v0.4)
+# Sherpa (v0.4.1)
 
 A responsive prototyping framework for user experience design.
 
