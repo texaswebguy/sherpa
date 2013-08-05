@@ -1,20 +1,20 @@
-Key,Value,Example
---------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------,,
-Name,My project,My Support Experience
-ID,1136,1136
-Description,This is a description of the project,
-Release,Splendid Sun,Splendid Sun
-Important Information,Please use a Chrome Browser ,Please use a Chrome Browser 
-github location,"<a href=""https://github.com/DellGDC/1136-My-Support-Experience"">https://github.com/DellGDC/1136-My-Support-Experience</a>","<a href=""https://github.com/DellGDC/1136-My-Support-Experience"">https://github.com/DellGDC/1136-My-Support-Experience</a>"
-github clone location,git@github.com:DellGDC/1136-My-Support-Experience.git,git@github.com:DellGDC/1136-My-Support-Experience.git
-sandbox location,"<a href=""http://sandbox.gsdprototypes.com/1136-My-Support-Experience"">http://sandbox.gsdprototypes.com/1136-My-Support-Experience</a>","<a href=""http://sandbox.gsdprototypes.com/1136-My-Support-Experience"">http://sandbox.gsdprototypes.com/1136-My-Support-Experience</a>"
-BaseCamp root,"<a href=""https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/"">https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/</a>","<a href=""https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/"">https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/</a>"
-BaseCamp thread,"<a href=""https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/posts/74166748/comments"">https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/posts/74166748/comments</a>","<a href=""https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/posts/74166748/comments"">https://dellgsd.basecamphq.com/projects/10783548-1136-esupport-my-support-experience/posts/74166748/comments</a>"
-GDC Account Manager,Joeslen Koester,
-GDC Lead UX Architect,Wendy Leiva,
-GDC Lead Designer,Katherine Emsoff,
-GDC Content Manager,Jim Braden,
-IT Lead Developer,Paul Day,
-Business Stakeholder,Joe Smith,
-Business Project Manager,Tracey Shaw,
-Business Product Manager,Stephen Wilson,
+Key,Value
+--------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------------,
+Name,My project
+ID,123456
+Description,This is a description of the project
+Release,v3.0.1
+Important Information,Please use a Chrome Browser 
+github location,"<a href=""https://github.com/whatever/project_name"">https://github.com/whatever/project_name</a>"
+github clone location,git@github.com:whatever/project_name.git
+sandbox location,"<a href=""http://sandbox.whatever.com/project_name"">http://sandbox.whatever.com/project_name</a>"
+BaseCamp root,"<a href=""https://whatever.basecamphq.com/projects/123456-project_name/"">https://whatever.basecamphq.com/projects/123456-project_name/</a>"
+BaseCamp thread,"<a href=""https://whatever.basecamphq.com/projects/123456-project_name/posts/74166748/comments"">https://whatever.basecamphq.com/projects/123456-project_name/posts/74166748/comments</a>"
+Account Manager,Joe Smith
+Lead UX Architect,Wendy Langstrom
+Lead Designer,Katherine McGuire
+Content Manager,Jim Barron
+IT Lead Developer,Paul Dalton
+Business Stakeholder,Joe Silverstone
+Business Project Manager,Tracey Thorne
+Business Product Manager,Stephen Myer

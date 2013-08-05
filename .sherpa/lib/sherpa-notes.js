@@ -93,6 +93,11 @@ Sherpa.notes = {
         } else {
         	notes_location = "";
         }
+        var current_theme = Sherpa.store("theme");
+        if(!current_theme){
+        	current_theme = SHERPA.DEFAULT_THEME;
+        }
+
         var notes = '<div id="sherpa-notes" class="sherpa-notes-container"'+notes_location+'>'+
 		'	<h3 class="design_notes_title">'+
 		'		<span>Design Notes</span>'+
@@ -103,10 +108,11 @@ Sherpa.notes = {
 		'       </div>'+
 		'	</h3>'+
 		'	<div id="collapsible-notes" class="collapse">'+
-            dynamicNotes +
+        '<div id="sherpa-notes-body">'+dynamicNotes +
 		notes_body+
-		'     <div id="sherpa-notes-annotations"><h3>Annotations</h3><ol></ol></div>'+
-		'     <p  id="sherpa-notes-version" class="da-clear ta-clear ma-clear"><small class="template_info pull-right da-clear ta-clear ma-clear">Sherpa Version: '+Sherpa.VERSION+'</small></p>'+
+		'     <div id="sherpa-notes-annotations"><h3>Annotations</h3><ol></ol></div></div>'+
+		'     <div id="sherpa-notes-footer" class="da-clear ta-clear ma-clear"><small class="template_info pull-right">Theme: '+current_theme+' - <a href="#" class="reset_theme" title="Reset back to default theme">reset</a></small><br/>'+
+		'     <small class="template_info pull-right">Sherpa Version: '+Sherpa.VERSION+'</small></div>'+
 		'	</div>'+
 		'</div>'
 		return notes;
@@ -162,7 +168,7 @@ Sherpa.notes = {
 				}
 				list_item += '</li>';
 
-				callout = '<div class="sherpa-notes-callout" title="'+title+'">'+callout_number+'</div>';
+				callout = '<div class="sherpa-notes-callout" data-notes-id="'+id+'" title="'+title+'">'+callout_number+'</div>';
 
 				$(el).prepend(callout);
 
@@ -215,15 +221,46 @@ Sherpa.scope("#sherpa-notes",function(){
 		event.preventDefault();
 		$.scrollTo('#'+$(event.currentTarget).attr('data-notes-id'),300,{offset:{top: -100}});
 	});
+	this.listen(".reset_theme","click",function(event){
+		Sherpa.themeSwitcher(SHERPA.DEFAULT_THEME);
+	});
 
-	this.listen(".sherpa-notes-title, [data-notes=true]","click", function(event){
+	this.listen(".sherpa-notes-title, .sherpa-notes-callout","click", function(event){
 		event.preventDefault();
 		console.log("display help");
-		 Sherpa.publish("modal", {
-		    title:'Documentation',
-		    title_description:'description that goes under title (optional)',
-		    body: 'contents go here'
-		  })
+		var id = $(event.currentTarget).attr("data-notes-id");
+		var title = $("#"+id).attr("data-notes-title"),description = $("#"+id).attr("data-notes-description"),doc_url = $("#"+id).attr("data-notes-url"), doc_html ="";
+		if(!title){ title = _.str.titleize(_.str.humanize(id)); }
+		if(!description){ description = "" }
+		if(!doc_url){ 
+			Sherpa.request({
+				resourceId: "documentation", 
+				data: {id: id}, 
+				success: function(markdownText, status){
+
+					var convertMD = new Sherpa.Markdown.converter();
+					doc_html = convertMD.makeHtml(markdownText);
+					renderModal();
+				},
+				error: function(){
+					doc_html = "<p>Documentation not found!</p><p>You can provide documentation in the following two ways:</p>"+
+					"<ul><li>In markdown (wiki) format by adding a file at <code>"+SHERPA.DOCUMENTATION_PATH+id+"/README.md</code></li>"+
+					"<li>Provide an external url as an attribute. Example: <code>data-notes-url=\"http://www.whatever.com/document.pdf\"</code></li>"
+					renderModal();
+				}
+			});
+		} else {
+			doc_html = '<iframe class="sherpa-notes-documentation-iframe" src="'+doc_url+'"></iframe>';
+			renderModal();
+		}
+		function renderModal(){
+			Sherpa.publish("modal", {
+			    title:title,
+			    title_description:description,
+			    body: doc_html
+			});
+		}
+
 
 	});
 	this.listen("#design-notes-collapser","click",function(event){

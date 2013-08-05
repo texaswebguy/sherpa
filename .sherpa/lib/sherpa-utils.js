@@ -536,6 +536,12 @@ Sherpa.request.define( "core_config", "ajax", {
     type: "GET"
 });
 
+Sherpa.request.define( "documentation", "ajax", {
+	url: SHERPA.DOCUMENTATION_PATH+"{id}/README.md",
+    dataType: "text",
+    type: "GET"
+});
+
 //Session Storage
 Sherpa.session = {};
 Sherpa.session.storeLog = function(key,id){
