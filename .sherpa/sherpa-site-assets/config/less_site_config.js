@@ -33,6 +33,7 @@ SHERPA.JS_LIB_PATH = ".sherpa/lib/";
 SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 SHERPA.ASSETS_PATH = ".sherpa/sherpa-site-assets/";
+SHERPA.DOCUMENTATION_PATH = "documentation/";
 SHERPA.DEFAULT_THEME = "dell-308";
 
 
