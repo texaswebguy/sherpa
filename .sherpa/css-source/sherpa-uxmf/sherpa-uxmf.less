@@ -148,12 +148,32 @@
 #collapsible-notes
 {
 	display: block;
-	overflow: hidden; 
+	position:relative
 	height:auto;
+	margin: 11px 0px 0px -10px;
+	width:105%;
+}
+#sherpa-notes-body {
+	overflow-y: scroll;
+	overflow-x: hidden;
+	padding:10px;
+	max-height:400px;
+	margin-bottom:46px
 }
 #design-notes-control {
 	margin-top:-15px;
 	font-size:15px
+}
+#sherpa-notes-annotations {
+	padding:10px;
+}
+#sherpa-notes-footer {
+	font-size:10px;
+	padding:5px;
+	background:#eee;
+	position:absolute;
+	bottom:0;
+	border-top:1px #ddd solid;
 }
 #design-notes-control .collapsed .icon-ui-collapse, #design-notes-control .icon-ui-expand
 {
@@ -249,11 +269,15 @@ body {
     font-weight:bold;
     text-align:center;
 }
- .sherpa-notes [data-notes=true]:hover {
+.sherpa-notes [data-notes=true]:hover {
    outline: 2px dashed orange; 
    outline-offset:-2px;
+}
+
+.sherpa-notes .sherpa-notes-callout:hover {
    cursor:help;  
- }
+}
+
 
 .sherpa-notes-callout {
 	display:none
@@ -305,7 +329,17 @@ body {
 	margin:0;
 	left:0;
 }
+.sherpa-notes .modal .model-body{
+	max-height:700px;
+	resize: both;
+}
 
 .sherpa-notes .modal.fade.in {
 	top:1%;
+}
+
+.sherpa-notes-documentation-iframe {
+	width:100%;
+	min-height: 400px;
+	resize: both;
 }
