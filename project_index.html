@@ -11,6 +11,7 @@
 
     <script type="text/javascript">
         var SHERPA_CONFIG_OVERRIDES = {};
+		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = ".sherpa/sherpa-site-assets/config/less_site_config.js";
 
         /*
 			This is a place to overide sherpa default configurations for this html file.
@@ -59,6 +60,17 @@
 				</ul>
 			</div>
 			<div class="da-all ta-all ma-all">
+				<h2>Demo Pages</h2>
+				<ul>
+					<li><a href="#!/demo/banner-left-nav">banner-left-nav </a></li>
+					<li><a href="#!/demo/banner-left-rail">banner-left-rail </a></li>
+					<li><a href="#!/demo/banner-right-rail">banner-right-rail </a></li>
+					<li><a href="#!/demo/banner">banner </a></li>
+					<li><a href="#!/demo/content-left-rail">content-left-rail </a></li>
+					<li><a href="#!/demo/content-right-rail">content-right-rail </a></li>
+				</ul>
+			</div>
+			<div class="da-all ta-all ma-all">
 				<h2>Sherpa Documentation</h2>
 				
 				<ul>
@@ -72,12 +84,7 @@
 					<li><a href="site.html#!/functions">Functions</a></li>
 				</ul>
 			</div>
-			<div class="da-all ta-all ma-all">
-				<h2>Tutorial</h2>
-				<ul>
-					<li><a href="#!/tutorial/">Example Page</a></li>
-				</ul>
-			</div>
+
 		</div>
 
 	</section>
@@ -120,10 +127,33 @@
 	</div>
 </div>
 
-<div data-bind="page: {id: 'tutorial'}">
-	<div data-bind="page: {id: 'start', title: 'Sherpa Tutorial - Example Page', desc: 'Example Page', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/tutorial/example.html'}"></div>
-</div>
 
+<div data-bind="page: {id: 'demo'}">
+
+	<div data-bind="component: {name:'masthead', type:'starter-kit'}">
+	</div>
+
+
+	<div data-bind="page: {id: 'banner-left-nav', title: 'Banner Left Nav Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/demo/banner-left-nav.html'}"></div>
+
+
+	<div data-bind="page: {id: 'banner-left-rail', title: 'Banner Left Rail Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/demo/banner-left-rail.html'}"></div>
+
+
+	<div data-bind="page: {id: 'banner-right-rail', title: 'Banner Right Rail Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/demo/banner-right-rail.html'}"></div>
+
+
+	<div data-bind="page: {id: 'banner', title: 'Banner Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/demo/banner.html'}"></div>
+
+
+	<div data-bind="page: {id: 'content-left-rail', title: 'Content Left Rail Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/demo/content-left-rail.html'}"></div>
+
+	<div data-bind="page: {id: 'content-right-rail', title: 'Banner Right Rail Template', desc: 'Template', scrollToTop: true, sourceCache:  true, sourceOnShow: 'pages/demo/content-right-rail.html'}"></div>
+
+
+	<div data-bind="component: {name:'footer', type:'starter-kit'}">
+	</div>
+</div>
 
 </body>
 </html>
