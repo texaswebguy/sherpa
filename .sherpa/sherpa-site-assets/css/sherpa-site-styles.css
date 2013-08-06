@@ -779,13 +779,3 @@ Breakpoints
   list-style: none;
   background: none;
 }
-
-.modal.modal-example {
-    display:block;
-    overflow:hidden;
-    background:#fff;
-    -webkit-box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, .1);
-    box-shadow:  2px 2px 2px 2px rgba(0, 0, 0, .1);
-    -webkit-border-radius: 5px;
-    border-radius: 5px;
-}
