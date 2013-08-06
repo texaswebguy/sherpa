@@ -51,8 +51,10 @@ Sherpa.globalEvents = {
 		The version of waypoints sticky loaded provides a call back function which is critical in hard setting the width of the affix element
 		*/
 		$("aside .nav.affix li a").css('width','inherit');
-		$('aside .nav.affix').css('width',Sherpa.globalEvents.aside_config().width);
-		$("aside .nav li.active a .icon-ui-triangleleft").css('top',($("aside .nav li.active a").height()/2)-($("aside .nav li.active .icon-ui-triangleleft").height()/2)+5);
+		if(viewModel.isDesktop()){
+			$('aside .nav.affix').css('width',Sherpa.globalEvents.aside_config().width);
+			$("aside .nav li.active a .icon-ui-triangleleft").css('top',($("aside .nav li.active a").height()/2)-($("aside .nav li.active .icon-ui-triangleleft").height()/2)+5);
+		}
 		$.waypoints('refresh');
 		
 	},
@@ -62,7 +64,7 @@ Sherpa.globalEvents = {
 		  offset: Sherpa.globalEvents.aside_config().offset,
 		  complete: function(){
 			if(!viewModel.isDesktop()) {
-				$("aside .nav.affix li.active a").css('width',Sherpa.globalEvents.aside_config().width);
+				$("aside .nav.affix li.active a").css('width','100%');
 			} else {
 				$("aside .nav.affix:visible").css('width',Sherpa.globalEvents.aside_config().width);
 			}
@@ -129,6 +131,16 @@ Sherpa.globalEvents = {
 			temp_obj.up_offset = 100;
 			temp_obj.width = window.innerWidth-50;
 		}
+
+		if(viewModel.isMobile()) {
+			temp_obj.offset = 50;
+			temp_obj.scrollto = {offset:{top:-80}}
+			temp_obj.down_offset = 600;
+			temp_obj.up_offset = 100;
+			temp_obj.width = window.innerWidth-50;
+		}
+
+
 		return temp_obj;
 	},
 	init: function(){
