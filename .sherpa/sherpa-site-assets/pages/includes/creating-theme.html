@@ -1,0 +1,54 @@
+
+		<h2 class="sherpa">Creating a Theme</h2>
+					<p>The Sherpa Starter Kit comes with the default Sherpa css theme.</p>
+
+					<p>CSS themes can be built using less and provide control of global elements such as colors, heights, widths, paddings, etc.</p>
+
+			        <p>In addition, some component level variables are provided to make theme adjustments.</p>
+
+			        <p>If further customization is provided, a theme can also declarations that override Sherpa classes or a whole new non sherpa css can be specified.</p>
+
+					<p>There are three ways to specify or switch a theme:</p>
+					<ul>
+						<li>Configuration of default theme</li>
+						<li>In the url</li>
+						<li>Via JavaScript</li>
+					</ul>					
+
+					<h3 class="sherpa">Configuration of default theme:</h3>
+              		<p class="sherpa">By editing <code>assets/config/global_config.js</code> you can change the default theme.</p>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+Note this line contains the default them css to be loaded:
+<code>{ css_theme: SHERPA.CSS_CORE_PATH+"sherpa.css" }</code>
+</pre>
+
+
+					<h3 class="sherpa">Switch theme through url:</h3>
+              		<p class="sherpa">You might want to provide a link on your project index page that would switch the theme.</p>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+For example: <a href="?theme=foobar#!/functions">See foobar theme.</a> <a href="?theme=dell-308-232#!/functions">Reset theme.</a>
+</pre>
+
+
+					<h3 class="sherpa">Via JavaScript:</h3>
+              		<p class="sherpa">You can have any function execute this to initiate a page reload with the new theme.</p>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+<code>Sherpa.themeSwitcher("foobar");</code>
+</pre>
+
+					<h3 class="sherpa">Special classes for theme logic:</h3>
+              		<p class="sherpa">If you create a theme called "foobar" you have two classes available that will provide show/hide logic capability:</p>
+					<ul>
+						<li>theme-hide-foobar</li>
+						<li>theme-only-foobar</li>
+					</ul>		
+              		<p class="sherpa">Note: this uses a <code>display: block;</code> so you can't really use it in an in-line display (word in a middle of a sentence).</p>
+					<h4 class="sherpa">Markup:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">
+&lt;div class="theme-hide-foobar">
+	This element will only display only when any theme other than "foobar" is in context.
+&lt;/div>
+&lt;div class="theme-only-foobar">
+	This element will only display when the "foobar" theme is in context.
+&lt;/div>
+</pre>

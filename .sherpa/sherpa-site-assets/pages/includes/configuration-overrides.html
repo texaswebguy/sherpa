@@ -1,0 +1,25 @@
+          <h2 class="sherpa" data-bind="msg: 'title_configuration_overrides'">Configuration Overrides</h2>
+                  <p class="sherpa" data-bind="msg: 'text_configuration_overrides_description'">Each html file can contain override configurations.  This allows you to create different pages that might use different libraries or helper files.</p>
+
+                <p class="sherpa" data-bind="msg: 'text_configuration_overrides_example'">In the head of your HTML document you will notice a script tag. All of the override variables are commented out for your convenience:</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
+&lt;head>
+
+  ...
+
+  &lt;script type="text/javascript">
+      var SHERPA_CONFIG_OVERRIDES = {};
+    SHERPA_CONFIG_OVERRIDES.CSS_LOCAL_APP = "assets/css/myCustomStyles.css";
+    SHERPA_CONFIG_OVERRIDES.PROTOTYPE_APP = "myCustomApp.js";
+    SHERPA_CONFIG_OVERRIDES.ENABLE_GRIDSET_OVERLAY = true;
+    SHERPA_CONFIG_OVERRIDES.JS_CORE_LOAD = [
+        { myCustomJS: "assets/js/myCustomJSLibrary.js"}
+    ]
+  &lt;/script>
+
+  ... 
+
+&lt;/head>
+
+</pre>

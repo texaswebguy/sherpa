@@ -495,19 +495,27 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
 
   .tablet aside .nav.affix, .mobile aside .nav.affix {
     width:100%;
-    top: 20px;
+    top: 30px;
     left: 0px;
     -webkit-border-radius: 0;
     -moz-border-radius: 0;
     border-radius: 0;
     z-index:9999;
   }
-  .tablet aside .nav.affix li.active a, .mobile aside .nav.affix li.active a, .tablet aside .nav.affix.open li a, .mobile aside .nav.affix.open li a {
+  .tablet aside .nav.affix li.active a, .tablet aside .nav.affix.open li a {
     display:block;
     -webkit-border-radius: 0;
        -moz-border-radius: 0;
             border-radius: 0;
     padding: 9px 0px 9px 36px;
+
+  }
+  .mobile aside .nav.affix li.active a, .mobile aside .nav.affix.open li a {
+    display:block;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+    padding: 9px 0px 9px 20px;
 
   }
   .tablet aside .nav.affix li.active a:before, .mobile aside .nav.affix li.active a:before {
@@ -677,29 +685,24 @@ Breakpoints
   h6.sherpa {font-size: 11px;line-height: 11px;}
 
   /* Nav */
+
   .nav-sherpa ul {
     text-align: left;
     margin:0 0 20px 0;
   }
 
-  .nav-sherpa ul li {
-    display: block;
-    
+  .nav-sherpa ul li {    
+      display: block;
   }
 
   .nav-sherpa ul li a {
     width: 100%;
     display: block;
     margin:0;
-    padding:10px 20px;
+    padding:10px 20px 10px 0;
   }
 
-  .nav-sherpa ul li a:hover {
-    width: 100%;
-    display: block;
-    margin:0;
-    padding:10px 20px;
-  }
+
 
 }
 
@@ -741,15 +744,10 @@ Breakpoints
     width: 100%;
     display: block;
     margin:0;
-    padding:10px 20px;
+    padding:10px 20px 10px 0;
   }
 
-  .nav-sherpa ul li a:hover {
-    width: 100%;
-    display: block;
-    margin:0;
-    padding:10px 20px;
-  }
+
 }
 
 

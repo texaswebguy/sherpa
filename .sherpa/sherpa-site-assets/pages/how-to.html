@@ -4,8 +4,13 @@
 	<section class="title-content">
 		<div class="wrapper">
 			<div class="da-all ta-all mb-all white-text">
+<<<<<<< HEAD
 				<h1 class="sherpa featured-white">hhhhhhhhhhhhhhHow to get started</h1>
 				<h3 class="sherpa featured-white">Everything you'll need to know to build templates and patterns with ease! Before starting, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/">Sublime Text</a>) and some working knowledge of HTML and CSS.</h3>
+=======
+				<h1 class="sherpa featured-white" data-bind="msg: 'title_get_started'">How to get started</h1>
+				<h3 class="sherpa featured-white" data-bind="msg: 'text_get_started_description'">Everything you'll need to know to build templates and patterns with ease! Before starting, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/">Sublime Text</a>) and some working knowledge of HTML and CSS.</h3>
+>>>>>>> 3f3ca0891b8dedd684f187f20b6e49fcbf00c7dc
 			</div>
 		</div>
 	</section>
@@ -15,109 +20,16 @@
 			<aside class="da1-da3 ta-all mb-all bottom-offset-large">
 				<div class="sherpa-docs-sidebar da-clear ta-clear ma-clear">
 					<ul class="sherpa nav nav-list sherpa-docs-sidenav">
-			          <li class="active"><a href="#download-bootstrap">Download</a></li>
-			          <li><a href="#file-structure">File structure</a></li>
-			          <li><a href="#contents">What's included</a></li>
+			          <li class="active"><a href="#download-sherpa" data-bind="msg: 'text_get_started_menu_download'">Download</a></li>
+			          <li><a href="#file-structure" data-bind="msg: 'text_get_started_menu_file_structure'">File structure</a></li>
+			          <li><a href="#contents" data-bind="msg: 'text_get_started_menu_contents'">What's included</a></li>
 			        </ul>
 				</div>
 			</aside>
 			<section class="da4-da12 ta-all mb-all">
-
-				<article id="download-bootstrap" class="bottom-offset-large">
-					<h2 class="sherpa">Download</h2>
-					<hr>
-
-					<p class="sherpa lead">Before downloading, be sure to have a text editor (we recommend <a href="http://www.sublimetext.com/" >Sublime Text</a>) and some working knowledge of HTML and CSS. We won't walk through the source files here, but they are available for download. We'll focus on getting started with the Sherpa files.</p>
-
-					<h3 class="sherpa">Download starter kit</h3>
-					<p class="sherpa"><strong>Fastest way to get started:</strong> get the original files of all CSS, JS, images and html templates.</p>
-					<a href="https://github.com/DellGDC/sherpa/archive/v0.4.1.zip" >
-            <button class="sherpa-btn" type="button">Download starter kit</button>
-          </a>
-
-          <hr>
-				</article>
-
-				<article id="file-structure" class="bottom-offset-large">
-					<h2 class="sherpa content-offset">File structure</h2>
-					<hr>
-
-					<p class="sherpa lead">Within the download you'll find the following file structure and contents, logically grouping common assets.</p>
-
-					<p class="sherpa">Once downloaded, unzip the compressed folder to see the structure of (the compiled) Sherpa. You'll see something like this:</p>
-
-					<pre class="prettyprint">
-  sherpa/
-  ├── .sherpa/
-  ├── assets/
-  │   ├── config/
-  │   ├── content/
-  │   ├── css/
-  │   │    ├──doc.css
-  │   ├── data/
-  │   ├── img/
-  │   ├── js/
-  │   │    ├──app.js
-  │   ├── xref/
-  ├── includes/
-  │   ├── sample/
-  ├── pages/
-  │   ├── sherpa-site/
-  │   ├── templates/
-  │   ├── tutorial/
-  ├── index.html
-  ├── launch_prototype.bat
-  ├── project_index.html
-  ├── site.html
-				</pre>
-
-				<p class="sherpa">Please review the explanation of files and folders below:</p>
-				<ul class="sherpa">
-					<li><p class="sherpa"><strong>.sherpa</strong>: Here all framework support files are stored.</p></li>
-					<li><p class="sherpa"><strong>assets</strong>: Here all prototype support files are stored.</p></li>
-					<li><p class="sherpa"><strong>assets/config</strong>: Config is a folder where configuration files for each prototype application is stored in for of JavaScript (.js) files.</p></li>
-					<li><p class="sherpa"><strong>assets/content</strong>: Contains messages files that are in JSON format.  All files follow the same naming convention which is messages_locale.json. locale can be a language or local code such as""en" or "en_US" respectively.</p></li>
-					<li><p class="sherpa"><strong>assets/css</strong>: These are the project specific css files. You will see sherpa_overrides and bootstrap files. Please ignore these. They are here because of legacy purposes but will be removed eventually.  The key document here is doc.css which by default it automatically gets loaded with every prototype page.</p></li>
-					<li><p class="sherpa"><strong>assets/data</strong>: A place where sample data can be stored in any format such as json, csv, etc.</p></li>
-					<li><p class="sherpa"><strong>assets/img</strong>: General location for all project specific images.  The images in this directory are related to the Sherpa website.  They will eventually be removed so that the folder is completely empty and only have project specific images.</p></li>
-					<li><p class="sherpa"><strong>assets/js</strong>:  General location for all project JavaScript files.  You should notice a sherpa-site.js file that is related to the Sherpa website.  This file will eventually be removed so that the folder is completely empty and only have project specific JavaScript files. app.js automatically gets loaded with every prototype page. app.js contains sample data that will be eventually deleted.</p></li>
-					<li><p class="sherpa"><strong>assets/xref</strong>: Contains cross reference files that are in JSON format.  All files follow the same naming convention as messages like resources_locale.json. locale can be a language or local code such as""en" or "en_US" respectively. These files are used to provide link and image references.</p></li>
-					<li><p class="sherpa"><strong>assets/sherpa</strong>: This is the core files for the Sherpa prototyping framework.  When updating the core to a new release, this is the folder that would bereplaced.</p></li>
-					<li><p class="sherpa"><strong>components</strong>: All established components will be in this forlder. No project work should be done in this folder unless the work is to improve or create established components.</p></li>
-					<li><p class="sherpa"><strong>includes</strong>: Very similar to components but project specific.  It is possible that an include in a particular project be made into a component.</p></li>
-					<li><p class="sherpa"><strong>pages</strong>: These are virtual pages that can be organized in any number of folders.  Notice the templates folders which has page definitions that help you achieve certain layouts. These can be copied into other folders and be used.</p></li>
-					<li><p class="sherpa"><strong>index.html</strong>: index.html and site.html are exactly the same. site.html is used for when index.html is wre writen from project_index.html </p></li>
-					<li><p class="sherpa"><strong>launch_prototype.bat</strong>: Batch file to initiate the web server and launch the prototype index page.</p></li>
-					<li><p class="sherpa"><strong>project_index.html</strong>: project_index.html can be renamed as index.html</p></li>
-				</ul>
-
-					<hr>
-				</article>
-
-				<article id="contents" class="bottom-offset-large">
-					<h2 class="sherpa content-offset">What's included</h2>
-					<hr>
-
-					<p class="sherpa lead">Sherpa comes equipped with HTML, CSS, and JS for all sorts of things, but they can be summarized with a handful of categories visible in the top navigation.</p>
-
-					<h3 class="sherpa">Docs sections</h3>
-          <h4 class="sherpa"><a href="#!/grid" >The Grid</a></h4>
-          <p class="sherpa">Global styles for the body to reset type and background, link styles, grid system, and a simple layouts.</p>
-          <h4 class="sherpa"><a href="#!/base-css" >Base Elements</a></h4>
-          <p class="sherpa">Styles for common HTML elements like typography, tables, forms, and buttons.</p>
-          <h4 class="sherpa"><a href="#!/components" >Components</a></h4>
-          <p class="sherpa">Basic styles for common interface components like tabs and pills, navbar, alerts, page headers, and more.</p>
-          <h4 class="sherpa"><a href="#!/configuration" >Configuration</a></h4>
-          <p class="sherpa">Ways to configure each Sherpa prototype to fit your needs.</p>
-          <h4 class="sherpa"><a href="#!/functions" >Functions</a></h4>
-          <p class="sherpa">Sherpa functions that provide dynamic content.</p>
-          <!-- <h4 class="sherpa">JavaScript</h4>
-          <p>Similar to Components, these JavaScript plugins are interactive components for things like tooltips, popovers, modals, and more.</p> -->
-
-			
-
-				</article>
-
+				<article id="download-sherpa" class="bottom-offset-large" data-bind="include:  {sourceUrl:'.sherpa/sherpa-site-assets/pages/includes/download-sherpa.html',bookmarkable:true}"></article>
+				<article id="file-structure" class="bottom-offset-large" data-bind="include:  {sourceUrl:'.sherpa/sherpa-site-assets/pages/includes/file-structure.html',bookmarkable:true}"></article>
+				<article id="contents" class="bottom-offset-large" data-bind="include:  {sourceUrl:'.sherpa/sherpa-site-assets/pages/includes/contents.html',bookmarkable:true}"></article>
 			</section>
 		</div>
 	</section>

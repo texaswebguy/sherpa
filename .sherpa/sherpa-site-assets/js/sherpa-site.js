@@ -284,21 +284,30 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 
 
-	Sherpa.scope("#menu-toggle", function(){
-		this.listen("span", "click", function(event){
+	Sherpa.scope(".masthead-sherpa", function(){
+		this.listen("#menu-toggle", "click", function(event){
 			event.preventDefault();
 			if($('#menu').hasClass('ta-hide ma-hide')){
+				$('.sherpa-docs-sidenav').hide();
 				$('#menu').hide();
 				$('#menu').toggleClass('ta-hide ma-hide ta-all ma-all');
 				$('#menu').slideDown('fast');
 			} else {
 				$('#menu').slideUp('fast', function(){
 					$('#menu').toggleClass('ta-hide ma-hide ta-all ma-all');
+					$('.sherpa-docs-sidenav').show();
 				});
 			}
-		})
-	})
+		});
+		this.listen("li a", "click", function(event){
+			if(!viewModel.isDesktop()){
+				$('#menu').slideUp('fast', function(){
+					$('#menu').toggleClass('ta-hide ma-hide ta-all ma-all');
+				});				
+			}
 
+		});
+	})
 
 
 	$('.code_sample_popup').click(function(event){
