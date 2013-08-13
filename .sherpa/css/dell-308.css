@@ -4145,21 +4145,19 @@ td.visible-print {
  * Sherpa overides
  * TODO: right now this is pretty much a non less file with the old overides
  */
-.wrapper {
-  margin: 0 auto;
-  width: 90%;
-  max-width: 1140px;
-  float: none;
-  overflow: hidden;
+img {
+  max-width: 100%;
 }
-div {
+/*.wrapper {margin: 0 auto;width: 90%;max-width:1140px;float: none; overflow:hidden;}*/
+/*div {
   margin: 0;
   padding: 0;
   border: 0;
   font-size: 100%;
   font: inherit;
   vertical-align: baseline;
-}
+
+}*/
 /* TYPOGRAPHY
 -------------------------------------------------- */
 a {
