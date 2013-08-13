@@ -10,51 +10,51 @@
 // Grays
 // -------------------------
 @black:                 #000;
-@grayDarker:            @dellGrayDark; 
-@grayDark:              @dellGray;  
-@gray:                  @dellGrayMedium; 
-@grayLight:             @dellGrayLight; 
-@grayLighter:           @dellGrayVeryLight; 
+@grayDarker:            @dellGrayDark; // dell-308 override
+@grayDark:              @dellGray;  // dell-308 override
+@gray:                  @dellGrayMedium; // dell-308 override
+@grayLight:             @dellGrayLight; // dell-308 override
+@grayLighter:           @dellGrayVeryLight; // dell-308 override
 @white:                 #fff;
 
 
 // Accent colors
 // -------------------------
-@blue:                  @dellBlue; 
-@blueDark:              @dellNavy; 
-@green:                 @dellGreen; 
-@red:                   @dellRed; 
-@yellow:                @dellYellow; 
-@orange:                @dellOrange; 
+@blue:                  @dellBlue; // dell-308 override
+@blueDark:              @dellNavy; // dell-308 override
+@green:                 @dellGreen; // dell-308 override
+@red:                   @dellRed; // dell-308 override
+@yellow:                @dellYellow; // dell-308 override
+@orange:                @dellOrange; // dell-308 override
 @pink:                  pink; 
-@purple:                @dellPurple; 
+@purple:                @dellPurple; // dell-308 override
 
 
 // Scaffolding
 // -------------------------
 @bodyBackground:        @white;
-@textColor:             @grayDarker; 
+@textColor:             @grayDarker; // dell-308 override
 
 
 // Links
 // -------------------------
-@linkColor:             @blue; 
-@linkColorHover:        @blue; 
+@linkColor:             @blue; // dell-308 override
+@linkColorHover:        @blue; // dell-308 override
 
 
 // Typography
 // -------------------------
-@sansFontFamily:        @themeSansFontFamily; 
-@serifFontFamily:       @themeSerifFontFamily; 
-@monoFontFamily:        @themeMonoFontFamily; 
+@sansFontFamily:        @themeSansFontFamily; // dell-308 override
+@serifFontFamily:       @themeSerifFontFamily; // dell-308 override
+@monoFontFamily:        @themeMonoFontFamily; // dell-308 override
 
 @baseFontSize:          14px;
 @baseFontFamily:        @sansFontFamily;
 @baseLineHeight:        20px;
 @altFontFamily:         @serifFontFamily;
 
-@headingsFontFamily:    @themeSerifFontFamilyBold; 
-@headingsFontWeight:    bold;    
+@headingsFontFamily:    @themeSerifFontFamilyBold; // dell-308 override
+@headingsFontWeight:    normal;    // instead of browser default, bold
 @headingsColor:         inherit; // empty to use BS default, @textColor
 
 
@@ -84,18 +84,18 @@
 
 // Buttons
 // -------------------------
-@btnBackground:                     @white;
-@btnBackgroundHighlight:            darken(@white, 10%);
-@btnBorder:                         #ccc;
+@btnBackground:                     #fefefe;
+@btnBackgroundHighlight:            #edf1f3;
+@btnBorder:                         #ddd;
 
-@btnPrimaryBackground:              @linkColor;
+@btnPrimaryBackground:              @blue;
 @btnPrimaryBackgroundHighlight:     spin(@btnPrimaryBackground, 20%);
 
-@btnInfoBackground:                 #5bc0de;
-@btnInfoBackgroundHighlight:        #2f96b4;
+@btnInfoBackground:                 @blue;
+@btnInfoBackgroundHighlight:        spin(@btnPrimaryBackground, 20%);
 
-@btnSuccessBackground:              #62c462;
-@btnSuccessBackgroundHighlight:     #51a351;
+@btnSuccessBackground:              @green;
+@btnSuccessBackgroundHighlight:     spin(@green, 20%);
 
 @btnWarningBackground:              lighten(@orange, 15%);
 @btnWarningBackgroundHighlight:     @orange;
@@ -111,7 +111,7 @@
 // -------------------------
 @inputBackground:               @white;
 @inputBorder:                   @dellGrayStroke;
-@inputBorderRadius:             @borderRadiusSmall;
+@inputBorderRadius:             @borderRadiusSmall + 1;
 @inputDisabledBackground:       @grayLighter;
 @formActionsBackground:         @dellGrayVeryLight;
 @inputHeight:                   @baseLineHeight * 1.7; // ~34px
@@ -230,21 +230,22 @@
 
 // Form states and alerts
 // -------------------------
-@warningText:             @orange;
-@warningBackground:       @alertBackground;
-@warningBorder:           @grayLight;
+// TODO: These do not adhere to Dell-308 - They are not allowable so what should we do with these.
+@warningText:             #c09853;
+@warningBackground:       #fcf8e3;
+@warningBorder:           darken(spin(@warningBackground, -10), 3%);
 
-@errorText:               @red;
-@errorBackground:         @alertBackground;
-@errorBorder:             @grayLight;
+@errorText:               #b94a48;
+@errorBackground:         #f2dede;
+@errorBorder:             darken(spin(@errorBackground, -10), 3%);
 
-@successText:             @green;
-@successBackground:       @alertBackground;
-@successBorder:           @grayLight;
+@successText:             #468847;
+@successBackground:       #dff0d8;
+@successBorder:           darken(spin(@successBackground, -10), 5%);
 
-@infoText:                @blue;
-@infoBackground:          @alertBackground;
-@infoBorder:              @grayLight;
+@infoText:                #3a87ad;
+@infoBackground:          #d9edf7;
+@infoBorder:              darken(spin(@infoBackground, -10), 7%);
 
 
 // Tooltips and popovers

@@ -1,0 +1,2228 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Links
+// -------------------------
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  .border-radius(@borderRadiusLarge);
+}
+
+//
+// Layouts
+// --------------------------------------------------
+
+.wrapper {
+	margin: 0 auto;
+	width: 90%;
+	max-width: @desktopMaxWidth;
+	float: none; 
+	overflow:hidden;
+}
+
+// TODO: need to look at div reset here.
+
+//
+// Typography for Desktop
+// --------------------------------------------------
+
+
+// TODO: Do we want to nulify classes such as .text-error, .text-success, etc?
+
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px 0px (@baseLineHeight / 2) 0px;
+}
+
+// Allows strong only in h5 and h6 - dell-308-only
+h1, h2, h3, h4 {
+  strong {
+    font-weight:normal;
+  }
+}
+
+h3, h4, h5, h6 {
+	font-family: @themeSansFontFamily;
+}
+
+h1 { 
+	font-size: @baseFontSize * 2.57; // ~36px
+	line-height: @baseLineHeight * 2; // ~40px
+} 
+
+h2 { 
+	font-size: @baseFontSize * 2; // ~28px
+	line-height: @baseLineHeight * 1.6; // ~32px
+} 
+
+h3 { 
+	font-size: @baseFontSize * 1.42; // ~20px
+	line-height: @baseLineHeight * 1.2; // ~24px
+} 
+
+h4 { 
+	font-size: @baseFontSize * 1.29; // ~18px
+	line-height: @baseLineHeight * 1.1; // ~22px
+} 
+
+// Makes h5 and h6 the same - dell-308-only
+
+h5, h6 { 
+	font-size: @baseFontSize * 1.14; // ~16px
+	line-height: @baseLineHeight; // ~20px
+} 
+
+
+/* Header - title - NOTE: not part of Boostrap*/
+.title {
+  text-align: center;
+  background: url(../img/gray_dark_title_line.png) repeat-x;
+  background-position: 50% 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.title h1 {
+  display: inline-block;
+  background: @bodyBackground;
+  padding: 0px 10px;
+  max-width: 80%;
+}
+
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.29;
+  font-weight: normal;
+  line-height: @baseLineHeight * 1.1;
+}
+
+small {
+  font-size: @baseFontSize * .86; // ~12px
+  font-weight: normal;
+  line-height:  @baseLineHeight * .8;// ~16px
+}
+
+
+// Blockquotes
+
+blockquote {
+  border-left: 5px solid @grayLight;
+  &.pull-right {
+    border-right: 5px solid @grayLight;
+  }
+}
+blockquote p {
+  margin-bottom: 0;
+  font-size: @baseFontSize * 1.14;
+  font-weight: normal;
+  line-height: @baseLineHeight * 1.1;
+}
+
+blockquote small {
+  display: block;
+  line-height: @baseLineHeight;
+  color: @grayDark;
+  font-style: italic;
+}
+
+blockquote small cite {
+  font-style: italic;
+}
+
+
+// Utility classes
+.muted          { color: @grayDark; }
+
+
+// Abbreviations and acronyms
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayDark;
+}
+
+
+//
+// Typography for tablet 
+// --------------------------------------------------
+@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+
+
+  h1 { 
+    font-size: @baseFontSize * 2.28; // ~32px
+    line-height: @baseLineHeight * 1.9; // ~38px
+  } 
+
+  h2 { 
+    font-size: @baseFontSize * 1.85; // ~26px
+    line-height: @baseLineHeight * 1.5; // ~30px
+  } 
+
+  h3 { 
+    font-size: @baseFontSize * 1.42; // ~20px
+    line-height: @baseLineHeight * 1.2; // ~24px
+  } 
+
+  h4 { 
+    font-size: @baseFontSize * 1.29; // ~18px
+    line-height: @baseLineHeight * 1.1; // ~22px
+  } 
+
+  h5 { 
+    font-size: @baseFontSize * 1.14; // ~16px
+    line-height: @baseLineHeight; // ~20px
+  } 
+
+  .lead {
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize * 1.29; // ~18px
+    line-height: @baseLineHeight +2;  // ~22px
+  }
+
+  .title {
+    background-position: 50% 13px;
+  }
+
+
+}
+
+
+
+//
+// Typography for mobile (Phone)
+// --------------------------------------------------
+@media only screen and (max-width:@mobileMaxWidth) {
+
+
+
+	h1 { 
+		font-size: @baseFontSize * 1.71; // ~24px
+		line-height: @baseLineHeight * 1.4; // ~28px
+	} 
+
+	h2 { 
+		font-size: @baseFontSize * 1.42; // ~20px
+		line-height: @baseLineHeight * 1.2; // ~24px
+	} 
+
+	h3 { 
+		font-size: @baseFontSize * 1.21; // ~17px
+		line-height: @baseLineHeight; // ~20px
+    font-weight:bold;
+	} 
+
+	h4 { 
+		font-size: @baseFontSize * 1.14; // ~16px
+		line-height: @baseLineHeight * 1.1; // ~22px
+	} 
+
+	h5 { 
+		font-size: @baseFontSize; // ~14px
+		line-height: @baseLineHeight; // ~20px
+    font-weight:bold;
+	} 
+
+	.lead {
+		margin-bottom: @baseLineHeight;
+		font-size: @baseFontSize * 1.14;;
+		line-height: @baseLineHeight;
+	}
+
+	.title {
+		background-position: 50% 13px;
+	}
+
+
+  // Horizontal layout (like forms) -dell-308-only
+  // In bootstrap this is not handled differently at mobile breakpoint and it looks horrible.
+
+  .dl-horizontal {
+    .clearfix(); // Ensure dl clears floats if empty dd elements present
+    dt {
+      float: left;
+      width: 100%;
+      clear: left;
+      text-align: left;
+      overflow:visible;
+    }
+    dd {
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+
+//
+// Typographic Colors 
+// NOTE: (Not part of Standard Bootstrap)
+// --------------------------------------------------
+
+.white-text 		{	color: @white;	}
+.gray-medium-text 	{	color: @gray;	} 
+.gray-text 			{	color: @gray;	}
+.lightgray-text 	{	color: @grayLight;	}
+.blue-text 			{	color: @blue;	}
+.green-text 		{	color: @green;	}
+.orange-text 		{	color: @orange;	}
+.red-text 			{	color: @red;	}
+.darkred-text 		{	color: @dellRedDark;	}
+.berry-text 		{	color: @dellBerry;	}
+.purple-text 		{	color: @purple;	}
+.navyblue-text 		{	color: @blueDark;	}
+
+
+
+//
+// Container Colors 
+// NOTE: (Not part of Standard Bootstrap) - dell-308-only
+// --------------------------------------------------
+
+/* Grays */
+
+.gray-dark 			{	
+  background-color: @grayDarker;
+  color:@white;	
+}
+.gray-medium 		{	
+  background-color: @gray;
+  color:@white; 
+}
+.gray 				{	
+  background-color: @grayDark;	
+  color:@white; 
+}
+.gray-light 		{	
+  background-color: @grayLight;
+  color:@grayDarker; 
+}
+.gray-very-light 	{	
+  background-color: @dellGrayVeryLight;	
+  color:@grayDarker; 
+}
+.white 				{	
+  background-color: @white;	
+  color:@grayDarker; 
+}
+.gray-stroke 		{	border: @defaultStroke solid @gray;	}
+
+/* Blue */
+.blue 				{	
+  background-color: @blue;
+  color:@white; 
+}
+.blue-stroke	{	
+  border: @defaultStroke solid @blue !important;
+  background:@white;
+}
+.navyblue 			{	
+  background-color: @blueDark;
+  color:@white; 
+}
+
+
+/* Green */
+.green 				{	
+  background-color: @green;
+  color:@white; 
+}
+.green-stroke 		{	
+  border: @defaultStroke solid @green !important;
+  background:@white;
+}
+
+/* Yellow */
+.yellow 			{	
+  background-color: @yellow;
+  color:@white; 
+}
+.yellow-stroke 		{	
+  border: @defaultStroke solid @yellow !important;
+  background:@white;
+}
+
+/* Orange */
+.orange 			{	
+  background-color: @orange;
+  color:@white; 
+}
+.orange-stroke 		{	
+  border: @defaultStroke solid @orange !important;
+  background:@white;
+}
+
+/* Red */
+.red 				{	
+  background-color: @red;
+  color:@white; 
+}
+.red-stroke 		{	
+  border: @defaultStroke solid  @red !important;
+  background:@white;
+}
+.red-dark 			{	
+  background-color:  @dellRedDark;
+  color:@white; 
+}
+
+/* Berry */
+.berry 				{	
+  background-color: @dellBerry;
+  color:@white; 
+}
+.berry-stroke 		{	
+  border: @defaultStroke solid @dellBerry !important;
+  background:@white;
+}
+
+/* Purple */
+.purple 			{	
+  background-color:@purple;
+  color:@white; 
+}
+.purple-stroke 		{	
+border: @defaultStroke solid @purple !important;
+  background:@white;
+}
+
+/* Teal */
+.teal 				{	
+  background-color: @dellTeal;
+  color:@white; 
+}
+.teal-stroke 		{	
+  border: @defaultStroke solid @dellTeal !important;
+  background:@white;
+}
+
+/* Modify all stroke classes with "thin"*/
+[class$=-stroke].thin	{	border-width: @thinStroke;	}
+
+
+
+/* ICONS
+// These are Dell Specific Icon classes using Dell Icon fonts
+-------------------------------------------------- */
+//TODO: There shoul dbe four sizes mini/13px, small/16px, medium/25px, large/63px - small would be the standard
+
+
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icon-ui';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="your-class-prefix"] {
+*/
+.icon-ui-triangleup, .icon-ui-triangleright, .icon-ui-triangleleft, .icon-ui-triangledown, .icon-ui-plus, .icon-ui-minus, .icon-ui-menucollapsed, .icon-ui-expand, .icon-ui-dell, .icon-ui-collapse, .icon-ui-closecircle, .icon-ui-close, .icon-ui-arrowright, .icon-ui-arrowleft {
+  font-family: 'icon-ui';
+  font-size:16px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-ui-triangleup:before {
+  content: "\21";
+}
+.icon-ui-triangleright:before {
+  content: "\22";
+}
+.icon-ui-triangleleft:before {
+  content: "\23";
+}
+.icon-ui-triangledown:before {
+  content: "\24";
+}
+.icon-ui-plus:before {
+  content: "\25";
+}
+.icon-ui-minus:before {
+  content: "\26";
+}
+.icon-ui-menucollapsed:before {
+  content: "\27";
+}
+.icon-ui-expand:before {
+  content: "\28";
+}
+.icon-ui-dell:before {
+  content: "\29";
+}
+.icon-ui-collapse:before {
+  content: "\2a";
+}
+.icon-ui-closecircle:before {
+  content: "\2b";
+}
+.icon-ui-close:before {
+  content: "\2c";
+}
+.icon-ui-arrowright:before {
+  content: "\2d";
+}
+.icon-ui-arrowleft:before {
+  content: "\2e";
+}
+
+
+/*---Small Icons---*/
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icon-small';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="your-class-prefix"] {
+*/
+.icon-small-zoomout, .icon-small-zoomin, .icon-small-wireless, .icon-small-whitepaper, .icon-small-webcam, .icon-small-warranty, .icon-small-videocard, .icon-small-video, .icon-small-useraccount, .icon-small-trash, .icon-small-towergeneric, .icon-small-touchpad, .icon-small-touch, .icon-small-thinclient, .icon-small-tablet, .icon-small-surgeprotection, .icon-small-support, .icon-small-storage, .icon-small-speakers, .icon-small-software, .icon-small-shipsfast, .icon-small-shipping, .icon-small-share, .icon-small-serverrack, .icon-small-server, .icon-small-securesoftware, .icon-small-secure, .icon-small-searchright, .icon-small-searchleft, .icon-small-save, .icon-small-rss, .icon-small-recycle, .icon-small-protection, .icon-small-projector, .icon-small-processor, .icon-small-printer, .icon-small-powersupply, .icon-small-ports, .icon-small-play, .icon-small-photos, .icon-small-phone, .icon-small-performance, .icon-small-package, .icon-small-opticaldrive, .icon-small-operatingsystem, .icon-small-network, .icon-small-music, .icon-small-mouse, .icon-small-mobile, .icon-small-missingimage, .icon-small-memorycardreader, .icon-small-memory, .icon-small-mail, .icon-small-location, .icon-small-lightbulb, .icon-small-keyboard, .icon-small-inktoner, .icon-small-house, .icon-small-help, .icon-small-harddrive, .icon-small-globe, .icon-small-giftcard, .icon-small-favorite, .icon-small-energyefficient, .icon-small-employee, .icon-small-edit, .icon-small-drivers, .icon-small-download, .icon-small-display, .icon-small-dimensionsweight, .icon-small-diagnostic, .icon-small-deals, .icon-small-data, .icon-small-creditcvv, .icon-small-copy, .icon-small-contact, .icon-small-computergeneric, .icon-small-color, .icon-small-cloud, .icon-small-clock, .icon-small-chipset, .icon-small-checkmark, .icon-small-chat, .icon-small-cart, .icon-small-carryingcase, .icon-small-calendar, .icon-small-calculator, .icon-small-cables, .icon-small-bell, .icon-small-battery, .icon-small-award, .icon-small-audiospeaker, .icon-small-audiocard, .icon-small-alertnotice, .icon-small-alertinfo, .icon-small-alerterror, .icon-small-alertcomplete, .icon-small-add {
+  font-family: 'icon-small';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-small-zoomout:before {
+  content: "\21";
+}
+.icon-small-zoomin:before {
+  content: "\22";
+}
+.icon-small-wireless:before {
+  content: "\23";
+}
+.icon-small-whitepaper:before {
+  content: "\24";
+}
+.icon-small-webcam:before {
+  content: "\25";
+}
+.icon-small-warranty:before {
+  content: "\26";
+}
+.icon-small-videocard:before {
+  content: "\27";
+}
+.icon-small-video:before {
+  content: "\28";
+}
+.icon-small-useraccount:before {
+  content: "\29";
+}
+.icon-small-trash:before {
+  content: "\2a";
+}
+.icon-small-towergeneric:before {
+  content: "\2b";
+}
+.icon-small-touchpad:before {
+  content: "\2c";
+}
+.icon-small-touch:before {
+  content: "\2d";
+}
+.icon-small-thinclient:before {
+  content: "\2e";
+}
+.icon-small-tablet:before {
+  content: "\2f";
+}
+.icon-small-surgeprotection:before {
+  content: "\30";
+}
+.icon-small-support:before {
+  content: "\31";
+}
+.icon-small-storage:before {
+  content: "\32";
+}
+.icon-small-speakers:before {
+  content: "\33";
+}
+.icon-small-software:before {
+  content: "\34";
+}
+.icon-small-shipsfast:before {
+  content: "\35";
+}
+.icon-small-shipping:before {
+  content: "\36";
+}
+.icon-small-share:before {
+  content: "\37";
+}
+.icon-small-serverrack:before {
+  content: "\38";
+}
+.icon-small-server:before {
+  content: "\39";
+}
+.icon-small-securesoftware:before {
+  content: "\3a";
+}
+.icon-small-secure:before {
+  content: "\3b";
+}
+.icon-small-searchright:before {
+  content: "\3c";
+}
+.icon-small-searchleft:before {
+  content: "\3d";
+}
+.icon-small-save:before {
+  content: "\3e";
+}
+.icon-small-rss:before {
+  content: "\3f";
+}
+.icon-small-recycle:before {
+  content: "\40";
+}
+.icon-small-protection:before {
+  content: "\41";
+}
+.icon-small-projector:before {
+  content: "\42";
+}
+.icon-small-processor:before {
+  content: "\43";
+}
+.icon-small-printer:before {
+  content: "\44";
+}
+.icon-small-powersupply:before {
+  content: "\45";
+}
+.icon-small-ports:before {
+  content: "\46";
+}
+.icon-small-play:before {
+  content: "\47";
+}
+.icon-small-photos:before {
+  content: "\48";
+}
+.icon-small-phone:before {
+  content: "\49";
+}
+.icon-small-performance:before {
+  content: "\4a";
+}
+.icon-small-package:before {
+  content: "\4b";
+}
+.icon-small-opticaldrive:before {
+  content: "\4c";
+}
+.icon-small-operatingsystem:before {
+  content: "\4d";
+}
+.icon-small-network:before {
+  content: "\4e";
+}
+.icon-small-music:before {
+  content: "\4f";
+}
+.icon-small-mouse:before {
+  content: "\50";
+}
+.icon-small-mobile:before {
+  content: "\51";
+}
+.icon-small-missingimage:before {
+  content: "\52";
+}
+.icon-small-memorycardreader:before {
+  content: "\53";
+}
+.icon-small-memory:before {
+  content: "\54";
+}
+.icon-small-mail:before {
+  content: "\55";
+}
+.icon-small-location:before {
+  content: "\56";
+}
+.icon-small-lightbulb:before {
+  content: "\57";
+}
+.icon-small-keyboard:before {
+  content: "\58";
+}
+.icon-small-inktoner:before {
+  content: "\59";
+}
+.icon-small-house:before {
+  content: "\5a";
+}
+.icon-small-help:before {
+  content: "\5b";
+}
+.icon-small-harddrive:before {
+  content: "\5c";
+}
+.icon-small-globe:before {
+  content: "\5d";
+}
+.icon-small-giftcard:before {
+  content: "\5e";
+}
+.icon-small-favorite:before {
+  content: "\5f";
+}
+.icon-small-energyefficient:before {
+  content: "\60";
+}
+.icon-small-employee:before {
+  content: "\61";
+}
+.icon-small-edit:before {
+  content: "\62";
+}
+.icon-small-drivers:before {
+  content: "\63";
+}
+.icon-small-download:before {
+  content: "\64";
+}
+.icon-small-display:before {
+  content: "\65";
+}
+.icon-small-dimensionsweight:before {
+  content: "\66";
+}
+.icon-small-diagnostic:before {
+  content: "\67";
+}
+.icon-small-deals:before {
+  content: "\68";
+}
+.icon-small-data:before {
+  content: "\69";
+}
+.icon-small-creditcvv:before {
+  content: "\6a";
+}
+.icon-small-copy:before {
+  content: "\6b";
+}
+.icon-small-contact:before {
+  content: "\6c";
+}
+.icon-small-computergeneric:before {
+  content: "\6d";
+}
+.icon-small-color:before {
+  content: "\6e";
+}
+.icon-small-cloud:before {
+  content: "\6f";
+}
+.icon-small-clock:before {
+  content: "\70";
+}
+.icon-small-chipset:before {
+  content: "\71";
+}
+.icon-small-checkmark:before {
+  content: "\72";
+}
+.icon-small-chat:before {
+  content: "\73";
+}
+.icon-small-cart:before {
+  content: "\74";
+}
+.icon-small-carryingcase:before {
+  content: "\75";
+}
+.icon-small-calendar:before {
+  content: "\76";
+}
+.icon-small-calculator:before {
+  content: "\77";
+}
+.icon-small-cables:before {
+  content: "\78";
+}
+.icon-small-bell:before {
+  content: "\79";
+}
+.icon-small-battery:before {
+  content: "\7a";
+}
+.icon-small-award:before {
+  content: "\7b";
+}
+.icon-small-audiospeaker:before {
+  content: "\7c";
+}
+.icon-small-audiocard:before {
+  content: "\7d";
+}
+.icon-small-alertnotice:before {
+  content: "\7e";
+}
+.icon-small-alertinfo:before {
+  content: "\e000";
+}
+.icon-small-alerterror:before {
+  content: "\e001";
+}
+.icon-small-alertcomplete:before {
+  content: "\e002";
+}
+.icon-small-add:before {
+  content: "\e003";
+}
+
+
+/*---Large Icons---*/
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icon-large';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="your-class-prefix"] {
+*/
+.icon-large-zoomout, .icon-large-zoomin, .icon-large-wifi, .icon-large-whitepaper, .icon-large-webcam, .icon-large-warranty, .icon-large-videocard, .icon-large-video, .icon-large-useraccount, .icon-large-trash, .icon-large-towergeneric, .icon-large-touchpad, .icon-large-touch, .icon-large-thinclient, .icon-large-tablet, .icon-large-surgeprotection, .icon-large-support, .icon-large-storage, .icon-large-speakers, .icon-large-software, .icon-large-shipsfast, .icon-large-shipping, .icon-large-share, .icon-large-serverrack, .icon-large-server, .icon-large-securesoftware, .icon-large-secure, .icon-large-searchright, .icon-large-searchleft, .icon-large-save, .icon-large-rss, .icon-large-recycle, .icon-large-protection, .icon-large-projector, .icon-large-processor, .icon-large-printer, .icon-large-powersupply, .icon-large-ports, .icon-large-play, .icon-large-photos, .icon-large-phone, .icon-large-performance, .icon-large-package, .icon-large-opticaldrive, .icon-large-operatingsystem, .icon-large-network, .icon-large-music, .icon-large-mouse, .icon-large-mobile, .icon-large-missingimage, .icon-large-memorycardreader, .icon-large-memory, .icon-large-mail, .icon-large-location, .icon-large-lightbulb, .icon-large-keyboard, .icon-large-inktoner, .icon-large-house, .icon-large-help, .icon-large-harddrive, .icon-large-globe, .icon-large-giftcard, .icon-large-favorite, .icon-large-energyefficient, .icon-large-employee, .icon-large-edit, .icon-large-drivers, .icon-large-download, .icon-large-display, .icon-large-dimensionsweight, .icon-large-diagnostic, .icon-large-deals, .icon-large-data, .icon-large-creditcvv, .icon-large-copy, .icon-large-contact, .icon-large-computergeneric, .icon-large-color, .icon-large-cloud, .icon-large-clock, .icon-large-chipset, .icon-large-checkmark, .icon-large-chat, .icon-large-cart, .icon-large-carryingcase, .icon-large-calendar, .icon-large-calculator, .icon-large-cables, .icon-large-bell, .icon-large-battery, .icon-large-award, .icon-large-audiospeaker, .icon-large-audiocard, .icon-large-alertnotice, .icon-large-alertinfo, .icon-large-alerterror, .icon-large-alertcomplete, .icon-large-add {
+  font-family: 'icon-large';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+.icon-large-zoomout:before {
+  content: "\21";
+}
+.icon-large-zoomin:before {
+  content: "\22";
+}
+.icon-large-wifi:before {
+  content: "\23";
+}
+.icon-large-whitepaper:before {
+  content: "\24";
+}
+.icon-large-webcam:before {
+  content: "\25";
+}
+.icon-large-warranty:before {
+  content: "\26";
+}
+.icon-large-videocard:before {
+  content: "\27";
+}
+.icon-large-video:before {
+  content: "\28";
+}
+.icon-large-useraccount:before {
+  content: "\29";
+}
+.icon-large-trash:before {
+  content: "\2a";
+}
+.icon-large-towergeneric:before {
+  content: "\2b";
+}
+.icon-large-touchpad:before {
+  content: "\2c";
+}
+.icon-large-touch:before {
+  content: "\2d";
+}
+.icon-large-thinclient:before {
+  content: "\2e";
+}
+.icon-large-tablet:before {
+  content: "\2f";
+}
+.icon-large-surgeprotection:before {
+  content: "\30";
+}
+.icon-large-support:before {
+  content: "\31";
+}
+.icon-large-storage:before {
+  content: "\32";
+}
+.icon-large-speakers:before {
+  content: "\33";
+}
+.icon-large-software:before {
+  content: "\34";
+}
+.icon-large-shipsfast:before {
+  content: "\35";
+}
+.icon-large-shipping:before {
+  content: "\36";
+}
+.icon-large-share:before {
+  content: "\37";
+}
+.icon-large-serverrack:before {
+  content: "\38";
+}
+.icon-large-server:before {
+  content: "\39";
+}
+.icon-large-securesoftware:before {
+  content: "\3a";
+}
+.icon-large-secure:before {
+  content: "\3b";
+}
+.icon-large-searchright:before {
+  content: "\3c";
+}
+.icon-large-searchleft:before {
+  content: "\3d";
+}
+.icon-large-save:before {
+  content: "\3e";
+}
+.icon-large-rss:before {
+  content: "\3f";
+}
+.icon-large-recycle:before {
+  content: "\40";
+}
+.icon-large-protection:before {
+  content: "\41";
+}
+.icon-large-projector:before {
+  content: "\42";
+}
+.icon-large-processor:before {
+  content: "\43";
+}
+.icon-large-printer:before {
+  content: "\44";
+}
+.icon-large-powersupply:before {
+  content: "\45";
+}
+.icon-large-ports:before {
+  content: "\46";
+}
+.icon-large-play:before {
+  content: "\47";
+}
+.icon-large-photos:before {
+  content: "\48";
+}
+.icon-large-phone:before {
+  content: "\49";
+}
+.icon-large-performance:before {
+  content: "\4a";
+}
+.icon-large-package:before {
+  content: "\4b";
+}
+.icon-large-opticaldrive:before {
+  content: "\4c";
+}
+.icon-large-operatingsystem:before {
+  content: "\4d";
+}
+.icon-large-network:before {
+  content: "\4e";
+}
+.icon-large-music:before {
+  content: "\4f";
+}
+.icon-large-mouse:before {
+  content: "\50";
+}
+.icon-large-mobile:before {
+  content: "\51";
+}
+.icon-large-missingimage:before {
+  content: "\52";
+}
+.icon-large-memorycardreader:before {
+  content: "\53";
+}
+.icon-large-memory:before {
+  content: "\54";
+}
+.icon-large-mail:before {
+  content: "\55";
+}
+.icon-large-location:before {
+  content: "\56";
+}
+.icon-large-lightbulb:before {
+  content: "\57";
+}
+.icon-large-keyboard:before {
+  content: "\58";
+}
+.icon-large-inktoner:before {
+  content: "\59";
+}
+.icon-large-house:before {
+  content: "\5a";
+}
+.icon-large-help:before {
+  content: "\5b";
+}
+.icon-large-harddrive:before {
+  content: "\5c";
+}
+.icon-large-globe:before {
+  content: "\5d";
+}
+.icon-large-giftcard:before {
+  content: "\5e";
+}
+.icon-large-favorite:before {
+  content: "\5f";
+}
+.icon-large-energyefficient:before {
+  content: "\60";
+}
+.icon-large-employee:before {
+  content: "\61";
+}
+.icon-large-edit:before {
+  content: "\62";
+}
+.icon-large-drivers:before {
+  content: "\63";
+}
+.icon-large-download:before {
+  content: "\64";
+}
+.icon-large-display:before {
+  content: "\65";
+}
+.icon-large-dimensionsweight:before {
+  content: "\66";
+}
+.icon-large-diagnostic:before {
+  content: "\67";
+}
+.icon-large-deals:before {
+  content: "\68";
+}
+.icon-large-data:before {
+  content: "\69";
+}
+.icon-large-creditcvv:before {
+  content: "\6a";
+}
+.icon-large-copy:before {
+  content: "\6b";
+}
+.icon-large-contact:before {
+  content: "\6c";
+}
+.icon-large-computergeneric:before {
+  content: "\6d";
+}
+.icon-large-color:before {
+  content: "\6e";
+}
+.icon-large-cloud:before {
+  content: "\6f";
+}
+.icon-large-clock:before {
+  content: "\70";
+}
+.icon-large-chipset:before {
+  content: "\71";
+}
+.icon-large-checkmark:before {
+  content: "\72";
+}
+.icon-large-chat:before {
+  content: "\73";
+}
+.icon-large-cart:before {
+  content: "\74";
+}
+.icon-large-carryingcase:before {
+  content: "\75";
+}
+.icon-large-calendar:before {
+  content: "\76";
+}
+.icon-large-calculator:before {
+  content: "\77";
+}
+.icon-large-cables:before {
+  content: "\78";
+}
+.icon-large-bell:before {
+  content: "\79";
+}
+.icon-large-battery:before {
+  content: "\7a";
+}
+.icon-large-award:before {
+  content: "\7b";
+}
+.icon-large-audiospeaker:before {
+  content: "\7c";
+}
+.icon-large-audiocard:before {
+  content: "\7d";
+}
+.icon-large-alertnotice:before {
+  content: "\7e";
+}
+.icon-large-alertinfo:before {
+  content: "\e000";
+}
+.icon-large-alerterror:before {
+  content: "\e001";
+}
+.icon-large-alertcomplete:before {
+  content: "\e002";
+}
+.icon-large-add:before {
+  content: "\e003";
+}
+
+
+//
+// Wells
+// --------------------------------------------------
+
+
+// Base class
+.well {
+  min-height: @baseLineHeight;
+  padding: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  border: none;
+  .border-radius(@baseBorderRadius);
+  .box-shadow(none);
+  blockquote {
+    border-color: @dellGrayStroke;
+  }
+}
+// dell-308-only
+// In bootstrap wells don't work well with p tags.
+.well p:last-child {
+  margin-bottom: 0px;
+}
+
+// Sizes
+.well-large {
+  padding: @baseLineHeight;
+  .border-radius(@borderRadiusLarge);
+}
+.well-small {
+  padding: @baseLineHeight;
+  .border-radius(@borderRadiusSmall);
+}
+
+// NOTE: Non-Bootstrap well like containers. 
+// TODO: do we keep this in the future?
+// These are borderless
+
+.rounded-large {
+  .border-radius(@borderRadiusLarge);
+  padding:@baseLineHeight;
+}
+
+.rounded-small {
+ .border-radius(@borderRadiusSmall);
+  padding:@baseLineHeight;
+}
+
+
+
+//
+// Popovers
+// --------------------------------------------------
+
+
+
+.popover-title {
+  padding: 8px 14px;
+  color: @white;
+  font-size: 18px;
+}
+
+.popover-content {
+  padding: 12px 14px;
+}
+
+.popover-title .close {
+  color:#fff;
+  opacity: 1;
+  text-shadow: 0 1px 0 #444444;
+}
+
+
+//
+// Forms
+// --------------------------------------------------
+
+
+// GENERAL STYLES
+// --------------
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  margin-bottom: 10px;
+}
+
+form div {
+  float:none;
+}
+
+// Groups of fields with labels on top (legends)
+legend {
+  color: @grayDarker;
+  small {
+    color: @grayDark;
+  }
+}
+
+// Form controls
+// -------------------------
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  height: @inputHeight;
+  margin-bottom: @baseLineHeight / 2;
+  color: @grayDarker;
+  .border-radius(@inputBorderRadius);
+}
+
+
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  // Focus state
+  &:focus {
+    border-color: @blue;
+    @shadow: 0 0 2px lighten(@blue, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
+
+// Set the height of select and file controls to match text inputs
+select,
+input[type="file"] {
+  line-height: @baseLineHeight * 1.5;
+}
+
+// Make select elements obey height by applying a border
+select {
+  width: 100%; // dell-308 override
+}
+
+
+// Focus for select, file, radio, and checkbox
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  border-color: @blue;
+  outline: thin dotted @blue;
+  outline: 0px auto @blue;
+  outline-offset: 0px;
+}
+
+
+// Uneditable inputs
+// -------------------------
+
+// Make uneditable inputs look inactive
+.uneditable-input,
+.uneditable-textarea {
+  color: @grayDark;
+  background-color: @grayLight;
+}
+
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+// Indent the labels to position radios/checkboxes as hanging
+.radio,
+.checkbox {
+  margin-bottom: 20px;
+}
+
+// Radios and checkboxes on same line
+.radio.inline,
+.checkbox.inline {
+  padding-top: 0;
+  margin-bottom: @baseLineHeight / 2;
+}
+
+
+// Mixin for form field states - dell-308 overide of mixin to reduce focus glow from 6px to 3px
+.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
+  // Set the text color
+  .control-label,
+  .help-block,
+  .help-inline {
+    color: @textColor;
+  }
+  // Style inputs accordingly
+  .checkbox,
+  .radio,
+  input,
+  select,
+  textarea {
+    color: @textColor;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @borderColor;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    &:focus {
+      border-color: darken(@borderColor, 10%);
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px lighten(@borderColor, 20%);
+      .box-shadow(@shadow); //changed glow width from 6px to 3px - dell-308 override
+    }
+  }
+}
+
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+// Warning
+.control-group.warning {
+  .formFieldState(@warningText, @warningText, @warningBackground);
+}
+// Error
+.control-group.error {
+  .formFieldState(@errorText, @errorText, @errorBackground);
+}
+// Success
+.control-group.success {
+  .formFieldState(@successText, @successText, @successBackground);
+}
+// Success
+.control-group.info {
+  .formFieldState(@infoText, @infoText, @infoBackground);
+}
+
+// HTML5 invalid states
+// Shares styles with the .control-group.error above
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: @red;
+  border-color: @red;
+  &:focus {
+    border-color: @red;
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px lighten(@red, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
+
+//TODO: If there is a requirement to display icon we will have to build this
+
+
+
+// FORM ACTIONS
+// ------------
+
+.form-actions {
+  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+  margin-top: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  background-color: @formActionsBackground;
+  border-top: 1px solid @dellGrayStroke;
+  .clearfix(); // Adding clearfix to allow for .pull-right button containers
+}
+
+
+
+// HELP TEXT
+// ---------
+
+.help-block,
+.help-inline {
+  color: @grayDarker; // same as body text for dell-308
+}
+
+.help-block {
+  margin-top: -8px;
+}
+
+.help-inline {
+  padding-bottom: 10px;
+}
+
+
+
+// INPUT GROUPS
+// ------------
+
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-append,
+.input-prepend {
+  margin-bottom: 0;
+  font-size: inherit; 
+
+  input,
+  select,
+  .uneditable-input {
+    margin-bottom: 10px; 
+  }
+
+  .add-on {
+    height: @inputHeight;
+    padding: 7px 11px;
+    border: 1px solid @dellGrayStroke;
+  }
+  .active {
+    background-color: lighten(@green, 30);
+    border-color: @green;
+  }
+  .btn {
+    height:@inputHeight;
+  }
+}
+
+.input-prepend {
+  .add-on,
+  .btn {
+    margin-right: -5px;
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    // FYI, `.btn:first-child` accounts for a button group that's prepended
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    height:@inputHeight;
+  }
+}
+
+.input-append {
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    + .btn-group .btn:last-child {
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+  }
+  .add-on,
+  .btn,
+  .btn-group {
+    margin-left: -5px;
+  }
+  .add-on:last-child,
+  .btn:last-child,
+  .btn-group:last-child > .dropdown-toggle {
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    height:@inputHeight;
+  }
+  .btn-group > .btn:first-child {
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+  }
+}
+
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(0);
+    + .btn-group .btn {
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    margin-right: -5px;
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+  }
+  .add-on:last-child,
+  .btn:last-child {
+    margin-left: -5px;
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+  }
+  .btn-group:first-child {
+    margin-left: 0;
+  }
+}
+
+
+// SEARCH FORM
+// -----------
+
+input.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0; // Remove the default margin on all inputs
+  .border-radius(15px);
+}
+
+/* Allow for input prepend/append in search forms */
+.form-search .input-append .search-query,
+.form-search .input-prepend .search-query {
+  .border-radius(0); // Override due to specificity
+}
+.form-search .input-append .search-query {
+  .border-radius(14px 0 0 14px);
+}
+.form-search .input-append .btn {
+  .border-radius(0 14px 14px 0);
+}
+.form-search .input-prepend .search-query {
+  .border-radius(0 14px 14px 0);
+}
+.form-search .input-prepend .btn {
+  .border-radius(14px 0 0 14px);
+}
+
+
+
+
+// HORIZONTAL & VERTICAL FORMS
+// ---------------------------
+
+// Common properties
+// -----------------
+
+.form-search,
+.form-inline,
+.form-horizontal {
+  input,
+  textarea,
+  select,
+  .help-inline,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    display: inline-block;
+    .ie7-inline-block();
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  // Re-hide hidden elements due to specifity
+  .hide {
+    display: none;
+  }
+}
+.form-search label,
+.form-inline label,
+.form-search .btn-group,
+.form-inline .btn-group {
+  display: inline-block;
+}
+// Remove margin for input-prepend/-append
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+// Inline checkbox/radio labels (remove padding on left)
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+// Remove float and margin, set to inline-block
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+
+// Margin to space out fieldsets
+.control-group {
+  margin-bottom: @baseLineHeight / 2;
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+legend + .control-group {
+  margin-top: @baseLineHeight;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Horizontal-specific styles
+// --------------------------
+
+.form-horizontal {
+  // Increase spacing between groups
+  .control-group {
+    margin-bottom: @baseLineHeight;
+    .clearfix();
+  }
+  // Float the labels left
+  .control-label {
+    float: left;
+    width: @horizontalComponentOffset - 20;
+    padding-top: 5px;
+    text-align: right;
+  }
+  // Move over all input controls and content
+  .controls {
+    // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
+    // don't inherit the margin of the parent, in this case .controls
+    *display: inline-block;
+    *padding-left: 20px;
+    margin-left: @horizontalComponentOffset;
+    *margin-left: 0;
+    &:first-child {
+      *padding-left: @horizontalComponentOffset;
+    }
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-bottom: 0;
+  }
+  // And apply it only to .help-block instances that follow a form control
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: @baseLineHeight / 2;
+    }
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-left: @horizontalComponentOffset;
+  }
+}
+
+
+
+.form-search {
+    position:relative;
+}
+
+.form-search input {
+    width:100%;
+    height: @inputHeight + 10;
+    padding: 5px 80px 5px 5px;
+    .border-radius(@inputBorderRadius);
+}
+
+.form-search .btn {
+  position: absolute;
+  right: 25px;
+  top: 46px;
+}
+
+
+
+
+// INPUT SIZES
+// -----------
+
+// General classes for quick sizes
+.input-mini       { width: 60px; }
+.input-small      { width: 90px; }
+.input-medium     { width: 150px; }
+.input-large      { width: 210px; }
+.input-xlarge     { width: 270px; }
+.input-xxlarge    { width: 530px; }
+
+
+
+
+
+
+//
+// Tables
+// --------------------------------------------------
+
+
+// BASE TABLES
+// -----------------
+
+table {
+  max-width: 100%;
+  background-color: @tableBackground;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// BASELINE STYLES
+// ---------------
+
+.table {
+  width: 100%;
+  margin-bottom: @baseLineHeight;
+  // Cells
+  th,
+  td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid @tableBorder;
+  }
+  th {
+    font-weight: bold;
+  }
+  // Bottom align for column headings
+  thead th {
+    vertical-align: bottom;
+  }
+  // Remove top border from thead by default
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid @tableBorder;
+  }
+
+  // Nesting
+  .table {
+    background-color: @bodyBackground;
+  }
+}
+
+
+
+// CONDENSED TABLE W/ HALF PADDING
+// -------------------------------
+
+.table-condensed {
+  th,
+  td {
+    padding: 4px 5px;
+  }
+}
+
+
+// BORDERED VERSION
+// ----------------
+
+
+.table-bordered {
+  .border-radius(@borderRadiusLarge);
+
+
+  // For first th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child > th:first-child,
+  tbody:first-child tr:first-child > td:first-child,
+  tbody:first-child tr:first-child > th:first-child {
+    .border-top-left-radius(@borderRadiusLarge);
+  }
+  // For last th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child > th:last-child,
+  tbody:first-child tr:first-child > td:last-child,
+  tbody:first-child tr:first-child > th:last-child {
+    .border-top-right-radius(@borderRadiusLarge);
+  }
+  // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child > th:first-child,
+  tbody:last-child tr:last-child > td:first-child,
+  tbody:last-child tr:last-child > th:first-child,
+  tfoot:last-child tr:last-child > td:first-child,
+  tfoot:last-child tr:last-child > th:first-child {
+    .border-bottom-left-radius(@borderRadiusLarge);
+  }
+  // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child > th:last-child,
+  tbody:last-child tr:last-child > td:last-child,
+  tbody:last-child tr:last-child > th:last-child,
+  tfoot:last-child tr:last-child > td:last-child,
+  tfoot:last-child tr:last-child > th:last-child {
+    .border-bottom-right-radius(@borderRadiusLarge);
+  }
+
+  // Special fixes to round the left border on the first td/th
+  caption + thead tr:first-child th:first-child,
+  caption + tbody tr:first-child td:first-child,
+  colgroup + thead tr:first-child th:first-child,
+  colgroup + tbody tr:first-child td:first-child {
+    .border-top-left-radius(@borderRadiusLarge);
+  }
+  caption + thead tr:first-child th:last-child,
+  caption + tbody tr:first-child td:last-child,
+  colgroup + thead tr:first-child th:last-child,
+  colgroup + tbody tr:first-child td:last-child {
+    .border-top-right-radius(@borderRadiusLarge);
+  }
+
+}
+
+
+// DELL-308-ONLY Specific table styling
+// ------------------------------------------
+// Stroked border tables
+
+div.table-bordered {
+  border: 2px solid @tableBorder;
+  overflow:hidden;
+  margin-bottom: @baseLineHeight;
+
+  table  {
+    position:relative;
+    top:5px;
+    margin-top:-5px;
+    overflow:hidden;
+    border:none;
+
+    tr td:first-child,
+    tr th:first-child {
+        border-left:0;
+    }
+  }
+}
+
+
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  td, th {
+    border-left:0;
+    border-top:0;  
+  }
+  tbody {
+    > tr:nth-child(odd) > td,
+    > tr:nth-child(odd) > th {
+        background-color: @tableBackgroundAccent;
+      }
+  }
+  tbody {
+    tr th:first-child, tr td:first-child {.border-left-radius(@borderRadiusLarge);}
+    tr th:last-child, tr td:last-child {.border-right-radius(@borderRadiusLarge);}
+  }
+}
+
+.table-bordered.table-striped {
+  border-left: 1px solid @tableBorder;
+  tbody {
+    tr th:first-child, tr td:first-child {.border-left-radius(0);}
+    tr th:last-child, tr td:last-child {.border-right-radius(0);}
+  }
+}
+
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+  tbody {
+    tr:hover > td,
+    tr:hover > th {
+      background-color: @tableBackgroundHover;
+    }
+  }
+}
+
+
+// TABLE CELL SIZING
+// -----------------
+
+// Reset default grid behavior
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
+  display: table-cell;
+  float: none; // undo default grid column styles
+  margin-left: 0; // undo default grid column styles
+}
+
+// Change the column widths to account for td/th padding
+.table td,
+.table th {
+  &.span1     { .tableColumns(1); }
+  &.span2     { .tableColumns(2); }
+  &.span3     { .tableColumns(3); }
+  &.span4     { .tableColumns(4); }
+  &.span5     { .tableColumns(5); }
+  &.span6     { .tableColumns(6); }
+  &.span7     { .tableColumns(7); }
+  &.span8     { .tableColumns(8); }
+  &.span9     { .tableColumns(9); }
+  &.span10    { .tableColumns(10); }
+  &.span11    { .tableColumns(11); }
+  &.span12    { .tableColumns(12); }
+}
+
+
+
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
+
+.table tbody tr {
+  &.success > td {
+    background-color: @successBackground;
+  }
+  &.error > td {
+    background-color: @errorBackground;
+  }
+  &.warning > td {
+    background-color: @warningBackground;
+  }
+  &.info > td {
+    background-color: @infoBackground;
+  }
+}
+
+// Hover states for .table-hover
+.table-hover tbody tr {
+  &.success:hover > td {
+    background-color: darken(@successBackground, 5%);
+  }
+  &.error:hover > td {
+    background-color: darken(@errorBackground, 5%);
+  }
+  &.warning:hover > td {
+    background-color: darken(@warningBackground, 5%);
+  }
+  &.info:hover > td {
+    background-color: darken(@infoBackground, 5%);
+  }
+}
+
+
+
+
+//
+// Buttons
+// --------------------------------------------------
+
+
+// Base styles
+// --------------------------------------------------
+
+// Dell-308 added btn-tertiary.  It should really be the default so it is added here but it should be deprecated eventually 
+// Core
+
+
+
+.btn, .btn-tertiary {
+  padding: 7px 11px;
+  margin-bottom: 0; // For input.btn
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight * .9;
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  border: 1px solid @btnBorder;
+  .border-radius(@borderRadiusSmall + 1);
+  .box-shadow(none); 
+  // Hover/focus state
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-position: 0 -15px;
+    // transition is only when going to hover/focus, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position .1s linear);
+    color: @linkColor;
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
+    color: @linkColor;
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    background-image: none;
+    outline: 0;
+    .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    background-image: none;
+    .opacity(65);
+    .box-shadow(none);
+  }
+
+}
+
+
+
+// Button Sizes
+// --------------------------------------------------
+// dell-308 does not allow large so these will be forced into normal size
+
+// Large
+.btn-large {
+  padding: @paddingLarge;
+  font-size: @baseFontSize;
+  .border-radius(@baseBorderRadius);
+}
+.btn-large [class^="icon-"],
+.btn-large [class*=" icon-"] {
+  margin-top: 4px;
+}
+
+// Small
+.btn-small {
+  padding: @paddingSmall;
+  font-size: @fontSizeSmall;
+  .border-radius(@borderRadiusSmall);
+}
+.btn-small [class^="icon-"],
+.btn-small [class*=" icon-"] {
+  margin-top: 0;
+}
+.btn-mini [class^="icon-"],
+.btn-mini [class*=" icon-"] {
+  margin-top: -1px;
+}
+
+// Mini
+.btn-mini {
+  padding: @paddingMini;
+  font-size: @fontSizeMini;
+  .border-radius(@borderRadiusSmall);
+}
+
+
+// Block button
+// -------------------------
+
+.btn-block {
+  display: block;
+  width: 100%;
+  padding-left: 0;
+  padding-right: 0;
+  .box-sizing(border-box);
+}
+
+// Vertically space out multiple block buttons
+.btn-block + .btn-block {
+  margin-top: 5px;
+}
+
+// Specificity overrides
+input[type="submit"],
+input[type="reset"],
+input[type="button"] {
+  &.btn-block {
+    width: 100%;
+  }
+}
+
+
+
+// Alternate buttons
+// --------------------------------------------------
+
+// Provide *some* extra contrast for those who can get it
+.btn-primary.active,
+.btn-warning.active,
+.btn-danger.active,
+.btn-success.active,
+.btn-info.active,
+.btn-inverse.active {
+  color: rgba(255,255,255,.75);
+}
+
+// Set the backgrounds
+// -------------------------
+.btn-primary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+}
+// Warning appears are orange
+.btn-warning {
+  .buttonBackground(@btnWarningBackground, @btnWarningBackgroundHighlight);
+}
+// Danger and error appear as red
+.btn-danger {
+  .buttonBackground(@btnDangerBackground, @btnDangerBackgroundHighlight);
+}
+// Success appears as green
+.btn-success {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+}
+// Info appears as a neutral blue
+.btn-info {
+  .buttonBackground(@btnInfoBackground, @btnInfoBackgroundHighlight);
+}
+// Inverse appears as dark gray
+.btn-inverse {
+  .buttonBackground(@btnInverseBackground, @btnInverseBackgroundHighlight);
+}
+
+
+// Cross-browser Jank
+// --------------------------------------------------
+
+button.btn,
+input[type="submit"].btn {
+
+  // Firefox 3.6 only I believe
+  &::-moz-focus-inner {
+    padding: 0;
+    border: 0;
+  }
+
+  // IE7 has some default padding on button controls
+  *padding-top: 3px;
+  *padding-bottom: 3px;
+
+  &.btn-large {
+    *padding-top: 7px;
+    *padding-bottom: 7px;
+  }
+  &.btn-small {
+    *padding-top: 3px;
+    *padding-bottom: 3px;
+  }
+  &.btn-mini {
+    *padding-top: 1px;
+    *padding-bottom: 1px;
+  }
+}
+
+
+// Link buttons
+// --------------------------------------------------
+
+// Make a button look and behave like a link
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  .box-shadow(none);
+}
+.btn-link {
+  border-color: transparent;
+  cursor: pointer;
+  color: @linkColor;
+  .border-radius(0);
+}
+.btn-link:hover,
+.btn-link:focus {
+  color: @linkColorHover;
+  text-decoration: underline;
+  background-color: transparent;
+}
+.btn-link[disabled]:hover,
+.btn-link[disabled]:focus {
+  color: @grayDark;
+  text-decoration: none;
+}
+
+
+
+
+

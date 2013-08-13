@@ -5,14 +5,17 @@ Sherpa.counter("Sherpa Utils");
 
 Sherpa.componentJS = {};
 Sherpa.includesJS = {};
-
+Sherpa.getDateFromUuid = function(uuid) {
+	var timestamp = parseInt((uuid).split(/-/)[0], 36);
+	return dateFormat(timestamp);
+}
 Sherpa.uuid = function() {
 	function s4() {
 	  return Math.floor((1 + Math.random()) * 0x10000)
 	             .toString(16)
 	             .substring(1);
 	};
-	 return s4() + s4() + '-' + s4() + '-' + s4() + '-' +
+	 return new Date().getTime().toString(36) + '-' + s4() + '-' + s4() + '-' +
 	         s4() + '-' + s4() + s4() + s4();
 }
 Sherpa.sessionID = Sherpa.uuid();

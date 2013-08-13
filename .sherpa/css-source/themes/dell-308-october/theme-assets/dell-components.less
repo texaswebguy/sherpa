@@ -1,0 +1,97 @@
+
+// DELL-308-ONLY Specific table styling
+// ------------------------------------------
+// Stroked border tables
+
+div.table-bordered {
+    border: 2px solid @tableBorder;
+    overflow:hidden;
+    margin-bottom: @baseLineHeight;
+
+    table  {
+      position:relative;
+      top:5px;
+      margin-top:-5px;
+      overflow:hidden;
+      border:none;
+
+      tr td:first-child,
+      tr th:first-child {
+          border-left:0;
+      }
+      th.featured h4 {
+          width:90%;
+          margin:-8px auto 6px auto;
+          color:@white;
+          padding: 5px 10px;
+          .border-bottom-radius(@borderRadiusLarge);
+      }
+    }
+    &.gray-feature {
+      th.featured h4      { background-color: @dellGrayStroke; }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @dellGrayStroke;
+      }
+    }
+    &.blue-feature {
+      th.featured h4      { background-color: @blue; }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @blue;
+      }
+    } 
+    &.green-feature {
+     th.featured h4     { background-color: @green;  }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @green;
+      }
+    }
+    &.orange-feature {
+      th.featured h4    { background-color: @orange; }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @orange;
+      }
+    }
+    &.red-feature {
+      th.featured h4       { background-color: @red;  }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @red;
+      }
+    }
+    &.darkred-feature {
+     th.featured h4     { background-color: @dellRedDark;  }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @dellRedDark;
+      }
+    }
+    &.berry-feature {
+      th.featured h4     { background-color: @dellBerry;  }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+          border-left:2px solid @dellBerry;
+      }
+      .featured:first {
+        border-top:2px solid @dellBerry !important;
+      }
+      .featured:last {
+        border-bottom:2px solid @dellBerry !important;
+      }
+    }
+    &.purple-feature {
+     th.featured h4    { background-color: @purple; }
+      td.featured, th.featured, td.featured + td, th.featured + th {
+        border-left:2px solid @purple;
+      }
+      .featured:first {
+        border-top:2px solid @purple;
+      }
+      .featured:last {
+        border-bottom:2px solid @purple;
+      }
+    }
+}
+
+
+//dell-308-only
+.table-nogrid td, .table-nogrid th {
+    border-left:0;
+    border-top:0;
+}

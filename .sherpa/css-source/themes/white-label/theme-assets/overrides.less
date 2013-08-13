@@ -1,0 +1,413 @@
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Links
+// -------------------------
+
+a:hover,
+a:focus {
+  text-decoration: underline;
+}
+
+
+// Images
+// -------------------------
+
+// Rounded corners
+.img-rounded {
+  .border-radius(@borderRadiusLarge);
+}
+
+//
+// Layouts
+// --------------------------------------------------
+
+.wrapper {
+	margin: 0 auto;
+	width: 90%;
+	max-width: @desktopMaxWidth;
+	float: none; 
+	overflow:hidden;
+}
+
+// TODO: need to look at div reset here.
+
+//
+// Typography for Desktop
+// --------------------------------------------------
+
+
+// TODO: Do we want to nulify classes such as .text-error, .text-success, etc?
+
+
+h1, h2, h3, h4, h5, h6, p {
+	margin: 0px 0px (@baseLineHeight / 2) 0px;
+}
+
+// Allows strong only in h5 and h6 - dell-308-only
+h1, h2, h3, h4 {
+  strong {
+    font-weight:normal;
+  }
+}
+
+h3, h4, h5, h6 {
+	font-family: @themeSansFontFamily;
+}
+
+h1 { 
+	font-size: @baseFontSize * 2.57; // ~36px
+	line-height: @baseLineHeight * 2; // ~40px
+} 
+
+h2 { 
+	font-size: @baseFontSize * 2; // ~28px
+	line-height: @baseLineHeight * 1.6; // ~32px
+} 
+
+h3 { 
+	font-size: @baseFontSize * 1.42; // ~20px
+	line-height: @baseLineHeight * 1.2; // ~24px
+} 
+
+h4 { 
+	font-size: @baseFontSize * 1.29; // ~18px
+	line-height: @baseLineHeight * 1.1; // ~22px
+} 
+
+// Makes h5 and h6 the same - dell-308-only
+
+h5, h6 { 
+	font-size: @baseFontSize * 1.14; // ~16px
+	line-height: @baseLineHeight; // ~20px
+} 
+
+
+/* Header - title - NOTE: not part of Boostrap*/
+.title {
+  text-align: center;
+  background: url(../img/gray_dark_title_line.png) repeat-x;
+  background-position: 50% 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.title h1 {
+  display: inline-block;
+  background: @bodyBackground;
+  padding: 0px 10px;
+  max-width: 80%;
+}
+
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.29;
+  font-weight: normal;
+  line-height: @baseLineHeight * 1.1;
+}
+
+small {
+  font-size: @baseFontSize * .86; // ~12px
+  font-weight: normal;
+  line-height:  @baseLineHeight * .8;// ~16px
+}
+
+
+// Blockquotes
+
+blockquote {
+  border-left: 5px solid @grayLight;
+  &.pull-right {
+    border-right: 5px solid @grayLight;
+  }
+}
+blockquote p {
+  margin-bottom: 0;
+  font-size: @baseFontSize * 1.14;
+  font-weight: normal;
+  line-height: @baseLineHeight * 1.1;
+}
+
+blockquote small {
+  display: block;
+  line-height: @baseLineHeight;
+  color: @grayDark;
+  font-style: italic;
+}
+
+blockquote small cite {
+  font-style: italic;
+}
+
+
+// Utility classes
+.muted          { color: @grayDark; }
+
+
+// Abbreviations and acronyms
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayDark;
+}
+
+
+//
+// Typography for tablet 
+// --------------------------------------------------
+@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+
+
+  h1 { 
+    font-size: @baseFontSize * 2.28; // ~32px
+    line-height: @baseLineHeight * 1.9; // ~38px
+  } 
+
+  h2 { 
+    font-size: @baseFontSize * 1.85; // ~26px
+    line-height: @baseLineHeight * 1.5; // ~30px
+  } 
+
+  h3 { 
+    font-size: @baseFontSize * 1.42; // ~20px
+    line-height: @baseLineHeight * 1.2; // ~24px
+  } 
+
+  h4 { 
+    font-size: @baseFontSize * 1.29; // ~18px
+    line-height: @baseLineHeight * 1.1; // ~22px
+  } 
+
+  h5 { 
+    font-size: @baseFontSize * 1.14; // ~16px
+    line-height: @baseLineHeight; // ~20px
+  } 
+
+  .lead {
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize * 1.29; // ~18px
+    line-height: @baseLineHeight +2;  // ~22px
+  }
+
+  .title {
+    background-position: 50% 13px;
+  }
+
+
+}
+
+
+
+//
+// Typography for mobile (Phone)
+// --------------------------------------------------
+@media only screen and (max-width:@mobileMaxWidth) {
+
+
+
+	h1 { 
+		font-size: @baseFontSize * 1.71; // ~24px
+		line-height: @baseLineHeight * 1.4; // ~28px
+	} 
+
+	h2 { 
+		font-size: @baseFontSize * 1.42; // ~20px
+		line-height: @baseLineHeight * 1.2; // ~24px
+	} 
+
+	h3 { 
+		font-size: @baseFontSize * 1.21; // ~17px
+		line-height: @baseLineHeight; // ~20px
+    font-weight:bold;
+	} 
+
+	h4 { 
+		font-size: @baseFontSize * 1.14; // ~16px
+		line-height: @baseLineHeight * 1.1; // ~22px
+	} 
+
+	h5 { 
+		font-size: @baseFontSize; // ~14px
+		line-height: @baseLineHeight; // ~20px
+    font-weight:bold;
+	} 
+
+	.lead {
+		margin-bottom: @baseLineHeight;
+		font-size: @baseFontSize * 1.14;;
+		line-height: @baseLineHeight;
+	}
+
+	.title {
+		background-position: 50% 13px;
+	}
+
+
+  // Horizontal layout (like forms) -dell-308-only
+  // In bootstrap this is not handled differently at mobile breakpoint and it looks horrible.
+
+  .dl-horizontal {
+    .clearfix(); // Ensure dl clears floats if empty dd elements present
+    dt {
+      float: left;
+      width: 100%;
+      clear: left;
+      text-align: left;
+      overflow:visible;
+    }
+    dd {
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+
+//
+// Typographic Colors 
+// NOTE: (Not part of Standard Bootstrap)
+// --------------------------------------------------
+
+.white-text 		{	color: @white;	}
+.gray-medium-text 	{	color: @gray;	} 
+.gray-text 			{	color: @gray;	}
+.lightgray-text 	{	color: @grayLight;	}
+.blue-text 			{	color: @blue;	}
+.green-text 		{	color: @green;	}
+.orange-text 		{	color: @orange;	}
+.red-text 			{	color: @red;	}
+.darkred-text 		{	color: @dellRedDark;	}
+.berry-text 		{	color: @dellBerry;	}
+.purple-text 		{	color: @purple;	}
+.navyblue-text 		{	color: @blueDark;	}
+
+
+
+//
+// Container Colors 
+// NOTE: (Not part of Standard Bootstrap) - dell-308-only
+// --------------------------------------------------
+
+/* Grays */
+
+.gray-dark 			{	
+  background-color: @grayDarker;
+  color:@white;	
+}
+.gray-medium 		{	
+  background-color: @gray;
+  color:@white; 
+}
+.gray 				{	
+  background-color: @grayDark;	
+  color:@white; 
+}
+.gray-light 		{	
+  background-color: @grayLight;
+  color:@grayDarker; 
+}
+.gray-very-light 	{	
+  background-color: @dellGrayVeryLight;	
+  color:@grayDarker; 
+}
+.white 				{	
+  background-color: @white;	
+  color:@grayDarker; 
+}
+.gray-stroke 		{	border: @defaultStroke solid @gray;	}
+
+/* Blue */
+.blue 				{	
+  background-color: @blue;
+  color:@white; 
+}
+.blue-stroke	{	
+  border: @defaultStroke solid @blue !important;
+  background:@white;
+}
+.navyblue 			{	
+  background-color: @blueDark;
+  color:@white; 
+}
+
+
+/* Green */
+.green 				{	
+  background-color: @green;
+  color:@white; 
+}
+.green-stroke 		{	
+  border: @defaultStroke solid @green !important;
+  background:@white;
+}
+
+/* Yellow */
+.yellow 			{	
+  background-color: @yellow;
+  color:@white; 
+}
+.yellow-stroke 		{	
+  border: @defaultStroke solid @yellow !important;
+  background:@white;
+}
+
+/* Orange */
+.orange 			{	
+  background-color: @orange;
+  color:@white; 
+}
+.orange-stroke 		{	
+  border: @defaultStroke solid @orange !important;
+  background:@white;
+}
+
+/* Red */
+.red 				{	
+  background-color: @red;
+  color:@white; 
+}
+.red-stroke 		{	
+  border: @defaultStroke solid  @red !important;
+  background:@white;
+}
+.red-dark 			{	
+  background-color:  @dellRedDark;
+  color:@white; 
+}
+
+/* Berry */
+.berry 				{	
+  background-color: @dellBerry;
+  color:@white; 
+}
+.berry-stroke 		{	
+  border: @defaultStroke solid @dellBerry !important;
+  background:@white;
+}
+
+/* Purple */
+.purple 			{	
+  background-color:@purple;
+  color:@white; 
+}
+.purple-stroke 		{	
+border: @defaultStroke solid @purple !important;
+  background:@white;
+}
+
+/* Teal */
+.teal 				{	
+  background-color: @dellTeal;
+  color:@white; 
+}
+.teal-stroke 		{	
+  border: @defaultStroke solid @dellTeal !important;
+  background:@white;
+}
+
+/* Modify all stroke classes with "thin"*/
+[class$=-stroke].thin	{	border-width: @thinStroke;	}
+
