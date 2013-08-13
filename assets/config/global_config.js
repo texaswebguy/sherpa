@@ -28,12 +28,11 @@ SHERPA.RUN_SHERPA_PROD = false; //runs mimified versions of sherpa code
 // JS PATH Configuration;
 SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
 SHERPA.LOCAL_PATH = "";
-SHERPA.JS_PATH = ".sherpa/sherpa-site-assets/js/";
+SHERPA.JS_PATH = "assets/js/";
 SHERPA.JS_LIB_PATH = ".sherpa/lib/";
 SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
-SHERPA.ASSETS_PATH = ".sherpa/sherpa-site-assets/";
-SHERPA.DOCUMENTATION_PATH = "documentation/";
+SHERPA.ASSETS_PATH = "assets/";
 SHERPA.DEFAULT_THEME = "dell-308-232";
 
 // i18n Configuration
@@ -50,8 +49,9 @@ SHERPA.ENABLE_GLOBAL_MODAL = true; //automatically inserts a global modal compon
 // CSS Configuration
 SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/css/";
 SHERPA.CSS_CORE_LOCAL_PATH = ".sherpa/css/";
-SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/sherpa-site-assets/css/";
-SHERPA.CSS_LOCAL_PATH = ".sherpa/sherpa-site-assets/css/";
+SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/assets/css/";
+SHERPA.CSS_LOCAL_PATH = "assets/css/";
+
 
 // GLOBAL Sherpa Computed Globals:
 //______________________________________________________________________________________
@@ -93,12 +93,12 @@ SHERPA.JS_CORE_LOAD = [
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 
-SHERPA.PROTOTYPE_APP = "sherpa-site.js";
+SHERPA.PROTOTYPE_APP = "app.js";
 
 // CSS Files
 //______________________________________________________________________________________
 
-SHERPA.PROTOTYPE_CSS = "sherpa-site-styles.css";
+SHERPA.PROTOTYPE_CSS = "doc.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ css_theme: SHERPA.CSS_CORE_PATH+SHERPA.DEFAULT_THEME+".css" },

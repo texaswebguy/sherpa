@@ -58,9 +58,7 @@ pre {
 }
 
 
-.unstyled.icons li span {
-  margin-right:5px;
-}
+
 
 
 
@@ -117,18 +115,22 @@ pre {
 /* Links */
 
 a {
-  color: #F0592C;
+/*  color: #0085c3;*/
+  color: #0085c3;
   text-decoration: none;
 }
 
 a:hover {
-  color: #F0592C;
+/*  color: #0085c3;*/
+  color: #0085c3;
   text-decoration: underline;
 }
 
 a:hover, a:active {
   outline: 0;
 }
+
+
 
 .example a {
   color: #0085c3;
@@ -242,7 +244,7 @@ h1.sherpa,h2.sherpa,h3.sherpa,h4.sherpa,h5.sherpa,h6.sherpa {
   margin: 10px 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  color: #12120F;
+  color: #000;
   text-rendering: optimizelegibility;
 }
 
@@ -274,8 +276,92 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   font-weight: normal;
   line-height: 28px;
   color:#999;
+  font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 }
 
+
+
+/* headings for Dell*/
+
+/* Edits made by:; AJ Lohman - just organized them a bit*/
+/* headers - All*/
+h1.tablet, h2.tablet {
+  font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+/* Edits made by AJ Lohman */
+h3.tablet, h4.tablet, h5.tablet {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+h1.tablet      {font-size: 32px;line-height: 38px;}
+h2.tablet      {font-size: 26px;line-height: 30px;}
+h3.tablet      {font-size: 20px;line-height: 24px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h4.tablet      {font-size: 18px;line-height: 22px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h5.tablet      {font-size: 16px;line-height: 20px;}
+
+
+
+.lead.tablet {
+  margin-bottom: 20px;
+  font-size: 16px;
+  font-weight:bold;
+  line-height: 20px;
+  color:#999;
+}
+
+
+
+
+/* Edits made by:; AJ Lohman - just organized them a bit*/
+/* headers - All*/
+h1.mobile, h2.mobile {
+  font-family: 'museo-for-dell-300regular', 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+/* Edits made by AJ Lohman */
+h3.mobile, h4.mobileh, h5.mobile {
+  font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif;
+  font-weight: normal;
+  color: inherit;
+  text-rendering: optimizelegibility;
+}
+
+
+h1.mobile       {font-size: 24px;line-height: 28px;}
+h2.mobile       {font-size: 20px;line-height: 24px;}
+h3.mobile       {font-size: 17px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+h4.mobile       {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: normal;}
+h5.mobile       {font-size: 16px;line-height: 20px; font-family: 'Trebuchet MS', Arial, Helvetica, sans-serif; font-weight: bold;}
+
+.lead.mobile {
+  margin-bottom: 20px;
+  font-size: 14px;
+  font-weight:bold;
+  line-height: 20px;
+  color:#999;
+}
+
+
+
+ .white-text {
+  color:#fff;
+ }
+
+
+/* Unorderd Lists */
+ul.unstyled.icons li {
+  margin-bottom:10px;
+}
 
 
 
@@ -299,14 +385,14 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   }
 
   .brand-sherpa a {
-    color:#D4CA9B;
+    color: #fff;
     -webkit-transition: color 0.2s ease-in;
     -moz-transition: color 0.2s ease-in;
     -o-transition: color 0.2s ease-in; 
   }
 
   .brand-sherpa a:hover {
-    color:#F0592C;
+    color:#999;
     text-decoration: none;
   }
 
@@ -336,7 +422,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   }
 
   .nav-sherpa ul li a {
-    color:#D4CA9B;
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     color:#fff;
     text-decoration: none;
     margin:0;
@@ -347,7 +433,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   }
 
   .nav-sherpa ul li a:hover {
-    color:#F0592C;
+    color:#999;
     text-decoration: none;
   }
 
@@ -411,9 +497,10 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   .nav-list > .active > a, .nav-list > .active > a:hover {
     /*color: #D4CA9B;
     background-color: #12120F;*/
-    color: #12120F;
-    background-color: #D4CA9B;
+    color: #fff;
+    background-color: #000;
     text-shadow: 0 0 0 rgba(0, 0, 0, 0);
+    font-weight: bold;
    /*background: pink;*/
    /*width:100%;*/
    /*display: block;
@@ -432,12 +519,12 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
 
   .nav > li > a:hover {
     text-decoration: none;
-    background-color: #f7f6ed;
+    background-color: #eee;
   }
 
   aside, aside .nav {
     /* width: 100%; messes up with affix */
-    margin: 10px 0 40px 0;
+    margin: 20px 0 40px 0;
     padding: 0;
     background-color: #fff;
     -webkit-border-radius: 6px;
@@ -447,17 +534,30 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   aside .nav.affix {
     top:45px;
   }
-  aside .nav > li.active > a, aside .nav > li.active > a:hover {
-    color: #D4CA9B;
-    background-color: #12120F;
-
-    text-shadow: 0 0 0 rgba(0, 0, 0, 0);
-    font-weight: bold;
-   /*background: pink;*/
-   /*width:100%;*/
-   /*display: block;
-   margin:0 auto;*/
-  }  
+  .tablet aside .nav.affix li a, .mobile aside .nav.affix li a{
+    display:none;
+  }
+  .tablet aside .nav.affix, .mobile aside .nav.affix {
+    width:100%;
+    top: 20px;
+    left: 0px;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    z-index:9998;
+  }
+  .tablet aside .nav.affix li.active a, .mobile aside .nav.affix li.active a, .tablet aside .nav.affix.open li a, .mobile aside .nav.affix.open li a {
+    display:block;
+    -webkit-border-radius: 0;
+       -moz-border-radius: 0;
+            border-radius: 0;
+  }
+  .tablet aside .navside.affix li.active a:after, .mobile aside .nav.affix li.active a:after {
+    font-family: 'icon-dell-mini';
+    content:"s";
+    color:#fff;
+    float:right;
+  }
 
 
   aside .nav li > a {
@@ -465,7 +565,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
     /*width: 190px \9;*/
     margin: 0 0 -1px;
     padding: 8px 14px;
-    border: 1px solid #e5e5e5;
+    border: 1px solid #999;
   }
 
   aside .nav li:first-child > a {
@@ -488,84 +588,12 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   }
 
 
-
-  .tablet aside .nav.affix li a, .mobile aside .nav.affix li a{
-    display:none;
-  }
-
-  .tablet aside .nav.affix, .mobile aside .nav.affix {
-    width:100%;
-    top: 30px;
-    left: 0px;
-    -webkit-border-radius: 0;
-    -moz-border-radius: 0;
-    border-radius: 0;
-    z-index:9999;
-  }
-  .tablet aside .nav.affix li.active a, .tablet aside .nav.affix.open li a {
-    display:block;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-    padding: 9px 0px 9px 36px;
-
-  }
-  .mobile aside .nav.affix li.active a, .mobile aside .nav.affix.open li a {
-    display:block;
-    -webkit-border-radius: 0;
-       -moz-border-radius: 0;
-            border-radius: 0;
-    padding: 9px 0px 9px 20px;
-
-  }
-  .tablet aside .nav.affix li.active a:before, .mobile aside .nav.affix li.active a:before {
-    font-family: 'icon-ui';
-    content:"\25";
-    float:left;
-    padding-right:10px;
-    font-weight:normal;
-  }
-  .tablet aside .nav.affix.open li.active a:before, .mobile aside .nav.affix.open li.active a:before {
-    font-family: 'icon-ui';
-    content:"\26";
-    float:left;
-    padding-right:10px;
-    font-weight:normal;
-  }
-
-
-
-
-  .tablet aside .nav > li.active > a, .tablet aside .nav > li.active > a:hover, .mobile aside .nav > li.active > a, .mobile aside .nav > li.active > a:hover {
-    /*color: #D4CA9B;
-    background-color: #12120F;*/
-    color: #444;
-    background-color: #DDD;
-    text-shadow: none;
-    font-weight: bold;
-    width:100%;
-  }
-
-
-  .tablet aside .nav > li.active, .mobile aside .nav > li.active {
-    /*color: #D4CA9B;
-    background-color: #12120F;*/
-    color: #444;
-    width:100%;
-  }
-
-
-
-
-
-
-
 /* Sherpa button */
 
 
   .sherpa-btn:hover, .sherpa-btn:active, .sherpa-btn.active, .sherpa-btn.disabled, .sherpa-btn[disabled] {
     color: #fff;
-    background-color: #EF3B26;
+    background-color: #999;
     text-decoration: none;
 
     -webkit-transition: background-color 0.2s ease-in;
@@ -579,6 +607,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
   }
 
   .sherpa-btn {
+    font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
     display: inline-block;
     padding: 10px 20px;
     margin-bottom: 10px;
@@ -588,7 +617,7 @@ h6.sherpa {font-size: 11px;line-height: 11px;}
     vertical-align: middle;
     cursor: pointer;
     color: #fff;
-    background-color: #F0592C;
+    background-color: #000;
     border: 0px solid #bbbbbb;
     -webkit-border-radius: 20px;
     -moz-border-radius: 20px;
@@ -685,25 +714,30 @@ Breakpoints
   h6.sherpa {font-size: 11px;line-height: 11px;}
 
   /* Nav */
-
   .nav-sherpa ul {
     text-align: left;
     margin:0 0 20px 0;
   }
 
-  .nav-sherpa ul li {    
-      display: block;
+  .nav-sherpa ul li {
+    display: block;
+    
   }
 
   .nav-sherpa ul li a {
     width: 100%;
     display: block;
     margin:0;
-    padding:10px 20px 10px 0;
+    padding:10px 20px;
   }
 
-
-
+  .nav-sherpa ul li a:hover {
+    width: 100%;
+    display: block;
+    margin:0;
+    padding:10px 20px;
+  }
+    
 }
 
 /* Mobile (Phone)*/
@@ -744,10 +778,15 @@ Breakpoints
     width: 100%;
     display: block;
     margin:0;
-    padding:10px 20px 10px 0;
+    padding:10px 20px;
   }
 
-
+  .nav-sherpa ul li a:hover {
+    width: 100%;
+    display: block;
+    margin:0;
+    padding:10px 20px;
+  }
 }
 
 

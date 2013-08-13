@@ -1,0 +1,70 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+	<meta charset="utf-8">
+    <title>Sherpa - Template</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <meta name="description" content="">
+    <meta name="author" content="">
+
+    <script type="text/javascript">
+        var SHERPA_CONFIG_OVERRIDES = {};
+
+		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = ".sherpa/sherpa-site-assets/config/less_site_config.js";
+        /*
+			This is a place to overide sherpa default configurations for this html file.
+			To change the default configurations for all files in this folder please edit assets/config/global_config.js
+
+			WARNING: If you don't know what this is, don't touch it! Ask someone!
+
+			To learn more about configuration go to http://sherpa.gsdprototypes.com/configuration.html
+
+    	*/
+    </script>
+	<!-- Don't touch 
+	******************************************************************************** -->
+    <style>body {opacity: 0;}</style>
+	<script src=".sherpa/sherpa.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+</head>
+
+<body>
+
+<!-- Masthead section -->
+<div data-bind="component: {name:'masthead', type:'sherpa-site'}">
+</div>
+<!-- end of Masthead section -->
+
+
+<div data-bind="page: {id: 'start', title: 'Sherpa UX Prototyping', desc: 'Sherpa', scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/index.html'}"></div>
+
+<div data-bind="page: {id: 'how-to', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Get Started', desc: 'Get Started', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/how-to.html'}"></div>
+
+<div data-bind="page: {id: 'grid', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Grid', desc: 'Grid', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/grid.html'}"></div>
+
+
+<div data-bind="page: {id: 'base-css', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Basic Elements', desc: 'Basic Elements', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/base-css.html'}"></div>
+
+
+<div data-bind="page: {id: 'components', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Components', desc: 'Components', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/components.html'}"></div>
+
+
+<div data-bind="page: {id: 'configuration', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Configuration', desc: 'Configuration', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/configuration.html'}"></div>
+
+<div data-bind="page: {id: 'functions', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Functions', desc: 'Functions', showInMasthead:true, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/functions.html'}"></div>
+
+<div data-bind="page: {id: 'grid-example', sourceLoaded:Sherpa.globalEvents.setUpAside, title: 'Sherpa UX Prototyping - Grid Example', desc: 'Grid Example', showInMasthead:false, scrollToTop: true, sourceCache:  true, sourceOnShow: '.sherpa/sherpa-site-assets/pages/grid-example.html'}"></div>
+
+&nbsp;
+<!-- footer section -->
+	<footer class="gray-light" data-bind="component: { 
+			name :'footer', 
+			type :'sherpa_site'
+		}">
+	</footer>
+
+</body>
+</html>
