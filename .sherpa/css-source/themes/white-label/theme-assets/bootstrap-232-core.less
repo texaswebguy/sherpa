@@ -1,0 +1,61 @@
+
+
+
+/*!
+ * 
+ * This core.less is in essense the bootstrap.less file without the variables and mixins portions
+ * Which is brought in by a "theme" file.
+ *
+ */
+
+@import "../../less-232/mixins.less";
+
+// CSS Reset
+@import "../../less-232/reset.less";
+
+// Grid system and page structure
+@import "../../less-232/scaffolding.less";
+@import "../../less-232/grid.less";
+@import "../../less-232/layouts.less";
+
+// Base CSS
+@import "../../less-232/type.less";
+@import "../../less-232/code.less";
+@import "../../less-232/forms.less";
+@import "../../less-232/tables.less";
+
+// Components: common
+@import "../../less-232/sprites.less";
+@import "../../less-232/dropdowns.less";
+@import "../../less-232/wells.less";
+@import "../../less-232/component-animations.less";
+@import "../../less-232/close.less";
+
+// Components: Buttons & Alerts
+@import "../../less-232/buttons.less";
+@import "../../less-232/button-groups.less";
+@import "../../less-232/alerts.less"; // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+// Components: Nav
+@import "../../less-232/navs.less";
+@import "../../less-232/navbar.less";
+@import "../../less-232/breadcrumbs.less";
+@import "../../less-232/pagination.less";
+@import "../../less-232/pager.less";
+
+// Components: Popovers
+@import "../../less-232/modals.less";
+@import "../../less-232/tooltip.less";
+@import "../../less-232/popovers.less";
+
+// Components: Misc
+@import "../../less-232/thumbnails.less";
+@import "../../less-232/media.less";
+@import "../../less-232/labels-badges.less";
+@import "../../less-232/progress-bars.less";
+@import "../../less-232/accordion.less";
+@import "../../less-232/carousel.less";
+@import "../../less-232/hero-unit.less";
+
+// Utility classes
+@import "../../less-232/utilities.less"; // Has to be last to override when necessary
