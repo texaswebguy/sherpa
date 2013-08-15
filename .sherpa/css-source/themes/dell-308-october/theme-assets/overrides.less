@@ -2165,6 +2165,19 @@ select:focus:invalid {
   }
 }
 
+// adding class to override Angular default directive to automatically invalidate field even before user interacts with it.
+input.untested-field:focus:invalid,
+textarea.untested-field:focus:invalid,
+select.untested-field:focus:invalid {
+  color: @blue;
+  border-color: @blue;
+  &:focus {
+    border-color: @blue;
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px lighten(@blue, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
 
 //TODO: If there is a requirement to display icon we will have to build this
 
