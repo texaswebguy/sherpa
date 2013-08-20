@@ -1,8 +1,6 @@
 Sherpa.counter("Sherpa Notes");
 // Sherpa notes
 // console.log("hello notes")
-// load markdown converter
-Sherpa.js({showdown:SHERPA.JS_LIB_PATH+"showdown.js"});
 Sherpa.feature("sherpa-notes",false);
 Sherpa.store("notes-collapsed",false);
 Sherpa.notes = {

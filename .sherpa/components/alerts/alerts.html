@@ -14,7 +14,8 @@
             options.icon = viewModel.core_config.alert_icons.success;        
             break;
           case "information":
-            options.icon = viewModel.core_config.alert_icons.information;        
+            options.icon = viewModel.core_config.alert_icons.information;  
+            options.type = "info";      
             break;
           case "error":
             options.icon = viewModel.core_config.alert_icons.error;        
@@ -39,11 +40,10 @@
 
 <!-- ko with: Sherpa.componentJS.alerts_alerts_js(component_options) -->
 
-<div data-bind="attr: { class: 'alert '+type }">
+<div data-bind="attr: { class: 'alert alert-'+type }">
   <!-- ko if: dismiss -->
   <button type="button" class="close" data-dismiss="alert"></button>
   <!-- /ko -->
-  <span aria-hidden="true" data-bind="attr: { class: icon }"></span>
   <p><strong data-bind="text: title" class="alert-title"></strong> <span data-bind="html: message" class="alert-message"></span></p>
 </div>
 

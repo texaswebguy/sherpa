@@ -90,6 +90,7 @@ SHERPA.JS_CORE_LOAD = [
 	{ waypointsSticky: SHERPA.JS_LIB_PATH+"waypoints-sticky.min.js"},
 	{ csvParser: SHERPA.JS_LIB_PATH+"jquery.csv-0.71.min.js"},
 	{ jwerty: SHERPA.JS_LIB_PATH+"jwerty.js"},
+	{ showdown:SHERPA.JS_LIB_PATH+"showdown.js"},
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 

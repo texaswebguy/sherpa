@@ -389,6 +389,25 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	
 
+
+
+
+$(document).ready(function(){
+	$('.mobile .mb-toggle').click(function(evt){
+		if($(this).next().is(':visible')){
+			$(this).next().addClass("mb-hide");
+			$(this).removeClass("open");
+		} else {
+			$(this).next().removeClass("mb-hide");
+			$(this).addClass("open");
+		}
+
+	});
+})
+
+
+
+
 });
 
 Sherpa.counter("sherpa-site-app");

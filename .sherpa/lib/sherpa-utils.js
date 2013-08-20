@@ -64,8 +64,15 @@ Sherpa.msg = function(textkey,t_data) {
 	}
 	if(!msg) {
 		// text key does not exist
-		// figure out how big the containg element is and then truncate lorem ispum to fit
-		msg = '<span title="Missing textkey: '+textkey+'">Lorem ispum...</span>';
+		// Check to see if textkey is a markdown
+		msg = viewModel.content[textkey+"_markdown"];
+		if(!msg) {
+			// TODO: figure out how big the containg element is and then truncate lorem ispum to fit
+			msg = '<span title="Missing textkey: '+textkey+'">Lorem ispum...</span>';
+		} else {
+			var convertMD = new Sherpa.Markdown.converter();
+			msg = convertMD.makeHtml(msg);
+		}
 	};
 	return msg;
 }

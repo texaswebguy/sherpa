@@ -241,14 +241,17 @@ font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
 color: #fff;
 }
 
-
+.intro-banner h1 {
+    color: #12120F;
+}
 
 /* Sherpa headings*/
-h1.sherpa,h2.sherpa,h3.sherpa,h4.sherpa,h5.sherpa,h6.sherpa {
+h1.sherpa,h2.sherpa,h3.sherpa,h4.sherpa,h5.sherpa,h6.sherpa,
+.sherpa h1, .sherpa h2, .sherpa h3, .sherpa h4, .sherpa h5
+ {
   margin: 10px 0;
   font-family: "Helvetica Neue", Helvetica, Arial, sans-serif;
   font-weight: bold;
-  color: #12120F;
   text-rendering: optimizelegibility;
 }
 
@@ -263,16 +266,16 @@ h1.sherpa-white,h2.sherpa-white,h3.sherpa-white,h4.sherpa-white,h5.sherpa-white,
 
 
 
-h1.sherpa {font-size: 60px;line-height: 70px;}
-h1.featured {font-size: 120px; line-height: 130px;}
+h1.sherpa, .sherpa h1 {font-size: 60px;line-height: 70px;}
+h1.featured, .featured.sherpa h1 {font-size: 120px; line-height: 130px;}
 h1.featured-white {color:#fff;}
-h2.sherpa {font-size: 40px;line-height: 50px;}
-h2.featured {color:#999;}
-h3.sherpa {font-size: 24px;line-height: 34px;}
+h2.sherpa, .sherpa h2 {font-size: 40px;line-height: 50px;}
+h2.featured, .featured.sherpa h2 {color:#999;}
+h3.sherpa, .sherpa h3 {font-size: 24px;line-height: 34px;}
 h3.featured-white {color:#fff;}
-h4.sherpa {font-size: 17px;line-height: 17px;}
-h5.sherpa {font-size: 14px;line-height: 14px;}
-h6.sherpa {font-size: 11px;line-height: 11px;}
+h4.sherpa, .sherpa h4 {font-size: 17px;line-height: 17px;}
+h5.sherpa, .sherpa h5 {font-size: 14px;line-height: 14px;}
+h6.sherpa, .sherpa h6 {font-size: 11px;line-height: 11px;}
 
 not(
 .theme-dell-308-october) .lead {
