@@ -165,6 +165,7 @@ abbr[data-original-title] {
 }
 
 
+
 //
 // Typography for tablet 
 // --------------------------------------------------
@@ -280,20 +281,21 @@ abbr[data-original-title] {
 //
 // Typographic Colors 
 // NOTE: (Not part of Standard Bootstrap)
+// !important is used so that it overrides any parent directive
 // --------------------------------------------------
 
-.white-text     { color: @white;  }
-.gray-medium-text   { color: @gray; } 
-.gray-text      { color: @gray; }
-.lightgray-text   { color: @grayLight;  }
-.blue-text      { color: @blue; }
-.green-text     { color: @green;  }
-.orange-text    { color: @orange; }
-.red-text       { color: @red;  }
-.darkred-text     { color: @dellRedDark;  }
-.berry-text     { color: @dellBerry;  }
-.purple-text    { color: @purple; }
-.navyblue-text    { color: @blueDark; }
+.white-text     { color: @white !important;  }
+.gray-medium-text   { color: @gray !important; } 
+.gray-text      { color: @gray !important; }
+.lightgray-text   { color: @grayLight !important;  }
+.blue-text      { color: @blue !important; }
+.green-text     { color: @green !important;  }
+.orange-text    { color: @orange !important; }
+.red-text       { color: @red !important;  }
+.darkred-text     { color: @dellRedDark !important;  }
+.berry-text     { color: @dellBerry !important;  }
+.purple-text    { color: @purple !important; }
+.navyblue-text    { color: @blueDark !important; }
 
 
 
@@ -1166,12 +1168,13 @@ table th[class*="span"],
   blockquote {
     border-color: @dellGrayStroke;
   }
+  > :last-child {
+    // dell-308-only
+    // NOTE: In bootstrap wells don't work well with p or anything else with a bottom margin.
+    margin-bottom: 0px;
+  }
 }
-// dell-308-only
-// NOTE: In bootstrap wells don't work well with p tags.
-.well p:last-child {
-  margin-bottom: 0px;
-}
+
 
 // Sizes
 .well-large {
@@ -1179,7 +1182,7 @@ table th[class*="span"],
   .border-radius(@borderRadiusLarge);
 }
 .well-small {
-  padding: @baseLineHeight;
+  padding: @baseLineHeight / 2;
   .border-radius(@borderRadiusSmall);
 }
 
@@ -1190,12 +1193,19 @@ table th[class*="span"],
 .rounded-large {
   .border-radius(@borderRadiusLarge);
   padding:@baseLineHeight;
+  > :last-child {
+    margin-bottom: 0px;
+  }
 }
 
 .rounded-small {
  .border-radius(@borderRadiusSmall);
   padding:@baseLineHeight;
+  > :last-child {
+    margin-bottom: 0px;
+  }
 }
+
 
 
 
@@ -1203,124 +1213,159 @@ table th[class*="span"],
 //
 // Container Colors 
 // NOTE: (Not part of Standard Bootstrap) - dell-308-only
-// We should really scope these within the well class
+// Should we scope these within the well class in the future?
 // --------------------------------------------------
+
+.well-colors (@bgcolor, @textColor, @headlineColor, @linkColor) {
+  background-color: @bgcolor;
+  color: @textColor;
+  h2,h3,h4,h5,h6 {
+    color:@headlineColor;
+  }
+  a {
+    color:@textColor;
+  }
+  h4.well-title, h4.container-title {
+    //container-title for backward compatibility but should be deprecated
+    display: inline-block;
+    top: -20px;
+    margin-bottom: -20px;
+    padding: 5px 15px;
+    position: relative;
+    color: @white;
+    background-color:@headlineColor;
+    vertical-align: baseline;
+    white-space: nowrap;
+    .border-bottom-right-radius(@borderRadiusLarge);
+    .border-bottom-left-radius(@borderRadiusLarge);
+  }
+}
+
 
 /* Grays */
 
-.gray-dark      { 
-  background-color: @grayDarker;
-  color:@white; 
+.gray-dark,
+.well-grey-dark { 
+  .well-colors (@grayDarker, @white, @white, @white)
 }
-.gray-medium    { 
-  background-color: @gray;
-  color:@white; 
+.gray-medium,
+.well-grey-medium { 
+  .well-colors (@gray, @white, @white, @white)
 }
-.gray         { 
-  background-color: @grayDark;  
-  color:@white; 
+.gray,
+.well-grey { 
+  .well-colors (@grayDark, @white, @white, @white)
 }
-.gray-light     { 
-  background-color: @grayLight;
-  color:@grayDarker; 
+.gray-light,
+.well-grey-light { 
+  .well-colors (@grayLight, @grayDarker, @grayDarker, @blue)
 }
-.gray-very-light  { 
-  background-color: @dellGrayVeryLight; 
-  color:@grayDarker; 
+.gray-very-light,
+.well-grey-very-light { 
+  .well-colors (@dellGrayVeryLight, @grayDarker, @grayDarker, @blue)
 }
-.white        { 
-  background-color: @white; 
-  color:@grayDarker; 
+.white,
+.well-white { 
+  .well-colors (@white, transparent, transparent, transparent)
 }
-.gray-stroke    { border: @defaultStroke solid @gray; }
+.gray-stroke,
+.well-grey-stroke { border: @defaultStroke solid @gray; }
 
 /* Blue */
-.blue         { 
-  background-color: @blue;
-  color:@white; 
+.blue,
+.well-blue { 
+  .well-colors (@blue, @white, @white, @white)
 }
-.blue-stroke  { 
+.blue-stroke,
+.well-blue-stroke  { 
   border: @defaultStroke solid @blue !important;
-  background:@white;
+  .well-colors (@white, @textColor, @blue, @linkColor)
 }
-.navyblue       { 
-  background-color: @blueDark;
-  color:@white; 
+.navyblue,
+.well-navyblue { 
+  .well-colors (@dellNavy, @white, @white, @white)
 }
 
 
 /* Green */
-.green        { 
-  background-color: @green;
-  color:@white; 
+.green,
+.well-green { 
+  .well-colors (@green, @white, @white, @white)
 }
-.green-stroke     { 
+.green-stroke,
+.well-green-stroke     { 
   border: @defaultStroke solid @green !important;
-  background:@white;
+  .well-colors (@white, @textColor, @green, @linkColor)
 }
 
 /* Yellow */
-.yellow       { 
-  background-color: @yellow;
-  color:@white; 
+.yellow,
+.well-yellow      { 
+    .well-colors (@yellow, @white, @white, @white)
 }
-.yellow-stroke    { 
+.yellow-stroke,
+.well-yellow-stroke    { 
   border: @defaultStroke solid @yellow !important;
-  background:@white;
+  .well-colors (@white, @textColor, @yellow, @linkColor)
 }
 
 /* Orange */
-.orange       { 
-  background-color: @orange;
-  color:@white; 
+.orange,
+.well-orange       { 
+  .well-colors (@orange, @white, @white, @white)
 }
-.orange-stroke    { 
+.orange-stroke,
+.well-orange-stroke    { 
   border: @defaultStroke solid @orange !important;
-  background:@white;
+  .well-colors (@white, @textColor, @orange, @linkColor)
 }
 
 /* Red */
-.red        { 
-  background-color: @red;
-  color:@white; 
+.red,
+.well-red        { 
+  .well-colors (@red, @white, @white, @white)
 }
-.red-stroke     { 
+.red-stroke,
+.well-red-stroke     { 
   border: @defaultStroke solid  @red !important;
-  background:@white;
+  .well-colors (@white, @textColor, @red, @linkColor)
 }
-.red-dark       { 
-  background-color:  @dellRedDark;
-  color:@white; 
+.red-dark,
+.well-red-dark       { 
+  .well-colors (@dellRedDark, @white, @white, @white)
 }
 
 /* Berry */
-.berry        { 
-  background-color: @dellBerry;
-  color:@white; 
+.berry,
+.well-berry        { 
+  .well-colors (@dellBerry, @white, @white, @white)
 }
-.berry-stroke     { 
+.berry-stroke,
+.well-berry-stroke     { 
   border: @defaultStroke solid @dellBerry !important;
-  background:@white;
+  .well-colors (@white, @textColor, @dellBerry, @linkColor)
 }
 
 /* Purple */
-.purple       { 
-  background-color:@purple;
-  color:@white; 
+.purple,
+.well-purple       { 
+  .well-colors (@purple, @white, @white, @white)
 }
-.purple-stroke    { 
+.purple-stroke,
+.well-purple-stroke    { 
 border: @defaultStroke solid @purple !important;
-  background:@white;
+  .well-colors (@white, @textColor, @purple, @linkColor)
 }
 
 /* Teal */
-.teal         { 
-  background-color: @dellTeal;
-  color:@white; 
+.teal,
+.well-teal         { 
+  .well-colors (@dellTeal, @white, @white, @white)
 }
-.teal-stroke    { 
+.teal-stroke,
+.well-teal-stroke    { 
   border: @defaultStroke solid @dellTeal !important;
-  background:@white;
+  .well-colors (@white, @textColor, @dellTeal, @linkColor)
 }
 
 /* Modify all stroke classes with "thin"*/
@@ -1843,16 +1888,23 @@ input[type="submit"].btn {
   p:last-child {
     margin-bottom:0px;
   }
+  [class^=icon-] {
+    display:none;
+  };  
   .close {
     position: relative;
     right: -8px;
     > [class^=icon] {
       font-size: 14px;
+      display:block;
     }
   }
   &:before {
     .insert-icon("\7e", @red);
   }
+
+
+
 }
 
 // Alternate styles
@@ -1932,8 +1984,52 @@ input[type="submit"].btn {
   margin-right: 10px;
 }
 
+// Active state, and it's :hover/:focus to override normal :hover/:focus
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  color: @grayDarker;
+  border: 1px solid @dellGrayStroke;
+  border-bottom-color: transparent;
+}
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: @dellHighlightBlue;
+}
+
+// DISABLED STATES
+// ---------------
+
+// Gray out text
+.nav > .disabled > a {
+  color: @gray;
+}
 
 
+
+// Open dropdowns
+// -------------------------
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover,
+.nav > li.dropdown.open.active > a:focus {
+  color: @linkColor;
+  background-color: @grayLight;
+  border-color: @grayLight;
+}
+.nav li.dropdown.open .caret,
+.nav li.dropdown.open.active .caret,
+.nav li.dropdown.open a:hover .caret,
+.nav li.dropdown.open a:focus .caret {
+  border-top-color: @white;
+  border-bottom-color: @white;
+  .opacity(100);
+}
+
+.nav-pills .dropdown-menu {
+  margin: 0;
+}
 
 // navbar
 //=======================================================================================================================
@@ -2127,7 +2223,25 @@ input[type="submit"].btn {
 
 // labels-badges
 //=======================================================================================================================
+// Base classes
+.label,
+.badge {
+  padding: 2px 6px;
+  text-shadow: none;
+  background-color: @gray;
+}
 
+// Colors
+// Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
+.label {
+  &-teal              { background-color: @dellTeal; }
+}
+
+.badge { 
+  background-color: @dellGrayDark; 
+  position:relative;
+  top:-5px;
+}
 
 
 // progress-bars

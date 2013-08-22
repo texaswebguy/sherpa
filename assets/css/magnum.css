@@ -122,3 +122,32 @@ ol.linenums li {
 #icons [data-toggle="popover"] {
 	cursor:help;
 }
+
+#icons li {
+	margin-bottom:10px;
+}
+.change-container-color > li > a {
+	color:#fff;
+}
+.change-container-color > li > a.white,
+.change-container-color > li > a.gray-light,
+.change-container-color > li > a.gray-very-light,
+.change-container-color-stroke > li > a.white,
+.change-container-color-stroke > li > a.gray-light,
+.change-container-color-stroke > li > a.gray-very-light,
+.change-container-color-stroke-title > li > a.white,
+.change-container-color-stroke-title > li > a.gray-light,
+.change-container-color-stroke-title > li > a.gray-very-light
+ {
+	color:#444;
+}
+.change-container-color, .change-container-color-stroke, .change-container-color-stroke-title {
+	left: -43px;
+	position: absolute;
+	top: -6px;
+}
+#containers .wrapper,
+#pills .wrapper
+ {
+	overflow:visible;
+}

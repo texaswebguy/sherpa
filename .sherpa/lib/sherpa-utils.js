@@ -648,7 +648,6 @@ Sherpa.ready("localJSApp", function() {
 				  table_obj.keys = _.keys(data_obj[0]);
 				  table_obj.items = [];
 				  data_obj.shift();
-				  console.log("data_obj",data_obj)
 				  _.each(data_obj, function(item){
 				    table_obj.items.push(_.values(item));
 				  });
@@ -657,11 +656,12 @@ Sherpa.ready("localJSApp", function() {
 				  $('.project_title').text(viewModel.project_title)
 				},
 				error: function() {
-					console.error("No project info found")
+					console.error("No project info found");
+					$('.project_title').hide();
 				}
 			});
-		}else {
-			console.error("No project info file name found: viewModel.core_config.project_info_filename")
+		} else {
+			console.error("No project info file name found: viewModel.core_config.project_info_filename");
 		} 
 	},300);
 });

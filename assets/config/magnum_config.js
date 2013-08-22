@@ -35,7 +35,7 @@ SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 SHERPA.ASSETS_PATH = "assets/";
 SHERPA.DOCUMENTATION_PATH = "documentation/";
 SHERPA.DEFAULT_THEME = "dell-308-october";
-
+SHERPA.ENABLE_GLOBAL_MODAL = true;
 
 // i18n Configuration
 SHERPA.DEFAULT_LOCALE = "en";
@@ -44,7 +44,7 @@ SHERPA.DEFAULT_LOCALE = "en";
 SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
 SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
 SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
-SHERPA.ENABLE_NOTES = true; //enables hot key for showing sherpa notes
+SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
 // CSS Configuration
@@ -84,10 +84,7 @@ SHERPA.JS_CORE_LOAD = [
 	{ scrollTo: SHERPA.JS_LIB_PATH+"jquery.scrollTo.min.js"}, 
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
-	{ jqueryUI: SHERPA.JS_LIB_PATH+"jquery-ui.min.js"},
 	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},,
-	{ waypoints: SHERPA.JS_LIB_PATH+"waypoints.min.js"},
-	{ waypointsSticky: SHERPA.JS_LIB_PATH+"waypoints-sticky.min.js"},
 	{ csvParser: SHERPA.JS_LIB_PATH+"jquery.csv-0.71.min.js"},
 	{ jwerty: SHERPA.JS_LIB_PATH+"jwerty.js"},
 	{ showdown:SHERPA.JS_LIB_PATH+"showdown.js"},
@@ -122,7 +119,6 @@ if(SHERPA.RUN_SHERPA_PROD){
 		{ sherpaEventManager: SHERPA.JS_LIB_PATH+"sherpa-event-manager-min.js"},
 		{ sherpaUtils: SHERPA.JS_LIB_PATH+"sherpa-utils-min.js"},
 		{ sherpai18n: SHERPA.JS_LIB_PATH+"sherpa-i18n-min.js"},
-		{ sherpaPseudoAuth: SHERPA.JS_LIB_PATH+"sherpa-pseudo-auth-min.js"},
 		{ sherpaCustomWidgets: SHERPA.JS_LIB_PATH+"sherpa-custom-widgets-min.js"},
 		{ sherpaGlobalEvents: SHERPA.JS_LIB_PATH+"sherpa-global-events-min.js"}
 	];
