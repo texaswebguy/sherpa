@@ -284,11 +284,14 @@ abbr[data-original-title] {
 // !important is used so that it overrides any parent directive
 // --------------------------------------------------
 
+// these should be deprecated because they are not in bootstrap like ocnvention
 .white-text     { color: @white !important;  }
 .gray-medium-text   { color: @gray !important; } 
 .gray-text      { color: @gray !important; }
 .lightgray-text   { color: @grayLight !important;  }
 .blue-text      { color: @blue !important; }
+.yellow-text      { color: @yellow !important; }
+.teal-text      { color: @dellTeal !important; }
 .green-text     { color: @green !important;  }
 .orange-text    { color: @orange !important; }
 .red-text       { color: @red !important;  }
@@ -297,6 +300,24 @@ abbr[data-original-title] {
 .purple-text    { color: @purple !important; }
 .navyblue-text    { color: @blueDark !important; }
 
+// new text color class names
+.text {
+  &-white     { color: @white !important;  }
+  &-gray-medium   { color: @gray !important; } 
+  &-gray      { color: @gray !important; }
+  &-gray-light   { color: @grayLight !important;  }
+  &-gray-very-light   { color: @grayLighter !important;  }
+  &-blue      { color: @blue !important; }
+  &-yellow      { color: @yellow !important; }
+  &-teal      { color: @dellTeal !important; }
+  &-green     { color: @green !important;  }
+  &-orange    { color: @orange !important; }
+  &-red       { color: @red !important;  }
+  &-red-dark     { color: @dellRedDark !important;  }
+  &-berry     { color: @dellBerry !important;  }
+  &-purple    { color: @purple !important; }
+  &-navyblue    { color: @blueDark !important; }
+}
 
 
 
@@ -1150,10 +1171,12 @@ table th[class*="span"],
 }
 
 .dropdown-menu {
-  margin: 17px 0 0;
+  margin: 20px 0 0;
 }
 
-
+li.dropdown .dropdown-menu {
+  margin: 2px 0 0;
+}
 // wells
 //=======================================================================================================================
 
@@ -2033,6 +2056,62 @@ input[type="submit"].btn {
 
 // navbar
 //=======================================================================================================================
+
+.navbar-search {
+  margin-top: 3px;
+  .search-query {
+      &:-moz-placeholder {
+        padding-top:3px;
+      }
+      &:-ms-input-placeholder {
+        padding-top:3px;
+      }
+      &::-webkit-input-placeholder {
+        padding-top:3px;
+      }
+  }
+}
+.navbar-inverse .navbar-search .search-query {
+  color: @grayDarker;
+}
+
+//tabs-bordered Dell 308 only
+.tabbable.tabs-bordered .tab-content {
+  border:1px solid @dellGrayStroke;
+  border-top:none;
+  .border-bottom-radius(@baseBorderRadius);
+  padding:10px 10px 0 10px;
+  margin:-20px 0 20px 0;
+}
+
+.tabbable.tabs-left.tabs-bordered .tab-content,
+.tabbable.tabs-bottom.tabs-bordered .tab-content,
+.tabbable.tabs-right.tabs-bordered .tab-content
+  {
+  border:none;
+  padding:0;
+  margin:0;
+}
+
+.tabbable.tabs-left.tabs-gray-light {
+  background:@grayLight;
+  margin-bottom:7px;
+  .border-right-radius(@baseBorderRadius);
+  .nav-tabs {
+    margin-bottom:0;
+    background:@white;
+    border-right:none;  
+    li.active a {
+      background:@grayLight;
+      border:none;
+    }
+  }
+  .tab-content {
+    margin-top:20px;
+  }
+
+}
+
 
 
 

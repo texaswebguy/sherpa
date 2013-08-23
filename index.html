@@ -32,39 +32,53 @@
 </head>
 
 <body>
-  <p class="blue bottom-offset-large">&nbsp;</p>
-  
-
-
-  <!-- Masthead
-  ================================================== -->
-
-  <header class="jumbotron subhead" id="overview">
+  <header class="blue da-all ta-all ma-all">
     <div class="wrapper">
-      <div class="da-all ta-all ma-all">
-        <h1>Dell Magnum 308 Bootstrap Theme</h1>
-        <p class="lead">October Release based on Bootstrap 2.3.2</p>
-      </div>
-      <div class="da8-da12 tb6-tb9 ma-all">
-          <img src="assets/img/magnum.jpg" width="200px" class="img-rounded pull-right">
-      </div>
-      <div class="da-all ta-all ma-all">
-        <ul class="nav nav-pills">
-          <li class="active"><a href="#typography">Typography</a></li>
-          <li class=""><a href="#navbar">Navbar</a></li>
-          <li class=""><a href="#buttons">Buttons</a></li>
-          <li class=""><a href="#forms">Forms</a></li>
-          <li class=""><a href="#tables">Tables</a></li>
-          <li class=""><a href="#miscellaneous">Miscellaneous</a></li>
-
-
-          <li class=""><a href="#customizations">Magnum Customizations</a></li>
-        </ul>
-      </div>
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container" style="width: auto;">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i> Dell 308 Theme (BS2.3.2)</a>
+            <div class="nav-collapse">
+              <ul class="nav">
+                <li class="active"><a href="#typography">Typography</a></li>
+                <li><a href="#navbar">Navbar</a></li>
+                <li><a href="#buttons">Buttons</a></li>
+                <li><a href="#forms">Forms</a></li>
+                <li><a href="#tables">Tables</a></li>
+                <li class="dropdown">
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">More...</a>
+                  <ul class="dropdown-menu">
+                    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
+                    <li><a href="#pagination">Pagination</a></li>
+                    <li><a href="#pagers">Pagers</a></li>
+                    <li><a href="#tabs">Tabs</a></li>
+                    <li><a href="#lists">Lists</a></li>
+                    <li><a href="#labels-badges">Labels and Badges</a></li>
+                    <li><a href="#progress-bars">Progress Bars</a></li>
+                    <li><a href="#alerts">Alerts</a></li>
+                    <li><a href="#wells">Wells & Containers</a></li>
+                    <li><a href="#icons">Icons</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">308 Specific Customizations</a></li>
+                  </ul>
+                </li>
+              </ul>
+              <form class="navbar-search pull-right" action="">
+                <input type="text" class="search-query input-large search-tags" placeholder="Search tag or keyword">
+                <i aria-hidden="true" class="icon-ui-closecircle"></i>
+              </form>
+            </div><!-- /.nav-collapse -->
+          </div>
+        </div><!-- /navbar-inner -->
+      </div><!-- /navbar -->
     </div>
   </header>
-
-
+  
 
 <!-- Typography
 ================================================== -->
@@ -157,6 +171,33 @@
       <code>&lt;p class="text-right">...&lt;/p></code>
       <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="text-right">Right aligned text.</p></div>
     </div>
+    <div class="da-all ta-all ma-all">
+      <h3>Text Colors (Not in Bootstrap)</h3>
+      
+      <div class=" pull-right"><div class="btn-group">
+      <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">View other colors</button>
+      <ul class="dropdown-menu change-container-color-text">
+        <li><a href="#" class="gray-dark">Dark Gray</a></li>
+        <li><a href="#" class="gray-medium">Medium Gray</a></li>
+        <li><a href="#" class="gray">Gray</a></li>
+        <li><a href="#" class="gray-light">Light Gray</a></li>
+        <li><a href="#" class="gray-very-light">Very Light Gray</a></li>
+        <li><a href="#" class="white">White</a></li>
+        <li><a href="#" class="blue">Blue</a></li>
+        <li><a href="#" class="navyblue">Navy Blue</a></li>
+        <li><a href="#" class="green">Green</a></li>
+        <li><a href="#" class="yellow">Yellow</a></li>
+        <li><a href="#" class="orange">Orange</a></li>
+        <li><a href="#" class="red">Red</a></li>
+        <li><a href="#" class="red-dark">Dark Red</a></li>
+        <li><a href="#" class="berry">Berry</a></li>
+        <li><a href="#" class="purple">Purple</a></li>
+        <li><a href="#" class="teal">Teal</a></li>
+      </ul>
+    </div></div>
+      <code id="text-color-sample-code" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard" data-bind="attr: {'data-clipboard-text':$('#text-color-sample').html()}">&lt;p class="text-blue">...&lt;/p></code>
+      <div class="well well-small" id="text-color-sample" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="text-blue">This text is <strong>Blue</strong>.</p></div>
+    </div>
 </section>
 
 
@@ -165,9 +206,9 @@
 <section class="da-all ta-all ma-all" id="navbar">
   <div class="wrapper">
     <div class="page-header">
-      <h2 class="do-not-use">Navbars</h2>
+      <h2>Navbars</h2>
     </div>
-    <div class="do-not-use">
+    <div id="navbar-sample-code-1">
       <div class="navbar">
         <div class="navbar-inner">
           <div class="container" style="width: auto;">
@@ -184,7 +225,7 @@
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -201,7 +242,7 @@
                 <li><a href="#">Link</a></li>
                 <li class="divider-vertical"></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -215,7 +256,8 @@
           </div>
         </div><!-- /navbar-inner -->
       </div><!-- /navbar -->
-
+    </div>
+    <div id="navbar-sample-code-2">
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
           <div class="container" style="width: auto;">
@@ -232,7 +274,7 @@
                 <li><a href="#">Link</a></li>
                 <li><a href="#">Link</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -249,7 +291,7 @@
                 <li><a href="#">Link</a></li>
                 <li class="divider-vertical"></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown <b class="caret"></b></a>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown</a>
                   <ul class="dropdown-menu">
                     <li><a href="#">Action</a></li>
                     <li><a href="#">Another action</a></li>
@@ -264,10 +306,28 @@
         </div><!-- /navbar-inner -->
       </div><!-- /navbar -->
     </div>
+    <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#navbar-HTML">
+      <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+    </button>
+    <p>&nbsp;</p>
+    <div class="collapse" id="navbar-HTML">
+
+      <button class="btn btn-mini" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#navbar-sample-code-1').html()}">
+        Copy HTML
+      </button>
+      <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="text: $('#navbar-sample-code-1').html().replace(/</g,'&lt;')"></pre>
+
+      <button class="btn btn-mini" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#navbar-sample-code-2').html()}">
+        Copy HTML
+      </button>
+      <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="text: $('#navbar-sample-code-2').html().replace(/</g,'&lt;')"></pre>
+
+
+    </div>
+    <hr/>
   </div>
 </section>
 
-<div class="da-clear ta-clear ma-clear">
 
 <!-- Buttons
 ================================================== -->
@@ -986,22 +1046,20 @@
   <section class="da-all ta-all ma-all">
     <div class="wrapper">
         <h3 id="pager">Pagers</h3>
-          <div class="da1-da4 tb1-tb2 mb1-mb2 bottom-offset-small">
-            <ul class="pager">
-              <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
-              <li><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
-            </ul>
-
-
+          <div class="da1-da4 tb1-tb2 mb1-mb2 bottom-offset-small" id="pager-HTML-code-1" >
+<ul class="pager">
+  <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
+  <li><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
+</ul>
           </div>  
 
 
-          <div class="da-clear ta-clear ma-clear da1-da4 ta1-ta3 ma-all">
-            <ul class="pager">
-              <li class="previous disabled"><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span> Prev</a></li>
-              <li><span class="btn disabled">1 of 9</span></li>
-              <li class="next"><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
-            </ul>
+          <div class="da-clear ta-clear ma-clear da1-da4 ta1-ta3 ma-all" id="pager-HTML-code-2" >
+<ul class="pager">
+  <li class="previous disabled"><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span> Prev</a></li>
+  <li><span class="btn disabled">1 of 9</span></li>
+  <li class="next"><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
+</ul>
           </div>
           <div class="da-all ta-all ma-all">
 
@@ -1030,18 +1088,6 @@
     &lt;li class="next">&lt;a href="#">Next &lt;span aria-hidden="true" class="icon-ui-arrowright">&lt;/span>&lt;/a>&lt;/li>
   &lt;/ul>
   </pre>
-        <textarea id="pager-HTML-code-1" class="hide">
-  &lt;ul class="pager">
-    &lt;li>&lt;a href="#">&lt;span aria-hidden="true" class="icon-ui-arrowleft">&lt;/span>&nbsp;Prev&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">Next &lt;span aria-hidden="true" class="icon-ui-arrowright">&lt;/span>&lt;/a>&lt;/li>
-  &lt;/ul></textarea>
-
-        <textarea id="pager-HTML-code-2" class="hide">
-  &lt;ul class="pager">
-    &lt;li class="previous disabled">&lt;a href="#">&lt;span aria-hidden="true" class="icon-ui-arrowleft">&lt;/span> Prev&lt;/a>&lt;/li>
-    &lt;li>&lt;span class="btn disabled">1 of 9&lt;/span>&lt;/li>
-    &lt;li class="next">&lt;a href="#">Next &lt;span aria-hidden="true" class="icon-ui-arrowright">&lt;/span>&lt;/a>&lt;/li>
-  &lt;/ul></textarea>
 
           </div>
 <hr/>
@@ -1054,29 +1100,72 @@
   ================================================== -->
   <section class="da-all ta-all ma-all">
     <div class="wrapper">
-
         <h3 id="tabs">Tabs</h3>
         <div id="tabbable-example-HTML">
-          <div class="tabbable">
-            <ul class="nav nav-tabs">
-              <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
-              <li><a href="#B" data-toggle="tab">Section 2</a></li>
-              <li><a href="#C" data-toggle="tab">Section 3</a></li>
-            </ul>
-            <div class="tab-content">
-              <div class="tab-pane active" id="A">
-                <p>I'm in Section A.</p>
-              </div>
-              <div class="tab-pane" id="B">
-                <p>Howdy, I'm in Section B.</p>
-              </div>
-              <div class="tab-pane" id="C">
-                <p>What up girl, this is Section C.</p>
-              </div>
-            </div>
-          </div> <!-- /tabbable -->
+<div class="tabbable">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#A" data-toggle="tab">Section 1</a></li>
+    <li><a href="#B" data-toggle="tab">Section 2</a></li>
+    <li><a href="#C" data-toggle="tab">Section 3</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade active in" id="A">
+      <p>I'm in Section A.</p>
+    </div>
+    <div class="tab-pane fade" id="B">
+      <p>Howdy, I'm in Section B.</p>
+    </div>
+    <div class="tab-pane fade" id="C">
+      <p>What up girl, this is Section C.</p>
+    </div>
+  </div>
+</div> <!-- /tabbable -->
         </div>
+      <div class="da-all ta-all ma-all">
+          <div class="alert alert-info">
+            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <strong>Information</strong> This alert needs your attention, but it's not super important.
+          </div>
+  <h5>Dell 308 Variations</h5>
+  <form id="tab-variations">
+    <div class="control-group">
+      <label class="control-label">Tab Content Options</label>
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" id="tabs-bordered" value="tabs-bordered">
+          <code>&lt;div class="tabbable tabs-bordered"></code>
+        </label>
       </div>
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" id="tabs-left" value="tabs-left">
+          <code>&lt;div class="tabbable tabs-left"></code>
+        </label>
+      </div>
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" id="tabs-gray-light" value="tabs-gray-light">
+          <code>&lt;div class="tabbable tabs-left tabs-gray-light"></code> (aka popsicle)
+        </label>
+      </div>
+    </div>
+  </form>
+
+                
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#tabs-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="tabs-HTML">
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#tabbable-example-HTML').html()}">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums"  id="tabs-HTML-code" data-bind="text: $('#tabbable-example-HTML').html().replace(/</g,'&lt;')"></pre>
+          </div>
+          <hr/>
+      </div>
+      <hr/>
     </div>
   </section>
   <section class="da-all ta-all ma-all" id="pills">
@@ -1097,6 +1186,7 @@
           </li>
           <li class="disabled"><a href="#">Disabled link</a></li>
         </ul>
+        <hr/>
       </div>
   </section>
   <section class="da-all ta-all ma-all">

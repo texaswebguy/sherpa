@@ -231,6 +231,39 @@ Sherpa.ready("underscore", function() {
         
     }
 
+	// Load CSS Files:
+	//______________________________________________________________________
+
+	Sherpa.ready("sherpaUtils", function(){
+		if(Sherpa.urlQuery().theme) {
+			Sherpa.store("theme", Sherpa.urlQuery().theme);
+		}
+
+		_.each(SHERPA.CSS_CORE_LOAD, function(css){
+			//theme implementation
+			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme"){
+
+				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
+				var theme_id = Sherpa.store("theme");
+				$('html').addClass("theme-"+theme_id);
+				$('#theme-logic-css').remove();
+				$('body').prepend('<style id="theme-logic-css">[class^=theme-only] {display:none;};[class^=theme-hide] {display:block;};.theme-'+theme_id+' .theme-only-'+theme_id+' {display:block;};.theme-'+theme_id+' .theme-hide-'+theme_id+' {display:none;}</style>');
+			}
+			console.log("loaded css: ",_.keys(css)[0]);
+			Sherpa.load(css);
+		});
+
+		// Load Local CSS File:
+		//______________________________________________________________________
+
+		Sherpa.load({local_css: SHERPA.CSS_LOCAL_APP});
+		console.log("loaded css: local_css");
+
+	});
+
+
+
+
 	// Load JS CORE:
 	//______________________________________________________________________
 	_.each(SHERPA.JS_CORE_LOAD, function(lib){
@@ -261,6 +294,7 @@ Sherpa.ready("underscore", function() {
 		console.log("loaded css: grid");
 	}
 
+
 });
 
 
@@ -286,36 +320,6 @@ Sherpa.ready("dateFormat", function(){
 	_.each(SHERPA.SHERPA_CORE_LOAD, function(lib){
 		//console.log("loaded js: ",_.keys(lib)[0]);
 		Sherpa.js(lib);
-	});
-
-	// Load CSS Files:
-	//______________________________________________________________________
-
-	Sherpa.ready("sherpaUtils", function(){
-		if(Sherpa.urlQuery().theme) {
-			Sherpa.store("theme", Sherpa.urlQuery().theme);
-		}
-
-		_.each(SHERPA.CSS_CORE_LOAD, function(css){
-			//theme implementation
-			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme"){
-
-				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
-				var theme_id = Sherpa.store("theme");
-				$('html').addClass("theme-"+theme_id);
-				$('#theme-logic-css').remove();
-				$('body').prepend('<style id="theme-logic-css">[class^=theme-only] {display:none;};[class^=theme-hide] {display:block;};.theme-'+theme_id+' .theme-only-'+theme_id+' {display:block;};.theme-'+theme_id+' .theme-hide-'+theme_id+' {display:none;}</style>');
-			}
-			console.log("loaded css: ",_.keys(css)[0]);
-			Sherpa.load(css);
-		});
-
-		// Load Local CSS File:
-		//______________________________________________________________________
-
-		Sherpa.load({local_css: SHERPA.CSS_LOCAL_APP});
-		console.log("loaded css: local_css");
-
 	});
 
 

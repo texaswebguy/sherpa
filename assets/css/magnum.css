@@ -126,28 +126,63 @@ ol.linenums li {
 #icons li {
 	margin-bottom:10px;
 }
-.change-container-color > li > a {
+[class*=change-container] > li > a {
 	color:#fff;
 }
-.change-container-color > li > a.white,
-.change-container-color > li > a.gray-light,
-.change-container-color > li > a.gray-very-light,
-.change-container-color-stroke > li > a.white,
-.change-container-color-stroke > li > a.gray-light,
-.change-container-color-stroke > li > a.gray-very-light,
-.change-container-color-stroke-title > li > a.white,
-.change-container-color-stroke-title > li > a.gray-light,
-.change-container-color-stroke-title > li > a.gray-very-light
+[class*=change-container] > li > a.white,
+[class*=change-container] > li > a.gray-light,
+[class*=change-container] > li > a.gray-very-light
  {
 	color:#444;
 }
-.change-container-color, .change-container-color-stroke, .change-container-color-stroke-title {
+[class*=change-container] {
 	left: -43px;
 	position: absolute;
 	top: -6px;
 }
-#containers .wrapper,
-#pills .wrapper
+.wrapper
  {
 	overflow:visible;
+}
+header {
+	position:fixed;
+	z-index:9999;
+	height:42px;
+}
+header .navbar {
+    position:relative;
+    padding-left:70px;
+}
+header .icon-ui-dell {
+    font-size:42px;
+    position:absolute;
+    left:0;
+    background:#007db8;
+    padding:10px;
+    margin-top:-10px;
+    -webkit-border-radius: 0px 0px 10px 10px;
+        border-radius: 0px 0px 10px 10px;
+}
+header .navbar-search {
+    position:relative;
+}
+header .navbar-search .icon-ui-closecircle {
+    display:none;
+}
+header .navbar-search.active .icon-ui-closecircle {
+	display:block;
+    position:absolute;
+    right:5px;
+    top:7px;
+    font-size:20px;
+    background:#fff;
+    cursor:pointer;
+    color:#ccc;
+}
+section#typography {
+	margin-top:60px;
+};
+section {
+	position:relative;
+	z-index:0;
 }
