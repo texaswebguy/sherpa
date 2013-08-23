@@ -1124,7 +1124,7 @@
       <div class="da-all ta-all ma-all">
           <div class="alert alert-info">
             <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-            <strong>Information</strong> This alert needs your attention, but it's not super important.
+            <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
           </div>
   <h5>Dell 308 Variations</h5>
   <form id="tab-variations">
@@ -1148,6 +1148,14 @@
           <code>&lt;div class="tabbable tabs-left tabs-gray-light"></code> (aka popsicle)
         </label>
       </div>
+      <!--
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" id="tabs-aside" value="tabs-aside">
+          <code>&lt;div class="tabbable tabs-aside"></code>
+        </label>
+      </div>
+    -->
     </div>
   </form>
 
@@ -1193,7 +1201,7 @@
       <div class="wrapper">
         <h3 id="list">Lists</h3>
           
-        <div class="well da1-da4" style="padding: 8px 0;">
+        <div class="da1-da4" id="list-example-HTML">
           <ul class="nav nav-list">
             <li class="nav-header">List header</li>
             <li class="active"><a href="#">Home</a></li>
@@ -1206,7 +1214,48 @@
             <li><a href="#">Help</a></li>
           </ul>
         </div>
-      </div>
+        <div class="da1-da4 hide" id="aside-example-HTML">
+          <ul class="nav nav-list nav-aside">
+            <li><a href="#"><h2>Home</h2></a></li>
+            <li class="active"><a href="#"><h2>Library</h2></a></li>
+            <li><a href="#"><h2>Applications</h2></a></li>
+            <li><a href="#"><h2>Profile</h2></a></li>
+            <li><a href="#"><h2>Settings</h2></a></li>
+            <li><a href="#"><h2>Help</h2>
+              <p>Lorem ispum dolor sit amet</p></a></li>
+          </ul>
+        </div>
+     <div class="da-all ta-all ma-all">
+      <p>&nbsp;</p>
+        <h5>Dell 308 Variations</h5>
+        <form id="nav-variations">
+          <div class="control-group">
+            <label class="control-label">List Options</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="list-aside" value="list-aside">
+                <code>&lt;ul class="nav nav-list nav-aside"></code>
+              </label>
+            </div>
+          </div>
+        </form>
+
+                
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#list-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="list-HTML">
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#list-example-HTML').html()}">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums" id="list-HTML-code" data-bind="text: $('#list-example-HTML').html().replace(/</g,'&lt;')"></pre>
+          </div>
+        <hr/>
+      </div> 
+    </div>
+     
   </section>
 
 <!-- Labels
@@ -1330,7 +1379,31 @@
     </div>
   </section>
 
+<!-- Alerts & Messages
+================================================== -->
+  <section class="da-all ta-all ma-all bottom-offset-large">
+    <div class="wrapper">
+      <h3 id="alerts">Modals</h3>
 
+      <div class="da-all ta-all ma-all">
+        <div id="modal-example-HTML">
+            <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+              <div class="modal-header">
+                <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+                <h3>Modal header</h3>
+              </div>
+              <div class="modal-body">
+                <p>One fine body…</p>
+              </div>
+              <div class="modal-footer">
+                <a href="#" class="btn">Close</a>
+                <a href="#" class="btn btn-primary">Save changes</a>
+              </div>
+            </div>
+        </div>
+      </div>
+    </div>
+  </section>
     <section id="containers" class="da-all ta-all ma-all bottom-offset-large">
       <div class="wrapper">
 

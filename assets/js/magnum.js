@@ -210,7 +210,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			$('section').fadeIn();
 		}
 	}
-	Sherpa.scope('#tab-variations', function(){
+	Sherpa.scope('[id*=-variations]', function(){
 		this.listen('input[type="checkbox"]', 'click', function(event){
 			var self = $(event.currentTarget)[0], id = $(self).attr('id');
 			switch(id) {
@@ -219,35 +219,85 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 						$('#tabbable-example-HTML .tabbable').addClass('tabs-bordered');
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
 					} else {
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
 					}
 					$('#tabs-left')[0].checked = false;
+					$('#tabs-aside')[0].checked = false;
 					$('#tabs-gray-light')[0].checked = false;
+					tabsReset();
 				break;
 				case "tabs-left":
 					if(self.checked) {
 						$('#tabbable-example-HTML .tabbable').addClass('tabs-left');
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
 					} else {
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
 					}
-					$('#tabs-bordered')[0].checked = false;	
+					$('#tabs-aside')[0].checked = false;
+					$('#tabs-bordered')[0].checked = false;
+					tabsReset();	
 				break;
 				case "tabs-gray-light":
 					if(self.checked) {
 						$('#tabbable-example-HTML .tabbable').addClass('tabs-gray-light');
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
 					} else {
 						$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
 					}	
+					$('#tabs-aside')[0].checked = false;
 					$('#tabs-bordered')[0].checked = false;
+					tabsReset();
+				break;
+				case "tabs-aside":
+					if(self.checked) {
+						$('#tabbable-example-HTML .tabbable').addClass('tabs-aside');
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
+					} else {
+						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
+					}
+					$('#tabs-left')[0].checked = false;
+					$('#tabs-bordered')[0].checked = false;
+					$('#tabs-gray-light')[0].checked = false;
+					tabsReset();
+				break;
+				case "list-aside":
+					if(self.checked) {
+						$('#aside-example-HTML').show();
+						$('#list-example-HTML').hide();
+						$('list-HTML-code').html($('#aside-example-HTML').html().replace(/</g,'&lt;'));
+						listReset('aside');
+					} else {
+						$('#aside-example-HTML').hide();
+						$('#list-example-HTML').show();
+						$('list-HTML-code').html($('#list-example-HTML').html().replace(/</g,'&lt;'));
+						listReset();
+					}	
+					
 				break;
 			}
-			$('#tabs-HTML-code').html($('#tabbable-example-HTML').html().replace(/</g,'&lt;'));
-			$('#tabs-HTML-code').removeClass('prettyprinted');
-			prettyPrint();
-			$('#tabs-HTML [data-copy]').attr('data-clipboard-text',$('#tabbable-example-HTML').html());
+			function tabsReset(){
+				$('#tabs-HTML-code').html($('#tabbable-example-HTML').html().replace(/</g,'&lt;'));
+				$('#tabs-HTML-code').removeClass('prettyprinted');
+				prettyPrint();
+				$('#tabs-HTML [data-copy]').attr('data-clipboard-text',$('#tabbable-example-HTML').html());				
+			}
+			function listReset(aside){
+				if(!aside) {
+					aside = "list";
+				}
+				$('#list-HTML-code').html($('#'+aside+'-example-HTML').html().replace(/</g,'&lt;'));
+				$('#list-HTML-code').removeClass('prettyprinted');
+				prettyPrint();
+	
+				$('#list-HTML [data-copy]').attr('data-clipboard-text',$('#'+aside+'-example-HTML').html());			
+			}
+
 		});
 	});
 

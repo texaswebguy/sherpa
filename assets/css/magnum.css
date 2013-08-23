@@ -186,3 +186,8 @@ section {
 	position:relative;
 	z-index:0;
 }
+
+#modal-example-HTML {
+	background: rgba(0,0,0,0.8);
+	padding:100px 0;
+}

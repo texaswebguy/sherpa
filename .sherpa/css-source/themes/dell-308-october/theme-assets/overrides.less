@@ -2112,6 +2112,76 @@ input[type="submit"].btn {
 
 }
 
+.nav-list {
+  background:@grayLight;
+  .nav-header {
+    color:@grayDarker;
+  }
+  .border-radius(@baseBorderRadius);
+  > li:last-child a:hover {
+    .border-bottom-radius(@baseBorderRadius);
+  };
+  > li:first-child a:hover {
+    .border-top-radius(@baseBorderRadius);
+  };
+  > li:not(.nav-header):first a {
+    .border-top-radius(@baseBorderRadius);
+  }
+  &.nav-aside {
+    .nav-header, 
+    .divider {
+      display:none;
+    }
+    background:none;
+    .aside-nav();
+  }
+  
+}
+
+.aside-nav() {
+    li a {
+      text-shadow:none;
+      color:@white;
+      background-color: @asideNavBackground;
+      .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
+      border-bottom: #666 1px solid;
+      padding-top:@baseLineHeight;
+
+    }
+    > li a:hover {
+      background-color: @dellHighlightBlue;
+      color:@asideNavBackground;
+      .box-shadow(inset -10px 0px 10px -10px rgba(0, 0, 0, .35));
+      border-bottom:1px solid @dellHighlightBlue;
+    };
+    > li.active a {
+      background:@asideNavBackgroundActive;
+      border-bottom:none;
+      &:hover {
+        color:@white;
+      };
+      position:relative;
+      &:after {
+        content: "\23";//left arrow
+        font-family:'icon-ui';
+        font-size:28px;
+        position:absolute;
+        top: 35%;
+        right: -12px;
+        text-shadow: -10px 0px 10px -9px rgba(0, 0, 0, .8);
+      };
+    }
+    > li:last-child a,
+    > li:last-child a:hover {
+      .border-radius(none);
+      .border-bottom-left-radius(@borderRadiusLarge * 2);
+    };
+    > li:first-child a,
+    > li:first-child a:hover {
+      .border-radius(none);
+      .border-top-left-radius(@borderRadiusLarge * 2);
+    };
+}
 
 
 
@@ -2251,9 +2321,127 @@ input[type="submit"].btn {
   .transition(background-position 0s linear);
 }
 
-// Components: Popovers
 // modals
 //=======================================================================================================================
+
+
+
+
+// Base modal
+.modal {
+  padding: @baseLineHeight;
+  border: none; 
+}
+.modal-header .close {
+  color:transparent;
+  &:before {
+    color:@grayDark;
+    font-family: 'icon-ui';
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content: "\2c";
+    font-size:14px;
+    margin-right:0px;
+  }
+}
+
+
+// Body (where all modal content resides)
+.modal-body {
+  position: relative;
+  overflow-y: auto;
+  max-height: 400px;
+  padding: 15px;
+}
+// Remove bottom margin if need be
+.modal-form {
+  margin-bottom: 0;
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 14px 15px 15px;
+  margin-bottom: 0;
+  text-align: right; // right align buttons
+  background-color: #f5f5f5;
+  border-top: 1px solid #ddd;
+  .border-radius(0 0 6px 6px);
+  .box-shadow(inset 0 1px 0 @white);
+  .clearfix(); // clear it in case folks use .pull-* classes on buttons
+
+  // Properly space out buttons
+  .btn + .btn {
+    margin-left: 5px;
+    margin-bottom: 0; // account for input[type="submit"] which gets the bottom margin like all other inputs
+  }
+  // but override that for button groups
+  .btn-group .btn + .btn {
+    margin-left: -1px;
+  }
+  // and override it for block buttons as well
+  .btn-block + .btn-block {
+    margin-left: 0;
+  }
+}
+
+
+
+.modal-header {
+    position: relative;
+    margin-left:0px;
+    padding: 0px 0px 0px 0px;
+    border-bottom: none;
+    /*border-bottom: 1px solid #ddd;*/
+}
+.modal-header h3 {
+    /*border-bottom: 1px solid #aaa;*/
+    /*margin-right:40px;
+    padding-bottom:10px;*/
+}
+
+.modal-body {
+    position: relative;
+    overflow-y: auto;
+    max-height: 400px;
+    padding:10px 0;
+    margin:10px 0 20px 0;
+    border-top: 1px solid #ddd;
+    border-bottom: 1px solid #ddd;
+    /*width:520px;*/
+}
+
+.modal-body p {
+    margin-bottom:0;
+}
+
+/*.modal-body:after { 
+    content:" "
+    height:1px;
+    background:red;
+}*/
+
+.modal-footer {
+    padding: 0;
+    margin-bottom: 0;
+    text-align: right;
+    background-color: #fff;
+    border-top: none;
+    /*-webkit-border-radius: 0 0 6px 6px;
+    -moz-border-radius: 0 0 6px 6px;
+    border-radius: 0 0 6px 6px;
+    -webkit-box-shadow: inset 0 1px 0 #ffffff;
+    -moz-box-shadow: inset 0 1px 0 #ffffff;
+    box-shadow: inset 0 1px 0 #ffffff;*/
+}
+
+.modal-footer .btn + .btn {
+  margin-left: 5px;
+  margin-bottom: 10px;
+}
+
 
 
 
