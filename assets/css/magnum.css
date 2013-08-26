@@ -194,6 +194,7 @@ section {
   margin-bottom: 20px;
   list-style: none;
 }
+
 #header-308-site .nav > li > a {
   display: block;
 }
@@ -241,7 +242,9 @@ section {
   color: #ffffff;
   text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
   background-color: #007db8;
+
 }
+
 #header-308-site .nav-list [class^="icon-"],
 #header-308-site .nav-list [class*=" icon-"] {
   margin-right: 2px;
@@ -642,6 +645,20 @@ section {
   font-size: 14px;
 }
 /*  =============================================  */
+
+#header-308-site .nav > li.active > a {
+	position:relative;
+}
+#header-308-site .nav > li.active > a:after {
+	position:absolute;
+	content:"\21";
+	font-family:"icon-ui";
+	color:#fff;
+	top:40px;
+	left:35%;
+	font-size:25px;
+}
+
 
 #modal-example-HTML {
 	background: rgba(0,0,0,0.8);
