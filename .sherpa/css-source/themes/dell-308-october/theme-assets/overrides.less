@@ -2112,6 +2112,76 @@ input[type="submit"].btn {
 
 }
 
+.nav-list {
+  background:@grayLight;
+  .nav-header {
+    color:@grayDarker;
+  }
+  .border-radius(@baseBorderRadius);
+  > li:last-child a:hover {
+    .border-bottom-radius(@baseBorderRadius);
+  };
+  > li:first-child a:hover {
+    .border-top-radius(@baseBorderRadius);
+  };
+  > li:not(.nav-header):first a {
+    .border-top-radius(@baseBorderRadius);
+  }
+  &.nav-aside {
+    .nav-header, 
+    .divider {
+      display:none;
+    }
+    background:none;
+    .aside-nav();
+  }
+  
+}
+
+.aside-nav() {
+    li a {
+      text-shadow:none;
+      color:@white;
+      background-color: @asideNavBackground;
+      .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
+      border-bottom: #666 1px solid;
+      padding-top:@baseLineHeight;
+
+    }
+    > li a:hover {
+      background-color: @dellHighlightBlue;
+      color:@asideNavBackground;
+      .box-shadow(inset -10px 0px 10px -10px rgba(0, 0, 0, .35));
+      border-bottom:1px solid @dellHighlightBlue;
+    };
+    > li.active a {
+      background:@asideNavBackgroundActive;
+      border-bottom:none;
+      &:hover {
+        color:@white;
+      };
+      position:relative;
+      &:after {
+        content: "\23";//left arrow
+        font-family:'icon-ui';
+        font-size:28px;
+        position:absolute;
+        top: 35%;
+        right: -12px;
+        text-shadow: -10px 0px 10px -9px rgba(0, 0, 0, .8);
+      };
+    }
+    > li:last-child a,
+    > li:last-child a:hover {
+      .border-radius(none);
+      .border-bottom-left-radius(@borderRadiusLarge * 2);
+    };
+    > li:first-child a,
+    > li:first-child a:hover {
+      .border-radius(none);
+      .border-top-left-radius(@borderRadiusLarge * 2);
+    };
+}
 
 
 
@@ -2251,14 +2321,133 @@ input[type="submit"].btn {
   .transition(background-position 0s linear);
 }
 
-// Components: Popovers
 // modals
 //=======================================================================================================================
 
 
 
+
+// Base modal
+.modal {
+  padding: @baseLineHeight;
+  border: none; 
+}
+
+
+.modal-header {
+  padding: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid @dellGrayStroke;
+  // Close icon
+  .close { 
+    margin-top: 0;
+    margin-right: -15px;
+    color:transparent;
+    opacity:.6;
+    &:before {
+      color:@grayDarker;
+      font-family: 'icon-ui';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      content: "\2c";
+      font-size:14px;
+      margin-right:0px;
+      
+    }
+    &:hover {
+      opacity:1;
+    }
+  }
+  // Heading
+  h3 {
+    margin: 0;
+    line-height: 30px;
+  }
+  hr {
+    margin-bottom:0;
+  }
+}
+
+.modal-body {
+  padding: 10px 0;
+  :last-child {
+      margin-bottom:0;
+  };
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 20px 0 0;
+  text-align: right; // right align buttons
+  background-color: @white;
+  border-top: 1px solid @dellGrayStroke;
+  .border-radius(none);
+  .box-shadow(none);
+}
+
+// modals on phones 
+@media only screen and (max-width:@mobileMaxWidth) {
+
+  .modal {
+    width:98%;
+    padding:10px;
+    left:1%;
+    margin-left:0;
+    top:2%;
+    &.fade.in{
+      top:2%;
+    }
+    .modal-footer {
+      padding: 10px 0 0;
+    }
+    .modal-header .close {
+      margin-top: 0;
+      margin-right: 0;
+      position:relative;
+      z-index:0;
+    }
+    .modal-header .close:before {
+      margin-right: -22px;
+      position:relative;
+      z-index:1;
+    }
+  }
+
+
+}
+
 // tooltip
 //=======================================================================================================================
+
+
+
+
+// Base class
+.tooltip {
+  font-size: 12px;
+  line-height: 1.4;
+  &.in {.opacity(100)};
+    &.left   { margin-left: -14px; }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  padding: 12px;
+}
+
+[data-toggle=tooltip] {
+  color:inherit;
+  border-bottom: 1px dashed @gray;
+  &:hover{
+    text-decoration:none;
+    color:inherit;
+  };
+}
+
+
 
 
 
@@ -2266,23 +2455,17 @@ input[type="submit"].btn {
 //=======================================================================================================================
 
 
-
 .popover-title {
-  padding: 8px 14px;
-  color: @white;
-  font-size: 18px;
+  color:@white;
+  > .close {
+    opacity:1;
+    color:@white;
+    float:right;
+    font-size:10px;
+    text-shadow: none;
+    margin-top:4px;
+  }
 }
-
-.popover-content {
-  padding: 12px 14px;
-}
-
-.popover-title .close {
-  color:#fff;
-  opacity: 1;
-  text-shadow: 0 1px 0 #444444;
-}
-
 
 
 
@@ -2326,6 +2509,68 @@ input[type="submit"].btn {
 // progress-bars
 //=======================================================================================================================
 
+
+
+
+.progress {
+  overflow: hidden;
+  height: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  #gradient > .vertical(@dellGrayLight, @dellGrayLight);
+  .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+  .border-radius(@baseBorderRadius);
+
+  //progress-status dell 308 only
+  &.progress-status {
+    overflow:visible;
+    position:relative;
+    margin-bottom:40px;
+    .bar {
+      .box-shadow(inset 0 1px 2px rgba(0,0,0,.1));
+      span {
+        position:absolute;
+        color:@grayDarker;
+        text-shadow:none;
+        top:30px;
+        margin-left:-40px;
+        font-size:14px;
+        &:before {
+          content:"\72";
+          font-family:"icon-small";
+          font-weight:normal;
+          margin-right:2px;
+        };   
+      }
+      &-complete {
+        span {
+          font-weight:bold;
+          color:@blue;    
+        }
+      }
+      &-progress {
+        span {
+          font-weight:bold;
+        }
+        #gradient > .vertical(@gray, @gray);
+      }
+      &-incomplete {
+        span {
+          color: @gray;
+
+        }
+        #gradient > .vertical(@dellGrayLight, @dellGrayLight);
+      }
+      &:first-child {
+        .border-top-left-radius(@baseBorderRadius);
+        .border-bottom-left-radius(@baseBorderRadius);
+      };
+      &:last-child {
+        .border-top-right-radius(@baseBorderRadius);
+        .border-bottom-right-radius(@baseBorderRadius);
+      };
+    } 
+  }
+}
 
 
 // accordion
@@ -3339,4 +3584,7 @@ div.table-bordered table {
   font-size:24px;
   .mirror-text();
   cursor:pointer;
+}
+.bottom-offset-large {
+  margin-bottom:20px;
 }

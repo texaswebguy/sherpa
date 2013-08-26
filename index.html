@@ -36,35 +36,19 @@
     <div class="wrapper">
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
-          <div class="container" style="width: auto;">
+          <div class="container">
             <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </a>
             <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i> Dell 308 Theme (BS2.3.2)</a>
-            <div class="nav-collapse">
+            <div class="nav-collapse ta-hide ma-hide">
               <ul class="nav">
-                <li class="active"><a href="#typography">Typography</a></li>
-                <li><a href="#navbar">Navbar</a></li>
-                <li><a href="#buttons">Buttons</a></li>
-                <li><a href="#forms">Forms</a></li>
-                <li><a href="#tables">Tables</a></li>
                 <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">More...</a>
-                  <ul class="dropdown-menu">
-                    <li><a href="#breadcrumbs">Breadcrumbs</a></li>
-                    <li><a href="#pagination">Pagination</a></li>
-                    <li><a href="#pagers">Pagers</a></li>
-                    <li><a href="#tabs">Tabs</a></li>
-                    <li><a href="#lists">Lists</a></li>
-                    <li><a href="#labels-badges">Labels and Badges</a></li>
-                    <li><a href="#progress-bars">Progress Bars</a></li>
-                    <li><a href="#alerts">Alerts</a></li>
-                    <li><a href="#wells">Wells & Containers</a></li>
-                    <li><a href="#icons">Icons</a></li>
-                    <li class="divider"></li>
-                    <li><a href="#">308 Specific Customizations</a></li>
+                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
+                  <ul class="dropdown-menu" data-bind="foreach: $('section')">
+                    <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
                   </ul>
                 </li>
               </ul>
@@ -450,7 +434,7 @@
       </button>
       <div class="collapse" id="buttons-HTML">
 <p>&nbsp;</p>
-        <div class="alert alert-block" id="button-308-rules">
+        <div class="alert alert-info" id="button-308-rules">
           <h4>Dell 308 Styleguide Rules:</h4>
           <p>NOTE: Dell 308 button class names deviated greatly from Bootstrap. They are now normalized using standard BS class names.</p>
           <ul>
@@ -543,10 +527,10 @@
 </pre>
       </div>
 
+<hr/>
 
       </div>
 
-<hr/>
 
 
 
@@ -872,21 +856,65 @@
   </tbody>
 </table>
   </div>
+
+    <h3>Bordered Tables</h3>
+    <code>&lt;div class="table-bordered blue-stroke">&lt;table class="table table-bordered"> ... &lt;/table>&lt;/div></code>
+    <button class="btn btn-mini" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-4').html()}">copy HTML</button>
+    <div id="table-sample-code-4">
+<div class="table-bordered blue-stroke">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div> 
+    </div>  
+        
+<hr/>
+
+
+
+
+
   </div>
 </section>
-<!-- Miscellaneous
+
+
+
+
+
+<!-- Breadcrumbs
 ================================================== -->
-<section id="miscellaneous" class="da-all ta-all ma-all">
-  <div class="wrapper">
-    <div class="page-header">
-      <h2>Miscellaneous</h2>
-    </div>
-  </div>
 
-
-  <section class="da-all ta-all ma-all">
+  <section id="breadcrumbs" class="da-all ta-all ma-all">
     <div class="wrapper">
-      <h3 id="breadcrumbs">Breadcrumbs</h3>
+      <h3>Breadcrumbs</h3>
       <div id="breadcrumbs-HTML-code">
 <ul class="breadcrumb" >
   <li><a href="#">Home</a> <span class="divider"></span></li>
@@ -937,10 +965,13 @@
     </div>
   </section>
 
-  <section class="da-all ta-all ma-all">
+
+<!-- Pagination
+================================================== -->
+  <section id="pagination" class="da-all ta-all ma-all">
     <div class="wrapper">
-      <h3 id="pagination">Pagination</h3>
-      <div id="pagination-HTML-code-1">
+      <h3>Pagination</h3>
+      <div id="pagination-example-HTML">
 <div class="pagination">
   <ul>
     <li class="disabled"><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span></a></li>
@@ -952,8 +983,6 @@
     <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
   </ul>
 </div>
-      </div>
-      <div id="pagination-HTML-code-2">
 <div class="pagination">
   <ul>
     <li class=""><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span></a></li>
@@ -965,8 +994,7 @@
     <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
   </ul>
 </div>
-      </div>
-      <div id="pagination-HTML-code-3">
+<h3>Centered Pagination</h3>
 <div class="pagination pagination-centered">
   <ul>
     <li class="active"><a href="#">1</a></li>
@@ -976,76 +1004,52 @@
     <li><a href="#">5</a></li>
   </ul>
 </div>
-      </div>
-        <small class="da-clear ta-clear ma-clear da-all ta-all ma-all gray-text text-center">(centered)</small>
+      <h3 id="pagination-unnumbered">Unnumbered Pagination with zoom controls (PD Page)</h3>
+<div class="pagination pagination-centered pagination-unnumbered">
+  <ul>
+    <li class="active"><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+    <li><a href="#"></a></li>
+  </ul>
+  <div class="zoom-controls"><span aria-hidden="true" class="icon-small-zoomin"></span> <span aria-hidden="true" class="icon-small-zoomout"></span></div>
+</div>
+</div>
         <p>&nbsp;</p>
+        <div class="alert alert-info">
+          <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+          <strong>Dell 308 Style Guidelines:</strong> Maximum number of items for this style should be 5.
+        </div>
       <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#pagination-HTML">
         <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
       </button>
-              <p>&nbsp;</p>
+      <p>&nbsp;</p>
 
       <div class="collapse" id="pagination-HTML">
-      <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-target="pagination-HTML-code-1">
-        Copy HTML
-      </button>
-        <pre class="prettyprint linenums" >
-&lt;div class="pagination">
-  &lt;ul>
-    &lt;li class="disabled">&lt;a href="#">&lt;span aria-hidden="true" class="icon-ui-arrowleft">&lt;/span>&lt;/a>&lt;/li>
-    &lt;li class="active">&lt;a href="#">1&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">2&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">3&lt;/a>&lt;/li>
-    &lt;li class="disabled">&lt;a href="#">...&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">20&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">&lt;span aria-hidden="true" class="icon-ui-arrowright">&lt;/span>&lt;/a>&lt;/li>
-  &lt;/ul>
-&lt;/div>
-        </pre>
-      <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-target="pagination-HTML-code-1">
-        Copy HTML
-      </button>
-        <pre class="prettyprint linenums" >
-&lt;div class="pagination">
-  &lt;ul>
-    &lt;li class="">&lt;a href="#">&lt;span aria-hidden="true" class="icon-ui-arrowleft">&lt;/span>&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">1&lt;/a>&lt;/li>
-    &lt;li class="disabled">&lt;a href="#">...&lt;/a>&lt;/li>
-    &lt;li class="active">&lt;a href="#">45&lt;/a>&lt;/li>
-    &lt;li class="disabled">&lt;a href="#">...&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">20&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">&lt;span aria-hidden="true" class="icon-ui-arrowright">&lt;/span>&lt;/a>&lt;/li>
-  &lt;/ul>
-&lt;/div>
-        </pre>
-      <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-target="pagination-HTML-code-3">
-        Copy HTML
-      </button>
-        <pre class="prettyprint linenums" >
-&lt;div class="pagination pagination-centered">
-  &lt;ul>
-    &lt;li class="active">&lt;a href="#">1&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">2&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">3&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">4&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">5&lt;/a>&lt;/li>
-  &lt;/ul>
-&lt;/div>
-        </pre>
-
-
-
-
-
+        <ul data-bind="foreach: $('#pagination-example-HTML .pagination')" class="unstyled">
+            <li>
+              <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+                Copy HTML
+              </button>
+              <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+            </li>
+        </ul>
       </div>
 
 <hr/>
 
-    </div>
-    
+      </div>
+   
   </section>
-  <section class="da-all ta-all ma-all">
+
+
+<!-- Pagers
+================================================== -->
+
+  <section id="pagers" class="da-all ta-all ma-all">
     <div class="wrapper">
-        <h3 id="pager">Pagers</h3>
+        <h3>Pagers</h3>
           <div class="da1-da4 tb1-tb2 mb1-mb2 bottom-offset-small" id="pager-HTML-code-1" >
 <ul class="pager">
   <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
@@ -1096,11 +1100,11 @@
     </section>
 
 
-  <!-- Navs
+  <!-- Tabs
   ================================================== -->
-  <section class="da-all ta-all ma-all">
+  <section id="tabs" class="da-all ta-all ma-all">
     <div class="wrapper">
-        <h3 id="tabs">Tabs</h3>
+        <h3>Tabs</h3>
         <div id="tabbable-example-HTML">
 <div class="tabbable">
   <ul class="nav nav-tabs">
@@ -1124,7 +1128,7 @@
       <div class="da-all ta-all ma-all">
           <div class="alert alert-info">
             <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-            <strong>Information</strong> This alert needs your attention, but it's not super important.
+            <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
           </div>
   <h5>Dell 308 Variations</h5>
   <form id="tab-variations">
@@ -1148,6 +1152,14 @@
           <code>&lt;div class="tabbable tabs-left tabs-gray-light"></code> (aka popsicle)
         </label>
       </div>
+      <!--
+      <div class="controls">
+        <label class="checkbox">
+          <input type="checkbox" id="tabs-aside" value="tabs-aside">
+          <code>&lt;div class="tabbable tabs-aside"></code>
+        </label>
+      </div>
+    -->
     </div>
   </form>
 
@@ -1168,9 +1180,14 @@
       <hr/>
     </div>
   </section>
-  <section class="da-all ta-all ma-all" id="pills">
+
+
+<!-- Pills
+================================================== -->
+
+  <section id="pills" class="da-all ta-all ma-all">
     <div class="wrapper">
-        <h3 id="pills">Pills</h3>
+        <h3>Pills</h3>
         <ul class="nav nav-pills">
           <li class="active"><a href="#">Home</a></li>
           <li><a href="#">Profile</a></li>
@@ -1189,11 +1206,17 @@
         <hr/>
       </div>
   </section>
-  <section class="da-all ta-all ma-all">
+
+
+
+<!-- Lists
+================================================== -->
+
+  <section id="lists" class="da-all ta-all ma-all">
       <div class="wrapper">
-        <h3 id="list">Lists</h3>
+        <h3>Lists</h3>
           
-        <div class="well da1-da4" style="padding: 8px 0;">
+        <div class="da1-da4" id="list-example-HTML">
           <ul class="nav nav-list">
             <li class="nav-header">List header</li>
             <li class="active"><a href="#">Home</a></li>
@@ -1206,21 +1229,62 @@
             <li><a href="#">Help</a></li>
           </ul>
         </div>
-      </div>
+        <div class="da1-da4 hide" id="aside-example-HTML">
+          <ul class="nav nav-list nav-aside">
+            <li><a href="#"><h2>Home</h2></a></li>
+            <li class="active"><a href="#"><h2>Library</h2></a></li>
+            <li><a href="#"><h2>Applications</h2></a></li>
+            <li><a href="#"><h2>Profile</h2></a></li>
+            <li><a href="#"><h2>Settings</h2></a></li>
+            <li><a href="#"><h2>Help</h2>
+              <p>Lorem ispum dolor sit amet</p></a></li>
+          </ul>
+        </div>
+     <div class="da-all ta-all ma-all">
+      <p>&nbsp;</p>
+        <h5>Dell 308 Variations</h5>
+        <form id="nav-variations">
+          <div class="control-group">
+            <label class="control-label">List Options</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="list-aside" value="list-aside">
+                <code>&lt;ul class="nav nav-list nav-aside"></code>
+              </label>
+            </div>
+          </div>
+        </form>
+
+                
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#list-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="list-HTML">
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#list-example-HTML').html()}">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums" id="list-HTML-code" data-bind="text: $('#list-example-HTML').html().replace(/</g,'&lt;')"></pre>
+        </div>
+        <hr/>
+      </div> 
+    </div>
+     
   </section>
 
-<!-- Labels
+<!-- Labels and Badges
 ================================================== -->
 
-  <section class="da-all ta-all ma-all">
+  <section id="labels-and-badges" class="da-all ta-all ma-all">
     <div class="wrapper">
       <div class="da1-da6 tb1-tb4 ma-all">
-        <h3 id="labels">Labels</h3>
+        <h3>Labels</h3>
         <span class="label">Default</span>
         <span class="label label-teal">Teal</span>
       </div>
       <div class="da7-da12 tb5-tb8 ma-all">
-        <h3 id="badges">Badges</h3>
+        <h3>Badges</h3>
         <p>Messages awaiting <sup class="badge">1</sup><p>
         <p><a href="#">Items in Cart <span class="badge">1</span></a><p>
         <p class="rounded-large blue"><a href="#">Items in Cart <sup class="badge">1</sup></a><p>
@@ -1268,25 +1332,66 @@
 
 <!-- Progress bars
 ================================================== -->
-  <section class="da-all ta-all ma-all bottom-offset-large">
+  <section id="progress-bars" class="da-all ta-all ma-all bottom-offset-large">
     <div class="wrapper">
-      <h3 id="progressbars">Progress bars</h3>
+      <h3>Progress bars</h3>
 
       <div class="da-all ta-all ma-all">
         <div class="da1-da4 ta1-ta3 ma-all">
-          <div class="progress">
-            <div class="bar" style="width: 60%;"></div>
-          </div>
+          <h4>Default</h4>
+          <p>Default progress bar color.</p>
+<div class="progress">
+  <div class="bar" style="width: 60%;"></div>
+</div>
         </div>
         <div class="da5-da8 ta4-ta6 ma-all">
-          <div class="progress progress-info progress-striped">
-            <div class="bar" style="width: 20%;"></div>
-          </div>
+          <h4>Green bar</h4>
+          <p><code>.bar-success</code></p>
+<div class="progress">
+  <div class="bar bar-success" style="width: 60%;"></div>
+</div>
         </div>
-        <div class="da9-da12 ta7-ta9 ma-all">
-          <div class="progress progress-danger progress-striped active">
-            <div class="bar" style="width: 45%"></div>
+        <div class="da-all ta-all ma-all">
+          <h4>Progress Status</h4>
+<div class="progress progress-status">
+  <div class="bar bar-complete" style="width: 25%"><span>Shipping</span></div>
+  <div class="bar bar-progress" style="width: 25%"><span>Payment2</span></div>
+  <div class="bar bar-incomplete" style="width: 25%"><span>Verify & Submit Order</span></div>
+  <div class="bar bar-incomplete" style="width: 25%"><span>Order Submitted</span></div>
+</div>
+        </div>
+        <div class="da-all ta-all ma-all">
+          <div class="alert alert-info">
+            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <h4 class="alert-heading">Dell 308 Style Guidelines:</h4>
+            <p>Do not use animanted, striped bars or any other colors other than default and green.</p>
+            <p><strong class="label">NOTE:</strong> Progress status bar is custom to Dell 308 and requires slightly different markup and custom classes.</p>
           </div>
+
+          <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#progress-bars-HTML">
+            <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+          </button>
+          <p>&nbsp;</p>
+
+          <div class="collapse" id="progress-bars-HTML">
+  
+            <ul data-bind="foreach: $('#progress-bars .progress')" class="unstyled">
+                <li>
+                  <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+                    Copy HTML
+                  </button>
+                  <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+                </li>
+            </ul>
+
+          </div>
+          <hr/>
+
+
+
+
+
+
         </div>
       </div>
     	<br>
@@ -1296,40 +1401,235 @@
 
 <!-- Alerts & Messages
 ================================================== -->
-  <section class="da-all ta-all ma-all bottom-offset-large">
+  <section id="alerts" class="da-all ta-all ma-all bottom-offset-large">
     <div class="wrapper">
-      <h3 id="alerts">Alerts</h3>
-
+      <h3>Alerts</h3>
+      <div id="alerts-example-HTML">
       <div class="da-all ta-all ma-all">
-    	      <div class="alert alert-block">
-    	        <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-    	        <h4 class="alert-heading">Alert block</h4>
-    	        <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
-    	      </div>
+<div class="alert alert-block">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <h4 class="alert-heading">Alert block with title</h4>
+  <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+</div>
       </div>
       <div class="da-all ta-all ma-all">
         <div class="da1-da4 ta1-ta3 ma-all">
-          <div class="alert alert-error">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-            <strong>Error</strong> Change a few things up and try submitting again.
-          </div>
+<div class="alert alert-error">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <strong>Error:</strong> Change a few things up and try submitting again.
+</div>
         </div>
         <div class="da5-da8 ta4-ta6 ma-all">
-          <div class="alert alert-success">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-            <strong>Success</strong> <span aria-hidden="true" class="icon-small-add"></span>You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
-          </div>
+<div class="alert alert-success">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
+</div>
         </div>
         <div class="da9-da12 ta7-ta9 ma-all">
+<div class="alert alert-info">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <strong>Information:</strong> This alert needs your attention, but it's not super important.
+</div>
+        </div>
+      </div>
+    </div>
+       <div class="da-all ta-all ma-all">
           <div class="alert alert-info">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-            <strong>Information</strong> This alert needs your attention, but it's not super important.
+            <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+            <h4 class="alert-heading">Dell 308 Style Guidelines:</h4>
+            <p>Any icon placed inside the alerts block will be automatically hidden.</p>
           </div>
+
+          <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#alerts-HTML">
+            <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+          </button>
+          <p>&nbsp;</p>
+
+          <div class="collapse" id="alerts-HTML">
+  
+            <ul data-bind="foreach: $('#alerts-example-HTML .alert')" class="unstyled">
+                <li>
+                  <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+                    Copy HTML
+                  </button>
+                  <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+                </li>
+            </ul>
+
+          </div>
+          <hr/>
+        </div>
+
+      </div>
+    </div>
+  </section>
+
+
+<!-- Modals
+================================================== -->
+  <section id="modals" class="da-all ta-all ma-all bottom-offset-large">
+    <div class="wrapper">
+      <h3>Modals</h3>
+
+      <div class="da-all ta-all ma-all">
+<div id="modal-example-HTML">
+    <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true">×</button>
+        <h3>Modal header</h3>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+</div>
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#modal-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <button class="btn btn-mini collapsed launch-demo-modal">
+          Launch Demo Modal
+        </button>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="modal-HTML">
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].outerHTML}">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums" data-bind="text: $('#modal-example-HTML')[0].outerHTML.replace(/</g,'&lt;').replace(/ style=.*/g,'>')"></pre>
+        </div>
+        <hr/>
+
+      </div>
+      <p>&nbsp;</p>
+    </div>
+  </section>
+
+
+<!-- Tooltips
+================================================== -->
+  <section id="tooltips" class="da-all ta-all ma-all bottom-offset-large">
+    <div class="wrapper">
+      <h3>Tooltips</h3>
+
+      <div class="da-all ta-all ma-all">
+        <p id="tooltip-example-HTML">
+          Lorem ipsum dolor sit amet, consectetur <a href="#" data-toggle="tooltip" data-placement="top" title="Tooltip on top">Tooltip on top</a> elit, sed do eiusmod
+          tempor incididunt ut <a href="#" data-toggle="tooltip" data-placement="right" title="Tooltip on right">Tooltip on right</a> et dolore magna aliqua. Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute <a href="#" data-toggle="tooltip" data-placement="bottom" title="Tooltip on bottom">Tooltip on bottom</a> dolor in reprehenderit in voluptate velit esse
+          cillum dolore <a href="#" data-toggle="tooltip" data-placement="left" title="Tooltip on left">Tooltip on left</a> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+          proident, sunt in culpa qui  deserunt mollit anim id est laborum.
+        </p>
+
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#tooltip-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="tooltip-HTML">
+          <ul data-bind="foreach: $('#tooltip-example-HTML a')" class="unstyled">
+              <li>
+                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+                  Copy HTML
+                </button>
+                <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+              </li>
+          </ul>
+        </div>
+        <hr/>
+
+      </div>
+    </div>
+  </section>
+
+  <!-- Popovers
+================================================== -->
+  <section id="popovers" class="da-all ta-all ma-all bottom-offset-large">
+    <div class="wrapper">
+      <h3>Popovers</h3>
+      <div class="da-all ta-all ma-all">
+        <div id="popover-example-HTML">
+          <ul class="unstyled">
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on top">Popover on top</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on right">Popover on right</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on bottom">Popover on bottom</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on hover" data-trigger="hover">Popover on hover</a></li>
+            <li><a href="#" class="btn" id="custom-popover" data-toggle="popover" data-original-title='Popover with custom content<i class="close icon-ui-close" data-dismiss="popover"></i>' data-trigger="manual" data-placement="right" data-html="true" data-content='<p>This is a sample custome popover with lots of cool stuff inside.</p><p class="pull-right"><button class="btn btn-primary" data-dismiss="popover">Ok</button></p>'>Popover with custom content</a></li>
+          </ul>
+        </div>
+        <div class="alert alert-info" id="popover-308-rules">
+          <h4>Dell 308 Styleguide Rules:</h4>
+          <p>No two popovers should display at the same time.  Default bootstrap behavior is to allow multiple popovers to display therefore they should be manually triggered to hide all other instances before displayed.  <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#popover-JS"><span class="show-collapsed">See JavaScript below</span><span class="hide-expanded">Hide JavaScript below</span></button>
+          </p>
+        </div>
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#popover-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+
+        <div class="collapse" id="popover-HTML">
+          <h4>HTML code to activate popovers</h4>
+          <ul data-bind="foreach: $('#popover-example-HTML a')" class="unstyled">
+              <li>
+                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+                  Copy HTML
+                </button>
+                <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+              </li>
+          </ul>
+        </div>
+
+        <div class="collapse" id="popover-JS">
+          <h4>Javascript code to activate popovers</h4>
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#popover-JS-code').html()}">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums" id="popover-JS-code">$('[data-toggle="popover"]').popover({trigger:'manual'});
+  $('[data-toggle="popover"]').click(function(event){
+    event.preventDefault();
+    $('[data-toggle="popover"]').popover('destroy');
+    $(this).popover('show');
+  });
+  $('[data-toggle="popover"][data-trigger="hover"]').mouseover(function(event){
+    event.preventDefault();
+    $('[data-toggle="popover"]').popover('destroy');
+    $(this).popover('show');
+  });
+  $('[data-toggle="popover"][data-trigger="hover"]').mouseout(function(event){
+    $(this).popover('destroy');
+  });
+
+  $('#custom-popover').click(function(event){
+    event.preventDefault();
+    $(this).popover('show');
+    $('[data-dismiss="popover"]').click(function(event){
+      event.preventDefault();
+      $(this).parents('.popover').prev().popover('hide');
+    });
+  });</pre>
+
+        </div>
+        <hr/>
+
+
+
+
         </div>
       </div>
     </div>
   </section>
 
+
+
+
+<!-- Wells and Containers
+================================================== -->
 
     <section id="containers" class="da-all ta-all ma-all bottom-offset-large">
       <div class="wrapper">
@@ -1472,112 +1772,15 @@ Nulla volutpat aliquam velit</p>
 
 
 
+<!-- Breadcrumbs
+================================================== -->
 
-</section>
-
-
-<section id="customizations" class="da-all ta-all ma-all" >
+<section id="dell-308-customizations" class="da-all ta-all ma-all" >
 <div class="wrapper">
     <h2>Magnum Specific Customizations</h2>
 
-    <h3>Bordered Tables</h3>
-      <div class="table-bordered blue-stroke">
-        <table class="table table-bordered">
-          <thead>
-            <tr>
-              <th>#</th>
-              <th>Column heading</th>
-              <th>Column heading</th>
-              <th>Column heading</th>
-            </tr>
-          </thead>
-          <tbody>
-            <tr>
-              <td>1</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr>
-              <td>2</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
-            <tr>
-              <td>3</td>
-              <td>Column content</td>
-              <td>Column content</td>
-              <td>Column content</td>
-            </tr>
 
-          </tbody>
-        </table>
-      </div>   
-        <p>&nbsp;</p>
 
-      <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#table-bordered-HTML">
-        <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
-      </button>
-      <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-target="table-bordered-HTML">
-        Copy HTML
-      </button>
-              <p>&nbsp;</p>
-
-      <div class="collapse" id="table-bordered-HTML">
-<pre class="prettyprint linenums">&lt;div class="table-bordered blue-stroke">
-    &lt;table class="table table-bordered">
-        ...
-    &lt;/table>
-&lt;/div>
-</pre>
-      </div>
-<hr/>
-
-      <h3 id="pagination-unnumbered">Unnumbered Pagination with zoom controls (PD Page)</h3>
-         
-      <div class="pagination pagination-centered pagination-unnumbered">
-        <ul>
-          <li class="active"><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-          <li><a href="#"></a></li>
-        </ul>
-        <div class="zoom-controls"><span aria-hidden="true" class="icon-small-zoomin"></span> <span aria-hidden="true" class="icon-small-zoomout"></span></div>
-      </div>
-        <p>&nbsp;</p>
-      <div data-bind="component: { 
-        name :'alerts', 
-        options: {
-              type: 'information',
-              title: 'Dell 308 Styleguide Rule:',
-              message: 'Maximum number of items for this style should be 5.',
-              dismiss:true
-        }
-      }">
-      </div>
-      <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#pagination-unnumbered-HTML">
-        <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
-      </button>
-              <p>&nbsp;</p>
-
-      <div class="collapse" id="pagination-unnumbered-HTML">
-        <pre class="prettyprint linenums">
-&lt;div class="pagination pagination-centered pagination-unnumbered">
-  &lt;ul>
-    &lt;li class="active">&lt;a href="#">&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">&lt;/a>&lt;/li>
-    &lt;li>&lt;a href="#">&lt;/a>&lt;/li>
-  &lt;/ul>
-  &lt;div class="zoom-controls">&lt;span aria-hidden="true" class="icon-small-zoomin">&lt;/span> &lt;span aria-hidden="true" class="icon-small-zoomout">&lt;/span>&lt;/div>
-&lt;/div>
-        </pre>
-      </div>
-
-<hr/>
 
     </div>
 
