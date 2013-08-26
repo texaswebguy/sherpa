@@ -126,6 +126,32 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	}
 
 	$('[data-toggle="tooltip"]').tooltip();
+
+
+	$('[data-toggle="popover"]').popover({trigger:'manual'});
+	$('[data-toggle="popover"]').click(function(event){
+		event.preventDefault();
+		$('[data-toggle="popover"]').popover('destroy');
+		$(this).popover('show');
+	});
+	$('[data-toggle="popover"][data-trigger="hover"]').mouseover(function(event){
+		event.preventDefault();
+		$('[data-toggle="popover"]').popover('destroy');
+		$(this).popover('show');
+	});
+	$('[data-toggle="popover"][data-trigger="hover"]').mouseout(function(event){
+		$(this).popover('destroy');
+	});
+
+	$('#custom-popover').click(function(event){
+		event.preventDefault();
+		$(this).popover('show');
+		$('[data-dismiss="popover"]').click(function(event){
+			event.preventDefault();
+			$(this).parents('.popover').prev().popover('hide');
+		});
+	});
+
 	$('.change-container-color a').click(function(event){
 		event.preventDefault();
 		var className = $(event.currentTarget).attr('class');
@@ -152,6 +178,15 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		var className = $(event.currentTarget).attr('class');
 		$("#text-color-sample-code").html('&lt;p class="text-'+className+'">...&lt;/p>');
 		$("#text-color-sample").html('<p class="text-'+className+'">This text is <strong>'+$(event.currentTarget).text()+'</strong>.</p>');
+	});
+
+	$('.launch-demo-modal').click(function(event){
+		  Sherpa.publish("modal", {
+		    title:'Hello my friend',
+		    body: 'I am a simple demo modal!',
+		    footer: '<a href="#" class="btn">Close</a> <a href="#" class="btn btn-primary">Save changes</a>',
+		    dismiss:true
+		  });
 	});
 
 	Sherpa.scope('header .navbar', function(){
@@ -181,8 +216,8 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 				self.parents('.nav > li.dropdown').addClass('active');
 				self.parent().addClass('active');
 			}
-			if(!target === "#" || target) {
-				$.scrollTo(target,300,{offset:{top:-60}});
+			if(target != "#" && target) {
+				$.scrollTo(target,300,{offset:{top:-70}});
 			}
 		});
 	});

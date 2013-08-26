@@ -146,7 +146,7 @@ ol.linenums li {
 }
 header {
 	position:fixed;
-	z-index:9999;
+	z-index:1030;
 	height:42px;
 }
 header .navbar {
@@ -190,4 +190,13 @@ section {
 #modal-example-HTML {
 	background: rgba(0,0,0,0.8);
 	padding:100px 0;
+}
+
+#popover-example-HTML {
+	overflow:hidden;
+	margin-bottom:20px;
+}
+#popover-example-HTML > ul > li > a {
+	float:left;
+	margin-right:20px;
 }
