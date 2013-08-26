@@ -217,7 +217,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 				self.parent().addClass('active');
 			}
 			if(target != "#" && target) {
-				$.scrollTo(target,300,{offset:{top:-70}});
+				$.scrollTo(target,300,{offset:{top:-90}});
 			}
 		});
 	});
