@@ -1268,31 +1268,46 @@ li.dropdown .dropdown-menu {
 /* Grays */
 
 .gray-dark,
-.well-grey-dark { 
+.well-gray-dark { 
   .well-colors (@grayDarker, @white, @white, @white)
 }
+.gray-dark-stroke,
+.well-gray-dark-stroke  { 
+  border: @defaultStroke solid @grayDarker !important;
+  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+}
+
 .gray-medium,
-.well-grey-medium { 
+.well-gray-medium { 
   .well-colors (@gray, @white, @white, @white)
 }
+
 .gray,
-.well-grey { 
+.well-gray { 
   .well-colors (@grayDark, @white, @white, @white)
 }
+
+
 .gray-light,
-.well-grey-light { 
+.well-gray-light { 
   .well-colors (@grayLight, @grayDarker, @grayDarker, @blue)
 }
 .gray-very-light,
-.well-grey-very-light { 
+.well-gray-very-light { 
   .well-colors (@dellGrayVeryLight, @grayDarker, @grayDarker, @blue)
 }
 .white,
 .well-white { 
-  .well-colors (@white, transparent, transparent, transparent)
+  .well-colors (@white, @grayDarker, @grayDarker, @blue)
 }
-.gray-stroke,
-.well-grey-stroke { border: @defaultStroke solid @gray; }
+
+.white-stroke,
+.well-white-stroke { 
+  border: @defaultStroke solid @white; 
+  .well-colors (transparent, @white, @white, @white)
+}
+
+
 
 /* Blue */
 .blue,
@@ -1308,7 +1323,11 @@ li.dropdown .dropdown-menu {
 .well-navyblue { 
   .well-colors (@dellNavy, @white, @white, @white)
 }
-
+.navyblue-stroke,
+.well-navyblue-stroke  { 
+  border: @defaultStroke solid @dellNavy !important;
+  .well-colors (@white, @textColor, @dellNavy, @linkColor)
+}
 
 /* Green */
 .green,
@@ -1357,7 +1376,11 @@ li.dropdown .dropdown-menu {
 .well-red-dark       { 
   .well-colors (@dellRedDark, @white, @white, @white)
 }
-
+.red-dark-stroke,
+.well-red-dark-stroke     { 
+  border: @defaultStroke solid  @dellRedDark !important;
+  .well-colors (@white, @textColor, @dellRedDark, @linkColor)
+}
 /* Berry */
 .berry,
 .well-berry        { 

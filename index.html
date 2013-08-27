@@ -52,7 +52,7 @@
                   </ul>
                 </li>
               </ul>
-              <form class="navbar-search pull-right" action="">
+              <form class="navbar-search pull-right home-only" action="">
                 <input type="text" class="search-query input-large search-tags" placeholder="Search tag or keyword">
                 <i aria-hidden="true" class="icon-ui-closecircle"></i>
               </form>
@@ -63,7 +63,7 @@
     </div>
   </header>
   
-
+<div data-bind="page: {id: 'start'}">
 <!-- Typography
 ================================================== -->
 <section id="typography" class="da-all ta-all ma-all">
@@ -1634,9 +1634,10 @@
     <section id="containers" class="da-all ta-all ma-all bottom-offset-large">
       <div class="wrapper">
 
-      <h2>Wells and Containers</h2>
-          <p>Click on the <code>code sample</code> to copy to clipboard.</p>
- 
+        <h2>Wells and Containers</h2>
+        <div class="alert alert-info">
+          <p><strong>To copy icon HTML:</strong> Click on the <code>code sample</code> to copy to clipboard.</p>
+        </div>
 
 
 
@@ -1708,10 +1709,6 @@ Nulla volutpat aliquam velit</p>
                 <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">View other colors</button>
                 <ul class="dropdown-menu change-container-color-stroke">
                   <li><a href="#" class="gray-dark">Dark Gray</a></li>
-                  <li><a href="#" class="gray-medium">Medium Gray</a></li>
-                  <li><a href="#" class="gray">Gray</a></li>
-                  <li><a href="#" class="gray-light">Light Gray</a></li>
-                  <li><a href="#" class="gray-very-light">Very Light Gray</a></li>
                   <li><a href="#" class="white">White</a></li>
                   <li><a href="#" class="blue">Blue</a></li>
                   <li><a href="#" class="navyblue">Navy Blue</a></li>
@@ -1739,11 +1736,6 @@ Nulla volutpat aliquam velit</p>
                 <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">View other colors</button>
                 <ul class="dropdown-menu change-container-color-stroke-title">
                   <li><a href="#" class="gray-dark">Dark Gray</a></li>
-                  <li><a href="#" class="gray-medium">Medium Gray</a></li>
-                  <li><a href="#" class="gray">Gray</a></li>
-                  <li><a href="#" class="gray-light">Light Gray</a></li>
-                  <li><a href="#" class="gray-very-light">Very Light Gray</a></li>
-                  <li><a href="#" class="white">White</a></li>
                   <li><a href="#" class="blue">Blue</a></li>
                   <li><a href="#" class="navyblue">Navy Blue</a></li>
                   <li><a href="#" class="green">Green</a></li>
@@ -1777,21 +1769,17 @@ Nulla volutpat aliquam velit</p>
 
 <section class="da-all ta-all ma-all" id="icons" class="bottom-offset-large">
         <div class="wrapper">
-          <h3 class="da-all ta-all ma-all">Dell 308 Specific Icons</h3>
-      <div  class="da-all ta-all ma-all"data-bind="component: { 
-        name :'alerts', 
-        options: {
-              type: 'information',
-              title: 'To copy icon HTML:',
-              message: 'Just click on the icon and HTML will be copied to your clipboard.',
-              dismiss:true
-        }
-      }"></div>
+          <div class="da-all ta-all ma-all">
+            <h3>Dell 308 Specific Icons</h3>
+
+            <div class="alert alert-info">
+              <p><strong>To copy icon HTML:</strong> Just click on the icon and HTML will be copied to your clipboard.</p>
+            </div>
 
 
-          <h4 class="da-all ta-all ma-all">UI Icons</h4>
-          <p class="da-all ta-all ma-all">Use the UI Icons for user interface elements. For crisper UI Icons use the following sizes: 14px, 28px and 42px.</p>
-          <p></p>
+            <h4>UI Icons</h4>
+            <p>Use the UI Icons for user interface elements. For crisper UI Icons use the following sizes: 14px, 28px and 42px.</p>
+          </div>
           <div class="gray-stroke well well-rounded da-all ta-all ma-all">
             <div class="da1-da4 ta1-ta3 ma1">
               <ul class="unstyled icons">
@@ -3050,7 +3038,7 @@ Nulla volutpat aliquam velit</p>
           </div>
       </div>
   </section>
-
+</div><!--page-->
 
      <!-- Footer
       ================================================== -->

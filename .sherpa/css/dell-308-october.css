@@ -3437,7 +3437,7 @@ input[type="submit"].btn.btn-mini {
   border-radius: 5px;
   -webkit-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   -moz-box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
-  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065); 
+  box-shadow: 0 1px 4px rgba(0, 0, 0, 0.065);
   *zoom: 1;
 }
 .navbar-inner:before,
@@ -6353,30 +6353,30 @@ li.dropdown .dropdown-menu {
 }
 /* Grays */
 .gray-dark,
-.well-grey-dark {
+.well-gray-dark {
   background-color: #444444;
   color: #ffffff;
 }
 .gray-dark h2,
-.well-grey-dark h2,
+.well-gray-dark h2,
 .gray-dark h3,
-.well-grey-dark h3,
+.well-gray-dark h3,
 .gray-dark h4,
-.well-grey-dark h4,
+.well-gray-dark h4,
 .gray-dark h5,
-.well-grey-dark h5,
+.well-gray-dark h5,
 .gray-dark h6,
-.well-grey-dark h6 {
+.well-gray-dark h6 {
   color: #ffffff;
 }
 .gray-dark a,
-.well-grey-dark a {
+.well-gray-dark a {
   color: #ffffff;
 }
 .gray-dark h4.well-title,
-.well-grey-dark h4.well-title,
+.well-gray-dark h4.well-title,
 .gray-dark h4.container-title,
-.well-grey-dark h4.container-title {
+.well-gray-dark h4.container-title {
   display: inline-block;
   top: -20px;
   margin-bottom: -20px;
@@ -6393,31 +6393,73 @@ li.dropdown .dropdown-menu {
   -moz-border-radius-bottomleft: 10px;
   border-bottom-left-radius: 10px;
 }
+.gray-dark-stroke,
+.well-gray-dark-stroke {
+  border: 2px solid #444444 !important;
+  background-color: #ffffff;
+  color: #444444;
+}
+.gray-dark-stroke h2,
+.well-gray-dark-stroke h2,
+.gray-dark-stroke h3,
+.well-gray-dark-stroke h3,
+.gray-dark-stroke h4,
+.well-gray-dark-stroke h4,
+.gray-dark-stroke h5,
+.well-gray-dark-stroke h5,
+.gray-dark-stroke h6,
+.well-gray-dark-stroke h6 {
+  color: #444444;
+}
+.gray-dark-stroke a,
+.well-gray-dark-stroke a {
+  color: #444444;
+}
+.gray-dark-stroke h4.well-title,
+.well-gray-dark-stroke h4.well-title,
+.gray-dark-stroke h4.container-title,
+.well-gray-dark-stroke h4.container-title {
+  display: inline-block;
+  top: -20px;
+  margin-bottom: -20px;
+  padding: 5px 15px;
+  position: relative;
+  color: #ffffff;
+  background-color: #444444;
+  vertical-align: baseline;
+  white-space: nowrap;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
 .gray-medium,
-.well-grey-medium {
+.well-gray-medium {
   background-color: #aaaaaa;
   color: #ffffff;
 }
 .gray-medium h2,
-.well-grey-medium h2,
+.well-gray-medium h2,
 .gray-medium h3,
-.well-grey-medium h3,
+.well-gray-medium h3,
 .gray-medium h4,
-.well-grey-medium h4,
+.well-gray-medium h4,
 .gray-medium h5,
-.well-grey-medium h5,
+.well-gray-medium h5,
 .gray-medium h6,
-.well-grey-medium h6 {
+.well-gray-medium h6 {
   color: #ffffff;
 }
 .gray-medium a,
-.well-grey-medium a {
+.well-gray-medium a {
   color: #ffffff;
 }
 .gray-medium h4.well-title,
-.well-grey-medium h4.well-title,
+.well-gray-medium h4.well-title,
 .gray-medium h4.container-title,
-.well-grey-medium h4.container-title {
+.well-gray-medium h4.container-title {
   display: inline-block;
   top: -20px;
   margin-bottom: -20px;
@@ -6435,30 +6477,30 @@ li.dropdown .dropdown-menu {
   border-bottom-left-radius: 10px;
 }
 .gray,
-.well-grey {
+.well-gray {
   background-color: #737373;
   color: #ffffff;
 }
 .gray h2,
-.well-grey h2,
+.well-gray h2,
 .gray h3,
-.well-grey h3,
+.well-gray h3,
 .gray h4,
-.well-grey h4,
+.well-gray h4,
 .gray h5,
-.well-grey h5,
+.well-gray h5,
 .gray h6,
-.well-grey h6 {
+.well-gray h6 {
   color: #ffffff;
 }
 .gray a,
-.well-grey a {
+.well-gray a {
   color: #ffffff;
 }
 .gray h4.well-title,
-.well-grey h4.well-title,
+.well-gray h4.well-title,
 .gray h4.container-title,
-.well-grey h4.container-title {
+.well-gray h4.container-title {
   display: inline-block;
   top: -20px;
   margin-bottom: -20px;
@@ -6476,30 +6518,30 @@ li.dropdown .dropdown-menu {
   border-bottom-left-radius: 10px;
 }
 .gray-light,
-.well-grey-light {
+.well-gray-light {
   background-color: #eeeeee;
   color: #444444;
 }
 .gray-light h2,
-.well-grey-light h2,
+.well-gray-light h2,
 .gray-light h3,
-.well-grey-light h3,
+.well-gray-light h3,
 .gray-light h4,
-.well-grey-light h4,
+.well-gray-light h4,
 .gray-light h5,
-.well-grey-light h5,
+.well-gray-light h5,
 .gray-light h6,
-.well-grey-light h6 {
+.well-gray-light h6 {
   color: #444444;
 }
 .gray-light a,
-.well-grey-light a {
+.well-gray-light a {
   color: #444444;
 }
 .gray-light h4.well-title,
-.well-grey-light h4.well-title,
+.well-gray-light h4.well-title,
 .gray-light h4.container-title,
-.well-grey-light h4.container-title {
+.well-gray-light h4.container-title {
   display: inline-block;
   top: -20px;
   margin-bottom: -20px;
@@ -6517,30 +6559,30 @@ li.dropdown .dropdown-menu {
   border-bottom-left-radius: 10px;
 }
 .gray-very-light,
-.well-grey-very-light {
+.well-gray-very-light {
   background-color: #f9f9f9;
   color: #444444;
 }
 .gray-very-light h2,
-.well-grey-very-light h2,
+.well-gray-very-light h2,
 .gray-very-light h3,
-.well-grey-very-light h3,
+.well-gray-very-light h3,
 .gray-very-light h4,
-.well-grey-very-light h4,
+.well-gray-very-light h4,
 .gray-very-light h5,
-.well-grey-very-light h5,
+.well-gray-very-light h5,
 .gray-very-light h6,
-.well-grey-very-light h6 {
+.well-gray-very-light h6 {
   color: #444444;
 }
 .gray-very-light a,
-.well-grey-very-light a {
+.well-gray-very-light a {
   color: #444444;
 }
 .gray-very-light h4.well-title,
-.well-grey-very-light h4.well-title,
+.well-gray-very-light h4.well-title,
 .gray-very-light h4.container-title,
-.well-grey-very-light h4.container-title {
+.well-gray-very-light h4.container-title {
   display: inline-block;
   top: -20px;
   margin-bottom: -20px;
@@ -6560,7 +6602,7 @@ li.dropdown .dropdown-menu {
 .white,
 .well-white {
   background-color: #ffffff;
-  color: transparent;
+  color: #444444;
 }
 .white h2,
 .well-white h2,
@@ -6572,11 +6614,11 @@ li.dropdown .dropdown-menu {
 .well-white h5,
 .white h6,
 .well-white h6 {
-  color: transparent;
+  color: #444444;
 }
 .white a,
 .well-white a {
-  color: transparent;
+  color: #444444;
 }
 .white h4.well-title,
 .well-white h4.well-title,
@@ -6588,7 +6630,7 @@ li.dropdown .dropdown-menu {
   padding: 5px 15px;
   position: relative;
   color: #ffffff;
-  background-color: transparent;
+  background-color: #444444;
   vertical-align: baseline;
   white-space: nowrap;
   -webkit-border-bottom-right-radius: 10px;
@@ -6598,9 +6640,47 @@ li.dropdown .dropdown-menu {
   -moz-border-radius-bottomleft: 10px;
   border-bottom-left-radius: 10px;
 }
-.gray-stroke,
-.well-grey-stroke {
-  border: 2px solid #aaaaaa;
+.white-stroke,
+.well-white-stroke {
+  border: 2px solid #ffffff;
+  background-color: transparent;
+  color: #ffffff;
+}
+.white-stroke h2,
+.well-white-stroke h2,
+.white-stroke h3,
+.well-white-stroke h3,
+.white-stroke h4,
+.well-white-stroke h4,
+.white-stroke h5,
+.well-white-stroke h5,
+.white-stroke h6,
+.well-white-stroke h6 {
+  color: #ffffff;
+}
+.white-stroke a,
+.well-white-stroke a {
+  color: #ffffff;
+}
+.white-stroke h4.well-title,
+.well-white-stroke h4.well-title,
+.white-stroke h4.container-title,
+.well-white-stroke h4.container-title {
+  display: inline-block;
+  top: -20px;
+  margin-bottom: -20px;
+  padding: 5px 15px;
+  position: relative;
+  color: #ffffff;
+  background-color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
 }
 /* Blue */
 .blue,
@@ -6718,6 +6798,48 @@ li.dropdown .dropdown-menu {
   position: relative;
   color: #ffffff;
   background-color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+.navyblue-stroke,
+.well-navyblue-stroke {
+  border: 2px solid #003758 !important;
+  background-color: #ffffff;
+  color: #444444;
+}
+.navyblue-stroke h2,
+.well-navyblue-stroke h2,
+.navyblue-stroke h3,
+.well-navyblue-stroke h3,
+.navyblue-stroke h4,
+.well-navyblue-stroke h4,
+.navyblue-stroke h5,
+.well-navyblue-stroke h5,
+.navyblue-stroke h6,
+.well-navyblue-stroke h6 {
+  color: #003758;
+}
+.navyblue-stroke a,
+.well-navyblue-stroke a {
+  color: #444444;
+}
+.navyblue-stroke h4.well-title,
+.well-navyblue-stroke h4.well-title,
+.navyblue-stroke h4.container-title,
+.well-navyblue-stroke h4.container-title {
+  display: inline-block;
+  top: -20px;
+  margin-bottom: -20px;
+  padding: 5px 15px;
+  position: relative;
+  color: #ffffff;
+  background-color: #003758;
   vertical-align: baseline;
   white-space: nowrap;
   -webkit-border-bottom-right-radius: 10px;
@@ -7095,6 +7217,48 @@ li.dropdown .dropdown-menu {
   position: relative;
   color: #ffffff;
   background-color: #ffffff;
+  vertical-align: baseline;
+  white-space: nowrap;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
+}
+.red-dark-stroke,
+.well-red-dark-stroke {
+  border: 2px solid #ce1126 !important;
+  background-color: #ffffff;
+  color: #444444;
+}
+.red-dark-stroke h2,
+.well-red-dark-stroke h2,
+.red-dark-stroke h3,
+.well-red-dark-stroke h3,
+.red-dark-stroke h4,
+.well-red-dark-stroke h4,
+.red-dark-stroke h5,
+.well-red-dark-stroke h5,
+.red-dark-stroke h6,
+.well-red-dark-stroke h6 {
+  color: #ce1126;
+}
+.red-dark-stroke a,
+.well-red-dark-stroke a {
+  color: #444444;
+}
+.red-dark-stroke h4.well-title,
+.well-red-dark-stroke h4.well-title,
+.red-dark-stroke h4.container-title,
+.well-red-dark-stroke h4.container-title {
+  display: inline-block;
+  top: -20px;
+  margin-bottom: -20px;
+  padding: 5px 15px;
+  position: relative;
+  color: #ffffff;
+  background-color: #ce1126;
   vertical-align: baseline;
   white-space: nowrap;
   -webkit-border-bottom-right-radius: 10px;
