@@ -246,60 +246,41 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		}
 	}
 	Sherpa.scope('[id*=-variations]', function(){
-		this.listen('input[type="checkbox"]', 'click', function(event){
+		this.listen('input[type="radio"],input[type="checkbox"]', 'click', function(event){
+			console.log("hello")
 			var self = $(event.currentTarget)[0], id = $(self).attr('id');
 			switch(id) {
 				case "tabs-bordered":
-					if(self.checked) {
-						$('#tabbable-example-HTML .tabbable').addClass('tabs-bordered');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
-					} else {
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
-					}
-					$('#tabs-left')[0].checked = false;
-					$('#tabs-aside')[0].checked = false;
-					$('#tabs-gray-light')[0].checked = false;
+					$('#tabbable-example-HTML .tabbable').addClass('tabs-bordered');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
 					tabsReset();
 				break;
 				case "tabs-left":
-					if(self.checked) {
-						$('#tabbable-example-HTML .tabbable').addClass('tabs-left');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
-					} else {
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
-					}
-					$('#tabs-aside')[0].checked = false;
-					$('#tabs-bordered')[0].checked = false;
+					$('#tabbable-example-HTML .tabbable').addClass('tabs-left');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
 					tabsReset();	
 				break;
 				case "tabs-gray-light":
-					if(self.checked) {
-						$('#tabbable-example-HTML .tabbable').addClass('tabs-gray-light');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
-					} else {
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
-					}	
-					$('#tabs-aside')[0].checked = false;
-					$('#tabs-bordered')[0].checked = false;
+					$('#tabbable-example-HTML .tabbable').addClass('tabs-gray-light');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
 					tabsReset();
 				break;
-				case "tabs-aside":
-					if(self.checked) {
-						$('#tabbable-example-HTML .tabbable').addClass('tabs-aside');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
-					} else {
-						$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
-					}
-					$('#tabs-left')[0].checked = false;
-					$('#tabs-bordered')[0].checked = false;
-					$('#tabs-gray-light')[0].checked = false;
+				case "tabs-standard":
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-gray-light');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-bordered');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-aside');
+					$('#tabbable-example-HTML .tabbable').removeClass('tabs-left');
 					tabsReset();
+				break;				
+				case "tabs-aside":
+					$('#tabbable-example-HTML').hide();
+					$('#tabbable-aside-example-HTML').show();
+					tabsReset('aside');
 				break;
 				case "list-aside":
 					if(self.checked) {
@@ -313,14 +294,17 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 						$('list-HTML-code').html($('#list-example-HTML').html().replace(/</g,'&lt;'));
 						listReset();
 					}	
-					
 				break;
 			}
-			function tabsReset(){
-				$('#tabs-HTML-code').html($('#tabbable-example-HTML').html().replace(/</g,'&lt;'));
-				$('#tabs-HTML-code').removeClass('prettyprinted');
-				prettyPrint();
-				$('#tabs-HTML [data-copy]').attr('data-clipboard-text',$('#tabbable-example-HTML').html());				
+			function tabsReset(aside){
+				if(aside) {
+					aside = "list";
+				} else {
+					$('#tabs-HTML-code').html($('#tabbable-example-HTML').html().replace(/</g,'&lt;'));
+					$('#tabs-HTML-code').removeClass('prettyprinted');				
+					prettyPrint();
+					$('#tabs-HTML [data-copy]').attr('data-clipboard-text',$('#tabbable-example-HTML').html());				
+				}
 			}
 			function listReset(aside){
 				if(!aside) {

@@ -2135,6 +2135,26 @@ input[type="submit"].btn {
 
 }
 
+.tabbable.tabs-aside {
+  .nav-aside {
+    position:relative;
+    z-index:2;
+  }
+  .tab-content {
+    position:relative;
+    left:-47px;
+    padding-left:47px;
+    z-index:1;
+    .box-shadow(-10px 0px 5px -9px rgba(0, 0, 0, .4));
+    &:before {
+      content:" ";
+      background:orange;
+
+    };
+    margin-bottom: @baseLineHeight;
+  }
+}
+
 .nav-list {
   background:@grayLight;
   .nav-header {
@@ -2158,7 +2178,25 @@ input[type="submit"].btn {
     background:none;
     .aside-nav();
   }
-  
+  + .back-to-top {
+    background: @gray;
+    color:@white;
+    .border-left-radius(@borderRadiusLarge * 2);
+    margin-top: @baseLineHeight;
+    margin-left: 50%;
+    padding:@baseLineHeight / 2 @baseLineHeight @baseLineHeight @baseLineHeight - 5;
+    position:relative;
+    z-index:0;
+    cursor:pointer;
+    [class*=icon] {
+      font-size:@baseFontSize * 2;
+      position:relative;
+      top:@baseLineHeight / 4;    
+    }
+    &:hover {
+  color:@grayDarker;
+    };
+  }
 }
 
 .aside-nav() {
@@ -2180,10 +2218,10 @@ input[type="submit"].btn {
     > li.active a {
       background:@asideNavBackgroundActive;
       border-bottom:none;
+      position:relative;
       &:hover {
         color:@white;
       };
-      position:relative;
       &:after {
         content: "\23";//left arrow
         font-family:'icon-ui';
@@ -2196,12 +2234,12 @@ input[type="submit"].btn {
     }
     > li:last-child a,
     > li:last-child a:hover {
-      .border-radius(none);
+      .border-radius(0);
       .border-bottom-left-radius(@borderRadiusLarge * 2);
     };
     > li:first-child a,
     > li:first-child a:hover {
-      .border-radius(none);
+      .border-radius(0);
       .border-top-left-radius(@borderRadiusLarge * 2);
     };
 }
@@ -3608,6 +3646,64 @@ div.table-bordered table {
   .mirror-text();
   cursor:pointer;
 }
-.bottom-offset-large {
-  margin-bottom:20px;
+
+// these offsets are non-bootstrap gridset related hacks and should be removed in the BS3.0 release
+.bottom-offset-margin(@multiplier) {
+  margin-bottom: @baseLineHeight * @multiplier;
 }
+.top-offset-margin(@multiplier) {
+  margin-top: @baseLineHeight * @multiplier;
+}
+.bottom-offset {
+  &-mini {
+    .bottom-offset-margin(.5);
+  }
+  &-small {
+    .bottom-offset-margin(1);
+  }
+  &-medium {
+    .bottom-offset-margin(2);
+  }
+  &-large {
+    .bottom-offset-margin(3);
+  }
+}
+.top-offset {
+  &-mini {
+    .bottom-offset-margin(.5);
+  }
+  &-small {
+    .bottom-offset-margin(1);
+  }
+  &-medium {
+    .bottom-offset-margin(2);
+  }
+  &-large {
+    .bottom-offset-margin(3);
+  }
+}
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../less-232/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "../../less-232/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "../../less-232/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "../../less-232/responsive-767px-max.less";
+
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../less-232/responsive-navbar.less";
