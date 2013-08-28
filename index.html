@@ -52,9 +52,11 @@
                   </ul>
                 </li>
               </ul>
-              <form class="navbar-search pull-right home-only" action="">
-                <input type="text" class="search-query input-large search-tags" placeholder="Search tag or keyword">
-                <i aria-hidden="true" class="icon-ui-closecircle"></i>
+              <form id="custom-search-form" class="form-search form-horizontal pull-right">
+                  <div class="input-append span12">
+                      <input type="text" class="search-query" placeholder="Search">
+                      <button type="submit" class="btn"><i class="icon-search"></i></button>
+                  </div>
               </form>
             </div><!-- /.nav-collapse -->
           </div>
@@ -1498,21 +1500,29 @@
 </div>
         </div>
         <div class="da-all ta-all ma-all">
-          <h4>Progress Status</h4>
-<div class="progress progress-status">
-  <div class="bar bar-complete" style="width: 25%"><span>Shipping</span></div>
-  <div class="bar bar-progress" style="width: 25%"><span>Payment2</span></div>
-  <div class="bar bar-incomplete" style="width: 25%"><span>Verify & Submit Order</span></div>
-  <div class="bar bar-incomplete" style="width: 25%"><span>Order Submitted</span></div>
-</div>
-        </div>
-        <div class="da-all ta-all ma-all">
           <div class="alert alert-info">
             <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
             <h4 class="alert-heading">Dell 308 Style Guidelines:</h4>
             <p>Do not use animanted, striped bars or any other colors other than default and green.</p>
             <p><strong class="label">NOTE:</strong> Progress status bar is custom to Dell 308 and requires slightly different markup and custom classes.</p>
           </div>
+
+          <h4>Progress Status</h4>
+<div class="progress progress-status">
+  <a href="#shipping" class="bar bar-complete" style="width: 25%"><span>Shipping</span></a>
+  <a href="#payment" class="bar bar-complete" style="width: 25%"><span>Payment</span></a>
+  <div class="bar bar-progress" style="width: 25%"><span>Verify & Submit Order</span></div>
+  <div class="bar bar-incomplete" style="width: 25%"><span>Order Submitted</span></div>
+</div>
+
+          <div class="alert alert-info">
+            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <p><strong class="label">NOTE:</strong> <code>div</code> tags can be replaced with <code>a</code> tags to provide links in the taskflow to go back.</p>
+          </div>
+
+        </div>
+        <div class="da-all ta-all ma-all">
+
 
           <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#progress-bars-HTML">
             <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
@@ -1927,7 +1937,7 @@ Nulla volutpat aliquam velit</p>
             <p>Use the UI Icons for user interface elements. For crisper UI Icons use the following sizes: 14px, 28px and 42px.</p>
           </div>
           <div class="gray-stroke well well-rounded da-all ta-all ma-all">
-            <div class="da1-da4 ta1-ta3 ma1">
+            <div class="da1-da4 ta1-ta3 ma-all">
               <ul class="unstyled icons">
                 <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-arrowleft&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
                    icon-ui-arrowleft
@@ -1957,7 +1967,7 @@ Nulla volutpat aliquam velit</p>
               </ul>
             </div>
 
-            <div class="da5-da9 ta4-ta6 ma2">
+            <div class="da5-da9 ta4-ta6 ma-all">
               <ul class="unstyled icons">
                 <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-dell&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
                    icon-ui-dell
@@ -1987,7 +1997,7 @@ Nulla volutpat aliquam velit</p>
               </ul>
             </div>
 
-            <div class="da10-da12 ta7-ta9 ma3">
+            <div class="da10-da12 ta7-ta9 ma-all">
               <ul class="unstyled icons">
                 <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangledown&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
                    icon-ui-triangledown
@@ -2017,7 +2027,7 @@ Nulla volutpat aliquam velit</p>
           <h3 class="da-all ta-all ma-all">Small Icons</h3>
           <p class="da-all ta-all ma-all">The Small Icons have less detail and are intended to be used at the default font size of 14px. Please use the Small Icons for task based communications. For crisper Small Icons use the following sizes: 14px, 28px and 42px.</p>
           <div class="da-all ta-all ma-all gray-stroke well well-rounded">
-            <div class="da1-da4 ta1-ta3 ma1">
+            <div class="da1-da4 ta1-ta3 ma-all">
               <ul class="unstyled icons">
                 <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-add&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
                    icon-small-add
@@ -2189,7 +2199,7 @@ Nulla volutpat aliquam velit</p>
 
 
 
-            <div class="da5-da8 ta4-ta6 ma2">
+            <div class="da5-da8 ta4-ta6 ma-all">
               <ul class="unstyled icons">
                 <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-employee&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
                    icon-small-employee
@@ -2360,7 +2370,7 @@ Nulla volutpat aliquam velit</p>
             </div>
 
 
-            <div class="da9-da12 ta7-ta9 ma3">
+            <div class="da9-da12 ta7-ta9 ma-all">
               <ul class="unstyled icons">
                 <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-recycle&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
                    icon-small-recycle

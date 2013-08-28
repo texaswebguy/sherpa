@@ -404,22 +404,13 @@ section {
   font-size: 14px;
 }
 #header-308-site input.search-query {
-/*  padding-right: 14px;*/
-  padding-right: 4px \9;
-  padding-left: 14px;
-  padding-left: 4px \9;
-  /* IE7-8 doesn't have border-radius, so don't indent the padding */
-
-  margin-bottom: 0;
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  padding-right: 55px;
+}
+#header-308-site .form-search  {
+  width:300px; 
 }
 #header-308-site .form-search .input-append .btn {
-  right: -15px;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
+  right: -35px;
   z-index:3; 
 }
 #header-308-site .navbar {
