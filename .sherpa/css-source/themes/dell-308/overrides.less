@@ -32,16 +32,14 @@ a:focus {
   float: none; 
   overflow:hidden;
 }
-
+/*
 div {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-
+  float: left;
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
 }
+*/
 
 // Base CSS
 // Type
@@ -53,7 +51,7 @@ div {
 // --------------------------------------------------
 
 
-h1, h2, h3, h4, h5, h6, p {
+h1, h2, h3, h4, h5, h6 {
   margin: 0px 0px (@baseLineHeight / 2) 0px;
 }
 
@@ -1254,8 +1252,8 @@ li.dropdown .dropdown-menu {
   h2,h3,h4,h5,h6 {
     color:@headlineColor;
   }
-  a {
-    color:@textColor;
+  a:not(.btn) {
+    color:@linkColor;
   }
   h4.well-title, h4.container-title {
     //container-title for backward compatibility but should be deprecated
@@ -1296,6 +1294,11 @@ li.dropdown .dropdown-menu {
   .well-colors (@grayDark, @white, @white, @white)
 }
 
+.gray-stroke,
+.well-gray-stroke  { 
+  border: @defaultStroke solid @gray !important;
+  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+}
 
 .gray-light,
 .well-gray-light { 
@@ -2410,7 +2413,6 @@ input[type="submit"].btn {
   // Close icon
   .close { 
     margin-top: 0;
-    margin-right: -15px;
     color:transparent;
     opacity:.6;
     &:before {
@@ -3717,24 +3719,24 @@ div.table-bordered table {
 // RESPONSIVE CLASSES
 // ------------------
 
-@import "../../less-232/responsive-utilities.less";
+@import "../../less/responsive-utilities.less";
 
 
 // MEDIA QUERIES
 // ------------------
 
 // Large desktops
-@import "../../less-232/responsive-1200px-min.less";
+@import "../../less/responsive-1200px-min.less";
 
 // Tablets to regular desktops
-@import "../../less-232/responsive-768px-979px.less";
+@import "../../less/responsive-768px-979px.less";
 
 // Phones to portrait tablets and narrow desktops
-@import "../../less-232/responsive-767px-max.less";
+@import "../../less/responsive-767px-max.less";
 
 
 // RESPONSIVE NAVBAR
 // ------------------
 
 // From 979px and below, show a button to toggle navbar contents
-@import "../../less-232/responsive-navbar.less";
+@import "../../less/responsive-navbar.less";
