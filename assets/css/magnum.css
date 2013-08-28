@@ -326,7 +326,6 @@ section {
 #header-308-site .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
   background:none;
   color: #ffffff;
-  font-size:16px;
 }
 #header-308-site .navbar-inverse .nav li.dropdown > a:hover .caret,
 #header-308-site .navbar-inverse .nav li.dropdown > a:focus .caret {
