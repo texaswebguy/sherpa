@@ -195,7 +195,7 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			$('header .navbar-search').removeClass('active');
 			$('section').fadeIn();			
 		});
-		this.listen('.navbar-search input', 'keyup', function(event){
+		this.listen('input.search-tags', 'keyup', function(event){
 			if($(event.currentTarget).val()) {
 				$('header .navbar-search').addClass('active');
 				if($(event.currentTarget).val().length > 2) {
