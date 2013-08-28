@@ -471,7 +471,7 @@ section {
 	content:"\21";
 	font-family:"icon-ui";
 	color:#fff;
-	top:40px;
+	top:41px;
 	left:35%;
 	font-size:25px;
 }
@@ -498,5 +498,12 @@ section {
 #popover-example-HTML > ul > li > a {
 	float:left;
 	margin-right:20px;
+}
+
+.home-only {
+	display:none;
+}
+#home .home-only {
+	display:block;
 }
 
