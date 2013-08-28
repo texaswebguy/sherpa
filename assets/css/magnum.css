@@ -148,6 +148,8 @@ header {
 	position:fixed;
 	z-index:1030;
 	height:auto;
+  left:0;
+  top:0;
 }
 header .navbar {
     position:relative;

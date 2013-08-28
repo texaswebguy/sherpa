@@ -4994,14 +4994,19 @@ a:focus {
   float: none;
   overflow: hidden;
 }
-/*
-div {
-  float: left;
-  width: 100%;
-  margin-bottom: 0px;
-  display: block;
+@media only screen and (max-width: 767px) {
+  .wrapper {
+    width: 100%;
+  }
 }
-*/
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
 h1,
 h2,
 h3,
@@ -8082,10 +8087,6 @@ input[type="submit"].btn.btn-mini {
   border: 1px solid #eeeeee;
   position: relative;
 }
-.alert > [class^=icon] {
-  float: left;
-  font-size: 20px;
-}
 .alert h4 {
   color: #444444;
 }
@@ -8914,6 +8915,53 @@ input[type="submit"].btn.btn-mini {
   .progress.progress-status .bar span {
     left: 2%;
   }
+}
+.accordion {
+  margin-bottom: 20px;
+}
+.accordion-group {
+  margin-bottom: 2px;
+  border: none;
+  border-bottom: 1px solid #cccccc;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+}
+.accordion-heading {
+  border-bottom: 0;
+  font-size: 17.5px;
+  position: relative;
+  padding-left: 15px;
+}
+.accordion-toggle:before {
+  font-family: 'icon-ui';
+  font-size: 20px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content: "\2a";
+  color: #007db8;
+  position: absolute;
+  top: 7px;
+  left: 0;
+}
+.accordion-toggle.collapsed:before {
+  content: "\28";
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+.accordion-toggle {
+  cursor: pointer;
+}
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid #cccccc;
 }
 [class^=icon-] {
   font-family: 'icon-small';
