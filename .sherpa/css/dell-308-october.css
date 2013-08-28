@@ -6376,10 +6376,6 @@ li.dropdown .dropdown-menu {
 .well-gray-dark h6 {
   color: #ffffff;
 }
-.gray-dark a:not(.btn),
-.well-gray-dark a:not(.btn) {
-  color: #ffffff;
-}
 .gray-dark h4.well-title,
 .well-gray-dark h4.well-title,
 .gray-dark h4.container-title,
@@ -6418,10 +6414,6 @@ li.dropdown .dropdown-menu {
 .well-gray-dark-stroke h6 {
   color: #444444;
 }
-.gray-dark-stroke a:not(.btn),
-.well-gray-dark-stroke a:not(.btn) {
-  color: #007db8;
-}
 .gray-dark-stroke h4.well-title,
 .well-gray-dark-stroke h4.well-title,
 .gray-dark-stroke h4.container-title,
@@ -6459,10 +6451,6 @@ li.dropdown .dropdown-menu {
 .well-gray-medium h6 {
   color: #ffffff;
 }
-.gray-medium a:not(.btn),
-.well-gray-medium a:not(.btn) {
-  color: #ffffff;
-}
 .gray-medium h4.well-title,
 .well-gray-medium h4.well-title,
 .gray-medium h4.container-title,
@@ -6498,10 +6486,6 @@ li.dropdown .dropdown-menu {
 .well-gray h5,
 .gray h6,
 .well-gray h6 {
-  color: #ffffff;
-}
-.gray a:not(.btn),
-.well-gray a:not(.btn) {
   color: #ffffff;
 }
 .gray h4.well-title,
@@ -6542,10 +6526,6 @@ li.dropdown .dropdown-menu {
 .well-gray-stroke h6 {
   color: #444444;
 }
-.gray-stroke a:not(.btn),
-.well-gray-stroke a:not(.btn) {
-  color: #007db8;
-}
 .gray-stroke h4.well-title,
 .well-gray-stroke h4.well-title,
 .gray-stroke h4.container-title,
@@ -6582,10 +6562,6 @@ li.dropdown .dropdown-menu {
 .gray-light h6,
 .well-gray-light h6 {
   color: #444444;
-}
-.gray-light a:not(.btn),
-.well-gray-light a:not(.btn) {
-  color: #007db8;
 }
 .gray-light h4.well-title,
 .well-gray-light h4.well-title,
@@ -6624,10 +6600,6 @@ li.dropdown .dropdown-menu {
 .well-gray-very-light h6 {
   color: #444444;
 }
-.gray-very-light a:not(.btn),
-.well-gray-very-light a:not(.btn) {
-  color: #007db8;
-}
 .gray-very-light h4.well-title,
 .well-gray-very-light h4.well-title,
 .gray-very-light h4.container-title,
@@ -6665,10 +6637,6 @@ li.dropdown .dropdown-menu {
 .well-white h6 {
   color: #444444;
 }
-.white a:not(.btn),
-.well-white a:not(.btn) {
-  color: #007db8;
-}
 .white h4.well-title,
 .well-white h4.well-title,
 .white h4.container-title,
@@ -6705,10 +6673,6 @@ li.dropdown .dropdown-menu {
 .well-white-stroke h5,
 .white-stroke h6,
 .well-white-stroke h6 {
-  color: #ffffff;
-}
-.white-stroke a:not(.btn),
-.well-white-stroke a:not(.btn) {
   color: #ffffff;
 }
 .white-stroke h4.well-title,
@@ -6749,10 +6713,6 @@ li.dropdown .dropdown-menu {
 .well-blue h6 {
   color: #ffffff;
 }
-.blue a:not(.btn),
-.well-blue a:not(.btn) {
-  color: #ffffff;
-}
 .blue h4.well-title,
 .well-blue h4.well-title,
 .blue h4.container-title,
@@ -6791,10 +6751,6 @@ li.dropdown .dropdown-menu {
 .well-blue-stroke h6 {
   color: #007db8;
 }
-.blue-stroke a:not(.btn),
-.well-blue-stroke a:not(.btn) {
-  color: #007db8;
-}
 .blue-stroke h4.well-title,
 .well-blue-stroke h4.well-title,
 .blue-stroke h4.container-title,
@@ -6830,10 +6786,6 @@ li.dropdown .dropdown-menu {
 .well-navyblue h5,
 .navyblue h6,
 .well-navyblue h6 {
-  color: #ffffff;
-}
-.navyblue a:not(.btn),
-.well-navyblue a:not(.btn) {
   color: #ffffff;
 }
 .navyblue h4.well-title,
@@ -6874,10 +6826,6 @@ li.dropdown .dropdown-menu {
 .well-navyblue-stroke h6 {
   color: #003758;
 }
-.navyblue-stroke a:not(.btn),
-.well-navyblue-stroke a:not(.btn) {
-  color: #007db8;
-}
 .navyblue-stroke h4.well-title,
 .well-navyblue-stroke h4.well-title,
 .navyblue-stroke h4.container-title,
@@ -6914,10 +6862,6 @@ li.dropdown .dropdown-menu {
 .well-green h5,
 .green h6,
 .well-green h6 {
-  color: #ffffff;
-}
-.green a:not(.btn),
-.well-green a:not(.btn) {
   color: #ffffff;
 }
 .green h4.well-title,
@@ -6958,10 +6902,6 @@ li.dropdown .dropdown-menu {
 .well-green-stroke h6 {
   color: #7ab800;
 }
-.green-stroke a:not(.btn),
-.well-green-stroke a:not(.btn) {
-  color: #007db8;
-}
 .green-stroke h4.well-title,
 .well-green-stroke h4.well-title,
 .green-stroke h4.container-title,
@@ -6998,10 +6938,6 @@ li.dropdown .dropdown-menu {
 .well-yellow h5,
 .yellow h6,
 .well-yellow h6 {
-  color: #ffffff;
-}
-.yellow a:not(.btn),
-.well-yellow a:not(.btn) {
   color: #ffffff;
 }
 .yellow h4.well-title,
@@ -7042,10 +6978,6 @@ li.dropdown .dropdown-menu {
 .well-yellow-stroke h6 {
   color: #f2af00;
 }
-.yellow-stroke a:not(.btn),
-.well-yellow-stroke a:not(.btn) {
-  color: #007db8;
-}
 .yellow-stroke h4.well-title,
 .well-yellow-stroke h4.well-title,
 .yellow-stroke h4.container-title,
@@ -7082,10 +7014,6 @@ li.dropdown .dropdown-menu {
 .well-orange h5,
 .orange h6,
 .well-orange h6 {
-  color: #ffffff;
-}
-.orange a:not(.btn),
-.well-orange a:not(.btn) {
   color: #ffffff;
 }
 .orange h4.well-title,
@@ -7126,10 +7054,6 @@ li.dropdown .dropdown-menu {
 .well-orange-stroke h6 {
   color: #ff7700;
 }
-.orange-stroke a:not(.btn),
-.well-orange-stroke a:not(.btn) {
-  color: #007db8;
-}
 .orange-stroke h4.well-title,
 .well-orange-stroke h4.well-title,
 .orange-stroke h4.container-title,
@@ -7166,10 +7090,6 @@ li.dropdown .dropdown-menu {
 .well-red h5,
 .red h6,
 .well-red h6 {
-  color: #ffffff;
-}
-.red a:not(.btn),
-.well-red a:not(.btn) {
   color: #ffffff;
 }
 .red h4.well-title,
@@ -7210,10 +7130,6 @@ li.dropdown .dropdown-menu {
 .well-red-stroke h6 {
   color: #dc5034;
 }
-.red-stroke a:not(.btn),
-.well-red-stroke a:not(.btn) {
-  color: #007db8;
-}
 .red-stroke h4.well-title,
 .well-red-stroke h4.well-title,
 .red-stroke h4.container-title,
@@ -7249,10 +7165,6 @@ li.dropdown .dropdown-menu {
 .well-red-dark h5,
 .red-dark h6,
 .well-red-dark h6 {
-  color: #ffffff;
-}
-.red-dark a:not(.btn),
-.well-red-dark a:not(.btn) {
   color: #ffffff;
 }
 .red-dark h4.well-title,
@@ -7293,10 +7205,6 @@ li.dropdown .dropdown-menu {
 .well-red-dark-stroke h6 {
   color: #ce1126;
 }
-.red-dark-stroke a:not(.btn),
-.well-red-dark-stroke a:not(.btn) {
-  color: #007db8;
-}
 .red-dark-stroke h4.well-title,
 .well-red-dark-stroke h4.well-title,
 .red-dark-stroke h4.container-title,
@@ -7333,10 +7241,6 @@ li.dropdown .dropdown-menu {
 .well-berry h5,
 .berry h6,
 .well-berry h6 {
-  color: #ffffff;
-}
-.berry a:not(.btn),
-.well-berry a:not(.btn) {
   color: #ffffff;
 }
 .berry h4.well-title,
@@ -7377,10 +7281,6 @@ li.dropdown .dropdown-menu {
 .well-berry-stroke h6 {
   color: #b7295a;
 }
-.berry-stroke a:not(.btn),
-.well-berry-stroke a:not(.btn) {
-  color: #007db8;
-}
 .berry-stroke h4.well-title,
 .well-berry-stroke h4.well-title,
 .berry-stroke h4.container-title,
@@ -7417,10 +7317,6 @@ li.dropdown .dropdown-menu {
 .well-purple h5,
 .purple h6,
 .well-purple h6 {
-  color: #ffffff;
-}
-.purple a:not(.btn),
-.well-purple a:not(.btn) {
   color: #ffffff;
 }
 .purple h4.well-title,
@@ -7461,10 +7357,6 @@ li.dropdown .dropdown-menu {
 .well-purple-stroke h6 {
   color: #6e2585;
 }
-.purple-stroke a:not(.btn),
-.well-purple-stroke a:not(.btn) {
-  color: #007db8;
-}
 .purple-stroke h4.well-title,
 .well-purple-stroke h4.well-title,
 .purple-stroke h4.container-title,
@@ -7501,10 +7393,6 @@ li.dropdown .dropdown-menu {
 .well-teal h5,
 .teal h6,
 .well-teal h6 {
-  color: #ffffff;
-}
-.teal a:not(.btn),
-.well-teal a:not(.btn) {
   color: #ffffff;
 }
 .teal h4.well-title,
@@ -7544,10 +7432,6 @@ li.dropdown .dropdown-menu {
 .teal-stroke h6,
 .well-teal-stroke h6 {
   color: #71c6c1;
-}
-.teal-stroke a:not(.btn),
-.well-teal-stroke a:not(.btn) {
-  color: #007db8;
 }
 .teal-stroke h4.well-title,
 .well-teal-stroke h4.well-title,
