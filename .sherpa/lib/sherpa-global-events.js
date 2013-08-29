@@ -70,7 +70,7 @@ Sherpa.globalEvents = {
 			viewModel.breadcrumb_path = Sherpa.globalEvents.breadcrumb();
 			viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 			console.log("change page")
-			window.setTimeout(function(){Sherpa.globalEvents.updateAside();},500);
+			//window.setTimeout(function(){Sherpa.globalEvents.updateAside();},500);
 		});
 
 		

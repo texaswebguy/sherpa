@@ -343,6 +343,31 @@ abbr[data-original-title] {
 
 
 
+
+// Collapsible Items (Dell 308 only)
+//=======================================================================================================================
+
+
+// When uising triangles inside of a collapse scenario the size is reduced
+
+[data-toggle="collapse"] .icon-ui-triangledown, [data-toggle="collapse"] .icon-ui-triangleup {
+  font-size:14px;
+}
+
+a[data-toggle="collapse"] {
+  text-decoration:none;
+}
+
+.hide-expanded, .collapsed .show-collapsed {
+  display:block;
+}
+
+.collapsed .hide-expanded, .show-collapsed {
+  display:none;
+}
+
+
+
 // forms
 //=======================================================================================================================
 
@@ -1455,7 +1480,7 @@ border: @defaultStroke solid @purple !important;
 // creating a default-button mixin to reuse in the pager
 
 .default-button() {
-    padding: 7px 11px;
+  padding: 7px 11px;
   margin-bottom: 0; // For input.btn
   font-size: @baseFontSize;
   line-height: @baseLineHeight * .9;
@@ -1498,6 +1523,7 @@ border: @defaultStroke solid @purple !important;
     .opacity(65);
     .box-shadow(none);
   }
+
 }
 
 
@@ -3752,16 +3778,16 @@ div.table-bordered table {
 }
 .top-offset {
   &-mini {
-    .bottom-offset-margin(.5);
+    .top-offset-margin(.5);
   }
   &-small {
-    .bottom-offset-margin(1);
+    .top-offset-margin(1);
   }
   &-medium {
-    .bottom-offset-margin(2);
+    .top-offset-margin(2);
   }
   &-large {
-    .bottom-offset-margin(3);
+    .top-offset-margin(3);
   }
 }
 

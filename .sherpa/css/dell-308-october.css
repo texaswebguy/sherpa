@@ -5276,6 +5276,21 @@ abbr[data-original-title] {
 .text-navyblue {
   color: #003758 !important;
 }
+[data-toggle="collapse"] .icon-ui-triangledown,
+[data-toggle="collapse"] .icon-ui-triangleup {
+  font-size: 14px;
+}
+a[data-toggle="collapse"] {
+  text-decoration: none;
+}
+.hide-expanded,
+.collapsed .show-collapsed {
+  display: block;
+}
+.collapsed .hide-expanded,
+.show-collapsed {
+  display: none;
+}
 form {
   margin: 0;
 }
@@ -10118,16 +10133,16 @@ div.table-bordered table.table-bordered {
   margin-bottom: 60px;
 }
 .top-offset-mini {
-  margin-bottom: 10px;
+  margin-top: 10px;
 }
 .top-offset-small {
-  margin-bottom: 20px;
+  margin-top: 20px;
 }
 .top-offset-medium {
-  margin-bottom: 40px;
+  margin-top: 40px;
 }
 .top-offset-large {
-  margin-bottom: 60px;
+  margin-top: 60px;
 }
 @-ms-viewport {
   width: device-width;

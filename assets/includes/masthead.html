@@ -1,0 +1,53 @@
+
+    <div class="gray-medium da-all ta-all ma-all">
+        <div class="wrapper">
+          <div class="pull-left">
+            pre-header here
+          </div>
+          <div class="pull-right">
+            pre-header here
+          </div>
+        </div>
+    </div>
+    <div class="blue da-all ta-all ma-all">
+      <div class="wrapper">
+      <div class="navbar navbar-inverse">
+        <div class="navbar-inner">
+          <div class="container" style="width: auto;">
+            <a class="btn btn-navbar" data-toggle="collapse" data-target="#navbar-sample-code-2 .nav-collapse">
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+              <span class="icon-bar"></span>
+            </a>
+            <a class="brand" href="#!/start"><i aria-hidden="true" class="icon-ui-dell"></i> Sherpa</a>
+            <div class="nav-collapse">
+              <ul data-bind="foreach: $__page__.children" class="nav">
+                <!-- ko if: val('desc') -->
+                <li data-bind="css: {active: isVisible}">
+                  <a data-bind="page-href: $data">
+                      <span data-bind="text: val('desc')"></span>
+                  </a>
+                </li>
+                <!-- /ko -->
+              </ul>
+              <form class="navbar-search pull-right" action="">
+                <input type="text" class="search-query span2" placeholder="Search">
+              </form>
+
+            </div><!-- /.nav-collapse -->
+          </div>
+        </div><!-- /navbar-inner -->
+      </div><!-- /navbar -->
+    </div>
+    <div class="gray-light da-all ta-all ma-all">
+        <div class="wrapper">
+          sub-nav
+        </div>
+    </div>
+
+
+  </div>
+
+
+
+  
