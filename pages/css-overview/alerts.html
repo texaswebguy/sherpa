@@ -1,0 +1,60 @@
+    <div class="wrapper">
+      <h2>Alerts</h2>
+      <div id="alerts-example-HTML">
+      <div class="da-all ta-all ma-all">
+<div class="alert alert-block">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <h4 class="alert-heading">Alert block with title</h4>
+  <p>Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.</p>
+</div>
+      </div>
+      <div class="da-all ta-all ma-all">
+        <div class="da1-da4 ta1-ta3 ma-all">
+<div class="alert alert-error">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <strong>Error:</strong> Change a few things up and try submitting again.
+</div>
+        </div>
+        <div class="da5-da8 ta4-ta6 ma-all">
+<div class="alert alert-success">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
+</div>
+        </div>
+        <div class="da9-da12 ta7-ta9 ma-all">
+<div class="alert alert-info">
+  <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+  <strong>Information:</strong> This alert needs your attention, but it's not super important.
+</div>
+        </div>
+      </div>
+    </div>
+       <div class="da-all ta-all ma-all">
+          <div class="alert alert-info">
+            <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
+            <h4 class="alert-heading">Dell 308 Style Guidelines:</h4>
+            <p>Any icon placed inside the alerts block will be automatically hidden.</p>
+          </div>
+
+          <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#alerts-HTML">
+            <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+          </button>
+          <p>&nbsp;</p>
+
+          <div class="collapse" id="alerts-HTML">
+  
+            <ul data-bind="foreach: $('#alerts-example-HTML .alert')" class="unstyled">
+                <li>
+                  <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+                    Copy HTML
+                  </button>
+                  <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+                </li>
+            </ul>
+
+          </div>
+          <hr/>
+        </div>
+
+      </div>
+    </div>

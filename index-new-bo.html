@@ -35,9 +35,10 @@
 <a id="top" name="top"></a>
 
 <header id="header-308-site" class="affix da-all ta-all ma-all" data-bind="include:'assets/includes/masthead.html'"></header>
-<section class="page da-all ta-all ma-all">
+<div class="page da-all ta-all ma-all">
 
-  <div data-bind="page: {id: 'start', fx:'fade'}" class="da-all ta-all ma-all home-page">
+  <div data-bind="page: {id: 'start'}" class="da-all ta-all ma-all home-page">
+
     <div class="wrapper">
       <div class="da8-da12  ta1-ta5 top-offset-large">
         <div class="well-large blue">
@@ -74,7 +75,7 @@
 
   </div><!--page: Start -->
 
-  <div data-bind="page: {id: 'getting-started', desc:'Getting Started', fx:'fade'}">
+  <div data-bind="page: {id: 'getting-started', desc:'Getting Started'}">
 
     <div class="wrapper">
 
@@ -86,7 +87,7 @@ hello lets get started!
 
   </div><!--page: Getting Started -->
 
-  <div data-bind="page: {id: 'css-overview', desc:'CSS Overview', fx:'fade', sourceOnShow:'pages/css-overview/index.html'}">
+  <div data-bind="page: {id: 'css-overview', desc:'CSS Overview', sourceOnShow:'pages/css-overview/index.html'}">
 
   </div><!--page: CSS Overview -->
 
@@ -94,7 +95,8 @@ hello lets get started!
 
   </div><!--page: CSS Overview -->
 
-</section>
+
+</div>
 
      <!-- Footer
       ================================================== -->

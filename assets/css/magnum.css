@@ -1,63 +1,63 @@
 
 .do-not-use:after {
-	content:"NOT USED IN DELL 308";
-	font-size:14px;
-	font-family:"Trebuchet MS";
-	color:white;
-	background:red;
-	height:20px;
-	padding:10px;
-	text-align:center;
-	-webkit-border-radius: 3px;
-  	-moz-border-radius: 3px;
-  	border-radius: 3px;
+  content:"NOT USED IN DELL 308";
+  font-size:14px;
+  font-family:"Trebuchet MS";
+  color:white;
+  background:red;
+  height:20px;
+  padding:10px;
+  text-align:center;
+  -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 td.do-not-use:after {
-	content:none;
+  content:none;
 }
 td.do-not-use {
-	content:none;
-	opacity:.2;
+  content:none;
+  opacity:.2;
 }
 th.do-not-use {
-	position:relative;
+  position:relative;
 }
 th.do-not-use:after{
-	position:absolute;
-	left:0%;
-	top:30px;
-	font-size:10px;
-	height:inherit;
-	padding:2px;
-	text-align:center;
-	-webkit-border-radius: 3px;
-  	-moz-border-radius: 3px;
-  	border-radius: 3px;
+  position:absolute;
+  left:0%;
+  top:30px;
+  font-size:10px;
+  height:inherit;
+  padding:2px;
+  text-align:center;
+  -webkit-border-radius: 3px;
+    -moz-border-radius: 3px;
+    border-radius: 3px;
 }
 div.do-not-use {
-	opacity:.2;
+  opacity:.2;
 }
 div.do-not-use:after {
 display:none;
 }
 
 h1.do-not-use:after {
-	position:relative;
-	margin-left:10px;
-	position:relative;
-	top:-5px;
+  position:relative;
+  margin-left:10px;
+  position:relative;
+  top:-5px;
 }
 tr.do-not-use {
-	position:relative;
+  position:relative;
 }
 tr.do-not-use td {
-		opacity:.2;
+    opacity:.2;
 }
 tr.do-not-use:after {
-	opacity:1;
-	position:absolute;
-	left:0;
-	margin-top:10px;
+  opacity:1;
+  position:absolute;
+  left:0;
+  margin-top:10px;
 }
 
 
@@ -93,53 +93,53 @@ ol.linenums li {
 }
 
 .large-icons li {
-	height:50px;
+  height:50px;
 }
 .large-icons [class^=icon-large] {
-	font-size:36px;
+  font-size:36px;
 }
 
 .the-icons li {
-	width:24%;
-	display:inline-block;
+  width:24%;
+  display:inline-block;
 }
 
 .tablet .the-icons li {
-	width:32%;
+  width:32%;
 }
 .mobile .the-icons li {
-	width:49%;
+  width:49%;
 }
 
 #icons [data-toggle="popover"] {
-	cursor:help;
+  cursor:help;
 }
 
 #icons li {
-	margin-bottom:10px;
+  margin-bottom:10px;
 }
 [class*=change-container] > li > a {
-	color:#fff;
+  color:#fff;
 }
 [class*=change-container] > li > a.white,
 [class*=change-container] > li > a.gray-light,
 [class*=change-container] > li > a.gray-very-light
  {
-	color:#444;
+  color:#444;
 }
 [class*=change-container] {
-	left: -43px;
-	position: absolute;
-	top: -6px;
+  left: -43px;
+  position: absolute;
+  top: -6px;
 }
 .wrapper
  {
-	overflow:visible;
+  overflow:visible;
 }
 header {
-	position:fixed;
-	z-index:1030;
-	height:auto;
+  position:fixed;
+  z-index:1030;
+  height:auto;
   left:0;
   top:0;
 }
@@ -161,7 +161,7 @@ header .navbar-search .icon-ui-closecircle {
     display:none;
 }
 header .navbar-search.active .icon-ui-closecircle {
-	display:block;
+  display:block;
     position:absolute;
     right:5px;
     top:7px;
@@ -171,11 +171,11 @@ header .navbar-search.active .icon-ui-closecircle {
     color:#ccc;
 }
 section#typography {
-	margin-top:90px;
+  margin-top:90px;
 };
 section {
-	position:relative;
-	z-index:0;
+  position:relative;
+  z-index:0;
 }
 
 /*  ================ Clint's Code ===============  */
@@ -447,16 +447,16 @@ section {
 
 /* small arrow divit code in mathead */
 #header-308-site .nav > li.active > a {
-	position:relative;
+  position:relative;
 }
 #header-308-site .nav > li.active > a:after {
-	position:absolute;
-	content:"\21";
-	font-family:"icon-ui";
-	color:#fff;
-	top:41px;
-	left:35%;
-	font-size:25px;
+  position:absolute;
+  content:"\21";
+  font-family:"icon-ui";
+  color:#fff;
+  top:41px;
+  left:35%;
+  font-size:25px;
 }
 #header-308-site .dropdown-menu {
   border-top: 1px solid #ffffff;
@@ -470,24 +470,24 @@ section {
 /*==================================================*/
 
 #modal-example-HTML {
-	background: rgba(0,0,0,0.8);
-	padding:100px 0;
+  background: rgba(0,0,0,0.8);
+  padding:100px 0;
 }
 
 #popover-example-HTML {
-	overflow:hidden;
-	margin-bottom:20px;
+  overflow:hidden;
+  margin-bottom:20px;
 }
 #popover-example-HTML > ul > li > a {
-	float:left;
-	margin-right:20px;
+  float:left;
+  margin-right:20px;
 }
 
 .home-only {
-	display:none;
+  display:none;
 }
 #home .home-only {
-	display:block;
+  display:block;
 }
 
 
@@ -496,7 +496,7 @@ section {
 
 /* new page (bo) ==================================================*/
 
-section.page {
+div.page {
   margin-top:94px;
   margin-bottom:20px;
 }
@@ -511,6 +511,29 @@ section.page {
 }
 .white.translucent {
     background-color: rgba(255, 255, 255, .90);
+}
+
+.sub-nav {
+  position:fixed;
+  z-index:1029;
+  top: 94px;
+  border-bottom: 1px solid #ccc;
+}
+.sub-nav ul li {
+  float:left;
+  width:20%;
+    margin-bottom:10px;
+
+}
+.sub-nav ul li a {
+  padding:5px 15px;
+}
+.sub-nav ul li a:hover {
+  background:#CCE7F3;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+  text-decoration:none;
 }
 
 /*Pager js transitions */

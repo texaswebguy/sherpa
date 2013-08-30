@@ -4,6 +4,10 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	//add any specific data/functions to view model
 	addToViewModel = {
+		showPage: function() {
+			$('#'+this.id).show();
+		}
+
 	};
 
 	addToConfigs = {
@@ -259,11 +263,12 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		this.listen('a','click', function(event){
 			var target = $(event.currentTarget).attr('href');
 			if(target.slice(0,1) === "#" && target.slice(0,3) != "#!/"){
-				console.log("hello")
+				console.log("hello - is not accordion", !$(target).hasClass('accordion-toggle'))
 				event.preventDefault();
-				$.scrollTo(target,300,{offset:{top:-($('section.page').css('margin-top').replace(/px/,''))}});	
+				$.scrollTo(target,300,{offset:{top:-(parseInt($('div.page').css('margin-top').replace(/px/,''))+10)}});	
 			}
 		});
+
 	});
 
 	Sherpa.scope('[id*=-variations]', function(){
@@ -340,7 +345,6 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 		});
 	});
-
 
 
 

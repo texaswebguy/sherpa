@@ -24,7 +24,7 @@
               <ul data-bind="foreach: $__page__.children" class="nav">
                 <!-- ko if: val('desc') -->
                 <li data-bind="css: {active: isVisible}">
-                  <a data-bind="page-href: $data">
+                  <a data-bind="page-href: $data" data-toggle="collapse" data-target=".sub-nav">
                       <span data-bind="text: val('desc')"></span>
                   </a>
                 </li>
@@ -39,13 +39,6 @@
         </div><!-- /navbar-inner -->
       </div><!-- /navbar -->
     </div>
-    <div class="gray-light da-all ta-all ma-all">
-        <div class="wrapper">
-          sub-nav
-        </div>
-    </div>
-
-
   </div>
 
 
