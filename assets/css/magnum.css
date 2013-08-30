@@ -504,6 +504,7 @@ div.page {
 #css-overview section#typography {
   margin-top:0;
 }
+
 .home-page {
   background: url(../img/mountain.jpg) no-repeat;
   background-size: cover;
@@ -535,6 +536,33 @@ div.page {
   border-radius: 3px;
   text-decoration:none;
 }
+
+
+@media only screen and (max-width:979px) {
+  /* clint - this is a start to make the mobile/tablet nav - durty durty durty lol */
+  #header-308-site .wrapper {
+  }
+  #header-308-site .navbar {
+
+  }
+  #header-308-site .nav-collapse, .nav-collapse.collapse {
+    background:#eee;
+    position: fixed;
+    width: 100%;
+    left: 0;
+    top: 92px;
+  }
+  #header-308-site .navbar-inverse .btn-navbar {
+    margin-right:-20px;
+  }
+  #header-308-site .nav-collapse.collapse li > a {
+    color: #444;
+    text-shadow: none;
+  }
+
+}
+
+
 
 /*Pager js transitions */
 
