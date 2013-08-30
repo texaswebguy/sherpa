@@ -32,26 +32,24 @@
 </head>
 
 <body>
-  <header id="header-308-site" class="blue da-all ta-all ma-all">
-   <div class="gray-medium da-all ta-all ma-all">
-
-    <div class="wrapper">
-      <span class="da1-da6 ">Dell 308 Theme</span>
-      <span class="da7-da12 text-right">BS2.3.2</span>
+ <header id="header-308-site" class="blue da-all ta-all ma-all">
+    <div class="gray-medium da-all ta-all ma-all">
+      <div class="wrapper">
+        <span class="da1-da6 ">Dell 308 Theme</span>
+        <span class="da7-da12 text-right">BS2.3.2</span>
+      </div>
     </div>
-
-   </div>
-    <div class="wrapper">
+  <div class="wrapper">
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
           <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i> Sherpa</a>
-            <div class="nav-collapse ta-hide ma-hide">
+            </button>
+            <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i>Sherpa</a>
+            <div class="nav-collapse collapse">
               <ul class="nav">
                 <li class="dropdown active">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
@@ -59,24 +57,18 @@
                     <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
                   </ul>
                 </li>
-                <li class="dropdown">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
-                  <ul class="dropdown-menu" data-bind="foreach: $('section')">
-                    <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
-                  </ul>
-                </li>
               </ul>
               <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                  <div class="input-append span12">
-                      <input type="text" class="search-query search-tags" placeholder="Search tag or keyword">
-                      <button type="submit" class="btn pull-right"><i class="icon-search"></i></button>
-                  </div>
+                <div class="input-append span12">
+                  <input type="text" class="search-query search-tags hide-phone" placeholder="Search tag or keyword">
+                  <button type="submit" class="btn pull-right"><i class="icon-search"></i></button>
+                </div>
               </form>
-            </div><!-- /.nav-collapse -->
+            </div>
           </div>
         </div><!-- /navbar-inner -->
-      </div><!-- /navbar -->
-    </div>
+      </div> <!-- navbar navbar-inverse -->
+    </div> <!-- wrapper close -->
   </header>
   
 
