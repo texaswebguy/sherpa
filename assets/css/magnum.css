@@ -185,9 +185,9 @@ section {
 	z-index:0;
 }
 
-/*  ================ Clint's Code ===============  */
-
-
+/*  ================ Clint's Really Bad Code ===============  */
+/*
+@media only screen and (min-width:768px) {
 #header-308-site .navbar-inner {
   min-height: 40px;
   padding-left: 20px;
@@ -382,8 +382,6 @@ section {
   border-color: #006c9f #006c9f #003852;
   border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
   *background-color: #006c9f;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
 }
 #header-308-site .navbar-inverse .btn-navbar:hover,
 #header-308-site .navbar-inverse .btn-navbar:focus,
@@ -403,10 +401,11 @@ section {
   font-size: 14px;
 }
 #header-308-site input.search-query {
-  padding-right: 55px;
+  padding-right: 15px;
 }
 #header-308-site .form-search  {
-  width:300px; 
+  width:300px;
+  margin-right: 20px; 
 }
 #header-308-site .form-search .input-append .btn {
   right: -35px;
@@ -449,10 +448,10 @@ section {
 #header-308-site li.dropdown .dropdown-menu {
   margin: 15px 0 0 -15px;
 }
-
+*/
 /*  =============================================  */
 
-/* small arrow divit code in mathead */
+/* small arrow divit code in masthead */
 #header-308-site .nav > li.active > a {
 	position:relative;
 }
@@ -474,6 +473,24 @@ section {
   border-radius: 0px 0px 6px 6px;
 
 }
+}
+
+
+/*@media only screen and (max-width:767px) {
+
+#header-308-site .dropdown-menu {
+	width:100%;
+	border:none;
+
+  	border-top: 1px solid #ffffff;
+  	-webkit-border-radius: none;
+  	-moz-border-radius: none;
+  	border-radius: none;
+
+}
+
+ }*/
+
 /*==================================================*/
 
 #modal-example-HTML {
@@ -497,3 +514,22 @@ section {
 	display:block;
 }
 
+/*============== Clint's All New Code ==============*/
+
+header#header-308-site .navbar {
+    position:relative;
+    padding-left:0px;
+    padding-top:20px;
+}
+
+@media only screen and (max-width:767px){
+
+header#header-308-site {
+    padding-top:0px;
+    margin-left:-20px;
+}
+
+
+}
+
+/*==================================================*/
