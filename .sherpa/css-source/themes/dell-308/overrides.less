@@ -32,14 +32,21 @@ a:focus {
   float: none; 
   overflow:hidden;
 }
-/*
-div {
-  float: left;
-  width: 100%;
-  margin-bottom: 0px;
-  display: block;
+@media only screen and (max-width:@mobileMaxWidth) {
+  .wrapper {
+    width: 100%;
+  }
 }
-*/
+
+div {
+  margin: 0;
+  padding: 0;
+  border: 0;
+  font-size: 100%;
+  font: inherit;
+  vertical-align: baseline;
+}
+
 
 // Base CSS
 // Type
@@ -336,6 +343,31 @@ abbr[data-original-title] {
 
 
 
+
+// Collapsible Items (Dell 308 only)
+//=======================================================================================================================
+
+
+// When uising triangles inside of a collapse scenario the size is reduced
+
+[data-toggle="collapse"] .icon-ui-triangledown, [data-toggle="collapse"] .icon-ui-triangleup {
+  font-size:14px;
+}
+
+a[data-toggle="collapse"] {
+  text-decoration:none;
+}
+
+.hide-expanded, .collapsed .show-collapsed {
+  display:block;
+}
+
+.collapsed .hide-expanded, .show-collapsed {
+  display:none;
+}
+
+
+
 // forms
 //=======================================================================================================================
 
@@ -461,7 +493,7 @@ input[type="checkbox"]:focus {
 // Indent the labels to position radios/checkboxes as hanging
 .radio,
 .checkbox {
-  margin-bottom: 20px;
+  margin-bottom:  @baseLineHeight;
 }
 
 // Radios and checkboxes on same line
@@ -551,8 +583,6 @@ select:focus:invalid {
   .clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
-
-
 // HELP TEXT
 // ---------
 
@@ -560,11 +590,6 @@ select:focus:invalid {
 .help-inline {
   color: @gray; // same as body text for dell-308
 }
-
-
-
-
-
 
 
 // INPUT GROUPS
@@ -1455,7 +1480,7 @@ border: @defaultStroke solid @purple !important;
 // creating a default-button mixin to reuse in the pager
 
 .default-button() {
-    padding: 7px 11px;
+  padding: 7px 11px;
   margin-bottom: 0; // For input.btn
   font-size: @baseFontSize;
   line-height: @baseLineHeight * .9;
@@ -1498,6 +1523,7 @@ border: @defaultStroke solid @purple !important;
     .opacity(65);
     .box-shadow(none);
   }
+
 }
 
 
@@ -1933,10 +1959,7 @@ input[type="submit"].btn {
   background-color: @alertBackground;
   border: 1px solid @grayLight;
   position:relative;
-  >[class^=icon] {
-    float: left;
-    font-size:20px;
-  }
+
   h4 {
     // Specified for the h4 to prevent conflicts of changing @headingsColor
     color: @grayDarker;
@@ -1963,9 +1986,6 @@ input[type="submit"].btn {
 
 }
 
-// Alternate styles
-// -------------------------
-
 .insert-icon(@content, @color) {
     content: @content;
     font-family:"icon-small";
@@ -1975,6 +1995,11 @@ input[type="submit"].btn {
     left:10px;
     font-size:20px;
 }
+
+// Alternate styles
+// -------------------------
+
+
 .alert-success {
   background-color: @alertBackground;
   border-color: @grayLight;
@@ -2668,6 +2693,58 @@ input[type="submit"].btn {
 // accordion
 //=======================================================================================================================
 
+// Parent container
+.accordion {
+  margin-bottom: @baseLineHeight;
+}
+
+// Group == heading + body
+.accordion-group {
+  margin-bottom: 2px;
+  border: none;
+  border-bottom: 1px solid @dellGrayStroke;
+  .border-radius(0);
+}
+.accordion-heading {
+  border-bottom: 0;
+  font-size:@fontSizeLarge;
+  position:relative;
+  padding-left:15px;
+}
+.accordion-toggle:before {
+  font-family: 'icon-ui';
+  font-size:20px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content:"\2a";
+  color:@blue;
+  position: absolute;
+  top:7px;
+  left:0;
+}
+.accordion-toggle.collapsed:before {
+  content:"\28";
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+
+// General toggle styles
+.accordion-toggle {
+  cursor: pointer;
+}
+
+// Inner needs the styles because you can't animate properly with any styles on the element
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid @dellGrayStroke;;
+}
 
 
 // carousel
@@ -3701,16 +3778,16 @@ div.table-bordered table {
 }
 .top-offset {
   &-mini {
-    .bottom-offset-margin(.5);
+    .top-offset-margin(.5);
   }
   &-small {
-    .bottom-offset-margin(1);
+    .top-offset-margin(1);
   }
   &-medium {
-    .bottom-offset-margin(2);
+    .top-offset-margin(2);
   }
   &-large {
-    .bottom-offset-margin(3);
+    .top-offset-margin(3);
   }
 }
 

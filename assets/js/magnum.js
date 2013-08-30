@@ -4,6 +4,10 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	//add any specific data/functions to view model
 	addToViewModel = {
+		showPage: function() {
+			$('#'+this.id).show();
+		}
+
 	};
 
 	addToConfigs = {
@@ -205,20 +209,30 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 				$('header .navbar-search').removeClass('active');
 			}
 		});
-		this.listen('.nav a', 'click', function(event){
+		this.listen('.nav.old a', 'click', function(event){
 			event.preventDefault();
 			var self = $(event.currentTarget), target = self.attr('href');
-			$('header .nav li').removeClass('active');
-			if(!self.parents('.nav > li.dropdown')) {
-				self.parent().addClass('active');
-				console.log("not in dropdown")
-			} else {
-				self.parents('.nav > li.dropdown').addClass('active');
-				self.parent().addClass('active');
+			switch(target) {
+
+				case "#download-theme":
+				location.href = "dell-308-theme.zip";
+				break;
+				case "#known-issues":
+				location.href = "https://github.com/DellGDC/sherpa/tree/magnum-308-theme-october/.sherpa/css-source/themes/dell-308";
+				break;
+				default:
+					$('header .nav li').removeClass('active');
+					if(!self.parents('.nav > li.dropdown')) {
+						self.parent().addClass('active');
+					} else {
+						self.parents('.nav > li.dropdown').addClass('active');
+						self.parent().addClass('active');
+					}
+					if(target != "#" && target) {
+						$.scrollTo(target,300,{offset:{top:-90}});
+					}		
 			}
-			if(target != "#" && target) {
-				$.scrollTo(target,300,{offset:{top:-90}});
-			}
+
 		});
 	});
 
@@ -245,10 +259,28 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			$('section').fadeIn();
 		}
 	}
+	Sherpa.scope('*', function(){
+		this.listen('a','click', function(event){
+			var target = $(event.currentTarget).attr('href');
+			if(target.slice(0,1) === "#" && target.slice(0,3) != "#!/"){
+				event.preventDefault();
+				$.scrollTo(target,300,{offset:{top:-(parseInt($('div.page').css('margin-top').replace(/px/,''))+10)}});	
+			}
+		});
+		this.listen('#header-308-site ul.nav > li.active > a','mouseover', function(event){
+			$('.sub-nav').collapse('show')
+		});
+
+	});
+	Sherpa.scope('#header-308-site ', function(){
+		this.listen('ul.nav > li.active > a','mouseover', function(event){
+			$('.sub-nav').collapse('show');
+		});
+	});	
 	Sherpa.scope('[id*=-variations]', function(){
 		this.listen('input[type="radio"],input[type="checkbox"]', 'click', function(event){
-			console.log("hello")
 			var self = $(event.currentTarget)[0], id = $(self).attr('id');
+
 			switch(id) {
 				case "tabs-bordered":
 					$('#tabbable-example-HTML .tabbable').addClass('tabs-bordered');
@@ -319,6 +351,8 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 		});
 	});
+
+
 
 });
 

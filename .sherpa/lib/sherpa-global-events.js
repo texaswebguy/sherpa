@@ -70,11 +70,11 @@ Sherpa.globalEvents = {
 			viewModel.breadcrumb_path = Sherpa.globalEvents.breadcrumb();
 			viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 			console.log("change page")
-			window.setTimeout(function(){Sherpa.globalEvents.updateAside();},500);
+			//window.setTimeout(function(){Sherpa.globalEvents.updateAside();},500);
 		});
 
 		
-		Sherpa.scope(".accordion", function(){
+/*		Sherpa.scope(".accordion", function(){
 			this.listen("[data-toggle=collapse]","click",function(event){
 				event.preventDefault();
 				event.stopPropagation(); //overrides the default bootstrap action for the accordion version
@@ -90,7 +90,7 @@ Sherpa.globalEvents = {
 				}
 			});
 		});
-
+*/
 
 		Sherpa.scope("*", function(){
 			//This is a temporary fix to data-toggle=tooltip

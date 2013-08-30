@@ -204,7 +204,7 @@ Sherpa.ready("sherpai18n", function(){
 	/*bootstrap accordion behavior modification
 		Simplifies the specification of an accordion by just adding an accordion class arround a group of collapible links and panels
 	*/
-	$('.accordion [data-toggle=collapse]').click(function(event){
+	/*$('.accordion [data-toggle=collapse]').click(function(event){
 		event.preventDefault();
 		event.stopPropagation();
 		var accordion = {};
@@ -228,8 +228,10 @@ Sherpa.ready("sherpai18n", function(){
 
 		//TODO Add slide function
 
-	//global modal 
+	
 	});
+*/
+	//global modal 	
 	if(SHERPA.ENABLE_GLOBAL_MODAL) {
 		var b = document.getElementsByTagName('body')[0],
    		modal = "<div data-bind=\"component: {name:'modal',type:'global'}\"></div>";

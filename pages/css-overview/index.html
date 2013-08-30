@@ -1,77 +1,11 @@
-<!DOCTYPE html>
-<html lang="en">
+<div class="sub-nav collapse gray-light da-all ta-all ma-all visible-desktop">
+  <div class="wrapper">
+    <ul class="unstyled" data-bind="foreach: $('section')">
+      <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))" data-toggle="collapse" data-target=".sub-nav"></a></li>
+    </ul>
+  </div>
+</div>
 
-<head>
-	<meta charset="utf-8">
-    <title>Sherpa - Template</title>
-    <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    
-    <meta name="description" content="">
-    <meta name="author" content="">
-
-    <script type="text/javascript">
-        var SHERPA_CONFIG_OVERRIDES = {};
-
-		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/magnum_config.js";
-        /*
-			This is a place to overide sherpa default configurations for this html file.
-			To change the default configurations for all files in this folder please edit assets/config/global_config.js
-
-			WARNING: If you don't know what this is, don't touch it! Ask someone!
-
-			To learn more about configuration go to http://sherpa.gsdprototypes.com/configuration.html
-
-    	*/
-    </script>
-	<!-- Don't touch 
-	******************************************************************************** -->
-    <style>body {opacity: 0;}</style>
-	<script src=".sherpa/sherpa.js"></script>	
-	<!-- Sherpa js adds all the js and css files you need.
-	******************************************************************************** -->	
-</head>
-
-<body>
-  <header id="header-308-site" class="blue da-all ta-all ma-all">
-    <div class="wrapper">
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target="#header-308-site .nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i> Dell 308 Theme (BS2.3.2)</a>
-            <div class="nav-collapse">
-              <ul class="nav old">
-                <li class="dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
-                  <ul class="dropdown-menu" data-bind="foreach: $('section')">
-                    <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#download-theme">Download Theme <i aria-hidden="true" class="icon-small-save"></i></a>
-                </li>
-                <li>
-                  <a href="#known-issues">Known Issues</a>
-                </li>              
-              </ul>
-              <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                  <div class="input-append span12">
-                      <input type="text" class="search-query" placeholder="Search">
-                      <button type="submit" class="btn"><i class="icon-search"></i></button>
-                  </div>
-              </form>
-            </div><!-- /.nav-collapse -->
-          </div>
-        </div><!-- /navbar-inner -->
-      </div><!-- /navbar -->
-    </div>
-  </header>
-  
-<div data-bind="page: {id: 'start'}">
 
 <!-- Typography
 ================================================== -->
@@ -161,19 +95,3 @@
 <!-- Responsive
 ================================================== -->
 <section id="responsive-classes" class="da-all ta-all ma-all" data-bind="include: 'pages/css-overview/responsive-classes.html'"></section>
-
-</div><!--page-->
-
-     <!-- Footer
-      ================================================== -->
-
-      <footer id="footer" class="da-all ta-all ma-all">
-        <div class="wrapper">
-          <p class="pull-right"><a href="#top">Back to top</a></p>
-        </div>
-      </footer>
-
-    </div>
-
-</body>
-</html>
