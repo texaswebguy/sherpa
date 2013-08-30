@@ -216,13 +216,13 @@ section {
 #header-308-site .navbar .brand {
   float: left;
   display: block;
-  padding: 12px 10px 10px 5px;
-  margin-left: -20px;
-  font-size: 25px;
-  font-weight: none;
+  padding: 10px 20px 10px;
+  margin-left: 30px;
   font-family: 'museo-for-dell-300';
-  color: #ffffff;
-  text-shadow: none;
+  font-size: 25px;
+  font-weight: 200;
+  color: #007db8;
+  text-shadow: 0 1px 0 #ffffff;
 }
 #header-308-site .dropdown-toggle:after {
   position: relative;
@@ -444,29 +444,18 @@ section {
 */
 /*  =============================================  */
 
-/* small arrow divit code in masthead */
-#header-308-site .nav > li.active > a {
-  position:relative;
-}
-#header-308-site .nav > li.active > a:after {
-  position:absolute;
-  content:"\21";
-  font-family:"icon-ui";
-  color:#fff;
-  top:41px;
-  left:35%;
-  font-size:25px;
-}
+
 #header-308-site .dropdown-menu {
+/*  width:1920px;
+  margin-left: -250px;*/
   border-top: 1px solid #ffffff;
   *border-right-width: 1px;
   *border-bottom-width: 1px;
   -webkit-border-radius: 0px 0px 6px 6px;
   -moz-border-radius: 0px 0px 6px 6px;
   border-radius: 0px 0px 6px 6px;
+}
 
-}
-}
 
 
 /*@media only screen and (max-width:767px) {
@@ -514,6 +503,7 @@ header#header-308-site .navbar {
     position:relative;
     padding-left:0px;
     padding-top:20px;
+    margin-bottom: 0px;
 }
 
 
@@ -522,10 +512,12 @@ header#header-308-site .navbar {
   width: 100%;
   clear: both;
   padding-right: 20px;
+  padding-top: 12px;
 }
 
 #header-308-site .form-search .input-append .btn {
   right: -15px;
+  margin-top: 12px;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -543,15 +535,84 @@ header#header-308-site .navbar {
   border-radius: 3px;
 }
 
+#header-308-site .navbar-inverse .nav li.dropdown.open > .dropdown-toggle,
+#header-308-site .navbar-inverse .nav li.dropdown.active > .dropdown-toggle,
+#header-308-site .navbar-inverse .nav li.dropdown.open.active > .dropdown-toggle {
+  background-color: #007db8;
+  color: #cce7f3;
+  height:70px;
+  padding-top:25px;
+}
+#header-308-site .navbar-inner {
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background:none;
+  border:none;
+  -webkit-border-radius: none;
+  -moz-border-radius: none;
+  border-radius:none;
+  -webkit-box-shadow: none;
+  -moz-box-shadow: none;
+  box-shadow: none;
+  *zoom: 1;
+}
+
+#header-308-site .navbar .brand {
+  float: left;
+  display: block;
+  padding-top:25px;
+  padding-right:20px;
+  padding-bottom:10px;
+  margin-left: 25px;
+  font-family: 'museo-for-dell-300';
+  font-size: 25px;
+  font-weight: 200;
+  color: #ffffff;
+  text-shadow: 0 1px 0 #066694;
+}
+
+/* small arrow divit code in masthead */
+#header-308-site .nav > li.active > a {
+  position:relative;
+}
+#header-308-site .nav > li.active > a:after {
+  position:absolute;
+  content:"\21";
+  font-family:"icon-ui";
+  color:#fff;
+  top:41px;
+  left:35%;
+  font-size:25px;
+  padding-top:14px;
+}
+
+header#header-308-site .icon-ui-dell {
+    font-size:50px;
+    position:absolute;
+    margin-top: -25px;
+    margin-left:-10px;
+    padding: 10px 0px 0 0;
+}
+
+/*------------max-width:767px----------------*/
 @media only screen and (max-width:767px){
 
 header#header-308-site {
     padding-top:0px;
-    margin-left:-20px;
+}
+
+header#header-308-site .navbar {
+    position:relative;
+    padding-left:0px;
+    padding-top:20px;
+    margin-bottom: 17px;
 }
 
 
 }
+
+/*---------------------------------------------*/
 
 /*==================================================*/
 
@@ -606,6 +667,8 @@ div.page {
 @media only screen and (max-width:979px) {
   /* clint - this is a start to make the mobile/tablet nav - durty durty durty lol */
   #header-308-site .wrapper {
+      padding-left:20px;
+      padding-right:20px;
   }
   #header-308-site .navbar {
 
@@ -619,6 +682,7 @@ div.page {
   }
   #header-308-site .navbar-inverse .btn-navbar {
     margin-right:-20px;
+    margin-top: 22px;
   }
   #header-308-site .nav-collapse.collapse li > a {
     color: #444;
