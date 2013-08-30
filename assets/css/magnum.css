@@ -516,6 +516,33 @@ header#header-308-site .navbar {
     padding-top:20px;
 }
 
+
+#header-308-site .form-search .input-prepend,
+#header-308-site .form-search .input-append {
+  width: 100%;
+  clear: both;
+  padding-right: 20px;
+}
+
+#header-308-site .form-search .input-append .btn {
+  right: -15px;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  z-index: 3;
+}
+
+#header-308-site .form-search .search-query,
+#header-308-site .form-search .input-prepend .search-query,
+#header-308-site .form-search .input-append .search-query {
+  width: 100%;
+  height: 44px;
+  padding: 5px 50px 5px 10px;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+
 @media only screen and (max-width:767px){
 
 header#header-308-site {
