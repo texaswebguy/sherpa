@@ -1,7 +1,8 @@
 <div class="sub-nav collapse gray-light da-all ta-all ma-all visible-desktop">
+
   <div class="wrapper">
     <ul class="unstyled" data-bind="foreach: $('section')">
-      <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))" data-toggle="collapse" data-target=".sub-nav"></a></li>
+      <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))" data-toggle="collapse" data-target=".sub-nav" class="scroll"></a></li>
     </ul>
   </div>
 </div>
