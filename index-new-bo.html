@@ -39,7 +39,8 @@
 <div class="page da-all ta-all ma-all">
 
   <div data-bind="page: {id: 'start', source: 'pages/home/index.html', scrollToTop:true}" class="da-all ta-all ma-all home-page"></div><!--page: Start -->
-
+  
+  <!--page: Getting Started -->
   <div data-bind="page: {id: 'getting-started', desc:'Getting Started'}">
 
     <div class="wrapper">
@@ -50,15 +51,26 @@ hello lets get started!
 
 
 
-  </div><!--page: Getting Started -->
+  </div>
 
+
+  <!--page: CSS Overview -->
   <div data-bind="page: {id: 'css-overview', desc:'CSS Overview', sourceOnShow:'pages/css-overview/index.html'}">
 
-  </div><!--page: CSS Overview -->
+  </div>
+
+  <!--page: Style Guides-->
 
   <div data-bind="page: {id: 'styleguides', desc:'Style Guides', sourceOnShow:'pages/styleguides/index.html', afterShow: viewModel.equalizeThumbnails}">
 
-  </div><!--page: CSS Overview -->
+  </div>
+
+  <!--page: UX Prototyping -->
+
+  <div data-bind="page: {id: 'uxprototyping', desc:'Prototyping', sourceOnShow:'pages/prototyping/index.html'}">
+
+  </div>
+
 
 
 </div>
