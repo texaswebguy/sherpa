@@ -298,11 +298,12 @@ Sherpa.insertComponent = function(component_name, component_type, element, bindi
 
 Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
 
-	var filename,includeID,html, includeJS, values = valueAccessor(), scrollTo;
+	var filename,includeID,html, includeJS, values = valueAccessor(), scrollTo, afterShow;
 //console.log("values",values)
 	if(_.isObject(values)){
 		filename = values.sourceUrl;
 		scrollTo = values.bookmarkable;
+		afterShow = values.afterShow;
 	} else {
 		if(values) {
 			filename = values;
@@ -330,11 +331,13 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 							console.log("scrolling man!")
 							Sherpa.globalEvents.updateAside();
 							$.scrollTo('#'+$(element).attr('id'),300,{offset:{top:-60}});
-							
 						}
 					},1000);
 				}
 				ko.applyBindingsToDescendants(bindingContext, element);
+				if(afterShow) {
+					afterShow();
+				}
 			},
 			error: function( data, status ) {
 				//no module exists

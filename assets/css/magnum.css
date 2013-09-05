@@ -216,13 +216,13 @@ section {
 #header-308-site .navbar .brand {
   float: left;
   display: block;
-  padding: 12px 10px 10px 5px;
-  margin-left: -20px;
-  font-size: 25px;
-  font-weight: none;
+  padding: 10px 20px 10px;
+  margin-left: 30px;
   font-family: 'museo-for-dell-300';
-  color: #ffffff;
-  text-shadow: none;
+  font-size: 25px;
+  font-weight: 200;
+  color: #007db8;
+  text-shadow: 0 1px 0 #ffffff;
 }
 #header-308-site .dropdown-toggle:after {
   position: relative;
@@ -444,29 +444,18 @@ section {
 */
 /*  =============================================  */
 
-/* small arrow divit code in masthead */
-#header-308-site .nav > li.active > a {
-  position:relative;
-}
-#header-308-site .nav > li.active > a:after {
-  position:absolute;
-  content:"\21";
-  font-family:"icon-ui";
-  color:#fff;
-  top:41px;
-  left:35%;
-  font-size:25px;
-}
+
 #header-308-site .dropdown-menu {
+/*  width:1920px;
+  margin-left: -250px;*/
   border-top: 1px solid #ffffff;
   *border-right-width: 1px;
   *border-bottom-width: 1px;
   -webkit-border-radius: 0px 0px 6px 6px;
   -moz-border-radius: 0px 0px 6px 6px;
   border-radius: 0px 0px 6px 6px;
+}
 
-}
-}
 
 
 /*@media only screen and (max-width:767px) {
@@ -506,8 +495,6 @@ section {
 #home .home-only {
   display:block;
 }
-
-
 
 
 #header-308-site .navbar-inner {
@@ -814,6 +801,8 @@ section {
 /*==================================================*/
 
 
+/*---------------------------------------------*/
+
 /*==================================================*/
 
 
@@ -867,6 +856,8 @@ div.page {
 @media only screen and (max-width:979px) {
   /* clint - this is a start to make the mobile/tablet nav - durty durty durty lol */
   #header-308-site .wrapper {
+      padding-left:20px;
+      padding-right:20px;
   }
   #header-308-site .navbar {
 
@@ -880,6 +871,7 @@ div.page {
   }
   #header-308-site .navbar-inverse .btn-navbar {
     margin-right:-20px;
+    margin-top: 22px;
   }
   #header-308-site .nav-collapse.collapse li > a {
     color: #444;

@@ -12,7 +12,8 @@
     <script type="text/javascript">
         var SHERPA_CONFIG_OVERRIDES = {};
 
-		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/magnum_config.js";
+		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/magnum_config_old.js";
+
         /*
 			This is a place to overide sherpa default configurations for this html file.
 			To change the default configurations for all files in this folder please edit assets/config/global_config.js
@@ -37,7 +38,7 @@
 <header id="header-308-site" class="affix da-all ta-all ma-all" data-bind="include:'assets/includes/masthead.html'"></header>
 <div class="page da-all ta-all ma-all">
 
-  <div data-bind="page: {id: 'start', source: 'pages/home/index.html', fx:'fade'}" class="da-all ta-all ma-all home-page"></div><!--page: Start -->
+  <div data-bind="page: {id: 'start', source: 'pages/home/index.html', scrollToTop:true}" class="da-all ta-all ma-all home-page"></div><!--page: Start -->
 
   <div data-bind="page: {id: 'getting-started', desc:'Getting Started'}">
 
@@ -55,7 +56,7 @@ hello lets get started!
 
   </div><!--page: CSS Overview -->
 
-  <div data-bind="page: {id: 'styleguides', desc:'Style Guides'}">
+  <div data-bind="page: {id: 'styleguides', desc:'Style Guides', sourceOnShow:'pages/styleguides/index.html', afterShow: viewModel.equalizeThumbnails}">
 
   </div><!--page: CSS Overview -->
 
