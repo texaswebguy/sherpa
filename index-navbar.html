@@ -12,7 +12,12 @@
     <script type="text/javascript">
         var SHERPA_CONFIG_OVERRIDES = {};
 
-		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/navbar-config.js";
+	    SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/navbar-config.js";
+	    SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+	      { bootstrap: "http://open.gsdprototypes.com/sherpa/.sherpa/css/bootstrap.css" },
+	      { css_theme: "http://open.gsdprototypes.com/sherpa/.sherpa/css/dell-308-theme-v0.6.css" },
+	      { sherpa_uxmf: ".sherpa/css/sherpa-uxmf.css" }
+	    ];
         /*
 			This is a place to overide sherpa default configurations for this html file.
 			To change the default configurations for all files in this folder please edit assets/config/global_config.js
