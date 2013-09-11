@@ -34,7 +34,7 @@ SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 SHERPA.ASSETS_PATH = "assets/";
 SHERPA.DOCUMENTATION_PATH = "documentation/";
-SHERPA.DEFAULT_THEME = "dell-308-october";
+SHERPA.DEFAULT_THEME = "dell-308-theme";
 SHERPA.ENABLE_GLOBAL_MODAL = true;
 
 // i18n Configuration
