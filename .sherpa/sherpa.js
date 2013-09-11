@@ -242,7 +242,7 @@ Sherpa.ready("underscore", function() {
 		_.each(SHERPA.CSS_CORE_LOAD, function(css){
 			//theme implementation
 			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme" && !SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD){
-				if(!SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD.css_theme) {
+				if(SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD && !SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD.css_theme) {
 					css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
 					var theme_id = Sherpa.store("theme");
 					$('html').addClass("theme-"+theme_id);
