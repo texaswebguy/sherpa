@@ -260,23 +260,29 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 		}
 	}
 	Sherpa.scope('*', function(){
-		this.listen('a','click', function(event){
+		this.listen('a.scroll','click', function(event){
 			var target = $(event.currentTarget).attr('href');
 			if(target.slice(0,1) === "#" && target.slice(0,3) != "#!/"){
 				event.preventDefault();
 				$.scrollTo(target,300,{offset:{top:-(parseInt($('div.page').css('margin-top').replace(/px/,''))+10)}});	
 			}
 		});
-		this.listen('#header-308-site ul.nav > li.active > a','mouseover', function(event){
-			$('.sub-nav').collapse('show')
-		});
+		
 
 	});
+
+// ============== Sherpa Sub-nav Toggle ==================
+
 	Sherpa.scope('#header-308-site ', function(){
-		this.listen('ul.nav > li.active > a','mouseover', function(event){
-			$('.sub-nav').collapse('show');
+		// this.listen('ul.nav > li.active > a','mouseenter', function(event){
+		// 	$('.sub-nav').collapse('show');
+		// });
+
+		this.listen('ul.nav > li.active > a','click', function(event){
+			$('.sub-nav').collapse('toggle'); 
 		});
 	});	
+
 	Sherpa.scope('[id*=-variations]', function(){
 		this.listen('input[type="radio"],input[type="checkbox"]', 'click', function(event){
 			var self = $(event.currentTarget)[0], id = $(self).attr('id');

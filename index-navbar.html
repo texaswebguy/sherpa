@@ -12,7 +12,7 @@
     <script type="text/javascript">
         var SHERPA_CONFIG_OVERRIDES = {};
 
-		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/magnum_config.js";
+		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/navbar-config.js";
         /*
 			This is a place to overide sherpa default configurations for this html file.
 			To change the default configurations for all files in this folder please edit assets/config/global_config.js
@@ -43,22 +43,38 @@
       <div class="navbar navbar-inverse">
         <div class="navbar-inner">
           <div class="container">
-            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target=".nav-collapse">
+            <button type="button" class="btn btn-navbar" data-toggle="collapse" data-target="#header-308-site .nav-collapse, .sub-nav">
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
               <span class="icon-bar"></span>
             </button>
             <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i>Sherpa</a>
             <div class="nav-collapse collapse">
-              <ul class="nav">
-                <li class="dropdown active">
+              <ul class="nav"  style="outline: none;">
+                <li class="dropdown active" style="outline: none;">
                   <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
-                  <ul class="dropdown-menu" data-bind="foreach: $('section')">
-                    <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
-                  </ul>
+                  <div class="sub-nav collapse gray-very-light da-all ta-all ma-all">
+                    <div class="wrapper">
+                      <div class="sub-nav-item">
+                        
+                          <ul>
+                          <li><h5 class="gray-text">Header</h5></li>
+                            <li><a href="#">Typography</a></li>
+                            <li><a href="#">Navbar</a></li>
+                            <li><a href="#">Buttons</a></li>
+                            <li><a href="#">Forms</a></li>
+                            <li><a href="#">Tables</a></li>
+                            <li><a href="#">Miscellaneous</a></li>
+                            <li><a href="#">Pills</a></li>
+                            <li><a href="#">Containers</a></li>
+                            <li><a href="#">Customizations</a></li>
+                          </ul>
+                      </div>
+                    </div>
+                  </div>
                 </li>
               </ul>
-              <form id="custom-search-form" class="form-search form-horizontal pull-right">
+              <form id="custom-search-form" class="form-search form-horizontal pull-right visible-desktop">
                 <div class="input-append span12">
                   <input type="text" class="search-query search-tags hide-phone" placeholder="Search tag or keyword">
                   <button type="submit" class="btn pull-right"><i class="icon-search"></i></button>
