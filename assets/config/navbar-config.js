@@ -84,7 +84,7 @@ SHERPA.JS_CORE_LOAD = [
 	{ scrollTo: SHERPA.JS_LIB_PATH+"jquery.scrollTo.min.js"}, 
 	{ underscoreString: SHERPA.JS_LIB_PATH+"underscore.string.min.js"},
 	{ queryString: SHERPA.JS_LIB_PATH+"query-string.js"},
-	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-min.js"},,
+	{ bootstrap: SHERPA.JS_LIB_PATH+"bootstrap-3.js"},
 	{ csvParser: SHERPA.JS_LIB_PATH+"jquery.csv-0.71.min.js"},
 	{ jwerty: SHERPA.JS_LIB_PATH+"jwerty.js"},
 	{ showdown:SHERPA.JS_LIB_PATH+"showdown.js"},
