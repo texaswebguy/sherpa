@@ -6,9 +6,6 @@ Known conversions issues & instructions
 * ```center-text``` change to ```text-centered```
 * ```right-text``` change to ```text-right```
 * ```{color}-text``` change to ```text-{color}``` to match Bootstrap's text modifiers like ```text-centered``` - ```{color}-text``` will still work but it should not be used.
-* ```btn-primary``` change to ```btn-success```
-* ```btn-secondary``` change to ```btn-primary```
-* ```btn btn-tertiary``` change to ```btn```
 * ```rounded-large``` change to ```well-large```
 * ```rounded-small``` change to ```well```
 * ```rounded-large {color}-stroke``` change to ```well-large well-{color}-stroke```
