@@ -279,10 +279,12 @@ Sherpa.ready("underscore", function() {
 	// TODO everything breaks in IE right now so this is not much to worry about right now
 
 	if (Sherpa.browser.ie)  {
-		if($('html').hasClass('ie9')) {
+		if($('html').hasClass('ie9') && SHERPA.CSS_GRID_IE9) {
 			Sherpa.load({grid: SHERPA.CSS_GRID_IE9});
 		} else {
-			Sherpa.load({grid: SHERPA.CSS_GRID_LTIE9});
+			if(SHERPA.CSS_GRID_LTIE9) {
+				Sherpa.load({grid: SHERPA.CSS_GRID_LTIE9});
+			}
 		}
 
 		_.each(SHERPA.IE_JS_LOAD, function(lib){
@@ -291,8 +293,10 @@ Sherpa.ready("underscore", function() {
 		});
 
 	} else {
-		Sherpa.load({grid: SHERPA.CSS_GRID});
-		console.log("loaded css: grid");
+		if(SHERPA.CSS_GRID) {
+			Sherpa.load({grid: SHERPA.CSS_GRID});
+			console.log("loaded css: grid");			
+		}
 	}
 
 
