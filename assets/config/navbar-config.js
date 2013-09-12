@@ -1,4 +1,3 @@
-
 // Sherpa Configuration
 /*______________________________________________________________________________________
 
@@ -43,7 +42,6 @@ SHERPA.DEFAULT_LOCALE = "en";
 // Configuration of framework informational functions
 SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
 SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
-SHERPA.ENABLE_GRIDSET_OVERLAY = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
@@ -103,9 +101,7 @@ SHERPA.CSS_CORE_LOAD = [
 	{ css_theme: SHERPA.CSS_CORE_PATH+SHERPA.DEFAULT_THEME+".css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
-SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";
-SHERPA.CSS_GRID_IE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-9.cssgridset.css";
-SHERPA.CSS_GRID_LTIE9 = SHERPA.CSS_CORE_PATH+"grid/gridset-ie-lte8.css";
+
 SHERPA.CSS_LOCAL_APP = SHERPA.CSS_PATH+SHERPA.PROTOTYPE_CSS;
 
 
@@ -136,6 +132,5 @@ if(SHERPA.RUN_SHERPA_PROD){
 
 }
 
-SHERPA.GRIDSET_OVERLAY_JS = { gridsetOverlay: SHERPA.JS_LIB_PATH+"gridset-overlay.js"};
 SHERPA.NOTES_JS = { sherpaNotes: SHERPA.JS_LIB_PATH+"sherpa-notes.js"};
 
