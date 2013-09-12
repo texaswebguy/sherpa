@@ -237,20 +237,25 @@ Sherpa.ready("underscore", function() {
 	Sherpa.ready("sherpaUtils", function(){
 		if(Sherpa.urlQuery().theme) {
 			Sherpa.store("theme", Sherpa.urlQuery().theme);
+			console.log("theme in url: ", Sherpa.store("theme"))
+		} else {
+			if(SHERPA.DEFAULT_THEME && SHERPA.RESET_THEME_ONLOAD){
+				Sherpa.store("theme", SHERPA.DEFAULT_THEME);
+			} else {
+				Sherpa.store("theme", "bootstrap");
+			}
 		}
 
 		_.each(SHERPA.CSS_CORE_LOAD, function(css){
 			//theme implementation
 			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme" && !SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD){
-				if(SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD && !SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD.css_theme) {
-					css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
-					var theme_id = Sherpa.store("theme");
-					$('html').addClass("theme-"+theme_id);
-					$('#theme-logic-css').remove();
-					$('body').prepend('<style id="theme-logic-css">[class^=theme-only] {display:none;};[class^=theme-hide] {display:block;};.theme-'+theme_id+' .theme-only-'+theme_id+' {display:block;};.theme-'+theme_id+' .theme-hide-'+theme_id+' {display:none;}</style>');
-				}
+				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
+				var theme_id = Sherpa.store("theme");
+				$('html').addClass("theme-"+theme_id);
+				$('#theme-logic-css').remove();
+				$('body').prepend('<style id="theme-logic-css">[class^=theme-only] {display:none;};[class^=theme-hide] {display:block;};.theme-'+theme_id+' .theme-only-'+theme_id+' {display:block;};.theme-'+theme_id+' .theme-hide-'+theme_id+' {display:none;}</style>');
 			}
-			console.log("loaded css: ",_.keys(css)[0]);
+			console.log("loaded css: ",_.keys(css)[0], "-");
 			Sherpa.load(css);
 		});
 
