@@ -1,0 +1,709 @@
+
+//
+// Dell Magnum 308 Custom Variables
+// --------------------------------------------------
+//
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+@dellGrayDark:								#444;
+@dellGray:									#aaa;
+@dellGrayStroke:							#ccc;
+@dellGrayMedium:							#737373;
+@dellGrayLight:								#eee;
+@dellGrayVeryLight:							#f9f9f9;
+
+
+// Accent colors
+// -------------------------
+@dellBlue:									#007db8;
+@dellGreen:									#7ab800;
+@dellRed:									#dc5034;
+@dellRedDark:								#ce1126;
+@dellYellow:								#f2af00;
+@dellOrange:								#ff7700;
+@dellPurple:								#6e2585;
+@dellBerry:									#b7295a;
+@dellTeal:									#71c6c1;
+@dellNavy:									#003758;
+@dellAlertYellow:							#FFFFC9;
+@dellHighlightBlue:							#CCE7F3;
+@alertBackground:							@dellAlertYellow;
+
+//TODO need to add color variables used today for backward compatability
+
+// Custom Aside Colors
+// -------------------------
+@asideNavBackground:						@dellGrayDark;
+@asideNavBackgroundActive:					@dellBlue;
+
+
+// Typography
+// -------------------------
+
+@themeSansFontFamily:						'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei','微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+@themeSerifFontFamily:						'museo-for-dell-100', 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+@themeSerifFontFamilyBold					'museo-for-dell-300', @themeSansFontFamily;
+@themeMonoFontFamily						Monaco, Menlo, Consolas, "Courier New", monospace;
+
+@desktopMaxWidth:							1140px;
+@desktopMinWidth:							979px;
+@tabletMaxWidth:							980px;
+@mobileMaxWidth:							767px;
+@tabletMinWidth:							768px;
+
+@defaultStroke:								2px;
+@thinStroke:								1px;
+
+
+//
+// Bootstrap 3.0 Variables
+// --------------------------------------------------
+
+
+// Global values
+// --------------------------------------------------
+
+
+// Grays
+// -------------------------
+@black:											#000;
+@gray-darker:									@dellGrayDark; // dell-308 override
+@gray-dark:										@dellGrayMedium;  // dell-308 override
+@gray:											@dellGray; // dell-308 override
+@gray-light:									@dellGrayLight; // dell-308 override
+@gray-lighter:									@dellGrayVeryLight; // dell-308 override
+@white:											#fff;
+
+
+// Brand colors
+// -------------------------
+
+@brand-primary:									#428bca;
+@brand-success:									#5cb85c;
+@brand-warning:									#f0ad4e;
+@brand-danger:									#d9534f;
+@brand-info:									#5bc0de;
+
+
+// Accent colors
+// -------------------------
+@blue:											@dellBlue; // dell-308 override
+@blue-dark:										@dellNavy; // dell-308 override
+@green:											@dellGreen; // dell-308 override
+@red:											@dellRed; // dell-308 override
+@yellow:										@dellYellow; // dell-308 override
+@orange:										@dellOrange; // dell-308 override
+@pink:											pink; 
+@purple:										@dellPurple; // dell-308 override
+
+
+// Scaffolding
+// -------------------------
+@body-bg:										@white;
+@text-color:									@gray-darker; // dell-308 override
+
+
+// Links
+// -------------------------
+@link-color:									@blue; // dell-308 override
+@link-hover-color:								@blue; // dell-308 override
+
+
+// Typography
+// -------------------------
+@font-family-sans-serif:						@themeSansFontFamily; // dell-308 override
+@font-family-serif:								@themeSerifFontFamily; // dell-308 override
+@font-family-monospace:							@themeMonoFontFamily; // dell-308 override
+
+@font-size-base:								14px;
+@font-family-base:								@font-family-sans-serif;
+@line-height-base:								20px;
+@altFontFamily:									@font-family-serif;
+
+@headings-font-family:							@themeSerifFontFamilyBold; // dell-308 override
+@headings-font-weight:							normal;    // instead of browser default, bold
+@headings-color:								inherit; // empty to use BS default, @text-color
+@headings-line-height:							1.1;
+
+// Iconography
+// -------------------------
+@icon-font-path:							"../fonts/";
+@icon-font-name:							"glyphicons-halflings-regular";
+
+// Component sizing
+// -------------------------
+// Based on 14px font-size and 20px line-height
+
+@font-size-large:								@font-size-base * 1.25; // ~18px
+@font-size-small:								@font-size-base * 0.85; // ~12px
+@font-size-mini:								@font-size-base * 0.75; // ~11px
+
+@padding-base-vertical:							6px;
+@padding-base-horizontal:						12px;
+
+@padding-large-vertical:						10px;
+@padding-large-horizontal						16px;
+
+@padding-small-vertical:						5px;
+@padding-small-horizontal:						10px;
+
+@line-height-large:								1.33;
+@line-height-small:								1.5;
+
+@border-radius-base:							5px;
+@border-radius-large:							10px;
+@border-radius-small:							2px;
+
+@component-active-bg:							@brand-primary;
+
+@caret-width-base								4px;
+@caret-width-large:								5px;
+
+
+// Tables
+// -------------------------
+@table-cell-padding:							8px;
+@table-condensed-cell-padding:					5px;
+@table-bg:										transparent; // overall background-color
+@table-bg-accent:								@gray-light; // for striping
+@table-bg-hover:								@dellHighlightBlue; // for hover
+@table-border-color:							@dellGrayStroke; // table and cell border
+
+
+// Buttons
+// -------------------------
+@btn-font-weight:								normal
+
+@btn-default-color:								#444;
+@btn-default-bg:								#fefefe;
+@btn-default-bg-highlight:						#edf1f3;
+@btn-default-border:							#ddd;
+
+@btn-primary-color								#fff;
+@btn-primary-bg:								#118FD6;
+@btn-primary-bg-highlight:						#0F6ECA;
+@btn-primary-border:							#ddd;
+
+@btn-info-color:								#fff;
+@btn-info-bg:									@blue;
+@btn-info-bg-highlight:							spin(@btn-primary-bg, 20%);
+@btn-info-border:								#ddd;
+
+@btn-success-color:								#fff;
+@btn-success-bg:								@green;
+@btn-success-bg-highlight:						#499B1E;
+@btn-success-border:							#ddd;
+
+@btn-warning-color:								#fff;
+@btn-warning-bg:								lighten(@orange, 15%);
+@btn-warning-bg-highlight:						@orange;
+@btn-warning-border:							#ddd;
+
+@btn-danger-color:								#fff;
+@btn-danger-bg:									#ee5f5b;
+@btn-danger-bg-highlight:						#bd362f;
+@btn-danger-border:								#ddd;
+
+@btn-inverse-background:						#444;
+@btn-inverse-background-highlight:				@gray-darker;
+@btn-link-disabled-color:						@gray-light;
+
+
+// Forms
+// -------------------------
+@input-bg:										@white;
+@input-border:									@dellGrayStroke;
+@input-border-radius:							@border-radius-small + 1;
+@input-disabled-background:						@gray-lighter;
+@form-actions-bckground:						@dellGrayVeryLight;
+@input-height-base:								(@line-height-computed + (@padding-base-vertical * 2) + 2);
+@input-height-large:							(floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
+@input-height-small:							(floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+
+// Input placeholder text color
+// -------------------------
+@input-color-placeholder:						@gray-dark; //TODO need to check if this is right
+@legend-color:									@gray-dark;
+@legend-border-color:							#e5e5e5;
+@input-group-addon-bg:							@gray-lighter;
+@input-group-addon-border-color:				@input-border;
+
+
+// Dropdowns
+// -------------------------
+@dropdown-bg:									@white;
+@dropdown-border:								rgba(0,0,0,.2);
+@dropdown-divider-top:							#e5e5e5;
+@dropdown-dvider-bottom:						@white;
+@dropdown-fallback-border:						#ccc;
+@dropdown-divider-bg:							#e5e5e5;
+@dropdown-link-color:							@gray-dark;
+@dropdown-link-hover-color:						@gray-dark;
+@dropdown-link-active-color:					@gray-dark;
+@dropdown-link-active-bg:						dellHighlightBlue;
+@dropdown-link-hover-bg:						@dellHighlightBlue;
+
+
+// COMPONENT VARIABLES
+// --------------------------------------------------
+
+// Z-index master list
+// -------------------------
+// Used for a bird's eye view of components dependent on the z-axis
+// Try to avoid customizing these :)
+@zindex-navbar:									1000;
+@zindex-dropdown:								1000;
+@zindex-popover:								1010;
+@zindex-tooltip:								1030;
+@zindex-navbar-fixed:							1030;
+@zindex-modal-background:						1040;
+@zindex-modal:									9000;
+
+
+// Sprite icons path
+// -------------------------
+@icon-sprite-path:								"../img/glyphicons-halflings.png"; //TODO need to check if this is right
+@icon-white-sprite-path:							"../img/glyphicons-halflings-white.png"; //TODO need to check if this is right
+
+
+// Navbar
+// -------------------------
+@navbar-collapse-width:							979px;//TODO need to check if this is right
+@navbar-collapse-desktop-width:					@navbar-collapse-width + 1;//TODO need to check if this is right
+
+
+// Basics of a navbar
+// -------------------------
+@navbar-height:									40px;
+@navbar-text:									@blue;//TODO need to check if this is right
+@navbar-default-bg:								darken(@navbar-default-bg-highlight, 5%);
+@navbar-default-bg-highlight:					@white; //This could be wrong
+@navbar-default-border:							darken(@navbar-default-bg, 12%);
+@navbar-border-radius:							@border-radius-base;
+@navbar-padding-horizontal:						floor(@grid-gutter-width / 2);
+@navbar-padding-vertical: 						((@navbar-height - @line-height-computed) / 2);
+
+// Navbar links
+// -------------------------
+@navbar-default-link-color:						@blue;
+@navbar-default-link-hover-color:				@blue;
+@navbar-default-link-hover-bg:					transparent;
+@navbar-default-link-active-color:				@blue;
+@navbar-default-link-active-bg:					darken(@navbar-default-bg, 5%);
+@navbar-default-link-disabled-color:			#ccc;
+@navbar-default-link-disabled-bg:				transparent;
+
+// Navbar brand label
+// -------------------------
+@navbar-default-brand-color:					@navbar-default-link-color;
+@navbar-default-brand-hover-color:				darken(@navbar-default-link-color, 10%);
+@navbar-default-brand-hover-bg:					transparent;
+
+// Navbar toggle
+// -------------------------
+@navbar-default-toggle-hover-bg:				#ddd;
+@navbar-default-toggle-icon-bar-bg:				#ccc;
+@navbar-default-toggle-border-color:			#ddd;
+
+// Inverted navbar
+// -------------------------
+@navbar-inverse-color:							@white;
+@navbar-inverse-bg:								@blue;
+@navbar-inverse-bg-highlight:					@blue;
+@navbar-inverse-border:							transparent;
+@navbar-inverse-link-color:						@white;
+@navbar-inverse-link-hover-color:				@dellHighlightBlue;
+@navbar-inverse-link-colorActive:				@dellHighlightBlue;
+@navbar-inverse-link-hover-bg:					transparent;
+@navbar-inverse-link-active-bg:					@navbar-inverse-bg;
+
+// Inverted navbar brand label
+@navbar-inverse-brand-color:					@navbar-inverse-link-color;
+@navbar-inverse-brand-hover-color:				#fff;
+@navbar-inverse-brand-hover-bg:					transparent;
+
+// Inverted navbar search
+// Normal navbar needs no special styles or vars
+@navbar-inverse-search-bg:						@white;
+@navbar-inverse-search-bg-focus:				@white;
+@navbar-inverse-search-border:					@navbar-inverse-bg;
+@navbar-inverse-search-placeholder-color:		@gray;
+
+// Inverted navbar toggle
+@navbar-inverse-toggle-hover-bg:				#333;
+@navbar-inverse-toggle-icon-bar-bg:				#fff;
+@navbar-inverse-toggle-border-color:			#333;
+
+// Navs
+// -------------------------
+@nav-link-padding:								10px 15px;
+@nav-link-hover-bg:								@gray-lighter;
+
+@nav-disabled-link-color:						@gray-light;
+@nav-disabled-link-hover-color:					@gray-light;
+
+@nav-open-link-hover-color:						#fff;
+@nav-open-caret-border-color:					#fff;
+
+// Tabs
+// -------------------------
+@nav-tabs-border-color:							#ddd;
+
+@nav-tabs-link-hover-border-color:				@gray-lighter;
+
+@nav-tabs-active-link-hover-bg:					@body-bg;
+@nav-tabs-active-link-hover-color:				@gray;
+@nav-tabs-active-link-hover-border-color:		#ddd;
+
+@nav-tabs-justified-link-border-color:			#ddd;
+@nav-tabs-justified-active-link-border-color:	@body-bg;
+
+// Pills
+@nav-pills-active-link-hover-bg					@component-active-bg;
+@nav-pills-active-link-hover-color:				#fff;
+
+
+// Pagination
+// -------------------------
+@pagination-bg:									#fff;
+@pagination-border:								#ddd;
+@pagination-active-bg:							#f5f5f5;
+@pagination-active-color:						#fff;//TODO need to check if this is right
+@pagination-disabled-color:						@gray-light;//TODO need to check if this is right
+
+
+/ Pager
+// -------------------------
+@pager-border-radius:							15px;
+@pager-disabled-color:							@gray-light;
+
+
+// Jumbotron
+// -------------------------
+@jumbotron-padding:								30px;
+@jumbotron-bg:									@gray-lighter;
+@jumbotron-heading-color:						inherit;
+@jumbotron-color:								inherit;
+
+
+// Form states and alerts
+// -------------------------
+// TODO: These do not adhere to Dell-308 - They are not allowable so what should we do with these.
+@state-warning-text:							#c09853;
+@state-warning-bg:								#fcf8e3;
+@state-warning-border:							darken(spin(@state-warning-bg, -10), 3%);
+
+@state-danger-text:								#b94a48;
+@state-danger-bg:								#f2dede;
+@state-danger-border:							darken(spin(@state-danger-bg, -10), 3%);
+
+@state-success-text:							#468847;
+@state-success-bg:								#dff0d8;
+@state-success-border:							darken(spin(@state-success-bg, -10), 5%);
+
+@state-info-text:								#3a87ad;
+@state-info-bg:									#d9edf7;
+@state-info-border:								darken(spin(@state-info-bg, -10), 7%);
+
+
+// Tooltips
+// -------------------------
+@tooltip-max-width:								200px;
+@tooltip-color:									@white;
+@tooltip-bg										@gray-darker;
+@tooltip-arrow-width:							5px;
+@tooltip-arrow-color:							@tooltip-bg;
+
+// Popovers
+// -------------------------
+@popover-bg:									@white;
+@popover-max-width:								276px;
+@popover-border-color:							rgba(0,0,0,.2);
+@popover-fallback-border-color:					#ccc;
+@popover-title-bg:								@blue;
+@popover-arrow-width:							10px;
+@popover-arrow-color:							@white;
+@popover-arrow-outer-width:						@popover-arrow-width + 1;
+@popover-arrow-outer-color:						rgba(0,0,0,.25);
+
+
+// Labels
+// -------------------------
+
+@label-default-bg:								@gray-light;
+@label-primary-bg:								@brand-primary;
+@label-success-bg:								@brand-success;
+@label-info-bg:									@brand-info;
+@label-warning-bg:								@brand-warning;
+@label-danger-bg:								@brand-danger;
+@label-color:									#fff;
+@label-link-hover-color:						#fff;
+
+
+// Modals
+// -------------------------
+@modal-inner-padding:							20px;
+
+@modal-title-padding:							15px;
+@modal-title-line-height:						@line-height-base;
+
+@modal-content-bg:								#fff;
+@modal-content-border-color:					rgba(0,0,0,.2);
+@modal-content-fallback-border-color:			#999;
+
+@modal-backdrop-bg:								#000;
+@modal-header-border-color:						#e5e5e5;
+@modal-footer-border-color:						@modal-header-border-color;
+
+
+// Alerts
+// -------------------------
+@alert-padding:									15px;
+@alert-border-radius:							@border-radius-base;
+@alert-link-font-weight:						bold;
+
+@alert-success-bg:								@state-success-bg;
+@alert-success-text:							@state-success-text;
+@alert-success-border:							@state-success-border;
+
+@alert-info-bg:									@state-info-bg;
+@alert-info-text:								@state-info-text;
+@alert-info-border:								@state-info-border;
+
+@alert-warning-bg:								@state-warning-bg;
+@alert-warning-text:							@state-warning-text;
+@alert-warning-border:							@state-warning-border;
+
+@alert-danger-bg:								@state-danger-bg;
+@alert-danger-text:								@state-danger-text;
+@alert-danger-border:							@state-danger-border;
+
+
+// Progress bars
+// -------------------------
+@progress-bg:									#f5f5f5;
+@progress-bar-color:							#fff;
+@progress-bar-bg:								@brand-primary;
+@progress-bar-success-bg:						@brand-success;
+@progress-bar-warning-bg:						@brand-warning;
+@progress-bar-danger-bg:						@brand-danger;
+@progress-bar-info-bg:							@brand-info;
+
+
+// List group
+// -------------------------
+@list-group-bg:									#fff;
+@list-group-border:								#ddd;
+@list-group-border-radius:						@border-radius-base;
+
+@list-group-hover-bg:							#f5f5f5;
+@list-group-active-color:						#fff;
+@list-group-active-bg:							@component-active-bg;
+@list-group-active-border:						@list-group-active-bg;
+
+@list-group-link-color:							#555;
+@list-group-link-heading-color:					#333;
+
+
+// Panels
+// -------------------------
+@panel-bg:										#fff;
+@panel-inner-border:							#ddd;
+@panel-border-radius:							@border-radius-base;
+@panel-footer-bg:								#f5f5f5;
+
+@panel-default-text:							@gray-dark;
+@panel-default-border:							#ddd;
+@panel-default-heading-bg:						#f5f5f5;
+
+@panel-primary-text:							#fff;
+@panel-primary-border:							@brand-primary;
+@panel-primary-heading-bg:						@brand-primary;
+
+@panel-success-text:							@state-success-text;
+@panel-success-border:							@state-success-border;
+@panel-success-heading-bg:						@state-success-bg;
+
+@panel-warning-text:							@state-warning-text;
+@panel-warning-border:							@state-warning-border;
+@panel-warning-heading-bg:						@state-warning-bg;
+
+@panel-danger-text:								@state-danger-text;
+@panel-danger-border:							@state-danger-border;
+@panel-danger-heading-bg:						@state-danger-bg;
+
+@panel-info-text:								@state-info-text;
+@panel-info-border:								@state-info-border;
+@panel-info-heading-bg:							@state-info-bg;
+
+
+// Thumbnails
+// -------------------------
+@thumbnail-padding:								4px;
+@thumbnail-bg:									@body-bg;
+@thumbnail-border:								#ddd;
+@thumbnail-border-radius:						@border-radius-base;
+
+@thumbnail-caption-color:						@text-color;
+@thumbnail-caption-padding:						9px;
+
+
+// Wells
+// -------------------------
+@well-bg:										@gray-light;
+
+
+// Badges
+// -------------------------
+@badge-color:									#fff;
+@badge-link-hover-color							#fff;
+@badge-bg:										@gray-light;
+
+@badge-active-color:							@link-color;
+@badge-active-bg								#fff;
+
+@badge-font-weight:								bold;
+@badge-line-height:								1;
+@badge-border-radius:							10px;
+
+
+// Breadcrumbs
+// -------------------------
+@breadcrumb-bg:									#f5f5f5;
+@breadcrumb-color:								#ccc;
+@breadcrumb-active-color:						@gray-light;
+
+
+// Carousel
+// ------------------------
+
+@carousel-text-shadow:							0 1px 2px rgba(0,0,0,.6);
+@carousel-control-color:						#fff;
+@carousel-control-width:						15%;
+@carousel-control-opacity:						.5;
+@carousel-control-font-size:					20px;
+@carousel-indicator-active-bg:					#fff;
+@carousel-indicator-border-color:				#fff;
+@carousel-caption-color:						#fff;
+
+
+// Close
+// ------------------------
+@close-color:									#000;
+@close-font-weight:								bold;
+@close-text-shadow:								0 1px 0 #fff;
+
+
+// Type
+// ------------------------
+@text-muted:									@gray-light;
+@abbr-border-color								@gray-light;
+@headings-small-color:							@gray-light;
+@blockquote-small-color:						@gray-light;
+@blockquote-border-color:						@gray-lighter;
+@page-header-border-color:						@gray-lighter;
+
+
+// Hr border color
+// -------------------------
+@hr-border:										@dellGrayStroke;
+
+// Horizontal forms & lists
+// -------------------------
+@component-offset-horizontal:					180px;
+
+
+// Container sizes
+// --------------------------------------------------
+
+// Small screen / tablet
+@container-tablet:								((720px + @grid-gutter-width));
+
+// Medium screen / desktop
+@container-desktop:								((940px + @grid-gutter-width));
+
+// Large screen / wide desktop
+@container-lg-desktop:							((1140px + @grid-gutter-width));
+
+// Media queries breakpoints
+// --------------------------------------------------
+
+// Extra small screen / phone
+@screen-xs:										480px;
+@screen-phone:									@screen-xs;
+
+// Small screen / tablet
+@screen-sm:										768px;
+@screen-tablet:									@screen-sm;
+
+// Medium screen / desktop
+@screen-md:										992px;
+@screen-desktop:								@screen-md;
+
+// Large screen / wide desktop
+@screen-lg:										1200px;
+@screen-lg-desktop:								@screen-lg;
+
+// So media queries don't overlap when required, provide a maximum
+@screen-xs-max:									(@screen-sm - 1);
+@screen-sm-max:									(@screen-md - 1);
+@screen-md-max:									(@screen-lg - 1);
+
+
+// Grid system
+// --------------------------------------------------
+
+// Number of columns in the grid system
+@grid-columns:									12;
+// Padding, to be divided by two and applied to the left and right of all columns
+@grid-gutter-width								30px;
+// Point at which the navbar stops collapsing
+@grid-float-breakpoint:							@screen-tablet;
+
+
+
+
+
+
+// --------------------------------------------------
+// GRID
+// --------------------------------------------------
+
+//Need to verify the following below... is this old?
+// Default 940px grid
+// -------------------------
+@gridColumns:             12;
+@gridColumnWidth:         58.33px;
+@gridGutterWidth:         40px;
+@gridRowWidth:            (@gridColumns * @gridColumnWidth) + (@gridGutterWidth * (@gridColumns - 1));
+
+// 1200px min
+@gridColumnWidth1200:     58.33px;
+@gridGutterWidth1200:     40px;
+@gridRowWidth1200:        (@gridColumns * @gridColumnWidth1200) + (@gridGutterWidth1200 * (@gridColumns - 1));
+
+// 768px-979px
+@gridColumnWidth768:      46.75px;
+@gridGutterWidth768:      38px;
+@gridRowWidth768:         (@gridColumns * @gridColumnWidth768) + (@gridGutterWidth768 * (@gridColumns - 1));
+
+
+// Fluid grid
+// -------------------------
+@fluidGridColumnWidth:    percentage(@gridColumnWidth/@gridRowWidth);
+@fluidGridGutterWidth:    percentage(@gridGutterWidth/@gridRowWidth);
+
+// 1200px min
+@fluidGridColumnWidth1200:     percentage(@gridColumnWidth1200/@gridRowWidth1200);
+@fluidGridGutterWidth1200:     percentage(@gridGutterWidth1200/@gridRowWidth1200);
+
+// 768px-979px
+@fluidGridColumnWidth768:      percentage(@gridColumnWidth768/@gridRowWidth768);
+@fluidGridGutterWidth768:      percentage(@gridGutterWidth768/@gridRowWidth768);
+
+
+// --------------------------------------------------
