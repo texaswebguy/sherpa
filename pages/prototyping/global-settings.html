@@ -1,0 +1,88 @@
+					<h2 class="sherpa" data-bind="msg: 'title_grid_global_settings'">Global settings</h2>
+					<hr>
+					<h3 class="sherpa" data-bind="msg: 'text_grid_global_settings_requires_html5'">Requires HTML5 doctype</h3>
+				  <p class="sherpa" data-bind="msg: 'text_grid_global_settings_include_instructions'">Sherpa makes use of certain HTML elements and CSS properties that require the use of the HTML5 doctype. Include it at the beginning of all your projects.</p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
+&lt;!DOCTYPE html&gt;
+  ...
+&lt;/html&gt;
+</pre>
+
+				
+		<h3 class="sherpa">Typography and links</h3>
+          <p class="sherpa">Sherpa sets basic global display, typography, and link styles. Specifically, we:</p>
+          <ul class="sherpa">
+            <li>Remove <code>margin</code> on the body</li>
+            <li>Set <code>background-color: white;</code> on the <code>body</code></li>
+            <li>Use the <code>body</code> attribute to set the typographic base</li>
+            <li>Use the <code>h1 - h5</code> attributes as our header typographic base</li>
+            <!-- <li>Use the <code>small</code> and <code>bold</code> attributes to enhance the typographic style</li> -->
+            <!-- <li>Set the global link color via <code>@linkColor</code> and apply link underlines only on <code>:hover</code></li> -->
+          </ul>
+          <p class="sherpa">These styles can be found within <strong>sherpa_override.css</strong>.</p>
+
+          <h3 class="sherpa">Reset via Normalize</h3>
+          <p class="sherpa">Sherpa uses <a href="http://necolas.github.com/normalize.css/" target="_blank" >Normalize.css</a>, a project by <a href="http://twitter.com/necolas" target="_blank" >Nicolas Gallagher</a> that also powers the <a href="http://html5boilerplate.com" target="_blank" >HTML5 Boilerplate</a>. Normalize.css makes browsers render all elements more consistently and in line with modern standards. It precisely targets only the styles that need normalizing.</p>
+
+
+          <h3 class="sherpa">Responsive Classes</h3>
+          <p class="sherpa">Sherpa uses <a href="http://http://headjs.com" target="_blank" >head.js</a> to manage the loading of all javascript and css. Using head.js Sherpa adds responsive css classes to the html element which can help </p>
+          <p class="sherpa">The following classes are automatically assigned to the html element when the page loads and resizes:</p>
+          <ul class="sherpa">
+          		<li>desktop</li>
+          		<li>no-desktop</li>
+          		<li>tablet</li>
+          		<li>no-tablet</li>
+          		<li>mobile</li>
+          		<li>no-mobile</li>
+          </ul>
+
+          <h3 class="sherpa">Device Specific Classes</h3>
+          <p class="sherpa">The following classes are automatically assigned to the html element when the page loads:</p>
+          <ul class="sherpa">
+          		<li>touch</li>
+          		<li>no-touch</li>
+          		<li>retina</li>
+          		<li>no-retina</li>
+          </ul>
+
+          <h3 class="sherpa">Device Orientation Specific Classes</h3>
+          <p class="sherpa">The following classes are automatically assigned to the html element when the page orientation changes:</p>
+          <ul class="sherpa">
+          		<li>landscape</li>
+          		<li>no-lansdscape</li>
+          		<li>portrait</li>
+          		<li>no-portrait</li>
+          </ul>
+
+          <h3 class="sherpa">Browser Specific Classes</h3>
+          <p class="sherpa">The following classes are automatically assigned to the html element when the page loads:</p>
+
+
+          <ul class="sherpa">
+          		<li>borderimage: define an image to be used instead of the normal border of an element</li>
+          		<li>borderradius: support for rounded borders</li>
+          		<li>boxshadow: a simple shadow for a box</li>
+          		<li>cssreflections: a reflection effect for an object</li>
+          		<li>csstransforms: ability to scale</li>
+          		<li>csstransitions: ability to animate changes to CSS properties</li>
+          		<li>fontface: ability to use custom fonts</li>
+          		<li>multiplebgs: ability to define multiple background properties for a box</li>
+          		<li>opacity: transparency support</li>
+          		<li>rgba: allows to specify an opacity value for a color</li>
+          		<li>textshadow; a simple shadow for a text</li>
+          	</ul>
+          	<p class="sherpa">a "no-" version shows when above items are not supported</p>
+
+          <h3 class="sherpa">Localization attribute</h3>
+          <p class="sherpa">Based on the language/locale which the prototype is set for the "lang" attribute is automatically added to the html element.</p>
+
+          <h3 class="sherpa">Pseudo Authentication</h3>
+          <p class="sherpa">Sherpa has a pseudo authentication method that allows you to easily mock a logged-in scenario using two css classes.</p>
+          <ul class="sherpa">
+			<li>authenticated-only: Only displays when the prototype is :"authenticated"</li>
+			<li>not-authenticated-only: Only displays when the prototype is NOT :"authenticated"</li>
+		  </ul>
+          <p class="sherpa">See <a href="functions.html#pseudo-authentication">functions</a> to learn ways to trigger the pseudo authentication.</p>
+

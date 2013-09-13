@@ -12,5 +12,6 @@
 	"title_page_home":"Project Name",
 	"text_truncate_elipse":"...",
 	"text_truncate_more":"more",
-	"text_truncate_less":"less"
+	"text_truncate_less":"less",
+	"title_page_css_overview":"CSS Overview"
 }

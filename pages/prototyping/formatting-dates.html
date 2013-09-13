@@ -1,0 +1,36 @@
+
+					<h2 class="sherpa">Formating Dates</h2>
+					<p class="sherpa">
+						Prototypes have to be tested around the globe. Realistic rendering of date data is vital to the success of a test.
+						For this, Sherpa provides the "formatdate" tag.
+
+					</p>
+
+					<div class="sherpa-docs-example">
+					    <h2 data-bind="formatdate: '12/01/2014'"></h2>
+					</div>
+					<h4 class="sherpa">Markup:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">&lt;h2 data-bind="formatdate: '12/01/2014'">&lt;/h2></pre>
+					
+					<h4 class="sherpa">How it works:</h4>
+					<pre>
+formatdate is what is called a custom binding for knockout.js which is one of the foundations of the Sherpa framework.
+The formatdate tag takes in either a simple date string or an object with formating. If only the date is provided, the system will use the default date format as set in accordance to the configuration for each locale.
+
+You can right click this page, click on "inspect element" and then click on "console"
+Now type &gt; $root.config.default_date_format &lt;
+You will see the default date format configuration.
+
+
+Now, for real fun use the <a href="" data-bind="attr: {'href':location.origin+'?l=cn#!/functions/formating_dates'}">?l=cn</a> switch and watch your date format change.
+
+Don't forget to go back to <a href="" data-bind="attr: {'href':location.origin+'?l=en#!/functions/formating_dates'}">english</a>.
+
+
+NOTE: More options coming soon
+
+You can also pre-process a date in your app dataset (viewModel): "pre_processed_date" : Sherpa.formatDate('12/01/2014');
+
+&lt;span data-bind="text: 'pre_processed_date'">&lt;/span>
+
+					</pre>

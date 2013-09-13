@@ -96,7 +96,7 @@ SHERPA.PROTOTYPE_APP = "magnum.js";
 // CSS Files
 //______________________________________________________________________________________
 
-SHERPA.PROTOTYPE_CSS = "magnum.css";
+SHERPA.PROTOTYPE_CSS = "magnum-old.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },

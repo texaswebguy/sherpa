@@ -12,7 +12,8 @@
     <script type="text/javascript">
         var SHERPA_CONFIG_OVERRIDES = {};
 
-		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/magnum_config.js";
+		    SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/sherpa-config-0-6.js";
+
         /*
 			This is a place to overide sherpa default configurations for this html file.
 			To change the default configurations for all files in this folder please edit assets/config/global_config.js
@@ -20,6 +21,14 @@
 			WARNING: If you don't know what this is, don't touch it! Ask someone!
 
 			To learn more about configuration go to http://sherpa.gsdprototypes.com/configuration.html
+ 
+
+    SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD = [
+      { bootstrap: "http://open.gsdprototypes.com/sherpa/.sherpa/css/bootstrap.css" },
+      { css_theme: "http://open.gsdprototypes.com/sherpa/.sherpa/css/dell-308-theme-v0.6.css" },
+      { sherpa_uxmf: ".sherpa/css/sherpa-uxmf.css" }
+    ];
+
 
     	*/
     </script>
@@ -32,42 +41,52 @@
 </head>
 
 <body>
-  <header id="header-308-site" class="blue da-all ta-all ma-all">
-    <div class="wrapper">
-      <div class="navbar navbar-inverse">
-        <div class="navbar-inner">
-          <div class="container">
-            <a class="btn btn-navbar" data-toggle="collapse" data-target="#header-308-site .nav-collapse">
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-              <span class="icon-bar"></span>
-            </a>
-            <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i> Dell 308 Theme (BS2.3.2)</a>
-            <div class="nav-collapse">
-              <ul class="nav old">
-                <li class="dropdown active">
-                  <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
-                  <ul class="dropdown-menu" data-bind="foreach: $('section')">
-                    <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
-                  </ul>
-                </li>
-                <li>
-                  <a href="#download-theme">Download Theme <i aria-hidden="true" class="icon-small-save"></i></a>
-                </li>
-                <li>
-                  <a href="#known-issues">Known Issues</a>
-                </li>              
-              </ul>
-              <form id="custom-search-form" class="form-search form-horizontal pull-right">
-                  <div class="input-append span12">
-                      <input type="text" class="search-query" placeholder="Search">
-                      <button type="submit" class="btn"><i class="icon-search"></i></button>
-                  </div>
-              </form>
-            </div><!-- /.nav-collapse -->
+  <header id="header-308-site" class="da-all ta-all ma-all">
+    <div class="gray-medium da-all ta-all ma-all">
+        <div class="wrapper">
+          <div class="da1-da6 tb1-tb4 mb1-mb2">
+            Boostrap 2.3.2 Dell-308 Theme
           </div>
-        </div><!-- /navbar-inner -->
-      </div><!-- /navbar -->
+          <div class="da7-da12 tb5-tb8 mb3-mb4 text-right">
+            Sherpa v.0.6
+          </div>
+        </div>
+    </div>
+    <div class="blue da-all ta-all ma-all">
+      <div class="wrapper">
+        <div class="navbar navbar-inverse">
+          <div class="navbar-inner">
+            <div class="container">
+              <a class="btn btn-navbar" data-toggle="collapse" data-target="#header-308-site .nav-collapse">
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+                <span class="icon-bar"></span>
+              </a>
+              <a class="brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i> Sherpa</a>
+              <div class="nav-collapse">
+                <ul class="nav old">
+                  <li class="dropdown active">
+                    <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
+                    <ul class="dropdown-menu" data-bind="foreach: $('section')">
+                      <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
+                    </ul>
+                  </li>
+                  <li>
+                    <a href="#download-theme">Download Theme <i aria-hidden="true" class="icon-small-save"></i></a>
+                  </li>
+                  <li>
+                    <a href="#known-issues">Known Issues</a>
+                  </li>              
+                </ul>
+                <form class="navbar-search pull-right hide" action="">
+                  <input type="text" class="search-query input-large search-tags" placeholder="Search tag or keyword">
+                  <i aria-hidden="true" class="icon-ui-close"></i>
+                </form>
+              </div><!-- /.nav-collapse -->
+            </div>
+          </div><!-- /navbar-inner -->
+        </div><!-- /navbar -->
+      </div>
     </div>
   </header>
   
@@ -84,7 +103,7 @@
 
 <!-- Buttons
 ================================================== -->
-<section class="da-all ta-all ma-all" id="buttons" data-bind="include: 'pages/css-overview/buttons.html'"></section>
+<section class="da-all ta-all ma-all" id="buttons" data-bind="include: 'pages/css-overview/buttons-old.html'"></section>
 
 <!-- Forms
 ================================================== -->
@@ -96,7 +115,7 @@
 
 <!-- Breadcrumbs
 ================================================== -->
-<section id="breadcrumbs" class="da-all ta-all ma-all" data-bind="include: 'pages/css-overview/breadcrumbs.html'"></section>
+<section id="breadcrumbs" class="da-all ta-all ma-all top-offset-small" data-bind="include: 'pages/css-overview/breadcrumbs.html'"></section>
 
 <!-- Pagination
 ================================================== -->
@@ -163,6 +182,7 @@
 <section id="responsive-classes" class="da-all ta-all ma-all" data-bind="include: {'sourceUrl': 'pages/css-overview/responsive-classes.html', 'afterShow':pageInit}"></section>
 
 </div><!--page-->
+
 
      <!-- Footer
       ================================================== -->

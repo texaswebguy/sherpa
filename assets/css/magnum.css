@@ -798,6 +798,31 @@ section {
   border-radius: 0px 0px 6px 6px;
 
 }
+
+
+header#header-308-site .navbar-search {
+    position:relative;
+    right:-20px;
+}
+header#header-308-site .navbar-search input {
+    border-radius:3px;
+}
+header#header-308-site .navbar-search .icon-ui-close {
+    background:#ccc;
+    padding:5px;
+    border-radius:3px;
+    position:absolute;
+    right:3px;
+    top:4px;
+    cursor:pointer;
+    display:none;
+}
+header#header-308-site .navbar-search.active .icon-ui-close {
+    display:block;
+}
+header#header-308-site .navbar-search .icon-ui-close:hover {
+    background:#aaa;
+}
 /*==================================================*/
 
 
@@ -880,59 +905,8 @@ div.page {
 
 }
 
-
-
-/*Pager js transitions */
-
-.pagerjs-fx-zoom {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transform: rotate(0deg) scale(0.1);
-  -moz-transform: rotate(0deg) scale(0.1);
-  -ms-transform: rotate(0deg) scale(0.1);
-  -o-transform: rotate(0deg) scale(0.1);
-  transform: rotate(0deg) scale(0.1);
+#modal-example-HTML .modal {
+  position:relative;
+  clear:both;
+  z-index:0;
 }
-.pagerjs-fx-zoom-in {
-  -webkit-transform: rotate(0deg) scale(1);
-  -moz-transform: rotate(0deg) scale(1);
-  -ms-transform: rotate(0deg) scale(1);
-  -o-transform: rotate(0deg) scale(1);
-  transform: rotate(0deg) scale(1);
-}
-.pagerjs-fx-flip {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  -webkit-transform: rotatey(90deg) scale(1);
-  -moz-transform: rotatey(90deg) scale(1);
-  -ms-transform: rotatey(90deg) scale(1);
-  -o-transform: rotatey(90deg) scale(1);
-  transform: rotatey(90deg) scale(1);
-}
-.pagerjs-fx-flip-in {
-  -webkit-transform: rotatey(0deg) scale(1);
-  -moz-transform: rotatey(0deg) scale(1);
-  -ms-transform: rotatey(0deg) scale(1);
-  -o-transform: rotatey(0deg) scale(1);
-  transform: rotatey(0deg) scale(1);
-}
-.pagerjs-fx-popout-modal {
-  -webkit-transition: all 0.3s ease-in-out;
-  -moz-transition: all 0.3s ease-in-out;
-  -o-transition: all 0.3s ease-in-out;
-  transition: all 0.3s ease-in-out;
-  opacity: 0;
-}
-.pagerjs-fx-popout-modal-in {
-  -webkit-transform: scale(1.2);
-  -moz-transform: scale(1.2);
-  -ms-transform: scale(1.2);
-  -o-transform: scale(1.2);
-  transform: scale(1.2);
-  opacity: 1;
-}
->>>>>>> e6b99a49a924ba3c84de1d7ad9a56cb39ed4409b

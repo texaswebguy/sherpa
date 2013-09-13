@@ -34,7 +34,8 @@ SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 SHERPA.ASSETS_PATH = "assets/";
 SHERPA.DOCUMENTATION_PATH = "documentation/";
-SHERPA.DEFAULT_THEME = "dell-308-overrides";
+SHERPA.DEFAULT_THEME = "dell-308-theme-v0.6";
+SHERPA.RESET_THEME_ONLOAD = true;
 SHERPA.ENABLE_GLOBAL_MODAL = true;
 
 // i18n Configuration
@@ -91,12 +92,12 @@ SHERPA.JS_CORE_LOAD = [
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 
-SHERPA.PROTOTYPE_APP = "magnum.js";
+SHERPA.PROTOTYPE_APP = "sherpa-0-6.js";
 
 // CSS Files
 //______________________________________________________________________________________
 
-SHERPA.PROTOTYPE_CSS = "magnum.css";
+SHERPA.PROTOTYPE_CSS = "sherpa-0-6.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },

@@ -1,0 +1,50 @@
+<article id="creating_pages">	
+
+		<h2 class="sherpa">Creating a "Page"</h2>
+					<p>The Sherpa Starter Kit comes with a sample <a href="project_index.html" target="_new">project index page</a>.</p>
+
+					<p>A project index page has several critical functions:</p>
+					<ul>
+						<li>Initiates all Sherpa Prototype Framework functionality</li>
+						<li>Initiates all prototype data</li>
+						<li>Provides access to multiple page templates</li>
+						<li>Provides access to multiple virtual pages</li>
+						<li>Provides access to project information</li>
+					</ul>
+
+			        <p>You can build separate html files for each page in your prototype but using a project index page allows the framework to be much faster.</p>
+
+					<p>In the <a href="view-source:http://localhost:8080/project_index.html" target="_new">actual code</a> of the project index page you should see two different sections:</p>
+					<ul>
+						<li>Index page content</li>
+						<li>Other "pages" in the prototype</li>
+					</ul>					
+
+					<h4 class="sherpa">Index page content:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">Note this line:
+&lt;section data-bind="page: {id: 'start', title: 'project name'}"&gt;
+
+This section sets up all the links you see in the page when it loads.
+id: 'start' designates this section as the default page that will display when the page loads.
+</pre>
+
+					<h4 class="sherpa">Other "pages" in the prototype:</h4>
+					<pre data-bind="prettyprint: {}" class="prettyprint linenums">Note this link:
+&lt;a href="#!/templates/banner-left-nav"&gt;banner-left-nav &lt;/a&gt;
+
+This link's href points to an id called "banner-left-nav".
+However, you will notice "#!/" being used.  This tells the Sherpa system to look for a "page" with "templates" as id.
+
+Below this you will notice &lt;div data-bind="page: {id: 'templates'}"&gt;
+
+This sets up a group of pages that will share the same structure or common elements. You should notice that the first thing inside the template page is &lt;div data-bind="component: {name:'masthead', type:'starter-kit'}"&gt; and at the bottom you should see a call to the footer component.
+
+Both of these will render with any id present inside the template page.
+
+Now look under the masthead and you will see &lt;div data-bind="page: {id: 'banner-left-nav'... which renders when http://localhost:8080/project_index.html#!/templates/banner-left-nav is called.
+</pre>
+
+					
+					<h4 class="sherpa">How it works:</h4>
+					<pre>All this code is using a knockout.js library called pager.js.  You can learn more about it at <a href="http://pagerjs.com/">http://pagerjs.com/</a> </pre>
+		</article>

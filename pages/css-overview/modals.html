@@ -3,7 +3,7 @@
 
       <div class="da-all ta-all ma-all">
 <div id="modal-example-HTML">
-    <div class="modal" style="position: relative; top: auto; left: auto; right: auto; margin: 0 auto 20px; z-index: 1; max-width: 100%;">
+    <div class="modal">
       <div class="modal-header">
         <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
         <h3>Modal header</h3>
@@ -26,7 +26,7 @@
         <p>&nbsp;</p>
 
         <div class="collapse" id="modal-HTML">
-          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].outerHTML}">
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].innerHTML.replace(/ da-clear ta-clear ma-clear/,'').replace(/style=*position: relative*/,'')}">
             Copy HTML
           </button>
           <pre class="prettyprint linenums" data-bind="text: $('#modal-example-HTML')[0].outerHTML.replace(/</g,'&lt;').replace(/ style=.*/g,'>')"></pre>

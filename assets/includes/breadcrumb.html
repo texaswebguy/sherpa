@@ -1,0 +1,16 @@
+<ul class="breadcrumb" data-bind="foreach: viewModel.breadcrumb_path()">
+	<!-- ko if: $index() === viewModel.breadcrumb_path().length - 1 -->
+	<li class="active" data-bind="text: $data.label"></li>
+	<!-- /ko -->
+	<!-- ko ifnot: $index() === viewModel.breadcrumb_path().length - 1 -->
+	<li><a data-bind="attr: {'href': $data.href}, text: $data.label"></a> <span class="divider"></span></li>
+	<!-- /ko --> 
+</ul>
+<script>
+	Sherpa.scope(".breadcrumb", function(){
+		this.listen('li:first-child', 'click', function(){
+			location.href="";
+		});
+	});
+		
+</script>

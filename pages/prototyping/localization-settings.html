@@ -1,0 +1,27 @@
+          <h2 class="sherpa" data-bind="msg: 'title_configuration_localization'">Localized Settings</h2>
+                  <p class="sherpa" data-bind="msg: 'text_configuration_localization_description'">The JSON file <code>assets/config/settings_en.json</code> is one of many 
+                    files that are specific to a locale and contain global configurations for things such as date formats, currency conversion, etc. The file settings_en.json loads by default unless a different locale is specified on the url or core configuration.</p>
+
+                <p class="sherpa" data-bind="msg: 'text_configuration_localization_example'">The contents of this file get placed into the viewModel.config object along with custom configurations: </p>
+
+<pre data-bind="prettyprint:{}" class="prettyprint linenums">
+{
+     "default_date_format": "mm/dd/yyyy",
+     "currency": {
+          "conversion_rate": 1,
+          "format_decimal": {
+               "decimals": 2,
+               "decimal_separator": ".",
+               "thousands_separator": ","
+          },
+          "format_nodecimal": {
+               "decimals": 0,
+               "decimal_separator": ".",
+               "thousands_separator": ","
+          },
+          "symbol": "$",
+          "symbol_position": "left"
+     },
+     "sample_custom_config": true
+}
+</pre>
