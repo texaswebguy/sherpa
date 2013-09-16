@@ -101,7 +101,7 @@ SHERPA.PROTOTYPE_CSS = "sherpa-0-6.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },
-	{ css_theme: SHERPA.CSS_CORE_PATH+SHERPA.DEFAULT_THEME+".css" },
+	{ css_theme: SHERPA.CSS_CORE_PATH+"themes/"+SHERPA.DEFAULT_THEME+".css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";

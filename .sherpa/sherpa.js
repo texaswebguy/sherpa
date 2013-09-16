@@ -109,10 +109,10 @@ return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 //______________________________________________________________________________________
 
 Sherpa.version = {
-	codeName : "Liquid-Venus",
+	codeName : "Green-Lion",
 	minor : ".0",
-	major : "0.4",
-	releaseDate : "8.2.2013"
+	major : "0.6",
+	releaseDate : "9.13.2013"
 }
 Sherpa.VERSION = Sherpa.version.major+Sherpa.version.minor+" - "+Sherpa.version.releaseDate+" - "+Sherpa.version.codeName;
 
@@ -249,7 +249,7 @@ Sherpa.ready("underscore", function() {
 		_.each(SHERPA.CSS_CORE_LOAD, function(css){
 			//theme implementation
 			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme" && !SHERPA_CONFIG_OVERRIDES.CSS_CORE_LOAD){
-				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
+				css = {css_theme:SHERPA.CSS_CORE_PATH+"themes/"+Sherpa.store("theme")+".css"}
 				var theme_id = Sherpa.store("theme");
 				$('html').addClass("theme-"+theme_id);
 				$('#theme-logic-css').remove();

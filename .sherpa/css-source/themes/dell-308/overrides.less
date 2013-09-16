@@ -128,7 +128,7 @@ h5, h6 {
 /* Header - title - NOTE: not part of Boostrap*/
 .title {
   text-align: center;
-  background: url(../img/gray_dark_title_line.png) repeat-x;
+  background: url(../../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
@@ -1742,15 +1742,18 @@ border: @defaultStroke solid @purple !important;
 
 
 .btn, .btn-tertiary {
- .default-button()
+ .default-button();
+ color:@blue !important;
 }
 
 .btn-primary {
-    .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+  color:@white !important;
 }
 
 .btn-secondary {
   .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+  color:@white !important;
 }
 
 
