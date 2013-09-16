@@ -13,6 +13,112 @@
 }
 
 
+// Gradient Bar Colors for buttons and alerts
+.gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  color: @textColor;
+  text-shadow: @textShadow;
+  #gradient > .vertical(@primaryColor, @secondaryColor);
+  border-color: @secondaryColor @secondaryColor darken(@secondaryColor, 15%);
+  border-color: rgba(0,0,0,.1) rgba(0,0,0,.1) fadein(rgba(0,0,0,.1), 15%);
+}
+
+// Gradients
+#gradient {
+  .horizontal(@startColor: #555, @endColor: #333) {
+    background-color: @endColor;
+    background-image: -moz-linear-gradient(left, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 100% 0, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(left, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(left, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to right, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=1)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .vertical(@startColor: #555, @endColor: #333) {
+    background-color: mix(@startColor, @endColor, 60%);
+    background-image: -moz-linear-gradient(top, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), to(@endColor)); // Safari 4+, Chrome 2+
+    background-image: -webkit-linear-gradient(top, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(top, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(to bottom, @startColor, @endColor); // Standard, IE10
+    background-repeat: repeat-x;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down
+  }
+  .directional(@startColor: #555, @endColor: #333, @deg: 45deg) {
+    background-color: @endColor;
+    background-repeat: repeat-x;
+    background-image: -moz-linear-gradient(@deg, @startColor, @endColor); // FF 3.6+
+    background-image: -webkit-linear-gradient(@deg, @startColor, @endColor); // Safari 5.1+, Chrome 10+
+    background-image: -o-linear-gradient(@deg, @startColor, @endColor); // Opera 11.10
+    background-image: linear-gradient(@deg, @startColor, @endColor); // Standard, IE10
+  }
+  .horizontal-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: mix(@midColor, @endColor, 80%);
+    background-image: -webkit-gradient(left, linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+    background-image: -moz-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+    background-image: -o-linear-gradient(left, @startColor, @midColor @colorStop, @endColor);
+    background-image: linear-gradient(to right, @startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+  }
+
+  .vertical-three-colors(@startColor: #00b3ee, @midColor: #7a43b6, @colorStop: 50%, @endColor: #c3325f) {
+    background-color: mix(@midColor, @endColor, 80%);
+    background-image: -webkit-gradient(linear, 0 0, 0 100%, from(@startColor), color-stop(@colorStop, @midColor), to(@endColor));
+    background-image: -webkit-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: -moz-linear-gradient(top, @startColor, @midColor @colorStop, @endColor);
+    background-image: -o-linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-image: linear-gradient(@startColor, @midColor @colorStop, @endColor);
+    background-repeat: no-repeat;
+    filter: e(%("progid:DXImageTransform.Microsoft.gradient(startColorstr='%d', endColorstr='%d', GradientType=0)",argb(@startColor),argb(@endColor))); // IE9 and down, gets no color-stop at all for proper fallback
+  }
+  .radial(@innerColor: #555, @outerColor: #333) {
+    background-color: @outerColor;
+    background-image: -webkit-gradient(radial, center center, 0, center center, 460, from(@innerColor), to(@outerColor));
+    background-image: -webkit-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: -moz-radial-gradient(circle, @innerColor, @outerColor);
+    background-image: -o-radial-gradient(circle, @innerColor, @outerColor);
+    background-repeat: no-repeat;
+  }
+  .striped(@color: #555, @angle: 45deg) {
+    background-color: @color;
+    background-image: -webkit-gradient(linear, 0 100%, 100% 0, color-stop(.25, rgba(255,255,255,.15)), color-stop(.25, transparent), color-stop(.5, transparent), color-stop(.5, rgba(255,255,255,.15)), color-stop(.75, rgba(255,255,255,.15)), color-stop(.75, transparent), to(transparent));
+    background-image: -webkit-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -moz-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: -o-linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+    background-image: linear-gradient(@angle, rgba(255,255,255,.15) 25%, transparent 25%, transparent 50%, rgba(255,255,255,.15) 50%, rgba(255,255,255,.15) 75%, transparent 75%, transparent);
+  }
+}
+// Reset filters for IE
+.reset-filter() {
+  filter: e(%("progid:DXImageTransform.Microsoft.gradient(enabled = false)"));
+}
+
+
+
+// Button backgrounds
+// ------------------
+.buttonBackground(@startColor, @endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
+  // gradientBar will set the background to a pleasing blend of these, to support IE<=9
+  .gradientBar(@startColor, @endColor, @textColor, @textShadow);
+  *background-color: @endColor; /* Darken IE7 buttons by default so they stand out more given they won't have borders */
+  .reset-filter();
+
+  // in these cases the gradient won't cover the background, so we override
+  &:hover, &:focus, &:active, &.active, &.disabled, &[disabled] {
+    color: @textColor;
+    background-color: @endColor;
+    *background-color: darken(@endColor, 5%);
+  }
+
+  // IE 7 + 8 can't handle box-shadow to show active, so we darken a bit ourselves
+  &:active,
+  &.active {
+    background-color: darken(@endColor, 10%) e("\9");
+  }
+}
+
 
 // Scaffolding
 //=======================================================================================================================
@@ -30,34 +136,7 @@ a:focus {
 // Grid
 //=======================================================================================================================
 
-
-
-
-// Layouts
-//=======================================================================================================================
-
-// NOTE: this is spacific to gridset - will be removed for BS3
-.wrapper {
-  margin: 0 auto;
-  width: 90%;
-  max-width: @desktopMaxWidth;
-  float: none; 
-  overflow:hidden;
-}
-@media only screen and (max-width:@mobileMaxWidth) {
-  .wrapper {
-    width: 100%;
-  }
-}
-
-div {
-  margin: 0;
-  padding: 0;
-  border: 0;
-  font-size: 100%;
-  font: inherit;
-  vertical-align: baseline;
-}
+@import "../../less-BS3/grid.less";
 
 
 // Base CSS
@@ -82,33 +161,33 @@ h1, h2, h3, h4 {
 }
 
 h3, h4, h5, h6 {
-  font-family: @themeSansFontFamily;
+  font-family: @theme-sans-font-family;
 }
 
 h1 { 
-  font-size: @baseFontSize * 2.57; // ~36px
+  font-size: @font-size-base * 2.57; // ~36px
   line-height: @line-height-base * 2; // ~40px
 } 
 
 h2 { 
-  font-size: @baseFontSize * 2; // ~28px
+  font-size: @font-size-base * 2; // ~28px
   line-height: @line-height-base * 1.6; // ~32px
 } 
 
 h3 { 
-  font-size: @baseFontSize * 1.42; // ~20px
+  font-size: @font-size-base * 1.42; // ~20px
   line-height: @line-height-base * 1.2; // ~24px
 } 
 
 h4 { 
-  font-size: @baseFontSize * 1.29; // ~18px
+  font-size: @font-size-base * 1.29; // ~18px
   line-height: @line-height-base * 1.1; // ~22px
 } 
 
 // Makes h5 and h6 the same - dell-308-only
 
 h5, h6 { 
-  font-size: @baseFontSize * 1.14; // ~16px
+  font-size: @font-size-base * 1.14; // ~16px
   line-height: @line-height-base; // ~20px
 } 
 
@@ -124,20 +203,20 @@ h5, h6 {
 
 .title h1 {
   display: inline-block;
-  background: @bodyBackground;
+  background: @body-bg;
   padding: 0px 10px;
   max-width: 80%;
 }
 
 .lead {
   margin-bottom: @line-height-base;
-  font-size: @baseFontSize * 1.29;
+  font-size: @font-size-base * 1.29;
   font-weight: normal;
   line-height: @line-height-base * 1.1;
 }
 
 small {
-  font-size: @baseFontSize * .86; // ~12px
+  font-size: @font-size-base * .86; // ~12px
   font-weight: normal;
   line-height:  @line-height-base * .8;// ~16px
 }
@@ -147,7 +226,7 @@ small {
 // -------------------------
 
 .page-header {
-  border-bottom: 1px solid @dellGrayStroke;
+  border-bottom: 1px solid @dell-gray-stroke;
 }
 
 
@@ -155,14 +234,14 @@ small {
 // Blockquotes
 
 blockquote {
-  border-left: 5px solid @grayLight;
+  border-left: 5px solid @gray-light;
   &.pull-right {
-    border-right: 5px solid @grayLight;
+    border-right: 5px solid @gray-light;
   }
 }
 blockquote p {
   margin-bottom: 0;
-  font-size: @baseFontSize * 1.14;
+  font-size: @font-size-base * 1.14;
   font-weight: normal;
   line-height: @line-height-base * 1.1;
 }
@@ -170,7 +249,7 @@ blockquote p {
 blockquote small {
   display: block;
   line-height: @line-height-base;
-  color: @grayDark;
+  color: @gray-dark;
   font-style: italic;
 }
 
@@ -180,101 +259,96 @@ blockquote small cite {
 
 
 // Utility classes
-.muted          { color: @grayDark; }
+.muted          { color: @gray-dark; }
 
 
 // Abbreviations and acronyms
 abbr[title],
 abbr[data-original-title] {
   cursor: help;
-  border-bottom: 1px dotted @grayDark;
+  border-bottom: 1px dotted @gray-dark;
 }
 
-
-
-//
 // Typography for tablet 
 // --------------------------------------------------
-@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+@media only screen and (min-width:@tablet-min-width) and (max-width:@desktop-min-width) {
 
 
   h1 { 
-    font-size: @baseFontSize * 2.28; // ~32px
+    font-size: @font-size-base * 2.28; // ~32px
     line-height: @line-height-base * 1.9; // ~38px
   } 
 
   h2 { 
-    font-size: @baseFontSize * 1.85; // ~26px
+    font-size: @font-size-base * 1.85; // ~26px
     line-height: @line-height-base * 1.5; // ~30px
   } 
 
   h3 { 
-    font-size: @baseFontSize * 1.42; // ~20px
+    font-size: @font-size-base * 1.42; // ~20px
     line-height: @line-height-base * 1.2; // ~24px
   } 
 
   h4 { 
-    font-size: @baseFontSize * 1.29; // ~18px
+    font-size: @font-size-base * 1.29; // ~18px
     line-height: @line-height-base * 1.1; // ~22px
   } 
 
   h5 { 
-    font-size: @baseFontSize * 1.14; // ~16px
+    font-size: @font-size-base * 1.14; // ~16px
     line-height: @line-height-base; // ~20px
   } 
 
   .lead {
     margin-bottom: @line-height-base;
-    font-size: @baseFontSize * 1.29; // ~18px
+    font-size: @font-size-base * 1.29; // ~18px
     line-height: @line-height-base + 2;  // ~22px
   }
 
   .title {
     background-position: 50% 13px;
   }
-
-
 }
 
 
 
-//
+
 // Typography for mobile (Phone)
 // --------------------------------------------------
-@media only screen and (max-width:@mobileMaxWidth) {
+@media only screen and (max-width:@mobile-max-width) {
 
 
 
   h1 { 
-    font-size: @baseFontSize * 1.71; // ~24px
+    font-size: @font-size-base * 1.71; // ~24px
     line-height: @line-height-base * 1.4; // ~28px
   } 
 
   h2 { 
-    font-size: @baseFontSize * 1.42; // ~20px
+    font-size: @font-size-base * 1.42; // ~20px
     line-height: @line-height-base * 1.2; // ~24px
   } 
 
   h3 { 
-    font-size: @baseFontSize * 1.21; // ~17px
+    font-size: @font-size-base * 1.21; // ~17px
     line-height: @line-height-base; // ~20px
     font-weight:bold;
   } 
 
   h4 { 
-    font-size: @baseFontSize * 1.14; // ~16px
+    font-size: @font-size-base * 1.14; // ~16px
     line-height: @line-height-base * 1.1; // ~22px
   } 
 
   h5 { 
-    font-size: @baseFontSize; // ~14px
+    font-size: @font-size-base; // ~14px
     line-height: @line-height-base; // ~20px
     font-weight:bold;
   } 
 
   .lead {
     margin-bottom: @line-height-base;
-    font-size: @baseFontSize * 1.14;
+    font-size: @font-size-base * 1.14;
     line-height: @line-height-base;
   }
 
@@ -301,10 +375,6 @@ abbr[data-original-title] {
   }
 }
 
-
-
-
-//
 // Typographic Colors 
 // NOTE: (Not part of Standard Bootstrap)
 // !important is used so that it overrides any parent directive
@@ -314,45 +384,34 @@ abbr[data-original-title] {
 .white-text     { color: @white !important;  }
 .gray-medium-text   { color: @gray !important; } 
 .gray-text      { color: @gray !important; }
-.lightgray-text   { color: @grayLight !important;  }
+.lightgray-text   { color: @gray-light !important;  }
 .blue-text      { color: @blue !important; }
 .yellow-text      { color: @yellow !important; }
-.teal-text      { color: @dellTeal !important; }
+.teal-text      { color: @dell-teal !important; }
 .green-text     { color: @green !important;  }
 .orange-text    { color: @orange !important; }
 .red-text       { color: @red !important;  }
-.darkred-text     { color: @dellRedDark !important;  }
-.berry-text     { color: @dellBerry !important;  }
+.darkred-text     { color: @dell-red-dark !important;  }
+.berry-text     { color: @dell-berry !important;  }
 .purple-text    { color: @purple !important; }
-.navyblue-text    { color: @blueDark !important; }
 
 // new text color class names
 .text {
   &-white     { color: @white !important;  }
   &-gray-medium   { color: @gray !important; } 
   &-gray      { color: @gray !important; }
-  &-gray-light   { color: @grayLight !important;  }
-  &-gray-very-light   { color: @grayLighter !important;  }
+  &-gray-light   { color: @gray-light !important;  }
+  &-gray-very-light   { color: @gray-lighter !important;  }
   &-blue      { color: @blue !important; }
   &-yellow      { color: @yellow !important; }
-  &-teal      { color: @dellTeal !important; }
+  &-teal      { color: @dell-teal !important; }
   &-green     { color: @green !important;  }
   &-orange    { color: @orange !important; }
   &-red       { color: @red !important;  }
-  &-red-dark     { color: @dellRedDark !important;  }
-  &-berry     { color: @dellBerry !important;  }
+  &-red-dark     { color: @dell-red-dark !important;  }
+  &-berry     { color: @dell-berry !important;  }
   &-purple    { color: @purple !important; }
-  &-navyblue    { color: @blueDark !important; }
 }
-
-
-
-
-// code
-//=======================================================================================================================
-
-
-
 
 
 
@@ -379,13 +438,6 @@ a[data-toggle="collapse"] {
 }
 
 
-
-// forms
-//=======================================================================================================================
-
-
-
-
 // GENERAL STYLES
 // --------------
 
@@ -403,9 +455,9 @@ form div {
 
 // Groups of fields with labels on top (legends)
 legend {
-  color: @grayDarker;
+  color: @gray-darker;
   small {
-    color: @grayDark;
+    color: @gray-dark;
   }
 }
 
@@ -430,11 +482,10 @@ input[type="search"],
 input[type="tel"],
 input[type="color"],
 .uneditable-input {
-  height: @inputHeight;
+  height: @input-height-base;
   margin-bottom: @line-height-base / 2;
-  color: @grayDarker;
-  .border-radius(@inputBorderRadius);
-
+  color: @gray-darker;
+  .border-radius(@input-border-radius);
 }
 
 
@@ -494,8 +545,8 @@ input[type="checkbox"]:focus {
 // Make uneditable inputs look inactive
 .uneditable-input,
 .uneditable-textarea {
-  color: @grayDark;
-  background-color: @grayLight;
+  color: @gray-dark;
+  background-color: @gray-light;
 }
 
 
@@ -516,7 +567,7 @@ input[type="checkbox"]:focus {
 }
 
 
-// Mixin for form field states - dell-308 overide of mixin to reduce focus glow from 6px to 3px
+// Mixin for form field states
 .formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
   // Set the text color
   .control-label,
@@ -539,9 +590,16 @@ input[type="checkbox"]:focus {
     .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
     &:focus {
       border-color: darken(@borderColor, 10%);
-      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px lighten(@borderColor, 20%);
-      .box-shadow(@shadow); //changed glow width from 6px to 3px - dell-308 override
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 6px lighten(@borderColor, 20%);
+      .box-shadow(@shadow);
     }
+  }
+  // Give a small background color for input-prepend/-append
+  .input-prepend .add-on,
+  .input-append .add-on {
+    color: @textColor;
+    background-color: @backgroundColor;
+    border-color: @textColor;
   }
 }
 
@@ -551,19 +609,19 @@ input[type="checkbox"]:focus {
 
 // Warning
 .control-group.warning {
-  .formFieldState(@warningText, @warningText, @warningBackground);
+  .formFieldState(@state-warning-text, @state-warning-text, @state-warning-bg);
 }
 // Error
 .control-group.error {
-  .formFieldState(@errorText, @errorText, @errorBackground);
+  .formFieldState(@state-danger-text, @state-danger-text, @state-danger-bg);
 }
 // Success
 .control-group.success {
-  .formFieldState(@successText, @successText, @successBackground);
+  .formFieldState(@state-success-text, @state-success-text, @state-success-bg);
 }
 // Success
 .control-group.info {
-  .formFieldState(@infoText, @infoText, @infoBackground);
+  .formFieldState(@state-info-text, @state-info-text, @state-info-bg);
 }
 
 // HTML5 invalid states
@@ -590,8 +648,8 @@ select:focus:invalid {
   padding: (@line-height-base - 1) 20px @line-height-base;
   margin-top: @line-height-base;
   margin-bottom: @line-height-base;
-  background-color: @formActionsBackground;
-  border-top: 1px solid @dellGrayStroke;
+  background-color: @form-actions-bg;
+  border-top: 1px solid @dell-gray-stroke;
   .clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
@@ -620,13 +678,13 @@ select:focus:invalid {
     + .add-on {
       margin-left: -5px; 
     }
-    height:@inputHeight;
+    height:@input-height-base;
   }
 
   .add-on {
-    height: @inputHeight;
+    height: @input-height-base;
     padding: 7px 11px;
-    border: 1px solid @dellGrayStroke;
+    border: 1px solid @dell-gray-stroke;
     + input,
     + select{
       margin-left: -5px; 
@@ -637,7 +695,7 @@ select:focus:invalid {
     border-color: @green;
   }
   .btn {
-    height:@inputHeight;
+    height:@input-height-base;
   }
 
 }
@@ -650,9 +708,9 @@ select:focus:invalid {
   input,
   select,
   .uneditable-input {
-    .border-radius( 0 @inputBorderRadius @inputBorderRadius 0);
+    .border-radius( 0 @input-border-radius @input-border-radius 0);
     + .btn-group .btn:last-child {
-      .border-radius( 0 @inputBorderRadius @inputBorderRadius 0);
+      .border-radius( 0 @input-border-radius @input-border-radius 0);
     }
   }
   .btn-group {
@@ -661,8 +719,8 @@ select:focus:invalid {
   .add-on:first-child,
   .btn:first-child {
     // FYI, `.btn:first-child` accounts for a button group that's prepended
-    .border-radius( @inputBorderRadius 0 0 @inputBorderRadius);
-    height:@inputHeight;
+    .border-radius( @input-border-radius 0 0 @input-border-radius);
+    height:@input-height-base;
   }
 }
 
@@ -670,9 +728,9 @@ select:focus:invalid {
   input,
   select,
   .uneditable-input {
-    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    .border-radius(@input-border-radius 0 0 @input-border-radius);
     + .btn-group .btn:last-child {
-      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+      .border-radius(0 @input-border-radius @input-border-radius 0);
     }
   }
   .add-on,
@@ -689,12 +747,9 @@ select:focus:invalid {
   .add-on:last-child,
   .btn:last-child,
   .btn-group:last-child > .dropdown-toggle {
-    .border-radius(0 @inputBorderRadius @inputBorderRadius 0); 
+    .border-radius(0 @input-border-radius @input-border-radius 0); 
   }
-
-
 }
-
 
 // Remove all border-radius for inputs with both prepend and append
 .input-prepend.input-append {
@@ -703,7 +758,7 @@ select:focus:invalid {
   .uneditable-input {
     .border-radius(0);
     + .btn-group .btn {
-      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+      .border-radius(0 @input-border-radius @input-border-radius 0);
     }
     + .add-on {
       margin-left: -5px; 
@@ -712,12 +767,12 @@ select:focus:invalid {
   .add-on:first-child,
   .btn:first-child {
     margin-right: -1px;
-    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    .border-radius(@input-border-radius 0 0 @input-border-radius);
   }
   .add-on:last-child,
   .btn:last-child {
     margin-left: -1px;
-    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    .border-radius(0 @input-border-radius @input-border-radius 0);
   }
   .btn-group:first-child {
     margin-left: 0;
@@ -732,7 +787,6 @@ select:focus:invalid {
     }
   }
 }
-
 
 // SEARCH FORM
 // -----------
@@ -765,8 +819,6 @@ input.search-query {
 }
 
 
-
-
 // HORIZONTAL & VERTICAL FORMS
 // ---------------------------
 
@@ -784,7 +836,7 @@ input.search-query {
   .input-prepend,
   .input-append {
     display: inline-block;
-    .ie7-inline-block();
+    // .ie7-inline-block(); NEED TO FIX THIS LINE
     margin-bottom: 0;
     vertical-align: middle;
   }
@@ -793,6 +845,7 @@ input.search-query {
     display: none;
   }
 }
+
 .form-search label,
 .form-inline label,
 .form-search .btn-group,
@@ -846,26 +899,29 @@ legend + .control-group {
     margin-bottom: @line-height-base;
     .clearfix();
   }
+}
   // Float the labels left
   .control-label {
     float: left;
-    width: @horizontalComponentOffset - 20;
+    width: @component-offset-horizontal - 20;
     padding-top: 5px;
     text-align: right;
   }
+
   // Move over all input controls and content
   .controls {
     // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
     // don't inherit the margin of the parent, in this case .controls
     *display: inline-block;
     *padding-left: 20px;
-    margin-left: @horizontalComponentOffset;
+    margin-left: @component-offset-horizontal;
     *margin-left: 0;
     &:first-child {
-      *padding-left: @horizontalComponentOffset;
+      *padding-left: @component-offset-horizontal;
     }
   }
-  // Remove bottom margin on block level help text since that's accounted for on .control-group
+
+    // Remove bottom margin on block level help text since that's accounted for on .control-group
   .help-block {
     margin-bottom: 0;
   }
@@ -882,56 +938,51 @@ legend + .control-group {
   }
   // Move over buttons in .form-actions to align with .controls
   .form-actions {
-    padding-left: @horizontalComponentOffset;
+    padding-left: @component-offset-horizontal;
   }
-}
 
-
-
-.form-search {
+  .form-search {
     position:relative;
-}
-.form-search .input-prepend,
-.form-search .input-append {
-  width:100%;
-  clear:both;
-}
-.form-search .search-query,  
-.form-search .input-prepend .search-query,
-.form-search .input-append .search-query
-{
+  }
+  .form-search .input-prepend,
+  .form-search .input-append {
     width:100%;
-    height: @inputHeight + 10;
-    padding: 5px 80px 5px 5px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
-    .border-radius(@inputBorderRadius);
+    clear:both;
+  }
+  .form-search .search-query,  
+  .form-search .input-prepend .search-query,
+  .form-search .input-append .search-query {
+      width:100%;
+      height: @input-height-base + 10;
+      padding: 5px 80px 5px 5px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
+      .border-radius(@input-border-radius);
+  }
+
+.form-search .input-prepend .search-query {
+    padding: 5px 5px 5px 80px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
+    .border-radius(@input-border-radius);
 }
 
-.form-search .input-prepend .search-query,
-{
-    padding: 5px 5px 5px 80px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
-    .border-radius(@inputBorderRadius);
-}
 
 .form-search .btn {
   position: absolute;
   top: 5px;
   right: 5px;
-  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight); // forces the button to primary
-  .border-radius(@borderRadiusSmall);
+  .buttonBackground(@btn-primary-bg, @btn-primary-bg-highlight); // forces the button to primary
+  .border-radius(@border-radius-small);
 }
+
+
 .form-search .input-append .btn {
   right: 25px;
-  .border-radius(@borderRadiusSmall);
+  .border-radius(@border-radius-small);
 }
 .form-search .input-prepend .btn {
   left: 25px;
   right:inherit;
-  .border-radius(@borderRadiusSmall);
+  .border-radius(@border-radius-small);
   z-index:3;
 }
-
-
-
 
 // INPUT SIZES
 // -----------
@@ -950,20 +1001,16 @@ span.uneditable-input {
 }
 
 
-
-// tables
-//=======================================================================================================================
-
-
 // BASE TABLES
 // -----------------
 
 table {
   max-width: 100%;
-  background-color: @tableBackground;
+  background-color: @table-bg;
   border-collapse: collapse;
   border-spacing: 0;
 }
+
 
 // BASELINE STYLES
 // ---------------
@@ -978,7 +1025,7 @@ table {
     line-height: @line-height-base;
     text-align: left;
     vertical-align: top;
-    border-top: 1px solid @tableBorder;
+    border-top: 1px solid @table-border-color;
   }
   th {
     font-weight: bold;
@@ -998,16 +1045,14 @@ table {
   }
   // Account for multiple tbody instances
   tbody + tbody {
-    border-top: 2px solid @tableBorder;
+    border-top: 2px solid @table-border-color;
   }
 
   // Nesting
   .table {
-    background-color: @bodyBackground;
+    background-color: @body-bg;
   }
 }
-
-
 
 // CONDENSED TABLE W/ HALF PADDING
 // -------------------------------
@@ -1019,61 +1064,55 @@ table {
   }
 }
 
-
-// BORDERED VERSION
-// ----------------
-
-
-.table-bordered {
-  .border-radius(@border-radius-large);
-
-
-  // For first th/td in the first row in the first thead or tbody
-  thead:first-child tr:first-child > th:first-child,
-  tbody:first-child tr:first-child > td:first-child,
-  tbody:first-child tr:first-child > th:first-child {
-    .border-top-left-radius(@border-radius-large);
-  }
-  // For last th/td in the first row in the first thead or tbody
-  thead:first-child tr:first-child > th:last-child,
-  tbody:first-child tr:first-child > td:last-child,
-  tbody:first-child tr:first-child > th:last-child {
-    .border-top-right-radius(@border-radius-large);
-  }
-  // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
-  thead:last-child tr:last-child > th:first-child,
-  tbody:last-child tr:last-child > td:first-child,
-  tbody:last-child tr:last-child > th:first-child,
-  tfoot:last-child tr:last-child > td:first-child,
-  tfoot:last-child tr:last-child > th:first-child {
-    .border-bottom-left-radius(@border-radius-large);
-  }
-  // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
-  thead:last-child tr:last-child > th:last-child,
-  tbody:last-child tr:last-child > td:last-child,
-  tbody:last-child tr:last-child > th:last-child,
-  tfoot:last-child tr:last-child > td:last-child,
-  tfoot:last-child tr:last-child > th:last-child {
-    .border-bottom-right-radius(@border-radius-large);
-  }
-
-  // Special fixes to round the left border on the first td/th
-  caption + thead tr:first-child th:first-child,
-  caption + tbody tr:first-child td:first-child,
-  colgroup + thead tr:first-child th:first-child,
-  colgroup + tbody tr:first-child td:first-child {
-    .border-top-left-radius(@border-radius-large);
-  }
-  caption + thead tr:first-child th:last-child,
-  caption + tbody tr:first-child td:last-child,
-  colgroup + thead tr:first-child th:last-child,
-  colgroup + tbody tr:first-child td:last-child {
-    .border-top-right-radius(@border-radius-large);
-  }
-
+// CSS3 PROPERTIES
+// --------------------------------------------------
+//NOTE:NEED TO CHECK IF THIS IS CORRECT
+// Border Radius
+.border-radius(@border-radius-base) {
+  -webkit-border-radius: @border-radius-base;
+     -moz-border-radius: @border-radius-base;
+          border-radius: @border-radius-base;
 }
 
+// Single Corner Border Radius
+.border-top-left-radius(@border-radius-base) {
+  -webkit-border-top-left-radius: @border-radius-base;
+      -moz-border-radius-topleft: @border-radius-base;
+          border-top-left-radius: @border-radius-base;
+}
+.border-top-right-radius(@border-radius-base) {
+  -webkit-border-top-right-radius: @border-radius-base;
+      -moz-border-radius-topright: @border-radius-base;
+          border-top-right-radius: @border-radius-base;
+}
+.border-bottom-right-radius(@border-radius-base) {
+  -webkit-border-bottom-right-radius: @border-radius-base;
+      -moz-border-radius-bottomright: @border-radius-base;
+          border-bottom-right-radius: @border-radius-base;
+}
+.border-bottom-left-radius(@border-radius-base) {
+  -webkit-border-bottom-left-radius: @border-radius-base;
+      -moz-border-radius-bottomleft: @border-radius-base;
+          border-bottom-left-radius: @border-radius-base;
+}
 
+// Single Side Border Radius
+.border-top-radius(@border-radius-base) {
+  .border-top-right-radius(@border-radius-base);
+  .border-top-left-radius(@border-radius-base);
+}
+.border-right-radius(@border-radius-base) {
+  .border-top-right-radius(@border-radius-base);
+  .border-bottom-right-radius(@border-radius-base);
+}
+.border-bottom-radius(@border-radius-base) {
+  .border-bottom-right-radius(@border-radius-base);
+  .border-bottom-left-radius(@border-radius-base);
+}
+.border-left-radius(@@border-radius-base) {
+  .border-top-left-radius(@border-radius-base);
+  .border-bottom-left-radius(@border-radius-base);
+}
 
 
 // ZEBRA-STRIPING
@@ -1088,22 +1127,23 @@ table {
   tbody {
     > tr:nth-child(odd) > td,
     > tr:nth-child(odd) > th {
-        background-color: @tableBackgroundAccent;
+        background-color: @table-bg-accent;
       }
   }
   tbody {
-    tr th:first-child, tr td:first-child {.border-left-radius(@border-radius-large);}
-    tr th:last-child, tr td:last-child {.border-right-radius(@border-radius-large);}
+    tr th:first-child, tr td:first-child {.border-left-radius(@border-radius-base);}
+    tr th:last-child, tr td:last-child {.border-right-radius(@border-radius-base);}
   }
 }
 
 .table-bordered.table-striped {
-  border-left: 1px solid @tableBorder;
+  border-left: 1px solid @table-border-color;
   tbody {
     tr th:first-child, tr td:first-child {.border-left-radius(0);}
     tr th:last-child, tr td:last-child {.border-right-radius(0);}
   }
 }
+
 
 // HOVER EFFECT
 // ------------
@@ -1112,41 +1152,20 @@ table {
   tbody {
     tr:hover > td,
     tr:hover > th {
-      background-color: @tableBackgroundHover;
+      background-color: @table-bg-hover;
     }
   }
 }
 
 
+//Need to add
 // TABLE CELL SIZING
 // -----------------
 
-// Reset default grid behavior
-table td[class*="span"],
-table th[class*="span"],
-.row-fluid table td[class*="span"],
-.row-fluid table th[class*="span"] {
-  display: table-cell;
-  float: none; // undo default grid column styles
-  margin-left: 0; // undo default grid column styles
-}
+//========================
 
-// Change the column widths to account for td/th padding
-.table td,
-.table th {
-  &.span1     { .tableColumns(1); }
-  &.span2     { .tableColumns(2); }
-  &.span3     { .tableColumns(3); }
-  &.span4     { .tableColumns(4); }
-  &.span5     { .tableColumns(5); }
-  &.span6     { .tableColumns(6); }
-  &.span7     { .tableColumns(7); }
-  &.span8     { .tableColumns(8); }
-  &.span9     { .tableColumns(9); }
-  &.span10    { .tableColumns(10); }
-  &.span11    { .tableColumns(11); }
-  &.span12    { .tableColumns(12); }
-}
+
+
 
 
 
@@ -1156,40 +1175,36 @@ table th[class*="span"],
 
 .table tbody tr {
   &.success > td {
-    background-color: @successBackground;
+    background-color: @state-success-bg;
   }
   &.error > td {
-    background-color: @errorBackground;
+    background-color: @state-danger-bg;
   }
   &.warning > td {
-    background-color: @warningBackground;
+    background-color: @state-warning-bg;
   }
   &.info > td {
-    background-color: @infoBackground;
+    background-color: @state-info-bg;
   }
 }
 
 // Hover states for .table-hover
 .table-hover tbody tr {
   &.success:hover > td {
-    background-color: darken(@successBackground, 5%);
+    background-color: darken(@state-success-bg, 5%);
   }
   &.error:hover > td {
-    background-color: darken(@errorBackground, 5%);
+    background-color: darken(@state-danger-bg, 5%);
   }
   &.warning:hover > td {
-    background-color: darken(@warningBackground, 5%);
+    background-color: darken(@state-warning-bg, 5%);
   }
   &.info:hover > td {
-    background-color: darken(@infoBackground, 5%);
+    background-color: darken(@state-info-bg, 5%);
   }
 }
 
 
-
-// Components: common
-// sprites
-//=======================================================================================================================
 
 
 
@@ -1233,7 +1248,7 @@ li.dropdown .dropdown-menu {
   .border-radius(@border-radius-base);
   .box-shadow(none);
   blockquote {
-    border-color: @dellGrayStroke;
+    border-color: @dell-gray-stroke;
   }
   > :last-child {
     // dell-308-only
@@ -1250,7 +1265,7 @@ li.dropdown .dropdown-menu {
 }
 .well-small {
   padding: @line-height-base / 2;
-  .border-radius(@borderRadiusSmall);
+  .border-radius(@border-radius-small);
 }
 
 // NOTE: Non-Bootstrap well like containers. 
@@ -1266,15 +1281,12 @@ li.dropdown .dropdown-menu {
 }
 
 .rounded-small {
- .border-radius(@borderRadiusSmall);
+ .border-radius(@border-radius-small);
   padding:@line-height-base;
   > :last-child {
     margin-bottom: 0px;
   }
 }
-
-
-
 
 
 //
@@ -1283,11 +1295,11 @@ li.dropdown .dropdown-menu {
 // Should we scope these within the well class in the future?
 // --------------------------------------------------
 
-.well-colors (@bgcolor, @textColor, @headlineColor, @linkColor) {
-  background-color: @bgcolor;
-  color: @textColor;
+.well-colors (@body-bg, @text-color, @headings-color, @link-color) {
+  background-color: @body-bg;
+  color: @text-color;
   h2,h3,h4,h5,h6 {
-    color:@headlineColor;
+    color:@headings-color;
   }
 
   h4.well-title, h4.container-title {
@@ -1298,7 +1310,7 @@ li.dropdown .dropdown-menu {
     padding: 5px 15px;
     position: relative;
     color: @white;
-    background-color:@headlineColor;
+    background-color:@headings-color;
     vertical-align: baseline;
     white-space: nowrap;
     .border-bottom-right-radius(@border-radius-large);
@@ -1307,16 +1319,17 @@ li.dropdown .dropdown-menu {
 }
 
 
+
 /* Grays */
 
 .gray-dark,
 .well-gray-dark { 
-  .well-colors (@grayDarker, @white, @white, @white)
+  .well-colors (@gray-darker, @white, @white, @white)
 }
 .gray-dark-stroke,
 .well-gray-dark-stroke  { 
-  border: @defaultStroke solid @grayDarker !important;
-  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+  border: @default-stroke solid @gray-darker !important;
+  .well-colors (@white, @gray-darker, @gray-darker, @blue)
 }
 
 .gray-medium,
@@ -1326,34 +1339,33 @@ li.dropdown .dropdown-menu {
 
 .gray,
 .well-gray { 
-  .well-colors (@grayDark, @white, @white, @white)
+  .well-colors (@gray-dark, @white, @white, @white)
 }
 
 .gray-stroke,
 .well-gray-stroke  { 
-  border: @defaultStroke solid @gray !important;
-  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+  border: @default-stroke solid @gray !important;
+  .well-colors (@white, @gray-darker, @gray-darker, @blue)
 }
 
 .gray-light,
 .well-gray-light { 
-  .well-colors (@grayLight, @grayDarker, @grayDarker, @blue)
+  .well-colors (@gray-light, @gray-darker, @gray-darker, @blue)
 }
 .gray-very-light,
 .well-gray-very-light { 
-  .well-colors (@dellGrayVeryLight, @grayDarker, @grayDarker, @blue)
+  .well-colors (@dell-gray-very-light, @gray-darker, @gray-darker, @blue)
 }
 .white,
 .well-white { 
-  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+  .well-colors (@white, @gray-darker, @gray-darker, @blue)
 }
 
 .white-stroke,
 .well-white-stroke { 
-  border: @defaultStroke solid @white; 
+  border: @default-stroke solid @white; 
   .well-colors (transparent, @white, @white, @white)
 }
-
 
 
 /* Blue */
@@ -1363,18 +1375,10 @@ li.dropdown .dropdown-menu {
 }
 .blue-stroke,
 .well-blue-stroke  { 
-  border: @defaultStroke solid @blue !important;
-  .well-colors (@white, @textColor, @blue, @linkColor)
+  border: @default-stroke solid @blue !important;
+  .well-colors (@white, @text-color, @blue, @link-color)
 }
-.navyblue,
-.well-navyblue { 
-  .well-colors (@dellNavy, @white, @white, @white)
-}
-.navyblue-stroke,
-.well-navyblue-stroke  { 
-  border: @defaultStroke solid @dellNavy !important;
-  .well-colors (@white, @textColor, @dellNavy, @linkColor)
-}
+
 
 /* Green */
 .green,
@@ -1383,8 +1387,8 @@ li.dropdown .dropdown-menu {
 }
 .green-stroke,
 .well-green-stroke     { 
-  border: @defaultStroke solid @green !important;
-  .well-colors (@white, @textColor, @green, @linkColor)
+  border: @default-stroke solid @green !important;
+  .well-colors (@white, @text-color, @green, @link-color)
 }
 
 /* Yellow */
@@ -1394,8 +1398,8 @@ li.dropdown .dropdown-menu {
 }
 .yellow-stroke,
 .well-yellow-stroke    { 
-  border: @defaultStroke solid @yellow !important;
-  .well-colors (@white, @textColor, @yellow, @linkColor)
+  border: @default-stroke solid @yellow !important;
+  .well-colors (@white, @text-color, @yellow, @link-color)
 }
 
 /* Orange */
@@ -1405,8 +1409,8 @@ li.dropdown .dropdown-menu {
 }
 .orange-stroke,
 .well-orange-stroke    { 
-  border: @defaultStroke solid @orange !important;
-  .well-colors (@white, @textColor, @orange, @linkColor)
+  border: @default-stroke solid @orange !important;
+  .well-colors (@white, @text-color, @orange, @link-color)
 }
 
 /* Red */
@@ -1416,27 +1420,27 @@ li.dropdown .dropdown-menu {
 }
 .red-stroke,
 .well-red-stroke     { 
-  border: @defaultStroke solid  @red !important;
-  .well-colors (@white, @textColor, @red, @linkColor)
+  border: @default-stroke solid  @red !important;
+  .well-colors (@white, @text-color, @red, @link-color)
 }
 .red-dark,
 .well-red-dark       { 
-  .well-colors (@dellRedDark, @white, @white, @white)
+  .well-colors (@dell-red-dark, @white, @white, @white)
 }
 .red-dark-stroke,
 .well-red-dark-stroke     { 
-  border: @defaultStroke solid  @dellRedDark !important;
-  .well-colors (@white, @textColor, @dellRedDark, @linkColor)
+  border: @default-stroke solid  @dell-red-dark !important;
+  .well-colors (@white, @text-color, @dell-red-dark, @link-color)
 }
 /* Berry */
 .berry,
 .well-berry        { 
-  .well-colors (@dellBerry, @white, @white, @white)
+  .well-colors (@dell-berry, @white, @white, @white)
 }
 .berry-stroke,
 .well-berry-stroke     { 
-  border: @defaultStroke solid @dellBerry !important;
-  .well-colors (@white, @textColor, @dellBerry, @linkColor)
+  border: @default-stroke solid @dell-berry !important;
+  .well-colors (@white, @text-color, @dell-berry, @link-color)
 }
 
 /* Purple */
@@ -1446,40 +1450,24 @@ li.dropdown .dropdown-menu {
 }
 .purple-stroke,
 .well-purple-stroke    { 
-border: @defaultStroke solid @purple !important;
-  .well-colors (@white, @textColor, @purple, @linkColor)
+border: @default-stroke solid @purple !important;
+  .well-colors (@white, @text-color, @purple, @link-color)
 }
 
 /* Teal */
 .teal,
 .well-teal         { 
-  .well-colors (@dellTeal, @white, @white, @white)
+  .well-colors (@dell-teal, @white, @white, @white)
 }
 .teal-stroke,
 .well-teal-stroke    { 
-  border: @defaultStroke solid @dellTeal !important;
-  .well-colors (@white, @textColor, @dellTeal, @linkColor)
+  border: @default-stroke solid @dell-teal !important;
+  .well-colors (@white, @text-color, @dell-teal, @link-color)
 }
 
 /* Modify all stroke classes with "thin"*/
-[class$=-stroke].thin { border-width: @thinStroke;  }
+[class$=-stroke].thin { border-width: @thin-stroke;  }
 
-
-
-// component-animations
-//=======================================================================================================================
-
-
-
-// close
-//=======================================================================================================================
-
-
-
-
-// Components: Buttons & Alerts
-// buttons
-//=======================================================================================================================
 
 
 
@@ -1494,12 +1482,12 @@ border: @defaultStroke solid @purple !important;
 .default-button() {
   padding: 7px 11px;
   margin-bottom: 0; // For input.btn
-  font-size: @baseFontSize;
+  font-size: @font-size-base;
   line-height: @line-height-base * .9;
   text-align:left;
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
-  border: 1px solid @btnBorder;
-  .border-radius(@borderRadiusSmall + 1);
+  .buttonBackground(@btn-default-bg, @btn-default-bg-highlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  border: 1px solid @btn-default-border;
+  .border-radius(@border-radius-small + 1);
   .box-shadow(none); 
   // Hover/focus state
 
@@ -1510,13 +1498,13 @@ border: @defaultStroke solid @purple !important;
     // transition is only when going to hover/focus, otherwise the background
     // behind the gradient (there for IE<=9 fallback) gets mismatched
     .transition(background-position .1s linear);
-    color: @linkColor;
+    color:@link-color;
   }
 
   // Focus state for keyboard and accessibility
   &:focus {
     .tab-focus();
-    color: @linkColor;
+    color:@link-color;
   }
 
   // Active state
@@ -1553,8 +1541,8 @@ border: @defaultStroke solid @purple !important;
 
 // Large
 .btn-large {
-  padding: @paddingLarge;
-  font-size: @baseFontSize;
+  padding: @padding-large-vertical, @padding-large-horizontal;
+  font-size: @font-size-base;
   .border-radius(@border-radius-base);
 }
 .btn-large [class^="icon-"],
@@ -1564,9 +1552,9 @@ border: @defaultStroke solid @purple !important;
 
 // Small
 .btn-small {
-  padding: @paddingSmall;
-  font-size: @fontSizeSmall;
-  .border-radius(@borderRadiusSmall);
+  padding: @padding-small-vertical, @padding-small-horizontal;
+  font-size: @font-size-small;
+  .border-radius(@border-radius-small);
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
@@ -1577,13 +1565,13 @@ border: @defaultStroke solid @purple !important;
   margin-top: -1px;
 }
 
+//Need new classes for this...
 // Mini
-.btn-mini {
-  padding: @paddingMini;
-  font-size: @fontSizeMini;
-  .border-radius(@borderRadiusSmall);
-}
-
+// .btn-mini {
+//   padding: @padding-small-vertical, @padding-small-horizontal;
+//   font-size: @font-size-mini;
+//   .border-radius(@border-radius-small);
+// }
 
 // Block button
 // -------------------------
@@ -1609,7 +1597,6 @@ input[type="button"] {
 }
 
 
-
 // Alternate buttons
 // --------------------------------------------------
 
@@ -1626,27 +1613,27 @@ input[type="button"] {
 // Set the backgrounds
 // -------------------------
 .btn-primary {
-  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+  .buttonBackground(@btn-primary-bg, @btn-primary-bg-highlight);
 }
 //not used in dell-308
 .btn-warning {
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btn-warning-bg, @btn-warning-bg-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
 //not used in dell-308
 .btn-danger {
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btn-danger-bg, @btn-danger-bg-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
 // Success appears as green
 .btn-success {
-  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+  .buttonBackground(@btn-success-bg, @btn-success-bg-highlight);
 }
 //not used in dell-308
 .btn-info {
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btn-info-bg, @btn-info-bg-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
 // not used in dell-308
 .btn-inverse {
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btn-inverse-background, @btn-inverse-background-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
 
 
@@ -1695,41 +1682,23 @@ input[type="submit"].btn {
 .btn-link {
   border-color: transparent;
   cursor: pointer;
-  color: @linkColor;
+  color:@link-color;
   .border-radius(0);
 }
 .btn-link:hover,
 .btn-link:focus {
-  color: @linkColorHover;
+  color:@link-hover-color;
   text-decoration: underline;
   background-color: transparent;
 }
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {
-  color: @grayDark;
+  color: @gray-dark;
   text-decoration: none;
 }
 
 
-// button-groups
-//=======================================================================================================================
 
-
-//
-// Button groups
-// --------------------------------------------------
-
-
-// Make the div behave like a button
-.btn-group {
-  position: relative;
-  display: inline;
-  .ie7-inline-block();
-  font-size: 0; // remove as part 1 of font-size inline-block hack
-  vertical-align: middle; // match .btn alignment given font-size hack above
-  white-space: nowrap; // prevent buttons from wrapping when in tight spaces (e.g., the table on the tests page)
-  .ie7-restore-left-whitespace();
-}
 
 // Space out series of button groups
 .btn-group + .btn-group {
@@ -1759,31 +1728,31 @@ input[type="submit"].btn {
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
-  font-size: @baseFontSize; // redeclare as part 2 of font-size inline-block hack
+  font-size: @font-size-base; // redeclare as part 2 of font-size inline-block hack
 }
 
 // Reset fonts for other sizes
 .btn-group > .btn-mini {
-  font-size: @fontSizeMini;
+  font-size: @font-size-mini;
 }
 .btn-group > .btn-small {
-  font-size: @fontSizeSmall;
+  font-size: @font-size-small;
 }
 .btn-group > .btn-large {
-  font-size: @fontSizeLarge;
+  font-size: @font-size-large;
 }
 
 // Set corners individual because sometimes a single button can be in a .btn-group and we need :first-child and :last-child to both match
 .btn-group > .btn:first-child {
   margin-left: 0;
-  .border-top-left-radius(@inputBorderRadius);
-  .border-bottom-left-radius(@inputBorderRadius);
+  .border-top-left-radius(@input-border-radius);
+  .border-bottom-left-radius(@input-border-radius);
 }
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
-  .border-top-right-radius(@inputBorderRadius);
-  .border-bottom-right-radius(@inputBorderRadius);
+  .border-top-right-radius(@input-border-radius);
+  .border-bottom-right-radius(@input-border-radius);
 }
 // Reset corners for large buttons
 .btn-group > .btn.large:first-child {
@@ -1841,6 +1810,7 @@ input[type="submit"].btn {
   *padding-bottom: 7px;
 }
 
+
 .btn-group.open {
 
   // The clickable button for toggling the menu
@@ -1852,27 +1822,29 @@ input[type="submit"].btn {
 
   // Keep the hover's background when dropdown is open
   .btn.dropdown-toggle {
-    background-color: @btnBackgroundHighlight;
+    background-color: @dropdown-bg;
   }
   .btn-primary.dropdown-toggle {
-    background-color: @btnPrimaryBackgroundHighlight;
+    background-color: @btn-primary-bg-highlight;
   }
   .btn-warning.dropdown-toggle {
-    background-color: @btnWarningBackgroundHighlight;
+    background-color: @btn-warning-bg-highlight;
   }
   .btn-danger.dropdown-toggle {
-    background-color: @btnDangerBackgroundHighlight;
+    background-color: @btn-danger-bg-highlight;
   }
   .btn-success.dropdown-toggle {
-    background-color: @btnSuccessBackgroundHighlight;
+    background-color: @btn-success-bg-highlight;
   }
   .btn-info.dropdown-toggle {
-    background-color: @btnInfoBackgroundHighlight;
+    background-color: @btn-info-bg-highlight;
   }
   .btn-inverse.dropdown-toggle {
-    background-color: @btnInverseBackgroundHighlight;
+    background-color: @btn-inverse-background-highlight;
   }
 }
+
+
 
 
 // Reposition the caret
@@ -1919,12 +1891,6 @@ input[type="submit"].btn {
 
 
 // Vertical button groups
-// ----------------------
-
-.btn-group-vertical {
-  display: inline-block; // makes buttons only take up the width they need
-  .ie7-inline-block();
-}
 .btn-group-vertical > .btn {
   display: block;
   float: none;
@@ -1950,8 +1916,6 @@ input[type="submit"].btn {
 
 
 
-
-
 // alerts
 //=======================================================================================================================
 
@@ -1964,17 +1928,17 @@ input[type="submit"].btn {
 // -------------------------
 
 .alert {
-  color: @grayDarker;
+  color: @gray-darker;
   padding: 10px 20px 10px 45px;
   margin-bottom: @line-height-base;
   text-shadow: none;
-  background-color: @alertBackground;
-  border: 1px solid @grayLight;
+  background-color: @alert-warning-bg;
+  border: 1px solid @gray-light;
   position:relative;
 
   h4 {
     // Specified for the h4 to prevent conflicts of changing @headingsColor
-    color: @grayDarker;
+    color: @gray-darker;
   }
   p:last-child {
     margin-bottom:0px;
@@ -1994,8 +1958,6 @@ input[type="submit"].btn {
     .insert-icon("\7e", @red);
   }
 
-
-
 }
 
 .insert-icon(@content, @color) {
@@ -2008,16 +1970,18 @@ input[type="submit"].btn {
     font-size:20px;
 }
 
+
+
 // Alternate styles
 // -------------------------
 
 
 .alert-success {
-  background-color: @alertBackground;
-  border-color: @grayLight;
-  color: @grayDarker;
+  background-color: @alert-success-bg;
+  border-color: @gray-light;
+  color: @gray-darker;
   h4 {
-    color: @grayDarker;
+    color: @gray-darker;
   }
   &:before {
     .insert-icon("\72", @green);
@@ -2025,27 +1989,27 @@ input[type="submit"].btn {
 }
 .alert-danger,
 .alert-error {
-  background-color: @alertBackground;
-  border-color: @grayLight;
-  color: @grayDarker;
+  background-color: @alert-danger-bg;
+  border-color: @gray-light;
+  color: @gray-darker;
   &:before {
     .insert-icon("\e001", @red);
   }
 }
 .alert-danger h4,
 .alert-error h4 {
-  color: @grayDarker;
+  color: @gray-darker;
 }
 .alert-info {
-  background-color:@alertBackground;
-  border-color: @grayLight;
-  color: @grayDarker;
+  background-color:@alert-info-bg;
+  border-color: @gray-light;
+  color: @gray-darker;
   &:before {
     .insert-icon("\e000", @blue);
   }
 }
 .alert-info h4 {
-  color: @grayDarker;
+  color: @gray-darker;
 }
 
 
@@ -2065,9 +2029,6 @@ input[type="submit"].btn {
 }
 
 
-
-
-
 // Components: Nav
 // navs
 //=======================================================================================================================
@@ -2081,14 +2042,14 @@ input[type="submit"].btn {
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
 .nav-tabs > .active > a:focus {
-  color: @grayDarker;
-  border: 1px solid @dellGrayStroke;
+  color: @gray-darker;
+  border: 1px solid @dell-gray-stroke;
   border-bottom-color: transparent;
 }
 
 .nav > li > a:hover,
 .nav > li > a:focus {
-  background-color: @dellHighlightBlue;
+  background-color: @dell-highlight-blue;
 }
 
 // DISABLED STATES
@@ -2107,9 +2068,9 @@ input[type="submit"].btn {
 .nav-pills .open .dropdown-toggle,
 .nav > li.dropdown.open.active > a:hover,
 .nav > li.dropdown.open.active > a:focus {
-  color: @linkColor;
-  background-color: @grayLight;
-  border-color: @grayLight;
+  color:@link-color;
+  background-color: @gray-light;
+  border-color: @gray-light;
 }
 .nav li.dropdown.open .caret,
 .nav li.dropdown.open.active .caret,
@@ -2123,6 +2084,8 @@ input[type="submit"].btn {
 .nav-pills .dropdown-menu {
   margin: 0;
 }
+
+
 
 // navbar
 //=======================================================================================================================
@@ -2142,12 +2105,12 @@ input[type="submit"].btn {
   }
 }
 .navbar-inverse .navbar-search .search-query {
-  color: @grayDarker;
+  color: @gray-darker;
 }
 
 //tabs-bordered Dell 308 only
 .tabbable.tabs-bordered .tab-content {
-  border:1px solid @dellGrayStroke;
+  border:1px solid @dell-gray-stroke;
   border-top:none;
   .border-bottom-radius(@border-radius-base);
   padding:10px 10px 0 10px;
@@ -2164,7 +2127,7 @@ input[type="submit"].btn {
 }
 
 .tabbable.tabs-left.tabs-gray-light {
-  background:@grayLight;
+  background:@gray-light;
   margin-bottom:7px;
   .border-right-radius(@border-radius-base);
   .nav-tabs {
@@ -2172,7 +2135,7 @@ input[type="submit"].btn {
     background:@white;
     border-right:none;  
     li.active a {
-      background:@grayLight;
+      background:@gray-light;
       border:none;
     }
   }
@@ -2181,6 +2144,7 @@ input[type="submit"].btn {
   }
 
 }
+
 
 .tabbable.tabs-aside {
   .nav-aside {
@@ -2201,10 +2165,11 @@ input[type="submit"].btn {
   }
 }
 
+
 .nav-list {
-  background:@grayLight;
+  background:@gray-light;
   .nav-header {
-    color:@grayDarker;
+    color:@gray-darker;
   }
   .border-radius(@border-radius-base);
   > li:last-child a:hover {
@@ -2235,12 +2200,12 @@ input[type="submit"].btn {
     z-index:0;
     cursor:pointer;
     [class*=icon] {
-      font-size:@baseFontSize * 2;
+      font-size:@font-size-base * 2;
       position:relative;
       top:@line-height-base / 4;    
     }
     &:hover {
-  color:@grayDarker;
+  color:@gray-darker;
     }
   }
 }
@@ -2249,20 +2214,20 @@ input[type="submit"].btn {
     li a {
       text-shadow:none;
       color:@white;
-      background-color: @asideNavBackground;
+      background-color: @aside-nav-bg;
       .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
       border-bottom: #666 1px solid;
       padding-top:@line-height-base;
 
     }
     > li a:hover {
-      background-color: @dellHighlightBlue;
-      color:@asideNavBackground;
+      background-color: @dell-highlight-blue;
+      color:@aside-nav-bg;
       .box-shadow(inset -10px 0px 10px -10px rgba(0, 0, 0, .35));
-      border-bottom:1px solid @dellHighlightBlue;
+      border-bottom:1px solid @dell-highlight-blue;
     }
     > li.active a {
-      background:@asideNavBackgroundActive;
+      background:@aside-nav-bg-active;
       border-bottom:none;
       position:relative;
       &:hover {
@@ -2338,7 +2303,6 @@ input[type="submit"].btn {
 }
 
 
-
 // pagination
 //=======================================================================================================================
 
@@ -2369,7 +2333,7 @@ input[type="submit"].btn {
 .pagination ul > .active > a,
 .pagination ul > .active > a:hover,
 .pagination ul > .active > span {
-  background-color: @grayDark;
+  background-color: @gray-dark;
   color: @white;
   font-weight: bold;
 }
@@ -2377,8 +2341,9 @@ input[type="submit"].btn {
 .pagination ul > .disabled > a,
 .pagination ul > .disabled > a:hover,
 .pagination ul > .disabled > a:focus {
-  color: @grayDark;
+  color: @gray-dark;
 }
+
 
 
 // pager
@@ -2421,18 +2386,16 @@ input[type="submit"].btn {
   cursor: default;
   .opacity(65);
   .box-shadow(none);
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @linkColor, 0 1px 1px rgba(255,255,255,.75));
+  .buttonBackground(@btn-default-bg, @btn-default-bg-highlight, @link-color, 0 1px 1px rgba(255,255,255,.75));
   background-position: 0 0;
   // transition is only when going to hover/focus, otherwise the background
   // behind the gradient (there for IE<=9 fallback) gets mismatched
   .transition(background-position 0s linear);
 }
 
+
 // modals
 //=======================================================================================================================
-
-
-
 
 // Base modal
 .modal {
@@ -2444,14 +2407,14 @@ input[type="submit"].btn {
 .modal-header {
   padding: 0;
   padding-bottom: 5px;
-  border-bottom: 1px solid @dellGrayStroke;
+  border-bottom: 1px solid @dell-gray-stroke;
   // Close icon
   .close { 
     margin-top: 0;
     color:transparent;
     opacity:.6;
     &:before {
-      color:@grayDarker;
+      color:@gray-darker;
       font-family: 'icon-ui';
       speak: none;
       font-style: normal;
@@ -2489,13 +2452,13 @@ input[type="submit"].btn {
   padding: 20px 0 0;
   text-align: right; // right align buttons
   background-color: @white;
-  border-top: 1px solid @dellGrayStroke;
+  border-top: 1px solid @dell-gray-stroke;
   .border-radius(none);
   .box-shadow(none);
 }
 
 // modals on phones 
-@media only screen and (max-width:@mobileMaxWidth) {
+@media only screen and (max-width:@mobile-max-width) {
 
   .modal {
     width:98%;
@@ -2522,13 +2485,13 @@ input[type="submit"].btn {
     }
   }
 
-
 }
+
+
+
 
 // tooltip
 //=======================================================================================================================
-
-
 
 
 // Base class
@@ -2556,7 +2519,6 @@ input[type="submit"].btn {
 
 
 
-
 // popovers
 //=======================================================================================================================
 
@@ -2573,22 +2535,6 @@ input[type="submit"].btn {
   }
 }
 
-
-
-
-
-
-// Components: Misc
-// thumbnails
-//=======================================================================================================================
-
-
-
-// media
-//=======================================================================================================================
-
-
-
 // labels-badges
 //=======================================================================================================================
 // Base classes
@@ -2602,14 +2548,15 @@ input[type="submit"].btn {
 // Colors
 // Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
 .label {
-  &-teal              { background-color: @dellTeal; }
+  &-teal              { background-color: @dell-teal; }
 }
 
 .badge { 
-  background-color: @dellGrayDark; 
+  background-color: @dell-gray-dark; 
   position:relative;
   top:-5px;
 }
+
 
 
 // progress-bars
@@ -2622,7 +2569,7 @@ input[type="submit"].btn {
   overflow: hidden;
   height: @line-height-base;
   margin-bottom: @line-height-base;
-  #gradient > .vertical(@dellGrayLight, @dellGrayLight);
+  #gradient > .vertical(@dell-gray-light, @dell-gray-light);
   .box-shadow(inset 0 1px 2px rgba(0,0,0,.3));
   .border-radius(@border-radius-base);
 
@@ -2636,7 +2583,7 @@ input[type="submit"].btn {
       .box-shadow(inset 0 1px 2px rgba(0,0,0,.3));
       span {
         position:relative;
-        color:@grayDarker;
+        color:@gray-darker;
         text-shadow:none;
         top:30px;
         font-size:14px;
@@ -2669,7 +2616,7 @@ input[type="submit"].btn {
           color: @gray;
 
         }
-        #gradient > .vertical(@dellGrayLight, @dellGrayLight);
+        #gradient > .vertical(@dell-gray-light, @dell-gray-light);
       }
       &:first-child {
         .border-left-radius(@border-radius-base);
@@ -2684,7 +2631,7 @@ input[type="submit"].btn {
   }
 }
 
-@media only screen and (max-width:@mobileMaxWidth) {
+@media only screen and (max-width:@mobile-max-width) {
   .progress.progress-status {
     .bar span {
       display:none;
@@ -2692,7 +2639,7 @@ input[type="submit"].btn {
   }
 }
 
-@media only screen and (max-width:@tabletMaxWidth) {
+@media only screen and (max-width:@tablet-max-width) {
   .progress.progress-status {
     .bar span {
       left:2%;
@@ -2714,12 +2661,12 @@ input[type="submit"].btn {
 .accordion-group {
   margin-bottom: 2px;
   border: none;
-  border-bottom: 1px solid @dellGrayStroke;
+  border-bottom: 1px solid @dell-gray-stroke;
   .border-radius(0);
 }
 .accordion-heading {
   border-bottom: 0;
-  font-size:@fontSizeLarge;
+  font-size:@font-size-large;
   position:relative;
   padding-left:15px;
 }
@@ -2755,54 +2702,8 @@ input[type="submit"].btn {
 // Inner needs the styles because you can't animate properly with any styles on the element
 .accordion-inner {
   padding: 9px 15px;
-  border-top: 1px solid @dellGrayStroke;;
+  border-top: 1px solid @dell-gray-stroke;;
 }
-
-
-// carousel
-//=======================================================================================================================
-
-
-
-// hero-unit
-//=======================================================================================================================
-
-
-
-
-// Utility classes
-// utilities
-//=======================================================================================================================
-
-
-
-
-
-//
-// Scaffolding
-// --------------------------------------------------
-
-
-// Links
-// -------------------------
-
-
-
-
-// Images
-// -------------------------
-
-
-
-//
-// Layouts
-// --------------------------------------------------
-
-
-
-// TODO: need to look at div reset here.
-
-
 
 
 //ICONS
@@ -3222,6 +3123,8 @@ you can use the generic selector below, but it's slower:
 }
 
 
+
+
 /*---Large Icons---*/
 
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
@@ -3548,6 +3451,13 @@ you can use the generic selector below, but it's slower:
 }
 
 
+
+
+//
+// Layouts
+// --------------------------------------------------
+
+
 // bootstrap icon classes that map to Dell 308 icon set
 
 
@@ -3700,6 +3610,7 @@ you can use the generic selector below, but it's slower:
 
 
 
+
 // Dell 308 custom classes that do not exist in bootstrap
 
 // DELL-308-ONLY Specific table styling
@@ -3730,24 +3641,26 @@ div.table-bordered table {
   }
 }
 
+
+
 // ------------------------------------------
 // Pagination
 
 
 .pagination.pagination-unnumbered  ul > li > a {
-  background-color: @dellGrayStroke;
-  .border-radius(@borderRadiusSmall);
+  background-color: @dell-gray-stroke;
+  .border-radius(@border-radius-small);
 }
 .pagination.pagination-unnumbered  ul > li > a:hover {
-  background-color: @dellHighlightBlue;
+  background-color: @dell-highlight-blue;
 }
 .pagination.pagination-unnumbered  ul > li.active > a {
-  background-color: @grayDark;
+  background-color: @gray-dark;
 }
 
 .pagination.pagination-unnumbered  .zoom-controls {
   color: @gray;
-  border-left:2px solid @dellGrayStroke;
+  border-left:2px solid @dell-gray-stroke;
   padding:7px 20px;
   margin-left:10px;
   height:40px;
@@ -3767,63 +3680,3 @@ div.table-bordered table {
   cursor:pointer;
 }
 
-// these offsets are non-bootstrap gridset related hacks and should be removed in the BS3.0 release
-.bottom-offset-margin(@multiplier) {
-  margin-bottom: @line-height-base * @multiplier;
-}
-.top-offset-margin(@multiplier) {
-  margin-top: @line-height-base * @multiplier;
-}
-.bottom-offset {
-  &-mini {
-    .bottom-offset-margin(.5);
-  }
-  &-small {
-    .bottom-offset-margin(1);
-  }
-  &-medium {
-    .bottom-offset-margin(2);
-  }
-  &-large {
-    .bottom-offset-margin(3);
-  }
-}
-.top-offset {
-  &-mini {
-    .top-offset-margin(.5);
-  }
-  &-small {
-    .top-offset-margin(1);
-  }
-  &-medium {
-    .top-offset-margin(2);
-  }
-  &-large {
-    .top-offset-margin(3);
-  }
-}
-
-// RESPONSIVE CLASSES
-// ------------------
-
-@import "../../less/responsive-utilities.less";
-
-
-// MEDIA QUERIES
-// ------------------
-
-// Large desktops
-@import "../../less/responsive-1200px-min.less";
-
-// Tablets to regular desktops
-@import "../../less/responsive-768px-979px.less";
-
-// Phones to portrait tablets and narrow desktops
-@import "../../less/responsive-767px-max.less";
-
-
-// RESPONSIVE NAVBAR
-// ------------------
-
-// From 979px and below, show a button to toggle navbar contents
-@import "../../less/responsive-navbar.less";
