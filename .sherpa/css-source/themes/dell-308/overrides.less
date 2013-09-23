@@ -5,6 +5,22 @@
 // Scaffolding
 //=======================================================================================================================
 
+// Body reset
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  background-color: @bodyBackground;
+}
+
+
+// Links
+// -------------------------
+
 a {
   color: @linkColor;
 }
@@ -193,7 +209,7 @@ blockquote small cite {
 
 // Utility classes
 .muted          { color: @grayDark; }
-
+.strike-through { text-decoration:line-through; }
 
 // Abbreviations and acronyms
 abbr[title],
@@ -382,6 +398,10 @@ a[data-toggle="collapse"] {
   text-decoration:none;
 }
 
+[data-toggle="collapse"] {
+  cursor:pointer;
+}
+
 .hide-expanded, 
 .less,
 .collapsed .show-collapsed,
@@ -451,8 +471,14 @@ input[type="color"],
   margin-bottom: @baseLineHeight / 2;
   color: @grayDarker;
   .border-radius(@inputBorderRadius);
-
+  width:100%; 
 }
+
+textarea {
+  min-height: @inputHeight;
+  height: auto;
+}
+
 
 
 // Everything else
@@ -941,6 +967,7 @@ legend + .control-group {
   right: 5px;
   .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight); // forces the button to primary
   .border-radius(@borderRadiusSmall);
+  color:@white !important;
 }
 .form-search .input-append .btn {
   right: 25px;
@@ -960,12 +987,12 @@ legend + .control-group {
 // -----------
 
 // General classes for quick sizes
-.input-mini       { width: 60px; }
-.input-small      { width: 90px; }
-.input-medium     { width: 150px; }
-.input-large      { width: 210px; }
-.input-xlarge     { width: 270px; }
-.input-xxlarge    { width: 530px; }
+.input-mini       { width: 60px !important; }
+.input-small      { width: 90px !important; }
+.input-medium     { width: 150px !important; }
+.input-large      { width: 210px !important; }
+.input-xlarge     { width: 270px !important; }
+.input-xxlarge    { width: 530px !important; }
 
 
 span.uneditable-input {
@@ -1222,7 +1249,6 @@ table th[class*="span"],
 
 
 // NOTE: overriding caret with font icon for dell-308
-
 .dropdown-toggle {
   .caret {
     display:none;
@@ -1234,6 +1260,9 @@ table th[class*="span"],
     top:1px;
     float:right; // TODO: in dell-308 caret is aligned right: Will have to account for rtl;
     margin-left:5px;
+  }
+  &.no-arrow:after {
+      display:none; 
   }
 }
 .open > .dropdown-toggle:after {
@@ -1351,13 +1380,9 @@ li.dropdown .dropdown-menu {
 .btn-group {
   width:auto;
   > .btn + .dropdown-toggle {
-    *padding-top: 5px;
-    padding-right: 8px;
-    *padding-bottom: 5px;
-    padding-left: 8px;
-  /* -webkit-box-shadow: inset 2px 0 0 rgba(255, 255, 255, 0.1), inset 1px 0px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, .4);
-       -moz-box-shadow: inset 2px 0 0 rgba(255, 255, 255, 0.1), inset 1px 0px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, .4);
-            box-shadow: inset 2px 0 0 rgba(255, 255, 255, 0.1), inset 1px 0px 0 rgba(0, 0, 0, 0.1), 0px 0px 0px rgba(0, 0, 0, .4);*/
+    padding-right: 7px;
+    padding-left: 3px;
+    .border-right-radius(@inputBorderRadius);
     + .dropdown-menu {
       left: auto;
       right: 0;
@@ -1370,9 +1395,11 @@ li.dropdown .dropdown-menu {
       &:after {
         left: auto;
         right: 13px;
-        foobar:"excelent";
       }
     }
+  }
+  > .dropdown-toggle {
+    padding-right:7px;
   }
 
   &.open {
@@ -1389,15 +1416,18 @@ li.dropdown .dropdown-menu {
       background-color: #cfd9de;
     }
   }
+  > .btn-link:first-child {
+    padding-left:0px;
+  }
+  >.btn:first-child {
+    .border-radius(@inputBorderRadius);
+  }
 }
 .btn + .dropdown-menu {
   margin-top:3px;
 }
 .btn-link + .dropdown-menu {
   margin-top:-15px;
-}
-.btn-group > .btn-link:first-child {
-  padding-left:0px;
 }
 
 
@@ -1442,6 +1472,20 @@ li.dropdown .dropdown-menu {
   }
 }
 
+
+//well-bleed on mobile
+@media only screen and (max-width:@mobileMaxWidth) {
+  .well {
+    &-bleed {
+      img.pull-right {
+        padding-bottom:10px;
+      }
+      > :last-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
 
 // Sizes
 .well-large {
@@ -1665,9 +1709,9 @@ border: @defaultStroke solid @purple !important;
 }
 
 /* Modify all stroke classes with "thin"*/
-[class$=-stroke].thin { border-width: @thinStroke;  }
-
-
+[class*=-stroke].thin {
+  border-width: @thinStroke !important;
+}
 
 // component-animations
 //=======================================================================================================================
@@ -1694,15 +1738,20 @@ border: @defaultStroke solid @purple !important;
 // creating a default-button mixin to reuse in the pager
 
 .default-button() {
-  padding: 7px 11px;
+  padding: 7px 9px 7px 8px;
   margin-bottom: 0; // For input.btn
   font-size: @baseFontSize;
   line-height: @baseLineHeight * .9;
-  text-align:left;
+  text-align:center;
+  white-space: nowrap;
+  height:34px;
   .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
   border: 1px solid @btnBorder;
   .border-radius(@borderRadiusSmall);
   .box-shadow(none); 
+  text-overflow: ellipsis;
+  overflow: hidden;
+
   // Hover/focus state
 
   &:hover,
@@ -1738,8 +1787,12 @@ border: @defaultStroke solid @purple !important;
     .box-shadow(none);
   }
 
-}
+  [class^=icon] {
+    margin-right: -2px;
+    margin-left: -2px;
+  }
 
+}
 
 .btn, .btn-tertiary {
  .default-button();
@@ -1798,6 +1851,7 @@ border: @defaultStroke solid @purple !important;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+  height:24px;
 }
 
 
@@ -1807,13 +1861,8 @@ border: @defaultStroke solid @purple !important;
   -webkit-border-radius: 3px;
      -moz-border-radius: 3px;
           border-radius: 3px;
+  height:20px;
 }
-
-
-
-
-
-
 
 
 
@@ -2066,6 +2115,7 @@ border: @defaultStroke solid @purple !important;
 
 // navbar
 //=======================================================================================================================
+@import "../../less/navbar.less";
 
 .navbar-search {
   margin-top: 3px;
@@ -2079,13 +2129,15 @@ border: @defaultStroke solid @purple !important;
       &::-webkit-input-placeholder {
         padding-top:3px;
       }
+      .border-radius(@inputBorderRadius);
+      position:relative;
   }
 }
 .navbar-inverse .navbar-search .search-query {
   color: @grayDarker;
 }
 
-@import "../../less/navbar.less";
+
 
 .navbar div {
   width:auto;
@@ -2094,7 +2146,45 @@ border: @defaultStroke solid @purple !important;
 
 div.navbar-inner {
   width:100%;
+  background:@grayLight;
+  border:none;
+  box-shadow: none;
 }
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../less/responsive-navbar.less";
+
+@media (max-width: 979px){
+  .navbar {
+    .wrapper {
+      padding-left:2%;
+      padding-right:2%;
+    }
+    .brand {
+      padding-left: 0;
+    }
+    .btn-navbar {
+      margin-top: 3px;
+      margin-right: -9px;
+      .icon-bar + .icon-bar {
+        margin-top: 4px;
+      }
+    }
+    .nav-collapse {
+      left: -9px;
+      top: 2px;
+      margin-right: -18px;
+      .nav > li > a {
+        .border-bottom-radius(0);
+        border-bottom: 1px solid #ccc;
+      }    
+    }
+  }
+}
+  
 
 
 
@@ -2284,50 +2374,51 @@ div.navbar-inner {
 //=======================================================================================================================
 
 
-
 .pagination ul {
   // Visuals
   .border-radius(@baseBorderRadius);
   .box-shadow(none);
-}
-.pagination ul > li {
-  display: inline; // Remove list-style and block-level defaults
-}
-.pagination ul > li > a,
-.pagination ul > li > span {
-  background-color: none;
-  border: none;
-  border-left-width: 0;
-  margin:0 5px;
-  padding:7px 10px;
-  [class^=icon-ui-arrow] {
-    font-size:20px;
-    margin-top:-2px;
+  li {
+    display: inline; // Remove list-style and block-level defaults
+    &:first-child>a, 
+    &:first-child>span {
+      border-left-width: 1px;
+    }
+    > a,
+    > span {
+      background-color: none;
+      border: none;
+      border-left-width: 0;
+      margin:0 5px;
+      padding:7px 10px;
+      [class^=icon-ui-arrow] {
+        font-size:20px;
+        margin-top:-2px;
+      }
+      &:hover,
+      &:focus {
+        background-color: @dellHighlightBlue;
+        .border-radius(@baseBorderRadius);        
+      }
+    }
+    &.active > a,
+    &.active > a:hover,
+    &.active > span {
+      background-color: @grayLight;
+      color: @grayDarker;
+      font-weight: bold;
+      border:1px solid @grayDark;
+      padding: 5px 10px;
+      .border-radius(@baseBorderRadius);
+    }
+  }
+  .disabled > span,
+  .disabled > a,
+  .disabled > a:hover,
+  .disabled > a:focus {
+    color: @grayDark;
   }
 }
-.pagination ul > li > a:hover,
-.pagination ul > li > a:focus,
-.pagination ul > .active > a,
-.pagination ul > .active > span {
-  background-color: @dellHighlightBlue;
-  .border-radius(@baseBorderRadius);
-}
-.pagination ul > .active > a,
-.pagination ul > .active > a:hover,
-.pagination ul > .active > span {
-  background-color: @grayLight;
-  color: @grayDarker;
-  font-weight: bold;
-  border:2px solid @grayDark;
-  padding: 5px 10px;
-}
-.pagination ul > .disabled > span,
-.pagination ul > .disabled > a,
-.pagination ul > .disabled > a:hover,
-.pagination ul > .disabled > a:focus {
-  color: @grayDark;
-}
-
 .mirror-text() {
    -moz-transform: scaleX(-1); /* Gecko */
   -o-transform: scaleX(-1); /* Operah */
@@ -2338,12 +2429,12 @@ div.navbar-inner {
 
 .pagination.pagination-unnumbered {
   margin: 20px auto;
-  width: 340px;
+  width: 350px;
   clear: both;
   float: none;
   ul {
     width:auto;
-    margin-top:12px;
+    margin-top:15px;
     float:left;
   }
   ul > li {
@@ -2362,14 +2453,15 @@ div.navbar-inner {
       background-color: @grayDark;
       &:hover {
         padding: 3px 10px;
+        .border-radius(@borderRadiusSmall);
       }
     }
   }
   .zoom-controls {
     color: @gray;
     border-left:2px solid @dellGrayStroke;
-    padding:7px 20px;
-    margin-left:10px;
+    padding:9px 20px 7px;
+    margin-left:20px;
     height:40px;
     width:auto;
     display:inline;
@@ -2392,43 +2484,49 @@ div.navbar-inner {
   list-style: none;
   text-align: center;
   .clearfix();
-}
-.pager li {
-  display: inline;
-}
-.pager li > a,
-.pager li > span {
-  // same as default button class
-  .default-button();
-  > .icon-ui-arrowleft {
-    margin: 1px 6px 0 -6px;
+  li {
+    display: inline;
+    > a, 
+    > a.btn, 
+    > span {
+      // same as default button class
+      .default-button();
+      > [class*=left] {
+        margin: 2px -1px 0 -6px;
+      }
+      > [class*=right] {
+        margin: 2px -6px 0 -1px;
+      }
+      &.disabled {
+        margin-top:-3px;
+      }
+    }
   }
-  > .icon-ui-arrowright {
-    margin: 1px 0 0 0;
+  &.next > a,
+  &.next > span {
+    > [class^=icon] {
+      margin: 2px -6px 0 -1px;
+    }
   }
-}
-
-.pager .next > a,
-.pager .next > span {
-  float: right;
-}
-.pager .previous > a,
-.pager .previous > span {
-  float: left;
-}
-
-.pager .disabled > a,
-.pager .disabled > a:hover,
-.pager .disabled > a:focus,
-.pager .disabled > span {
-  cursor: default;
-  .opacity(65);
-  .box-shadow(none);
-  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @linkColor, 0 1px 1px rgba(255,255,255,.75));
-  background-position: 0 0;
-  // transition is only when going to hover/focus, otherwise the background
-  // behind the gradient (there for IE<=9 fallback) gets mismatched
-  .transition(background-position 0s linear);
+  &.previous > a,
+  &.previous > span {
+    > [class^=icon] {
+      margin: 2px -1px 0 -6px;
+    }
+  }
+  .disabled > a,
+  .disabled > a:hover,
+  .disabled > a:focus,
+  .disabled > span {
+    cursor: default;
+    .opacity(65);
+    .box-shadow(none);
+    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @linkColor, 0 1px 1px rgba(255,255,255,.75));
+    background-position: 0 0;
+    // transition is only when going to hover/focus, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position 0s linear);
+  }
 }
 
 // modals
@@ -2592,6 +2690,32 @@ div.navbar-inner {
   }
 }
 
+//popovers for mobile
+
+@media only screen and (max-width:@mobileMaxWidth) {
+  .popover {
+    .arrow,
+    &.bottom .popover-title:before {
+      display:none;
+    }
+    .box-shadow(0px 10px 54px rgba(0,0,0,0.4));
+    left: 5% !important;
+    width:90%;
+    max-width:@mobileMaxWidth;
+    &.right,
+    &.left {
+      margin-left: 0;
+    }
+  }
+  .control-group.error .popover {
+    top:0;
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+    .arrow,
+    &.bottom .popover-title:before {
+      display:block;
+    }
+  }
+}
 
 
 
@@ -2735,12 +2859,7 @@ div.navbar-inner {
   border-bottom: 1px solid @dellGrayStroke;
   .border-radius(0);
 }
-.accordion-heading {
-  border-bottom: 0;
-  font-size:@fontSizeLarge;
-  position:relative;
-  padding-left:15px;
-}
+
 .accordion-toggle:before {
   font-family: 'icon-ui';
   font-size:20px;
@@ -2770,6 +2889,50 @@ div.navbar-inner {
   cursor: pointer;
 }
 
+.accordion-heading {
+  border-bottom: 0;
+  font-size:@fontSizeLarge;
+  position:relative;
+  padding-left:15px;
+  position:relative;
+  &.well {
+    padding-left:0;
+    .border-radius(0);
+    margin-bottom: -1px;
+    margin-top: -3px;
+    border-top:1px solid @dellGrayStroke;
+    .accordion-toggle {
+      &:before {
+        display:none;
+      }
+      &:after {
+        font-family: 'icon-ui';
+        font-size:20px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        color:inherit;
+        content:"\26";
+        font-size:12px;
+        position:absolute;
+        right:20px;
+        margin-top:5px;
+      }
+      &.collapsed:after {
+        content:"\25";
+      }
+    }
+  }
+}
+
+.accordion > .accordion-group:first-child > .accordion-heading.well {
+  border-top:none;
+  margin-top:3px;
+}
 // Inner needs the styles because you can't animate properly with any styles on the element
 .accordion-inner {
   padding: 9px 15px;
@@ -3827,31 +3990,31 @@ div.table-bordered table {
       padding: 10px 0 0;
     }
     .modal-header .close {
-      margin-top: -7px;
-      margin-right: 9px;
       position:relative;
       z-index:0;
     }
     .modal-header .close:before {
-      margin-right: -22px;
+      margin-right: -2px;
       position:relative;
       z-index:1;
     }
   }
-
-
 }
 
-
-// RESPONSIVE NAVBAR
-// ------------------
-
-// From 979px and below, show a button to toggle navbar contents
-@import "../../less/responsive-navbar.less";
 
 // IE10 Metro responsive
 // Required for Windows 8 Metro split-screen snapping with IE10
 // Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
 @-ms-viewport{
   width: device-width;
+}
+
+@media (max-width: 767px) {
+  .wrapper {
+      width:96%;
+  }
+  body {
+      padding-left: 0;
+      padding-right: 0;
+  }
 }

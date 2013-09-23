@@ -1,0 +1,24 @@
+<script type="text/javascript">
+  
+  $('.fiddle-button').on('click', function(event) {
+      var target = $(this).attr('data-target'), html_code;
+      if(target){
+        html_code = $('#'+target).html().replace(/</g,'&lt;').replace(/>/g,'&gt;');
+        $('#fiddle-html-code').html(html_code);
+      }
+      document.fiddleForm.submit();
+  });
+  
+</script>
+
+<form name="fiddleForm" method="post" action="http://jsfiddle.net/api/post/jQuery/1.9.1/dependencies/more/" target="_new">
+  <textarea name="html" id="fiddle-html-code"></textarea>
+  <textarea name="js"></textarea>
+  <textarea name="css"></textarea>
+  <input type="text" name="title" value="Dell 308 Boostrap Theme">
+  <textarea name="description">For Bootstrap 2.3.2</textarea>
+  <textarea name="resources">http://open.gsdprototypes.com/sherpa/.sherpa/css/bootstrap.css,http://open.gsdprototypes.com/sherpa/.sherpa/lib/bootstrap-min.js,http://open.gsdprototypes.com/sherpa/.sherpa/css/dell-308-theme-v0.6.css</textarea>
+  <input type="text" name="dtd" value="html 5">
+  <input type="text" name="wrap" value="l">
+</form>
+

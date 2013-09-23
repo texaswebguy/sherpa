@@ -53,12 +53,21 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 				});
 			});
 
+			$('.change-accordion-color a').click(function(event){
+				event.preventDefault();
+				var className = $(event.currentTarget).attr('class');
+				$("#collapsible-example-HTML-3 .accordion-heading").attr('class','accordion-heading well well-small well-'+className);
+				$("[rel=collapsible-example-HTML-3]").parent().find("[data-copy=2-clipboard]").attr('data-clipboard-text', $("#collapsible-example-HTML-3")[0].outerHTML);
+				$("[rel=collapsible-example-HTML-3]").html(($("#collapsible-example-HTML-3")[0].outerHTML).replace(/</g,'&lt;'));
+				$('[rel=collapsible-example-HTML-3]').removeClass('prettyprinted');				
+				prettyPrint();
+			});
+
 			$('.change-container-color a').click(function(event){
 				event.preventDefault();
 				var className = $(event.currentTarget).attr('class');
 				$("#solid-colored-container-example").attr('class','well well-large well-'+className);
 				$("#solid-colored-container-example-code").html('&lt;div class="well well-large well-'+className+'">...&lt;/div>');
-
 			});
 			$('.change-container-bleed a').click(function(event){
 				event.preventDefault();
@@ -214,18 +223,45 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 			$('section, article, [data-keywords]').fadeIn();			
 		});
 
-		this.listen('.nav a', 'click', function(event){
+		this.listen('.nav.old a', 'click', function(event){
 			event.preventDefault();
-			var self = $(event.currentTarget), target = self.attr('href');
+			var self = $(event.currentTarget), target = self.attr('href'), panel = $('#header-308-site .nav-collapse');
 			switch(target) {
 
 				case "#download-theme":
-				location.href = "dell-308-theme.zip";
+					panel.collapse('hide');
+					location.href = "dell-308-theme.zip";
+				break;
+				case "#fiddle-link":
+					panel.collapse('hide');
+					window.open(
+					  'http://fiddle.jshell.net/74WCw/1/',
+					  '_blank'
+					);
+				break;
+				case "#change-log":
+					panel.collapse('hide');
+					var convertMD = new Sherpa.Markdown.converter();
+					Sherpa.publish("modal", {
+					    title:'Change Log for:',
+					    title_description:$('#current-sherpa-release').text(),
+					    body: convertMD.makeHtml($('#change-log').text())
+					  })
+
 				break;
 				case "#known-issues":
-				location.href = "https://github.com/DellGDC/sherpa/tree/magnum-308-theme-october/.sherpa/css-source/themes/dell-308";
+					panel.collapse('hide');
+					var convertMD = new Sherpa.Markdown.converter();
+					Sherpa.publish("modal", {
+					    title:'Known conversions issues & instructions for:',
+					    title_description:$('#current-sherpa-release').text(),
+					    body: convertMD.makeHtml($('#known-issues').text())
+					  })
 				break;
 				default:
+					if(target.match(/.html/)){
+						top.location.href = target;
+					}
 					$('header .nav li').removeClass('active');
 					if(!self.parents('.nav > li.dropdown')) {
 						self.parent().addClass('active');
@@ -234,8 +270,9 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 						self.parent().addClass('active');
 					}
 					if(target != "#" && target) {
+						panel.collapse('hide');
 						$.scrollTo(target,300,{offset:{top:-100}});
-					}		
+					} 
 			}
 
 		});
@@ -281,22 +318,18 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 
 	Sherpa.scope('#header-308-site ', function(){
 		this.listen('ul.nav > li.active > a','mouseenter', function(event){
-			if($("#"+$('html').attr('id')+' .sub-nav')) {
-				$('#header-308-site .nav > li.active').addClass('open');
-				$("#"+$('html').attr('id')+' .sub-nav').collapse('show');				
+			if(!viewModel.isMobile()){
+				if($("#"+$('html').attr('id')+' .sub-nav')) {
+					$('#header-308-site .nav > li.active').addClass('open');
+					$("#"+$('html').attr('id')+' .sub-nav').collapse('show');				
+				}
 			}
 		});
 
 		this.listen('ul.nav > li.active > a','click', function(event){
-			if($("#"+$('html').attr('id')+' .sub-nav')) {
-				if($('#header-308-site .nav > li.active').hasClass('open')) {
-					$('#header-308-site .nav > li.active').removeClass('open');
-				} else {
-					$('#header-308-site .nav > li.active').addClass('open');
-				}
-			}
-			
+			$('.dropdown.active').dropdown('toggle');
 		});	
+		
 		this.listen('input.search-tags', 'keyup', function(event){
 			if($(event.currentTarget).val()) {
 				$('header .navbar-search').addClass('active');
@@ -400,8 +433,22 @@ Sherpa.ready("sherpaGlobalEvents", function(){
 	});
 
 
+	$("title").text('Dell Sherpa v'+Sherpa.version.major+Sherpa.version.minor);
 
 
+	$(window).resize(function() {
+		isInFrame();
+	});
+
+	function isInFrame(){
+		if ( window.self === window.top ) {
+			Sherpa.feature("in-frame", false);
+		} else {
+			Sherpa.feature("in-frame", true);
+		}		
+	}
+	isInFrame();
+		
 
 });
 

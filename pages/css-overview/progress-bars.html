@@ -3,7 +3,7 @@
       <h2>Progress bars</h2>
     </div>     
 
-      <div class="da-all ta-all ma-all">
+      <div class="da-all ta-all ma-all" id="progress-bars-HTML">
         <div class="da1-da4 ta1-ta3 ma-all">
           <h4>Default</h4>
           <p>Default progress bar color.</p>
@@ -26,13 +26,16 @@
             <p><strong class="label">NOTE:</strong> Progress status bar is custom to Dell 308 and requires slightly different markup and custom classes.</p>
           </div>
 
-          <h4>Progress Status</h4>
+          <h4><p>Progress Status  <span class="label">(not in Bootstrap)</span></p></h4>
 <div class="progress progress-status">
   <a href="#shipping" class="bar bar-complete" style="width: 25%"><span>Shipping</span></a>
   <a href="#payment" class="bar bar-complete" style="width: 25%"><span>Payment</span></a>
   <div class="bar bar-progress" style="width: 25%"><span>Verify & Submit Order</span></div>
   <div class="bar bar-incomplete" style="width: 25%"><span>Order Submitted</span></div>
 </div>
+      </div>
+    </div>
+      <div class="da-all ta-all ma-all">
 
           <div class="alert alert-info">
             <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
@@ -46,6 +49,7 @@
           <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#progress-bars-HTML">
             <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
           </button>
+
           <p>&nbsp;</p>
 
           <div class="collapse" id="progress-bars-HTML">
@@ -55,6 +59,7 @@
                   <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
                     Copy HTML
                   </button>
+                  <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                   <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
                 </li>
             </ul>
@@ -69,5 +74,3 @@
 
         </div>
       </div>
-    	<br>
-    </div>

@@ -109,10 +109,10 @@ return}p()}}()}setTimeout(function(){l=!0;m(v,function(a){a()})},300)})(window);
 //______________________________________________________________________________________
 
 Sherpa.version = {
-	codeName : "Green-Lion",
-	minor : ".0",
+	codeName : "Dell-308 2.3.2 Boostrap Theme (Green-Lion)",
+	minor : ".06",
 	major : "0.6",
-	releaseDate : "9.13.2013"
+	releaseDate : "9.23.2013"
 }
 Sherpa.VERSION = Sherpa.version.major+Sherpa.version.minor+" - "+Sherpa.version.releaseDate+" - "+Sherpa.version.codeName;
 

@@ -5,16 +5,18 @@
       <div class="da-all ta-all ma-all">
         <div id="popover-example-HTML">
           <ul class="unstyled">
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on top">Popover on top</a></li>
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on right">Popover on right</a></li>
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on bottom">Popover on bottom</a></li>
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on left">Popover on left</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title='Popover on top<i class="close icon-ui-close pull-right visible-phone" data-dismiss="popover"></i>'>Popover on top</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title='Popover on right<i class="close icon-ui-close pull-right visible-phone" data-dismiss="popover"></i>'>Popover on right</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title='Popover on bottom<i class="close icon-ui-close pull-right visible-phone" data-dismiss="popover"></i>'>Popover on bottom</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title='Popover on left<i class="close icon-ui-close pull-right visible-phone" data-dismiss="popover"></i>'>Popover on left</a></li>
           </ul>
           <ul class="unstyled da-clear ta-clear ma-clear top-offset-large">
-            <li><a href="#" class="btn" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on hover" data-trigger="hover">Popover on hover</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="right" data-content='Vivamus sagittis lacus vel augue laoreet rutrum faucibus.' title="" data-original-title='Popover on hover<i class="close icon-ui-close pull-right visible-phone" data-dismiss="popover"></i>' data-trigger="hover">Popover on hover</a></li>
             <li><a href="#" class="btn" id="custom-popover" data-toggle="popover" data-original-title='Popover with custom content<i class="close icon-ui-close" data-dismiss="popover"></i>' data-trigger="manual" data-placement="right" data-html="true" data-content='<p>This is a sample custom popover with lots of cool stuff inside.</p><p class="pull-right"><button class="btn btn-primary" data-dismiss="popover">Ok</button></p>'>Popover with custom content</a></li>
             <li><a href="#" class="btn" id="popover-no-title" data-toggle="popover" data-trigger="manual" data-placement="top" data-html="true" data-content='<i class="close icon-ui-close pull-right" data-dismiss="popover"></i><p>This is a sample popover with lots of cool stuff inside and no title.</p>'>Popover no title with dismiss</a></li>      
           </ul>
+
+          
         </div>
         <div class="alert alert-info" id="popover-308-rules">
           <h4>Dell 308 Styleguide Rules:</h4>
@@ -34,6 +36,7 @@
                 <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
                   Copy HTML
                 </button>
+                <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                 <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
               </li>
           </ul>

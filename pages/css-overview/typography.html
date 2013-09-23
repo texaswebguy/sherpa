@@ -5,12 +5,14 @@
 
     <!-- Headings & Paragraph Copy -->
     <div class="da-all ta-all ma-all">
-      <div data-copy="2-clipboard" title="Click me to copy page title html to clipboard">
-        <div class="title">
-          <h1 class="title">Page Title H1</h1>
-        </div>
-      </div>
       <div class="da1-da6 tb1-tb4 ma-all">
+
+        <div id="h1-title-example">
+          <div class="title">
+            <h1 class="title">Page Title H1</h1>
+          </div>
+        </div>
+        <p><code data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#h1-title-example')[0].innerHTML}, text: $('#h1-title-example')[0].innerHTML.replace(/</g,'&lt;')"> </code></p>
         <div class="well">
           <h1>Heading 1 <code data-copy="2-clipboard" title="Click me to copy h1 html to clipboard">&lt;h1>Heading&lt;/h1></code></h1>
           <h2>Heading 2 <code data-copy="2-clipboard" title="Click me to copy h2 html to clipboard">&lt;h2>Heading&lt;/h2></code></h2>
@@ -87,11 +89,21 @@
       <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="text-right">Right aligned text.</p></div>
     </div>
     <div class="da-all ta-all ma-all">
-      <h3>Text Colors (Not in Bootstrap)</h3>
+      <h3>Text Utitlities</h3>
+      <div><code>&lt;small>...&lt;/small></code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><small>This text is meant to be treated as fine print.</small></div>
+      <div><code>&lt;strong>...&lt;/p></code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><strong>This is bold text.</strong></div>
+      <div><code>&lt;em>...&lt;/em></code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><em>This text is in italics.</em></div>
+      <div><code>&lt;p class="strike-through">...&lt;/p></code> <span class="label">(not in Bootstrap)</span></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="strike-through">This text has line through.</p>    </div>    
+    <div class="da-all ta-all ma-all">
+      <h3>Text Colors</h3>
       
       <div class=" pull-right"><div class="btn-group">
       <button class="btn btn-mini dropdown-toggle" data-toggle="dropdown">View other colors</button>
-      <ul class="dropdown-menu change-container-color-text">
+      <ul class="dropdown-menu change-container-color-text pull-right">
         <li><a href="#" class="gray-dark">Dark Gray</a></li>
         <li><a href="#" class="gray-medium">Medium Gray</a></li>
         <li><a href="#" class="gray">Gray</a></li>
@@ -110,6 +122,8 @@
         <li><a href="#" class="teal">Teal</a></li>
       </ul>
     </div></div>
-      <code id="text-color-sample-code">&lt;p class="text-blue">...&lt;/p></code>
+      <code id="text-color-sample-code">&lt;p class="text-blue">...&lt;/p></code> <span class="label">(not in Bootstrap)</span>
       <div class="well well-small" id="text-color-sample" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="text-blue">This text is <strong>Blue</strong>.</p></div>
     </div>
+
+    

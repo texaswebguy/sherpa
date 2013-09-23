@@ -12,7 +12,7 @@
     <script type="text/javascript">
         var SHERPA_CONFIG_OVERRIDES = {};
 
-		SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/magnum_config_old.js";
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/sherpa-config-0-6.js";
 
         /*
 			This is a place to overide sherpa default configurations for this html file.
@@ -37,7 +37,9 @@
 
 <header id="header-308-site" class="affix da-all ta-all ma-all" data-bind="include:'assets/includes/masthead.html'"></header>
 <div class="page da-all ta-all ma-all">
-
+  <div class="wrapper">
+    <div data-bind="include: {'sourceUrl':'assets/includes/breadcrumb.html'}"></div>
+  </div>
   <div data-bind="page: {id: 'start', source: 'pages/home/index.html', scrollToTop:true}" class="da-all ta-all ma-all home-page"></div><!--page: Start -->
   
   <!--page: Getting Started -->

@@ -28,13 +28,14 @@ SHERPA.RUN_SHERPA_PROD = false; //runs mimified versions of sherpa code
 // JS PATH Configuration;
 SHERPA.REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/";
 SHERPA.LOCAL_PATH = "";
-SHERPA.JS_PATH = "assets/js/";
-SHERPA.JS_LIB_PATH = ".sherpa/lib/";
-SHERPA.CORE_PATH = ".sherpa/";
-SHERPA.COMPONENTS_PATH = ".sherpa/components/";
-SHERPA.ASSETS_PATH = "assets/";
-SHERPA.DOCUMENTATION_PATH = "documentation/";
-SHERPA.DEFAULT_THEME = "dell-308-overrides";
+SHERPA.JS_PATH = "../../assets/js/";
+SHERPA.JS_LIB_PATH = "../../.sherpa/lib/";
+SHERPA.CORE_PATH = "../../.sherpa/";
+SHERPA.COMPONENTS_PATH = "../../.sherpa/components/";
+SHERPA.ASSETS_PATH = "../../assets/";
+SHERPA.DOCUMENTATION_PATH = "../../documentation/";
+SHERPA.DEFAULT_THEME = "dell-308-theme-v0.6";
+SHERPA.RESET_THEME_ONLOAD = true;
 SHERPA.ENABLE_GLOBAL_MODAL = true;
 
 // i18n Configuration
@@ -49,9 +50,9 @@ SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa er
 
 // CSS Configuration
 SHERPA.CSS_CORE_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/css/";
-SHERPA.CSS_CORE_LOCAL_PATH = ".sherpa/css/";
+SHERPA.CSS_CORE_LOCAL_PATH = "../../.sherpa/css/";
 SHERPA.CSS_REMOTE_PATH = "https://rawgithub.com/DellGDC/sherpa/master/.sherpa/sherpa-site-assets/css/";
-SHERPA.CSS_LOCAL_PATH = "assets/css/";
+SHERPA.CSS_LOCAL_PATH = "../../assets/css/";
 
 // GLOBAL Sherpa Computed Globals:
 //______________________________________________________________________________________
@@ -91,16 +92,16 @@ SHERPA.JS_CORE_LOAD = [
 	{ dateFormat: SHERPA.JS_LIB_PATH+"date-format.js"}
 ]
 
-SHERPA.PROTOTYPE_APP = "magnum.js";
+SHERPA.PROTOTYPE_APP = "sherpa-0-6.js";
 
 // CSS Files
 //______________________________________________________________________________________
 
-SHERPA.PROTOTYPE_CSS = "magnum.css";
+SHERPA.PROTOTYPE_CSS = "sherpa-0-6.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap.css" },
-	{ css_theme: SHERPA.CSS_CORE_PATH+SHERPA.DEFAULT_THEME+".css" },
+	{ css_theme: SHERPA.CSS_CORE_PATH+"themes/"+SHERPA.DEFAULT_THEME+".css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 SHERPA.CSS_GRID = SHERPA.CSS_CORE_PATH+"grid/gridset.css";

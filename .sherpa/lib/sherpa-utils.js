@@ -352,6 +352,31 @@ Sherpa.insertInclude = function(element, valueAccessor, allBindingsAccessor, vie
 	}
 }
 
+Sherpa.insertMarkdown = function(element, valueAccessor, allBindingsAccessor, viewModel, bindingContext) {
+
+	var filename = valueAccessor()
+	if(filename) {
+		Sherpa.request({
+			resourceId: "getComponentHTML", 
+			data: {filename: filename}, 
+			success: function(markdown, status){
+				var convertMD = new Sherpa.Markdown.converter();
+				var responseHTML = convertMD.makeHtml(markdown);
+				$(element).html(responseHTML);
+			},
+			error: function( data, status ) {
+				//no module exists
+				filename = filename.split('#')[0];
+				Sherpa.QA.logEntry('Missing markdown: filename '+filename+' does not exist',"missing markdown, sherpa-utils:insertMarkdown");
+				var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing Markdown</h4> <p>'+filename+' does not exist</p></div>';
+				$(element).html(responseHTML);
+			}
+		});
+	} else {
+		console.error("Need to provide a source url (sourceUrl) for the markdown")
+	}
+}
+
 Sherpa.equalizeHeight = function(selector, add_px) {
     var max = 0, elements;
     elements = $(selector), _.each(elements, function (element) {

@@ -97,7 +97,7 @@
             <div class="controls">
               <label class="checkbox">
                 <input type="checkbox" id="list-aside" value="list-aside">
-                <code>&lt;ul class="nav nav-list nav-aside"></code>
+                <code>&lt;ul class="nav nav-list nav-aside"></code>  <span class="label">(not in Bootstrap)</span>
               </label>
             </div>
           </div>
@@ -113,6 +113,8 @@
           <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#list-example-HTML').html()}">
             Copy HTML
           </button>
+          <button class="btn btn-mini fiddle-button" data-target="list-example-HTML">Fiddle</button>
+
           <pre class="prettyprint linenums" id="list-HTML-code" data-bind="text: $('#list-example-HTML').html().replace(/</g,'&lt;')"></pre>
         </div>
         <hr/>

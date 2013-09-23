@@ -108,26 +108,28 @@
     </table>
 
     <p class="da-clear ta-clear ma-clear"></p>
+    <div class="alert alert-info" id="button-308-rules">
+      <h4>Dell 308 Styleguide Rules:</h4>
+      <p>NOTE: Dell 308 button class names deviated greatly from Bootstrap. They are now normalized using standard BS class names.</p>
+      <ul>
+<!--         <li><code>.btn-primary</code> should be changed to <code>.btn-success</code></li>
+<li><code>.btn-secondary</code> should be changed to <code>.btn-primary</code></li> -->
+        <li><code>.btn-tertiary</code> should be deprecated default <code>.btn</code> should be used instead.</li>
+        <li><code>.btn-info</code>, <code>.btn-warning</code>, <code>.btn-danger</code> and <code>.btn-inverse</code> are not to be used and will display same as default.</li>
+        <li>Use class <code>no-arrow</code> with a <code>dropdown-toggle</code> to suppress the dropdown arrow in a button or link</li>
 
+
+      </ul>
+      <p>&nbsp;</p>
+      <p>You can check out the <a href="http://bootsnipp.com/buttons" target="bootsnipp">button builder at Bootsnip.com.</a> Just beware that our icon classes are different.</p>
+    </div>
 
       <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#buttons-HTML">
         <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
       </button>
       <div class="collapse" id="buttons-HTML">
 <p>&nbsp;</p>
-        <div class="alert alert-info" id="button-308-rules">
-          <h4>Dell 308 Styleguide Rules:</h4>
-          <p>NOTE: Dell 308 button class names deviated greatly from Bootstrap. They are now normalized using standard BS class names.</p>
-          <ul>
-            <li><code>.btn-primary</code> should be changed to <code>.btn-success</code></li>
-            <li><code>.btn-secondary</code> should be changed to <code>.btn-primary</code></li>
-            <li><code>.btn-tertiary</code> should be deprecated default <code>.btn</code> should be used instead.</li>
-            <li><code>.btn-info</code>, <code>.btn-warning</code>, <code>.btn-danger</code> and <code>.btn-inverse</code> are not to be used and will display same as default.</li>
-          </ul>
-          <p>&nbsp;</p>
-          <p>You can check out the <a href="http://bootsnipp.com/buttons" target="bootsnipp">button builder at Bootsnip.com.</a> Just beware that our icon classes are different.</p>
 
-        </div>
 
 
         <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#button-sample-code-1').html()}">

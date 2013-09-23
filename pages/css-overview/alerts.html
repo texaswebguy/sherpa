@@ -3,7 +3,7 @@
       <h2>Alerts</h2>
     </div>     
       <div id="alerts-example-HTML">
-      <div class="da-all ta-all ma-all">
+      <div class="da-all ta-all ma-all" id="alerts-HTML-code-1">
 <div class="alert alert-block">
   <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
   <h4 class="alert-heading">Alert block with title</h4>
@@ -11,19 +11,19 @@
 </div>
       </div>
       <div class="da-all ta-all ma-all">
-        <div class="da1-da4 ta1-ta3 ma-all">
+        <div class="da1-da4 ta1-ta3 ma-all" id="alerts-HTML-code-2">
 <div class="alert alert-error">
   <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
   <strong>Error:</strong> Change a few things up and try submitting again.
 </div>
         </div>
-        <div class="da5-da8 ta4-ta6 ma-all">
+        <div class="da5-da8 ta4-ta6 ma-all" id="alerts-HTML-code-3">
 <div class="alert alert-success">
   <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
   <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
 </div>
         </div>
-        <div class="da9-da12 ta7-ta9 ma-all">
+        <div class="da9-da12 ta7-ta9 ma-all" id="alerts-HTML-code-4">
 <div class="alert alert-info">
   <a class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-closecircle"></i></a>
   <strong>Information:</strong> This alert needs your attention, but it's not super important.
@@ -50,6 +50,8 @@
                   <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
                     Copy HTML
                   </button>
+                  <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}">Fiddle</button>
+
                   <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
                 </li>
             </ul>

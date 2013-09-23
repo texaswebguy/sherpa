@@ -1,12 +1,8 @@
 
     <div class="gray-medium da-all ta-all ma-all">
         <div class="wrapper">
-          <div class="pull-left">
-            Dell-308 2.3.2 Boostrap Theme
-          </div>
-          <div class="pull-right">
-            Sherpa v.0.5
-          </div>
+          <div class="pull-left" data-bind="text: Sherpa.version.codeName"></div>
+          <div class="pull-right" data-bind="text: 'Sherpa v'+Sherpa.version.major+Sherpa.version.minor+' - '+Sherpa.version.releaseDate"></div>
         </div>
     </div>
     <div class="blue da-all ta-all ma-all">
@@ -23,14 +19,14 @@
             <div class="nav-collapse">
               <ul data-bind="foreach: $__page__.children" class="nav">
                 <!-- ko if: val('desc') -->
-                <li data-bind="css: {active: isVisible}">
-                  <a data-bind="page-href: $data" data-toggle="collapse" data-target=".sub-nav">
-                      <span data-bind="text: val('desc')"></span>
-                  </a>
-                </li>
+                  <li data-bind="css: {active: isVisible}">
+                    <a data-bind="page-href: $data">
+                        <span data-bind="text: val('desc')"></span>
+                    </a>
+                  </li>
                 <!-- /ko -->
               </ul>
-              <form class="navbar-search pull-right" action="">
+              <form class="navbar-search pull-right hide" action="">
                 <input type="text" class="search-query input-large search-tags" placeholder="Search tag or keyword">
                 <i aria-hidden="true" class="icon-ui-close"></i>
               </form>

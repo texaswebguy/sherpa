@@ -3,7 +3,7 @@
 
 <head>
 	<meta charset="utf-8">
-    <title>Sherpa - Template</title>
+    <title>Dell Sherpa</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     
     <meta name="description" content="">
@@ -31,10 +31,21 @@
 
 
     	*/
+
+      function simulatorURL(){
+          if ( window.self === window.top ) { 
+            if(viewModel.isDesktop()){
+              return '<a href="simulator.html">View in Simulator</a>';
+            }
+          } 
+          else { 
+              return '<a href="index.html">Exit Simulator</a>'; 
+          }
+      }
     </script>
 	<!-- Don't touch 
 	******************************************************************************** -->
-    <style>body {opacity: 0;}</style>
+  <style>body {opacity: 0;}</style>
 	<script src=".sherpa/sherpa.js"></script>	
 	<!-- Sherpa js adds all the js and css files you need.
 	******************************************************************************** -->	
@@ -45,10 +56,9 @@
     <div class="gray-medium da-all ta-all ma-all">
         <div class="wrapper">
           <div class="da1-da6 tb1-tb4 mb1-mb2">
-            Boostrap 2.3.2 Dell-308 Theme
+            <span class="hidden-phone">Boostrap 2.3.2</span> Dell-308 Theme
           </div>
-          <div class="da7-da12 tb5-tb8 mb3-mb4 text-right">
-            Sherpa v.0.6
+          <div class="da7-da12 tb5-tb8 mb3-mb4 text-right" id="current-sherpa-release" data-bind="html: 'Sherpa v'+Sherpa.version.major+Sherpa.version.minor+'<span class=hidden-phone> - '+Sherpa.version.releaseDate+'</span>'">
           </div>
         </div>
     </div>
@@ -67,7 +77,7 @@
                 <ul class="nav old">
                   <li class="dropdown active">
                     <a href="#" class="dropdown-toggle" data-toggle="dropdown">CSS&nbsp;Overview&nbsp;</a>
-                    <ul class="dropdown-menu" data-bind="foreach: $('section')">
+                    <ul class="dropdown-menu" data-bind="foreach: $('section:not(.hide)')">
                       <li><a data-bind="attr: {'href':'#'+$($data).attr('id')},text: _.str.titleize(_.str.humanize($($data).attr('id')))"></a></li>
                     </ul>
                   </li>
@@ -76,7 +86,12 @@
                   </li>
                   <li>
                     <a href="#known-issues">Known Issues</a>
-                  </li>              
+                  </li>
+                  <li>
+                    <a href="#change-log">Change Log</a>
+                  </li>
+                  <li> <a href="#fiddle-link">Fiddle</a></li>              
+                  <li class="simulator-link" data-bind="html: simulatorURL()"></li>              
                 </ul>
                 <form class="navbar-search pull-right hide" action="">
                   <input type="text" class="search-query input-large search-tags" placeholder="Search tag or keyword">
@@ -89,7 +104,7 @@
       </div>
     </div>
   </header>
-  
+<a id="top"></a> 
 <div data-bind="page: {id: 'start'}">
 
 <!-- Typography
@@ -179,7 +194,30 @@
 
 <!-- Responsive
 ================================================== -->
-<section id="responsive-classes" class="da-all ta-all ma-all" data-bind="include: {'sourceUrl': 'pages/css-overview/responsive-classes.html', 'afterShow':pageInit}"></section>
+<section id="responsive-classes" class="da-all ta-all ma-all" data-bind="include: 'pages/css-overview/responsive-classes.html'"></section>
+
+<!-- The Grid
+================================================== -->
+<section id="grid" class="da-all ta-all ma-all" data-bind="include: {'sourceUrl': 'pages/css-overview/grid.html'}"></section>
+
+
+<!-- Offsets
+================================================== -->
+<section id="offsets" class="da-all ta-all ma-all" data-bind="include: {'sourceUrl': 'pages/css-overview/offsets.html', 'afterShow':pageInit}"></section>
+
+
+
+<!-- Change Log
+================================================== -->
+<section id="change-log" class="hide" data-bind="include: 'change-log.md'"></section>
+
+
+<!-- Known Issues
+================================================== -->
+<section id="known-issues" class="hide" data-bind="include: 'known-issues.md'"></section>
+
+
+<div data-bind="include: 'assets/includes/fiddle-form.html'" class="hide"></div>
 
 </div><!--page-->
 
@@ -187,10 +225,18 @@
      <!-- Footer
       ================================================== -->
 
-      <footer id="footer" class="da-all ta-all ma-all">
+      <footer id="footer" class="da-all ta-all ma-all gray-light">
         <div class="wrapper">
-          <p class="pull-right"><a href="#top">Back to top</a></p>
+          <div class="da-all ta-all ma-all">
+            <p itemscope="" itemtype="http://schema.org/Organization">
+              <h4>2013 <span class="divider">/</span> <span itemprop="brand">Dell Sherpa</span><small class="pull-right text-gray" itemprop="name">Dell, Inc.</small></h4>
+              <p>A responsive prototyping framework for user experience design.
+              </p>
+            </p>
+          </div>
+
         </div>
+          <p class="footer-back-to-top pull-right" data-spy="affix" data-offset-top="100"><a class="scroll text-white" href="#top"><i aria-hidden="true" class="icon-ui-collapse"></i> Back to top</a></p>
       </footer>
 
     </div>

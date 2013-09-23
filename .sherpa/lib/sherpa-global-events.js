@@ -34,7 +34,8 @@ Sherpa.globalEvents = {
 	  	 	var temp_obj = {
 	  	 		id:id,
 	  	 		label_textkey:'text_breadcrumb_'+id,
-	  	 		label: _.str.humanize(id)
+	  	 		label: _.str.humanize(id),
+	  	 		href: "#!"+_.pluck(breadcrumbs,"id").slice(1).join("/")+"/"+id
 	  	 	}
 	  	 	breadcrumbs.push(temp_obj);
 	  	 })
@@ -47,7 +48,7 @@ Sherpa.globalEvents = {
 	init: function(){
 		Sherpa.globalEvents.checkFormFactor();
 		Sherpa.globalEvents.checkLocalHost();
-		viewModel.breadcrumb_path = Sherpa.globalEvents.breadcrumb();
+		viewModel.breadcrumb_path = ko.observableArray(Sherpa.globalEvents.breadcrumb());
 		viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 		
 		Sherpa.globalEvents.checkFormFactor();
@@ -67,7 +68,7 @@ Sherpa.globalEvents = {
 		});
 
 		$(window).on('hashchange', function() {
-			viewModel.breadcrumb_path = Sherpa.globalEvents.breadcrumb();
+			viewModel.breadcrumb_path(Sherpa.globalEvents.breadcrumb());
 			viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 			console.log("change page")
 			//window.setTimeout(function(){Sherpa.globalEvents.updateAside();},500);
