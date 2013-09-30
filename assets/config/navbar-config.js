@@ -5,7 +5,7 @@
 
 //______________________________________________________________________________________*/
 
-
+console.log("howdy")
 
 SHERPA.RUN_AS_LOCAL = true; //set to false if you want this prototype to refer to Sherpa site
 /* 
@@ -33,7 +33,8 @@ SHERPA.CORE_PATH = ".sherpa/";
 SHERPA.COMPONENTS_PATH = ".sherpa/components/";
 SHERPA.ASSETS_PATH = "assets/";
 SHERPA.DOCUMENTATION_PATH = "documentation/";
-SHERPA.DEFAULT_THEME = "dell-308-theme";
+SHERPA.DEFAULT_THEME = "dell-308-bs3-theme";
+SHERPA.RESET_THEME_ONLOAD = true;
 SHERPA.ENABLE_GLOBAL_MODAL = true;
 
 // i18n Configuration
@@ -41,7 +42,7 @@ SHERPA.DEFAULT_LOCALE = "en";
 
 // Configuration of framework informational functions
 SHERPA.DISABLE_CONSOLE_MESSAGES = false; //disables console message like console.log
-SHERPA.ENABLE_COUNTER = false; //enables hot key for showing grid overlay
+SHERPA.ENABLE_COUNTER = true; //enables hot key for showing grid overlay
 SHERPA.ENABLE_NOTES = false; //enables hot key for showing sherpa notes
 SHERPA.ENABLE_PROTOTYPE_QA = false; //enables script to check html for sherpa errors
 
@@ -98,7 +99,7 @@ SHERPA.PROTOTYPE_CSS = "navbar-exploration.css";
 
 SHERPA.CSS_CORE_LOAD = [
 	{ bootstrap: SHERPA.CSS_CORE_PATH+"bootstrap-3.css" },
-	{ css_theme: SHERPA.CSS_CORE_PATH+SHERPA.DEFAULT_THEME+".css" },
+	{ css_theme: SHERPA.CSS_CORE_PATH+"themes/"+SHERPA.DEFAULT_THEME+".css" },
 	{ sherpa_uxmf: SHERPA.CSS_CORE_PATH+"sherpa-uxmf.css" }
 ];
 

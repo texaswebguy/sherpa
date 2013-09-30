@@ -12,6 +12,46 @@
           border-radius: @radius;
 }
 
+// Single Corner Border Radius
+.border-top-left-radius(@radius) {
+  -webkit-border-top-left-radius: @radius;
+      -moz-border-radius-topleft: @radius;
+          border-top-left-radius: @radius;
+}
+.border-top-right-radius(@radius) {
+  -webkit-border-top-right-radius: @radius;
+      -moz-border-radius-topright: @radius;
+          border-top-right-radius: @radius;
+}
+.border-bottom-right-radius(@radius) {
+  -webkit-border-bottom-right-radius: @radius;
+      -moz-border-radius-bottomright: @radius;
+          border-bottom-right-radius: @radius;
+}
+.border-bottom-left-radius(@radius) {
+  -webkit-border-bottom-left-radius: @radius;
+      -moz-border-radius-bottomleft: @radius;
+          border-bottom-left-radius: @radius;
+}
+
+// Single Side Border Radius
+.border-top-radius(@border-radius-base) {
+  .border-top-right-radius(@border-radius-base);
+  .border-top-left-radius(@border-radius-base);
+}
+.border-right-radius(@border-radius-base) {
+  .border-top-right-radius(@border-radius-base);
+  .border-bottom-right-radius(@border-radius-base);
+}
+.border-bottom-radius(@border-radius-base) {
+  .border-bottom-right-radius(@border-radius-base);
+  .border-bottom-left-radius(@border-radius-base);
+}
+.border-left-radius(@border-radius-base) {
+  .border-top-left-radius(@border-radius-base);
+  .border-bottom-left-radius(@border-radius-base);
+}
+
 
 // Gradient Bar Colors for buttons and alerts
 .gradientBar(@primaryColor, @secondaryColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
@@ -123,6 +163,8 @@
 // Scaffolding
 //=======================================================================================================================
 
+
+
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -147,6 +189,21 @@ a:focus {
 //
 // Typography for Desktop
 // --------------------------------------------------
+@import "../../less-BS3/type.less";
+
+h1,
+h2,
+h3 {
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+}
+h4,
+h5,
+h6 {
+  margin-top: 0;
+  margin-bottom: (@line-height-computed / 2);
+}
+
 
 
 h1, h2, h3, h4, h5, h6 {
@@ -166,12 +223,12 @@ h3, h4, h5, h6 {
 
 h1 { 
   font-size: @font-size-base * 2.57; // ~36px
-  line-height: @line-height-base * 2; // ~40px
+  // line-height: @line-height-base * 2; // ~40px
 } 
 
 h2 { 
   font-size: @font-size-base * 2; // ~28px
-  line-height: @line-height-base * 1.6; // ~32px
+  // line-height: @line-height-base * 1.6; // ~32px
 } 
 
 h3 { 
@@ -381,36 +438,36 @@ abbr[data-original-title] {
 // --------------------------------------------------
 
 // these should be deprecated because they are not in bootstrap like ocnvention
-.white-text     { color: @white !important;  }
-.gray-medium-text   { color: @gray !important; } 
-.gray-text      { color: @gray !important; }
-.lightgray-text   { color: @gray-light !important;  }
-.blue-text      { color: @blue !important; }
-.yellow-text      { color: @yellow !important; }
-.teal-text      { color: @dell-teal !important; }
-.green-text     { color: @green !important;  }
-.orange-text    { color: @orange !important; }
-.red-text       { color: @red !important;  }
-.darkred-text     { color: @dell-red-dark !important;  }
-.berry-text     { color: @dell-berry !important;  }
-.purple-text    { color: @purple !important; }
+.white-text             { color: @white !important;  }
+.gray-medium-text       { color: @gray !important; } 
+.gray-text              { color: @gray !important; }
+.lightgray-text         { color: @gray-light !important;  }
+.blue-text              { color: @blue !important; }
+.yellow-text            { color: @yellow !important; }
+.teal-text              { color: @dell-teal !important; }
+.green-text             { color: @green !important;  }
+.orange-text            { color: @orange !important; }
+.red-text               { color: @red !important;  }
+.darkred-text           { color: @dell-red-dark !important;  }
+.berry-text             { color: @dell-berry !important;  }
+.purple-text            { color: @purple !important; }
 
 // new text color class names
 .text {
-  &-white     { color: @white !important;  }
-  &-gray-medium   { color: @gray !important; } 
-  &-gray      { color: @gray !important; }
-  &-gray-light   { color: @gray-light !important;  }
-  &-gray-very-light   { color: @gray-lighter !important;  }
-  &-blue      { color: @blue !important; }
-  &-yellow      { color: @yellow !important; }
-  &-teal      { color: @dell-teal !important; }
-  &-green     { color: @green !important;  }
-  &-orange    { color: @orange !important; }
-  &-red       { color: @red !important;  }
-  &-red-dark     { color: @dell-red-dark !important;  }
-  &-berry     { color: @dell-berry !important;  }
-  &-purple    { color: @purple !important; }
+  &-white               { color: @white !important;  }
+  &-gray-medium         { color: @gray !important; } 
+  &-gray                { color: @gray !important; }
+  &-gray-light          { color: @gray-light !important;  }
+  &-gray-very-light     { color: @gray-lighter !important;  }
+  &-blue                { color: @blue !important; }
+  &-yellow              { color: @yellow !important; }
+  &-teal                { color: @dell-teal !important; }
+  &-green               { color: @green !important;  }
+  &-orange              { color: @orange !important; }
+  &-red                 { color: @red !important;  }
+  &-red-dark            { color: @dell-red-dark !important;  }
+  &-berry               { color: @dell-berry !important;  }
+  &-purple              { color: @purple !important; }
 }
 
 
@@ -483,9 +540,10 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   height: @input-height-base;
-  margin-bottom: @line-height-base / 2;
+  // margin-bottom: @line-height-base / 2;
   color: @gray-darker;
   .border-radius(@input-border-radius);
+  border:1px solid @dell-gray-stroke;
 }
 
 
@@ -507,10 +565,12 @@ input[type="tel"],
 input[type="color"],
 .uneditable-input {
   // Focus state
+  .transition(~"border linear .2s, box-shadow linear .2s");
   &:focus {
     border-color: @blue;
     @shadow: 0 0 2px lighten(@blue, 20%);
     .box-shadow(@shadow);
+    outline: none;
   }
 }
 
@@ -652,6 +712,9 @@ select:focus:invalid {
   border-top: 1px solid @dell-gray-stroke;
   .clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
+
+
+
 
 // HELP TEXT
 // ---------
@@ -1064,55 +1127,6 @@ table {
   }
 }
 
-// CSS3 PROPERTIES
-// --------------------------------------------------
-//NOTE:NEED TO CHECK IF THIS IS CORRECT
-// Border Radius
-.border-radius(@border-radius-base) {
-  -webkit-border-radius: @border-radius-base;
-     -moz-border-radius: @border-radius-base;
-          border-radius: @border-radius-base;
-}
-
-// Single Corner Border Radius
-.border-top-left-radius(@border-radius-base) {
-  -webkit-border-top-left-radius: @border-radius-base;
-      -moz-border-radius-topleft: @border-radius-base;
-          border-top-left-radius: @border-radius-base;
-}
-.border-top-right-radius(@border-radius-base) {
-  -webkit-border-top-right-radius: @border-radius-base;
-      -moz-border-radius-topright: @border-radius-base;
-          border-top-right-radius: @border-radius-base;
-}
-.border-bottom-right-radius(@border-radius-base) {
-  -webkit-border-bottom-right-radius: @border-radius-base;
-      -moz-border-radius-bottomright: @border-radius-base;
-          border-bottom-right-radius: @border-radius-base;
-}
-.border-bottom-left-radius(@border-radius-base) {
-  -webkit-border-bottom-left-radius: @border-radius-base;
-      -moz-border-radius-bottomleft: @border-radius-base;
-          border-bottom-left-radius: @border-radius-base;
-}
-
-// Single Side Border Radius
-.border-top-radius(@border-radius-base) {
-  .border-top-right-radius(@border-radius-base);
-  .border-top-left-radius(@border-radius-base);
-}
-.border-right-radius(@border-radius-base) {
-  .border-top-right-radius(@border-radius-base);
-  .border-bottom-right-radius(@border-radius-base);
-}
-.border-bottom-radius(@border-radius-base) {
-  .border-bottom-right-radius(@border-radius-base);
-  .border-bottom-left-radius(@border-radius-base);
-}
-.border-left-radius(@@border-radius-base) {
-  .border-top-left-radius(@border-radius-base);
-  .border-bottom-left-radius(@border-radius-base);
-}
 
 
 // ZEBRA-STRIPING
@@ -1145,6 +1159,85 @@ table {
 }
 
 
+.table-bordered {
+  .border-radius(@border-radius-base);
+
+
+  // For first th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child > th:first-child,
+  tbody:first-child tr:first-child > td:first-child,
+  tbody:first-child tr:first-child > th:first-child {
+    .border-top-left-radius(@border-radius-base);
+  }
+  // For last th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child > th:last-child,
+  tbody:first-child tr:first-child > td:last-child,
+  tbody:first-child tr:first-child > th:last-child {
+    .border-top-right-radius(@border-radius-base);
+  }
+  // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child > th:first-child,
+  tbody:last-child tr:last-child > td:first-child,
+  tbody:last-child tr:last-child > th:first-child,
+  tfoot:last-child tr:last-child > td:first-child,
+  tfoot:last-child tr:last-child > th:first-child {
+    .border-bottom-left-radius(@border-radius-base);
+  }
+  // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child > th:last-child,
+  tbody:last-child tr:last-child > td:last-child,
+  tbody:last-child tr:last-child > th:last-child,
+  tfoot:last-child tr:last-child > td:last-child,
+  tfoot:last-child tr:last-child > th:last-child {
+    .border-bottom-right-radius(@border-radius-base);
+  }
+
+  // Special fixes to round the left border on the first td/th
+  caption + thead tr:first-child th:first-child,
+  caption + tbody tr:first-child td:first-child,
+  colgroup + thead tr:first-child th:first-child,
+  colgroup + tbody tr:first-child td:first-child {
+    .border-top-left-radius(@border-radius-base);
+  }
+  caption + thead tr:first-child th:last-child,
+  caption + tbody tr:first-child td:last-child,
+  colgroup + thead tr:first-child th:last-child,
+  colgroup + tbody tr:first-child td:last-child {
+    .border-top-right-radius(@border-radius-base);
+  }
+
+}
+
+// DELL-308-ONLY Specific table styling
+// ------------------------------------------
+// Stroked border tables
+
+div.table-bordered table {
+  border-width: 2px;
+  border-style: solid;
+  .border-radius(@border-radius-large);
+  overflow:hidden;
+  margin-bottom: @line-height-base;
+  margin-top:-@line-height-base;
+  top:@line-height-base;  
+  position:relative;
+
+  tr td:first-child,
+  tr th:first-child {
+      border-left:0;
+  }
+  &.table-striped {
+    td, th {
+      .border-radius(0);
+    }
+  }
+  &.table-bordered {
+    border:none;
+  }
+}
+
+
+
 // HOVER EFFECT
 // ------------
 // Placed here since it has to come after the potential zebra striping
@@ -1156,17 +1249,6 @@ table {
     }
   }
 }
-
-
-//Need to add
-// TABLE CELL SIZING
-// -----------------
-
-//========================
-
-
-
-
 
 
 // TABLE BACKGROUNDS
@@ -1212,6 +1294,78 @@ table {
 //=======================================================================================================================
 
 
+//=============== new from old code
+.dropdown-menu {
+  margin: 20px 0 0;
+  li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: @gray-darker;
+    white-space: nowrap;
+    &:hover,
+    &:focus,
+    .dropdown-submenu:hover > a {
+      color: @link-color;
+      text-decoration: none;
+      background-color: @dell-highlight-blue;
+      background-image: none;
+      background-repeat: repeat-x;
+      filter: none;
+    }
+  }
+  .divider {
+    height: 2px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid @dell-gray-stroke;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -7px;
+    left: 9px;
+  }
+  &.pull-right {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: -1px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+  }
+}
+}
+
+
+//-----------------------
+
 // NOTE: overriding caret with font icon for dell-308
 
 .dropdown-toggle .caret {
@@ -1223,7 +1377,8 @@ table {
   font-family: 'icon-ui';
   content: "\24";
   top:1px;
-  float:right; // TODO: in dell-308 caret is aligned right: Will have to account for rtl;
+  // float:right; 
+  // margin-left:1px;
 }
 .open > .dropdown-toggle:after {
   content: "\21";
@@ -1236,9 +1391,12 @@ table {
 li.dropdown .dropdown-menu {
   margin: 2px 0 0;
 }
+
+
+
+
 // wells
 //=======================================================================================================================
-
 
 .well {
   min-height: @line-height-base;
@@ -1484,12 +1642,13 @@ border: @default-stroke solid @purple !important;
   margin-bottom: 0; // For input.btn
   font-size: @font-size-base;
   line-height: @line-height-base * .9;
-  text-align:left;
-  .buttonBackground(@btn-default-bg, @btn-default-bg-highlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  text-align:center;
+  .buttonBackground(@btn-default-bg, @btn-default-bg-highlight, @white, 0 1px 1px rgba(255,255,255,.75));
   border: 1px solid @btn-default-border;
-  .border-radius(@border-radius-small + 1);
+  .border-radius(@border-radius-small);
+  text-overflow:nowrap;
   .box-shadow(none); 
-  // Hover/focus state
+
 
   &:hover,
   &:focus {
@@ -1520,15 +1679,29 @@ border: @default-stroke solid @purple !important;
   &[disabled] {
     cursor: default;
     background-image: none;
-    .opacity(65);
+    .opacity(.40);
     .box-shadow(none);
   }
 
 }
 
-
 .btn, .btn-tertiary {
- .default-button()
+ .default-button();
+  color:@blue !important;
+}
+
+.form-search .btn {
+  color:@white !important;
+}
+
+
+
+.btn-primary,
+.btn-warning,
+.btn-danger,
+.btn-success,
+.btn-info, {
+  color: @white !important;
 }
 
 .btn.green-text {
@@ -1540,22 +1713,21 @@ border: @default-stroke solid @purple !important;
 // dell-308 does not allow large so these will be forced into normal size
 
 // Large
-.btn-large {
-  padding: @padding-large-vertical, @padding-large-horizontal;
-  font-size: @font-size-base;
-  .border-radius(@border-radius-base);
+.btn-lg {
+.button-size(@padding-large-vertical; @padding-large-horizontal; @font-size-base; @line-height-large; @border-radius-small);
 }
-.btn-large [class^="icon-"],
-.btn-large [class*=" icon-"] {
+.btn-lg [class^="icon-"],
+.btn-lg [class*=" icon-"] {
   margin-top: 4px;
 }
 
 // Small
-.btn-small {
-  padding: @padding-small-vertical, @padding-small-horizontal;
-  font-size: @font-size-small;
-  .border-radius(@border-radius-small);
+.btn-sm,
+.btn-xs {
+  // line-height: ensure proper height of button next to small input
+  .button-size(@padding-small-vertical; @padding-small-horizontal; @font-size-small; @line-height-small; @border-radius-small);
 }
+
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
   margin-top: 0;
@@ -1565,13 +1737,11 @@ border: @default-stroke solid @purple !important;
   margin-top: -1px;
 }
 
-//Need new classes for this...
 // Mini
-// .btn-mini {
-//   padding: @padding-small-vertical, @padding-small-horizontal;
-//   font-size: @font-size-mini;
-//   .border-radius(@border-radius-small);
-// }
+.btn-xs {
+  padding: 1px 5px;
+}
+
 
 // Block button
 // -------------------------
@@ -1584,7 +1754,7 @@ border: @default-stroke solid @purple !important;
 
 // Vertically space out multiple block buttons
 .btn-block + .btn-block {
-  margin-top: 10px;
+  margin-top: 5px;
 }
 
 // Specificity overrides
@@ -1613,7 +1783,7 @@ input[type="button"] {
 // Set the backgrounds
 // -------------------------
 .btn-primary {
-  .buttonBackground(@btn-primary-bg, @btn-primary-bg-highlight);
+  .buttonBackground(@btn-primary-bg, @btn-primary-bg-highlight,);
 }
 //not used in dell-308
 .btn-warning {
@@ -1653,7 +1823,7 @@ input[type="submit"].btn {
   *padding-top: 3px;
   *padding-bottom: 3px;
 
-  &.btn-large {
+  &.btn-lg {
     *padding-top: 7px;
     *padding-bottom: 7px;
   }
@@ -1697,7 +1867,14 @@ input[type="submit"].btn {
   text-decoration: none;
 }
 
+.btn-group {
+  position: relative;
+  display: inline;
+  font-size: 0; // remove as part 1 of font-size inline-block hack
+  vertical-align: middle; // match .btn alignment given font-size hack above
+  white-space: nowrap; // prevent buttons from wrapping when in tight spaces (e.g., the table on the tests page)
 
+}
 
 
 // Space out series of button groups
@@ -1721,6 +1898,7 @@ input[type="submit"].btn {
 .btn-group > .btn {
   position: relative;
   .border-radius(0);
+  float:none;
 }
 .btn-group > .btn + .btn {
   margin-left: -1px;
@@ -1738,7 +1916,7 @@ input[type="submit"].btn {
 .btn-group > .btn-small {
   font-size: @font-size-small;
 }
-.btn-group > .btn-large {
+.btn-group > .btn-lg {
   font-size: @font-size-large;
 }
 
@@ -1781,7 +1959,6 @@ input[type="submit"].btn {
 }
 
 
-
 // Split button dropdowns
 // ----------------------
 
@@ -1803,7 +1980,7 @@ input[type="submit"].btn {
   *padding-top: 5px;
   *padding-bottom: 4px;
 }
-.btn-group > .btn-large + .dropdown-toggle {
+.btn-group > .btn-lg + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
   *padding-top: 7px;
@@ -1856,10 +2033,10 @@ input[type="submit"].btn {
 }
 
 // Carets in other button sizes
-.btn-large .caret {
+.btn-lg .caret {
   margin-top: 6px;
 }
-.btn-large .caret {
+.btn-lg .caret {
   border-left-width:  5px;
   border-right-width: 5px;
   border-top-width:   5px;
@@ -1869,7 +2046,7 @@ input[type="submit"].btn {
   margin-top: 8px;
 }
 // Upside down carets for .dropup
-.dropup .btn-large .caret {
+.dropup .btn-lg .caret {
   border-bottom-width: 5px;
 }
 
@@ -1907,22 +2084,20 @@ input[type="submit"].btn {
 .btn-group-vertical > .btn:last-child {
   .border-radius(0 0 @border-radius-base @border-radius-base);
 }
-.btn-group-vertical > .btn-large:first-child {
+.btn-group-vertical > .btn-lg:first-child {
   .border-radius(@border-radius-large @border-radius-large 0 0);
 }
-.btn-group-vertical > .btn-large:last-child {
+.btn-group-vertical > .btn-lg:last-child {
   .border-radius(0 0 @border-radius-large @border-radius-large);
 }
 
+.btn-group-vertical {
+  display: inline-block; // makes buttons only take up the width they need
+}
 
 
 // alerts
 //=======================================================================================================================
-
-
- // Note: alerts share common CSS with buttons and thus have styles in buttons.less
-
-
 
 // Base styles
 // -------------------------
@@ -3610,39 +3785,6 @@ you can use the generic selector below, but it's slower:
 
 
 
-
-// Dell 308 custom classes that do not exist in bootstrap
-
-// DELL-308-ONLY Specific table styling
-// ------------------------------------------
-// Stroked border tables
-
-div.table-bordered table {
-  border-width: 2px;
-  border-style: solid;
-  .border-radius(@border-radius-large);
-  overflow:hidden;
-  margin-bottom: @line-height-base;
-  margin-top:-@line-height-base;
-  top:@line-height-base;  
-  position:relative;
-
-  tr td:first-child,
-  tr th:first-child {
-      border-left:0;
-  }
-  &.table-striped {
-    td, th {
-      .border-radius(0);
-    }
-  }
-  &.table-bordered {
-    border:none;
-  }
-}
-
-
-
 // ------------------------------------------
 // Pagination
 
@@ -3680,3 +3822,47 @@ div.table-bordered table {
   cursor:pointer;
 }
 
+
+// these offsets are non-bootstrap gridset related hacks and should be removed in the BS3.0 release
+.bottom-offset-margin(@multiplier) {
+  margin-bottom: @line-height-base * @multiplier;
+}
+.top-offset-margin(@multiplier) {
+  margin-top: @line-height-base * @multiplier;
+}
+.bottom-offset {
+  &-mini {
+    .bottom-offset-margin(.5);
+  }
+  &-small {
+    .bottom-offset-margin(1);
+  }
+  &-medium {
+    .bottom-offset-margin(2);
+  }
+  &-large {
+    .bottom-offset-margin(3);
+  }
+}
+.top-offset {
+  &-mini {
+    .top-offset-margin(.5);
+  }
+  &-small {
+    .top-offset-margin(1);
+  }
+  &-medium {
+    .top-offset-margin(2);
+  }
+  &-large {
+    .top-offset-margin(3);
+  }
+}
+
+
+
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../less-BS3/responsive-utilities.less";

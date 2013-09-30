@@ -120,7 +120,7 @@
 
 @font-size-base:								14px;
 @font-family-base:								@font-family-sans-serif;
-@line-height-base:								20px;
+@line-height-base:								1.428571429; // 20/14
 @line-height-computed:							floor(@font-size-base * @line-height-base); // ~20px
 @alt-font-family:								@font-family-serif;
 
@@ -194,8 +194,8 @@
 @btn-success-border:							#499b1e;
 
 @btn-info-color:								@white;
-@btn-info-bg:									@blue;
-@btn-info-bg-highlight:							spin(@btn-primary-bg, 20%); //TODO need to check if this is right
+@btn-info-bg:									@dell-teal;
+@btn-info-bg-highlight:							spin(@dell-teal, 20%);
 @btn-info-border:								#269abc;
 
 @btn-warning-color:								@white;
@@ -219,9 +219,9 @@
 @input-border-radius:							@border-radius-small + 1;
 @input-disabled-bg:								@gray-lighter;
 @form-actions-bg:								@dell-gray-very-light;
-@input-height-base:								(@line-height-computed + (@padding-base-vertical * 2) + 2);
-@input-height-large:							(floor(@font-size-large * @line-height-large) + (@padding-large-vertical * 2) + 2);
-@input-height-small:							(floor(@font-size-small * @line-height-small) + (@padding-small-vertical * 2) + 2);
+@input-height-base:								34px;
+@input-height-large:							@input-height-base + 6;
+@input-height-small:							@input-height-base - 14;
 
 // Input placeholder text color
 // -------------------------
@@ -564,7 +564,7 @@
 // Badges
 // -------------------------
 @badge-color:									@white;
-@badge-link-hover-color:							@white;
+@badge-link-hover-color:						@white;
 @badge-bg:										@gray-light;
 
 @badge-active-color:							@link-color;
