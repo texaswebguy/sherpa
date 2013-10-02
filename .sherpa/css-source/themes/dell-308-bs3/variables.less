@@ -121,7 +121,7 @@
 @font-size-base:								14px;
 @font-family-base:								@font-family-sans-serif;
 @line-height-base:								1.428571429; // 20/14
-@line-height-computed:							floor(@font-size-base * @line-height-base); // ~20px
+@line-height-computed:							(@font-size-base * @line-height-base); // ~20px
 @alt-font-family:								@font-family-serif;
 
 @headings-font-family:							@theme-serif-font-family-bold; // dell-308 override

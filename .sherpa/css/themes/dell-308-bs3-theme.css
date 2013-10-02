@@ -684,11 +684,28 @@ a:focus {
     margin-left: 91.66666666666666%;
   }
 }
+code,
+pre {
+  padding: 0 3px 2px;
+  font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
+  font-size: 12px;
+  color: #333;
+  -webkit-border-radius: 3px;
+  -moz-border-radius: 3px;
+  border-radius: 3px;
+}
+code {
+  padding: 2px 4px;
+  color: #d14;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+  white-space: nowrap;
+}
 p {
-  margin: 0 0 10px;
+  margin: 0 0 10.000000003px;
 }
 .lead {
-  margin-bottom: 20px;
+  margin-bottom: 20.000000006px;
   font-size: 16.099999999999998px;
   font-weight: 200;
   line-height: 1.4;
@@ -766,14 +783,14 @@ h6 small,
 h1,
 h2,
 h3 {
-  margin-top: 20px;
-  margin-bottom: 10px;
+  margin-top: 20.000000006px;
+  margin-bottom: 10.000000003px;
 }
 h4,
 h5,
 h6 {
-  margin-top: 10px;
-  margin-bottom: 10px;
+  margin-top: 10.000000003px;
+  margin-bottom: 10.000000003px;
 }
 h1,
 .h1 {
@@ -814,14 +831,14 @@ h4 small,
   font-size: 14px;
 }
 .page-header {
-  padding-bottom: 9px;
-  margin: 40px 0 20px;
+  padding-bottom: 9.000000003px;
+  margin: 40.000000012px 0 20.000000006px;
   border-bottom: 1px solid #f9f9f9;
 }
 ul,
 ol {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 10.000000003px;
 }
 ul ul,
 ol ul,
@@ -843,7 +860,7 @@ ol ol {
   padding-right: 5px;
 }
 dl {
-  margin-bottom: 20px;
+  margin-bottom: 20.000000006px;
 }
 dt,
 dd {
@@ -891,8 +908,8 @@ abbr.initialism {
   text-transform: uppercase;
 }
 blockquote {
-  padding: 10px 20px;
-  margin: 0 0 20px;
+  padding: 10.000000003px 20.000000006px;
+  margin: 0 0 20.000000006px;
   border-left: 5px solid #f9f9f9;
 }
 blockquote p {
@@ -935,7 +952,7 @@ blockquote:after {
 }
 address {
   display: block;
-  margin-bottom: 20px;
+  margin-bottom: 20.000000006px;
   font-style: normal;
   line-height: 1.428571429;
 }
@@ -943,13 +960,13 @@ h1,
 h2,
 h3 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 10.000000003px;
 }
 h4,
 h5,
 h6 {
   margin-top: 0;
-  margin-bottom: 10px;
+  margin-bottom: 10.000000003px;
 }
 h1,
 h2,
@@ -973,22 +990,24 @@ h6 {
 }
 h1 {
   font-size: 35.98px;
+  line-height: 40px;
 }
 h2 {
   font-size: 28px;
+  line-height: 32px;
 }
 h3 {
   font-size: 19.88px;
-  line-height: 1.7142857148;
+  line-height: 24px;
 }
 h4 {
   font-size: 18.060000000000002px;
-  line-height: 1.5714285719;
+  line-height: 22px;
 }
 h5,
 h6 {
   font-size: 15.959999999999999px;
-  line-height: 1.428571429;
+  line-height: 20px;
 }
 /* Header - title - NOTE: not part of Boostrap*/
 .title {
@@ -1050,23 +1069,23 @@ abbr[data-original-title] {
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   h1 {
     font-size: 31.919999999999998px;
-    line-height: 2.7142857151;
+    line-height: 38px;
   }
   h2 {
     font-size: 25.900000000000002px;
-    line-height: 2.1428571435;
+    line-height: 30.000000000000004px;
   }
   h3 {
     font-size: 19.88px;
-    line-height: 1.7142857148;
+    line-height: 24px;
   }
   h4 {
     font-size: 18.060000000000002px;
-    line-height: 1.5714285719;
+    line-height: 22px;
   }
   h5 {
     font-size: 15.959999999999999px;
-    line-height: 1.428571429;
+    line-height: 20px;
   }
   .lead {
     margin-bottom: 1.428571429;
@@ -1080,24 +1099,24 @@ abbr[data-original-title] {
 @media only screen and (max-width: 767px) {
   h1 {
     font-size: 23.939999999999998px;
-    line-height: 2.0000000006;
+    line-height: 28px;
   }
   h2 {
     font-size: 19.88px;
-    line-height: 1.7142857148;
+    line-height: 24px;
   }
   h3 {
     font-size: 16.939999999999998px;
-    line-height: 1.428571429;
+    line-height: 20px;
     font-weight: bold;
   }
   h4 {
     font-size: 15.959999999999999px;
-    line-height: 1.5714285719;
+    line-height: 22px;
   }
   h5 {
     font-size: 14px;
-    line-height: 1.428571429;
+    line-height: 20px;
     font-weight: bold;
   }
   .lead {
