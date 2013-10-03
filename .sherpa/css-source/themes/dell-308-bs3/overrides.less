@@ -184,6 +184,18 @@ a:focus {
 // Base CSS
 // Type
 //=======================================================================================================================
+
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  background-color: #ffffff;
+}
+
+
+
 code, pre {
     padding: 0 3px 2px;
     font-family: Monaco, Menlo, Consolas, "Courier New", monospace;
@@ -267,7 +279,7 @@ h5, h6 {
 /* Header - title - NOTE: not part of Boostrap*/
 .title {
   text-align: center;
-  background: url(../img/gray_dark_title_line.png) repeat-x;
+  background: url(../../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
@@ -284,13 +296,13 @@ h5, h6 {
   margin-bottom: @line-height-base;
   font-size: @font-size-base * 1.29;
   font-weight: normal;
-  line-height: @line-height-base * 1.1;
+  line-height: @line-height-base * 15.399999995380000001385999999584px;
 }
 
 small {
   font-size: @font-size-base * .86; // ~12px
   font-weight: normal;
-  line-height:  @line-height-base * .8;// ~16px
+  line-height:  @line-height-base * 11.199999996640000001007999999698px;// ~16px
 }
 
 
@@ -315,7 +327,7 @@ blockquote p {
   margin-bottom: 0;
   font-size: @font-size-base * 1.14;
   font-weight: normal;
-  line-height: @line-height-base * 1.1;
+  line-height: @line-height-base * 15.399999995380000001385999999584px;
 }
 
 blockquote small {
@@ -559,6 +571,7 @@ input[type="color"],
   color: @gray-darker;
   .border-radius(@input-border-radius);
   border:1px solid @dell-gray-stroke;
+  padding-left: 5px;
 }
 
 
@@ -593,7 +606,7 @@ input[type="color"],
 // Set the height of select and file controls to match text inputs
 select,
 input[type="file"] {
-  line-height: @line-height-base * 1.5;
+  line-height: @line-height-base * 13.999999995800000001259999999622px;
 }
 
 // Make select elements obey height by applying a border
@@ -720,15 +733,44 @@ select:focus:invalid {
 // ------------
 // TODO need to check if there is any 308 usage of this
 .form-actions {
-  padding: (@line-height-base - 1) 20px @line-height-base;
-  margin-top: @line-height-base;
-  margin-bottom: @line-height-base;
-  background-color: @form-actions-bg;
-  border-top: 1px solid @dell-gray-stroke;
+  padding: 19px 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
+  background-color: #f9f9f9;
+  border-top: 1px solid #cccccc;
   .clearfix(); // Adding clearfix to allow for .pull-right button containers
 }
 
-
+.control-group.error .popover,
+.error .popover,
+.error + .popover,
+:not(form).ng-dirty.ng-invalid + .popover {
+  background-color: #ffffc9;
+}
+.control-group.error .popover.right .arrow:after,
+.error .popover.right .arrow:after,
+.error + .popover.right .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.right .arrow:after {
+  border-right-color: #ffffc9;
+}
+.control-group.error .popover.top .arrow:after,
+.error .popover.top .arrow:after,
+.error + .popover.top .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.top .arrow:after {
+  border-top-color: #ffffc9;
+}
+.control-group.error .popover.left .arrow:after,
+.error .popover.left .arrow:after,
+.error + .popover.left .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.left .arrow:after {
+  border-left-color: #ffffc9;
+}
+.control-group.error .popover.bottom .arrow:after,
+.error .popover.bottom .arrow:after,
+.error + .popover.bottom .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.bottom .arrow:after {
+  border-bottom-color: #ffffc9;
+}
 
 
 // HELP TEXT
@@ -955,6 +997,12 @@ input.search-query {
   margin-right: 3px;
   margin-left: 0;
 }
+.form-horizontal .control-label {
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
 
 
 // Margin to space out fieldsets
@@ -974,7 +1022,7 @@ legend + .control-group {
 .form-horizontal {
   // Increase spacing between groups
   .control-group {
-    margin-bottom: @line-height-base;
+    margin-bottom: 20px;
     .clearfix();
   }
 }
@@ -1335,7 +1383,7 @@ div.table-bordered table {
     height: 2px;
   }
   &:after {
-    content: '';
+    // content: '';
     display: inline-block;
     border-left: 6px solid transparent;
     border-right: 6px solid transparent;
@@ -1345,7 +1393,7 @@ div.table-bordered table {
     left: 10px;
   }
   &:before {
-    content: '';
+    // content: '';
     display: inline-block;
     border-left: 7px solid transparent;
     border-right: 7px solid transparent;
@@ -1846,7 +1894,7 @@ input[type="submit"].btn {
     *padding-top: 3px;
     *padding-bottom: 3px;
   }
-  &.btn-mini {
+  &.btn-xs {
     *padding-top: 1px;
     *padding-bottom: 1px;
   }
@@ -2728,6 +2776,13 @@ input[type="submit"].btn {
 // labels-badges
 //=======================================================================================================================
 // Base classes
+
+label, input, button, select, textarea {
+font-size: 14px;
+font-weight: normal;
+line-height: 20px;
+}
+
 .label,
 .badge {
   padding: 2px 6px;

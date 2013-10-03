@@ -684,6 +684,14 @@ a:focus {
     margin-left: 91.66666666666666%;
   }
 }
+body {
+  margin: 0;
+  font-family: 'Trebuchet MS', 'Meiryo UI Reg', 'メイリオ Reg', 'MS UI Gothic Reg', 'Hiragino Kaku Gothic Reg', 'ヒラギノ角ゴ Pro W3 Reg', 'Microsoft YaHei', '微软雅黑', 'Hiragino Sans GB', 'Microsoft JhengHei', '微軟正黑體', 'Malgun Gothic', Gulim, Tahoma, 'Arial Unicode', sans-serif;
+  font-size: 14px;
+  line-height: 20px;
+  color: #444444;
+  background-color: #ffffff;
+}
 code,
 pre {
   padding: 0 3px 2px;
@@ -1012,7 +1020,7 @@ h6 {
 /* Header - title - NOTE: not part of Boostrap*/
 .title {
   text-align: center;
-  background: url(../img/gray_dark_title_line.png) repeat-x;
+  background: url(../../img/gray_dark_title_line.png) repeat-x;
   background-position: 50% 20px;
   margin-bottom: 20px;
   display: block;
@@ -1027,12 +1035,12 @@ h6 {
   margin-bottom: 1.428571429;
   font-size: 18.060000000000002px;
   font-weight: normal;
-  line-height: 1.5714285719;
+  line-height: 22px;
 }
 small {
   font-size: 12.04px;
   font-weight: normal;
-  line-height: 1.1428571432;
+  line-height: 16px;
 }
 .page-header {
   border-bottom: 1px solid #cccccc;
@@ -1047,7 +1055,7 @@ blockquote p {
   margin-bottom: 0;
   font-size: 15.959999999999999px;
   font-weight: normal;
-  line-height: 1.5714285719;
+  line-height: 22px;
 }
 blockquote small {
   display: block;
@@ -1284,6 +1292,7 @@ input[type="color"],
   -moz-border-radius: 3px;
   border-radius: 3px;
   border: 1px solid #cccccc;
+  padding-left: 5px;
 }
 textarea,
 input[type="text"],
@@ -1327,7 +1336,7 @@ input[type="color"]:focus,
 }
 select,
 input[type="file"] {
-  line-height: 2.1428571435;
+  line-height: 20px;
 }
 select {
   width: 100%;
@@ -1497,9 +1506,9 @@ select:focus:invalid:focus {
   box-shadow: inset 0 1px 1px rgba(0, 0, 0, 0.075), 0 0 3px #1fb7ff;
 }
 .form-actions {
-  padding: 0.428571429 20px 1.428571429;
-  margin-top: 1.428571429;
-  margin-bottom: 1.428571429;
+  padding: 19px 20px 20px;
+  margin-top: 20px;
+  margin-bottom: 20px;
   background-color: #f9f9f9;
   border-top: 1px solid #cccccc;
 }
@@ -1514,6 +1523,36 @@ select:focus:invalid:focus {
 }
 .form-actions:after {
   clear: both;
+}
+.control-group.error .popover,
+.error .popover,
+.error + .popover,
+:not(form).ng-dirty.ng-invalid + .popover {
+  background-color: #ffffc9;
+}
+.control-group.error .popover.right .arrow:after,
+.error .popover.right .arrow:after,
+.error + .popover.right .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.right .arrow:after {
+  border-right-color: #ffffc9;
+}
+.control-group.error .popover.top .arrow:after,
+.error .popover.top .arrow:after,
+.error + .popover.top .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.top .arrow:after {
+  border-top-color: #ffffc9;
+}
+.control-group.error .popover.left .arrow:after,
+.error .popover.left .arrow:after,
+.error + .popover.left .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.left .arrow:after {
+  border-left-color: #ffffc9;
+}
+.control-group.error .popover.bottom .arrow:after,
+.error .popover.bottom .arrow:after,
+.error + .popover.bottom .arrow:after,
+:not(form).ng-dirty.ng-invalid + .popover.bottom .arrow:after {
+  border-bottom-color: #ffffc9;
 }
 .help-block,
 .help-inline {
@@ -1765,6 +1804,12 @@ input.search-query {
   margin-right: 3px;
   margin-left: 0;
 }
+.form-horizontal .control-label {
+  float: left;
+  width: 160px;
+  padding-top: 5px;
+  text-align: right;
+}
 .control-group {
   margin-bottom: 0.7142857145;
 }
@@ -1773,7 +1818,7 @@ legend + .control-group {
   -webkit-margin-top-collapse: separate;
 }
 .form-horizontal .control-group {
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
 }
 .form-horizontal .control-group:before,
 .form-horizontal .control-group:after {
@@ -2139,7 +2184,6 @@ div.table-bordered table.table-bordered {
   height: 2px;
 }
 .dropdown-menu:after {
-  content: '';
   display: inline-block;
   border-left: 6px solid transparent;
   border-right: 6px solid transparent;
@@ -2149,7 +2193,6 @@ div.table-bordered table.table-bordered {
   left: 10px;
 }
 .dropdown-menu:before {
-  content: '';
   display: inline-block;
   border-left: 7px solid transparent;
   border-right: 7px solid transparent;
@@ -3664,8 +3707,8 @@ input[type="submit"].btn.btn-small {
   *padding-top: 3px;
   *padding-bottom: 3px;
 }
-button.btn.btn-mini,
-input[type="submit"].btn.btn-mini {
+button.btn.btn-xs,
+input[type="submit"].btn.btn-xs {
   *padding-top: 1px;
   *padding-bottom: 1px;
 }
@@ -4616,6 +4659,15 @@ input[type="submit"].btn.btn-mini {
   font-size: 10px;
   text-shadow: none;
   margin-top: 4px;
+}
+label,
+input,
+button,
+select,
+textarea {
+  font-size: 14px;
+  font-weight: normal;
+  line-height: 20px;
 }
 .label,
 .badge {

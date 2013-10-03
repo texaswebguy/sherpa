@@ -225,8 +225,30 @@
     </div>
 </div>
 <!-- ============= End Block Quotes =========== -->
+<!-- ================== copy ================== -->
+<div class="da-all ta-all ma-all">
+      <h3>Copy Text</h3>
+      <div><code>&lt;p&gt;...&lt;/p&gt;</code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      <div><code>&lt;p class="lead"&gt;...&lt;/p&gt;</code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="lead">Lead body copy</p></div>
+      <div><code>&lt;small&gt;...&lt;/small&gt;</code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><small>This line of text is meant to be treated as fine print.</small></div>
+      <div><code>&lt;strong&gt;...&lt;/strong&gt;</code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><strong>Text rendered as bold text</strong></div>
+      <div><code>&lt;em&gt;...&lt;/em&gt;</code></div>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><em>Text rendered as italicized text</em></div>
+    </div>
 
-    
+<!-- ================ end copy ================ -->   
+
+
+
 <!-- Default bootstrap Form control -->
 <div class="well col-xs-12 col-md-12" id="form-example">
       <form class="form-horizontal well">
@@ -347,7 +369,7 @@
           </div>
           <div class="form-actions">
             <button type="reset" class="btn">Cancel</button>
-            <button type="submit" class="btn btn-secondary">Save changes</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
           </div>
         </fieldset>
       </form>
@@ -355,6 +377,298 @@
 
 <!-- =================================== -->
 
+
+
+<!-- ========= tables ============ -->
+<section class="da-all ta-all ma-all" id="tables" data-bind="include: 'pages/css-overview/tables.html'">  <div class="wrapper">
+    <div class="page-header">
+      <h2>Tables</h2>
+    </div>
+    <h3>Table with everything - table-striped table-bordered table-hover</h3>
+    <code>&lt;table class="table table-striped table-bordered table-hover"&gt; ... &lt;/table&gt;</code>
+    <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-1').html()}" data-clipboard-text="
+&lt;table class=&quot;table table-striped table-bordered table-hover&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-1">Fiddle</button>
+<div id="table-sample-code-1">
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <h3>Plain bordered table</h3>
+    <code>&lt;table class="table table-bordered"&gt; ... &lt;/table&gt;</code> <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-2').html()}" data-clipboard-text="
+
+&lt;table class=&quot;table table-bordered&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+
+  &lt;/tbody&gt;
+&lt;/table&gt;
+">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-2">Fiddle</button>
+<div id="table-sample-code-2">
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+    <h3>Borderless table with Zebra stripes</h3>
+    <code>&lt;table class="table table-striped"&gt; ... &lt;/table&gt;</code>
+    <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-3').html()}" data-clipboard-text="
+&lt;table class=&quot;table table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+  ">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-3">Fiddle</button>
+<div id="table-sample-code-3">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+    <h3>Bordered Tables</h3>
+    <code>&lt;div class="table-bordered blue-stroke"&gt;&lt;table class="table table-bordered"&gt; ... &lt;/table&gt;&lt;/div&gt;</code> <span class="label">(not in Bootstrap)</span>
+    <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-4').html()}" data-clipboard-text="
+&lt;div class=&quot;table-bordered blue-stroke&quot;&gt;
+  &lt;table class=&quot;table table-bordered&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Column heading&lt;/th&gt;
+        &lt;th&gt;Column heading&lt;/th&gt;
+        &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+      &lt;/tr&gt;
+
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt; 
+    ">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-4">Fiddle</button>
+    <div id="table-sample-code-4">
+<div class="table-bordered blue-stroke">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div> 
+    </div>  
+        
+<hr>
+
+
+
+
+
+  </div></section>
+
+<!-- ======== tables end ========= -->
 
       <!-- Navbar
       ================================================== -->
