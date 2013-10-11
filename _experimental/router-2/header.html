@@ -1,0 +1,9 @@
+<div class="navbar navbar-fixed-top">
+  <div class="navbar-inner"><div class="container">
+    <a class="brand" href="#">ngStates</a>
+    <ul class="nav">
+      <li ng-class="{ active: $state.includes('root.contact') }" ng-repeat="link in links"><a href="#{{link.url}}">{{link.name}}</a></li>
+    </ul>
+    <p class="navbar-text pull-right" ui-view="hint"></p>
+  </div></div>
+</div>

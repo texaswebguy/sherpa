@@ -1,0 +1,26 @@
+<!doctype html>
+<html ng-app="plunker" >
+<head>
+  <meta charset="utf-8">
+  <title>AngularJS Plunker</title>
+
+    <script type="text/javascript">
+      var SHERPA_CONFIG_OVERRIDES = {};
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/routing.json";
+    </script>
+
+	<!-- Don't touch 
+	******************************************************************************** -->
+	<script src="../../_sherpa/sherpa.v07-new.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+  <script src="ui-router.js"></script>
+  <script src="app.js"></script>
+   <script src="contact.js"></script>
+</head>
+<body>
+<div ui-view="header"></div>
+<div class="container" style="margin-top:60px" ui-view="container"></div>
+<div ui-view="footer"></div>
+</body>
+</html>

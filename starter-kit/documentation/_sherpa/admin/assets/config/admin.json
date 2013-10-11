@@ -1,0 +1,8 @@
+{
+    "PROTO_JS": "admin.js",
+    "PROTO_CSS": "admin.css",
+    "PATH_PROTO_ASSETS": "assets/",
+    "PATH_WEBROOT": "",
+    "PATH_PROTO_ASSETS": "assets/",
+    "PATH_CORE": "../"    
+}

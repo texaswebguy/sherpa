@@ -1,0 +1,323 @@
+/* HTML5 display-role reset for older browsers */
+article, aside, details, figcaption, figure,
+footer, header, hgroup, menu, nav, section {
+	display: block;
+}
+
+* {
+	margin: 0;
+	padding: 0;
+}
+
+html {
+    overflow-y: -moz-scrollbars-vertical;
+    overflow-y: scroll;
+}
+
+a {
+	color:inherit;
+}
+
+a:hover {
+	color:black;
+}
+
+body {
+	padding: 0px;
+	margin: 0px;
+	background-color:#d9d9d9;
+	font-family: Trebuchet, Arial, sans-serif;
+	font-size:0.75em;
+	color:#444;
+	min-width:1000px
+}
+
+header h1 {
+    font-size: 20px;
+	line-height: 23px;
+	font-weight: bold;
+	display: inline;
+	width: 190px;
+	height: 64px;
+	float: left;
+	padding-right: 20px;
+}
+
+header {
+    width: 600px;
+	margin: auto;
+	margin-top: 15px;
+	height: 60px;
+}
+
+h1 a {
+    font-size: 0.5em;
+	font-weight: normal;
+	padding-left: 12px;
+}
+
+/* menu   */
+#screen-options li {
+	height: 80px;
+	width: 120px;
+	display: block;
+	float: left;
+	opacity: 0.4;
+	text-align: center;
+
+	-webkit-transition: all 0.15s ease-in-out 0s;
+	-moz-transition: all 0.15s ease-in-out 0s;
+	-o-transition: all 0.15s ease-in-out 0s;
+	transition: all 0.15s ease-in-out 0s;
+}
+
+#screen-options li:hover {
+	opacity: 1;
+	cursor: pointer;
+}
+
+#screen-options li.active {
+	opacity: 1;
+}
+
+#screen-options li.inactive {
+	opacity: 0.4;
+	cursor: default;
+}
+
+#screen-labels li {
+	height: 20px;
+	width: 120px;
+	text-align: center;
+	display: block;
+	float: left;
+	opacity: 0.5;
+
+	-webkit-transition: all 0.15s ease-in-out 0s;
+	-moz-transition: all 0.15s ease-in-out 0s;
+	-o-transition: all 0.15s ease-in-out 0s;
+	transition: all 0.15s ease-in-out 0s;
+}
+
+#screen-labels li.active {
+	opacity: 1;
+}
+
+#mobile {
+	background: url(../img/device-sprite.png) no-repeat 0 12px;
+}
+#mobile-inactive {
+	background: url(../img/device-sprite-inactive.png) no-repeat 0 12px;
+}
+#mobile-l {
+	background: url(../img/device-sprite.png) no-repeat 0 -93px;
+}
+#mobile-l-inactive {
+	background: url(../img/device-sprite-inactive.png) no-repeat 0 -93px;
+}
+#tablet {
+	background: url(../img/device-sprite.png) no-repeat 0 -197px;
+}
+#tablet-l {
+	background: url(../img/device-sprite.png) no-repeat 0 -306px;
+}
+#desktop {
+	background: url(../img/device-sprite.png) no-repeat 0 -422px;
+}
+
+.url-select {
+	float:left;
+	margin: 11px 0 0 32px;
+}
+
+input {
+	display: inline-block;
+	padding: 12px;
+	color: gray;
+	border: 1px solid #CCC;
+	border-radius: 3px;
+}
+
+#getURL {
+	width:140px;
+}
+
+#button {
+	background-color:#404042;
+	color: #ddd;
+
+	-webkit-transition: all 0.15s ease-in-out 0s;
+	-moz-transition: all 0.15s ease-in-out 0s;
+	-o-transition: all 0.15s ease-in-out 0s;
+	transition: all 0.15s ease-in-out 0s;
+}
+
+#button:hover {
+	background-color:black;
+	color:white;
+}
+
+#viewport {
+/* initial width only   */
+	margin: auto ;
+	background-color:#CCCCCC;
+	margin-top: 48px;
+			
+/* trying different values to fix iOS issues with iFrame busting loose and wrecking the joint.   */
+	overflow:hidden;
+	overflow: scroll;
+	-webkit-overflow-scrolling: touch;
+
+	-webkit-transition: all 0.4s ease-in-out 0s;
+	-moz-transition: all 0.4s ease-in-out 0s;
+	-o-transition: all 0.4s ease-in-out 0s;
+	transition: all 0.4s ease-in-out 0s;
+}
+
+iframe {
+	background-color: white;
+	position:absolute;
+	margin:auto;
+	border:none;
+}
+
+
+/* ////// DEVICES */
+
+/* /// Details   */
+#device-detail1 {
+	position: relative;
+	z-index: 1000;
+	display: block;
+	margin: auto;
+
+	-webkit-transition: all 0.15s ease-in-out 0s;
+	-moz-transition: all 0.15s ease-in-out 0s;
+	-o-transition: all 0.15s ease-in-out 0s;
+	transition: all 0.15s ease-in-out 0s;
+}
+
+#device-detail2 {
+	position: relative;
+	z-index: 1000;
+	display: block;
+	margin: auto;
+
+	-webkit-transition: all 0.15s ease-in-out 0s;
+	-moz-transition: all 0.15s ease-in-out 0s;
+	-o-transition: all 0.15s ease-in-out 0s;
+	transition: all 0.15s ease-in-out 0s;
+}
+
+.mobile-detail {
+	top: -48px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color:#CCC;
+}
+
+.mobile-detail-top {
+	top: -614px;
+	width: 50px;
+	height: 10px;
+	border-radius: 5px;
+	background-color:#CCC;
+}
+
+.mobile-l-detail {
+	top: -210px;
+	left: -277px;
+	width: 30px;
+	height: 30px;
+	border-radius: 15px;
+	background-color:#CCC;
+}
+
+.mobile-l-detail-top {
+	top: -250px;
+	left: 276px;
+	width: 10px;
+	height: 50px;
+	border-radius: 5px;
+	background-color:#CCC;
+}
+
+.tablet-detail {
+	top: -70px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color:#CCC;
+}
+
+.tablet-l-detail {
+	top: -510px;
+	left: 565px;
+	width: 50px;
+	height: 50px;
+	border-radius: 25px;
+	background-color:#CCC;
+}
+
+.desktop-detail {
+	top: 10px;
+	width: 420px;
+	height: 40px;
+	border-radius: 10px;
+	background-color:#444;
+}
+
+/* /// Devices sizes   */
+
+/* mobile 320 x 480 */
+#viewport.mobile {
+	border-top: 65px solid;
+	border-right: 35px solid;
+	border-bottom: 65px solid;
+	border-left: 35px solid;
+	border-radius: 20px;
+}
+.mobile, .mobile iframe {
+	width:328px;
+	height:480px;
+}
+.mobile-l {
+	border-top: 35px solid;
+	border-right: 65px solid;
+	border-bottom: 35px solid;
+	border-left: 65px solid;
+	border-radius: 20px;
+}
+.mobile-l, .mobile-l iframe {
+	width:488px;
+	height:320px;
+}
+
+/* tablet 1024 x 768 */
+.tablet {
+	border: 90px solid;
+	border-radius: 20px;
+}
+.tablet, .tablet iframe {
+	width:776px;
+	height:1024px;
+}
+.tablet-l {
+	border: 90px solid;
+	border-radius: 20px;
+}
+.tablet-l, .tablet-l iframe {
+	width:1032px;
+	height:768px;
+}
+
+/* desktop 1200 x 800 */
+.desktop {
+	border: 20px solid;
+	border-radius: 10px;
+}
+.desktop, .desktop iframe {
+	width:1200px;
+	height:800px;
+}
