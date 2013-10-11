@@ -1,5 +1,4 @@
-
-Welcome to Sherpa!	{#welcome}
+Welcome to Sherpa!
 =====================
 
 Sherpa is an HTML prototyping framework for rapid creation of responsive, data driven and internationalized prototypes that enables a best-in-class user experience design processes. 
@@ -40,7 +39,7 @@ Fastest way to get started: Download the starter kit, it has everything you need
 
 
 
-> - **[Mongoose Web Server][mongoose-docs]**: A very simple web server. Double click and go, no installation required[^mongoose], everything has been preconfigured already.
+> - **[Mongoose Web Server][mongoose-docs]**: A very simple web server. Double click and go, no installation required*, everything has been preconfigured already.
 > - **JS Libraries**: Your starter kit comes pre-configured with an extensive JavaScript technology stack that will allow you to do just about anything:
     - [Angular JS][angular]: MVC, routing, state management, data binding.
     - [jQuery][jquery]: The Swiss Army knife
@@ -67,9 +66,7 @@ Fastest way to get started: Download the starter kit, it has everything you need
     - Localized content
     - UX notes and documentation
 
-  [^mongoose]: Only the Windows version is distributed right now. For Mac and Unix you have to [download][1] yourself and install.
-
-
+ **NOTE** *Only the Windows version is distributed right now. For Mac and Unix you have to [download][mongoose-download] yourself and install.
 
 Get Involved
 ---------
