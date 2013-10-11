@@ -12,7 +12,7 @@
 	<!-- Don't touch 
 	******************************************************************************** -->
 	<style>body{opacity:0}body.ng-scope{opacity:1}</style>
-	<script src="../sherpa.v07-new.js"></script>	
+	<script src="../sherpa.v07.js"></script>	
 	<!-- Sherpa js adds all the js and css files you need.
 	******************************************************************************** -->	
 </head>
