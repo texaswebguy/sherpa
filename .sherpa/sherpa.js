@@ -292,14 +292,17 @@ Sherpa.ready("dateFormat", function(){
 	//______________________________________________________________________
 
 	Sherpa.ready("sherpaUtils", function(){
-		if(Sherpa.urlQuery().theme) {
-			Sherpa.store("theme", Sherpa.urlQuery().theme);
+		if(!SHERPA.THEME_OVERRIDE) {
+			if(Sherpa.urlQuery().theme) {
+				Sherpa.store("theme", Sherpa.urlQuery().theme);
+			}	
+		} else {
+			Sherpa.store("theme", SHERPA.DEFAULT_THEME)
 		}
 
 		_.each(SHERPA.CSS_CORE_LOAD, function(css){
 			//theme implementation
 			if(Sherpa.store("theme") && _.keys(css)[0]=="css_theme"){
-
 				css = {css_theme:SHERPA.CSS_CORE_PATH+Sherpa.store("theme")+".css"}
 				var theme_id = Sherpa.store("theme");
 				$('html').addClass("theme-"+theme_id);
@@ -308,7 +311,8 @@ Sherpa.ready("dateFormat", function(){
 			}
 			console.log("loaded css: ",_.keys(css)[0]);
 			Sherpa.load(css);
-		});
+		});				
+
 
 		// Load Local CSS File:
 		//______________________________________________________________________

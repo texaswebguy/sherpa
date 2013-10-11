@@ -777,3 +777,9 @@ Breakpoints
   list-style: none;
   background: none;
 }
+
+
+.notice .icon-small-alertinfo {
+   margin-right:20px;
+   color:#007db8;
+}
