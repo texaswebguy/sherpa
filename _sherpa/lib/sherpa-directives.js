@@ -23,6 +23,11 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
 	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
 	    _.each(SHERPA.PROTO_ROUTES, function(route){
+
+            if ( route.parent ) {
+                route.parent =  SHERPA.PROTO_ROUTES[route.parent];
+            }
+            //route is the inidividual object
 	        $stateProvider.state(route);
 	    });
 	}]);
