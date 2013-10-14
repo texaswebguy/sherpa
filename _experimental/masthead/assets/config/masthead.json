@@ -15,13 +15,74 @@
             "name":"page-2",
             "url":"/page-2",
             "label":"Page 2",
-            "templateUrl":"pages/page2.html"
+            "templateUrl":"pages/page2/index.html"
         },
         "page-3": {
             "name":"page-3",
             "url":"/page-3",
             "label":"Page 3",
-            "templateUrl":"pages/page3.html"
+            "templateUrl":"pages/page3/index.html"
+        },
+        "page-3-a": {
+            "name":"page-3-a",
+            "url":"/page-3/a",
+            "label":"Page 3 A",
+            "parent":"page-3",
+            "templateUrl":"pages/page3/a.html"
+        },
+        "page-3-b": {
+            "name":"page-3-b",
+            "url":"/page-3/b",
+            "label":"Page 3 B",
+            "parent":"page-3",
+            "templateUrl":"pages/page3/b.html"
+        },
+        "page-3-c": {
+            "name":"page-3-c",
+            "url":"/page-3/c",
+            "label":"Page 3 C",
+            "parent":"page-3",
+            "templateUrl":"pages/page3/c.html"
+        },
+        "page-2-a": {
+            "name":"aside-a",
+            "label":"Aside A",
+            "description":"",
+            "parent":"page-2",
+            "url":"/page-2/a",
+            "templateUrl":"pages/page2/a.html"
+        },
+        "page-2-b": {
+            "name":"aside-b",
+            "label":"Aside B",
+            "description":"",
+            "parent":"page-2",
+            "url":"/page-2/b",
+            "templateUrl":"pages/page2/b.html"
+        },
+        "page-2-c": {
+            "name":"aside-c",
+            "label":"Aside C",
+            "description":"",
+            "parent":"page-2",
+            "url":"/page-2/c",
+            "templateUrl":"pages/page2/c.html"
+        },
+        "page-2-d": {
+            "name":"aside-d",
+            "label":"Aside D",
+            "description":"",
+            "parent":"page-2",
+            "url":"/page-2/d",
+            "templateUrl":"pages/page2/d.html"
+        },
+        "page-2-e": {
+            "name":"aside-e",
+            "label":"Aside E",
+            "description":"",
+            "parent":"page-2",
+            "url":"/page-2/e",
+            "templateUrl":"pages/page2/e.html"
         }
     }
 }

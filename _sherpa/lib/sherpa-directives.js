@@ -22,7 +22,10 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 	*/
 
 	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
-	    _.each(SHERPA.PROTO_ROUTES, function(route){
+	    _.each(SHERPA.PROTO_ROUTES, function(route, index){
+	    	if(route.parent) {
+	    		SHERPA.PROTO_ROUTES[index].parent = SHERPA.PROTO_ROUTES[route.parent];
+	    	}
 	        $stateProvider.state(route);
 	    });
 	}]);
