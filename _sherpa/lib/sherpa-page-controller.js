@@ -10,12 +10,22 @@
 
 
 */
-sherpaApp.controller("pageController", function($scope) {
-   
-    //page routing
-    if(SHERPA.PAGE_ROUTES) {
-        $scope.pages = SHERPA.PAGE_ROUTES;
+sherpaApp.controller("pageController", function($scope, $state) {   
+
+    if(SHERPA.PROTO_ROUTES) {
+        var routes = [];
+        _.each(_.keys(SHERPA.PROTO_ROUTES),function(route){
+            routes.push('SHERPA.PROTO_ROUTES.'+route);
+        })
+        $scope.routes = routes;
+    } else {
+        $scope.routes = [];
     }
+     
+    $scope.setPage = function(page){
+        $state.transitionTo(page);
+    }
+
 
     if(SHERPA.PROTO_MASTHEAD_URL) {
         $scope.mastheadUrl = SHERPA.PROTO_MASTHEAD_URL;
@@ -25,6 +35,7 @@ sherpaApp.controller("pageController", function($scope) {
         $scope.footerUrl = SHERPA.PROTO_FOOTER_URL;
     }
 
+    $scope.version=Sherpa.version;
     $scope.SHERPA = SHERPA;
     $scope.viewModel = Sherpa.viewModel;
 

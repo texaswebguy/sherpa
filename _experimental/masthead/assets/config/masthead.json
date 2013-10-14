@@ -3,5 +3,25 @@
     "PROTO_CSS": "masthead.css",
     "PATH_PROTO_ASSETS": "assets/",
     "PATH_WEBROOT": "",
-    "PATH_PROTO_ASSETS": "assets/"
+    "PATH_PROTO_ASSETS": "assets/",
+    "PROTO_ROUTES": {
+    	"home": {
+            "name":"page-1",
+            "url":"/",
+            "label":"Page 1",
+            "templateUrl":"pages/page1.html"
+        },
+        "page-2": {
+            "name":"page-2",
+            "url":"/page-2",
+            "label":"Page 2",
+            "templateUrl":"pages/page2.html"
+        },
+        "page-3": {
+            "name":"page-3",
+            "url":"/page-3",
+            "label":"Page 3",
+            "templateUrl":"pages/page3.html"
+        }
+    }
 }
