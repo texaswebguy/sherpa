@@ -22,7 +22,7 @@
 				    </a>
 				    <div class="nav-collapse">
 				      <ul class="nav">
-				        <li ng-repeat="nav in routes"><a href="#{{nav.url}}">{{nav.label}}</a></li>
+				        <li ng-repeat="nav in routes" ng-class="{'active': $state.current.name == nav.name }"><a href="#{{nav.url}}">{{nav.label}}</a></li>
 				      </ul>
 				      </ul>
 				    </div><!-- /.nav-collapse -->
