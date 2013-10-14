@@ -86,7 +86,7 @@
         ],
         "lorem_ispum_default": 200
     },
-    "CSS_THEME_DEFAULT": "dell-308-theme-v0.7",
+    "CSS_THEME_DEFAULT": "dell-308-theme-v0.8",
     "CSS_THEME_DEFAULT_REMOTE_URL": "",
     "CSS_THEME_RESET_ONLOAD": true,
     "DEFAULT_LOCALE": "en",

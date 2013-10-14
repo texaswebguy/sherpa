@@ -1,0 +1,920 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="utf-8">
+    <title>Dell Sherpa Tutorial</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Don't touch 
+	******************************************************************************** -->
+	<style>body{opacity:0}body.ng-scope{opacity:1}</style>
+	<script src="../../_sherpa/sherpa.v07.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+</head>
+<body ng-controller="pageController">
+
+<!--  <header class="navbar navbar-inverse navbar-fixed-top bs-docs-nav" role="banner">
+    <div class="container">
+      <div class="navbar-header">
+        <button class="navbar-toggle" type="button" data-toggle="collapse" data-target=".bs-navbar-collapse">
+          <span class="sr-only">Toggle navigation</span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+          <span class="icon-bar"></span>
+        </button>
+        <a href="#" class="navbar-brand">Sherpa</a>
+      </div>
+      <nav class="collapse navbar-collapse bs-navbar-collapse" role="navigation">
+        <ul class="nav navbar-nav">
+          <li><h5 class="gray-text">Header</h5></li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">Navbar</a></li>
+          <li><a href="#">Buttons</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Tables</a></li>
+          <li><a href="#">Miscellaneous</a></li>
+          <li><a href="#">Pills</a></li>
+          <li><a href="#">Containers</a></li>
+          <li><a href="#">Customizations</a></li>
+        </ul>
+        <form id="custom-search-form" class="form-search form-horizontal pull-right visible-desktop">
+          <div class="input-append span12">
+            <input type="text" class="search-query search-tags hide-phone" placeholder="Search tag or keyword">
+            <button type="submit" class="btn pull-right"><i class="icon-search"></i></button>
+          </div>
+        </form>
+      </nav>
+    </div>
+  </header>
+   -->
+   <nav class="navbar navbar-inverse" role="navigation">
+  <!-- Brand and toggle get grouped for better mobile display -->
+  <div class="navbar-header">
+    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target="#navbar-exp">
+      <span class="sr-only">Toggle navigation</span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+      <span class="icon-bar"></span>
+    </button>
+    <a class="navbar-brand" href="#"><i aria-hidden="true" class="icon-ui-dell"></i>Sherpa</a>
+  </div>
+
+  <!-- Collect the nav links, forms, and other content for toggling -->
+  <div id="navbar-exp" class="collapse navbar-collapse">
+    <ul class="nav navbar-nav">
+      <li class="active"><a href="#">Link</a></li>
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><h5 class="gray-text">Header</h5></li>
+          <li><a href="#">Typography</a></li>
+          <li><a href="#">Navbar</a></li>
+          <li><a href="#">Buttons</a></li>
+          <li><a href="#">Forms</a></li>
+          <li><a href="#">Tables</a></li>
+          <li><a href="#">Miscellaneous</a></li>
+          <li><a href="#">Pills</a></li>
+          <li><a href="#">Containers</a></li>
+          <li><a href="#">Customizations</a></li>
+        </ul>
+      </li>
+    </ul>
+    <form class="navbar-form navbar-left" role="search">
+      <div class="form-group">
+        <input type="text" class="form-control" placeholder="Search">
+      </div>
+      <button type="submit" class="btn btn-default">Submit</button>
+    </form>
+    <ul class="nav navbar-nav navbar-right">
+      <li><a href="#">Link</a></li>
+      <li class="dropdown">
+        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+        <ul class="dropdown-menu">
+          <li><a href="#">Action</a></li>
+          <li><a href="#">Another action</a></li>
+          <li><a href="#">Something else here</a></li>
+          <li><a href="#">Separated link</a></li>
+        </ul>
+      </li>
+    </ul>
+  </div><!-- /.navbar-collapse -->
+</nav>
+
+
+<div class="container">
+
+      <div class="row">
+        <div class="well col-xs-12 col-md-12">
+          <form class="form-search">
+            <input type="text" class="search-query">
+            <button type="submit" class="btn">Search</button>
+          </form>
+        </div>
+      </div>
+
+      <div class="row">
+        <div class="well col-xs-12 col-md-8">
+          <p>col-xs-12 col-md-8</p>
+          <button class="btn btn-large btn-block btn-success" type="button">Block level button </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="well col-xs-6 col-md-6">
+          <p>col-xs-6 col-md-6</p>
+          <button class="btn btn-large btn-block btn-success" type="button">Block level button </button>
+        </div>
+      </div>
+      <div class="row">
+        <div class="well col-xs-6 col-md-4">
+          <p>col-xs-6 col-md-4</p>
+          <button class="btn btn-large btn-block btn-success" type="button">Block level button </button>
+        </div>
+      </div>
+      
+
+<!-- ============== Headings & Paragraph Copy ============== -->
+<div class="row">
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+
+        <div id="h1-title-example">
+          <div class="title">
+            <h1 class="title">Page Title H1</h1>
+          </div>
+        </div>
+        <p><code data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#h1-title-example')[0].innerHTML}, text: $('#h1-title-example')[0].innerHTML.replace(/&lt;/g,'&lt;')" data-clipboard-text="
+          &lt;div class=&quot;title&quot;&gt;
+            &lt;h1 class=&quot;title&quot;&gt;Page Title H1&lt;/h1&gt;
+          &lt;/div&gt;
+        " class="">
+          &lt;div class="title"&gt;
+            &lt;h1 class="title"&gt;Page Title H1&lt;/h1&gt;
+          &lt;/div&gt;
+        </code></p>
+        <div class="well">
+          <h1>Heading 1 <code data-copy="2-clipboard" title="Click me to copy h1 html to clipboard">&lt;h1&gt;Heading&lt;/h1&gt;</code></h1>
+          <h2>Heading 2 <code data-copy="2-clipboard" title="Click me to copy h2 html to clipboard">&lt;h2&gt;Heading&lt;/h2&gt;</code></h2>
+          <h3>Heading 3 <code data-copy="2-clipboard" title="Click me to copy h3 html to clipboard" class="">&lt;h3&gt;Heading&lt;/h3&gt;</code></h3>
+          <h4>Heading 4 <code data-copy="2-clipboard" title="Click me to copy h4 html to clipboard">&lt;h4&gt;Heading&lt;/h4&gt;</code></h4>
+          <h5>Heading 5 <code data-copy="2-clipboard" title="Click me to copy h5 html to clipboard">&lt;h5&gt;Heading&lt;/h5&gt;</code></h5>
+          <h6>Heading 6 <code data-copy="2-clipboard" title="Click me to copy h6 html to clipboard">&lt;h6&gt;Heading&lt;/h6&gt;</code></h6>
+        </div>
+
+      </div>
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6">
+        <h3>Example body text</h3>
+        <p>Nullam quis risus eget urna mollis ornare vel eu leo. Cum sociis natoque penatibus et magnis dis parturient montes, nascetur ridiculus mus. Nullam id dolor id nibh ultricies vehicula ut id elit.</p>
+        <p>Vivamus sagittis lacus vel augue laoreet rutrum faucibus dolor auctor. Duis mollis, est non commodo luctus, nisi erat porttitor ligula, eget lacinia odio sem nec elit. Donec sed odio dui.</p>
+        <h3>Example addresses</h3>
+        <div data-copy="2-clipboard" title="Click me to copy example address block html to clipboard" class="">
+          <address>
+            <strong>Dell, Inc.</strong><br>
+            1 Dell Way<br>
+            Round Rock, TX 78682<br>
+            <abbr title="Phone">P:</abbr> (512) 338-4400
+          </address>
+          <address>
+            <strong>Full Name</strong><br>
+            <a href="mailto:#">first.last@dell.com</a>
+          </address>
+        </div>
+      </div>
+
+    </div>
+<!-- ============ End Headings & Paragraph Copy ============ -->
+
+<!-- =============== Block Quotes ============= -->
+<div class="row">
+    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+      <h3>Block Quotes</h3>
+
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard">
+        <blockquote>
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+      </div>
+      <div class="col-xs-6 col-sm-6 col-md-6 col-lg-6" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard">
+        <blockquote class="pull-right">
+          <p>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Integer posuere erat a ante.</p>
+          <small>Someone famous in <cite title="Source Title">Source Title</cite></small>
+        </blockquote>
+      </div>
+    </div>
+</div>
+<!-- ============= End Block Quotes =========== -->
+<!-- ================== copy ================== -->
+<div class="da-all ta-all ma-all">
+      <h3>Copy Text</h3>
+      <p><code>&lt;p&gt;...&lt;/p&gt;</code></p>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+      tempor incididunt ut labore et dolore magna aliqua. Ut enim ad minim veniam,
+      quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+      consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+      cillum dolore eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non
+      proident, sunt in culpa qui officia deserunt mollit anim id est laborum.</p></div>
+      <p><code>&lt;p class="lead"&gt;...&lt;/p&gt;</code></p>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><p class="lead">Lead body copy</p></div>
+      <p><code>&lt;small&gt;...&lt;/small&gt;</code></p>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><small>This line of text is meant to be treated as fine print.</small></div>
+      <p><code>&lt;strong&gt;...&lt;/strong&gt;</code></p>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><strong>Text rendered as bold text</strong></div>
+      <p><code>&lt;em&gt;...&lt;/em&gt;</code></p>
+      <div class="well well-small" data-copy="2-clipboard" title="Click me to copy blockquote html to clipboard"><em>Text rendered as italicized text</em></div>
+    </div>
+
+<!-- ================ end copy ================ -->   
+
+
+
+<!-- Default bootstrap Form control -->
+<div class="well col-xs-12 col-md-12" id="form-example">
+      <form class="form-horizontal well">
+        <fieldset>
+          <legend>Default Bootstrap Form Controls</legend>
+          <div class="control-group">
+            <label class="control-label" for="input01">Text input</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="input01">
+              <p class="help-block">In addition to freeform text, any HTML5 text-based input appears like so.</p>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox">Checkbox</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox" value="option1">
+                Option one is this and that—be sure to include why it's great
+              </label>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="select01">Select list</label>
+            <div class="controls">
+              <select class="input-xlarge" id="select01">
+                <option>something</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="multiSelect">Multicon-select</label>
+            <div class="controls">
+              <select class="input-xlarge" multiple="multiple" id="multiSelect">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="fileInput">File input</label>
+            <div class="controls">
+              <input class="input-file" id="fileInput" type="file">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="textarea">Textarea</label>
+            <div class="controls">
+              <textarea id="textarea" class="input-xxlarge" rows="3"></textarea>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="focusedInput">Focused input</label>
+            <div class="controls">
+              <input class="input-xlarge focused" id="focusedInput" type="text" value="This is focused…">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label">Uneditable input</label>
+            <div class="controls">
+              <span class="input-xlarge uneditable-input">Some value here</span>
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="disabledInput">Disabled input</label>
+            <div class="controls">
+              <input class="input-xlarge disabled" id="disabledInput" type="text" placeholder="Disabled input here…" disabled="">
+            </div>
+          </div>
+          <div class="control-group">
+            <label class="control-label" for="optionsCheckbox2">Disabled checkbox</label>
+            <div class="controls">
+              <label class="checkbox">
+                <input type="checkbox" id="optionsCheckbox2" value="option1" disabled="">
+                This is a disabled checkbox
+              </label>
+            </div>
+          </div>
+          <div class="control-group warning">
+            <label class="control-label" for="inputWarning">Input with warning</label>
+            <div class="controls">
+              <input type="text" id="inputWarning" class="input-xlarge">
+              <span class="help-inline">Something may have gone wrong</span>
+            </div>
+          </div>
+          <div class="control-group error">
+            <label class="control-label" for="inputError">Input with error</label>
+            <div class="controls">
+              <input type="text" class="input-xlarge" id="inputError" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." data-trigger="hover" data-original-title="" title="">
+              <span class="help-inline">Please correct the error</span>
+            </div>
+          </div>
+          <div class="control-group success">
+            <label class="control-label" for="inputSuccess">Input with success</label>
+            <div class="controls">
+              <input type="text" id="inputSuccess" class="input-xlarge">
+              <span class="help-inline">Woohoo!</span>
+            </div>
+          </div>
+          <div class="control-group info">
+            <label class="control-label" for="selectError">Select with info</label>
+            <div class="controls">
+              <select class="input-xlarge" id="selectError">
+                <option>1</option>
+                <option>2</option>
+                <option>3</option>
+                <option>4</option>
+                <option>5</option>
+              </select>
+              <span class="help-inline">Woohoo!</span>
+            </div>
+          </div>
+          <div class="form-actions">
+            <button type="reset" class="btn">Cancel</button>
+            <button type="submit" class="btn btn-primary">Save changes</button>
+          </div>
+        </fieldset>
+      </form>
+  </div>
+
+<!-- =================================== -->
+
+
+
+<!-- ========= tables ============ -->
+<section class="da-all ta-all ma-all" id="tables" data-bind="include: 'pages/css-overview/tables.html'">  <div class="wrapper">
+    <div class="page-header">
+      <h2>Tables</h2>
+    </div>
+    <h3>Table with everything - table-striped table-bordered table-hover</h3>
+    <code>&lt;table class="table table-striped table-bordered table-hover"&gt; ... &lt;/table&gt;</code>
+    <button class="btn .btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-1').html()}" data-clipboard-text="
+&lt;table class=&quot;table table-striped table-bordered table-hover&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-1">Fiddle</button>
+<div id="table-sample-code-1">
+<table class="table table-striped table-bordered table-hover">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+</div>
+    <h3>Plain bordered table</h3>
+    <code>&lt;table class="table table-bordered"&gt; ... &lt;/table&gt;</code> <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-2').html()}" data-clipboard-text="
+
+&lt;table class=&quot;table table-bordered&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+
+  &lt;/tbody&gt;
+&lt;/table&gt;
+">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-2">Fiddle</button>
+<div id="table-sample-code-2">
+
+<table class="table table-bordered">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+
+  </tbody>
+</table>
+</div>
+
+    <h3>Borderless table with Zebra stripes</h3>
+    <code>&lt;table class="table table-striped"&gt; ... &lt;/table&gt;</code>
+    <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-3').html()}" data-clipboard-text="
+&lt;table class=&quot;table table-striped&quot;&gt;
+  &lt;thead&gt;
+    &lt;tr&gt;
+      &lt;th&gt;#&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;th&gt;Column heading&lt;/th&gt;
+    &lt;/tr&gt;
+  &lt;/thead&gt;
+  &lt;tbody&gt;
+    &lt;tr&gt;
+      &lt;td&gt;1&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;2&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+    &lt;tr&gt;
+      &lt;td&gt;3&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+      &lt;td&gt;Column content&lt;/td&gt;
+    &lt;/tr&gt;
+  &lt;/tbody&gt;
+&lt;/table&gt;
+  ">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-3">Fiddle</button>
+<div id="table-sample-code-3">
+<table class="table table-striped">
+  <thead>
+    <tr>
+      <th>#</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+      <th>Column heading</th>
+    </tr>
+  </thead>
+  <tbody>
+    <tr>
+      <td>1</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>2</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+    <tr>
+      <td>3</td>
+      <td>Column content</td>
+      <td>Column content</td>
+      <td>Column content</td>
+    </tr>
+  </tbody>
+</table>
+  </div>
+
+    <h3>Bordered Tables</h3>
+    <code>&lt;div class="table-bordered blue-stroke"&gt;&lt;table class="table table-bordered"&gt; ... &lt;/table&gt;&lt;/div&gt;</code> <span class="label">(not in Bootstrap)</span>
+    <button class="btn btn-xs" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#table-sample-code-4').html()}" data-clipboard-text="
+&lt;div class=&quot;table-bordered blue-stroke&quot;&gt;
+  &lt;table class=&quot;table table-bordered&quot;&gt;
+    &lt;thead&gt;
+      &lt;tr&gt;
+        &lt;th&gt;#&lt;/th&gt;
+        &lt;th&gt;Column heading&lt;/th&gt;
+        &lt;th&gt;Column heading&lt;/th&gt;
+        &lt;th&gt;Column heading&lt;/th&gt;
+      &lt;/tr&gt;
+    &lt;/thead&gt;
+    &lt;tbody&gt;
+      &lt;tr&gt;
+        &lt;td&gt;1&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;2&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+      &lt;/tr&gt;
+      &lt;tr&gt;
+        &lt;td&gt;3&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+        &lt;td&gt;Column content&lt;/td&gt;
+      &lt;/tr&gt;
+
+    &lt;/tbody&gt;
+  &lt;/table&gt;
+&lt;/div&gt; 
+    ">copy HTML</button> <button class="btn btn-xs fiddle-button" data-target="table-sample-code-4">Fiddle</button>
+    <div id="table-sample-code-4">
+<div class="table-bordered blue-stroke">
+  <table class="table table-bordered">
+    <thead>
+      <tr>
+        <th>#</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+        <th>Column heading</th>
+      </tr>
+    </thead>
+    <tbody>
+      <tr>
+        <td>1</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>2</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+      <tr>
+        <td>3</td>
+        <td>Column content</td>
+        <td>Column content</td>
+        <td>Column content</td>
+      </tr>
+
+    </tbody>
+  </table>
+</div> 
+    </div>  
+        
+<hr>
+
+
+
+
+
+  </div></section>
+
+<!-- ======== tables end ========= -->
+
+      <!-- Navbar
+      ================================================== -->
+      <div class="bs-docs-section clearfix">
+        <div class="row">
+          <div class="col-lg-12">
+            <div class="page-header">
+              <h1 id="navbar">Navbar</h1>
+            </div>
+
+            <div class="bs-example">
+              <div class="navbar navbar-default">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-responsive-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                  </div>
+                  <div class="navbar-collapse collapse navbar-responsive-collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Active</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdownheader</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                      <input type="text" class="form-control col-lg-8" placeholder="Search">
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div><!-- /.container -->
+              </div><!-- /.navbar -->
+
+
+              <div class="navbar navbar-inverse">
+                <div class="container">
+                  <div class="navbar-header">
+                    <button type="button" class="navbar-toggle" data-toggle="collapse" data-target=".navbar-inverse-collapse">
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                      <span class="icon-bar"></span>
+                    </button>
+                    <a class="navbar-brand" href="#">Brand</a>
+                  </div>
+                  <div class="navbar-collapse collapse navbar-inverse-collapse">
+                    <ul class="nav navbar-nav">
+                      <li class="active"><a href="#">Active</a></li>
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li class="dropdown-header">Dropdownheader</li>
+                          <li><a href="#">Separated link</a></li>
+                          <li><a href="#">One more separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                    <form class="navbar-form navbar-left">
+                      <input type="text" class="form-control col-lg-8" placeholder="Search">
+                    </form>
+                    <ul class="nav navbar-nav navbar-right">
+                      <li><a href="#">Link</a></li>
+                      <li class="dropdown">
+                        <a href="#" class="dropdown-toggle" data-toggle="dropdown">Dropdown<b class="caret"></b></a>
+                        <ul class="dropdown-menu">
+                          <li><a href="#">Action</a></li>
+                          <li><a href="#">Another action</a></li>
+                          <li><a href="#">Something else here</a></li>
+                          <li class="divider"></li>
+                          <li><a href="#">Separated link</a></li>
+                        </ul>
+                      </li>
+                    </ul>
+                  </div><!-- /.nav-collapse -->
+                </div><!-- /.container -->
+              </div><!-- /.navbar -->
+            </div><!-- /example -->
+
+          </div>
+        </div>
+      </div>
+
+
+      <!-- Buttons
+      ================================================== -->
+      <div class="bs-docs-section">
+        <div class="page-header">
+          <div class="row">
+            <div class="col-lg-12">
+              <h1 id="buttons">Buttons</h1>
+            </div>
+          </div>
+        </div>
+
+        <div class="row">
+          <div class="col-lg-6">
+
+            <div class="bs-example">
+              <p>
+                <button type="button" class="btn btn-default">Default</button>
+                <button type="button" class="btn btn-primary">Primary</button>
+                <button type="button" class="btn btn-success">Success</button>
+                <button type="button" class="btn btn-info">Info</button>
+                <button type="button" class="btn btn-warning">Warning</button>
+                <button type="button" class="btn btn-danger">Danger</button>
+                <button type="button" class="btn btn-link">Link</button>
+              </p>
+            </div>
+
+            <div class="bs-example">
+              <p>
+                <button type="button" class="btn btn-default disabled">Default</button>
+                <button type="button" class="btn btn-primary disabled">Primary</button>
+                <button type="button" class="btn btn-success disabled">Success</button>
+                <button type="button" class="btn btn-info disabled">Info</button>
+                <button type="button" class="btn btn-warning disabled">Warning</button>
+                <button type="button" class="btn btn-danger disabled">Danger</button>
+                <button type="button" class="btn btn-link disabled">Link</button>
+              </p>
+            </div>
+
+
+            <div class="bs-example" style="margin-bottom: 15px;">
+              <div class="btn-toolbar" style="margin: 0;">
+                <div class="btn-group">
+                  <button type="button" class="btn btn-default">Default</button>
+                  <button type="button" class="btn btn-default dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-primary">Primary</button>
+                  <button type="button" class="btn btn-primary dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-success">Success</button>
+                  <button type="button" class="btn btn-success dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-info">Info</button>
+                  <button type="button" class="btn btn-info dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+                <div class="btn-group">
+                  <button type="button" class="btn btn-warning">Warning</button>
+                  <button type="button" class="btn btn-warning dropdown-toggle" data-toggle="dropdown"><span class="caret"></span></button>
+                  <ul class="dropdown-menu">
+                    <li><a href="#">Action</a></li>
+                    <li><a href="#">Another action</a></li>
+                    <li><a href="#">Something else here</a></li>
+                    <li class="divider"></li>
+                    <li><a href="#">Separated link</a></li>
+                  </ul>
+                </div><!-- /btn-group -->
+              </div><!-- /btn-toolbar -->
+            </div>
+
+            <div class="bs-example">
+              <p>
+                <button type="button" class="btn btn-primary btn-lg">Large button</button>
+                <button type="button" class="btn btn-primary">Default button</button>
+                <button type="button" class="btn btn-primary btn-sm">Small button</button>
+                <button type="button" class="btn btn-primary btn-xs">Mini button</button>
+              </p>
+            </div>
+            
+          </div>
+
+        </div>
+      </div>
+
+
+
+      <footer>
+        <div class="row">
+          <div class="col-lg-12">
+            
+            <ul class="list-unstyled">
+              <li class="pull-right"><a href="#top">Back to top</a></li>
+              <li><a href="http://news.bootswatch.com" onclick="pageTracker._link(this.href); return false;">Blog</a></li>
+              <li><a href="http://feeds.feedburner.com/bootswatch">RSS</a></li>
+              <li><a href="https://twitter.com/thomashpark">Twitter</a></li>
+              <li><a href="https://github.com/thomaspark/bootswatch/">GitHub</a></li>
+              <li><a href="../help/#api">API</a></li>
+              <li><a href="https://www.paypal.com/cgi-bin/webscr?cmd=_s-xclick&amp;hosted_button_id=F22JEM3Q78JC2">Donate</a></li>
+            </ul>
+            <p>Made by <a href="http://thomaspark.me">Thomas Park</a>. Contact him at <a href="mailto:hello@thomaspark.me">hello@thomaspark.me</a>.</p>
+            <p>Code licensed under the <a href="http://www.apache.org/licenses/LICENSE-2.0">Apache License v2.0</a>.</p>
+            <p>Based on <a href="http://getbootstrap.com">Bootstrap</a>. Icons from <a href="http://fortawesome.github.io/Font-Awesome/">Font Awesome</a>. Web fonts from <a href="http://www.google.com/webfonts">Google</a>. Favicon by <a href="https://twitter.com/geraldhiller">Gerald Hiller</a>.</p>
+
+          </div>
+        </div>
+        
+      </footer>
+    
+
+    </div>
+
+ 
+
+
+     <!-- Footer
+      ================================================== -->
+
+      <footer id="footer" class="da-all ta-all ma-all">
+        <div class="wrapper">
+          <p class="pull-right"><a href="#top">Back to top</a></p>
+        </div>
+      </footer>
+
+    </div>	
+
+
+</body>
+</html>
