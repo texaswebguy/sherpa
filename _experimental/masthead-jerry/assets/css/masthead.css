@@ -1,0 +1,44 @@
+/* Prototype CSS */
+
+.masthead .wrapper {
+  overflow: visible;
+}
+.masthead .utility-nav {
+  height: 30px;
+  padding-top: 5px;
+}
+.masthead .navbar {
+  height: 90px;
+  margin-bottom: 0;
+}
+.masthead .navbar .brand {
+  margin-left: -50px;
+}
+.masthead .navbar .brand .icon-ui-dell {
+  font-size: 62px;
+  height: 62px;
+  width: 90px;
+  float: left;
+}
+.masthead .navbar .brand h2 {
+  float: left;
+  margin-top: 18px;
+}
+.masthead .navbar .nav-collapse {
+  margin-top: 26px;
+}
+.masthead .navbar .nav .active > a,
+.masthead .navbar .nav .active > a:hover,
+.masthead .navbar .nav .active > a:focus {
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+}
+/* For mobile */
+@media only screen and (max-width: 767px) {
+  
+}
+/* For tablet */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+  
+}

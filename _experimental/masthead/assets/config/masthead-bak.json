@@ -23,12 +23,23 @@
             "label":"Page 3",
             "templateUrl":"pages/page3.html"
         },
-            "page-2.1": {
-            "name":"page-2.1",
-            "url":"/page-2.1",
-            "parent": "page-2",
-            "label":"Page-2.1",
+        "page-2.1": {
+            "name":"page-2.page-2.1",
+            "url":"/page-2/page-2.1",
+            "label":"Page 2.1",
             "templateUrl":"pages/page2/page1.html"
+        },
+        "page-2.2": {
+            "name":"page-2.page-2.2",
+            "url":"/page-2/page-2.2",
+            "label":"Page 2.2",
+            "templateUrl":"pages/page2/page2.html"
+        },
+        "page-2.3": {
+            "name":"page-2.page-2.3",
+            "url":"/page-2/page-2.3",
+            "label":"Page 2.3",
+            "templateUrl":"pages/page2/page3.html"
         }
     }
 }
