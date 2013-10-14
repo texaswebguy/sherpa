@@ -1143,7 +1143,7 @@ table {
 
 .table {
   width: 100%;
-  margin-bottom: @line-height-base;
+  margin-bottom: @line-height-base  * 13.999999995800000001259999999622px;
   // Cells
   th,
   td {
@@ -1168,10 +1168,11 @@ table {
   thead:first-child tr:first-child th,
   thead:first-child tr:first-child td {
     border-top: 0;
+    border-bottom: none;
   }
   // Account for multiple tbody instances
   tbody + tbody {
-    border-top: 2px solid @table-border-color;
+    border-top: 1px solid @table-border-color;
   }
 
   // Nesting
@@ -1199,7 +1200,7 @@ table {
 .table-striped {
   td, th {
     border-left:0;
-    border-top:0;  
+    border-top:0;
   }
   tbody {
     > tr:nth-child(odd) > td,
@@ -1219,24 +1220,25 @@ table {
     tr th:first-child, tr td:first-child {.border-left-radius(0);}
     tr th:last-child, tr td:last-child {.border-right-radius(0);}
   }
+
 }
 
 
 .table-bordered {
-  .border-radius(@border-radius-base);
+  .border-radius(@border-radius-large);
 
 
   // For first th/td in the first row in the first thead or tbody
   thead:first-child tr:first-child > th:first-child,
   tbody:first-child tr:first-child > td:first-child,
   tbody:first-child tr:first-child > th:first-child {
-    .border-top-left-radius(@border-radius-base);
+    .border-top-left-radius(@border-radius-large);
   }
   // For last th/td in the first row in the first thead or tbody
   thead:first-child tr:first-child > th:last-child,
   tbody:first-child tr:first-child > td:last-child,
   tbody:first-child tr:first-child > th:last-child {
-    .border-top-right-radius(@border-radius-base);
+    .border-top-right-radius(@border-radius-large);
   }
   // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
   thead:last-child tr:last-child > th:first-child,
@@ -1244,7 +1246,7 @@ table {
   tbody:last-child tr:last-child > th:first-child,
   tfoot:last-child tr:last-child > td:first-child,
   tfoot:last-child tr:last-child > th:first-child {
-    .border-bottom-left-radius(@border-radius-base);
+    .border-bottom-left-radius(@border-radius-large);
   }
   // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
   thead:last-child tr:last-child > th:last-child,
@@ -1252,7 +1254,7 @@ table {
   tbody:last-child tr:last-child > th:last-child,
   tfoot:last-child tr:last-child > td:last-child,
   tfoot:last-child tr:last-child > th:last-child {
-    .border-bottom-right-radius(@border-radius-base);
+    .border-bottom-right-radius(@border-radius-large);
   }
 
   // Special fixes to round the left border on the first td/th
@@ -1260,15 +1262,16 @@ table {
   caption + tbody tr:first-child td:first-child,
   colgroup + thead tr:first-child th:first-child,
   colgroup + tbody tr:first-child td:first-child {
-    .border-top-left-radius(@border-radius-base);
+    .border-top-left-radius(@border-radius-large);
   }
   caption + thead tr:first-child th:last-child,
   caption + tbody tr:first-child td:last-child,
   colgroup + thead tr:first-child th:last-child,
   colgroup + tbody tr:first-child td:last-child {
-    .border-top-right-radius(@border-radius-base);
+    .border-top-right-radius(@border-radius-large);
   }
-
+  border-collapse: separate;
+  border: 1px solid #ddd;
 }
 
 // DELL-308-ONLY Specific table styling
@@ -1276,7 +1279,7 @@ table {
 // Stroked border tables
 
 div.table-bordered table {
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   .border-radius(@border-radius-large);
   overflow:hidden;
@@ -1296,9 +1299,18 @@ div.table-bordered table {
   }
   &.table-bordered {
     border:none;
+
   }
 }
 
+.table-bordered.table-striped>thead>tr>th, 
+.table-bordered.table-striped>tbody>tr>th, 
+.table-bordered.table-striped>tfoot>tr>th, 
+.table-bordered.table-striped>thead>tr>td, 
+.table-bordered.table-striped>tbody>tr>td, 
+.table-bordered.table-striped>tfoot>tr>td {
+  border: none;
+}
 
 
 // HOVER EFFECT
@@ -1740,7 +1752,7 @@ border: @default-stroke solid @purple !important;
   // Disabled state
   &.disabled,
   &[disabled] {
-    cursor: default;
+    cursor: not-allowed;
     background-image: none;
     .opacity(.40);
     .box-shadow(none);

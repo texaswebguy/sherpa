@@ -1970,7 +1970,7 @@ table {
 }
 .table {
   width: 100%;
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
 }
 .table th,
 .table td {
@@ -1993,9 +1993,10 @@ table {
 .table thead:first-child tr:first-child th,
 .table thead:first-child tr:first-child td {
   border-top: 0;
+  border-bottom: none;
 }
 .table tbody + tbody {
-  border-top: 2px solid #cccccc;
+  border-top: 1px solid #cccccc;
 }
 .table .table {
   background-color: #ffffff;
@@ -2053,60 +2054,62 @@ table {
   border-bottom-right-radius: 0;
 }
 .table-bordered {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  -webkit-border-radius: 10px;
+  -moz-border-radius: 10px;
+  border-radius: 10px;
+  border-collapse: separate;
+  border: 1px solid #ddd;
 }
 .table-bordered thead:first-child tr:first-child > th:first-child,
 .table-bordered tbody:first-child tr:first-child > td:first-child,
 .table-bordered tbody:first-child tr:first-child > th:first-child {
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
 }
 .table-bordered thead:first-child tr:first-child > th:last-child,
 .table-bordered tbody:first-child tr:first-child > td:last-child,
 .table-bordered tbody:first-child tr:first-child > th:last-child {
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
 }
 .table-bordered thead:last-child tr:last-child > th:first-child,
 .table-bordered tbody:last-child tr:last-child > td:first-child,
 .table-bordered tbody:last-child tr:last-child > th:first-child,
 .table-bordered tfoot:last-child tr:last-child > td:first-child,
 .table-bordered tfoot:last-child tr:last-child > th:first-child {
-  -webkit-border-bottom-left-radius: 5px;
-  -moz-border-radius-bottomleft: 5px;
-  border-bottom-left-radius: 5px;
+  -webkit-border-bottom-left-radius: 10px;
+  -moz-border-radius-bottomleft: 10px;
+  border-bottom-left-radius: 10px;
 }
 .table-bordered thead:last-child tr:last-child > th:last-child,
 .table-bordered tbody:last-child tr:last-child > td:last-child,
 .table-bordered tbody:last-child tr:last-child > th:last-child,
 .table-bordered tfoot:last-child tr:last-child > td:last-child,
 .table-bordered tfoot:last-child tr:last-child > th:last-child {
-  -webkit-border-bottom-right-radius: 5px;
-  -moz-border-radius-bottomright: 5px;
-  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-right-radius: 10px;
+  -moz-border-radius-bottomright: 10px;
+  border-bottom-right-radius: 10px;
 }
 .table-bordered caption + thead tr:first-child th:first-child,
 .table-bordered caption + tbody tr:first-child td:first-child,
 .table-bordered colgroup + thead tr:first-child th:first-child,
 .table-bordered colgroup + tbody tr:first-child td:first-child {
-  -webkit-border-top-left-radius: 5px;
-  -moz-border-radius-topleft: 5px;
-  border-top-left-radius: 5px;
+  -webkit-border-top-left-radius: 10px;
+  -moz-border-radius-topleft: 10px;
+  border-top-left-radius: 10px;
 }
 .table-bordered caption + thead tr:first-child th:last-child,
 .table-bordered caption + tbody tr:first-child td:last-child,
 .table-bordered colgroup + thead tr:first-child th:last-child,
 .table-bordered colgroup + tbody tr:first-child td:last-child {
-  -webkit-border-top-right-radius: 5px;
-  -moz-border-radius-topright: 5px;
-  border-top-right-radius: 5px;
+  -webkit-border-top-right-radius: 10px;
+  -moz-border-radius-topright: 10px;
+  border-top-right-radius: 10px;
 }
 div.table-bordered table {
-  border-width: 2px;
+  border-width: 1px;
   border-style: solid;
   -webkit-border-radius: 10px;
   -moz-border-radius: 10px;
@@ -2128,6 +2131,14 @@ div.table-bordered table.table-striped th {
   border-radius: 0;
 }
 div.table-bordered table.table-bordered {
+  border: none;
+}
+.table-bordered.table-striped > thead > tr > th,
+.table-bordered.table-striped > tbody > tr > th,
+.table-bordered.table-striped > tfoot > tr > th,
+.table-bordered.table-striped > thead > tr > td,
+.table-bordered.table-striped > tbody > tr > td,
+.table-bordered.table-striped > tfoot > tr > td {
   border: none;
 }
 .table-hover tbody tr:hover > td,
@@ -3339,7 +3350,7 @@ li.dropdown .dropdown-menu {
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -3400,7 +3411,7 @@ li.dropdown .dropdown-menu {
 .btn-tertiary.disabled,
 .btn[disabled],
 .btn-tertiary[disabled] {
-  cursor: default;
+  cursor: not-allowed;
   background-image: none;
   opacity: 0.4;
   filter: alpha(opacity=40);
@@ -4394,7 +4405,7 @@ input[type="submit"].btn.btn-xs {
   /* Darken IE7 buttons by default so they stand out more given they won't have borders */
 
   filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  border: 1px solid #dddddd;
+  border: 1px solid #cccccc;
   -webkit-border-radius: 2px;
   -moz-border-radius: 2px;
   border-radius: 2px;
@@ -4454,7 +4465,7 @@ input[type="submit"].btn.btn-xs {
 .pager li > span.disabled,
 .pager li > a[disabled],
 .pager li > span[disabled] {
-  cursor: default;
+  cursor: not-allowed;
   background-image: none;
   opacity: 0.4;
   filter: alpha(opacity=40);
