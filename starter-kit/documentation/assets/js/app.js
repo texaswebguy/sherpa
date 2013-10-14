@@ -9,42 +9,22 @@ sherpaApp.controller("pageController", function($scope) {
 
 });
 
-sherpaApp.controller("docsMastheadController", function($scope) {
+sherpaApp.controller("docsMastheadController", function($scope, $state) {
     
      $scope.version=Sherpa.version;
-     $scope.navbar = [
-     	{
-     		id:"get-started",
-     		label:"Getting Started",
-     		templateUrl:"pages/get-started/index.html",
-     		controller:"getStartedController"
-     	},
-     	{
-     		id:"css-overview",
-     		label:"CSS Overview",
-     		templateUrl:"pages/css-overview/index.html",
-     		controller:"cssOverviewController"
-     	},
-     	{
-     		id:"prototyping",
-     		label:"Prototyping",
-     		templateUrl:"pages/prototyping/index.html",
-     		controller:"prototypingController"
-     	},
-     	{
-     		id:"styleguides",
-     		label:"Styleguides",
-     		templateUrl:"pages/styleguides/index.html",
-     		controller:"styleguidesController"
-     	}
-
-     ]
-     $scope.navbarActiveIndex=0;
-     $scope.openPage = function(event){
-     	event.preventDefault();
-     	console.log($(event.currentTarget).attr('id'))
+     if(SHERPA.PROTO_ROUTES) {
+        $scope.routes = _.keys(SHERPA.PROTO_ROUTES);
+    } else {
+        $scope.routes = [];
+    }
+     
+     $scope.setPage = function(page){
+        $state.transitionTo(page);
      }
 
+
 });
+
+
 
 $('.footer-back-to-top').affix();

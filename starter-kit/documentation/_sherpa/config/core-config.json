@@ -5,7 +5,7 @@
         "releaseName" : "Dell-308 2.3.2 Boostrap Theme",
         "minor" : ".01",
         "major" : "0.7",
-        "releaseDate" : "10.03.2013"
+        "releaseDate" : "10.11.2013"
     },
     "default_values": {
         "default_alerts_data": {
@@ -86,7 +86,7 @@
         ],
         "lorem_ispum_default": 200
     },
-    "CSS_THEME_DEFAULT": "dell-308-theme-v0.6",
+    "CSS_THEME_DEFAULT": "dell-308-theme-v0.7",
     "CSS_THEME_DEFAULT_REMOTE_URL": "",
     "CSS_THEME_RESET_ONLOAD": true,
     "DEFAULT_LOCALE": "en",

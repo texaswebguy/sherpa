@@ -10,7 +10,8 @@
     <meta name="author" content="">
 
     <script type="text/javascript">
-
+      var SHERPA_CONFIG_OVERRIDES = {};
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/config-overrides.json";
     </script>
 	<!-- Don't touch 
 	******************************************************************************** -->
@@ -19,7 +20,7 @@
 	******************************************************************************** -->	
 </head>
 
-<body>
+<body ng-controller="pageController">
 
 <header ng-include="'assets/includes/masthead.html'"></header>
 
