@@ -9,7 +9,7 @@ angular.module('uiRouterSample')
         /////////////////////////////
 
         // Use $urlRouterProvider to configure any redirects (when) and invalid urls (otherwise).
-        $urlRouterProvider
+          $urlRouterProvider
 
           // The `when` method says if the url is ever the 1st param, then redirect to the 2nd param
           // Here we are just setting up some convenience urls.
@@ -25,7 +25,7 @@ angular.module('uiRouterSample')
         //////////////////////////
 
         // Use $stateProvider to configure your states.
-        $stateProvider
+          $stateProvider
 
           //////////
           // Home //

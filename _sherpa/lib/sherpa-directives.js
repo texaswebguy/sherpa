@@ -28,7 +28,16 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
                 route.parent =  SHERPA.PROTO_ROUTES[route.parent];
             }
             //route is the inidividual object
-	        $stateProvider.state(route);
+
+            var viewsObject = {
+                'masthead':{
+                    templateUrl: route.templateUrl
+                }
+            }
+
+            route.views = viewsObject;
+
+	        $stateProvider.state(route.name, route );
 	    });
 	}]);
 

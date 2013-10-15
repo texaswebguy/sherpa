@@ -3,7 +3,7 @@
     "PROTO_CSS": "masthead.css",
     "PATH_PROTO_ASSETS": "assets/",
     "PATH_WEBROOT": "",
-    "PATH_PROTO_ASSETS": "assets/",
+    "UI_ROUTER_NAME": "mastheadRouter",
     "PROTO_ROUTES": {
     	"home": {
             "name":"page-1",
@@ -23,11 +23,12 @@
             "label":"Page 3",
             "templateUrl":"pages/page3.html"
         },
-            "page-2.1": {
-            "name":"page-2.1",
-            "url":"/page-2.1",
-            "parent": "page-2",
-            "label":"Page-2.1",
+        "page-2a": {
+            "name":"page-2a",
+            "url":"/page-2a",
+            "label":"Page-2a",
+            "parent":"page-2",
+            "view":"masthead",
             "templateUrl":"pages/page2/page1.html"
         }
     }
