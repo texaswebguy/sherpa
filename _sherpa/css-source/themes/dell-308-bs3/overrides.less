@@ -1148,7 +1148,7 @@ table {
   th,
   td {
     padding: 8px;
-    line-height: @line-height-base;
+    line-height: @line-height-base * 13.999999995800000001259999999622px; // ~20px
     text-align: left;
     vertical-align: top;
     border-top: 1px solid @table-border-color;
@@ -1160,6 +1160,21 @@ table {
   thead th {
     vertical-align: bottom;
   }
+  // Need to Fix this Below
+  thead > tr > th, 
+  tbody > tr > th, 
+  tfoot > tr > th, 
+  thead > tr > td, 
+  tbody > tr > td, 
+  tfoot > tr > td {
+  padding: 8px;
+  line-height: @line-height-base * 13.999999995800000001259999999622px; // ~20px
+  vertical-align: top;
+  border:none;
+  border-left: 1px solid @table-border-color;
+  border-top: 1px solid @table-border-color;
+  }
+
   // Remove top border from thead by default
   caption + thead tr:first-child th,
   caption + thead tr:first-child td,
@@ -1167,8 +1182,8 @@ table {
   colgroup + thead tr:first-child td,
   thead:first-child tr:first-child th,
   thead:first-child tr:first-child td {
-    border-top: 0;
-    border-bottom: none;
+    border-top: 0px;
+    border-bottom: 0px;
   }
   // Account for multiple tbody instances
   tbody + tbody {
@@ -1180,6 +1195,9 @@ table {
     background-color: @body-bg;
   }
 }
+
+
+
 
 // CONDENSED TABLE W/ HALF PADDING
 // -------------------------------
@@ -1206,12 +1224,22 @@ table {
     > tr:nth-child(odd) > td,
     > tr:nth-child(odd) > th {
         background-color: @table-bg-accent;
+        border-top: none;
       }
   }
   tbody {
     tr th:first-child, tr td:first-child {.border-left-radius(@border-radius-base);}
     tr th:last-child, tr td:last-child {.border-right-radius(@border-radius-base);}
   }
+  >thead>tr>th, 
+  >tbody>tr>th, 
+  >tfoot>tr>th, 
+  >thead>tr>td, 
+  >tbody>tr>td, 
+  >tfoot>tr>td {
+  border: none;
+}
+
 }
 
 .table-bordered.table-striped {
@@ -1271,7 +1299,7 @@ table {
     .border-top-right-radius(@border-radius-large);
   }
   border-collapse: separate;
-  border: 1px solid #ddd;
+  border: 1px solid @table-border-color;
 }
 
 // DELL-308-ONLY Specific table styling
@@ -1283,9 +1311,9 @@ div.table-bordered table {
   border-style: solid;
   .border-radius(@border-radius-large);
   overflow:hidden;
-  margin-bottom: @line-height-base;
-  margin-top:-@line-height-base;
-  top:@line-height-base;  
+  margin-bottom: @line-height-base * 13.999999995800000001259999999622px; // ~20px
+  margin-top:-@line-height-base * 13.999999995800000001259999999622px; // ~20px
+  top:@line-height-base * 13.999999995800000001259999999622px; // ~20px  
   position:relative;
 
   tr td:first-child,
@@ -1298,7 +1326,7 @@ div.table-bordered table {
     }
   }
   &.table-bordered {
-    border:none;
+    border: 1px solid @table-border-color;
 
   }
 }
