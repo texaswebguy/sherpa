@@ -8,32 +8,23 @@ var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
-	/*
-		This works off the following object in the config overrides json
-		 "PROTO_ROUTES": {
-	    	"home": {
-	            "name":"get-started",
-	            "url":"/",
-	            "label":"Getting Started",
-	            "templateUrl":"pages/get-started/index.html",
-	            "controller":"getStartedController"
-	        }
-		}
-	*/
-
 	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
 	    _.each(SHERPA.PROTO_ROUTES, function(route){
 
             if ( route.parent ) {
                 route.parent =  SHERPA.PROTO_ROUTES[route.parent];
             }
-            //route is the inidividual object
 
-            var viewsObject = {
-                'masthead':{
-                    templateUrl: route.templateUrl
-                }
-            }
+            /**
+             * Target Specific views in html:
+             * <section ui-view="masthead" ></section>
+             *
+             * @type {{}}
+             */
+            var viewsObject = {};
+            viewsObject[ route.view ] = {
+                templateUrl: route.templateUrl
+            };
 
             route.views = viewsObject;
 

@@ -9,18 +9,21 @@
             "name":"page-1",
             "url":"/",
             "label":"Page 1",
+            "view":"masthead",
             "templateUrl":"pages/page1.html"
         },
         "page-2": {
             "name":"page-2",
             "url":"/page-2",
             "label":"Page 2",
+            "view":"masthead",
             "templateUrl":"pages/page2.html"
         },
         "page-3": {
             "name":"page-3",
             "url":"/page-3",
             "label":"Page 3",
+            "view":"masthead",
             "templateUrl":"pages/page3.html"
         },
         "page-2a": {
@@ -28,7 +31,7 @@
             "url":"/page-2a",
             "label":"Page-2a",
             "parent":"page-2",
-            "view":"masthead",
+            "view":"subpage",
             "templateUrl":"pages/page2/page1.html"
         }
     }
