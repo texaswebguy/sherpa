@@ -2600,26 +2600,35 @@ input[type="submit"].btn {
   border: none;
   border-left-width: 0;
   margin:0 5px;
+  padding: 7px 10px;
 }
 .pagination ul > li > a:hover,
 .pagination ul > li > a:focus,
 .pagination ul > .active > a,
 .pagination ul > .active > span {
-  background-color: none;
+  background-color: #cce7f3;
+  text-decoration: none;
   .border-radius(@border-radius-base);
 }
 .pagination ul > .active > a,
 .pagination ul > .active > a:hover,
 .pagination ul > .active > span {
-  background-color: @gray-dark;
-  color: @white;
+  background-color: @dell-gray-light;
+  color: @dell-gray-dark;
   font-weight: bold;
+  border: 1px solid (@dell-gray-medium);
+  padding: 7px 10px;
+  text-decoration: none;
 }
 .pagination ul > .disabled > span,
 .pagination ul > .disabled > a,
 .pagination ul > .disabled > a:hover,
 .pagination ul > .disabled > a:focus {
   color: @gray-dark;
+  text-decoration: none;
+  background: none;
+  pointer-events: none;
+  cursor: default;
 }
 
 
@@ -3898,38 +3907,72 @@ you can use the generic selector below, but it's slower:
 // ------------------------------------------
 // Pagination
 
+.pagination {
+  &.pagination {
+    
+    &-centered {
+      text-align: center;
+    }
 
-.pagination.pagination-unnumbered  ul > li > a {
-  background-color: @dell-gray-stroke;
-  .border-radius(@border-radius-small);
-}
-.pagination.pagination-unnumbered  ul > li > a:hover {
-  background-color: @dell-highlight-blue;
-}
-.pagination.pagination-unnumbered  ul > li.active > a {
-  background-color: @gray-dark;
+    &-unnumbered {
+      margin: 20px auto;
+      width: 350px;
+      clear: both;
+      float: none;
+
+      ul {
+        display: inline;
+        width: auto;
+        margin-top: 15px;
+        float: left;
+
+        > li {
+          border-width: 5px;
+
+          &.active > a {
+            background-color: @gray-dark;
+            padding: 5px 10px;
+          }
+
+          > a {
+            background-color: @dell-gray-stroke;
+            .border-radius(@border-radius-small);
+            width: 30px;
+            padding: 5px 10px;
+
+            &:hover {
+              background-color: @dell-highlight-blue;
+            }
+          }  
+        }
+      }
+
+      .zoom-controls {
+        color: @gray;
+        border-left:2px solid @dell-gray-stroke;
+        padding:7px 20px;
+        margin-left:10px;
+        height:40px;
+        display:inline;
+
+        [class^="icon-small-zoom"] {
+          margin:-3px 10px 10px 10px;
+          font-size:24px;
+          .mirror-text();
+          cursor:pointer;
+        }
+      }
+    }   
+  }
 }
 
-.pagination.pagination-unnumbered  .zoom-controls {
-  color: @gray;
-  border-left:2px solid @dell-gray-stroke;
-  padding:7px 20px;
-  margin-left:10px;
-  height:40px;
-  display:inline;
-}
+
 .mirror-text() {
    -moz-transform: scaleX(-1); /* Gecko */
   -o-transform: scaleX(-1); /* Operah */
   -webkit-transform: scaleX(-1); /* webkit */
   transform: scaleX(-1); /* standard */
   filter: FlipH; /* IE 6/7/8 */ 
-}
-.pagination.pagination-unnumbered  .zoom-controls [class^="icon-small-zoom"] {
-  margin:-3px 10px 10px 10px;
-  font-size:24px;
-  .mirror-text();
-  cursor:pointer;
 }
 
 
