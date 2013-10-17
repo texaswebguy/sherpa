@@ -72,11 +72,9 @@ Sherpa.msg = function(textkey,t_data) {
 	var msg = Sherpa.viewModel.content[textkey], 
 		regex = /\{[0-9]\}*/,
 		i = 0;
-	//TODO - need to get content from Data API
 	if(t_data){
 		if(_.isObject(t_data) && !_.isArray(t_data)) {
-			//data is ko.obserbable
-			//TODO this is not reactive. Will have to worry about that when we do in page editing
+			//TODO should test taking this out because this is knockout related when a data element is ko.observable it is a function
 			t_data = t_data();
 		}
 		
@@ -84,7 +82,7 @@ Sherpa.msg = function(textkey,t_data) {
 			while(msg.match(regex)) {
 				msg = msg.replace(msg.match(regex),t_data[i]);
 				i++;
-			}			  			
+			}
 		} 
 		else {
 			// did not find content
@@ -114,13 +112,81 @@ Sherpa.msg = function(textkey,t_data) {
 		msg = Sherpa.viewModel.content[textkey+"_markdown"];
 		if(!msg) {
 			// TODO: figure out how big the containg element is and then truncate lorem ispum to fit
-			msg = 'Lorem ispum...';
+			if(SHERPA.ENABLE_CONTENT_EDIT) {
+				msg = '<span class="editable" data-textkey="'+textkey+'">Lorem ispum...</span>';
+			} else {
+				msg = 'Lorem ispum...';
+			}
+			
 		} else {
-			var convertMD = new Sherpa.Markdown.converter();
-			msg = convertMD.makeHtml(msg);
+			var convertMD = new Sherpa.converter();
+			if(SHERPA.ENABLE_CONTENT_EDIT) {
+				msg = '<div class="editable" data-textkey="'+textkey+'_markdown">'+convertMD.makeHtml(msg)+'</div>'
+			} else {
+				msg = convertMD.makeHtml(msg);
+			}
 		}
-	};
+	} else {
+		if(SHERPA.ENABLE_CONTENT_EDIT) {
+			msg = '<span class="editable" data-textkey="'+textkey+'">'+msg+'</span>'
+		} 
+	}
 	return msg;
+}
+
+Sherpa.lorem = function(options){
+	var regex = new RegExp("([\\w]+\\s+){"+_.random(10)+"}");
+	if(_.isNumber(options) || _.isUndefined(options) ) {
+		// no options just character count
+		if(_.isUndefined(options)) {
+			options = Sherpa.viewModel.default_values.lorem_ispum_default;
+		}
+		return _.str.capitalize(_.str.prune((_.shuffle(Sherpa.viewModel.default_values.lorem_ispum).join(" ")).replace(",","").replace(regex,""),options,"."));
+	} else {
+		if(options.startLorem) {
+			options.startLorem = "Lorem ipsum dolor sit amet "
+		} else {
+			options.startLorem = ""
+		}
+		if(!options.paragraphs) {
+			if(_.isUndefined(options.numChars) || !_.isNumber(options.numChars) ) {
+				console.log(">"+options.numChars+"<")
+				if(options.numChars.match(/,/)){
+					var range = [];
+					_.each((options).split(/,/), function(num){return range.push(parseInt(num))});
+					options.numChars = _.random(range[0],range[1]);
+				} else {
+					options.numChars = Sherpa.viewModel.default_values.lorem_ispum_default;
+				}				
+			}
+			return _.str.capitalize(options.startLorem+_.str.prune((_.shuffle(Sherpa.viewModel.default_values.lorem_ispum).join(" ")).replace(",","").replace(regex,""),options.numChars,"."));
+		} else {
+			if(_.isUndefined(options.numChars) || !_.isNumber(options.numChars) ) {
+				options.numChars = Sherpa.viewModel.default_values.lorem_ispum_default;
+			}
+			if(!_.isNumber(options.paragraphs) ) {
+				options.paragraphs = 5;
+			}
+			return (function(){
+				var temp_html = "";
+				_.each(_.range(options.paragraphs), function(para) {
+					regex = new RegExp("([\\w]+\\s+){"+_.random(10)+"}");
+					if(para == 0 && options.startLorem) {
+						options.startLorem = "Lorem ipsum dolor sit amet ";
+					} else {
+						options.startLorem = "";
+					}
+					temp_html += '<p>'+options.startLorem+_.str.capitalize(_.str.prune((_.shuffle(Sherpa.viewModel.default_values.lorem_ispum).join(" ")).replace(",","").replace(regex,""),options.numChars,"."))+'</p>\n';
+				});
+				return temp_html;				
+			})();
+
+
+			
+		}
+		
+	}
+
 }
 
 
@@ -143,6 +209,13 @@ Sherpa.ready("jwerty-js", function() {
     var props = ["key", "is", "fire","event", "KEYS"];
     Sherpa.namespace(jwerty, "hotkeys", props);
 });
+Sherpa.ready("showdown-js", function() {
+    var props = ["extensions", "forEach", "converter"];
+    Sherpa.namespace(Showdown, "Markdown", props);
+});
+
+
+
 
 //set up where to load libraries from
 SHERPA.LIB_ORIGIN = "cdn";
@@ -242,6 +315,9 @@ Sherpa.projectInfoInit = function(){
 }
 // AJAX loading utilities
 //______________________________________________________________________________________
+
+//TODO get rid of amplify request and use angular $http
+
 Sherpa.ready("amplify", function(){
 
 	Sherpa.request.define( "assets", "ajax", {
@@ -268,5 +344,18 @@ Sherpa.ready("amplify", function(){
 	    dataType: "text",
 	    type: "GET"
 	});
+
+
+	Sherpa.request.define( "save_content", "ajax", {
+		url: SHERPA.PATH_CORE_BIN+SHERPA.CONTENT_SAVE_APP,
+	    type: "POST"
+	});
+
+	Sherpa.request.define( "export_content", "ajax", {
+		url: SHERPA.PATH_CORE_BIN+SHERPA.CONTENT_EXPORT_APP,
+	    type: "POST"
+	});
+
+
 
 });

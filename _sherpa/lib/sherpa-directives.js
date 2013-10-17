@@ -35,3 +35,27 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 	}]);
 
 }
+
+
+sherpaApp.directive('scrollSpy', function($timeout){
+	//TODO This is a hack
+  return function(scope, elem, attr) {
+  	if(attr.scrollSpy === 'refresh') {
+  		$('body').scrollspy('refresh');
+  	} else {
+	  	$(elem).scrollspy();
+	    scope.$watch(attr.scrollSpy, function(value) {
+	      $timeout(function() { $('body').scrollspy('refresh') }, 500);
+	    }, true);  		
+  	}
+  }
+});
+
+
+sherpaApp.directive('msg', function(){
+	//This is a directive version of the msg version.  This will render html. 
+	console.log("hello")
+	return {
+		template: Sherpa.msg(attr.msg, attr.msgdata)
+	}
+});

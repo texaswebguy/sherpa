@@ -111,5 +111,15 @@ Sherpa.counter("Sherpa i18n");
 			}
 		});
 	}
+	SHERPA.PATH_CONTENT_FILE = SHERPA.PATH_CORE_BIN.split(/_sherpa/)[0]+"../../../";
+	_.each(location.pathname.split(/\//), function(item){
+		if(!(item == "" || item.match(".html"))) {
+			SHERPA.PATH_CONTENT_FILE += item+"/";
+		}
+	});
+
+	SHERPA.PATH_CONTENT_FILE += SHERPA.PATH_PROTO_ASSETS+"content/";
+	SHERPA.PATH_CONTENT_FILE = SHERPA.PATH_CONTENT_FILE.replace("//","/");
+	SHERPA.CONTENT_FILENAME = "messages_"+Sherpa.locale+".json"
 
 Sherpa.counter("Sherpa i18n");

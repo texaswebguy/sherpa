@@ -124,7 +124,8 @@
         "gridset-overlay",
         "dateformatjs",
         "bootstrap-232",
-        "bootstrap-datepicker"
+        "bootstrap-datepicker",
+        "showdown-js"
     ],
     "LOAD_ANGULAR_MODULES": [
         "ngSanitize",

@@ -5,20 +5,13 @@
 ::Figure out all needed paths
 
 SET BIN=%~dp0
-SET KIT=%BIN:bin\batch-files=starter-kit%
-SET RELEASE=%BIN:bin\batch-files=dell-ui-releases%
-SET SITE=%BIN:bin\batch-files=site%
-SET SITECORE=%BIN:bin\batch-files=site%_sherpa
-SET CORE=%KIT%_sherpa
-SET SOURCELESS=%CORE%\css-source\themes\dell-308
-SET SOURCEIMAGES=%CORE%\images
-SET SOURCETHEME=%CORE%\css\themes
-SET SOURCEFONTS=%CORE%\fonts
+SET SITECORE=%BIN:_scripts\batch-files=documentation%_sherpa
+SET CORE=%BIN:_scripts\batch-files\=_sherpa%
+echo %SITECORE%
+echo %CORE%
 
 RMDIR %SITECORE% /s /q
 MKDIR %SITECORE%
-XCOPY %CORE% %SITECORE% /s /y
+XCOPY %CORE% %SITECORE% /e /y
 
 
-::RMDIR %TEMPDIR% /s /q
-::DEL %SCRIPT%

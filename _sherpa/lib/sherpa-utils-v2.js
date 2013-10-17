@@ -75,7 +75,6 @@ Sherpa.msg = function(textkey,t_data) {
 	//TODO - need to get content from Data API
 	if(t_data){
 		if(_.isObject(t_data) && !_.isArray(t_data)) {
-			//data is ko.obserbable
 			//TODO this is not reactive. Will have to worry about that when we do in page editing
 			t_data = t_data();
 		}
@@ -114,9 +113,10 @@ Sherpa.msg = function(textkey,t_data) {
 		msg = Sherpa.viewModel.content[textkey+"_markdown"];
 		if(!msg) {
 			// TODO: figure out how big the containg element is and then truncate lorem ispum to fit
-			msg = 'Lorem ispum...';
+			msg = '<span class="missing-content" data-text-key="'+textkey+'">Lorem ispum...</span>';
+			console.log(msg)
 		} else {
-			var convertMD = new Sherpa.Markdown.converter();
+			var convertMD = new Sherpa.converter();
 			msg = convertMD.makeHtml(msg);
 		}
 	};
@@ -143,6 +143,13 @@ Sherpa.ready("jwerty-js", function() {
     var props = ["key", "is", "fire","event", "KEYS"];
     Sherpa.namespace(jwerty, "hotkeys", props);
 });
+Sherpa.ready("showdown-js", function() {
+    var props = ["extensions", "forEach", "converter"];
+    Sherpa.namespace(Showdown, "Markdown", props);
+});
+
+
+
 
 //set up where to load libraries from
 SHERPA.LIB_ORIGIN = "cdn";

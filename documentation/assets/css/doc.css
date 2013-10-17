@@ -54,13 +54,117 @@
 .docs-masthead .navbar .nav-collapse {
   margin-top: 26px;
 }
+.docs-masthead .navbar .nav li > a:hover {
+  height: 90px;
+  margin-top: -26px;
+  padding-top: 36px;
+}
 .docs-masthead .navbar .nav .active > a,
 .docs-masthead .navbar .nav .active > a:hover,
 .docs-masthead .navbar .nav .active > a:focus {
-  -webkit-border-radius: 5px;
-  -moz-border-radius: 5px;
-  border-radius: 5px;
+  height: 90px;
+  margin-top: -26px;
+  cursor: default;
+  padding-top: 36px;
+  color: #fff;
 }
+.sherpa-aside.nav-list li:first-child > a {
+  -webkit-border-top-right-radius: 5px;
+  -moz-border-radius-topright: 5px;
+  border-top-right-radius: 5px;
+  -webkit-border-top-left-radius: 5px;
+  -moz-border-radius-topleft: 5px;
+  border-top-left-radius: 5px;
+}
+.sherpa-aside.nav-list li {
+  line-height: 25px;
+}
+.sherpa-aside.nav-list li:last-child > a {
+  padding-bottom: 5px;
+  -webkit-border-bottom-right-radius: 5px;
+  -moz-border-radius-bottomright: 5px;
+  border-bottom-right-radius: 5px;
+  -webkit-border-bottom-left-radius: 5px;
+  -moz-border-radius-bottomleft: 5px;
+  border-bottom-left-radius: 5px;
+}
+.sherpa-aside.affix {
+  top: 20px;
+}
+#documentation-home {
+  background: url(../img/mountain.jpg) no-repeat;
+  background-size: cover;
+  background-position: bottom;
+}
+.translucent {
+  background: rgba(255, 255, 255, 0.95);
+}
+.sherpa-intro blockquote {
+  border: none;
+  text-align: right;
+  width: 60%;
+  float: right;
+}
+.sherpa-description {
+  padding: 30px 0;
+}
+/* Pretty print stuff */
+/***************************************************************************************/
+.com {
+  color: #93a1a1;
+}
+.lit {
+  color: #195f91;
+}
+.pun,
+.opn,
+.clo {
+  color: #93a1a1;
+}
+.fun {
+  color: #dc322f;
+}
+.str,
+.atv {
+  color: #D14;
+}
+.kwd,
+.prettyprint .tag {
+  color: #1e347b;
+}
+.typ,
+.atn,
+.dec,
+.var {
+  color: teal;
+}
+.pln {
+  color: #48484c;
+}
+.prettyprint {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+  -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+  box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 33px;
+  /* IE indents via margin-left */
+
+}
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #fff;
+}
+/* end of Pretty print stuff */
+/***************************************************************************************/
 /* For mobile */
 @media only screen and (max-width: 767px) {
   

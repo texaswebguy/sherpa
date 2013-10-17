@@ -144,6 +144,152 @@ Sherpa.globalEvents = {
 			Sherpa.help.show();
 		});
 
+		if(SHERPA.ENABLE_CONTENT_EDIT) {
+			// Enable editable hotkey
+			Sherpa.help.add('ctrl+shift+e','Enables editable page');
+			Sherpa.key('ctrl+shift+e', function () { 
+				if($('html').hasClass('editable')){
+					Sherpa.feature("editable",false);
+				} else {
+					Sherpa.feature("editable",true);
+				}
+			});
+
+			// Enable editable hotkey
+			Sherpa.help.add('ctrl+f1','Download content file');
+			Sherpa.key('ctrl+f1', function () { 
+				var post = {
+					path: SHERPA.PATH_CONTENT_FILE,
+					filename: SHERPA.CONTENT_FILENAME,
+					content: Sherpa.viewModel.content
+				}
+
+				amplify.request('export_content', post, function (data) {
+			        if(data != 0) {
+			        	alert("Export content failed: ",data)
+			        }
+			    })
+				
+			});
+
+
+			Sherpa.scope("*", function(){
+
+				this.listen('.editable', 'dblclick', function(event){
+					if(!$(event.currentTarget).hasClass('editing')){
+						event.preventDefault();
+						event.stopPropagation();
+
+						_.each($('.editing'),function(editing){
+							var textkey = $(editing).attr('data-textkey'),
+			   					isMarkdown = textkey.match('_markdown'),
+			   					textkeyContainer = $(editing),
+			   					controls = textkeyContainer.next(),
+								originalText = _.unescape($('[data-textkey='+textkey+']').attr('data-original-html'));
+							controls.remove();
+			   				textkeyContainer.removeClass("editing");
+							textkeyContainer.html(originalText);
+							textkeyContainer.removeAttr('contenteditable');
+							textkeyContainer.removeAttr('data-original-html');
+						})
+
+	   					var textkey = $(event.currentTarget).attr('data-textkey'),
+		   					isMarkdown = textkey.match('_markdown'),
+		   					editControls = '<div class="edit-controls"><button class="btn btn-mini cancel">Cancel</button>&nbsp;<button class="btn btn-mini btn-secondary save">Save</button></div>',
+		   					textkeyContainer = $(event.currentTarget);
+	   					textkeyContainer.attr('data-original-html',_.escape($(event.currentTarget).html()));
+						textkeyContainer.html('<pre>'+Sherpa.viewModel.content[textkey]+'</pre>');
+	   					textkeyContainer.attr('contenteditable',true);
+	   					textkeyContainer.after(editControls);
+	   					textkeyContainer.addClass("editing");
+					}
+				});
+				this.listen('.edit-controls .cancel', 'click', function(event){
+					event.preventDefault();
+					event.stopPropagation();
+
+					var textkey = $(event.currentTarget).parent().prev().attr('data-textkey'),
+						isMarkdown = textkey.match('_markdown'),
+						textkeyContainer = $('[data-textkey='+textkey+']'),
+						originalText = _.unescape($('[data-textkey='+textkey+']').attr('data-original-html')),
+						controls = $(event.currentTarget).parent();
+
+					controls.remove();
+
+	   				textkeyContainer.removeClass("editing");
+					textkeyContainer.html(originalText);
+					textkeyContainer.removeAttr('contenteditable');
+					textkeyContainer.removeAttr('data-original-html');
+				});			
+				this.listen('.edit-controls .save', 'click', function(event){
+					event.preventDefault();
+					event.stopPropagation();
+
+					var textkey = $(event.currentTarget).parent().prev().attr('data-textkey'),
+						isMarkdown = textkey.match('_markdown'),
+						controls = $(event.currentTarget).parent();
+						controls.remove();
+
+					var textkeyContainer = $('[data-textkey='+textkey+']'),
+						newContent = textkeyContainer.find('pre').text();
+
+					textkeyContainer.removeAttr('data-original-html');
+
+					console.log(newContent)
+					Sherpa.viewModel.content[textkey] = newContent;
+
+					controls.remove();
+
+					if(isMarkdown) {
+						textkey = textkey.replace("_markdown","");
+					}
+
+	   				//textkeyContainer.removeClass("editing");
+					textkeyContainer.parent().html(Sherpa.msg(textkey));
+					//textkeyContainer.removeAttr('contenteditable');
+
+					var post = {
+						textkey: textkey,
+						path: SHERPA.PATH_CONTENT_FILE,
+						filename: SHERPA.CONTENT_FILENAME,
+						filename_path: SHERPA.PATH_CONTENT_FILE+SHERPA.CONTENT_FILENAME,
+						content: Sherpa.viewModel.content,
+						textkey_content: newContent
+					}
+
+					amplify.request('save_content', post, function (data) {
+				        if(data == 0) {
+				        	alert("Sucessfully saved the content")
+				        } else {
+				        	alert("Saving content failed: ",data)
+				        }
+				    })
+
+
+				});
+				this.listen('.editing', 'blur', function(event){
+					window.setTimeout(function(){
+	   					var textkey = $(event.currentTarget).attr('data-textkey'),
+		   					isMarkdown = textkey.match('_markdown'),
+		   					textkeyContainer = $(event.currentTarget),
+							originalText = _.unescape($('[data-textkey='+textkey+']').attr('data-original-html')),
+		   					controls = textkeyContainer.next();
+
+		   				if(originalText) {
+							controls.remove();
+			   				textkeyContainer.removeClass("editing");
+							textkeyContainer.html(originalText);
+							textkeyContainer.removeAttr('contenteditable');
+							textkeyContainer.removeAttr('data-original-html');
+						}
+					},200);
+				});	
+			});
+
+		}
+
+
+
 	}
 }
 
