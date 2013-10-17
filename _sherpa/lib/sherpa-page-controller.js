@@ -38,6 +38,8 @@ sherpaApp.controller("pageController", function($scope, $state) {
     $scope.version=Sherpa.version;
     $scope.SHERPA = SHERPA;
     $scope.viewModel = Sherpa.viewModel;
-
+    $scope.editTextkey = function(textkey) {
+        console.log(textkey);
+    }
 
 });
