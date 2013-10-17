@@ -57,7 +57,10 @@ Sherpa.globalEvents = {
 
 
 		$(window).on('hashchange', function() {
+			//TODO this is not firing on hash change
 			Sherpa.viewModel.breadcrumb_path = Sherpa.globalEvents.breadcrumb();
+			var new_id = 
+			$('html').attr('id',location.hash.replace(/\//g,"-").replace(/#-/,""));
 			Sherpa.viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 		});
 
