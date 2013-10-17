@@ -8,6 +8,14 @@ sherpaApp.controller("pageController", function($scope) {
     $scope.text_item_label = Sherpa.msg('text_item_label');
 });
 
+sherpaApp.controller("mastheadController", function($scope) {
+    console.log( "EXECUTE --> masthead.js");
+    $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return !route.parent});
+
+
+
+});
+
 
 
 sherpaApp.controller("navTabController", function($scope) {

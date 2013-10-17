@@ -1,4 +1,4 @@
-	<section  class="da-all ta-all ma-all ta-padfull ma-padfull gray-light">
+	<section class="da-all ta-all ma-all gray-light">
 		<div class="wrapper">
 			<div class="da-all ta-all ma-all">
 				<div class="utility-nav">
@@ -7,15 +7,30 @@
 			</div>
 		</div>
 	</section>
-	<section class="da-all ta-all ma-all ta-padfull ma-padfull blue">
+	<section class="da-all ta-all ma-all blue">	
 		<div class="wrapper">
-			<div class="da-all ta-all ma-all">
-				<div class="main-nav">
-					<i aria-hidden="true" class="icon-ui-dell masthead"></i>
-				</div>
-			</div>
+			<div class="navbar navbar-inverse">
+				<div class="navbar-inner">
+				  <div class="container">
+				    <a class="btn btn-navbar" data-toggle="collapse" data-target="#navbar-sample-code-2 .nav-collapse">
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				      <span class="icon-bar"></span>
+				    </a>
+				    <a class="brand" href="#">
+						<i aria-hidden="true" class="icon-ui-dell"></i>
+				    </a>
+				    <div class="nav-collapse">
+				      <ul class="nav">
+				        <li ng-repeat="nav in routes" ><a href="#{{nav.url}}">{{nav.label}}</a></li>
+				      </ul>
+				      </ul>
+				    </div><!-- /.nav-collapse -->
+				  </div>
+				</div><!-- /navbar-inner -->
+			</div><!-- /navbar -->
 		</div>
-	</section>	
+	</section>
 	<section class="da-all ta-all ma-all">
 		<div class="wrapper">
 			<div class="da-all ta-all ma-all top-offset-mini">

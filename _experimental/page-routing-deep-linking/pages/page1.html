@@ -1,0 +1,31 @@
+	<div class="da-all ta-all ma-all">
+		<div class="wrapper">
+
+            <div class="title">
+                <h1 class="title">Page Routing Example</h1>
+            </div>
+
+            <div class="tabbable tabs-aside" ng-controller="asideNavController">
+                <div class="da1-da4">
+                    <ul class="nav nav-list nav-aside">
+                        <li ng-repeat="tab in tabs" ng-class="isActiveTab($index)">
+                            <a href="#{{tab.id}}" data-toggle="tab">
+                                <h2>{{tab.label}}</h2>
+
+                                <p ng-if="tab.description">{{tab.description}}</p>
+                            </a>
+                        </li>
+                    </ul>
+                    <div class="back-to-top scroll" rel="#top">
+                        <i aria-hidden="true" class="icon-ui-collapse"></i> <span>Back to top</span>
+                    </div>
+                </div>
+                <div class="da5-da12 tab-content">
+                    <div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">
+                        <ng-include src="includeTabContent($index)"></ng-include>
+                    </div>
+                </div>
+            </div>
+
+		</div>
+	</div>

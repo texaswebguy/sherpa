@@ -6,8 +6,9 @@ console.log(angular_modules)
 var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 
-if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
+if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
+    console.log( "EXECUTE --> sherpa-directives.js");
 	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
 	    _.each(SHERPA.PROTO_ROUTES, function(route){
 
