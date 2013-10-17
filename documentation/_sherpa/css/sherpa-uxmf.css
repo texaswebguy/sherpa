@@ -345,6 +345,16 @@
 .show-a-grid #gridsetoverlaywrap [class^=mb] {
   display: none;
 }
+#gridoverlay div small {
+  color: red !important;
+  border-bottom: 4px solid red !important;
+  border-top: 3px solid red !important;
+  padding-bottom: 20px !important;
+}
+#gridoverlay .gridset:nth-child(2) div {
+  border-style: none !important;
+  padding-top: 0 !important;
+}
 .footer-back-to-top {
   position: relative;
   bottom: 0;

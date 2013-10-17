@@ -426,32 +426,6 @@ Sherpa.init.start = function(Sherpa,SHERPA,console){
 		} else {
 			Sherpa.loadCoreCSS(SHERPA.LOAD_CSS_GRID);
 		}
-		//set up alternate hotkeys for grid
-		Sherpa.ready("jwerty-js", function(){
-			Sherpa.ready("sherpa-global-events", function(){
-				Sherpa.help.add('ctrl+g','Provides grid overlay');
-				Sherpa.help.add('ctrl+shift+a','Isolates the a grid when using ctrl-g to view grid');
-				Sherpa.help.add('ctrl+shift+b','Isolates the b grid when using ctrl-g to view grid');
-			});
-			Sherpa.key('ctrl+shift+a', function () { 
-				if($('html').hasClass("show-a-grid")){
-					Sherpa.feature("show-a-grid",false)
-				} else {
-					Sherpa.feature("show-a-grid",true) 
-					Sherpa.feature("show-b-grid",false) 
-				} 
-			});
-			Sherpa.key('ctrl+shift+b', function () { 
-				if($('html').hasClass("show-b-grid")){
-					Sherpa.feature("show-b-grid",false)
-				} else {
-					Sherpa.feature("show-b-grid",true) 
-					Sherpa.feature("show-a-grid",false) 
-				} 
-			});
-
-		});
-
 
 		// load all core JS libraries
 		_.each(SHERPA.LOAD_JS_CORE, function(libName){
@@ -487,6 +461,7 @@ Sherpa.init.start = function(Sherpa,SHERPA,console){
 
 			Sherpa.ready("prototype_app", function(){
 
+				Sherpa.session.storeCleanUp();
 				//Init Angular Page Compile
 				angular.bootstrap(document, ['sherpaApp']);
 

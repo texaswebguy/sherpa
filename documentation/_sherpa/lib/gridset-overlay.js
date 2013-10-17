@@ -3,7 +3,52 @@
 gs = {
 
 	init: function () {
-	
+		//set up hotkeys for grid
+		Sherpa.ready("jwerty-js", function(){
+			Sherpa.ready("sherpa-global-events", function(){
+				Sherpa.help.add('CTRL SHIFT F5','Toggles the A grid overlay');
+				Sherpa.help.add('CTRL SHIFT F6','Toggles the B grid overlay');
+			});
+			Sherpa.key('ctrl+shift+f5', function () { 
+				if($('html').hasClass("show-a-grid")){
+					Sherpa.feature("show-a-grid",false);
+					$('#gridsetoverlaywrap').remove();
+					Sherpa.store("grid_overlay",false);
+				} else {
+					if(!$('#gridsetoverlaywrap').length) {
+						gs.show();
+					}
+					Sherpa.feature("show-a-grid",true);
+					Sherpa.feature("show-b-grid",false);
+					Sherpa.store("grid_overlay","a");						
+				} 
+			});
+			Sherpa.key('ctrl+shift+f6', function () { 
+				if($('html').hasClass("show-b-grid")){
+					Sherpa.feature("show-b-grid",false);
+					$('#gridsetoverlaywrap').remove();
+					Sherpa.store("grid_overlay",false);
+				} else {
+					if(!$('#gridsetoverlaywrap').length) {
+						gs.show();
+					}
+					Sherpa.feature("show-b-grid",true);
+					Sherpa.feature("show-a-grid",false);
+					Sherpa.store("grid_overlay","b"); 						
+				} 
+			});
+
+		});
+		if(Sherpa.store("grid_overlay")) {
+			if(Sherpa.store("grid_overlay")=="a") {
+				Sherpa.feature("show-a-grid",true);
+			} else {
+				Sherpa.feature("show-b-grid",true);
+			}
+			gs.show();
+		}
+
+	/*
 		gs.bind(document, 'keydown', function (e) { 
 		
 			if (!e) var e = window.event;
@@ -37,7 +82,7 @@ gs = {
 			}
 		
 		
-		});
+		});*/
 	
 	},
 

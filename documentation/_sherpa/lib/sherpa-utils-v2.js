@@ -44,6 +44,70 @@ Sherpa.uuid = function() {
 	         s4() + '-' + s4() + s4() + s4();
 }
 Sherpa.sessionID = Sherpa.uuid();
+
+//Session Storage
+Sherpa.session = {};
+Sherpa.session.storeLog = function(key,id){
+	var log = Sherpa.store('sessionLog');
+	if(id) {
+		if(!log) {
+			log = {};
+		}
+		var temp_obj = {
+			key:key,
+			sessionID:Sherpa.sessionID,
+			id:id
+		}
+		log[id] = temp_obj;
+		Sherpa.store('sessionLog',log);
+	} else {
+		//return id
+		if(!log) {
+			return undefined;
+		} else {
+			try {
+				return _.find(log,function(item){return item.key == key && item.sessionID == Sherpa.sessionID}).id
+			} catch(err) {
+				return undefined;
+			}
+		}
+	}
+
+};
+Sherpa.session.store = function(key,obj){
+	if(obj){
+		//store
+		var temp_obj = {
+			key: key,
+			data: obj,
+			sessionID: Sherpa.sessionID
+		}, id = Sherpa.uuid();
+		Sherpa.store(id,temp_obj);
+		Sherpa.session.storeLog(key,id);
+		return id;
+	} else {
+		//retrieve
+		var id = Sherpa.session.storeLog(key);
+		if(id) {
+			return Sherpa.store(id).data;
+		} else {
+			return undefined;
+		}
+		
+	}
+}
+Sherpa.session.storeCleanUp = function(){
+	var log = Sherpa.store('sessionLog');
+	if(log) {
+		//Sherpa.store('sessionLog',_.filter(log, function(item){return item.sessionID == Sherpa.sessionID}));
+		_.each(log, function(item){
+			if(item.sessionID != Sherpa.sessionID){
+				Sherpa.store(item.id,null);
+			}
+		});		
+	}
+}
+
 Sherpa.urlQuery = function () {
 	if(location.search) {
 		var query_string,query_obj = {}, query_array;
@@ -71,7 +135,8 @@ Sherpa.msg = function(textkey,t_data) {
 	
 	var msg = Sherpa.viewModel.content[textkey], 
 		regex = /\{[0-9]\}*/,
-		i = 0;
+		i = 0,
+		textkey_attr = textkey;
 	if(t_data){
 		if(_.isObject(t_data) && !_.isArray(t_data)) {
 			//TODO should test taking this out because this is knockout related when a data element is ko.observable it is a function
@@ -94,11 +159,18 @@ Sherpa.msg = function(textkey,t_data) {
 					//it is a plural/singular textkey
 					if(t_data>1) {
 						msg = msg.replace(msg.match(regex),t_data);
+						textkey_attr = textkey+"_plural";
 					} else {
 						msg = Sherpa.viewModel.content[textkey+"_singular"];
+						textkey_attr = textkey+"_singular"
 					}
 				} else {
-					msg = msg.replace(msg.match(regex),t_data);
+					msg = Sherpa.viewModel.content[textkey];
+					try {
+						msg = msg.replace(msg.match(regex),t_data);
+					} catch (err) {
+						msg = undefined;
+					}
 				}
 			} else {
 				//
@@ -113,7 +185,7 @@ Sherpa.msg = function(textkey,t_data) {
 		if(!msg) {
 			// TODO: figure out how big the containg element is and then truncate lorem ispum to fit
 			if(SHERPA.ENABLE_CONTENT_EDIT) {
-				msg = '<span class="editable" data-textkey="'+textkey+'">Lorem ispum...</span>';
+				msg = '<span class="editable" data-textkey="'+textkey+'" data-msgdata="'+t_data+'">Lorem ispum...</span>';
 			} else {
 				msg = 'Lorem ispum...';
 			}
@@ -128,7 +200,7 @@ Sherpa.msg = function(textkey,t_data) {
 		}
 	} else {
 		if(SHERPA.ENABLE_CONTENT_EDIT) {
-			msg = '<span class="editable" data-textkey="'+textkey+'">'+msg+'</span>'
+			msg = '<span class="editable" data-textkey="'+textkey_attr+'" data-msgdata="'+t_data+'">'+msg+'</span>'
 		} 
 	}
 	return msg;
@@ -150,7 +222,6 @@ Sherpa.lorem = function(options){
 		}
 		if(!options.paragraphs) {
 			if(_.isUndefined(options.numChars) || !_.isNumber(options.numChars) ) {
-				console.log(">"+options.numChars+"<")
 				if(options.numChars.match(/,/)){
 					var range = [];
 					_.each((options).split(/,/), function(num){return range.push(parseInt(num))});
@@ -345,7 +416,14 @@ Sherpa.ready("amplify", function(){
 	    type: "GET"
 	});
 
+	Sherpa.request.define( "get_md", "ajax", {
+		url: "{filename}",
+	    dataType: "text",
+	    type: "GET"
+	});
 
+
+	//TODO need to make this one call
 	Sherpa.request.define( "save_content", "ajax", {
 		url: SHERPA.PATH_CORE_BIN+SHERPA.CONTENT_SAVE_APP,
 	    type: "POST"
@@ -353,6 +431,11 @@ Sherpa.ready("amplify", function(){
 
 	Sherpa.request.define( "export_content", "ajax", {
 		url: SHERPA.PATH_CORE_BIN+SHERPA.CONTENT_EXPORT_APP,
+	    type: "POST"
+	});
+
+	Sherpa.request.define( "sherpa-api", "ajax", {
+		url: SHERPA.PATH_CORE_BIN+SHERPA.API_APP,
 	    type: "POST"
 	});
 
