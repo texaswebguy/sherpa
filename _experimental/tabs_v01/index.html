@@ -1,0 +1,83 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+    <meta charset="utf-8">
+    <title>Dell Sherpa: Tabs Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        var SHERPA_CONFIG_OVERRIDES = {};
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/tabs.json";
+    </script>
+
+    <!-- Don't touch
+    ******************************************************************************** -->
+    <style>body {
+        opacity: 0
+    }
+
+    body.ng-scope {
+        opacity: 1
+    }</style>
+    <script src="../../_sherpa/sherpa.v07.js"></script>
+    <!-- Sherpa js adds all the js and css files you need.
+    ******************************************************************************** -->
+    <script type="text/javascript">
+        Sherpa.ready("sherpa-filters",function(){
+            Sherpa.js('../masthead/assets/js/masthead.js');
+            Sherpa.load('../masthead/assets/css/masthead.css');
+        })
+    </script>
+
+
+</head>
+<body ng-controller="pageController">
+<a name="top" id="top"></a>
+<header ng-include="'../masthead/assets/includes/masthead.html'" ng-controller="mastheadController"></header>
+
+<section class="da-all ta-all ma-all">
+    <div class="wrapper">
+
+        <div class="title">
+            <h1 class="title">Tabs Example</h1>
+        </div>
+
+        <div class="tabbable tabs-aside" ng-controller="asideNavController">
+            <div class="da1-da4">
+                <ul class="nav nav-list nav-aside">
+                    <li ng-repeat="tab in tabs" ng-class="isActiveTab($index)">
+                        <a href="#{{tab.id}}" data-toggle="tab">
+                            <h2>{{tab.label}}</h2>
+
+                            <p ng-if="tab.description">{{tab.description}}</p>
+                        </a>
+                    </li>
+                </ul>
+                <div class="back-to-top scroll" rel="#top">
+                    <i aria-hidden="true" class="icon-ui-collapse"></i> <span>Back to top</span>
+                </div>
+            </div>
+            <div class="da5-da12 tab-content">
+                <div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">
+                    <ng-include src="includeTabContent($index)"></ng-include>
+                </div>
+            </div>
+        </div>
+
+
+    </div>
+</section>
+<footer class="da-all ta-all ma-all blue">
+    <div class="wrapper">
+        <div class="da-all ta-all ma-all">
+            <div class="blue">
+                footer
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>
