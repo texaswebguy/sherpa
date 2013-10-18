@@ -77,66 +77,9 @@ sherpaApp.controller("asideNavController", function($scope) {
 
     console.log( "CALLED --> asideNavController")
 
-    /*$scope.tabs = [
-        {
-            "id":"aside-home",
-            "url":"/home",
-            "label":"Home",
-            "description":"",
-            "view":"asideTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/home.html"
-        },
-        {
-            "id":"aside-library",
-            "url":"/library",
-            "label":"Library",
-            "description":"",
-            "view":"asideTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/library.html"
-        },
-        {
-            "id":"aside-applications",
-            "label":"Applications",
-            "url":"/Applications",
-            "description":"",
-            "view":"asideTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/applications.html"
-        },
-        {
-            "id":"aside-profile",
-            "url":"/profile",
-            "label":"Profile",
-            "description":"",
-            "view":"asideTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/profile.html"
-        },
-        {
-            "id":"aside-settings",
-            "url":"/settings",
-            "label":"Settings",
-            "description":"",
-            "view":"asideTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/settings.html"
-        },
-        {
-            "id":"aside-help",
-            "url":"/help",
-            "label":"Help",
-            "view":"asideTabs",
-            "parent":"page-1",
-            "description":"Lorem ispum dolor sit amet",
-            "tabPaneUrl":"assets/includes/help.html"
-        }
-    ]*/
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "asideTabs"});
 
-    console.log( SHERPA.PROTO_ROUTES );
 
     _.each( $scope.routes, function( elem ) {
         console.log( elem );
@@ -158,6 +101,15 @@ sherpaApp.controller("asideNavController", function($scope) {
     $scope.includeTabContent = function(index) {
         return $scope.tabs[index].tabPaneUrl;
     }
+
+    $scope.selectItem = function (selectedItem) {
+        _($scope.routes).each(function (item) {
+            item.selected = false;
+            if (selectedItem === item) {
+                selectedItem.selected = true;
+            }
+        });
+    };
 
 
 });
