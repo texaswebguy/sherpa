@@ -4341,6 +4341,12 @@ input[type="submit"].btn.btn-xs {
 .breadcrumb > .active {
   color: #aaaaaa;
 }
+.pagination {
+  display: inline-block;
+  padding-left: 0;
+  margin: 20px 0;
+  border-radius: 4px;
+}
 .pagination ul {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
@@ -4378,6 +4384,8 @@ input[type="submit"].btn.btn-xs {
   border: 1px solid #737373;
   padding: 7px 10px;
   text-decoration: none;
+  pointer-events: none;
+  cursor: default;
 }
 .pagination ul > .disabled > span,
 .pagination ul > .disabled > a,
@@ -4388,6 +4396,102 @@ input[type="submit"].btn.btn-xs {
   background: none;
   pointer-events: none;
   cursor: default;
+}
+.pagination.pagination-centered {
+  text-align: center;
+}
+.pagination.pagination-unnumbered {
+  margin: 20px auto;
+  width: 350px;
+  clear: both;
+  float: none;
+}
+.pagination.pagination-unnumbered ul {
+  display: inline;
+  width: auto;
+  margin-top: 0px;
+  float: none;
+  line-height: none;
+  padding: 2px 2px;
+}
+.pagination.pagination-unnumbered ul > li {
+  display: inline-block;
+  padding: 1px 2px;
+}
+.pagination.pagination-unnumbered ul > li.active > a {
+  background-color: #737373;
+  border: none;
+  padding: 4px 11px;
+}
+.pagination.pagination-unnumbered ul > li.active > a:hover {
+  background-color: #737373;
+  pointer-events: none;
+  cursor: default;
+}
+.pagination.pagination-unnumbered ul > li > a {
+  background-color: #cccccc;
+  -webkit-border-radius: 2px;
+  -moz-border-radius: 2px;
+  border-radius: 2px;
+  padding: 4px 11px;
+  margin-bottom: 4px;
+  display: inline-block;
+}
+.pagination.pagination-unnumbered ul > li > a:hover {
+  background-color: #cce7f3;
+}
+.pagination.pagination-unnumbered .zoom-controls {
+  color: #aaaaaa;
+  border-left: 2px solid #cccccc;
+  padding: 10px 10px;
+  margin-left: 11px;
+  display: inline-block;
+}
+.pagination.pagination-unnumbered .zoom-controls [class^="icon-small-zoom"] {
+  margin: -3px 10px 10px 10px;
+  font-size: 24px;
+  -moz-transform: scaleX(-1);
+  /* Gecko */
+
+  -o-transform: scaleX(-1);
+  /* Operah */
+
+  -webkit-transform: scaleX(-1);
+  /* webkit */
+
+  transform: scaleX(-1);
+  /* standard */
+
+  filter: FlipH;
+  /* IE 6/7/8 */
+  cursor: pointer;
+}
+.pagination.pagination-unnumbered .zoom-controls [class^="icon-small-zoom"]:hover {
+  color: #cce7f3;
+}
+.bottom-offset-mini {
+  margin-bottom: 0.7142857145;
+}
+.bottom-offset-small {
+  margin-bottom: 1.428571429;
+}
+.bottom-offset-medium {
+  margin-bottom: 2.857142858;
+}
+.bottom-offset-large {
+  margin-bottom: 4.285714287;
+}
+.top-offset-mini {
+  margin-top: 0.7142857145;
+}
+.top-offset-small {
+  margin-top: 1.428571429;
+}
+.top-offset-medium {
+  margin-top: 2.857142858;
+}
+.top-offset-large {
+  margin-top: 4.285714287;
 }
 .pager {
   margin: 1.428571429 0;
@@ -5965,90 +6069,6 @@ you can use the generic selector below, but it's slower:
 }
 .icon-wrench:before {
   content: "\31";
-}
-.pagination.pagination-centered {
-  text-align: center;
-}
-.pagination.pagination-unnumbered {
-  margin: 20px auto;
-  width: 350px;
-  clear: both;
-  float: none;
-}
-.pagination.pagination-unnumbered ul {
-  display: inline;
-  width: auto;
-  margin-top: 15px;
-  float: left;
-}
-.pagination.pagination-unnumbered ul > li {
-  border-width: 5px;
-}
-.pagination.pagination-unnumbered ul > li.active > a {
-  background-color: #737373;
-  padding: 5px 10px;
-}
-.pagination.pagination-unnumbered ul > li > a {
-  background-color: #cccccc;
-  -webkit-border-radius: 2px;
-  -moz-border-radius: 2px;
-  border-radius: 2px;
-  width: 30px;
-  padding: 5px 10px;
-}
-.pagination.pagination-unnumbered ul > li > a:hover {
-  background-color: #cce7f3;
-}
-.pagination.pagination-unnumbered .zoom-controls {
-  color: #aaaaaa;
-  border-left: 2px solid #cccccc;
-  padding: 7px 20px;
-  margin-left: 10px;
-  height: 40px;
-  display: inline;
-}
-.pagination.pagination-unnumbered .zoom-controls [class^="icon-small-zoom"] {
-  margin: -3px 10px 10px 10px;
-  font-size: 24px;
-  -moz-transform: scaleX(-1);
-  /* Gecko */
-
-  -o-transform: scaleX(-1);
-  /* Operah */
-
-  -webkit-transform: scaleX(-1);
-  /* webkit */
-
-  transform: scaleX(-1);
-  /* standard */
-
-  filter: FlipH;
-  /* IE 6/7/8 */
-  cursor: pointer;
-}
-.bottom-offset-mini {
-  margin-bottom: 0.7142857145;
-}
-.bottom-offset-small {
-  margin-bottom: 1.428571429;
-}
-.bottom-offset-medium {
-  margin-bottom: 2.857142858;
-}
-.bottom-offset-large {
-  margin-bottom: 4.285714287;
-}
-.top-offset-mini {
-  margin-top: 0.7142857145;
-}
-.top-offset-small {
-  margin-top: 1.428571429;
-}
-.top-offset-medium {
-  margin-top: 2.857142858;
-}
-.top-offset-large {
-  margin-top: 4.285714287;
 }
 @-ms-viewport {
   width: device-width;
