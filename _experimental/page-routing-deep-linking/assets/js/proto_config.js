@@ -74,6 +74,9 @@ sherpaApp.controller("navTabController", function($scope) {
 
 
 sherpaApp.controller("asideNavController", function($scope) {
+
+    console.log( "CALLED --> asideNavController")
+
     /*$scope.tabs = [
         {
             "id":"aside-home",
@@ -131,8 +134,13 @@ sherpaApp.controller("asideNavController", function($scope) {
         }
     ]*/
 
-    $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return !route.parent && route.view == "asideTabs"});
+    $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "asideTabs"});
 
+    console.log( SHERPA.PROTO_ROUTES );
+
+    _.each( $scope.routes, function( elem ) {
+        console.log( elem );
+    })
 
     $scope.activeTabIndex = 0;
     $scope.isActiveTab = function(index){
