@@ -1,15 +1,24 @@
-	<div class="da-all ta-all ma-all">
+<section ui-view="subpage1a"></section>
+<div class="da-all ta-all ma-all">
 		<div class="wrapper">
 
             <div class="title">
                 <h1 class="title">Page Routing Example</h1>
             </div>
 
-            <div class="tabbable tabs-aside" ng-controller="asideNavController">
+
+
+            <a ui-sref="page-1a">page 1a</a> &nbsp;&nbsp;&nbsp;
+
+            <!--<section ng-controller="asideNavController">
+
+
+
+            <div class="tabbable tabs-aside" >
                 <div class="da1-da4">
                     <ul class="nav nav-list nav-aside">
-                        <li ng-repeat="tab in tabs" ng-class="isActiveTab($index)">
-                            <a href="#{{tab.id}}" data-toggle="tab">
+                        <li ng-repeat="tab in routes" ng-class="isActiveTab($index)">
+                            <a sref="{{tab.id}}"  data-toggle="tab">
                                 <h2>{{tab.label}}</h2>
 
                                 <p ng-if="tab.description">{{tab.description}}</p>
@@ -21,11 +30,19 @@
                     </div>
                 </div>
                 <div class="da5-da12 tab-content">
-                    <div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">
+
+
+
+
+                    &lt;!&ndash;<section ui-view="asideTabs"></section>&ndash;&gt;
+
+                    &lt;!&ndash;<div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">
                         <ng-include src="includeTabContent($index)"></ng-include>
-                    </div>
+                    </div>&ndash;&gt;
                 </div>
             </div>
+
+            </section>-->
 
 		</div>
 	</div>

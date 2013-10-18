@@ -8,7 +8,7 @@ var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 
 if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
-    console.log( "EXECUTE --> sherpa-directives.js");
+
 	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
 	    _.each(SHERPA.PROTO_ROUTES, function(route){
 
@@ -29,7 +29,7 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
             route.views = viewsObject;
 
-	        $stateProvider.state(route.name, route );
+	        $stateProvider.state(route.id, route );
 	    });
 	}]);
 
