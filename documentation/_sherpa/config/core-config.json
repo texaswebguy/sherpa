@@ -112,6 +112,7 @@
     "ENABLE_GRIDSET_OVERLAY": true,
     "ENABLE_NOTES": true,
     "ENABLE_PROTOTYPE_QA": false,
+    "ENABLE_CONTENT_EDIT":true,
     "LOAD_JS_CORE": [
         "angular",
         "jquery", 
