@@ -240,7 +240,7 @@ Sherpa.QA = {
 
 //Sherpa Fatal Error message template
 //______________________________________________________________________________________
-Sherpa.init.errorHTML=_.template("<div id=\"sherpa-error\"><div style=\"opacity: 0.5; background:#000; height: 1814px; width: 1903px; position: fixed; left: 0px; top: 0px; z-index: 1001;\"><\/div><div style=\"position: relative; z-index: 1002; width:100%; max-width: 420px; margin:20px auto 1000px;\"><div tabindex=\"-1\" style=\"height: 100%; outline: 0px; width: 100%; overflow: visible;\"><div id=\"errorMsg\" style=\"display: block;font-family: 'Trebuchet MS', Verdana, Arial;  font-size: 16px;  text-align: left;\"><div style=\"height: 30px;  width: 100%;background: #B90000;  color: #fff;  font-size: 1.1em;  font-weight: bold;  line-height: 30px;\"><span style=\"padding-left: 10px;\"><%- TITLE %><span class=\"close\" style=\"float:right;color:#fff;opacity:1;padding:5px\">X</span><\/span><\/div><div id=\"errorMsg\" style=\"    color: #333;  background:#fff; margin: 0;  padding: 12px 4px 12px 8px;  font-size: 1em;\"><%- MESSAGE %><\/div><\/div><\/div><\/div></div>")
+Sherpa.init.errorHTML=_.template("<div id=\"sherpa-error\"><style>body{opacity:1}</style><div style=\"opacity: 0.5; background:#000; height: 1814px; width: 1903px; position: fixed; left: 0px; top: 0px; z-index: 1001;\"><\/div><div style=\"position: relative; z-index: 1002; width:100%; max-width: 420px; margin:20px auto 1000px;\"><div tabindex=\"-1\" style=\"height: 100%; outline: 0px; width: 100%; overflow: visible;\"><div id=\"errorMsg\" style=\"display: block;font-family: 'Trebuchet MS', Verdana, Arial;  font-size: 16px;  text-align: left;\"><div style=\"height: 30px;  width: 100%;background: #B90000;  color: #fff;  font-size: 1.1em;  font-weight: bold;  line-height: 30px;\"><span style=\"padding-left: 10px;\"><%- TITLE %><span class=\"close\" style=\"float:right;color:#fff;opacity:1;padding:5px\">X</span><\/span><\/div><div id=\"errorMsg\" style=\"    color: #333;  background:#fff; margin: 0;  padding: 12px 4px 12px 8px;  font-size: 1em;\"><%- MESSAGE %><\/div><\/div><\/div><\/div></div>")
 
 
 //checking to see if prototype file is inside the core_path
@@ -426,32 +426,6 @@ Sherpa.init.start = function(Sherpa,SHERPA,console){
 		} else {
 			Sherpa.loadCoreCSS(SHERPA.LOAD_CSS_GRID);
 		}
-		//set up alternate hotkeys for grid
-		Sherpa.ready("jwerty-js", function(){
-			Sherpa.ready("sherpa-global-events", function(){
-				Sherpa.help.add('ctrl+g','Provides grid overlay');
-				Sherpa.help.add('ctrl+shift+a','Isolates the a grid when using ctrl-g to view grid');
-				Sherpa.help.add('ctrl+shift+b','Isolates the b grid when using ctrl-g to view grid');
-			});
-			Sherpa.key('ctrl+shift+a', function () { 
-				if($('html').hasClass("show-a-grid")){
-					Sherpa.feature("show-a-grid",false)
-				} else {
-					Sherpa.feature("show-a-grid",true) 
-					Sherpa.feature("show-b-grid",false) 
-				} 
-			});
-			Sherpa.key('ctrl+shift+b', function () { 
-				if($('html').hasClass("show-b-grid")){
-					Sherpa.feature("show-b-grid",false)
-				} else {
-					Sherpa.feature("show-b-grid",true) 
-					Sherpa.feature("show-a-grid",false) 
-				} 
-			});
-
-		});
-
 
 		// load all core JS libraries
 		_.each(SHERPA.LOAD_JS_CORE, function(libName){
@@ -487,6 +461,7 @@ Sherpa.init.start = function(Sherpa,SHERPA,console){
 
 			Sherpa.ready("prototype_app", function(){
 
+				Sherpa.session.storeCleanUp();
 				//Init Angular Page Compile
 				angular.bootstrap(document, ['sherpaApp']);
 

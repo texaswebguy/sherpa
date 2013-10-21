@@ -8,6 +8,9 @@
 @pad-m:						20px;
 @pad-l:						40px;
 
+
+
+
 /* For Docs Masthead */
 
 .docs-masthead {
@@ -38,23 +41,225 @@
 			margin-top:26px;
 		}
 		.nav {
+			li > a:hover {
+			    height:90px;
+			    margin-top:-26px;
+			    padding-top:36px;	
+			}
 			.active > a,
 			.active > a:hover,
 			.active > a:focus {
-				.border-radius(5px)
+			    height:90px;
+			    margin-top:-26px;
+			    cursor:default;
+			    padding-top:36px;
+			    color:#fff;
+			}
+			.main-active > a,
+			.main-active > a:hover,
+			.main-active > a:focus {
+				//TODO: hack needed to counter scrollspy removing active
+			    height:90px;
+			    margin-top:-26px;
+			    cursor:default;
+			    padding-top:36px;
+			    color:#fff;
+				text-decoration: none;
+				-webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+				-moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+				box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
 			}
 		}
 	}
 }
+.sherpa-aside {
+	&.nav-list {
+		li:first-child > a{
+	    	.border-top-radius(5px);
+		}
+		li {
+			line-height: 25px;
+		}
+		li:last-child > a {
+			padding-bottom: 5px;
+			.border-bottom-radius(5px);
+		}
+	}
+	&.affix {
+	    top: 20px;
+	}
+}
+
+#documentation-home {
+	background:url(../img/mountain.jpg) no-repeat ;
+	background-size:cover;
+	background-position: bottom;
+}
+.translucent {
+	background: rgba(255,255,255,.95);
+}
+
+.sherpa-intro {
+	h2 {
+
+	}
+	blockquote {
+	    border:none;
+	    text-align:right;
+	    width:60%;
+	    float:right;
+	}
+}
+.sherpa-description {
+	padding:30px 0;
+}
+
+
+#aside-example-HTML {
+	display:none;
+}
+#modal-example-HTML {
+  background: rgba(0,0,0,0.8);
+  padding:100px 0;
+}
+#modal-example-HTML .modal {
+  position:relative;
+  clear:both;
+  z-index:0;
+}
+
+#popover-example-HTML {
+  overflow:hidden;
+  margin-bottom:20px;
+}
+#popover-example-HTML > ul > li > a {
+  float:left;
+  margin-right:20px;
+}
+
+
+.large-icons li {
+  height:50px;
+}
+.large-icons [class^=icon-large] {
+  font-size:36px;
+}
+
+.the-icons li {
+  width:24%;
+  display:inline-block;
+}
+
+.tablet .the-icons li {
+  width:32%;
+}
+.mobile .the-icons li {
+  width:49%;
+}
+
+#icons [data-toggle="popover"] {
+  cursor:help;
+}
+
+#icons li {
+  margin-bottom:10px;
+}
+[class*=change-container] > li > a {
+  color:#fff;
+}
+[class*=change-container] > li > a.white,
+[class*=change-container] > li > a.gray-light,
+[class*=change-container] > li > a.gray-very-light
+ {
+  color:#444;
+}
+
+
+.page-header {
+	margin-top:0;
+}
+/*[id^=css-overview] > .wrapper {
+	overflow:visible;
+}*/
+
+/* Pretty print stuff */
+/***************************************************************************************/
+.com { color: #93a1a1; }
+.lit { color: #195f91; }
+.pun, .opn, .clo { color: #93a1a1; }
+.fun { color: #dc322f; }
+.str, .atv { color: #D14; }
+.kwd, .prettyprint .tag { color: #1e347b; }
+.typ, .atn, .dec, .var { color: teal; }
+.pln { color: #48484c; }
+
+.prettyprint {
+  padding: 8px;
+  background-color: #f7f7f9;
+  border: 1px solid #e1e1e8;
+}
+.prettyprint.linenums {
+  -webkit-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+     -moz-box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+          box-shadow: inset 40px 0 0 #fbfbfc, inset 41px 0 0 #ececf0;
+}
+
+/* Specify class=linenums on a pre to get line numbering */
+ol.linenums {
+  margin: 0 0 0 33px; /* IE indents via margin-left */
+}
+ol.linenums li {
+  padding-left: 12px;
+  color: #bebec5;
+  line-height: 20px;
+  text-shadow: 0 1px 0 #fff;
+}
+
+/* end of Pretty print stuff */
+/***************************************************************************************/
+
 
 
 /* For mobile */
 @media only screen and (max-width:@mobileMaxWidth) {
 
+	.sherpa-aside {
+		&.affix-top {
+			margin-bottom: 20px;
+			width: 100% !important;
+		}
+		&.affix {
+			top: 0;
+			left:0;
+			.border-radius(0);
+			li {
+				display:none;
+				&:first-child > a,
+				&:last-child > a {
+					.border-radius(0);
+				}
+				&.active {
+					display:block;
+					.border-radius(5);
+				}
+			}
+		}
+	}
+	.docs-masthead .navbar .brand {
+		margin-left: -30px;
+		h2 {
+			font-size: 30px;
+			line-height: 34px;
+		}
+	}
+
 }
 
 /* For tablet */
 @media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+
+
+
 
 }
 

@@ -17,62 +17,59 @@
 //TODO sherpa QA statements.
     //generic modal listener function
 
+Sherpa.subscribe("modal", function (options) {
+        //console.log("body html",$(options.body_html).html())
+        try {
+            if (_.isObject(options) && !options.modal_html_selector) {
+                //console.log("correct way", options)
+                if (options.body_html) {
+                    $('#generic_modal .modal-body').html($(options.body_html).html());
+                } else if (options.body) {
+                    $('#generic_modal .modal-body').html(options.body)
+                } else {
+                    err = "You have to at least supply body html for the modal to work"
+                }
+                if (options.title) {
+                    $('#generic_modal_title').text(options.title);
+                    //should not have a title description without title
+                    if (options.title_description) {
+                        $('#generic_modal_title_description').text(options.title_description);
+                    } else {
+                        $('#generic_modal_title_description').hide();
+                    }
+                } else {
+                    $('#generic_modal .modal-body').prepend($('#generic_modal .modal-header .close'))
+                    $('#generic_modal .modal-header').hide();
+                }
+                if (options.footer_html) {
+                    $('#generic_modal .modal-footer').html($(options.footer_html).html());
+                } else if (options.footer) {
+                    $('#generic_modal .modal-footer').html(options.footer);
+                } else {
+                    $('#generic_modal .modal-footer').hide();
+                }
 
-    Sherpa.componentJS.modal_global_js = function(options) {
-      //console.log("body html",$(options.body_html).html())
-      try {
-        if(_.isObject(options) && !options.modal_html_selector) {
-          //console.log("correct way", options)
-          if (options.body_html) {
-            $('#generic_modal .modal-body').html($(options.body_html).html());
-          } else if(options.body) {
-            $('#generic_modal .modal-body').html(options.body)
-          } else {
-            err = "You have to at least supply body html for the modal to work"
-          }
-          if(options.title) {
-            $('#generic_modal_title').text(options.title);
-            //should not have a title description without title
-            if(options.title_description) {
-              $('#generic_modal_title_description').text(options.title_description);
+                $('#generic_modal').modal('show');
+                if (options.toggle) {
+                    window.setTimeout(function () {
+                        $($(".modal-backdrop")[1]).remove()
+                    }, 100)
+                } //TODO this is a total kludge. Just need to figure out where th esecond backdrop is firing.
             } else {
-              $('#generic_modal_title_description').hide();
+                if (options === 'hide') {
+                    $('#generic_modal').modal('hide');
+                }
+                if (options.modal_html_selector) {
+                    //$(options.modal_html_selector).modal('show');
+                    //TODO standard bootstrap already fires the modal method.  Need to decouple later to include standard bootstrap function here.
+                } else if ($(options).length) {
+                    $(options).modal('show');
+                }
             }
-          } else {
-            $('#generic_modal .modal-body').prepend($('#generic_modal .modal-header .close'))
-            $('#generic_modal .modal-header').hide();
-          }
-          if(options.footer_html) {
-            $('#generic_modal .modal-footer').html($(options.footer_html).html());
-          } else if(options.footer) {
-            $('#generic_modal .modal-footer').html(options.footer);
-          } else {
-            $('#generic_modal .modal-footer').hide();
-          }
-            
-            $('#generic_modal').modal('show');
-            if(options.toggle) { window.setTimeout(function(){$($(".modal-backdrop")[1]).remove()},100)} //TODO this is a total kludge. Just need to figure out where th esecond backdrop is firing.
-          
-        } else {
-          if(options === 'hide') {
-            $('#generic_modal').modal('hide');
-          }
-          if(options.modal_html_selector) {
-            //$(options.modal_html_selector).modal('show');
-            //TODO standard bootstrap already fires the modal method.  Need to decouple later to include standard bootstrap function here.
-          } else if($(options).length) {
-              $(options).modal('show');
-          }
+        } catch (err) {
+            console.error(err);
         }
-      } catch (err) {
-        console.error(err);
-      }
-    }
-
-    Sherpa.subscribe( "modal", function(options) {
-      Sherpa.componentJS.modal_global_js(options);
-    });
-
+});
 /* To invoke generic modal follow the following format
 
 Sherpa.publish("modal", {
@@ -105,7 +102,7 @@ attributes can also be used so no javascript coding is required
 
 */
 
-
+    //TODO need to move this to angular directive
     Sherpa.scope('*', function(){
       this.listen("[data-toggle=modal]", "click", function(event){
         event.preventDefault();
@@ -120,9 +117,7 @@ attributes can also be used so no javascript coding is required
         if(!options.body && !options.body_html) {
           options.modal_html_selector = $(event.currentTarget).attr('href');
         }
-
-        Sherpa.componentJS.modal_global_js(options);
-
+        Sherpa.publish( 'modal',options);
       });
 
       this.listen("[data-dismiss=modal]", "click", function(event){

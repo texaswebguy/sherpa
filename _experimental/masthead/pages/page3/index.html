@@ -1,0 +1,30 @@
+	<div class="da-all ta-all ma-all">
+		<div class="wrapper">
+
+          <div class="title">
+            <h1 class="title">Page 3</h1>
+          </div>
+        
+			<div class="da1-da3 tb1-tb2 mb1-mb2">
+				<div class="well well-purple">
+					<p class="text-center">
+						<span class="visible-desktop">da1-da3</span>
+						<span class="visible-tablet">tb1-tb2</span>
+						<span class="visible-phone">mb1-mb2</span>
+					</p>
+				</div>
+			</div>
+			<div class="da4-da12 tb3-tb8 mb3-mb4">
+
+
+				<div class="tabbable" ng-controller="page3Tabs">
+				  <ul class="nav nav-tabs">
+				    <li ng-repeat="tab in tabs" ng-class="{'active': hash === '#'+tab.url }"><a href="#{{tab.url}}">{{tab.name}}</a></li>
+				  </ul>
+				  <div class="tab-content fade" ui-view  ng-class="{'active in': $state.current.name == tab.name }"></div>
+				</div> <!-- /tabbable -->
+        
+
+			</div>
+		</div>
+	</div>

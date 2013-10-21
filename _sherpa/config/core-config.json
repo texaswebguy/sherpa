@@ -1,11 +1,11 @@
 {
     "VERSION": {
-        "codeName" : "Restless Mercury",
+        "codeName" : "Screaming Autumn",
         "prodName" : "Dell Sherpa",
         "releaseName" : "Dell-308 2.3.2 Boostrap Theme",
         "minor" : ".01",
-        "major" : "0.7",
-        "releaseDate" : "10.11.2013"
+        "major" : "0.8",
+        "releaseDate" : "10.18.2013"
     },
     "default_values": {
         "default_alerts_data": {
@@ -105,6 +105,7 @@
     "PATH_CORE_ANGULAR_I18N": "i18n/angular-locale_{{locale}}.js",
     "PATH_CORE_CSS": "css/",
     "PATH_CORE_CSS_THEME": "css/themes/",
+    "API_APP": "sherpa-api.php",
     "ENABLE_GLOBAL_MODAL": true,
     "ENABLE_CONSOLE_MESSAGES": true,
     "ENABLE_COUNTER": true,
@@ -124,7 +125,8 @@
         "gridset-overlay",
         "dateformatjs",
         "bootstrap-232",
-        "bootstrap-datepicker"
+        "bootstrap-datepicker",
+        "showdown-js"
     ],
     "LOAD_ANGULAR_MODULES": [
         "ngSanitize",

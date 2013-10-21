@@ -1,11 +1,11 @@
 Dell 308 Theme for Bootstrap 2.3.2
 ======================
 
- Dell Sherpa v0.7 - 10/11/2013
+ Dell Sherpa v0.8-wip - 10/21/2013
  ---------------------
 
 **Change Log**
-
+- Removed background on &#91;class^=icon&#93; because when glyphon files were corrected they came through.
 - Defect 341294:Sherpa:: Alert Icons are not displaying based on the type
 - Defect 342291:Sherpa :: TextBox with fixed width
 - Defect 341489:Sherpa :: Wrong text-align attribute in .btn class

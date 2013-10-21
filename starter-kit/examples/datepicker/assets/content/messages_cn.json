@@ -1,8 +1,0 @@
-{
-	"sample_greeting" : "你好，我的朋友",
-	"sample_greeting_with_data" : "你好 {0}",
-	"sample_question" : "一个男人要走过多少路，才可以叫他一个人吗？",
-	"sample_message_with_link" : "你最喜欢的搜索引擎吗? [Google谷歌]或[必应Bing]?",
-	"sample_quantitative_with_data_singular" : "1笔记本电脑",
-	"sample_quantitative_with_data_plural" : "{0}笔记本电脑"
-}

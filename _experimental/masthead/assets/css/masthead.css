@@ -42,3 +42,22 @@
 @media only screen and (min-width: 768px) and (max-width: 979px) {
   
 }
+
+
+.footer ul {
+	list-style: none;
+}
+.footer li {
+	display:inline-block;
+	padding: 0 20px;
+	border-right:1px solid #fff;
+	height: inherit;
+	margin-top: 20px;
+}
+.footer li:last-child {
+	border:none;
+}
+
+.footer .nav li > a:hover {
+	background:none;
+}
