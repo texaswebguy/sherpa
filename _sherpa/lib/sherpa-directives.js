@@ -33,8 +33,18 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 	    });
 	}]);
 
+    angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+    });
+
+	/*
 	sherpaApp.run(['$state', function($state){
+
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+
 	    $state.transitionTo(SHERPA.PROTO_ROUTES[_.first(_.keys(SHERPA.PROTO_ROUTES))])
 	}]);
-
+*/
 }

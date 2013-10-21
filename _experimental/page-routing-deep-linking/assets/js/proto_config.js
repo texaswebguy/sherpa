@@ -8,8 +8,9 @@ sherpaApp.controller("mastheadController", function($scope) {
 
 sherpaApp.controller("navTabController", function($scope) {
 
-    $scope.tabs = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "navTabs"});
+    $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "navTabs"});
 
+//    $scope.routes[0].selected = true;
 
     $scope.activeTabIndex = 0;
 	$scope.isActiveTab = function(index){
@@ -47,10 +48,21 @@ sherpaApp.controller("asideNavController", function($scope) {
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "asideTabs"});
 
+//    $scope.$state = $state;
 
-    _.each( $scope.routes, function( elem ) {
-        console.log( elem );
-    })
+/*
+    var anySelected = false;
+
+    _($scope.routes).each(function (item) {
+        if (item.selected == true ) {
+            anySelected = true;
+        }
+    });
+
+    if ( !anySelected ) {
+        $scope.routes[0].selected = true;
+    }
+*/
 
     $scope.activeTabIndex = 0;
     $scope.isActiveTab = function(index){
@@ -71,12 +83,15 @@ sherpaApp.controller("asideNavController", function($scope) {
     }
 
     $scope.selectItem = function (selectedItem) {
+
         _($scope.routes).each(function (item) {
             item.selected = false;
             if (selectedItem === item) {
                 selectedItem.selected = true;
             }
         });
+
+
     };
 
 
