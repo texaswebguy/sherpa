@@ -8,47 +8,8 @@ sherpaApp.controller("mastheadController", function($scope) {
 
 sherpaApp.controller("navTabController", function($scope) {
 
+    $scope.tabs = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "navTabs"});
 
-    $scope.tabs = [
-		{
-			"id":"tab1",
-            "url":"/tab1",
-			"label":"Tab 1",
-			"description":"",
-            "view":"navTabs",
-            "parent":"page-1",
-			"tabPaneUrl":"assets/includes/horizTab/tab1.html"
-		},
-		{
-			"id":"tab2",
-            "url":"/tab2",
-			"label":"Tab 2",
-			"description":"",
-            "view":"navTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/horizTab/tab2.html"
-		},
-		{
-			"id":"tab3",
-            "url":"/tab3",
-			"label":"Tab 3",
-			"description":"",
-            "view":"navTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/horizTab/tab3.html"
-		},
-		{
-			"id":"tab4",
-            "url":"/tab4",
-			"label":"Tab4",
-			"description":"",
-            "view":"navTabs",
-            "parent":"page-1",
-            "tabPaneUrl":"assets/includes/horizTab/tab4.html"
-		}
-	]
-
-    $scope.routes = $scope.tabs;
 
     $scope.activeTabIndex = 0;
 	$scope.isActiveTab = function(index){
@@ -67,6 +28,15 @@ sherpaApp.controller("navTabController", function($scope) {
 		return $scope.tabs[index].tabPaneUrl;
 	}
 
+    $scope.selectItem = function (selectedItem) {
+        _($scope.routes).each(function (item) {
+            item.selected = false;
+            if (selectedItem === item) {
+                selectedItem.selected = true;
+            }
+        });
+    };
+
 
 });
 
@@ -74,9 +44,6 @@ sherpaApp.controller("navTabController", function($scope) {
 
 
 sherpaApp.controller("asideNavController", function($scope) {
-
-    console.log( "CALLED --> asideNavController")
-
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "asideTabs"});
 
@@ -98,6 +65,7 @@ sherpaApp.controller("asideNavController", function($scope) {
             return "tab-pane fade";
         }
     }
+
     $scope.includeTabContent = function(index) {
         return $scope.tabs[index].tabPaneUrl;
     }

@@ -8,28 +8,9 @@
 
         <section ng-controller="asideNavController">
 
-            <!--<a ui-sref="aside-home"> Test </a>-->
 
             <div class="tabbable tabs-aside">
                 <div class="da1-da4">
-                    <!--<a ng-repeat="tab in routes"
-                       ng-class="{active: tab.selected}"
-                       ng-click="selectItem(tab)"
-                       href="#/page-1/{{tab.id}}"
-                            class="nav nav-list nav-aside">
-                        <h2>{{tab.label}}</h2>
-                        <p ng-if="tab.description">{{tab.description}}</p>
-                    </a>-->
-
-                   <!-- <ul class="nav nav-list nav-aside">
-                        <li ng-repeat="tab in routes" ng-class="isActiveTab($index)">
-                            <a href="{{tab.id}}" data-toggle="tab">
-                                <h2>{{tab.label}}</h2>
-
-                                <p ng-if="tab.description">{{tab.description}}</p>
-                            </a>
-                        </li>
-                    </ul>-->
 
                     <ul class="nav nav-list nav-aside">
                         <li ng-repeat="tab in routes"
@@ -47,12 +28,8 @@
                 </div>
                 <div class="da5-da12 tab-content">
 
-
                     <section ui-view="asideTabs"></section>
 
-                    <!--<div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">
-                        <ng-include src="includeTabContent($index)"></ng-include>
-                    </div>-->
                 </div>
             </div>
 

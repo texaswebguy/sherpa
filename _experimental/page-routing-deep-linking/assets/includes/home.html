@@ -4,15 +4,20 @@
                   <div class="horiz-tabbable horiz-tabs" ng-controller="navTabController">
 
                       <ul class="nav nav-tabs">
-                          <li ng-repeat="tab in tabs" ng-class="isActiveTab($index)">
-                              <a href="#{{tab.id}}" data-toggle="tab">{{tab.label}}</a>
+                          <li ng-repeat="tab in tabs"
+                              ng-class="{active: tab.selected}"
+                              ng-click="selectedItem(tab)">
+                              <a ng-href="#/page-1/home{{tab.url}}">{{tab.label}}</a>
                           </li>
                       </ul>
 
                   <div class="tab-content horiz-tab-content">
-                      <div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">
-                          <ng-include src="includeTabContent($index)"></ng-include>
-                      </div>
+
+                      <section ui-view="navTabs"></section>
+
+                      <!--<div ng-repeat="tab in tabs" ng-class="isActivePane($index)" id="{{tab.id}}">-->
+                          <!--<ng-include src="includeTabContent($index)"></ng-include>-->
+                      <!--</div>-->
                   </div>
               </div>
 
