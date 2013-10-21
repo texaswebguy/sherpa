@@ -1,199 +1,184 @@
 {
     "PROTO_JS": "app.js",
     "PROTO_CSS": "doc.css",
-    "PATH_PROTO_ASSETS": "assets/",
+    "PATH_PROTO_ASSETS": "assets\/",
     "PATH_WEBROOT": "",
-    "PATH_PROTO_ASSETS": "assets/",
     "ENABLE_CONTENT_EDIT": true,
     "PROTO_ROUTES": {
-    	"home": {
-            "name":"home",
-            "url":"/",
-            "label":"",
-            "templateUrl":"pages/home/index.html",
-            "controller":"homeController"
+        "home": {
+            "name": "home",
+            "url": "\/",
+            "label": "",
+            "templateUrl": "pages\/home\/index.html",
+            "controller": "homeController"
         },
         "get-started": {
-            "name":"get-started",
-            "url":"/get-started",
-            "label":"Getting Started",
-            "templateUrl":"pages/get-started/index.html",
-            "controller":"getStartedController"
+            "name": "get-started",
+            "url": "\/get-started",
+            "label": "Getting Started",
+            "templateUrl": "pages\/get-started\/index.html",
+            "controller": "getStartedController"
         },
-        "css-overview":{
-            "name":"css-overview",
-            "url":"/css-overview",
-            "label":"CSS Overview",
-            "templateUrl":"pages/css-overview/index.html",
-            "controller":"cssOverviewController"
+        "css-overview": {
+            "name": "css-overview",
+            "url": "\/css-overview",
+            "label": "CSS Overview",
+            "templateUrl": "pages\/css-overview\/index.html",
+            "controller": "cssOverviewController"
+        },
+        "the-grid": {
+            "name": "the-grid",
+            "url": "\/the-grid",
+            "label": "The Grid",
+            "templateUrl": "pages\/the-grid\/index.html",
+            "controller": "cssGridController"
         },
         "prototyping": {
-            "name":"prototyping",
-            "url":"/prototyping",
-            "label":"Prototyping",
-            "templateUrl":"pages/prototyping/index.html",
-            "controller":"prototypingController"
+            "name": "prototyping",
+            "url": "\/prototyping",
+            "label": "Prototyping",
+            "templateUrl": "pages\/prototyping\/index.html",
+            "controller": "prototypingController"
         },
         "styleguides": {
-            "name":"styleguides",
-            "url":"/styleguides",
-            "label":"Styleguides",
-            "templateUrl":"pages/styleguides/index.html",
-            "controller":"styleguidesController"
+            "name": "styleguides",
+            "url": "\/styleguides",
+            "label": "Styleguides",
+            "templateUrl": "pages\/styleguides\/index.html",
+            "controller": "styleguidesController"
         },
-        "css-overview.typography":{
-            "name":"css-overview.typography",
-            "url":"/css-overview/typography",
-            "label":"Typography",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/typography.html"
+        "css-overview-typography": {
+            "name": "css-overview-typography",
+            "url": "\/css-overview\/typography",
+            "label": "Typography",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/typography.html"
         },
-        "css-overview.navbar":{
-            "name":"css-overview.navbar",
-            "url":"/css-overview/navbar",
-            "label":"Navigation Bars",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/navbar.html"
+        "css-overview-navbar": {
+            "name": "css-overview-navbar",
+            "url": "\/css-overview\/navbar",
+            "label": "Navigation Bars",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/navbar.html"
         },
-        "css-overview.buttons":{
-            "name":"css-overview.buttons",
-            "url":"/css-overview/buttons",
-            "label":"Buttons",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/buttons.html"
+        "css-overview-buttons": {
+            "name": "css-overview-buttons",
+            "url": "\/css-overview\/buttons",
+            "label": "Buttons",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/buttons.html"
         },
-        "css-overview.forms":{
-            "name":"css-overview.forms",
-            "url":"/css-overview/forms",
-            "label":"Forms",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/forms.html"
+        "css-overview-forms": {
+            "name": "css-overview-forms",
+            "url": "\/css-overview\/forms",
+            "label": "Forms",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/forms.html"
         },
-        "css-overview.tables":{
-            "name":"css-overview.tables",
-            "url":"/css-overview/tables",
-            "label":"Tables",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/tables.html"
+        "css-overview-tables": {
+            "name": "css-overview-tables",
+            "url": "\/css-overview\/tables",
+            "label": "Tables",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/tables.html"
         },
-        "css-overview.breadcrumbs":{
-            "name":"css-overview.breadcrumbs",
-            "url":"/css-overview/breadcrumbs",
-            "label":"Breadcrumbs",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/breadcrumbs.html"
+        "css-overview-breadcrumbs": {
+            "name": "css-overview-breadcrumbs",
+            "url": "\/css-overview\/breadcrumbs",
+            "label": "Breadcrumbs",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/breadcrumbs.html"
         },
-        "css-overview.pagination":{
-            "name":"css-overview.pagination",
-            "url":"/css-overview/pagination",
-            "label":"Pagination",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/pagination.html"
+        "css-overview-pagination": {
+            "name": "css-overview-pagination",
+            "url": "\/css-overview\/pagination",
+            "label": "Pagination",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/pagination.html"
         },
-        "css-overview.pagers":{
-            "name":"css-overview.pagers",
-            "url":"/css-overview/pagers",
-            "label":"Pagers",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/pagers.html"
+        "css-overview-pagers": {
+            "name": "css-overview-pagers",
+            "url": "\/css-overview\/pagers",
+            "label": "Pagers",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/pagers.html"
         },
-        "css-overview.tabs":{
-            "name":"css-overview.tabs",
-            "url":"/css-overview/tabs",
-            "label":"Tabs",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/tabs.html"
+        "css-overview-labels-and-badges": {
+            "name": "css-overview-labels-and-badges",
+            "url": "\/css-overview\/labels-and-badges",
+            "label": "Labels and Badges",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/labels-and-badges.html"
         },
-        "css-overview.pills":{
-            "name":"css-overview.pills",
-            "url":"/css-overview/pills",
-            "label":"Pills",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/pills.html"
+        "css-overview-tabs-lists-pills": {
+            "name": "css-overview-tabs-lists-pills",
+            "url": "\/css-overview\/tabs-lists-pills",
+            "label": "Tabs, list and pills",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/tabs-lists-pills.html"
         },
-        "css-overview.lists":{
-            "name":"css-overview.lists",
-            "url":"/css-overview/lists",
-            "label":"Lists",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/lists.html"
+        "css-overview-progress-bars": {
+            "name": "css-overview-progress-bars",
+            "url": "\/css-overview\/progress-bars",
+            "label": "Progress Bars",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/progress-bars.html"
         },
-        "css-overview.labels-and-badges":{
-            "name":"css-overview.labels-and-badges",
-            "url":"/css-overview/labels-and-badges",
-            "label":"Labels and Badges",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/labels-and-badges.html"
+        "css-overview-alerts": {
+            "name": "css-overview-alerts",
+            "url": "\/css-overview\/alerts",
+            "label": "Alerts",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/alerts.html"
         },
-        "css-overview.progress-bars":{
-            "name":"css-overview.progress-bars",
-            "url":"/css-overview/progress-bars",
-            "label":"Progress Bars",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/progress-bars.html"
+        "css-overview-modals": {
+            "name": "css-overview-modals",
+            "url": "\/css-overview\/modals",
+            "label": "Modals",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/modals.html"
         },
-        "css-overview.alerts":{
-            "name":"css-overview.alerts",
-            "url":"/css-overview/alerts",
-            "label":"Alerts",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/alerts.html"
+        "css-overview-tooltips": {
+            "name": "css-overview-tooltips",
+            "url": "\/css-overview\/tooltips",
+            "label": "Tooltips",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/tooltips.html"
         },
-        "css-overview.modals":{
-            "name":"css-overview.modals",
-            "url":"/css-overview/modals",
-            "label":"Modals",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/modals.html"
+        "css-overview-collapsible-items": {
+            "name": "css-overview-collapsible-items",
+            "url": "\/css-overview\/collapsible-items",
+            "label": "Collapsible Items",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/collapsible-items.html"
         },
-        "css-overview.tooltips":{
-            "name":"css-overview.tooltips",
-            "url":"/css-overview/tooltips",
-            "label":"Tooltips",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/tooltips.html"
+        "css-overview-popovers": {
+            "name": "css-overview-popovers",
+            "url": "\/css-overview\/popovers",
+            "label": "Popovers",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/popovers.html"
         },
-        "css-overview.collapsible-items":{
-            "name":"css-overview.collapsible-items",
-            "url":"/css-overview/collapsible-items",
-            "label":"Collapsible Items",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/collapsible-items.html"
+        "css-overview-wells-and-containers": {
+            "name": "css-overview-wells-and-containers",
+            "url": "\/css-overview\/wells-and-containers",
+            "label": "Wells and Containers",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/wells-and-containers.html"
         },
-        "css-overview.popovers":{
-            "name":"css-overview.popovers",
-            "url":"/css-overview/popovers",
-            "label":"Popovers",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/popovers.html"
+        "css-overview-icons": {
+            "name": "css-overview-icons",
+            "url": "\/css-overview\/icons",
+            "label": "Icons",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/icons.html"
         },
-        "css-overview.wells-and-containers":{
-            "name":"css-overview.wells-and-containers",
-            "url":"/css-overview/wells-and-containers",
-            "label":"Wells and Containers",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/wells-and-containers.html"
-        },
-        "css-overview.icons":{
-            "name":"css-overview.icons",
-            "url":"/css-overview/icons",
-            "label":"Icons",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/icons.html"
-        },
-        "css-overview.responsive-classes":{
-            "name":"css-overview.responsive-classes",
-            "url":"/css-overview/responsive-classes",
-            "label":"Responsive Classes",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/responsive-classes.html"
-        },
-        "css-overview.grid":{
-            "name":"css-overview.grid",
-            "url":"/css-overview/grid",
-            "label":"Grid",
-            "parent":"css-overview",
-            "templateUrl":"pages/css-overview/grid.html"
+        "css-overview-responsive-classes": {
+            "name": "css-overview-responsive-classes",
+            "url": "\/css-overview\/responsive-classes",
+            "label": "Responsive Classes",
+            "parent": "css-overview",
+            "templateUrl": "pages\/css-overview\/responsive-classes.html"
         }
     }
 }

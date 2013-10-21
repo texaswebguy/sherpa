@@ -1,0 +1,7 @@
+{
+    "PROTO_JS": "banner.js",
+    "PROTO_CSS": "banner.css",
+    "PATH_PROTO_ASSETS": "assets/",
+    "PATH_WEBROOT": "",
+    "PATH_PROTO_ASSETS": "assets/"
+}

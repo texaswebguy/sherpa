@@ -1,40 +1,37 @@
-  <div class="wrapper">
-    <div class="page-header"> 
-      <h2>Forms</h2>
+<div class="da-clear ta-clear ma-clear">
+  <div class=""> 
+    <h2>Forms</h2>
+  </div>
+  <div class="well">
+    <h3>Search form is sized by its parent container</h3>
+    <div >
+              <form class="form-search">
+                <input type="text" class="search-query">
+                <button type="submit" class="btn">Search</button>
+              </form>
     </div>
-    <div class="well da-all ta-all ma-all">
-      <h3>Search form is sized by its parent container</h3>
-      <div class="da-all ta-all ma-all">
-                <form class="form-search">
-                  <input type="text" class="search-query">
-                  <button type="submit" class="btn">Search</button>
-                </form>
-      </div>
-      <p class="da-all ta-all ma-all"> </p>
-      <div class="da-clear da7-da12 ta-all ma-all">
-                <form class="form-search">
-                  <input type="text" class="search-query">
-                  <button type="submit" class="btn">Search</button>
-                </form>
-      </div>
-
-    </div>
-    <div class=" da-all ta-all ma-all">
-      <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#form-search-HTML">
-        <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
-      </button>
+    <div class="da-clear ta-clear ma clear da7-da12 ta-all ma-all top-offset-small">
+              <form class="form-search">
+                <input type="text" class="search-query">
+                <button type="submit" class="btn">Search</button>
+              </form>
     </div>
 
-      <div class="collapse da-all ta-all ma-all" id="form-search-HTML">
-<p>&nbsp;</p>
-        <div class="alert alert-block" id="button-308-rules">
-          <h4>Note:</h4>
-          <p>The with of this element is dictated by the parent container.</p>
-        </div>
+  </div>
+  <div class="da-clear ta-clear ma clear ">
+    <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#form-search-HTML">
+      <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+    </button>
+  </div>
+  <div class="collapse top-offset-small" id="form-search-HTML">
+    <div class="alert alert-block" id="button-308-rules">
+      <h4>Note:</h4>
+      <p>The with of this element is dictated by the parent container.</p>
+    </div>
     <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-target="form-search-HTML-code">
       Copy HTML
     </button>
-        <pre class="prettyprint linenums" >
+    <pre class="prettyprint linenums" >
 &lt;div class="da-all ta-all ma-all">
   &lt;form class="form-search">
     &lt;input type="text" class="search-query">
@@ -42,18 +39,18 @@
   &lt;/form>
 &lt;/div>
 </pre>
-        <textarea class="hide" id="form-search-HTML-code">
+    <textarea class="hide" id="form-search-HTML-code">
 &lt;div class="da-all ta-all ma-all">
   &lt;form class="form-search">
     &lt;input type="text" class="search-query">
     &lt;button type="submit" class="btn">Search&lt;/button>
   &lt;/form>
 &lt;/div>
-</textarea>
-</div>
+    </textarea>
+  </div>
 
-  <hr class="da-all ta-all ma-all"/>
-  <div class="da-all ta-all ma-all" id="form-example">
+  <hr/>
+  <div id="form-example" clas="top-offset-small">
       <form class="form-horizontal well">
         <fieldset>
           <legend>Default Bootstrap Form Controls</legend>
@@ -177,20 +174,16 @@
         </fieldset>
       </form>
   </div>
-  <div class="da-all ta-all ma-all">
-    <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#forms-HTML">
-      <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
-    </button>
-    <button class="btn btn-mini fiddle-button" data-target="form-example">Fiddle</button>
+  <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#forms-HTML">
+    <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+  </button>
+  <button class="btn btn-mini fiddle-button" data-target="form-example">Fiddle</button>
+  <div class="collapse" id="forms-HTML">
+    <p>&nbsp;</p>
+    <div class="alert alert-info" id="button-308-rules">
+      <h4>No use in recreating the wheel:</h4>
+      <p>Build a form <a href="http://bootsnipp.com/forms" target="bootsnipp">here</a>!</p>
+    </div>
   </div>
-  <div class="collapse da-all ta-all ma-all" id="forms-HTML">
-      <p>&nbsp;</p>
-      <div class="alert alert-info" id="button-308-rules">
-        <h4>No use in recreating the wheel:</h4>
-        <p>Build a form <a href="http://bootsnipp.com/forms" target="bootsnipp">here</a>!</p>
-      </div>
-  </div>
-
-  <hr class="da-all ta-all ma-all"/>
-  </div>
+  <hr/>
 </div>

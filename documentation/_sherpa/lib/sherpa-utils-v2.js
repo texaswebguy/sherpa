@@ -132,7 +132,9 @@ Sherpa.urlQuery = function () {
 
 
 Sherpa.msg = function(textkey,t_data) {
-	
+	if(t_data === "undefined") {
+		t_data = undefined;
+	}
 	var msg = Sherpa.viewModel.content[textkey], 
 		regex = /\{[0-9]\}*/,
 		i = 0,
@@ -193,7 +195,7 @@ Sherpa.msg = function(textkey,t_data) {
 		} else {
 			var convertMD = new Sherpa.converter();
 			if(SHERPA.ENABLE_CONTENT_EDIT) {
-				msg = '<div class="editable" data-textkey="'+textkey+'_markdown">'+convertMD.makeHtml(msg)+'</div>'
+				msg = '<div class="editable markdown" data-textkey="'+textkey+'_markdown">'+convertMD.makeHtml(msg)+'</div>'
 			} else {
 				msg = convertMD.makeHtml(msg);
 			}

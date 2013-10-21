@@ -415,3 +415,6 @@ html.editable .editable.editing,
   -moz-border-radius: 0;
   border-radius: 0;
 }
+.alert .editable.markdown {
+  width: inherit;
+}

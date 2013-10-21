@@ -1,16 +1,12 @@
 	<div class="da-clear ta-clear ma-clear top-offset-small">
 		<div class="wrapper">	
 			<div class="da1-da3 ta1-ta3 ma-all">
-	          <ul class="nav nav-list sherpa-aside">
-	            <li class="active"><a href="#starter-kit" class="scroll">Starter Kit</a></li>
-	            <li><a href="#configuration" class="scroll">Configuration</a></li>
-	            <li><a href="#page-routing" class="scroll">Page Routing</a></li>
-	            <li class="divider"></li>
-	            <li><a href="#" ng-click="Sherpa.">Help</a></li>
+	          <ul class="nav nav-list sherpa-aside" data-ng-init="initAside()" scroll-spy="">
+	            <li ng-repeat="section in sections" ng-class="{active:$first}"><a href="#{{section.name}}" class="scroll">{{section.label}}</a></li>
 	          </ul>
 			</div>
-			<div class="da4-da12 ta4-ta9 ma-all">
-				<section ng-repeat="section in sections" id="{{section.name}}" ng-include="section.templateUrl"></section>
+			<div class="da4-da12 ta4-ta9 ma-all" data-ng-init="prettyPrint();scrollSpy()">
+				<div class="bottom-offset-small" ng-repeat="section in sections" id="{{section.name}}" ng-include="section.templateUrl"></div>
 			</div>
 		</div>
 	</div>

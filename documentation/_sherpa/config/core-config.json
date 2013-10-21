@@ -1,11 +1,11 @@
 {
     "VERSION": {
-        "codeName" : "Restless Mercury",
+        "codeName" : "Screaming Autumn",
         "prodName" : "Dell Sherpa",
         "releaseName" : "Dell-308 2.3.2 Boostrap Theme",
         "minor" : ".01",
-        "major" : "0.7",
-        "releaseDate" : "10.11.2013"
+        "major" : "0.8",
+        "releaseDate" : "10.18.2013"
     },
     "default_values": {
         "default_alerts_data": {

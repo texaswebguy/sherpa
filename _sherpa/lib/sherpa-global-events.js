@@ -6,12 +6,12 @@ Sherpa.globalEvents = {
 	checkFormFactor: function(){
 		var win = {};
 		win.w = $(window).width();
-		Sherpa.viewModel.IsMobileDevice =  win.w > head_conf.screens[1];
+		Sherpa.viewModel.IsDesktopDevice =  win.w > head_conf.screens[1];
 		Sherpa.viewModel.IsTabletDevice = win.w >= head_conf.screens[0] && win.w<= head_conf.screens[1];
 		Sherpa.viewModel.IsPhoneDevice = win.w < head_conf.screens[0];
-		Sherpa.feature("desktop", Sherpa.viewModel.isDesktop);
-		Sherpa.feature("tablet", Sherpa.viewModel.isTablet);
-		Sherpa.feature("mobile", Sherpa.viewModel.isMobile);
+		Sherpa.feature("desktop", Sherpa.viewModel.IsDesktopDevice);
+		Sherpa.feature("tablet", Sherpa.viewModel.IsTabletDevice);
+		Sherpa.feature("mobile", Sherpa.viewModel.IsPhoneDevice);
 	},
 	checkLocalHost: function(){
 		if(location.hostname === "localhost") {
@@ -100,6 +100,21 @@ Sherpa.globalEvents = {
 			});
 			this.listen('.scroll', 'click', function(event){
 				event.preventDefault();
+				var options={offset:{top:0}};
+				if($('.nav.affix:visible')) {
+					if(Sherpa.viewModel.IsPhoneDevice) {
+						//TODO this is not completely right. 
+						options.offset.top = -$('.nav.affix:visible').height();
+						console.log(options)						
+					}
+					if(!Sherpa.viewModel.IsPhoneDevice) {
+						//desktop and tablet 
+						options.offset.top = -20;
+					}
+
+				}
+
+
 				var elem = $(event.currentTarget),targetId;
 				if(elem.attr('href')){
 					targetId = elem.attr('href');
@@ -107,7 +122,7 @@ Sherpa.globalEvents = {
 					targetId = elem.attr('rel')
 				}
 				if(targetId){
-					$.scrollTo(targetId,300);
+					$.scrollTo(targetId,300,options);
 				}    		
 			});
 		});
@@ -182,6 +197,8 @@ Sherpa.globalEvents = {
 
 
 			Sherpa.scope("*", function(){
+
+				//TODO need to add a markdown checkbox to edit-controls. This would have to delete a non-markdown textkey if converted.
 
 				this.listen('.editable', 'click', function(event){
 					if(!$(event.currentTarget).hasClass('editing') && $('html').hasClass('editable')){

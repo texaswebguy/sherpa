@@ -1,5 +1,5 @@
-    <div class="wrapper">
-      <div class="page-header">
+    <div class="da-clear ta-clear ma-clear">
+      <div class="">
         <h2>Modals</h2>
       </div>     
 
@@ -19,7 +19,7 @@
       </div>
     </div>
 </div>
-        <button class="btn btn-mini collapsed launch-demo-modal">
+        <button class="btn btn-mini collapsed" global-modal="{{example_modal}}">
           Launch Demo Modal
         </button>
         <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#modal-HTML">
@@ -28,10 +28,10 @@
         <p>&nbsp;</p>
 
         <div class="collapse" id="modal-HTML">
-          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].innerHTML.replace(/ da-clear ta-clear ma-clear/,'').replace(/style=*position: relative*/,'')}">
+          <button class="btn btn-mini" data-copy="2-clipboard" loadclipboardtext="#modal-example-HTML">
             Copy HTML
           </button>
-          <pre class="prettyprint linenums" data-bind="text: $('#modal-example-HTML')[0].outerHTML.replace(/</g,'&lt;').replace(/ style=.*/g,'>')"></pre>
+          <pre class="prettyprint linenums" copysample="#modal-example-HTML"></pre>
         </div>
         <hr/>
 

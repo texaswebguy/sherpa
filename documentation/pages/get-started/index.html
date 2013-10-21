@@ -5,8 +5,8 @@
 	            <li ng-repeat="section in sections" ng-class="{active:$first}"><a href="{{section.url}}" class="scroll">{{section.label}}</a></li>
 	          </ul>	        
 			</div>
-			<div class="da4-da12 ta4-ta9 ma-all list-content">
-				<div data-ng-init="prettyPrint()" ng-repeat="section in sections" markdown="{{section.templateUrl}}" scroll-spy="refresh"></div>
+			<div class="da4-da12 ta4-ta9 ma-all list-content" data-ng-init="prettyPrint()">
+				<div ng-repeat="section in sections" markdown="{{section.templateUrl}}" scroll-spy="refresh"></div>
 			</div>
 		</div>
 	</div>

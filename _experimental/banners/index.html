@@ -1,0 +1,60 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="utf-8">
+    <title>Dell Sherpa: Banners Experimentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+      var SHERPA_CONFIG_OVERRIDES = {};
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/banner.json";
+    </script>
+
+	<!-- Don't touch 
+	******************************************************************************** -->
+	<style>body{opacity:0}body.ng-scope{opacity:1}</style>
+	<script src="../../_sherpa/sherpa.v07.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+
+</head>
+<body ng-controller="pageController">
+	<a name="top" id="top"></a>
+
+	<div class="da-all ta-all ma-all">
+		<div class="wrapper">
+			<div class="well well-white" id="banner-stage">
+				<div class="slide-1">
+					<div class="item-1"><h1>When you meet your perfect tablet,</h1></div>
+					<div class="item-2">anything's</div>
+					<div class="item-3">possible.</div>
+					<div class="item-4 product">
+						<p><small>Dell Venue 11 Pro</small></p>
+						<img src="assets/img/slide-1-prod.png"/>
+					</div>
+				</div>
+				<div class="slide-2">
+					<div class="item-1"><h1>Meet our family of over-achievers.</h1></div>
+					<div class="item-2">Dell tablets with Windows 8.1 or Android offer meaningful flexibility and choice, allowing you to easily connect, access and share in the way that is most natural for you.</div>
+					<div class="item-3"><h3><a href="#">Start Product Tour ></a></h3></div>
+					<div class="item-4 product">
+						<p><small>Dell Venue 7</small></p>
+						<img src="assets/img/slide-2-prod-1.png"/>
+					</div>
+					<div class="item-5 product">
+						<p><small class="text-right">Dell Venue 8 Pro</small></p>
+						<img src="assets/img/slide-2-prod-2.png"/>
+					</div>
+					<div class="item-6 product">
+						<p><small>Dell Venue 8</small></p>
+						<img src="assets/img/slide-2-prod-3.png"/>
+					</div>
+				</div>
+			</div>
+		</div>
+	</div>
+
+
+</body>
+
+</html>

@@ -68,6 +68,19 @@
   padding-top: 36px;
   color: #fff;
 }
+.docs-masthead .navbar .nav .main-active > a,
+.docs-masthead .navbar .nav .main-active > a:hover,
+.docs-masthead .navbar .nav .main-active > a:focus {
+  height: 90px;
+  margin-top: -26px;
+  cursor: default;
+  padding-top: 36px;
+  color: #fff;
+  text-decoration: none;
+  -webkit-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  -moz-box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+  box-shadow: inset 0 3px 8px rgba(0, 0, 0, 0.125);
+}
 .sherpa-aside.nav-list li:first-child > a {
   -webkit-border-top-right-radius: 5px;
   -moz-border-radius-topright: 5px;
@@ -108,6 +121,62 @@
 .sherpa-description {
   padding: 30px 0;
 }
+#aside-example-HTML {
+  display: none;
+}
+#modal-example-HTML {
+  background: rgba(0, 0, 0, 0.8);
+  padding: 100px 0;
+}
+#modal-example-HTML .modal {
+  position: relative;
+  clear: both;
+  z-index: 0;
+}
+#popover-example-HTML {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+#popover-example-HTML > ul > li > a {
+  float: left;
+  margin-right: 20px;
+}
+.large-icons li {
+  height: 50px;
+}
+.large-icons [class^=icon-large] {
+  font-size: 36px;
+}
+.the-icons li {
+  width: 24%;
+  display: inline-block;
+}
+.tablet .the-icons li {
+  width: 32%;
+}
+.mobile .the-icons li {
+  width: 49%;
+}
+#icons [data-toggle="popover"] {
+  cursor: help;
+}
+#icons li {
+  margin-bottom: 10px;
+}
+[class*=change-container] > li > a {
+  color: #fff;
+}
+[class*=change-container] > li > a.white,
+[class*=change-container] > li > a.gray-light,
+[class*=change-container] > li > a.gray-very-light {
+  color: #444;
+}
+.page-header {
+  margin-top: 0;
+}
+/*[id^=css-overview] > .wrapper {
+	overflow:visible;
+}*/
 /* Pretty print stuff */
 /***************************************************************************************/
 .com {
@@ -167,7 +236,39 @@ ol.linenums li {
 /***************************************************************************************/
 /* For mobile */
 @media only screen and (max-width: 767px) {
-  
+  .sherpa-aside.affix-top {
+    margin-bottom: 20px;
+    width: 100% !important;
+  }
+  .sherpa-aside.affix {
+    top: 0;
+    left: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .sherpa-aside.affix li {
+    display: none;
+  }
+  .sherpa-aside.affix li:first-child > a,
+  .sherpa-aside.affix li:last-child > a {
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+  }
+  .sherpa-aside.affix li.active {
+    display: block;
+    -webkit-border-radius: 5;
+    -moz-border-radius: 5;
+    border-radius: 5;
+  }
+  .docs-masthead .navbar .brand {
+    margin-left: -30px;
+  }
+  .docs-masthead .navbar .brand h2 {
+    font-size: 30px;
+    line-height: 34px;
+  }
 }
 /* For tablet */
 @media only screen and (min-width: 768px) and (max-width: 979px) {

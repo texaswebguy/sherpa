@@ -42,11 +42,13 @@ sherpaApp.directive('scrollSpy', function($timeout){
   return function(scope, elem, attr) {
   	if(!attr.scrollSpy === 'refresh') {
   		$('body').scrollspy('refresh');
+  		$('.main-active').addClass("active"); //hack to prevent scrollspy from removing active from main nav
   	} else {
 	  	$(elem).scrollspy();
 	    scope.$watch(attr.scrollSpy, function(value) {
 	      $timeout(function() { $('body').scrollspy('refresh') }, 500);
-	    }, true);  		
+	    }, true);  
+	    $('.main-active').addClass("active");		
   	}
   }
 });
@@ -59,6 +61,32 @@ sherpaApp.directive('msg', function(){
   }
 });
 
+if(SHERPA.ENABLE_GLOBAL_MODAL){
+
+	sherpaApp.directive('globalModal', function(){
+		return {
+	       restrict: 'A',
+	       link: function(scope, elem, attr, ctrl) {
+	            elem.bind('click', function(event) {
+	            	var options = attr.globalModal;
+	                event.preventDefault();
+	                event.stopPropagation();
+					if(!_.isObject(attr.globalModal)){
+						try {
+							options = JSON.parse(attr.globalModal);
+							Sherpa.publish("modal", options);
+						} catch (err) {
+							console.error('Bad Options',err)
+						}
+					} else {
+						Sherpa.publish("modal", options);
+					}
+	            });
+	       }
+	   };
+	});
+
+}
 
 sherpaApp.directive('lorem', function(){
 	/*
