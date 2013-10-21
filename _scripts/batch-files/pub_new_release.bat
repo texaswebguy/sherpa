@@ -66,12 +66,10 @@ RMDIR %STARTER_KIT% /s /q
 MKDIR %STARTER_KIT_CORE%
 MKDIR %STARTER_KIT%\examples
 MKDIR %STARTER_KIT%\_blank
-MKDIR %STARTER_KIT%\documentation
 XCOPY %CORE% %STARTER_KIT_CORE% /e /y 
 XCOPY %ROOT%\start_server.bat %STARTER_KIT%\start_server.bat /e /y 
 XCOPY %EXAMPLES% %STARTER_KIT%\examples /e /y 
 XCOPY %BLANK% %STARTER_KIT%\_blank /e /y 
-XCOPY %SITE% %STARTER_KIT%\documentation /e /y 
 COPY %ROOT%\start_server.bat %STARTER_KIT%\start_server.bat /y
 COPY %TEMPLATES%\starter-kit-index.php %STARTER_KIT%\index.php /y
 

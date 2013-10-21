@@ -13,21 +13,13 @@
 	<!-- Don't touch 
 	******************************************************************************** -->
 	<style>body{opacity:0}body.ng-scope{opacity:1}</style>
-	<script src="../../_sherpa/sherpa.v07.js"></script>	
+	<script src="../../_sherpa/sherpa.v08.js"></script>	
 	<!-- Sherpa js adds all the js and css files you need.
 	******************************************************************************** -->	
 </head>
 <body ng-controller="pageController">
 	<header ng-include="'assets/includes/masthead.html'" ng-controller="mastheadController" class="masthead"></header>	
 	<section ui-view></section>
-	<footer class="da-all ta-all ma-all blue">
-		<div class="wrapper">
-			<div class="da-all ta-all ma-all">
-				<div class="blue">
-					footer
-				</div>
-			</div>
-		</div>
-	</footer>
+	<footer ng-include="'assets/includes/footer.html'" ng-controller="footerController" class="footer"></footer>
 </body>
 </html>

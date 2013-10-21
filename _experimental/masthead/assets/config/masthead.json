@@ -15,7 +15,7 @@
             "name":"page-2",
             "url":"/page-2",
             "label":"Page 2",
-            "templateUrl":"pages/page2.html"
+            "templateUrl":"pages/page2/index.html"
         },
         "page-3": {
             "name":"page-3",
