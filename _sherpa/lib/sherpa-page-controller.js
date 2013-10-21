@@ -48,7 +48,7 @@ sherpaApp.controller("pageController", function($scope, $state,$http) {
     //Automatically insert generic modal
 
     if(SHERPA.ENABLE_GLOBAL_MODAL){
-        $http({method: 'GET', url: SHERPA.PATH_CORE_COMPONENTS+"modal/global.html"}).
+        $http({method: 'GET', url: SHERPA.PATH_CORE_COMPONENTS+SHERPA.PATH_GLOBAL_MODAL}).
           success(function(data) {
             $('body').append(data);
           }).
