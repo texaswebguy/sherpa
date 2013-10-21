@@ -6,28 +6,28 @@
     "PATH_PROTO_ASSETS": "assets/",
     "PROTO_ROUTES": {
         "page-1": {
-            "id":"page-1",
+            "stateName":"page-1",
             "url":"/page-1",
             "label":"Page 1",
             "view":"masthead",
             "templateUrl":"pages/page1.html"
         },
         "page-2": {
-            "id":"page-2",
+            "stateName":"page-2",
             "url":"/page-2",
             "label":"Page 2",
             "view":"masthead",
             "templateUrl":"pages/page2.html"
         },
         "page-3": {
-            "id":"page-3",
+            "stateName":"page-3",
             "url":"/page-3",
             "label":"Page 3",
             "view":"masthead",
             "templateUrl":"pages/page3.html"
         },
         "page-1a": {
-            "id":"page-1a",
+            "stateName":"page-1a",
             "url":"/page-1a",
             "label":"Page-1a",
             "parent":"page-1",
@@ -35,7 +35,7 @@
             "templateUrl":"pages/page2/page1a.html"
         },
         "page-2a": {
-            "id":"page-2a",
+            "stateName":"page-2a",
             "url":"/page-2a",
             "label":"Page-2a",
             "parent":"page-2",
@@ -43,7 +43,7 @@
             "templateUrl":"pages/page2/page1.html"
         },
         "aside-home":{
-            "id":"aside-home",
+            "stateName":"aside-home",
             "url":"/home",
             "label":"Home",
             "description":"",
@@ -52,7 +52,7 @@
             "templateUrl":"assets/includes/home.html"
         },
         "aside-library":{
-            "id":"aside-library",
+            "stateName":"aside-library",
             "url":"/library",
             "label":"Library",
             "description":"",
@@ -61,7 +61,7 @@
             "templateUrl":"assets/includes/library.html"
         },
         "aside-applications":{
-            "id":"aside-applications",
+            "stateName":"aside-applications",
             "label":"Applications",
             "url":"/Applications",
             "description":"",
@@ -70,7 +70,7 @@
             "templateUrl":"assets/includes/applications.html"
         },
         "aside-profile":{
-            "id":"aside-profile",
+            "stateName":"aside-profile",
             "url":"/profile",
             "label":"Profile",
             "description":"",
@@ -79,7 +79,7 @@
             "templateUrl":"assets/includes/profile.html"
         },
         "aside-settings":{
-            "id":"aside-settings",
+            "stateName":"aside-settings",
             "url":"/settings",
             "label":"Settings",
             "description":"",
@@ -88,7 +88,7 @@
             "templateUrl":"assets/includes/settings.html"
         },
         "aside-help":{
-            "id":"aside-help",
+            "stateName":"aside-help",
             "url":"/help",
             "label":"Help",
             "view":"asideTabs",
@@ -97,7 +97,7 @@
             "templateUrl":"assets/includes/help.html"
         },
         "tab1":{
-            "id":"tab1",
+            "stateName":"tab1",
             "url":"/tab1",
             "label":"Home Tab 1",
             "description":"",
@@ -106,7 +106,7 @@
             "templateUrl":"assets/includes/horizTab/tab1.html"
         },
         "tab2":{
-            "id":"tab2",
+            "stateName":"tab2",
             "url":"/tab2",
             "label":"Home Tab 2",
             "description":"",
@@ -115,7 +115,7 @@
             "templateUrl":"assets/includes/horizTab/tab2.html"
         },
         "tab3":{
-            "id":"tab3",
+            "stateName":"tab3",
             "url":"/tab3",
             "label":"Home Tab 3",
             "description":"",
@@ -124,7 +124,7 @@
             "templateUrl":"assets/includes/horizTab/tab3.html"
         },
         "tab4":{
-            "id":"tab4",
+            "stateName":"tab4",
             "url":"/tab4",
             "label":"Home Tab4",
             "description":"",

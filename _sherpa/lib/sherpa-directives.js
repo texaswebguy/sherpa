@@ -29,7 +29,7 @@ if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
             route.views = viewsObject;
 
-	        $stateProvider.state(route.id, route );
+	        $stateProvider.state(route.stateName, route );
 	    });
 	}]);
 
