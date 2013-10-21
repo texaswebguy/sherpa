@@ -10,6 +10,7 @@
             "url":"/page-1",
             "label":"Page 1",
             "view":"masthead",
+            "defaultParent":"/",
             "templateUrl":"pages/page1.html"
         },
         "page-2": {
@@ -48,6 +49,7 @@
             "label":"Home",
             "description":"",
             "view":"asideTabs",
+            "defaultParent":"/page-1",
             "parent":"page-1",
             "templateUrl":"assets/includes/home.html"
         },
@@ -102,6 +104,8 @@
             "label":"Home Tab 1",
             "description":"",
             "view":"navTabs",
+            "defaultParent":"/page-1/home",
+            "defaultHome":true,
             "parent":"aside-home",
             "templateUrl":"assets/includes/horizTab/tab1.html"
         },

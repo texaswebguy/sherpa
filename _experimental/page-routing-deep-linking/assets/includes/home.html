@@ -6,7 +6,6 @@
     <ul class="nav nav-tabs">
         <li ng-repeat="tab in routes"
             ng-class="{active: $state.includes('{{tab.stateName}}')}"
-            ng-class="{active: setDefault(tab.stateName)}"
             ng-click="selectedItem(tab)">
             <a ng-href="#/page-1/home{{tab.url}}">{{tab.label}}</a>
         </li>

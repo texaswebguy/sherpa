@@ -9,11 +9,19 @@ var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
-	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
+	sherpaApp.config(['$stateProvider', '$urlRouterProvider', function($stateProvider, $urlRouterProvider){
 	    _.each(SHERPA.PROTO_ROUTES, function(route){
 
             if ( route.parent ) {
                 route.parent =  SHERPA.PROTO_ROUTES[route.parent];
+            }
+
+            if ( route.defaultParent ) {
+                $urlRouterProvider.when( route.defaultParent, route.defaultParent +  route.url );
+            }
+
+            if ( route.defaultHome ) {
+                $urlRouterProvider.otherwise( route.defaultParent +  route.url );
             }
 
             /**
