@@ -132,7 +132,9 @@ Sherpa.urlQuery = function () {
 
 
 Sherpa.msg = function(textkey,t_data) {
-	
+	if(t_data === "undefined") {
+		t_data = undefined;
+	}
 	var msg = Sherpa.viewModel.content[textkey], 
 		regex = /\{[0-9]\}*/,
 		i = 0,

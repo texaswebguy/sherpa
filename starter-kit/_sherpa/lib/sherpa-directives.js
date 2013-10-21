@@ -6,34 +6,48 @@ console.log(angular_modules)
 var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 
+
 if(!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
-	/*
-		This works off the following object in the config overrides json
-		 "PROTO_ROUTES": {
-	    	"home": {
-	            "name":"get-started",
-	            "url":"/",
-	            "label":"Getting Started",
-	            "templateUrl":"pages/get-started/index.html",
-	            "controller":"getStartedController"
-	        }
-		}
-	*/
-
 	sherpaApp.config(['$stateProvider', function($stateProvider, $urlRouterProvider){
-	    _.each(SHERPA.PROTO_ROUTES, function(route, index){
-	    	if(route.parent) {
-	    		SHERPA.PROTO_ROUTES[index].parent = SHERPA.PROTO_ROUTES[route.parent];
-	    	}
-	        $stateProvider.state(route);
+	    _.each(SHERPA.PROTO_ROUTES, function(route){
+
+            if ( route.parent ) {
+                route.parent =  SHERPA.PROTO_ROUTES[route.parent];
+            }
+
+            /**
+             * Target Specific views in html:
+             * <section ui-view="masthead" ></section>
+             *
+             * @type {{}}
+             */
+            var viewsObject = {};
+            viewsObject[ route.view ] = {
+                templateUrl: route.templateUrl
+            };
+
+            route.views = viewsObject;
+
+	        $stateProvider.state(route.stateName, route );
+
 	    });
 	}]);
 
+    angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+    });
+
+	/*
 	sherpaApp.run(['$state', function($state){
+
+        $rootScope.$state = $state;
+        $rootScope.$stateParams = $stateParams;
+
 	    $state.transitionTo(SHERPA.PROTO_ROUTES[_.first(_.keys(SHERPA.PROTO_ROUTES))])
 	}]);
-
+*/
 }
 
 
