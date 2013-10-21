@@ -19,6 +19,10 @@ sherpaApp.controller("navTabController", function($scope) {
         });
     };
 
+    $scope.setDefault = function ( item ) {
+        console.log( "DEFAULT --> " + item );
+    }
+
 
 });
 

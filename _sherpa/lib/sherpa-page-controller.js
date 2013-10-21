@@ -13,7 +13,7 @@
 
 sherpaApp.controller("pageController", function($scope, $state,$http) {   
 
-    console.log( "EXECUTE --> sherpa-page-controller.js");
+
     if(SHERPA.PROTO_ROUTES) {
         //TODO not sure this is necessary since each page has their own controller
         var routes = [];
