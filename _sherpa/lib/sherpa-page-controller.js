@@ -14,7 +14,7 @@
 
 
 sherpaApp.controller("pageController", function($scope, $state) {
-    console.log( "EXECUTE --> sherpa-page-controller.js");
+
     if(SHERPA.PROTO_ROUTES) {
         var routes = [];
         _.each(_.keys(SHERPA.PROTO_ROUTES),function(route){
