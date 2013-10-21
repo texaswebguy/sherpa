@@ -4103,7 +4103,7 @@ div.navbar-inner {
   position: relative;
   z-index: 2;
 }
-.tabbable.tabs-aside .tab-content {
+.tabbable.tabs-aside > .tab-content {
   position: relative;
   padding-left: 4.08163265%;
   padding-right: 4.08163265%;
@@ -4118,7 +4118,7 @@ div.navbar-inner {
   box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);
   margin-bottom: 20px;
 }
-.tabbable.tabs-aside .tab-content:before {
+.tabbable.tabs-aside > .tab-content:before {
   content: " ";
 }
 .nav-list {

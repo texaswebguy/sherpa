@@ -358,16 +358,18 @@ Sherpa.globalEvents = {
 							action: "update_textkey",
 							textkey: textkey,
 							path: SHERPA.PATH_CONTENT_FILE,
-							filename: SHERPA.CONTENT_FILENAME,
-							filename_path: SHERPA.PATH_CONTENT_FILE+SHERPA.CONTENT_FILENAME,
+							filename_path: SHERPA.CONTENT_FILENAME,
 							content: Sherpa.viewModel.content[textkey]
 						}
 					}
-
-					
-
 					amplify.request('sherpa-api', post_data, function (data) {
-						data = JSON.parse(data);
+						
+						try {
+							data = JSON.parse(data);
+						} catch (err) {
+							console.error(data);
+						}
+						
 				        if(data.success) {
 				        	//TODO -mcorporate modal
 				        	alert(data.msg)
