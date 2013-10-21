@@ -370,7 +370,7 @@
 }
 html.editable .editable:hover {
   outline: 1px dashed red;
-  cursor: url(../images/edit-cursor.png), auto;
+  cursor: url(../img/edit-cursor.png), auto;
 }
 html.editable .editable.editing:hover {
   outline: 1px solid red;

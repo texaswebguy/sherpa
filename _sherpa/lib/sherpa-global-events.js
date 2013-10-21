@@ -221,7 +221,15 @@ Sherpa.globalEvents = {
 
 	   					var textkey = $(event.currentTarget).attr('data-textkey'),
 		   					markdownFilename = $(event.currentTarget).attr('data-filename'),
-		   					editControls = '<div class="edit-controls"><button class="btn btn-mini cancel">Cancel</button>&nbsp;<button class="btn btn-mini btn-secondary save">Save</button></div>',
+		   					isMarkdown = (function() {
+		   						console.log(textkey)
+		   						if(textkey.match("_markdown")) {
+		   							return "checked";
+		   						} else {
+		   							return "";
+		   						}
+		   					})(),
+		   					editControls = '<div class="edit-controls"><label for="is-markdown"><input type="checkbox" id="is-markdown" class="is-markdown" '+isMarkdown+'/> Markdown</label><button class="btn btn-mini cancel">Cancel</button>&nbsp;<button class="btn btn-mini btn-secondary save">Save</button></div>',
 		   					contentContainer = $(event.currentTarget),
 		   					id = Sherpa.uuid();
 		   				Sherpa.session.store(id,_.escape($(event.currentTarget).html()));
@@ -273,6 +281,8 @@ Sherpa.globalEvents = {
 					event.stopPropagation();
 
 					var textkey = $(event.currentTarget).parent().prev().attr('data-textkey'),
+						originallyMarkdown = !_.isEmpty(textkey.match(/_markdown/)),
+						isMarkdown = $(event.currentTarget).parent().find('.is-markdown').is(':checked'),
 						t_data = $(event.currentTarget).parent().prev().attr('data-msgdata'),
 						markdownFilename = $(event.currentTarget).parent().prev().attr('data-filename'),
 						controls = $(event.currentTarget).parent(),
@@ -282,14 +292,14 @@ Sherpa.globalEvents = {
 					controls.remove();
 
 					if(markdownFilename){
-						contentContainer = $('[data-filename="'+markdownFilename+'"]');
+						contentContainer = $('[data-filename="'+markdownFilename+'"].editing');
 						newContent = contentContainer.find('pre').text();
 						var convertMD = new Sherpa.converter();
-						contentContainer.parent().html(convertMD.makeHtml(newContent));
-						console.log(markdownFilename)
+						contentContainer.html(convertMD.makeHtml(newContent));
+						contentContainer.removeClass("editing");
 						post_data = {
 							action: "update_markdown",
-							filename: markdownFilename,
+							filename_path: SHERPA.PATH_CORE_BIN.replace(/_sherpa|bin/g, "..")+markdownFilename,
 							content: newContent
 						}
 					} else {
@@ -317,9 +327,32 @@ Sherpa.globalEvents = {
 							});
 							t_data = tempArray;
 						}
-						contentContainer = $('[data-textkey="'+textkey+'"]');
-						console.log("textkey",textkey,"new content",contentContainer.text())
+						//TODO need to determin if taxtkey has been converted to markdown
+
+
+						contentContainer = $('[data-textkey="'+textkey+'"].editing');
+
+						//console.log("textkey",textkey,"new content",contentContainer.text())
+						if(originallyMarkdown != isMarkdown) {
+							if(originallyMarkdown) {
+								//convert from markdown to regular
+								console.log("convert to regular")
+								delete Sherpa.viewModel.content[textkey];
+								Sherpa.viewModel.content[textkey.replace("_markdown","")] = contentContainer.text();
+								textkey = textkey.replace("_markdown","");
+							} else {
+								//convert to markdown
+								console.log("convert to markdown")
+								Sherpa.viewModel.content[textkey+"_markdown"] = contentContainer.text();
+								delete Sherpa.viewModel.content[textkey];
+								textkey = textkey+"_markdown";
+							}
+						}
 						Sherpa.viewModel.content[textkey] = contentContainer.text();
+						if(_.isUndefined(t_data)){ var t_data = null};
+						contentContainer.removeAttr('contenteditable');
+						contentContainer.removeAttr('data-orig-html-id');
+						contentContainer = $('[data-textkey="'+textkey+'"]');
 						contentContainer.parent().html(Sherpa.msg(textkey.replace("_markdown",""),t_data));
 						post_data = {
 							action: "update_textkey",
@@ -327,20 +360,19 @@ Sherpa.globalEvents = {
 							path: SHERPA.PATH_CONTENT_FILE,
 							filename: SHERPA.CONTENT_FILENAME,
 							filename_path: SHERPA.PATH_CONTENT_FILE+SHERPA.CONTENT_FILENAME,
-							content: Sherpa.viewModel.content,
-							textkey_content: Sherpa.viewModel.content[textkey]
+							content: Sherpa.viewModel.content[textkey]
 						}
-						console.log("post_data",post_data)
 					}
 
-					contentContainer.removeAttr('contenteditable');
-					contentContainer.removeAttr('data-orig-html-id');
+					
 
 					amplify.request('sherpa-api', post_data, function (data) {
-				        if(data == 0) {
-				        	alert("Sucessfully saved the content")
+						data = JSON.parse(data);
+				        if(data.success) {
+				        	//TODO -mcorporate modal
+				        	alert(data.msg)
 				        } else {
-				        	alert("Saving content failed: ",data)
+				        	alert(data.msg)
 				        }
 				    })
 
