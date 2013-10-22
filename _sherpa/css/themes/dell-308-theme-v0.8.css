@@ -62,6 +62,10 @@ need to figure out what to do about android and trebuchet... it would be terribl
   font-weight: normal;
   font-style: normal;
 }
+a {
+  color: #007db8;
+  text-decoration: none;
+}
 a:hover,
 a:focus {
   text-decoration: underline;
@@ -3346,11 +3350,12 @@ li.dropdown .dropdown-menu {
   border-width: 1px;
 }
 .btn,
-.btn-tertiary {
+.btn-tertiary,
+.btn-default {
   padding: 7px 11px;
   margin-bottom: 0;
   font-size: 14px;
-  line-height: 1.2857142861;
+  line-height: 20px;
   text-align: center;
   color: #ffffff;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -3383,30 +3388,40 @@ li.dropdown .dropdown-menu {
 }
 .btn:hover,
 .btn-tertiary:hover,
+.btn-default:hover,
 .btn:focus,
 .btn-tertiary:focus,
+.btn-default:focus,
 .btn:active,
 .btn-tertiary:active,
+.btn-default:active,
 .btn.active,
 .btn-tertiary.active,
+.btn-default.active,
 .btn.disabled,
 .btn-tertiary.disabled,
+.btn-default.disabled,
 .btn[disabled],
-.btn-tertiary[disabled] {
+.btn-tertiary[disabled],
+.btn-default[disabled] {
   color: #ffffff;
   background-color: #edf1f3;
   *background-color: #dee5e9;
 }
 .btn:active,
 .btn-tertiary:active,
+.btn-default:active,
 .btn.active,
-.btn-tertiary.active {
+.btn-tertiary.active,
+.btn-default.active {
   background-color: #ced9df \9;
 }
 .btn:hover,
 .btn-tertiary:hover,
+.btn-default:hover,
 .btn:focus,
-.btn-tertiary:focus {
+.btn-tertiary:focus,
+.btn-default:focus {
   text-decoration: none;
   background-position: 0 -15px;
   -webkit-transition: background-position 0.1s linear;
@@ -3414,7 +3429,8 @@ li.dropdown .dropdown-menu {
   color: #007db8;
 }
 .btn:focus,
-.btn-tertiary:focus {
+.btn-tertiary:focus,
+.btn-default:focus {
   outline: thin dotted #333;
   outline: 5px auto -webkit-focus-ring-color;
   outline-offset: -2px;
@@ -3422,8 +3438,10 @@ li.dropdown .dropdown-menu {
 }
 .btn.active,
 .btn-tertiary.active,
+.btn-default.active,
 .btn:active,
-.btn-tertiary:active {
+.btn-tertiary:active,
+.btn-default:active {
   background-image: none;
   outline: 0;
   -webkit-box-shadow: inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05);
@@ -3431,8 +3449,10 @@ li.dropdown .dropdown-menu {
 }
 .btn.disabled,
 .btn-tertiary.disabled,
+.btn-default.disabled,
 .btn[disabled],
-.btn-tertiary[disabled] {
+.btn-tertiary[disabled],
+.btn-default[disabled] {
   cursor: not-allowed;
   background-image: none;
   opacity: 0.4;
@@ -3456,7 +3476,7 @@ li.dropdown .dropdown-menu {
 .btn-lg {
   padding: 10px 16px;
   font-size: 14px;
-  line-height: 1.33;
+  line-height: 20px;
   border-radius: 2px;
 }
 .btn-lg [class^="icon-"],
@@ -3467,16 +3487,12 @@ li.dropdown .dropdown-menu {
 .btn-xs {
   padding: 5px 10px;
   font-size: 11.9px;
-  line-height: 1.5;
+  line-height: 18px;
   border-radius: 2px;
 }
 .btn-small [class^="icon-"],
 .btn-small [class*=" icon-"] {
   margin-top: 0;
-}
-.btn-mini [class^="icon-"],
-.btn-mini [class*=" icon-"] {
-  margin-top: -1px;
 }
 .btn-xs {
   padding: 1px 5px;
@@ -4077,9 +4093,18 @@ input[type="submit"].btn.btn-xs {
 .alert-block p + p {
   margin-top: 5px;
 }
+.nav-tabs {
+  margin-left: 0;
+  margin-bottom: 20px;
+  list-style: none;
+}
 .nav-tabs > li > a,
-.nav-pills > li > a {
+.nav-tabs .nav-pills > li > a {
   margin-right: 10px;
+  background-color: #eeeeee;
+  border-radius: 4px 4px 0 0;
+  line-height: 20px;
+  border: 1px solid #cccccc;
 }
 .nav-tabs > .active > a,
 .nav-tabs > .active > a:hover,
@@ -4088,12 +4113,33 @@ input[type="submit"].btn.btn-xs {
   border: 1px solid #cccccc;
   border-bottom-color: transparent;
 }
+.nav > li > a {
+  position: relative;
+  display: block;
+}
 .nav > li > a:hover,
 .nav > li > a:focus {
   background-color: #cce7f3;
 }
-.nav > .disabled > a {
+.nav > li.disabled > a {
   color: #aaaaaa;
+  pointer-events: none;
+  cursor: default;
+}
+.nav-pills > li.active > a,
+.nav-pills > li.active > a:hover,
+.nav-pills > li.active > a:focus {
+  color: #ffffff;
+  background-color: #007db8;
+}
+.nav-pills > li > a {
+  padding-top: 8px;
+  padding-bottom: 8px;
+  margin-top: 2px;
+  margin-bottom: 2px;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
 }
 .nav-tabs .open .dropdown-toggle,
 .nav-pills .open .dropdown-toggle,
@@ -4124,7 +4170,7 @@ input[type="submit"].btn.btn-xs {
 .navbar-search .search-query:-ms-input-placeholder {
   padding-top: 3px;
 }
-.navbar-search .search-query::-webkit-input-placeholder {
+.navbar-search .search-query:-webkit-input-placeholder {
   padding-top: 3px;
 }
 .navbar-inverse .navbar-search .search-query {
@@ -4170,6 +4216,67 @@ input[type="submit"].btn.btn-xs {
 }
 .tabbable.tabs-left.tabs-gray-light .tab-content {
   margin-top: 20px;
+}
+.tabs-left .tab-content {
+  width: auto;
+}
+.tabs-left > .nav-tabs,
+.tabs-left > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-bottom: none;
+  border-right: 1px solid #cccccc;
+}
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:hover,
+.tabs-left > .nav-tabs .active > a:focus,
+.tabs-left > .nav-tabs .active > a:focus {
+  border-color: #cccccc transparent #cccccc #cccccc;
+}
+.tabs-left > .nav-tabs > li,
+.tabs-left > .nav-tabs > li {
+  float: none;
+}
+.tabs-left > .nav-tabs > li > a,
+.tabs-left > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  min-width: 100px;
+  max-width: 125px;
+  margin-bottom: 3px;
+}
+.tabs-right > .nav-tabs,
+.tabs-right > .nav-tabs {
+  float: left;
+  margin-right: 19px;
+  border-bottom: none;
+  border-right: 1px solid #cccccc;
+}
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:hover,
+.tabs-right > .nav-tabs .active > a:focus,
+.tabs-right > .nav-tabs .active > a:focus {
+  border-color: #cccccc transparent #cccccc #cccccc;
+}
+.tabs-right > .nav-tabs > li,
+.tabs-right > .nav-tabs > li {
+  float: none;
+}
+.tabs-right > .nav-tabs > li > a,
+.tabs-right > .nav-tabs > li > a {
+  margin-right: -1px;
+  -webkit-border-radius: 4px 0 0 4px;
+  -moz-border-radius: 4px 0 0 4px;
+  border-radius: 4px 0 0 4px;
+  min-width: 100px;
+  max-width: 125px;
+  margin-bottom: 3px;
 }
 .tabbable.tabs-aside .nav-aside {
   position: relative;
@@ -4513,12 +4620,20 @@ input[type="submit"].btn.btn-xs {
 .pager li {
   display: inline;
 }
+.pager li.disabled {
+  cursor: not-allowed;
+  background-image: none;
+  opacity: 0.4;
+  filter: alpha(opacity=40);
+  -webkit-box-shadow: none;
+  box-shadow: none;
+}
 .pager li > a,
 .pager li > span {
   padding: 7px 11px;
   margin-bottom: 0;
   font-size: 14px;
-  line-height: 1.2857142861;
+  line-height: 20px;
   text-align: center;
   color: #ffffff;
   text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
@@ -4547,6 +4662,7 @@ input[type="submit"].btn.btn-xs {
   text-overflow: nowrap;
   -webkit-box-shadow: none;
   box-shadow: none;
+  color: #007db8 !important;
 }
 .pager li > a:hover,
 .pager li > span:hover,
@@ -4615,84 +4731,17 @@ input[type="submit"].btn.btn-xs {
 .pager li > span > .icon-ui-arrowright {
   margin: 1px 0 0 0;
 }
-.pager .next > a,
-.pager .next > span {
+.pager li > a.disabled,
+.pager li > span.disabled {
+  margin-top: -3px !important;
+}
+.pager li.next > a,
+.pager li.next > span {
   float: right;
 }
-.pager .previous > a,
-.pager .previous > span {
+.pager li.previous > a,
+.pager li.previous > span {
   float: left;
-}
-.pager .disabled > a,
-.pager .disabled > a:hover,
-.pager .disabled > a:focus,
-.pager .disabled > span {
-  cursor: default;
-  opacity: 65;
-  filter: alpha(opacity=6500);
-  -webkit-box-shadow: none;
-  box-shadow: none;
-  color: #007db8;
-  text-shadow: 0 1px 1px rgba(255, 255, 255, 0.75);
-  background-image: -webkit-gradient(linear, left 0%, left 100%, from(#fefefe), to(#edf1f3));
-  background-image: -webkit-linear-gradient(top, #fefefe, 0%, #edf1f3, 100%);
-  background-image: -moz-linear-gradient(top, #fefefe 0%, #edf1f3 100%);
-  background-image: linear-gradient(to bottom, #fefefe 0%, #edf1f3 100%);
-  background-color: #f7f9fa;
-  background-image: -moz-linear-gradient(top, #fefefe, #edf1f3);
-  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#fefefe), to(#edf1f3));
-  background-image: -webkit-linear-gradient(top, #fefefe, #edf1f3);
-  background-image: -o-linear-gradient(top, #fefefe, #edf1f3);
-  background-image: linear-gradient(to bottom, #fefefe, #edf1f3);
-  background-repeat: repeat-x;
-  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fffefefe', endColorstr='#ffedf1f3', GradientType=0);
-  border-color: #edf1f3 #edf1f3 #bfcdd4;
-  border-color: rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.1) rgba(0, 0, 0, 0.25);
-  *background-color: #edf1f3;
-  /* Darken IE7 buttons by default so they stand out more given they won't have borders */
-
-  filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-  background-position: 0 0;
-  -webkit-transition: background-position 0s linear;
-  transition: background-position 0s linear;
-}
-.pager .disabled > a:hover,
-.pager .disabled > a:hover:hover,
-.pager .disabled > a:focus:hover,
-.pager .disabled > span:hover,
-.pager .disabled > a:focus,
-.pager .disabled > a:hover:focus,
-.pager .disabled > a:focus:focus,
-.pager .disabled > span:focus,
-.pager .disabled > a:active,
-.pager .disabled > a:hover:active,
-.pager .disabled > a:focus:active,
-.pager .disabled > span:active,
-.pager .disabled > a.active,
-.pager .disabled > a:hover.active,
-.pager .disabled > a:focus.active,
-.pager .disabled > span.active,
-.pager .disabled > a.disabled,
-.pager .disabled > a:hover.disabled,
-.pager .disabled > a:focus.disabled,
-.pager .disabled > span.disabled,
-.pager .disabled > a[disabled],
-.pager .disabled > a:hover[disabled],
-.pager .disabled > a:focus[disabled],
-.pager .disabled > span[disabled] {
-  color: #007db8;
-  background-color: #edf1f3;
-  *background-color: #dee5e9;
-}
-.pager .disabled > a:active,
-.pager .disabled > a:hover:active,
-.pager .disabled > a:focus:active,
-.pager .disabled > span:active,
-.pager .disabled > a.active,
-.pager .disabled > a:hover.active,
-.pager .disabled > a:focus.active,
-.pager .disabled > span.active {
-  background-color: #ced9df \9;
 }
 .modal {
   padding: 1.428571429;

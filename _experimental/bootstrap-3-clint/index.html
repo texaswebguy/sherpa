@@ -1087,26 +1087,26 @@
           <h3>Centered</h3>
           <div id="pager-HTML-code-1">
             <ul class="pager">
-              <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
-              <li><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
+              <li><a href="#" class="previous"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
+              <li><a href="#" class="next">Next&nbsp;<span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
             </ul>
 
         <h3>Centered with page reference</h3>
           <div id="pager-HTML-code-2">
             <ul class="pager">
-              <li><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
-              <li><span class="btn disabled">3 of 9</span></li>  
-              <li><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
+              <li><a href="#" class="previous"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
+              <li><span class="btn btn-default disabled">3 of 9</span></li>  
+              <li><a href="#" class="next">Next&nbsp;<span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
             </ul>
           </div>  
 
 
-        <h3>Justified  with page reference</h3>
+        <h3>Justified with page reference</h3>
           <div id="pager-HTML-code-3">
           <ul class="pager">
-            <li class="previous disabled"><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span> Prev</a></li>
-            <li><span class="btn disabled">1 of 9</span></li>
-            <li class="next"><a href="#">Next <span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
+            <li class="previous"><a href="#"><span aria-hidden="true" class="icon-ui-arrowleft"></span>&nbsp;Prev</a></li>
+            <li><span class="btn btn-default disabled">1 of 9</span></li>
+            <li class="next"><a href="#">Next&nbsp;<span aria-hidden="true" class="icon-ui-arrowright"></span></a></li>
           </ul>
           </div>
         </div>
@@ -1169,9 +1169,13 @@
 <hr>
 
 <!-- =============== pagers end ================ -->
+
+
 <!-- ================= tabs ==================== -->
 <section id="tabs" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/tabs.html'">    
-<div class="row">
+
+
+<div class="row"> <!-- tabbable -->
     <div class="page-header">
       <h2>Tabs</h2>
     </div> 
@@ -1194,8 +1198,61 @@
     </div>
   </div>
 </div> <!-- /tabbable -->
-        </div>
-        <div class="da-all ta-all ma-all hide" id="tabbable-aside-example-HTML">
+
+<p>
+  <hr>
+</p>
+
+<div class="tabbable tabs-bordered"><!-- tabbable-bordered -->
+  <ul class="nav nav-tabs">
+    <li class=""><a href="#D" data-toggle="tab">Section 1</a></li>
+    <li class=""><a href="#E" data-toggle="tab">Section 2</a></li>
+    <li class="active"><a href="#F" data-toggle="tab">Section 3</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade" id="D">
+      <p>I'm in Section A.</p>
+    </div>
+    <div class="tab-pane fade" id="E">
+      <p>Howdy, I'm in Section B.</p>
+    </div>
+    <div class="tab-pane fade active in" id="F">
+      <p>What up girl, this is Section C.</p>
+    </div>
+  </div>
+</div><!-- /tabbable-bordered -->
+
+<p>
+  <hr>
+</p>
+
+
+<div class="tabbable tabs-left"><!-- tabbable-left -->
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#H" data-toggle="tab">Section 1</a></li>
+    <li class=""><a href="#I" data-toggle="tab">Section 2</a></li>
+    <li class=""><a href="#J" data-toggle="tab">Section 3</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade active in" id="H">
+      <p>I'm in Section A.</p>
+    </div>
+    <div class="tab-pane fade" id="I">
+      <p>Howdy, I'm in Section B.</p>
+    </div>
+    <div class="tab-pane fade" id="J">
+      <p>What up girl, this is Section C.</p>
+    </div>
+  </div>
+</div><!-- /tabbable-left -->
+
+<p>
+  <hr>
+</p>
+
+
+</div>
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="tabbable-aside-example-HTML"><!-- asside -->
           <p>&nbsp;</p>
           <div class="tabbable tabs-aside">
           <div class="da1-da4">
@@ -1269,14 +1326,13 @@
             </div>
           </div>
         </div>
+      </div><!-- /asside -->
 
-      </div>
-
-      <div class="da-all ta-all ma-all">
-          <div class="alert alert-info">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
-            <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
-          </div>
+<div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="alert alert-info">
+      <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+      <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
+    </div>
   <h5>Dell 308 Variations</h5>
   <form id="tab-variations">
     <div class="control-group">
@@ -1311,14 +1367,6 @@
           <code>&lt;div class="tabbable tabs-aside"&gt;</code>  <span class="label">(not in Bootstrap)</span>
         </label>
       </div>
-      <!--
-      <div class="controls">
-        <label class="checkbox">
-          <input type="checkbox" id="tabs-aside" value="tabs-aside">
-          <code>&lt;div class="tabbable tabs-aside"></code>
-        </label>
-      </div>
-    -->
     </div>
   </form>
 
@@ -1356,7 +1404,6 @@
       </div>
       <hr>
     </div>
-
 </section>
 
 

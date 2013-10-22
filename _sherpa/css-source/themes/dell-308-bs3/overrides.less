@@ -163,7 +163,10 @@
 // Scaffolding
 //=======================================================================================================================
 
-
+a {
+  color: @dell-blue;
+  text-decoration: none;
+}
 
 a:hover,
 a:focus {
@@ -1744,14 +1747,14 @@ border: @default-stroke solid @purple !important;
   padding: 7px 11px;
   margin-bottom: 0; // For input.btn
   font-size: @font-size-base;
-  line-height: @line-height-base * .9;
+  line-height: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
   text-align:center;
   .buttonBackground(@btn-default-bg, @btn-default-bg-highlight, @white, 0 1px 1px rgba(255,255,255,.75));
   border: 1px solid @btn-default-border;
   .border-radius(@border-radius-small);
   text-overflow:nowrap;
   .box-shadow(none); 
-
+    color:@blue !important;
 
   &:hover,
   &:focus {
@@ -1785,10 +1788,11 @@ border: @default-stroke solid @purple !important;
     .opacity(.40);
     .box-shadow(none);
   }
-
 }
 
-.btn, .btn-tertiary {
+
+
+.btn, .btn-tertiary, .btn-default {
  .default-button();
   color:@blue !important;
 }
@@ -1835,10 +1839,10 @@ border: @default-stroke solid @purple !important;
 .btn-small [class*=" icon-"] {
   margin-top: 0;
 }
-.btn-mini [class^="icon-"],
-.btn-mini [class*=" icon-"] {
-  margin-top: -1px;
-}
+// .btn-mini [class^="icon-"],
+// .btn-mini [class*=" icon-"] {
+//   margin-top: -1px;
+// }
 
 // Mini
 .btn-xs {
@@ -2291,62 +2295,98 @@ input[type="submit"].btn {
 }
 
 
-// Block alerts
-// -------------------------
+// ============= Block alerts ================
 
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
-}
-.alert-block > p,
-.alert-block > ul {
-  margin-bottom: 0;
-}
-.alert-block p + p {
+
+  > p,
+  > ul {
+    margin-bottom: 0; 
+  }
+
+  p + p {
   margin-top: 5px;
+  }
 }
 
+// ============== Components: Nav ========================
 
-// Components: Nav
-// navs
-//=======================================================================================================================
+.nav-tabs {
+  margin-left: 0;
+  margin-bottom: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
+  list-style: none;
 
-.nav-tabs > li > a,
-.nav-pills > li > a {
-  margin-right: 10px;
+  > li > a,
+  .nav-pills > li > a {
+    margin-right: 10px;
+    background-color: #eeeeee;
+    border-radius: 4px 4px 0 0;
+    line-height: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
+    border: 1px solid @dell-gray-stroke;
+  }
+
+  // Active state, and it's :hover/:focus to override normal :hover/:focus
+  > .active > a,
+  > .active > a:hover,
+  > .active > a:focus {
+    color: @gray-darker;
+    border: 1px solid @dell-gray-stroke;
+    border-bottom-color: transparent;
+  }
 }
 
-// Active state, and it's :hover/:focus to override normal :hover/:focus
-.nav-tabs > .active > a,
-.nav-tabs > .active > a:hover,
-.nav-tabs > .active > a:focus {
-  color: @gray-darker;
-  border: 1px solid @dell-gray-stroke;
-  border-bottom-color: transparent;
+.nav > li {
+
+  > a {
+    position: relative;
+    display: block;
+
+    &:hover,
+    &:focus {
+      background-color: @dell-highlight-blue;
+    }
+  }
+  // Gray out text
+  &.disabled > a {
+    color: @dell-gray;
+    pointer-events: none;
+    cursor: default;
+  }
+}
+ 
+
+
+// ========== PILLS ================
+
+// Links rendered as pills
+.nav-pills > li{
+
+  // Active state
+  &.active > a,
+  &.active > a:hover,
+  &.active > a:focus {
+    color: @white;
+    background-color: @link-color;
+  }
+
+  > a {
+    padding-top: 8px;
+    padding-bottom: 8px;
+    margin-top: 2px;
+    margin-bottom: 2px;
+    .border-radius(5px);
+  }
 }
 
-.nav > li > a:hover,
-.nav > li > a:focus {
-  background-color: @dell-highlight-blue;
-}
+// ============ Open dropdowns =================
 
-// DISABLED STATES
-// ---------------
-
-// Gray out text
-.nav > .disabled > a {
-  color: @gray;
-}
-
-
-
-// Open dropdowns
-// -------------------------
 .nav-tabs .open .dropdown-toggle,
 .nav-pills .open .dropdown-toggle,
 .nav > li.dropdown.open.active > a:hover,
 .nav > li.dropdown.open.active > a:focus {
-  color:@link-color;
+  color: @link-color;
   background-color: @gray-light;
   border-color: @gray-light;
 }
@@ -2371,17 +2411,18 @@ input[type="submit"].btn {
 .navbar-search {
   margin-top: 3px;
   .search-query {
-      &:-moz-placeholder {
-        padding-top:3px;
-      }
-      &:-ms-input-placeholder {
-        padding-top:3px;
-      }
-      &::-webkit-input-placeholder {
-        padding-top:3px;
-      }
+    &:-moz-placeholder {
+      padding-top:3px;
+    }
+    &:-ms-input-placeholder {
+      padding-top:3px;
+    }
+    &:-webkit-input-placeholder {
+      padding-top:3px;
+    }
   }
 }
+
 .navbar-inverse .navbar-search .search-query {
   color: @gray-darker;
 }
@@ -2423,6 +2464,44 @@ input[type="submit"].btn {
 
 }
 
+.tabs-left {
+  .tab-content {
+    width: auto;
+  }
+  .tabs();
+}
+.tabs-right {
+  .tabs();
+}
+
+.tabs(){
+  > .nav-tabs, 
+  > .nav-tabs {
+    float: left;
+    margin-right: 19px;
+    border-bottom: none;
+    border-right: 1px solid @dell-gray-stroke;
+    .active > a,
+    .active > a:hover,
+    .active > a:focus{
+      border-color: @dell-gray-stroke transparent @dell-gray-stroke @dell-gray-stroke;
+    } 
+
+    > li {
+      float: none;
+
+      > a {
+        margin-right: -1px;
+        -webkit-border-radius: 4px 0 0 4px;
+        -moz-border-radius: 4px 0 0 4px;
+        border-radius: 4px 0 0 4px;
+        min-width: 100px;
+        max-width: 125px;
+        margin-bottom: 3px;
+      }
+    } 
+  }
+}
 
 .tabbable.tabs-aside {
   .nav-aside {
@@ -2437,7 +2516,6 @@ input[type="submit"].btn {
     .box-shadow(-10px 0px 5px -9px rgba(0, 0, 0, .4));
     &:before {
       content:" ";
-
     }
     margin-bottom: @line-height-base;
   }
@@ -2769,43 +2847,41 @@ border-radius: 4px;
   list-style: none;
   text-align: center;
   .clearfix();
-}
-.pager li {
-  display: inline;
-}
-.pager li > a,
-.pager li > span {
-  // same as default button class
-  .default-button();
-  > .icon-ui-arrowleft {
-    margin: 1px 6px 0 -6px;
-  }
-  > .icon-ui-arrowright {
-    margin: 1px 0 0 0;
-  }
-}
+  
+  li {
+    display: inline;
+    &.disabled {
+      cursor: not-allowed;
+      background-image: none;
+      .opacity(.40);
+      .box-shadow(none);
+    }
+    
+    > a,
+    > span {
+      // same as default button class
+      .default-button();
+      > .icon-ui-arrowleft {
+        margin: 1px 6px 0 -6px;
+      }
+      > .icon-ui-arrowright {
+        margin: 1px 0 0 0;
+      }
+      &.disabled {
+        margin-top: -3px !important;
+      }
+    }
 
-.pager .next > a,
-.pager .next > span {
-  float: right;
-}
-.pager .previous > a,
-.pager .previous > span {
-  float: left;
-}
+    &.next > a,
+    &.next > span {
+      float: right;
+    }
 
-.pager .disabled > a,
-.pager .disabled > a:hover,
-.pager .disabled > a:focus,
-.pager .disabled > span {
-  cursor: default;
-  .opacity(65);
-  .box-shadow(none);
-  .buttonBackground(@btn-default-bg, @btn-default-bg-highlight, @link-color, 0 1px 1px rgba(255,255,255,.75));
-  background-position: 0 0;
-  // transition is only when going to hover/focus, otherwise the background
-  // behind the gradient (there for IE<=9 fallback) gets mismatched
-  .transition(background-position 0s linear);
+    &.previous > a,
+    &.previous > span {
+      float: left;
+    }
+  }
 }
 
 
