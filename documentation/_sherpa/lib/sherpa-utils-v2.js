@@ -424,23 +424,16 @@ Sherpa.ready("amplify", function(){
 	    type: "GET"
 	});
 
-
-	//TODO need to make this one call
-	Sherpa.request.define( "save_content", "ajax", {
-		url: SHERPA.PATH_CORE_BIN+SHERPA.CONTENT_SAVE_APP,
-	    type: "POST"
-	});
-
-	Sherpa.request.define( "export_content", "ajax", {
-		url: SHERPA.PATH_CORE_BIN+SHERPA.CONTENT_EXPORT_APP,
-	    type: "POST"
-	});
-
 	Sherpa.request.define( "sherpa-api", "ajax", {
 		url: SHERPA.PATH_CORE_BIN+SHERPA.API_APP,
 	    type: "POST"
 	});
 
+	Sherpa.request.define( "get_json", "ajax", {
+		url: "{filename}",
+	    dataType: "json",
+	    type: "GET"
+	});
 
 
 });
