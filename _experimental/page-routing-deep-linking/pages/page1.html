@@ -14,7 +14,7 @@
 
                     <ul class="nav nav-list nav-aside">
                         <li ng-repeat="tab in routes"
-                            ng-class="{active: $state.includes('{{tab.stateName}}')}"
+                            ng-class="{active: $state.includes('{{tab.id}}')}"
                             ng-click="selectItem(tab)" >
                             <a ng-href="#/page-1{{tab.url}}">
                                 <h2>{{tab.label}}</h2>

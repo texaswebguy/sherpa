@@ -17,5 +17,6 @@
 	"title_todo":"Todo List",
 	"text_todo_status":"{0} of {1} remaining",
 	"title_product_name":"Sherpa",
-	"text_item_label":"This is my label"
+	"text_item_label":"This is my label",
+    "title_page_routing":"Aside Home"
 }
