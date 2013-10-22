@@ -369,28 +369,36 @@
   margin: 0 10px 10px 0;
 }
 html.editable .editable:hover {
-  outline: 1px dashed red;
+  background-color: #FFFFAB;
+  outline: 1px solid #ff0;
+  border-radius: 2px;
   cursor: url(../img/edit-cursor.png), auto;
 }
 html.editable .editable.editing:hover {
-  outline: 1px solid red;
+  background-color: #FFFFAB;
+  outline: 1px solid #ff0;
   cursor: text;
+}
+html.editable .editable.editing:hover {
+  background-color: #FFFFAB;
+  outline: 1px solid #ff0;
+  border-radius: 2px;
 }
 html.editable .editable.editing,
 [contenteditable="true"] {
-  border: 2px solid red;
-  background: #fff;
+  background-color: #FFFFAB;
+  outline: 1px solid #ff0;
   color: #444 !important;
   cursor: text;
 }
 .edit-controls {
-  border: 2px solid red;
+  background-color: #FFFFAB;
+  outline: 1px solid #ff0;
   border-top: 0;
   padding: 5px 7px;
   width: 210px;
   margin-right: 0;
   margin-top: 0px;
-  background: #fff;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-bottomright: 5px;
   border-bottom-right-radius: 5px;
@@ -429,15 +437,46 @@ h3 > .editing > pre,
 h4 > .editing > pre,
 h5 > .editing > pre,
 h6 > .editing > pre {
-  border: 2px solid red;
-  background: #fff;
+  background-color: #FFFFAB;
+  border: 1px solid #ff0;
   color: #444 !important;
   cursor: text;
-  margin-bottom: -2px;
+  margin-bottom: -1px;
 }
 .alert .editable.markdown {
   width: inherit;
 }
 .alert .editable.markdown.editing {
   width: 100%;
+}
+.sherpa-admin {
+  display: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.sherpa-admin.active {
+  display: block !important;
+  opacity: 1;
+}
+.sherpa-admin .sherpa-editor {
+  position: relative;
+}
+.sherpa-admin .sherpa-editor .tab-content {
+  background: #fff;
+}
+.sherpa-admin .sherpa-editor .sherpa-editor-controls {
+  position: relative;
+  width: inherit;
+  z-index: 2;
+  top: 27px;
+  text-align: right;
+  right: 200px;
 }

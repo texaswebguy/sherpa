@@ -41,7 +41,7 @@
 		   		echo json_encode(array('success' => false, 'msg' => 'ERROR: You must provide filename_path and new content.'));
 			}
 	        break;
-	    case "update_markdown":
+	    case "update_file":
 	    	if($data['filename_path'] && $data['content']){
 		        $content = $data['content'];
 		        $filename_path = $data['filename_path'];

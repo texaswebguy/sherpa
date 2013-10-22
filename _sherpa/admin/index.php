@@ -5,6 +5,7 @@
     <title>Dell Sherpa Admin</title>
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <script type="text/javascript">
+    //TODO need to pass the global config through get
       var SHERPA_CONFIG_OVERRIDES = {};
         SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/admin.json";
     </script>
@@ -49,7 +50,7 @@
 					<li class="nav-header">Project</li>
 					<li class="active"><a href="#info" data-toggle="tab">Project Information</a></li>
 					<li><a href="#prototypes" data-toggle="tab">Prototype Index Pages</a></li>
-					<li><a href="#data" data-toggle="tab">Prototype Data</a></li>
+					<li><a href="#data" data-toggle="tab">Prototype Content</a></li>
 					<li class="nav-header">Sherpa Related</li>
 					<li><a href="http://open.gsdprototypes.com/sherpa" target="_blank">Sherpa Site</a></li>
 					<li><a href="../config/core_config.json" target="_blank">Core Settings</a></li>
@@ -105,36 +106,8 @@
 							echo "</ul>";
 						?>
 				    </div>
-				    <div class="tab-pane fade" id="data">
-				      <h2>Prototype Data</h2>
-						<?php
-							$count = 0;
-							function list_data($rootDir){ 
-
-								if ($dir = opendir($rootDir)) {
-								    while (false !== ($file = readdir($dir))) {
-
-								        if ($file != "." && $file != ".." && $file != "Thumb.db" && $file != "launch_prototype.bat") {
-								        	$count++;
-											if(is_dir($rootDir.$file)){ 
-								            	echo '<li><strong>'.$file.'/</strong>';
-								            	echo '<ul>'; 
-								                list_data($rootDir.$file."/");
-								                echo '</ul></li>'; 
-								            } else {
-								            	if(strpos($rootDir.$file,'.json') !== false){
-								            		echo '<li><a href='.$rootDir.$file.'>'.$file.'</a></li>'; 
-								            	}
-								            }
-								        }
-								    }
-								    closedir($dir);
-								}
-							}
-							echo "<ul class=\"unstyled\">";
-							list_data("../../");
-							echo "</ul>";
-						?>
+				    <div class="tab-pane fade" id="data" ng-include="editor/index.html">
+						
 				    </div>
 				    <div class="tab-pane fade" id="js-libraries">
 				      <h2>JavaScript Libraries</h2>

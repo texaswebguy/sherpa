@@ -289,6 +289,7 @@ Sherpa.init.getCoreConfig.onreadystatechange=function() {
 				SHERPA.GLOBAL_CONFIG = Sherpa.init.config_filename;
 				SHERPA.PATH_WEBROOT = Sherpa.init.web_root_path;
 				SHERPA.PATH_CORE = Sherpa.init.core_path+Sherpa.init.core_name;
+				SHERPA.CONFIG_OVERRIDES = SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG;
 			} catch (err) {
 				Sherpa.init.errorMsg("The configuration file you specified "+SHERPA.GLOBAL_CONFIG+" has an error.");
 			}

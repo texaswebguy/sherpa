@@ -111,15 +111,14 @@ Sherpa.counter("Sherpa i18n");
 			}
 		});
 	}
-	SHERPA.PATH_CONTENT_FILE = SHERPA.PATH_CORE_BIN.split(/_sherpa/)[0]+"../../../";
-	_.each(location.pathname.split(/\//), function(item){
-		if(!(item == "" || item.match(".html"))) {
-			SHERPA.PATH_CONTENT_FILE += item+"/";
-		}
-	});
+	
+	if(SHERPA.PATH_CORE == "_sherpa/"){
+		SHERPA.PATH_API_DOCUMENT_ROOT = "../.."+location.pathname;
+	} else {
+		SHERPA.PATH_API_DOCUMENT_ROOT = SHERPA.PATH_CORE.replace(/\/_sherpa\//,location.pathname);
+	}
 
-	SHERPA.PATH_CONTENT_FILE += SHERPA.PATH_PROTO_ASSETS+"content/";
-	SHERPA.PATH_CONTENT_FILE = SHERPA.PATH_CONTENT_FILE.replace("//","/");
+	SHERPA.PATH_CONTENT_FILE = SHERPA.PATH_API_DOCUMENT_ROOT + SHERPA.PATH_PROTO_ASSETS+"content/";
 	SHERPA.CONTENT_FILENAME = "messages_"+Sherpa.locale+".json"
 
 Sherpa.counter("Sherpa i18n");

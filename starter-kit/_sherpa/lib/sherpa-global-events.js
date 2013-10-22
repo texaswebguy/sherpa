@@ -298,7 +298,7 @@ Sherpa.globalEvents = {
 						contentContainer.html(convertMD.makeHtml(newContent));
 						contentContainer.removeClass("editing");
 						post_data = {
-							action: "update_markdown",
+							action: "update_file",
 							filename_path: SHERPA.PATH_CORE_BIN.replace(/_sherpa|bin/g, "..")+markdownFilename,
 							content: newContent
 						}
@@ -399,6 +399,10 @@ Sherpa.globalEvents = {
 					},200);
 				});	
 			});
+
+//todo insert editor
+
+//<section ng-include="'../../_sherpa/admin/index.html'"></section>
 
 		}
 
