@@ -4,26 +4,24 @@
     "PATH_PROTO_ASSETS": "assets/",
     "PATH_WEBROOT": "",
     "PATH_PROTO_ASSETS": "assets/",
+    "DEFAULT_PROTO_ROUTE": "/",
     "PROTO_ROUTES": {
         "page-1": {
             "id":"page-1",
             "url":"/page-1",
             "label":"Page 1",
-            "view":"masthead",
             "templateUrl":"pages/page1.html"
         },
         "page-2": {
             "id":"page-2",
             "url":"/page-2",
             "label":"Page 2",
-            "view":"masthead",
             "templateUrl":"pages/page2.html"
         },
         "page-3": {
             "id":"page-3",
             "url":"/page-3",
             "label":"Page 3",
-            "view":"masthead",
             "templateUrl":"pages/page3.html"
         },
         "page-1a": {
@@ -103,7 +101,6 @@
             "description":"",
             "view":"navTabs",
             "parentId":"aside-home",
-            "isHomeDefault":true,
             "templateUrl":"assets/includes/horizTab/tab1.html"
         },
         "tab2":{
@@ -122,6 +119,7 @@
             "description":"",
             "view":"navTabs",
             "parentId":"aside-home",
+            "isHomeDefault":true,
             "templateUrl":"assets/includes/horizTab/tab3.html"
         },
         "tab4":{

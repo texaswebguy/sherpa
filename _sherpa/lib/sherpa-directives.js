@@ -55,8 +55,7 @@ function getDefaultToRootArray(targetParentIdName) {
 
 if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
-    var redirectURL;
-
+    var redirectURL = (SHERPA.DEFAULT_PROTO_ROUTE) ? SHERPA.DEFAULT_PROTO_ROUTE : "/";
 
     _.each(SHERPA.PROTO_ROUTES, function (route) {
 
@@ -93,12 +92,16 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
          *
          * @type {{}}
          */
-        var viewsObject = {};
-        viewsObject[ route.view ] = {
-            templateUrl: route.templateUrl
-        };
 
-        route.views = viewsObject;
+        if ( route.view ) {
+            var viewsObject = {};
+            viewsObject[ route.view ] = {
+                templateUrl: route.templateUrl
+            };
+
+            route.views = viewsObject;
+        }
+
 
 
     });
@@ -106,7 +109,10 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
     sherpaApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-
+        /**
+         * $urlRouterProvider and $stateProvider must be parsed in separate
+         * _.each loops to work.
+         */
         _.each(SHERPA.PROTO_ROUTES, function (route) {
 
             if (route.parentURL && route.redirectURL && !route.arrayUrls ) {
@@ -127,6 +133,10 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
         $urlRouterProvider.otherwise( redirectURL );
 
 
+        /**
+         * $urlRouterProvider and $stateProvider must be parsed in separate
+         * _.each loops to work.
+         */
         _.each(SHERPA.PROTO_ROUTES, function (route) {
 
 

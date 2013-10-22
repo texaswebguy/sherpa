@@ -6,7 +6,10 @@ sherpaApp.controller("mastheadController", function($scope) {
 
 
 
-sherpaApp.controller("navTabController", function($scope) {
+sherpaApp.controller("navTabController", function($scope, $state ) {
+
+    $scope.$state = $state;
+
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "navTabs"});
 

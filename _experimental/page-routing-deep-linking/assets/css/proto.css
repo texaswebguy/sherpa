@@ -81,3 +81,110 @@ header .wrapper {
     /*box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
     margin-bottom: 20px;
 }
+
+
+/* HORIZONTAL TABS CSS */
+/* HORIZONTAL TABS CSS */
+/* HORIZONTAL TABS CSS */
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.navTabsWell[ui-view]{
+    min-height: 230px;
+    max-width: 700px;
+}
+
+.navTabsView-enter, .navTabsView-leave {
+    position: absolute;
+    -webkit-transition:all .75s ease-in-out;
+    -moz-transition:all .75s ease-in-out;
+    -o-transition:all .75s ease-in-out;
+    transition:all .75s ease-in-out;
+}
+
+.navTabsView-enter {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*-moz-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*transform:scale3d(0.5, 0.5, 0.5);*/
+}
+
+.navTabsView-enter-active {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(1, 1, 1);*/
+    /*-moz-transform:scale3d(1, 1, 1);*/
+    /*transform:scale3d(1, 1, 1);*/
+}
+
+.navTabsView-leave {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(0, 0, 0);*/
+    /*-moz-transform:translate3d(0, 0, 0);*/
+    /*transform:translate3d(0, 0, 0);*/
+}
+
+.navTabsView-leave-active {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(100px, 0, 0);*/
+    /*-moz-transform:translate3d(100px, 0, 0);*/
+    /*transform:translate3d(100px, 0, 0);*/
+}
+
+/* ASIDE TABS CSS */
+/* ASIDE TABS CSS */
+/* ASIDE TABS CSS */
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.asideTabsWell[ui-view]{
+    min-height: 700px;
+    max-width: 700px;
+}
+
+.asideTabsView-enter, .asideTabsView-leave {
+    position: absolute;
+    -webkit-transition:all .75s ease-in-out;
+    -moz-transition:all .75s ease-in-out;
+    -o-transition:all .75s ease-in-out;
+    transition:all .75s ease-in-out;
+}
+
+.asideTabsView-enter {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*-moz-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*transform:scale3d(0.5, 0.5, 0.5);*/
+}
+
+.asideTabsView-enter-active {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(1, 1, 1);*/
+    /*-moz-transform:scale3d(1, 1, 1);*/
+    /*transform:scale3d(1, 1, 1);*/
+}
+
+.asideTabsView-leave {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(0, 0, 0);*/
+    /*-moz-transform:translate3d(0, 0, 0);*/
+    /*transform:translate3d(0, 0, 0);*/
+}
+
+.asideTabsView-leave-active {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(100px, 0, 0);*/
+    /*-moz-transform:translate3d(100px, 0, 0);*/
+    /*transform:translate3d(100px, 0, 0);*/
+}

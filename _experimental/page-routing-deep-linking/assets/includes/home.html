@@ -1,3 +1,4 @@
+<section>
 <h3>Welcome to Home</h3>
 
 
@@ -7,13 +8,13 @@
         <li ng-repeat="tab in routes"
             ng-class="{active: $state.includes('{{tab.id}}')}"
             ng-click="selectedItem(tab)">
-            <a ng-href="#/page-1/home{{tab.url}}">{{tab.label}}</a>
+            <a ng-href="#/page-1/home{{tab.url}}" >{{tab.label}}</a>
         </li>
     </ul>
 
     <div class="tab-content horiz-tab-content">
 
-        <section ui-view="navTabs"></section>
+        <section class="navTabsWell"  ui-view="navTabs" ng-animate="'navTabsView'"></section>
 
     </div>
 </div>
@@ -53,3 +54,4 @@
     vitae venenatis libero malesuada. Vestibulum vehicula pellentesque ultricies. Aliquam dolor magna, pharetra posuere
     pharetra eu, pulvinar iaculis lacus. Vivamus consectetur sagittis est, aliquam pellentesque augue ullamcorper sed.
     Cras vestibulum tellus sed nunc convallis accumsan. Cras ac nisl ut odio posuere euismod.</p>
+</section>
