@@ -469,3 +469,34 @@ h6 > .editing > pre {
 .alert .editable.markdown.editing {
   width: 100%;
 }
+
+.sherpa-admin {
+  display:none !important;
+  position:absolute;
+  top:0;
+  left:0;
+  z-index:9999;
+  background:#fff;
+  opacity: 0;
+  .transition(opacity .15s linear);
+
+  &.active {
+    display:block !important;
+    opacity: 1;
+  }
+
+  .sherpa-editor {
+    position:relative;
+    .tab-content {
+      background:#fff;
+    }
+    .sherpa-editor-controls {
+      position: relative;
+      width: inherit;
+      z-index: 2;
+      top: 27px;
+      text-align: right;
+      right: 200px;
+    }
+  }
+}

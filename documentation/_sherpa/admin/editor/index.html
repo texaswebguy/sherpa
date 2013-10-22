@@ -1,27 +1,6 @@
 
 <script type="text/javascript">
-    Sherpa.load(
-        {"jsoneditor-css":"editor/jsoneditor-min.css"}
-    );
 
-    Sherpa.js(
-        {"jsoneditor-js":"editor/jsoneditor-min.js"},
-        {"ace":"editor/lib/ace/ace.js"},
-        {"mode-json":"editor/lib/ace/mode-json.js"},
-        {"theme-textmate":"editor/lib/ace/theme-textmate.js"},
-        {"theme-jsoneditor":"editor/lib/ace/theme-jsoneditor.js"},
-        {"jsonlint":"editor/lib/jsonlint/jsonlint.js"}
-    );
-    Sherpa.ready("jsonlint", function(){
-        Sherpa.editor = {}
-        Sherpa.editor.options = {
-            mode: 'tree',
-            modes: ['code', 'form', 'text', 'tree', 'view'], // allowed modes
-            error: function (err) {
-                alert(err.toString());
-            }
-        };            
-    });
 </script>
 <style type="text/css">
     body#jsoneditor {
@@ -40,97 +19,34 @@
     }
 </style>
 
-<div class="da-all">
-    <div class="wrapper">
-        <div class="title top-offset-small">
-          <h1>Sherpa Editor</h1>
-        </div>
+        <h2>Sherpa Editor</h2>
 
-        <div class="tabbable">
+        <div class="tabbable tabs-bordered sherpa-editor">
           <ul class="nav nav-tabs">
             <li class="active"><a href="#content" data-toggle="tab">Content</a></li>
             <li><a href="#config" data-toggle="tab">Configurations</a></li>
             <li><a href="#xref" data-toggle="tab">Resource Cross References</a></li>
           </ul>
           <div class="tab-content">
-            <div class="tab-pane fade active in" id="content">
-                <script type="text/javascript" >
-                    Sherpa.ready("jsonlint", function(){
-                        Sherpa.request({
-                            resourceId: "assets", 
-                            data: {
-                                "locale": Sherpa.locale,
-                                "directory" : "content",
-                                "type" : "messages"
-                            },
-                            success: function(responseJSON){
-                                var content_json = responseJSON;
-                                var content_container = document.getElementById('content-editor');
-                                var editor = new jsoneditor.JSONEditor(content_container, Sherpa.editor.options, content_json);  
-                                console.log(content_container, Sherpa.editor.options, content_json)  
-                            },
-                            error: function(){
-                                console.error("JSON parse error in assets/content/messages_"+SHERPA.DEFAULT_LOCALE+".json")
-                            }
-                        });
-                    });
-
-                </script>
+            <div class="tab-pane fade active in" id="content" ng-init="contentEditor()">
                 <p class="alert alert-info">
                     <button class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-close"></i></button>
                     You can switch editor mode using the mode box.
                 </p>
+                <div class="sherpa-editor-controls">
+                    <button class="btn btn-mini" ng-click="resetContent()">Reset</button>
+                    <button class="btn btn-secondary btn-mini" ng-click="saveContent()">Save</button>
+                </div>
                 <div id="content-editor"></div>
             </div>
-            <div class="tab-pane fade" id="config">
-                <script type="text/javascript" >
-                    Sherpa.ready("jsonlint", function(){
-                        Sherpa.request({
-                            resourceId: "get_json", 
-                            data: {
-                                "filename" : SHERPA.GLOBAL_CONFIG
-                            },
-                            success: function(responseJSON){
-                                var content_json = responseJSON;
-                                var content_container = document.getElementById('config-editor');
-                                var editor = new jsoneditor.JSONEditor(content_container, Sherpa.editor.options, content_json);  
-                                console.log(content_container, Sherpa.editor.options, content_json)  
-                            },
-                            error: function(){
-                                console.error("JSON parse error in "+SHERPA.GLOBAL_CONFIG)
-                            }
-                        });
-                    });
-
-                </script>
+            <div class="tab-pane fade" id="config" ng-init="configEditor()">
                 <p class="alert alert-info">
                     <button class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-close"></i></button>
                     You can switch editor mode using the mode box.
                 </p>
                 <div id="config-editor"></div>
             </div>
-            <div class="tab-pane fade" id="xref">
-                <script type="text/javascript" >
-                    Sherpa.ready("jsonlint", function(){
-                        Sherpa.request({
-                            resourceId: "assets", 
-                            data: {
-                                "locale": Sherpa.locale,
-                                "directory" : "xref",
-                                "type" : "resources"
-                            },
-                            success: function(responseJSON){
-                                var content_json = responseJSON;
-                                var content_container = document.getElementById('xref-editor');
-                                var editor = new jsoneditor.JSONEditor(content_container, Sherpa.editor.options, content_json);  
-                                console.log(content_container, Sherpa.editor.options, content_json)  
-                            },
-                            error: function(){
-                                console.error("JSON parse error in assets/xref/resources_"+SHERPA.DEFAULT_LOCALE+".json")
-                            }
-                        });
-                    });
-                </script>
+            <div class="tab-pane fade" id="xref" ng-init="xrefEditor()">
                 <p class="alert alert-info">
                     <button class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-close"></i></button>
                     You can switch editor mode using the mode box.
@@ -139,6 +55,4 @@
             </div>
           </div>
         </div>
-    </div><!-- end wrapper -->
-</div>
 

@@ -371,7 +371,8 @@
 html.editable .editable:hover {
   background-color: #FFFFAB;
   outline: 1px solid #ff0;
-  border-radius: 2px;  cursor: url(../img/edit-cursor.png), auto;
+  border-radius: 2px;
+  cursor: url(../img/edit-cursor.png), auto;
 }
 html.editable .editable.editing:hover {
   background-color: #FFFFAB;
@@ -447,4 +448,35 @@ h6 > .editing > pre {
 }
 .alert .editable.markdown.editing {
   width: 100%;
+}
+.sherpa-admin {
+  display: none !important;
+  position: absolute;
+  top: 0;
+  left: 0;
+  z-index: 9999;
+  background: #fff;
+  opacity: 0;
+  -webkit-transition: opacity 0.15s linear;
+  -moz-transition: opacity 0.15s linear;
+  -o-transition: opacity 0.15s linear;
+  transition: opacity 0.15s linear;
+}
+.sherpa-admin.active {
+  display: block !important;
+  opacity: 1;
+}
+.sherpa-admin .sherpa-editor {
+  position: relative;
+}
+.sherpa-admin .sherpa-editor .tab-content {
+  background: #fff;
+}
+.sherpa-admin .sherpa-editor .sherpa-editor-controls {
+  position: relative;
+  width: inherit;
+  z-index: 2;
+  top: 27px;
+  text-align: right;
+  right: 200px;
 }
