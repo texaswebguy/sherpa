@@ -103,8 +103,7 @@
             "description":"",
             "view":"navTabs",
             "parentId":"aside-home",
-            "parentURL":["/page-1", "/page-1/home", "/", ""],
-            "redirectURL":"/page-1/home/tab1",
+            "isHomeDefault":true,
             "templateUrl":"assets/includes/horizTab/tab1.html"
         },
         "tab2":{

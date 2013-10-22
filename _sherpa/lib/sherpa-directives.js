@@ -7,8 +7,7 @@ var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 function getParentURL(targetParentIdName) {
 
-    if (targetParentIdName) {
-
+    if (targetParentIdName) { //could be undefined, catch it here
         var tempUrl = "";
         _.each(SHERPA.PROTO_ROUTES, function (item) {
             if (targetParentIdName === item.id) {
@@ -26,30 +25,57 @@ function getParentURL(targetParentIdName) {
     } else {
         return "";
     }
+}
 
+function getDefaultToRootArray(targetParentIdName) {
 
+    var array = [];
+
+    if (targetParentIdName) {
+
+        var hasParent = true;
+
+        while (hasParent) {
+            var tempUrl = getParentURL(targetParentIdName);
+            array.push(tempUrl);
+            array.push(tempUrl + "/");
+
+            if ( SHERPA.PROTO_ROUTES[targetParentIdName] ) {
+                targetParentIdName = SHERPA.PROTO_ROUTES[targetParentIdName].parentId;
+            } else {
+                hasParent = false;
+            }
+        }
+
+        array.push( "/");
+    }
+
+    return array;
 }
 
 if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
+    var redirectURL;
+
 
     _.each(SHERPA.PROTO_ROUTES, function (route) {
 
+        if (route.isDefault || route.isHomeDefault) {
 
-//TODO does not work
-        /**
-         * The strings concatenated are not working in the .when function, though the are exactly the
-         * same as if literal
-         */
-//        if (route.isDefault) {
+            route.parentURL = getParentURL(route.parentId);
+            redirectURL = route.parentURL + route.url;
 
-//            route.parentURL = getParentURL(route.parentId);
-//            route.redirectURL = route.parentURL + route.url;
+        }
 
-//            console.log( "PARENT URL ---> " + parentURL );
-//            console.log( "REDIRECT URL ---> " + redirectURL );
-//;
-//        }
+        if ( route.isHomeDefault ) {
+//            console.log( "home array ---> " + getDefaultToRootArray( route.parentId ) );
+            route.arrayUrls = getDefaultToRootArray( route.parentId );
+        }
+
+        //For ui-view to find parent
+        if (route.parentId) {
+            route.parent = SHERPA.PROTO_ROUTES[ route.parentId ];
+        }
 
 
         //TODO to find html file
@@ -80,35 +106,39 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
     sherpaApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-        console.log(SHERPA.PROTO_ROUTES);
 
         _.each(SHERPA.PROTO_ROUTES, function (route) {
 
-            //TODO does not work
-            /**
-             * The strings concatenated are not working in the .when function, though the are exactly the
-             * same as if literal
+            if (route.parentURL && route.redirectURL && !route.arrayUrls ) {
+                $urlRouterProvider.when(route.parentURL, redirectURL);
+                $urlRouterProvider.when(route.parentURL + "/", redirectURL);
+            }
+
+            if ( route.arrayUrls ) {
+                len = route.arrayUrls.length;
+                for ( var i = 0; i < len; i++ ) {
+                    $urlRouterProvider.when(route.arrayUrls[i], redirectURL);
+                }
+            }
+
+
+        });
+
+        $urlRouterProvider.otherwise( redirectURL );
+
+
+        _.each(SHERPA.PROTO_ROUTES, function (route) {
+
+
+
+            //TODO to find html file
+            /*
+             $scope.$on('$viewContentLoaded',
+             function(event){ ... });
+
+             to add attribute with viewTemplateURL
+
              */
-            if (route.parentURL && route.redirectURL) {
-//                $urlRouterProvider.when( route.parentURL, route.redirectURL);
-            }
-
-            //For ui-view to find parent
-            if (route.parentId) {
-                route.parent = SHERPA.PROTO_ROUTES[ route.parentId ];
-            }
-
-            //TODO does not work
-            /**
-             * Same as above, strings are not working
-             */
-            if (route.isDefault) {
-//                $urlRouterProvider.when( "/page-1/home", "/page-1/home/tab1" );
-//                $urlRouterProvider.when( String(route.parentURL), String(route.redirectURL));
-
-//                console.log("PARENT URL ---> " + route.parentURL);
-//                console.log("REDIRECT URL ---> " + route.redirectURL);
-            }
 
             $stateProvider.state(route.id, route);
 
