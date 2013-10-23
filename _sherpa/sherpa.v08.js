@@ -159,10 +159,8 @@ _.mixin({merge: function(obj) {
 	          if (!_.isArray(obj[prop]) || !_.isArray(source[prop])){
 	            throw 'Error: Trying to combine an array with a non-array (' + prop + ')';
 	          } else {
-	          	_.each(obj[prop],source[prop],function(item){
-	          		obj[prop].push(item);
-	          		obj[prop] = _.uniq(obj[prop]);
-	          	});
+	          	console.log("hello",obj[prop],source[prop])
+	          	_.union(obj[prop],source[prop]);
 	          }
 	        }
 	        else if (_.isObject(obj[prop]) || _.isObject(source[prop])){
@@ -180,80 +178,7 @@ _.mixin({merge: function(obj) {
 	  return obj;
 	}
 });
-
-/*
-
-// Extend a given object with all the properties in passed-in object(s).
-  _.extend = function(obj) {
-    each(slice.call(arguments, 1), function(source) {
-      if (source) {
-        for (var prop in source) {
-          obj[prop] = source[prop];
-        }
-      }
-    });
-    return obj;
-  };
-  */
-
-// Like Extend but does not override child objects
-//https://gist.github.com/kurtmilam/1868955
-_.mixin({merge: function(obj) {
-    var parentRE = /#{\s*?_\s*?}/,
-        slice = Array.prototype.slice,
-        hasOwnProperty = Object.prototype.hasOwnProperty;
-
-    _.each(slice.call(arguments, 1), function(source) {
-        for (var prop in source) {
-            if (hasOwnProperty.call(source, prop)) {
-                if (_.isUndefined(obj[prop]) || _.isFunction(obj[prop]) || _.isNull(source[prop])) {
-                    obj[prop] = source[prop];
-                }
-                else if (_.isString(source[prop]) && parentRE.test(source[prop])) {
-                    if (_.isString(obj[prop])) {
-                        obj[prop] = source[prop].replace(parentRE, obj[prop]);
-                    }
-                }
-                else if (_.isArray(obj[prop]) || _.isArray(source[prop])){
-                    if (!_.isArray(obj[prop]) || !_.isArray(source[prop])){
-                        throw 'Error: Trying to combine an array with a non-array (' + prop + ')';
-                    } else {
-                        _.each(source[prop],function(item){
-                            obj[prop].push(item);
-                            obj[prop] = _.uniq(obj[prop]);
-                        });
-                    }
-                }
-                else if (_.isObject(obj[prop]) || _.isObject(source[prop])){
-                    if (!_.isObject(obj[prop]) || !_.isObject(source[prop])){
-                        throw 'Error: Trying to combine an object with a non-object (' + prop + ')';
-                    } else {
-                        obj[prop] = _.merge(obj[prop], source[prop]);
-                    }
-                } else {
-                    obj[prop] = source[prop];
-                }
-            }
-        }
-    });
-    return obj;
-}
-});
-
-/*
-
- // Extend a given object with all the properties in passed-in object(s).
- _.extend = function(obj) {
- each(slice.call(arguments, 1), function(source) {
- if (source) {
- for (var prop in source) {
- obj[prop] = source[prop];
- }
- }
- });
- return obj;
- };
- */
+console.log(_.merge(["dogs","cats"],["hamsters","dogs"]))
 
 
 // Sherpa GLOBALS:
@@ -365,14 +290,14 @@ Sherpa.init = {
 			    document.body.insertBefore(frag, document.body.childNodes[0]);
 			};	    	
 	    }
-	    $('#sherpa-error .close').click(function(){
+	    /*$('#sherpa-error .close').click(function(){
 	    	Sherpa.init.errorMsgDismiss();
-	    })
+	    })*/
 		return false;
 	},
 	errorMsgDismiss: function() {
-		$('#sherpa-error').remove();
-	}
+/*		$('#sherpa-error').remove();
+*/	}
 }
 //TODO need to put QA into sherpa utils so that it doesn't have to be loaded separately. this is temporary so that utils doesn't fail
 Sherpa.QA = {
@@ -481,9 +406,7 @@ Sherpa.init.getOverrideConfig.onreadystatechange=function() {
 Sherpa.init.resetPaths = function(Sherpa,SHERPA,SHERPA_CONFIG_OVERRIDES,console){
 
 	try{
-
 		_.merge(SHERPA, SHERPA_CONFIG_OVERRIDES);
-
 	} catch (err) {
 		Sherpa.init.errorMsg("Something is wrong with your configurations override file: "+err);
 	}
