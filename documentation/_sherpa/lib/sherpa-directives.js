@@ -141,7 +141,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
              to add attribute with viewTemplateURL
 
              */
-
+             
             $stateProvider.state(route.id, route);
 
         });

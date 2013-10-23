@@ -364,9 +364,14 @@ Sherpa.init.getOverrideConfig.onreadystatechange=function() {
 Sherpa.init.resetPaths = function(Sherpa,SHERPA,SHERPA_CONFIG_OVERRIDES,console){
 
 	try{
-		if(SHERPA_CONFIG_OVERRIDES) {
-			_.extend(SHERPA,SHERPA_CONFIG_OVERRIDES)
-		}
+		if(_.isObject(SHERPA_CONFIG_OVERRIDES) && !_.isEmpty(SHERPA_CONFIG_OVERRIDES) ) {
+            if(SHERPA_CONFIG_OVERRIDES.LOAD_JS_CORE){
+                SHERPA_CONFIG_OVERRIDES.LOAD_JS_CORE = _.union(SHERPA.LOAD_JS_CORE, SHERPA_CONFIG_OVERRIDES.LOAD_JS_CORE);
+                    SHERPA_CONFIG_OVERRIDES.LOAD_JS_CORE = _.reject(SHERPA_CONFIG_OVERRIDES.LOAD_JS_CORE, function(num){ return num == undefined; });
+            }
+	        _.extend(SHERPA, SHERPA_CONFIG_OVERRIDES);
+	        //TODO fix binding - _.extend(SHERPA, SHERPA_CONFIG_OVERRIDES).bind(loadCoreJSLibs);        
+	    }
 	} catch (err) {
 		Sherpa.init.errorMsg("Something is wrong with your configurations override file: "+err);
 	}

@@ -1,0 +1,2 @@
+[1382546332] [error] [client 0.0.0.0] Invalid option: -document_root
+[1382546405] [error] [client 0.0.0.0] Invalid option: -document_root

@@ -12,6 +12,7 @@
 
 
 Sherpa.namespace = function ( source, framework, propList ) {
+
     for (var property in source) {
         //is the property in the approved propList?
         if (_.contains(propList, property)) {
@@ -20,10 +21,10 @@ Sherpa.namespace = function ( source, framework, propList ) {
                 //TODO - clone to Sherpa - future goal
                 Sherpa[property] = source[property];
             } else {
-                Sherpa.QA.logEntry(property + " of " + framework + " aready exists on Sherpa.","namespace collision, sherpa-utils:namespace");
+                Sherpa.QA.logEntry("The key "+ property + " of " + framework + " JS library aready exists on Sherpa.","namespace collision, sherpa-utils:namespace");
             }
         } else {
-            console.log(property + " of " + framework + " is excluded from Sherpa namespace.");
+            Sherpa.counter("The key "+ property + " of " + framework + " JS library is excluded from Sherpa namespace.");
         }
 
     }
@@ -105,6 +106,7 @@ Sherpa.session.storeCleanUp = function(){
 			}
 		});		
 	}
+	Sherpa.counter("Cleaned up session data");
 }
 
 Sherpa.urlQuery = function () {
@@ -261,37 +263,29 @@ Sherpa.lorem = function(options){
 
 }
 
-
 Sherpa.ready("amplify", function() {
-	Sherpa.counter("Loading JS: amplify");
     var props = ["publish", "subscribe", "unsubscribe", "store", "request"];
     Sherpa.namespace(amplify, "amplify", props);
 })
 
 Sherpa.ready("eve-js", function() {
-	Sherpa.counter("Loading JS: eve-js");
     var props = ["debug", "register", "extend", "scope", "attach"];
     Sherpa.namespace(Eve, "Eve", props);
 });
 
 Sherpa.ready("csvParser", function() {
-	Sherpa.counter("Loading JS: csvParser");
     var props = ["defaults", "hooks", "parsers", "toArray", "toArrays", "toObjects", "fromArrays", "fromObjects2CSV"];
     Sherpa.namespace($.csv, "jQuery-CSV", props);
 });
 
 Sherpa.ready("jwerty-js", function() {
-	Sherpa.counter("Loading JS: jwerty-js");
     var props = ["key", "is", "fire","event", "KEYS"];
     Sherpa.namespace(jwerty, "hotkeys", props);
 });
 Sherpa.ready("showdown-js", function() {
-	Sherpa.counter("Loading JS: showdown-js");
     var props = ["extensions", "forEach", "converter"];
     Sherpa.namespace(Showdown, "Markdown", props);
 });
-
-
 
 
 //set up where to load libraries from
@@ -308,7 +302,10 @@ Sherpa.loadCoreJS = function(libName){
 		var obj = {}
 		obj[libName]=SHERPA.PATH_CORE_JS+SHERPA.LIB_JS[libName][SHERPA.LIB_ORIGIN];
 		Sherpa.js(obj);
-		if(SHERPA.ENABLE_CONSOLE_MESSAGES){console.log("Loaded JS: "+libName)}
+		Sherpa.counter("Loading JS: "+libName);
+		Sherpa.ready(libName,function(){
+			Sherpa.counter("Loading JS: "+libName);
+		});
 	} catch (err) {
 		console.error("Had trouble loading JS: "+libName)
 	}
@@ -321,18 +318,27 @@ Sherpa.loadI18NJS = function(locale){
 		}
 		obj["angular-i18n"]=SHERPA.PATH_CORE_JS+SHERPA.PATH_CORE_ANGULAR_I18N.replace(/{{.*}}/,locale)
 		Sherpa.js(obj);
-		if(SHERPA.ENABLE_CONSOLE_MESSAGES){console.log("Loaded i18n for: "+locale)}
+		Sherpa.counter("Loading i18n for: "+locale);
+		Sherpa.ready("angular-i18n",function(){
+			Sherpa.counter("Loading i18n for: "+locale);
+		});	
 	} catch (err) {
 		console.error("Had trouble loading locale JS: "+locale)
 	}
 }
 Sherpa.loadJS = function(jsFilename,libName){
+	try {	
 		var obj = {}
 		if(!libName) {_.str.underscored(_.str.humanize(jsFilename.replace(/.js/,"")))}
 		obj[libName]=SHERPA.PATH_PROTO_JS+jsFilename;
 		Sherpa.js(obj);
-		if(SHERPA.ENABLE_CONSOLE_MESSAGES){console.log("Loaded JS: "+libName)}
-}
+		Sherpa.counter("Loading JS: "+libName);
+		Sherpa.ready(libName,function(){
+			Sherpa.counter("Loading JS: "+libName);
+		});
+	} catch (err) {
+		console.error("Had trouble loading JS: "+libName)
+	}}
 Sherpa.loadCoreCSS = function(libName){
 	try {	
 		var obj = {},path="";
@@ -343,16 +349,16 @@ Sherpa.loadCoreCSS = function(libName){
 		}
 		obj[libName]=path+SHERPA.LIB_CSS[libName][SHERPA.LIB_ORIGIN];
 		Sherpa.load(obj);
-		if(SHERPA.ENABLE_CONSOLE_MESSAGES){console.log("Loaded CSS: "+libName)}
+		Sherpa.counter("Loading CSS: "+libName);
 	} catch (err) {
-		console.error("Had trouble loading locale JS: "+libName)
+		console.error("Had trouble loading CSS: "+libName)
 	}
 }
 Sherpa.loadCSS = function(cssFilename){
 	var obj = {}
 	obj[cssFilename.replace(/.js/,"")]=SHERPA.PATH_PROTO_CSS+cssFilename;
 	Sherpa.load(obj);
-	if(SHERPA.ENABLE_CONSOLE_MESSAGES){console.log("Loaded CSS: "+SHERPA.PATH_PROTO_CSS+cssFilename)}
+	Sherpa.counter("Loading CSS: "+SHERPA.PATH_PROTO_CSS+cssFilename);
 }
 
 // Project Info Utility

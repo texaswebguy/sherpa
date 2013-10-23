@@ -1,7 +1,9 @@
 //Load all angular modules from the core config and create sherpaApp namespace
 
+Sherpa.counter("Angular directives");
 var angular_modules = _.union([], SHERPA.LOAD_ANGULAR_MODULES);
-console.log(angular_modules)
+Sherpa.counter("Angular modules loaded into directives: "+angular_modules);
+
 var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 
@@ -55,7 +57,7 @@ function getDefaultToRootArray(targetParentIdName) {
 
 if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
-    var redirectURL;
+    var redirectURL = (SHERPA.DEFAULT_PROTO_ROUTE) ? SHERPA.DEFAULT_PROTO_ROUTE : "/";
 
 
     _.each(SHERPA.PROTO_ROUTES, function (route) {
@@ -139,7 +141,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
              to add attribute with viewTemplateURL
 
              */
-
+             
             $stateProvider.state(route.id, route);
 
         });
@@ -277,3 +279,4 @@ sherpaApp.directive('markdown', function ($http) {
 });
 
 
+Sherpa.counter("Angular directives");

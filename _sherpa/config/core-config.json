@@ -222,10 +222,6 @@
         "prototype_css": {
             "local": "doc.css"
         },
-        "sherpa_utils": {
-            "local": "sherpa-utils.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-utils.js"
-        },
         "sherpa-page-controller": {
             "local": "sherpa-page-controller.js",
             "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-page-controller.js"
@@ -237,6 +233,10 @@
         "csvParser": {
             "local": "jquery.csv-0.71.min.js",
             "cdn":"https://jquery-csv.googlecode.com/files/jquery.csv-0.71.min.js"
+        },
+        "less": {
+            "local": "less.min.js",
+            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"
         },
         "jwerty-js": {
             "local": "jwerty.js",
