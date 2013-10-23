@@ -159,7 +159,7 @@ _.mixin({merge: function(obj) {
 	          if (!_.isArray(obj[prop]) || !_.isArray(source[prop])){
 	            throw 'Error: Trying to combine an array with a non-array (' + prop + ')';
 	          } else {
-	          	_.each(source[prop],function(item){
+	          	_.each(obj[prop],source[prop],function(item){
 	          		obj[prop].push(item);
 	          		obj[prop] = _.uniq(obj[prop]);
 	          	});
@@ -195,6 +195,65 @@ _.mixin({merge: function(obj) {
     return obj;
   };
   */
+
+// Like Extend but does not override child objects
+//https://gist.github.com/kurtmilam/1868955
+_.mixin({merge: function(obj) {
+    var parentRE = /#{\s*?_\s*?}/,
+        slice = Array.prototype.slice,
+        hasOwnProperty = Object.prototype.hasOwnProperty;
+
+    _.each(slice.call(arguments, 1), function(source) {
+        for (var prop in source) {
+            if (hasOwnProperty.call(source, prop)) {
+                if (_.isUndefined(obj[prop]) || _.isFunction(obj[prop]) || _.isNull(source[prop])) {
+                    obj[prop] = source[prop];
+                }
+                else if (_.isString(source[prop]) && parentRE.test(source[prop])) {
+                    if (_.isString(obj[prop])) {
+                        obj[prop] = source[prop].replace(parentRE, obj[prop]);
+                    }
+                }
+                else if (_.isArray(obj[prop]) || _.isArray(source[prop])){
+                    if (!_.isArray(obj[prop]) || !_.isArray(source[prop])){
+                        throw 'Error: Trying to combine an array with a non-array (' + prop + ')';
+                    } else {
+                        _.each(source[prop],function(item){
+                            obj[prop].push(item);
+                            obj[prop] = _.uniq(obj[prop]);
+                        });
+                    }
+                }
+                else if (_.isObject(obj[prop]) || _.isObject(source[prop])){
+                    if (!_.isObject(obj[prop]) || !_.isObject(source[prop])){
+                        throw 'Error: Trying to combine an object with a non-object (' + prop + ')';
+                    } else {
+                        obj[prop] = _.merge(obj[prop], source[prop]);
+                    }
+                } else {
+                    obj[prop] = source[prop];
+                }
+            }
+        }
+    });
+    return obj;
+}
+});
+
+/*
+
+ // Extend a given object with all the properties in passed-in object(s).
+ _.extend = function(obj) {
+ each(slice.call(arguments, 1), function(source) {
+ if (source) {
+ for (var prop in source) {
+ obj[prop] = source[prop];
+ }
+ }
+ });
+ return obj;
+ };
+ */
 
 
 // Sherpa GLOBALS:

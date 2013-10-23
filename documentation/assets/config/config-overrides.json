@@ -6,9 +6,6 @@
     "ENABLE_CONTENT_EDIT": true,
     "DEFAULT_PROTO_ROUTE" : "/",
     "ENABLE_COUNTER": false,
-    "LOAD_JS_CORE": [
-        "greensockTweenMax"
-    ],
     "PROTO_ROUTES": {
         "home": {
             "id": "home",

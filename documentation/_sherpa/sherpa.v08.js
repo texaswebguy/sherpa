@@ -159,7 +159,7 @@ _.mixin({merge: function(obj) {
 	          if (!_.isArray(obj[prop]) || !_.isArray(source[prop])){
 	            throw 'Error: Trying to combine an array with a non-array (' + prop + ')';
 	          } else {
-	          	_.each(source[prop],function(item){
+	          	_.each(obj[prop],source[prop],function(item){
 	          		obj[prop].push(item);
 	          		obj[prop] = _.uniq(obj[prop]);
 	          	});
