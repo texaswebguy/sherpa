@@ -2,7 +2,6 @@
 Sherpa.js({"pretty-print":"_sherpa/lib/google-code-prettify/prettify.js"}) 
 Sherpa.js({"ZeroClipboard":SHERPA.PATH_CORE_JS+"ZeroClipboard.js"});
 
-
 var initAside = function(){	
 	$('.sherpa-aside').affix({
         offset: {
@@ -151,6 +150,7 @@ sherpaApp.controller("getStartedController", function($scope, $state) {
 });
 
 sherpaApp.controller("cssOverviewController", function($scope, $state) {
+	console.log(">>>>>>>>>>>>>>>>>>>>>>>>hello")
  	$('.footer-back-to-top').show()
 	$scope.prettyPrint = initPrettyPrint();
 	$scope.initAside = initAside();

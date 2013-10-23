@@ -1,3 +1,4 @@
+Sherpa.counter("Angular filters");
 
 // Filters
 //___________________________________________________________________________________________
@@ -6,3 +7,5 @@ sherpaApp.filter('msg', function(){
         return Sherpa.msg(textkey, data);
     }
 });
+
+Sherpa.counter("Angular filters");

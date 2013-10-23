@@ -1,3 +1,4 @@
+Sherpa.counter("Sherpa Page Controller");
 
 /*
     Main Page Controller
@@ -243,3 +244,4 @@ sherpaApp.controller("sherpaAdmin", function($scope, $state, $http) {
 //_.str.titleize(_.str.humanize("sherpaCustomWidgets"))
 });
 
+Sherpa.counter("Sherpa Page Controller");

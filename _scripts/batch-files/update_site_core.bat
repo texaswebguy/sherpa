@@ -1,8 +1,7 @@
 @ECHO off
-::This script is to publish new Sherpa releases for Dell UI nuget
-
-
-::Figure out all needed paths
+:: This script is to copy the _sherpa folder into documentation/_sherpa
+TASKKILL /F /IM mongoose.exe
+TASKKILL /F /IM WinLess.exe
 
 SET BIN=%~dp0
 SET SITECORE=%BIN:_scripts\batch-files=documentation%_sherpa
@@ -15,3 +14,6 @@ MKDIR %SITECORE%
 XCOPY %CORE% %SITECORE% /e /y
 
 
+cd %~dp0..\..\
+start _sherpa\bin\mongoose.exe
+echo "You need to restart WinLess if you need it."

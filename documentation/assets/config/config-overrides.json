@@ -5,54 +5,52 @@
     "PATH_WEBROOT": "",
     "ENABLE_CONTENT_EDIT": true,
     "DEFAULT_PROTO_ROUTE" : "/",
+    "ENABLE_COUNTER": false,
+    "LOAD_JS_CORE": [
+        "greensockTweenMax"
+    ],
     "PROTO_ROUTES": {
         "home": {
             "id": "home",
             "url": "/",
             "label": "",
             "templateUrl": "pages/home/index.html",
-            "view":"page",
-            "controller": "homeController"
+            "view":"page"
         },
         "get-started": {
             "id": "get-started",
             "url": "/get-started",
             "label": "Getting Started",
             "templateUrl": "pages/get-started/index.html",
-            "view":"page",
-            "controller": "getStartedController"
+            "view":"page"
         },
         "css-overview": {
             "id": "css-overview",
             "url": "/css-overview",
             "label": "CSS Overview",
             "templateUrl": "pages/css-overview/index.html",
-            "view":"page",
-            "controller": "cssOverviewController"
+            "view":"page"
         },
         "the-grid": {
             "id": "the-grid",
             "url": "/the-grid",
             "label": "The Grid",
             "templateUrl": "pages/the-grid/index.html",
-            "view":"page",
-            "controller": "cssGridController"
+            "view":"page"
         },
         "prototyping": {
             "id": "prototyping",
             "url": "/prototyping",
             "label": "Prototyping",
             "templateUrl": "pages/prototyping/index.html",
-            "view":"page",
-            "controller": "prototypingController"
+            "view":"page"
         },
         "styleguides": {
             "id": "styleguides",
             "url": "/styleguides",
             "label": "Styleguides",
             "templateUrl": "pages/styleguides/index.html",
-            "view":"page",
-            "controller": "styleguidesController"
+            "view":"page"
         },
         "css-overview-typography": {
             "id": "css-overview-typography",

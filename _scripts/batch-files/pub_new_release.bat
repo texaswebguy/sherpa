@@ -1,8 +1,7 @@
 @ECHO off
-::This script is to publish new Sherpa releases for Dell UI nuget
-
-
-::Figure out all needed paths
+::This script is to publish new Sherpa releases and provide source files for Dell UI nuget
+TASKKILL /F /IM mongoose.exe
+TASKKILL /F /IM WinLess.exe
 
 SET BIN=%~dp0
 SET ROOT=%BIN:\_scripts\batch-files\=%
@@ -82,3 +81,8 @@ echo If you have any questions please contact Bo Lora bo_lora@dell.com >> %START
 echo ---------------------------------
 echo Completed Updating all files
 echo ---------------------------------
+
+
+cd %~dp0..\..\
+start _sherpa\bin\mongoose.exe
+echo "You need to restart WinLess if you need it."

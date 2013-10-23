@@ -1,0 +1,4371 @@
+// Dell 308 Overrides for October release
+// Bo Lora
+
+// Scaffolding
+//=======================================================================================================================
+
+// Body reset
+// -------------------------
+
+body {
+  margin: 0;
+  font-family: @baseFontFamily;
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight;
+  color: @textColor;
+  background-color: @bodyBackground;
+}
+
+
+// Links
+// -------------------------
+
+a {
+  color: @linkColor;
+}
+a:hover,
+a:focus {
+  color: @linkColor;
+  text-decoration: underline;
+}
+
+// Rounded corners
+.img-rounded {
+  .border-radius(@borderRadiusLarge);
+}
+
+// Grid
+//=======================================================================================================================
+
+
+
+
+// Base CSS
+// Type
+//=======================================================================================================================
+
+
+//
+// Typography for Desktop
+// --------------------------------------------------
+
+
+
+// Headings
+// -------------------------
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px 0px (@baseLineHeight / 2) 0px;
+  font-family: @headingsFontFamily;
+  font-weight: @headingsFontWeight;
+  line-height: @baseLineHeight;
+  color: @headingsColor;
+  text-rendering: optimizelegibility; // Fix the character spacing for headings
+  small {
+    font-weight: normal;
+    line-height: 1;
+    color: @grayLight;
+  }
+}
+
+
+h1, h2, h3, h4, h5, h6 {
+  margin: 0px 0px (@baseLineHeight / 2) 0px;
+}
+
+// Allows strong only in h5 and h6 - dell-308-only
+h1, h2, h3, h4 {
+  strong {
+    font-weight:normal;
+  }
+}
+
+h3, h4, h5, h6 {
+  font-family: @themeSansFontFamily;
+}
+
+h1 { 
+  font-size: @baseFontSize * 2.57; // ~36px
+  line-height: @baseLineHeight * 2; // ~40px
+} 
+
+h2 { 
+  font-size: @baseFontSize * 2; // ~28px
+  line-height: @baseLineHeight * 1.6; // ~32px
+} 
+
+h3 { 
+  font-size: @baseFontSize * 1.42; // ~20px
+  line-height: @baseLineHeight * 1.2; // ~24px
+} 
+
+h4 { 
+  font-size: @baseFontSize * 1.29; // ~18px
+  line-height: @baseLineHeight * 1.1; // ~22px
+} 
+
+// Makes h5 and h6 the same - dell-308-only
+
+h5, h6 { 
+  font-size: @baseFontSize * 1.14; // ~16px
+  line-height: @baseLineHeight; // ~20px
+} 
+
+
+/* Header - title - NOTE: not part of Boostrap*/
+.title {
+  text-align: center;
+  background: url(../../images/gray-dark-title-line.png) repeat-x;
+  background-position: 50% 20px;
+  margin-bottom: 20px;
+  display: block;
+}
+
+.title h1 {
+  display: inline-block;
+  background: @bodyBackground;
+  padding: 0px 10px;
+  max-width: 80%;
+}
+
+.lead {
+  margin-bottom: @baseLineHeight;
+  font-size: @baseFontSize * 1.29;
+  font-weight: normal;
+  line-height: @baseLineHeight * 1.1;
+}
+
+
+small {
+  font-size: @baseFontSize * .86; // ~12px
+  font-weight: normal;
+  line-height:  @baseLineHeight * .8;// ~16px
+}
+
+
+// Page header
+// -------------------------
+
+.page-header {
+  border-bottom: 1px solid @dellGrayStroke;
+}
+
+
+
+// Blockquotes
+
+blockquote {
+  border-left: 5px solid @grayLight;
+  &.pull-right {
+    border-right: 5px solid @grayLight;
+  }
+}
+blockquote p {
+  margin-bottom: 0;
+  font-size: @baseFontSize * 1.14;
+  font-weight: normal;
+  line-height: @baseLineHeight * 1.1;
+}
+
+blockquote small {
+  display: block;
+  line-height: @baseLineHeight;
+  color: @grayDark;
+  font-style: italic;
+}
+
+blockquote small cite {
+  font-style: italic;
+}
+
+
+// Utility classes
+.muted          { color: @grayDark; }
+.strike-through { text-decoration:line-through; }
+
+// Abbreviations and acronyms
+abbr[title],
+abbr[data-original-title] {
+  cursor: help;
+  border-bottom: 1px dotted @grayDark;
+}
+
+
+
+//
+// Typography for tablet 
+// --------------------------------------------------
+@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+
+
+  h1 { 
+    font-size: @baseFontSize * 2.28; // ~32px
+    line-height: @baseLineHeight * 1.9; // ~38px
+  } 
+
+  h2 { 
+    font-size: @baseFontSize * 1.85; // ~26px
+    line-height: @baseLineHeight * 1.5; // ~30px
+  } 
+
+  h3 { 
+    font-size: @baseFontSize * 1.42; // ~20px
+    line-height: @baseLineHeight * 1.2; // ~24px
+  } 
+
+  h4 { 
+    font-size: @baseFontSize * 1.29; // ~18px
+    line-height: @baseLineHeight * 1.1; // ~22px
+  } 
+
+  h5 { 
+    font-size: @baseFontSize * 1.14; // ~16px
+    line-height: @baseLineHeight; // ~20px
+  } 
+
+  .lead {
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize * 1.29; // ~18px
+    line-height: @baseLineHeight + 2;  // ~22px
+  }
+
+  .title {
+    background-position: 50% 13px;
+  }
+
+
+}
+
+
+
+//
+// Typography for mobile (Phone)
+// --------------------------------------------------
+@media only screen and (max-width:@mobileMaxWidth) {
+
+
+
+  h1 { 
+    font-size: @baseFontSize * 1.71; // ~24px
+    line-height: @baseLineHeight * 1.4; // ~28px
+  } 
+
+  h2 { 
+    font-size: @baseFontSize * 1.42; // ~20px
+    line-height: @baseLineHeight * 1.2; // ~24px
+  } 
+
+  h3 { 
+    font-size: @baseFontSize * 1.21; // ~17px
+    line-height: @baseLineHeight; // ~20px
+    font-weight:bold;
+  } 
+
+  h4 { 
+    font-size: @baseFontSize * 1.14; // ~16px
+    line-height: @baseLineHeight * 1.1; // ~22px
+  } 
+
+  h5 { 
+    font-size: @baseFontSize; // ~14px
+    line-height: @baseLineHeight; // ~20px
+    font-weight:bold;
+  } 
+
+  .lead {
+    margin-bottom: @baseLineHeight;
+    font-size: @baseFontSize * 1.14;
+    line-height: @baseLineHeight;
+  }
+
+  .title {
+    background-position: 50% 13px;
+  }
+
+
+  // Horizontal layout (like forms) -dell-308-only
+  // In bootstrap this is not handled differently at mobile breakpoint and it looks horrible.
+
+  .dl-horizontal {
+    .clearfix(); // Ensure dl clears floats if empty dd elements present
+    dt {
+      float: left;
+      width: 100%;
+      clear: left;
+      text-align: left;
+      overflow:visible;
+    }
+    dd {
+      margin-left: 10px;
+    }
+  }
+}
+
+
+
+
+//
+// Typographic Colors 
+// NOTE: (Not part of Standard Bootstrap)
+// !important is used so that it overrides any parent directive
+// --------------------------------------------------
+
+// these should be deprecated because they are not in bootstrap like ocnvention
+.white-text     { color: @white !important;  }
+.gray-medium-text   { color: @gray !important; } 
+.gray-text      { color: @gray !important; }
+.lightgray-text   { color: @grayLight !important;  }
+.blue-text      { color: @blue !important; }
+.yellow-text      { color: @yellow !important; }
+.teal-text      { color: @dellTeal !important; }
+.green-text     { color: @green !important;  }
+.orange-text    { color: @orange !important; }
+.red-text       { color: @red !important;  }
+.darkred-text     { color: @dellRedDark !important;  }
+.berry-text     { color: @dellBerry !important;  }
+.purple-text    { color: @purple !important; }
+.navyblue-text    { color: @blueDark !important; }
+
+// new text color class names
+.text {
+  &-white     { color: @white !important;  }
+  &-gray-medium   { color: @gray !important; } 
+  &-gray      { color: @gray !important; }
+  &-gray-light   { color: @grayLight !important;  }
+  &-gray-very-light   { color: @grayLighter !important;  }
+  &-blue      { color: @blue !important; }
+  &-yellow      { color: @yellow !important; }
+  &-teal      { color: @dellTeal !important; }
+  &-green     { color: @green !important;  }
+  &-orange    { color: @orange !important; }
+  &-red       { color: @red !important;  }
+  &-red-dark     { color: @dellRedDark !important;  }
+  &-berry     { color: @dellBerry !important;  }
+  &-purple    { color: @purple !important; }
+  &-navyblue    { color: @blueDark !important; }
+}
+
+
+
+
+// code
+//=======================================================================================================================
+
+
+
+
+
+
+// Collapsible Items (Dell 308 only)
+//=======================================================================================================================
+
+
+// When uising triangles inside of a collapse scenario the size is reduced
+
+[data-toggle="collapse"] .icon-ui-triangledown, [data-toggle="collapse"] .icon-ui-triangleup {
+  font-size:14px;
+}
+
+a[data-toggle="collapse"] {
+  text-decoration:none;
+}
+
+[data-toggle="collapse"] {
+  cursor:pointer;
+}
+
+.hide-expanded, 
+.less,
+.collapsed .show-collapsed,
+.collapsed .more {
+  display: block;
+}
+.collapsed .hide-expanded, 
+.collapsed .less, 
+.more,
+.show-collapsed {
+  display: none;
+}
+
+
+
+// forms
+//=======================================================================================================================
+
+
+
+
+// GENERAL STYLES
+// --------------
+
+form {
+  margin: 0;
+}
+
+fieldset {
+  margin-bottom: 10px;
+}
+
+form div {
+  float:none;
+}
+
+// Groups of fields with labels on top (legends)
+legend {
+  color: @grayDarker;
+  small {
+    color: @grayDark;
+  }
+}
+
+// Form controls
+// -------------------------
+
+// Shared size and type resets
+select,
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  height: @inputHeight;
+  margin-bottom: @baseLineHeight / 2;
+  color: @grayDarker;
+  .border-radius(@inputBorderRadius);
+  width:100%; 
+}
+
+textarea {
+  min-height: @inputHeight;
+  height: auto;
+}
+
+
+
+// Everything else
+textarea,
+input[type="text"],
+input[type="password"],
+input[type="datetime"],
+input[type="datetime-local"],
+input[type="date"],
+input[type="month"],
+input[type="time"],
+input[type="week"],
+input[type="number"],
+input[type="email"],
+input[type="url"],
+input[type="search"],
+input[type="tel"],
+input[type="color"],
+.uneditable-input {
+  // Focus state
+  &:focus {
+    border-color: @blue;
+    @shadow: 0 0 2px lighten(@blue, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
+
+// Set the height of select and file controls to match text inputs
+select,
+input[type="file"] {
+  line-height: @baseLineHeight * 1.5;
+}
+
+// Make select elements obey height by applying a border
+select {
+  width: 100%; // dell-308 override
+}
+
+
+// Focus for select, file, radio, and checkbox
+select:focus,
+input[type="file"]:focus,
+input[type="radio"]:focus,
+input[type="checkbox"]:focus {
+  border-color: @blue;
+  outline: thin dotted @blue;
+  outline: 0px auto @blue;
+  outline-offset: 0px;
+}
+
+
+// Uneditable inputs
+// -------------------------
+
+// Make uneditable inputs look inactive
+.uneditable-input,
+.uneditable-textarea {
+  color: @grayDark;
+  background-color: @grayLight;
+}
+
+
+// CHECKBOXES & RADIOS
+// -------------------
+
+// Indent the labels to position radios/checkboxes as hanging
+.radio,
+.checkbox {
+  margin-bottom:  @baseLineHeight;
+}
+
+// Radios and checkboxes on same line
+.radio.inline,
+.checkbox.inline {
+  padding-top: 0;
+  margin-bottom: @baseLineHeight / 2;
+}
+
+
+// Mixin for form field states - dell-308 overide of mixin to reduce focus glow from 6px to 3px
+.formFieldState(@textColor: #555, @borderColor: #ccc, @backgroundColor: #f5f5f5) {
+  // Set the text color
+  .control-label,
+  .help-block,
+  .help-inline {
+    color: @textColor;
+  }
+  // Style inputs accordingly
+  .checkbox,
+  .radio,
+  input,
+  select,
+  textarea {
+    color: @textColor;
+  }
+  input,
+  select,
+  textarea {
+    border-color: @borderColor;
+    .box-shadow(inset 0 1px 1px rgba(0,0,0,.075)); // Redeclare so transitions work
+    &:focus {
+      border-color: darken(@borderColor, 10%);
+      @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px lighten(@borderColor, 20%);
+      .box-shadow(@shadow); //changed glow width from 6px to 3px - dell-308 override
+    }
+  }
+}
+
+
+// FORM FIELD FEEDBACK STATES
+// --------------------------
+
+// Warning
+.control-group.warning {
+  .formFieldState(@warningText, @warningText, @warningBackground);
+}
+// Error
+.control-group.error, 
+.error {
+  .formFieldState(@errorText, @errorText, @errorBackground);
+  input,
+  select,
+  textarea {
+    background-color: @dellAlertYellow;
+  }
+}
+
+input.error,
+select.error,
+textarea.error,
+input.ng-dirty.ng-invalid, select.ng-dirty.ng-invalid
+ {
+  border-color:@errorText;
+  background-color: @dellAlertYellow;
+}
+
+// Success
+.control-group.success {
+  .formFieldState(@successText, @successText, @successBackground);
+}
+// Success
+.control-group.info {
+  .formFieldState(@infoText, @infoText, @infoBackground);
+}
+
+// HTML5 invalid states
+// Shares styles with the .control-group.error above
+// dell-308 changed to blue so that the field does not look invalid as soon as you focus
+input:focus:invalid,
+textarea:focus:invalid,
+select:focus:invalid {
+  color: @textColor;
+  border-color: @blue;
+  &:focus {
+    border-color: @blue;
+    @shadow: inset 0 1px 1px rgba(0,0,0,.075), 0 0 3px lighten(@blue, 20%);
+    .box-shadow(@shadow);
+  }
+}
+
+//TODO: If there is a requirement to display icon we will have to build this
+
+// FORM ACTIONS
+// ------------
+// TODO need to check if there is any 308 usage of this
+.form-actions {
+  padding: (@baseLineHeight - 1) 20px @baseLineHeight;
+  margin-top: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  background-color: @formActionsBackground;
+  border-top: 1px solid @dellGrayStroke;
+  .clearfix(); // Adding clearfix to allow for .pull-right button containers
+}
+
+// HELP TEXT
+// ---------
+
+.help-block,
+.help-inline {
+  color: @gray; // same as body text for dell-308
+}
+
+
+// INPUT GROUPS
+// ------------
+
+// Allow us to put symbols and text within the input field for a cleaner look
+.input-append,
+.input-prepend {
+  margin-bottom: 0;
+  font-size: inherit; 
+
+  input,
+  select,
+  .uneditable-input {
+    margin-bottom: 10px;
+    + .add-on {
+      margin-left: -5px; 
+    }
+    height:@inputHeight;
+  }
+
+  .add-on {
+    height: @inputHeight;
+    padding: 7px 11px;
+    border: 1px solid @dellGrayStroke;
+    + input,
+    + select{
+      margin-left: -5px; 
+    }
+  }
+  .active {
+    background-color: lighten(@green, 30);
+    border-color: @green;
+  }
+  .btn {
+    height:@inputHeight;
+  }
+
+}
+
+.input-prepend {
+  .add-on,
+  .btn {
+    margin-right: -1px;
+  }
+  input,
+  select,
+  .uneditable-input {
+    .border-radius( 0 @inputBorderRadius @inputBorderRadius 0);
+    + .btn-group .btn:last-child {
+      .border-radius( 0 @inputBorderRadius @inputBorderRadius 0);
+    }
+  }
+  .btn-group {
+    display:inline;
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    // FYI, `.btn:first-child` accounts for a button group that's prepended
+    .border-radius( @inputBorderRadius 0 0 @inputBorderRadius);
+    height:@inputHeight;
+  }
+}
+
+.input-append {
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+    + .btn-group .btn:last-child {
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+  }
+  .add-on,
+  .btn,
+  .btn-group {
+    margin-left: -5px;
+  }
+  .add-on:first-child,
+  .btn:first-child,
+  .btn-group:first-child > .dropdown-toggle, 
+  .btn-group:first-child {
+    .border-radius(0); 
+  }
+  .add-on:last-child,
+  .btn:last-child,
+  .btn-group:last-child > .dropdown-toggle {
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0); 
+  }
+
+
+}
+
+
+// Remove all border-radius for inputs with both prepend and append
+.input-prepend.input-append {
+  input,
+  select,
+  .uneditable-input {
+    .border-radius(0);
+    + .btn-group .btn {
+      .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+    }
+    + .add-on {
+      margin-left: -5px; 
+    }
+  }
+  .add-on:first-child,
+  .btn:first-child {
+    margin-right: -1px;
+    .border-radius(@inputBorderRadius 0 0 @inputBorderRadius);
+  }
+  .add-on:last-child,
+  .btn:last-child {
+    margin-left: -1px;
+    .border-radius(0 @inputBorderRadius @inputBorderRadius 0);
+  }
+  .btn-group:first-child {
+    margin-left: 0;
+  }
+  .add-on {
+      + input,
+      + select{
+      margin-left: -5px; 
+      + .add-on {
+        margin-left: -5px; 
+      }
+    }
+  }
+}
+
+
+// SEARCH FORM
+// -----------
+
+input.search-query {
+  padding-right: 14px;
+  padding-right: 4px \9;
+  padding-left: 14px;
+  padding-left: 4px \9; /* IE7-8 doesn't have border-radius, so don't indent the padding */
+  margin-bottom: 0; // Remove the default margin on all inputs
+  .border-radius(15px);
+}
+
+/* Allow for input prepend/append in search forms */
+.form-search .input-append .search-query,
+.form-search .input-prepend .search-query {
+  .border-radius(0); // Override due to specificity
+}
+.form-search .input-append .search-query {
+  .border-radius(14px 0 0 14px);
+}
+.form-search .input-append .btn {
+  .border-radius(0 14px 14px 0);
+}
+.form-search .input-prepend .search-query {
+  .border-radius(0 14px 14px 0);
+}
+.form-search .input-prepend .btn {
+  .border-radius(14px 0 0 14px);
+}
+
+
+
+
+// HORIZONTAL & VERTICAL FORMS
+// ---------------------------
+
+// Common properties
+// -----------------
+
+.form-search,
+.form-inline,
+.form-horizontal {
+  input,
+  textarea,
+  select,
+  .help-inline,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    display: inline-block;
+    .ie7-inline-block();
+    margin-bottom: 0;
+    vertical-align: middle;
+  }
+  // Re-hide hidden elements due to specifity
+  .hide {
+    display: none;
+  }
+}
+.form-search label,
+.form-inline label,
+.form-search .btn-group,
+.form-inline .btn-group {
+  display: inline-block;
+}
+// Remove margin for input-prepend/-append
+.form-search .input-append,
+.form-inline .input-append,
+.form-search .input-prepend,
+.form-inline .input-prepend {
+  margin-bottom: 0;
+}
+// Inline checkbox/radio labels (remove padding on left)
+.form-search .radio,
+.form-search .checkbox,
+.form-inline .radio,
+.form-inline .checkbox {
+  padding-left: 0;
+  margin-bottom: 0;
+  vertical-align: middle;
+}
+// Remove float and margin, set to inline-block
+.form-search .radio input[type="radio"],
+.form-search .checkbox input[type="checkbox"],
+.form-inline .radio input[type="radio"],
+.form-inline .checkbox input[type="checkbox"] {
+  float: left;
+  margin-right: 3px;
+  margin-left: 0;
+}
+
+
+// Margin to space out fieldsets
+.control-group {
+  margin-bottom: @baseLineHeight / 2;
+}
+
+// Legend collapses margin, so next element is responsible for spacing
+legend + .control-group {
+  margin-top: @baseLineHeight;
+  -webkit-margin-top-collapse: separate;
+}
+
+// Horizontal-specific styles
+// --------------------------
+
+.form-horizontal {
+  // Increase spacing between groups
+  .control-group {
+    margin-bottom: @baseLineHeight;
+    .clearfix();
+  }
+  // Float the labels left
+  .control-label {
+    float: left;
+    width: @horizontalComponentOffset - 20;
+    padding-top: 5px;
+    text-align: right;
+  }
+  // Move over all input controls and content
+  .controls {
+    // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
+    // don't inherit the margin of the parent, in this case .controls
+    *display: inline-block;
+    *padding-left: 20px;
+    margin-left: @horizontalComponentOffset;
+    *margin-left: 0;
+    &:first-child {
+      *padding-left: @horizontalComponentOffset;
+    }
+    width:auto; // don't want to inherit width:100% on divs;
+  }
+  // Remove bottom margin on block level help text since that's accounted for on .control-group
+  .help-block {
+    margin-bottom: 0;
+  }
+  // And apply it only to .help-block instances that follow a form control
+  input,
+  select,
+  textarea,
+  .uneditable-input,
+  .input-prepend,
+  .input-append {
+    + .help-block {
+      margin-top: @baseLineHeight / 2;
+    }
+  }
+  // Move over buttons in .form-actions to align with .controls
+  .form-actions {
+    padding-left: @horizontalComponentOffset;
+  }
+}
+
+
+
+.form-search {
+    position:relative;
+}
+.form-search .input-prepend,
+.form-search .input-append {
+  width:100%;
+  clear:both;
+}
+.form-search .search-query,  
+.form-search .input-prepend .search-query,
+.form-search .input-append .search-query
+{
+    width:100%;
+    height: @inputHeight + 10;
+    padding: 5px 80px 5px 5px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
+    .border-radius(@inputBorderRadius);
+}
+
+.form-search .input-prepend .search-query,
+{
+    padding: 5px 5px 5px 80px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
+    .border-radius(@inputBorderRadius);
+}
+
+.form-search .btn {
+  position: absolute;
+  top: 5px;
+  right: 5px;
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight); // forces the button to primary
+  .border-radius(@borderRadiusSmall);
+  color:@white !important;
+}
+.form-search .input-append .btn {
+  right: 25px;
+  .border-radius(@borderRadiusSmall);
+}
+.form-search .input-prepend .btn {
+  left: 25px;
+  right:inherit;
+  .border-radius(@borderRadiusSmall);
+  z-index:3;
+}
+
+
+
+
+// INPUT SIZES
+// -----------
+
+// General classes for quick sizes
+.input-mini       { width: 60px !important; }
+.input-small      { width: 90px !important; }
+.input-medium     { width: 150px !important; }
+.input-large      { width: 210px !important; }
+.input-xlarge     { width: 270px !important; }
+.input-xxlarge    { width: 530px !important; }
+
+@media only screen and (max-width:@mobileMaxWidth) {
+  .input-xxlarge    { width: 100% !important; }
+}
+
+span.uneditable-input {
+  padding-top:7px;
+}
+
+
+
+// tables
+//=======================================================================================================================
+
+
+// BASE TABLES
+// -----------------
+
+table {
+  max-width: 100%;
+  background-color: @tableBackground;
+  border-collapse: collapse;
+  border-spacing: 0;
+}
+
+// BASELINE STYLES
+// ---------------
+
+.table {
+  width: 100%;
+  margin-bottom: @baseLineHeight;
+  // Cells
+  th,
+  td {
+    padding: 8px;
+    line-height: @baseLineHeight;
+    text-align: left;
+    vertical-align: top;
+    border-top: 1px solid @tableBorder;
+  }
+  th {
+    font-weight: bold;
+  }
+  // Bottom align for column headings
+  thead th {
+    vertical-align: bottom;
+  }
+  // Remove top border from thead by default
+  caption + thead tr:first-child th,
+  caption + thead tr:first-child td,
+  colgroup + thead tr:first-child th,
+  colgroup + thead tr:first-child td,
+  thead:first-child tr:first-child th,
+  thead:first-child tr:first-child td {
+    border-top: 0;
+  }
+  // Account for multiple tbody instances
+  tbody + tbody {
+    border-top: 2px solid @tableBorder;
+  }
+
+  // Nesting
+  .table {
+    background-color: @bodyBackground;
+  }
+}
+
+
+
+// CONDENSED TABLE W/ HALF PADDING
+// -------------------------------
+
+.table-condensed {
+  th,
+  td {
+    padding: 4px 5px;
+  }
+}
+
+
+// BORDERED VERSION
+// ----------------
+
+
+.table-bordered {
+  .border-radius(@borderRadiusLarge);
+
+
+  // For first th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child > th:first-child,
+  tbody:first-child tr:first-child > td:first-child,
+  tbody:first-child tr:first-child > th:first-child {
+    .border-top-left-radius(@borderRadiusLarge);
+  }
+  // For last th/td in the first row in the first thead or tbody
+  thead:first-child tr:first-child > th:last-child,
+  tbody:first-child tr:first-child > td:last-child,
+  tbody:first-child tr:first-child > th:last-child {
+    .border-top-right-radius(@borderRadiusLarge);
+  }
+  // For first th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child > th:first-child,
+  tbody:last-child tr:last-child > td:first-child,
+  tbody:last-child tr:last-child > th:first-child,
+  tfoot:last-child tr:last-child > td:first-child,
+  tfoot:last-child tr:last-child > th:first-child {
+    .border-bottom-left-radius(@borderRadiusLarge);
+  }
+  // For last th/td (can be either) in the last row in the last thead, tbody, and tfoot
+  thead:last-child tr:last-child > th:last-child,
+  tbody:last-child tr:last-child > td:last-child,
+  tbody:last-child tr:last-child > th:last-child,
+  tfoot:last-child tr:last-child > td:last-child,
+  tfoot:last-child tr:last-child > th:last-child {
+    .border-bottom-right-radius(@borderRadiusLarge);
+  }
+
+  // Special fixes to round the left border on the first td/th
+  caption + thead tr:first-child th:first-child,
+  caption + tbody tr:first-child td:first-child,
+  colgroup + thead tr:first-child th:first-child,
+  colgroup + tbody tr:first-child td:first-child {
+    .border-top-left-radius(@borderRadiusLarge);
+  }
+  caption + thead tr:first-child th:last-child,
+  caption + tbody tr:first-child td:last-child,
+  colgroup + thead tr:first-child th:last-child,
+  colgroup + tbody tr:first-child td:last-child {
+    .border-top-right-radius(@borderRadiusLarge);
+  }
+
+}
+
+
+
+
+// ZEBRA-STRIPING
+// --------------
+
+// Default zebra-stripe styles (alternating gray and transparent backgrounds)
+.table-striped {
+  td, th {
+    border-left:0;
+    border-top:0;  
+  }
+  tbody {
+    > tr:nth-child(odd) > td,
+    > tr:nth-child(odd) > th {
+        background-color: @tableBackgroundAccent;
+      }
+  }
+  tbody {
+    tr th:first-child, tr td:first-child {.border-left-radius(@borderRadiusLarge);}
+    tr th:last-child, tr td:last-child {.border-right-radius(@borderRadiusLarge);}
+  }
+}
+
+.table-bordered.table-striped {
+  border-left: 1px solid @tableBorder;
+  tbody {
+    tr th:first-child, tr td:first-child {.border-left-radius(0);}
+    tr th:last-child, tr td:last-child {.border-right-radius(0);}
+  }
+}
+
+// HOVER EFFECT
+// ------------
+// Placed here since it has to come after the potential zebra striping
+.table-hover {
+  tbody {
+    tr:hover > td,
+    tr:hover > th {
+      background-color: @tableBackgroundHover;
+    }
+  }
+}
+
+
+// TABLE CELL SIZING
+// -----------------
+
+// Reset default grid behavior
+table td[class*="span"],
+table th[class*="span"],
+.row-fluid table td[class*="span"],
+.row-fluid table th[class*="span"] {
+  display: table-cell;
+  float: none; // undo default grid column styles
+  margin-left: 0; // undo default grid column styles
+}
+
+// Change the column widths to account for td/th padding
+.table td,
+.table th {
+  &.span1     { .tableColumns(1); }
+  &.span2     { .tableColumns(2); }
+  &.span3     { .tableColumns(3); }
+  &.span4     { .tableColumns(4); }
+  &.span5     { .tableColumns(5); }
+  &.span6     { .tableColumns(6); }
+  &.span7     { .tableColumns(7); }
+  &.span8     { .tableColumns(8); }
+  &.span9     { .tableColumns(9); }
+  &.span10    { .tableColumns(10); }
+  &.span11    { .tableColumns(11); }
+  &.span12    { .tableColumns(12); }
+}
+
+
+
+// TABLE BACKGROUNDS
+// -----------------
+// Exact selectors below required to override .table-striped
+
+.table tbody tr {
+  &.success > td {
+    background-color: @successBackground;
+  }
+  &.error > td {
+    background-color: @errorBackground;
+  }
+  &.warning > td {
+    background-color: @warningBackground;
+  }
+  &.info > td {
+    background-color: @infoBackground;
+  }
+}
+
+// Hover states for .table-hover
+.table-hover tbody tr {
+  &.success:hover > td {
+    background-color: darken(@successBackground, 5%);
+  }
+  &.error:hover > td {
+    background-color: darken(@errorBackground, 5%);
+  }
+  &.warning:hover > td {
+    background-color: darken(@warningBackground, 5%);
+  }
+  &.info:hover > td {
+    background-color: darken(@infoBackground, 5%);
+  }
+}
+
+
+
+// Components: common
+// sprites
+//=======================================================================================================================
+
+
+
+
+// dropdowns
+//=======================================================================================================================
+
+
+// NOTE: overriding caret with font icon for dell-308
+.dropdown-toggle {
+  .caret {
+    display:none;
+  }
+  &:after {
+    position:relative;
+    font-family: 'icon-ui';
+    content: "\24";
+    top:1px;
+    float:right; // TODO: in dell-308 caret is aligned right: Will have to account for rtl;
+    margin-left:5px;
+  }
+  &.no-arrow:after {
+      display:none; 
+  }
+}
+.open > .dropdown-toggle:after {
+  content: "\21";
+}
+
+
+
+li.dropdown .dropdown-menu {
+  margin: 2px 0 0;
+}
+
+
+
+.btn-small .caret {
+  margin-top: 8px;
+  padding-right:15px;
+}
+
+.btn-mini .caret {
+  margin-top: 8px;
+  padding-right:13px;
+}
+
+.btn-large .caret {
+  margin-top: 5px;
+  border:none;
+  padding-right:20px;
+}
+
+.dropup .btn-large .caret {
+  border:none;
+}
+.btn-primary .caret,
+.btn-warning .caret,
+.btn-danger .caret,
+.btn-info .caret,
+.btn-success .caret,
+.btn-inverse .caret {
+  border:none;
+}
+
+.dropdown-menu {
+  margin: 20px 0 0;
+  li > a {
+    display: block;
+    padding: 3px 20px;
+    clear: both;
+    font-weight: normal;
+    line-height: 20px;
+    color: @grayDarker;
+    white-space: nowrap;
+    &:hover,
+    &:focus,
+    .dropdown-submenu:hover > a {
+      color: @linkColor;
+      text-decoration: none;
+      background-color: @dellHighlightBlue;
+      background-image: none;
+      background-repeat: repeat-x;
+      filter: none;
+    }
+  }
+  .divider {
+    height: 2px;
+  }
+  &:after {
+    content: '';
+    display: inline-block;
+    border-left: 6px solid transparent;
+    border-right: 6px solid transparent;
+    border-bottom: 6px solid #ffffff;
+    position: absolute;
+    top: -6px;
+    left: 10px;
+  }
+  &:before {
+    content: '';
+    display: inline-block;
+    border-left: 7px solid transparent;
+    border-right: 7px solid transparent;
+    border-bottom: 7px solid @dellGrayStroke;
+    border-bottom-color: rgba(0, 0, 0, 0.2);
+    position: absolute;
+    top: -7px;
+    left: 9px;
+  }
+  &.pull-right {
+  left: auto;
+  right: 0;
+  &:before {
+    left: auto;
+    right: 12px;
+  }
+  &:after {
+    left: auto;
+    right: 13px;
+  }
+  .dropdown-menu {
+    left: auto;
+    right: 100%;
+    margin-left: 0;
+    margin-right: -1px;
+    -webkit-border-radius: 6px 0 6px 6px;
+    -moz-border-radius: 6px 0 6px 6px;
+    border-radius: 6px 0 6px 6px;
+  }
+}
+}
+
+
+/* DROPDOWNS IN BUTTON GROUPS
+-------------------------------------------------- */
+
+.btn-group {
+  width:auto;
+  > .btn + .dropdown-toggle {
+    padding-right: 7px;
+    padding-left: 3px;
+    .border-right-radius(@inputBorderRadius);
+    + .dropdown-menu {
+      left: auto;
+      right: 0;
+      margin-left: 0;
+      margin-right: -1px;
+      &:before {
+        left: auto;
+        right: 12px;
+      }
+      &:after {
+        left: auto;
+        right: 13px;
+      }
+    }
+  }
+  > .dropdown-toggle {
+    padding-right:7px;
+  }
+
+  &.open {
+    .btn.dropdown-toggle {
+    background-color: #cfd9de;
+    }
+    .btn-primary.dropdown-toggle {
+      background-color: #53a726;
+    }
+    .btn-secondary.dropdown-toggle {
+      background-color: #0f6cc9;
+    }
+    .btn-tertiary.dropdown-toggle {
+      background-color: #cfd9de;
+    }
+  }
+  > .btn-link:first-child {
+    padding-left:0px;
+  }
+  >.btn:first-child {
+    .border-radius(@inputBorderRadius);
+  }
+}
+.btn + .dropdown-menu {
+  margin-top:3px;
+}
+.btn-link + .dropdown-menu {
+  margin-top:-15px;
+}
+
+
+
+
+// wells
+//=======================================================================================================================
+
+
+.well {
+  min-height: @baseLineHeight;
+  padding: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  border: none;
+  .border-radius(@baseBorderRadius);
+  .box-shadow(none);
+  blockquote {
+    border-color: @dellGrayStroke;
+  }
+  > :last-child {
+    // dell-308-only
+    // NOTE: In bootstrap wells don't work well with p or anything else with a bottom margin.
+    margin-bottom: 0px;
+  }
+  &-bleed {
+    padding:0 !important;
+    overflow:hidden;
+    img.pull-right {
+      ~ :not(img){
+        margin-left:20px;
+      }
+      + h2,
+      + h3,
+      + h4,
+      + p {
+        margin-top:20px;
+      }
+    }
+    > div.pull-right {
+      margin: 20px 20px 20px 0;
+    }
+    &-top {
+      padding-top:0 !important;
+      overflow:hidden;
+    }
+    &-left {
+      padding-left:0 !important;      
+      overflow:hidden;
+      img.pull-left {
+        margin-right:20px;
+      }     
+    }
+    &-bottom {
+      padding-bottom:0 !important;
+      overflow:hidden;
+    }
+    &-right {
+      padding-right:0 !important;
+      overflow:hidden;
+    }
+  }
+}
+
+
+//well-bleed on mobile
+@media only screen and (max-width:@mobileMaxWidth) {
+  .well {
+    &-bleed {
+      img.pull-right {
+        padding-bottom:10px;
+      }
+      > :last-child {
+        margin-bottom: 10px;
+      }
+    }
+  }
+}
+
+// Sizes
+.well-large {
+  padding: @baseLineHeight;
+  .border-radius(@borderRadiusLarge);
+}
+.well-small {
+  padding: @baseLineHeight / 2;
+  .border-radius(@borderRadiusSmall);
+}
+
+// NOTE: Non-Bootstrap well like containers. 
+// TODO: do we keep this in the future?
+// These are borderless
+
+.rounded-large {
+  .border-radius(@borderRadiusLarge);
+  padding:@baseLineHeight;
+  > :last-child {
+    margin-bottom: 0px;
+  }
+}
+
+.rounded-small {
+ .border-radius(@borderRadiusSmall);
+  padding:@baseLineHeight;
+  > :last-child {
+    margin-bottom: 0px;
+  }
+}
+
+
+
+
+
+//
+// Container Colors 
+// NOTE: (Not part of Standard Bootstrap) - dell-308-only
+// Should we scope these within the well class in the future?
+// --------------------------------------------------
+
+.well-colors (@bgcolor, @textColor, @headlineColor, @linkColor) {
+  background-color: @bgcolor;
+  color: @textColor;
+
+  /*
+  Removed until we can determine how we want to approach this.
+  h2,h3,h4,h5,h6 {
+    color:@headlineColor;
+  }
+  */
+
+  h4.well-title, h4.container-title {
+    //container-title for backward compatibility but should be deprecated
+    display: inline-block;
+    top: -20px;
+    margin-bottom: -20px;
+    padding: 5px 15px;
+    position: relative;
+    color: @white;
+    background-color:@headlineColor;
+    vertical-align: baseline;
+    white-space: nowrap;
+    .border-bottom-right-radius(@borderRadiusLarge);
+    .border-bottom-left-radius(@borderRadiusLarge);
+  }
+  a {
+    color:@linkColor;
+  }
+}
+
+
+/* Grays */
+
+.gray-dark,
+.well-gray-dark { 
+  .well-colors (@grayDarker, @white, @white, @white)
+}
+.gray-dark-stroke,
+.well-gray-dark-stroke  { 
+  border: @defaultStroke solid @grayDarker !important;
+  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+}
+
+.gray-medium,
+.well-gray-medium { 
+  .well-colors (@gray, @white, @white, @white)
+}
+
+.gray,
+.well-gray { 
+  .well-colors (@grayDark, @white, @white, @white)
+}
+
+.gray-stroke,
+.well-gray-stroke  { 
+  border: @defaultStroke solid @gray !important;
+  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+}
+
+.gray-light,
+.well-gray-light { 
+  .well-colors (@grayLight, @grayDarker, @grayDarker, @blue)
+}
+.gray-very-light,
+.well-gray-very-light { 
+  .well-colors (@dellGrayVeryLight, @grayDarker, @grayDarker, @blue)
+}
+.white,
+.well-white { 
+  .well-colors (@white, @grayDarker, @grayDarker, @blue)
+}
+
+.white-stroke,
+.well-white-stroke { 
+  border: @defaultStroke solid @white; 
+  .well-colors (transparent, @white, @white, @white)
+}
+
+
+
+/* Blue */
+.blue,
+.well-blue { 
+  .well-colors (@blue, @white, @white, @white)
+}
+.blue-stroke,
+.well-blue-stroke  { 
+  border: @defaultStroke solid @blue !important;
+  .well-colors (@white, @textColor, @blue, @linkColor)
+}
+.navyblue,
+.well-navyblue { 
+  .well-colors (@dellNavy, @white, @white, @white)
+}
+.navyblue-stroke,
+.well-navyblue-stroke  { 
+  border: @defaultStroke solid @dellNavy !important;
+  .well-colors (@white, @textColor, @dellNavy, @linkColor)
+}
+
+/* Green */
+.green,
+.well-green { 
+  .well-colors (@green, @white, @white, @white)
+}
+.green-stroke,
+.well-green-stroke     { 
+  border: @defaultStroke solid @green !important;
+  .well-colors (@white, @textColor, @green, @linkColor)
+}
+
+/* Yellow */
+.yellow,
+.well-yellow      { 
+    .well-colors (@yellow, @white, @white, @white)
+}
+.yellow-stroke,
+.well-yellow-stroke    { 
+  border: @defaultStroke solid @yellow !important;
+  .well-colors (@white, @textColor, @yellow, @linkColor)
+}
+
+/* Orange */
+.orange,
+.well-orange       { 
+  .well-colors (@orange, @white, @white, @white)
+}
+.orange-stroke,
+.well-orange-stroke    { 
+  border: @defaultStroke solid @orange !important;
+  .well-colors (@white, @textColor, @orange, @linkColor)
+}
+
+/* Red */
+.red,
+.well-red        { 
+  .well-colors (@red, @white, @white, @white)
+}
+.red-stroke,
+.well-red-stroke     { 
+  border: @defaultStroke solid  @red !important;
+  .well-colors (@white, @textColor, @red, @linkColor)
+}
+.red-dark,
+.well-red-dark       { 
+  .well-colors (@dellRedDark, @white, @white, @white)
+}
+.red-dark-stroke,
+.well-red-dark-stroke     { 
+  border: @defaultStroke solid  @dellRedDark !important;
+  .well-colors (@white, @textColor, @dellRedDark, @linkColor)
+}
+/* Berry */
+.berry,
+.well-berry        { 
+  .well-colors (@dellBerry, @white, @white, @white)
+}
+.berry-stroke,
+.well-berry-stroke     { 
+  border: @defaultStroke solid @dellBerry !important;
+  .well-colors (@white, @textColor, @dellBerry, @linkColor)
+}
+
+/* Purple */
+.purple,
+.well-purple       { 
+  .well-colors (@purple, @white, @white, @white)
+}
+.purple-stroke,
+.well-purple-stroke    { 
+border: @defaultStroke solid @purple !important;
+  .well-colors (@white, @textColor, @purple, @linkColor)
+}
+
+/* Teal */
+.teal,
+.well-teal         { 
+  .well-colors (@dellTeal, @white, @white, @white)
+}
+.teal-stroke,
+.well-teal-stroke    { 
+  border: @defaultStroke solid @dellTeal !important;
+  .well-colors (@white, @textColor, @dellTeal, @linkColor)
+}
+
+.well-translucent {
+  @translucent: rgba(255, 255, 255, 0.8);
+  .well-colors (@translucent, @textColor, @textColor, @linkColor)
+}
+
+/* Modify all stroke classes with "thin"*/
+[class*=-stroke].thin {
+  border-width: @thinStroke !important;
+}
+
+
+// Related to standard well and generic element heights
+//TODO: gutters created by hard coded margins fall appart in the lower ends of each breakpoint;
+
+.single-height {
+  height: 180px;
+  margin-bottom: 40px;
+  &-hero {
+    height: 240px;
+    margin-bottom: 40px;
+  }
+}
+.double-height {
+  height:400px;
+  margin-bottom: 40px;
+  &-hero {
+    height: 520px;
+    margin-bottom: 40px;
+  }
+}
+
+
+
+
+@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+  .single-height {
+    margin-bottom: 30px;
+    &-hero {
+      height: 180px;
+      margin-bottom: 30px;
+    }
+  }
+  .double-height {
+    margin-bottom: 30px;
+    &-hero {
+      height: 390px;
+      margin-bottom: 30px;
+    }
+  }
+}
+
+@media only screen and (max-width:@mobileMaxWidth) {
+
+  .single-height {
+    margin-bottom: 20px;
+    &-hero {
+      margin-bottom: 20px;
+    }
+  }
+  .double-height {
+    margin-bottom: 20px;
+    &-hero {
+      margin-bottom: 20px;
+    }
+  }
+
+}
+
+
+// component-animations
+//=======================================================================================================================
+
+
+
+// close
+//=======================================================================================================================
+
+
+
+
+// Buttons: This all needs to be replaced eventually with proper bootstrap buttons
+
+/* BUTTONS
+-------------------------------------------------- */
+
+// Base styles
+// --------------------------------------------------
+
+// Dell-308 added btn-tertiary.  It should really be the default so it is added here but it should be deprecated eventually 
+// Core
+
+// creating a default-button mixin to reuse in the pager
+
+.default-button() {
+  padding: 7px 9px 7px 8px;
+  margin-bottom: 0; // For input.btn
+  font-size: @baseFontSize;
+  line-height: @baseLineHeight * .9;
+  text-align:center;
+  white-space: nowrap;
+  height:34px;
+  .buttonBackground(@btnBackground, @btnBackgroundHighlight, @blue, 0 1px 1px rgba(255,255,255,.75));
+  border: 1px solid @btnBorder;
+  .border-radius(@borderRadiusSmall);
+  .box-shadow(none); 
+  text-overflow: ellipsis;
+  overflow: hidden;
+
+  // Hover/focus state
+
+  &:hover,
+  &:focus {
+    text-decoration: none;
+    background-position: 0 -15px;
+    // transition is only when going to hover/focus, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position .1s linear);
+    color: @linkColor;
+  }
+
+  // Focus state for keyboard and accessibility
+  &:focus {
+    .tab-focus();
+    color: @linkColor;
+  }
+
+  // Active state
+  &.active,
+  &:active {
+    background-image: none;
+    outline: 0;
+    .box-shadow(~"inset 0 2px 4px rgba(0,0,0,.15), 0 1px 2px rgba(0,0,0,.05)");
+  }
+
+  // Disabled state
+  &.disabled,
+  &[disabled] {
+    cursor: default;
+    background-image: none;
+    .opacity(65);
+    .box-shadow(none);
+  }
+
+  [class^=icon] {
+    margin-right: -2px;
+    margin-left: -2px;
+  }
+  &[data-loading-text][disabled]{
+    padding-left: 20px;
+    position:relative;
+    &:focus{
+        outline:none;
+    }
+    &:before{
+      content: "\00a0\00a0\00a0\00a0\00a0";
+      background: url(../../images/loading-animation-square.gif) no-repeat 0 -1px;
+      background-size: cover;
+      position: relative;
+      left: -10px;
+      top: 0;
+    }
+  }
+
+}
+
+.btn, .btn-tertiary {
+ .default-button();
+ color:@blue !important;
+}
+
+.btn-primary {
+  .buttonBackground(@btnSuccessBackground, @btnSuccessBackgroundHighlight);
+  color:@white !important;
+}
+
+.btn-secondary {
+  .buttonBackground(@btnPrimaryBackground, @btnPrimaryBackgroundHighlight);
+  color:@white !important;
+}
+
+
+
+
+.btn-link,
+.btn-link:active,
+.btn-link[disabled] {
+  background-color: transparent;
+  background-image: none;
+  -webkit-box-shadow: none;
+     -moz-box-shadow: none;
+          box-shadow: none;
+}
+
+.btn-link {
+  color: @blue;
+  cursor: pointer;
+  border-color: transparent;
+  -webkit-border-radius: 0;
+     -moz-border-radius: 0;
+          border-radius: 0;
+}
+
+.btn-link:hover {
+  color: @blue;
+  text-decoration: underline;
+  background-color: transparent;
+}
+
+.btn-link[disabled]:hover {
+  color: @dellGrayMedium;
+  text-decoration: none;
+}
+
+
+
+
+.btn-small {
+  padding: 4px 8px;
+  font-size: 12px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  height:24px;
+}
+
+
+.btn-mini {
+  padding: 1px 6px 0px 6px;
+  font-size: 11px;
+  -webkit-border-radius: 3px;
+     -moz-border-radius: 3px;
+          border-radius: 3px;
+  height:20px;
+}
+
+
+
+// alerts
+//=======================================================================================================================
+
+
+ // Note: alerts share common CSS with buttons and thus have styles in buttons.less
+
+
+
+// Base styles
+// -------------------------
+
+.alert {
+  color: @grayDarker;
+  padding: 10px 20px 10px 45px;
+  margin-bottom: @baseLineHeight;
+  text-shadow: none;
+  background-color: @alertBackground;
+  border: 1px solid @grayLight;
+  position:relative;
+
+  h4 {
+    // Specified for the h4 to prevent conflicts of changing @headingsColor
+    color: @grayDarker;
+  }
+  p:last-child {
+    margin-bottom:0px;
+  }
+  [class^=icon-] {
+    display:none;
+  }  
+  .close {
+    position: relative;
+    right: -8px;
+    > [class^=icon] {
+      font-size: 14px;
+      display:block;
+    }
+  }
+  &:before {
+    .insert-icon("\7e", @red);
+  }
+
+
+
+}
+
+.insert-icon(@content, @color) {
+    content: @content;
+    font-family:"icon-small";
+    float:left;
+    color:@color;
+    position:absolute;
+    left:10px;
+    font-size:20px;
+}
+
+// Alternate styles
+// -------------------------
+
+
+.alert-success {
+  background-color: @alertBackground;
+  border-color: @grayLight;
+  color: @grayDarker;
+  h4 {
+    color: @grayDarker;
+  }
+  &:before {
+    .insert-icon("\72", @green);
+  }
+}
+.alert-danger,
+.alert-error {
+  background-color: @alertBackground;
+  border-color: @grayLight;
+  color: @grayDarker;
+  &:before {
+    .insert-icon("\e001", @red);
+  }
+}
+.alert-danger h4,
+.alert-error h4 {
+  color: @grayDarker;
+}
+.alert-info {
+  background-color:@alertBackground;
+  border-color: @grayLight;
+  color: @grayDarker;
+  &:before {
+    .insert-icon("\e000", @blue);
+  }
+}
+.alert-info h4 {
+  color: @grayDarker;
+}
+
+
+// Block alerts
+// -------------------------
+
+.alert-block {
+  padding-top: 14px;
+  padding-bottom: 14px;
+}
+.alert-block > p,
+.alert-block > ul {
+  margin-bottom: 0;
+}
+.alert-block p + p {
+  margin-top: 5px;
+}
+
+
+
+
+
+// Components: Nav
+// navs
+//=======================================================================================================================
+
+
+// TABS
+// ----
+
+// Give the tabs something to sit on
+.nav-tabs {
+  border-bottom: 1px solid @dellGrayStroke;
+}
+// Make the list-items overlay the bottom border
+.nav-tabs > li {
+  margin-bottom: -1px;
+  margin-right: 3px;
+}
+// Actual tabs (as links)
+.nav-tabs > li > a {
+  color:@blue;
+  padding-top: 8px;
+  padding-bottom: 8px;
+  line-height: @baseLineHeight;
+  border: 1px solid @dellGrayStroke;
+  background-color: @grayLight;
+  .border-radius(@borderRadiusSmall @borderRadiusSmall 0 0);
+  &:hover,
+  &:focus {
+    border-color: @dellGrayStroke;
+  }
+}
+// Active state, and it's :hover/:focus to override normal :hover/:focus
+.nav-tabs > .active > a,
+.nav-tabs > .active > a:hover,
+.nav-tabs > .active > a:focus {
+  color: @grayDarker;
+  background-color: @bodyBackground;
+  border: 1px solid @dellGrayStroke;
+  border-bottom-color: transparent;
+  cursor: default;
+}
+.tabs-left {
+  > .nav-tabs {
+    float:left;
+    > li {
+      margin-right: 0;
+      a:hover {
+        border: 1px solid @dellGrayStroke;
+      }
+    }
+  }
+  .tab-content {
+    width:auto;
+  }
+  &.tabs-gray-light {
+    //AKA Popsicle Tabs
+    background:@grayLight;
+    margin-bottom:7px;
+    .border-right-radius(@borderRadiusSmall);
+    margin-bottom:0;
+    background:@white;
+    border-right:none;  
+    float:left;
+
+    > .nav-tabs {
+      width:30%;
+      > li a {
+        background:@bodyBackground;
+        border:none;
+        &:hover {
+          border:none;
+        }
+      }
+    }
+    > .nav-tabs > li.active a {
+      background:@grayLight;
+      border:none;
+      margin-right: -5px;
+    }
+    .tab-content {
+      padding:20px;
+      background:@grayLight;
+      .border-radius(@baseBorderRadius);
+      width:70%;
+      min-height:120px;
+      margin-left: -20px;
+    }
+
+  }
+}
+
+
+.nav > li > a:hover,
+.nav > li > a:focus {
+  background-color: @dellHighlightBlue;
+}
+
+// DISABLED STATES
+// ---------------
+
+// Gray out text
+.nav > .disabled > a {
+  color: @gray;
+}
+
+
+
+// Open dropdowns
+// -------------------------
+.nav-tabs .open .dropdown-toggle,
+.nav-pills .open .dropdown-toggle,
+.nav > li.dropdown.open.active > a:hover,
+.nav > li.dropdown.open.active > a:focus {
+  color: @linkColor;
+  background-color: @grayLight;
+  border-color: @grayLight;
+}
+.nav li.dropdown.open .caret,
+.nav li.dropdown.open.active .caret,
+.nav li.dropdown.open a:hover .caret,
+.nav li.dropdown.open a:focus .caret {
+  border-top-color: @white;
+  border-bottom-color: @white;
+  .opacity(100);
+}
+
+.nav-pills .dropdown-menu {
+  margin: 0;
+}
+
+
+// navbar
+//=======================================================================================================================
+@import "../../less/navbar.less";
+
+.navbar-search {
+  margin-top: 3px;
+  .search-query {
+      &:-moz-placeholder {
+        padding-top:3px;
+      }
+      &:-ms-input-placeholder {
+        padding-top:3px;
+      }
+      &::-webkit-input-placeholder {
+        padding-top:3px;
+      }
+      .border-radius(@inputBorderRadius);
+      position:relative;
+  }
+}
+.navbar-inverse .navbar-search .search-query {
+  color: @grayDarker;
+}
+
+
+
+.navbar div {
+  width:auto;
+  float:none;
+}
+
+div.navbar-inner {
+  width:100%;
+  background:@grayLight;
+  border:none;
+  box-shadow: none;
+}
+
+// RESPONSIVE NAVBAR
+// ------------------
+
+// From 979px and below, show a button to toggle navbar contents
+@import "../../less/responsive-navbar.less";
+
+@media only screen and (max-width:@tabletMaxWidth) {
+  .navbar {
+    .wrapper {
+      padding-left:2%;
+      padding-right:2%;
+    }
+    .brand {
+      padding-left: 0;
+    }
+    .btn-navbar {
+      margin-top: 3px;
+      margin-right: -9px;
+      .icon-bar + .icon-bar {
+        margin-top: 4px;
+      }
+    }
+    .nav-collapse {
+      left: -9px;
+      top: 2px;
+      margin-right: -18px;
+      .nav > li > a {
+        .border-bottom-radius(0);
+        border-bottom: 1px solid #ccc;
+      }    
+    }
+  }
+}
+  
+
+
+
+//tabs-bordered Dell 308 only
+.tabbable.tabs-bordered {
+  .nav-tabs {
+    margin-right: 2px;
+  }
+  .tab-content {
+    border:1px solid @dellGrayStroke;
+    border-top:none;
+    .border-bottom-radius(@borderRadiusSmall);
+    .border-right-radius(@borderRadiusSmall);
+    padding:10px 10px 0 10px;
+    margin:-20px 0 20px 0;
+  }
+}
+
+.tabbable.tabs-left.tabs-bordered .tab-content,
+.tabbable.tabs-bottom.tabs-bordered .tab-content,
+.tabbable.tabs-right.tabs-bordered .tab-content
+  {
+  border:none;
+  padding:0;
+  margin:0;
+}
+
+
+.tabbable.tabs-aside {
+  .nav-aside {
+    position:relative;
+    z-index:2;
+  }
+  > .tab-content {
+    //same as da-padfull
+    position:relative;
+    padding-left: 4.08163265%;
+    padding-right: 4.08163265%;
+    left: -4.08163265%;
+    z-index:1;
+    background:@white;
+    .box-sizing(content-box);
+    .box-shadow(-10px 0px 5px -9px rgba(0, 0, 0, .4));
+    &:before {
+      content:" ";
+
+    }
+    margin-bottom: @baseLineHeight;
+  }
+}
+
+.nav-list {
+  background:@grayLight;
+  .nav-header {
+    color:@grayDarker;
+  }
+  .border-radius(@baseBorderRadius);
+  > li:last-child a:hover {
+    .border-bottom-radius(@baseBorderRadius);
+  }
+  > li:first-child a:hover {
+    .border-top-radius(@baseBorderRadius);
+  }
+  > li:not(.nav-header):first a {
+    .border-top-radius(@baseBorderRadius);
+  }
+  &.nav-aside {
+    .nav-header, 
+    .divider {
+      display:none;
+    }
+    background:none;
+    .aside-nav();
+  }
+  + .back-to-top {
+    background: @gray;
+    color:@white;
+    .border-left-radius(@borderRadiusLarge * 2);
+    margin-top: @baseLineHeight;
+    margin-left: 50%;
+    padding:@baseLineHeight @baseLineHeight @baseLineHeight @baseLineHeight/2;
+    position:relative;
+    z-index:0;
+    cursor:pointer;
+    [class*=icon] {
+      font-size:@baseFontSize * 2;
+      position:relative;
+      top:-8px; 
+      display:inline-block; 
+      margin-right: @baseLineHeight - 2;  
+    }
+    &:hover {
+  color:@grayDarker;
+    }
+  }
+}
+
+.aside-nav() {
+    li a {
+      text-shadow:none;
+      color:@white;
+      background-color: @asideNavBackground;
+      .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
+      border-bottom: #666 1px solid;
+      padding-top:@baseLineHeight;
+
+    }
+    > li a:hover {
+      background-color: @dellHighlightBlue;
+      color:@asideNavBackground;
+      .box-shadow(inset -10px 0px 10px -10px rgba(0, 0, 0, .35));
+      border-bottom:1px solid @dellHighlightBlue;
+    }
+    > li.active a {
+      background:@asideNavBackgroundActive;
+      border-bottom:none;
+      position:relative;
+      &:hover {
+        color:@white;
+      }
+      &:after {
+        content: "\23";//left arrow
+        font-family:'icon-ui';
+        font-size:28px;
+        position:absolute;
+        top: 35%;
+        right: -12px;
+        text-shadow: -10px 0px 10px -9px rgba(0, 0, 0, .8);
+      }
+    }
+    > li:last-child a,
+    > li:last-child a:hover {
+      .border-radius(0);
+      .border-bottom-left-radius(@borderRadiusLarge * 2);
+    }
+    > li:first-child a,
+    > li:first-child a:hover {
+      .border-radius(0);
+      .border-top-left-radius(@borderRadiusLarge * 2);
+    }
+}
+
+
+
+// breadcrumbs
+//=======================================================================================================================
+
+
+.breadcrumb {
+  padding: 8px 0px;
+  background-color: @white;
+  color: @gray;
+  font-size:12px;
+  position:relative;
+  .border-radius(none);
+  > li {
+    text-shadow: none;
+    &:first-child {
+        a {
+          display:none;
+        }
+        &:before {
+          font-size:14px;
+          content: "\5a";
+          font-family:"icon-small";  
+        }         
+    }
+    a { 
+      color: @gray;
+    }
+    > .divider {
+        padding: 0 5px;
+        position:relative;
+        color: @gray;
+        &:before{
+          font-size:12px;
+          height:10px;
+          width:10px;  
+          content: "\2d";
+          font-family:"icon-ui";      
+        }
+    }
+  }
+  > .active {
+    color: @gray;
+  }
+  
+}
+
+
+
+// pagination
+//=======================================================================================================================
+
+
+.pagination ul {
+  // Visuals
+  .border-radius(@baseBorderRadius);
+  .box-shadow(none);
+  li {
+    display: inline; // Remove list-style and block-level defaults
+    &:first-child>a, 
+    &:first-child>span {
+      border-left-width: 1px;
+    }
+    > a,
+    > span {
+      background-color: none;
+      border: none;
+      border-left-width: 0;
+      margin:0 5px;
+      padding:7px 10px;
+      [class^=icon-ui-arrow] {
+        font-size:20px;
+        margin-top:-2px;
+      }
+      &:hover,
+      &:focus {
+        background-color: @dellHighlightBlue;
+        .border-radius(@baseBorderRadius);        
+      }
+    }
+    &.active > a,
+    &.active > a:hover,
+    &.active > span {
+      background-color: @grayLight;
+      color: @grayDarker;
+      font-weight: bold;
+      border:1px solid @grayDark;
+      padding: 5px 10px;
+      .border-radius(@baseBorderRadius);
+    }
+  }
+  .disabled > span,
+  .disabled > a,
+  .disabled > a:hover,
+  .disabled > a:focus {
+    color: @grayDark;
+  }
+}
+.mirror-text() {
+   -moz-transform: scaleX(-1); /* Gecko */
+  -o-transform: scaleX(-1); /* Operah */
+  -webkit-transform: scaleX(-1); /* webkit */
+  transform: scaleX(-1); /* standard */
+  filter: FlipH; /* IE 6/7/8 */ 
+}
+
+.pagination.pagination-unnumbered {
+  margin: 20px auto;
+  width: 350px;
+  clear: both;
+  float: none;
+  ul {
+    width:auto;
+    margin-top:15px;
+    float:left;
+  }
+  ul > li {
+    > a {
+      background-color: @dellGrayStroke;
+      .border-radius(@borderRadiusSmall);
+      border-width: 5px;
+      width: 30px;
+      padding: 5px 10px;
+      &:hover {
+        background-color: @dellHighlightBlue;
+      }
+    }
+    &.active > a {
+      padding: 0 10px;
+      background-color: @grayDark;
+      &:hover {
+        padding: 3px 10px;
+        .border-radius(@borderRadiusSmall);
+      }
+    }
+  }
+  .zoom-controls {
+    color: @gray;
+    border-left:2px solid @dellGrayStroke;
+    padding:9px 20px 7px;
+    margin-left:20px;
+    height:40px;
+    width:auto;
+    display:inline;
+    [class^="icon-small-zoom"] {
+      margin:-3px 10px 10px 10px;
+      font-size:24px;
+      .mirror-text();
+      cursor:pointer;
+    }
+  }
+}
+
+
+
+// pager
+//=======================================================================================================================
+
+.pager {
+  margin: @baseLineHeight 0;
+  list-style: none;
+  text-align: center;
+  .clearfix();
+  li {
+    display: inline;
+    > a, 
+    > a.btn, 
+    > span {
+      // same as default button class
+      .default-button();
+      > [class*=left] {
+        margin: 2px -1px 0 -6px;
+      }
+      > [class*=right] {
+        margin: 2px -6px 0 -1px;
+      }
+      &.disabled {
+        margin-top:-3px;
+      }
+    }
+  }
+  &.next > a,
+  &.next > span {
+    > [class^=icon] {
+      margin: 2px -6px 0 -1px;
+    }
+  }
+  &.previous > a,
+  &.previous > span {
+    > [class^=icon] {
+      margin: 2px -1px 0 -6px;
+    }
+  }
+  .disabled > a,
+  .disabled > a:hover,
+  .disabled > a:focus,
+  .disabled > span {
+    cursor: default;
+    .opacity(65);
+    .box-shadow(none);
+    .buttonBackground(@btnBackground, @btnBackgroundHighlight, @linkColor, 0 1px 1px rgba(255,255,255,.75));
+    background-position: 0 0;
+    // transition is only when going to hover/focus, otherwise the background
+    // behind the gradient (there for IE<=9 fallback) gets mismatched
+    .transition(background-position 0s linear);
+  }
+}
+
+// modals
+//=======================================================================================================================
+
+
+
+
+// Base modal
+.modal {
+  padding: @baseLineHeight;
+  border: none; 
+}
+
+
+.modal-header {
+  padding: 0;
+  padding-bottom: 5px;
+  border-bottom: 1px solid @dellGrayStroke;
+  // Close icon
+  .close { 
+    margin-top: 0;
+    color:transparent;
+    opacity:.6;
+    &:before {
+      color:@grayDarker;
+      font-family: 'icon-ui';
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      content: "\2c";
+      font-size:14px;
+      margin-right:0px;
+      
+    }
+    &:hover {
+      opacity:1;
+    }
+  }
+  // Heading
+  h3 {
+    margin: 0;
+    line-height: 30px;
+  }
+  hr {
+    margin-bottom:0;
+  }
+}
+
+.modal-body {
+  padding: 10px 0;
+  :last-child {
+      margin-bottom:0;
+  }
+}
+
+// Footer (for actions)
+.modal-footer {
+  padding: 20px 0 0;
+  text-align: right; // right align buttons
+  background-color: @white;
+  border-top: 1px solid @dellGrayStroke;
+  .border-radius(none);
+  .box-shadow(none);
+}
+
+
+
+// tooltip
+//=======================================================================================================================
+
+
+
+
+// Base class
+.tooltip {
+  font-size: 12px;
+  line-height: 1.4;
+  width:auto;
+  &.in {.opacity(100)}
+  &.left   { margin-left: -14px; }
+}
+
+// Wrapper for the tooltip content
+.tooltip-inner {
+  padding: 12px;
+}
+
+[data-toggle=tooltip] {
+  color:inherit;
+  border-bottom: 1px dashed @gray;
+  &:hover{
+    text-decoration:none;
+    color:inherit;
+  }
+}
+
+
+
+
+// popovers
+//=======================================================================================================================
+
+
+
+.popover {
+  .close {
+    opacity: .4;
+    font-size: 10px;
+    text-shadow: none;
+    margin-right:-12px;
+    color:@grayDarker;
+    &:hover {
+      opacity: 1;
+    }
+  }
+  .popover-title {
+    color:@white;
+    background:@blue;
+    > .close {
+      opacity:1;
+      color:@white;
+      float:right;
+      font-size:10px;
+      text-shadow: none;
+      margin-top:4px;
+    }
+  }
+}
+.popover.bottom .popover-title:before {
+  bottom: 100%;
+  border: solid transparent;
+  content: " ";
+  height: 0;
+  width: 0;
+  position: absolute;
+  pointer-events: none;
+  border-color: transparent;
+  border-bottom-color: @blue;
+  border-width: 10px;
+  left: 50%;
+  margin-left: -10px;
+  top:-18px;
+}
+
+.control-group.error .popover,
+.error .popover,
+.error + .popover,
+:not(form).ng-dirty.ng-invalid + .popover {
+  background-color: @dellAlertYellow;
+  &.right .arrow:after {
+    border-right-color: @dellAlertYellow;
+  }
+  &.top .arrow:after {
+    border-top-color: @dellAlertYellow;
+  }
+  &.left .arrow:after {
+    border-left-color: @dellAlertYellow;
+  }
+  &.bottom .arrow:after {
+    border-bottom-color: @dellAlertYellow;
+  }
+}
+
+//popovers for mobile
+
+@media only screen and (max-width:@mobileMaxWidth) {
+  .popover {
+    .arrow,
+    &.bottom .popover-title:before {
+      display:none;
+    }
+    .box-shadow(0px 10px 54px rgba(0,0,0,0.4));
+    left: 5% !important;
+    width:90%;
+    max-width:@mobileMaxWidth;
+    &.right,
+    &.left {
+      margin-left: 0;
+    }  
+  }
+  .control-group.error .popover,
+  .error .popover,
+  .error + .popover {
+    top:0;
+    .box-shadow(0 5px 10px rgba(0,0,0,.2));
+    .arrow,
+    &.bottom .popover-title:before {
+      display:block;
+    }
+  }
+}
+
+
+
+
+// Components: Misc
+// thumbnails
+//=======================================================================================================================
+
+
+
+// media
+//=======================================================================================================================
+
+
+
+// labels-badges
+//=======================================================================================================================
+// Base classes
+.label,
+.badge {
+  padding: 2px 6px;
+  text-shadow: none;
+  background-color: @gray;
+}
+
+// Colors
+// Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
+.label {
+  &-teal,
+  &-info              { background-color: @dellTeal; }
+}
+
+.badge { 
+  background-color: @dellGrayDark; 
+  position:relative;
+  top:-5px;
+}
+
+
+// progress-bars
+//=======================================================================================================================
+
+
+
+
+.progress {
+  overflow: hidden;
+  height: @baseLineHeight;
+  margin-bottom: @baseLineHeight;
+  #gradient > .vertical(@dellGrayLight, @dellGrayLight);
+  .box-shadow(inset 0 1px 2px rgba(0,0,0,.3));
+  .border-radius(@baseBorderRadius);
+
+  //progress-status dell 308 only
+  &.progress-status {
+    overflow:visible;
+    position:relative;
+    margin-bottom:40px;
+    .bar {
+      position:relative;
+      .box-shadow(inset 0 1px 2px rgba(0,0,0,.3));
+      span {
+        position:relative;
+        color:@grayDarker;
+        text-shadow:none;
+        top:30px;
+        font-size:14px;
+      }
+      &-complete {
+        span {
+          font-weight:bold;
+          color:@blue;    
+        }
+        &:after {
+          position:absolute;
+          right:45%;
+          top:0;
+          content:"\72";
+          font-family:"icon-small";
+          font-size:11px;
+          font-weight:normal;
+          margin-right:2px;
+        }
+      }
+      &-progress {
+        span {
+          font-weight:bold;
+        }
+
+        #gradient > .vertical(@gray, @gray);
+      }
+      &-incomplete {
+        span {
+          color: @gray;
+
+        }
+        #gradient > .vertical(@dellGrayLight, @dellGrayLight);
+      }
+      &:first-child {
+        .border-left-radius(@baseBorderRadius);
+      }
+      &:last-child {
+        .border-right-radius(@baseBorderRadius);
+      }
+    } 
+  }
+  .progress-label {
+    display:none;
+  }
+}
+
+@media only screen and (max-width:@mobileMaxWidth) {
+  .progress.progress-status {
+    .bar span {
+      display:none;
+    }
+  }
+}
+
+@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+  .progress.progress-status {
+    .bar span {
+      left:2%;
+    }
+  }
+}
+
+
+
+// accordion
+//=======================================================================================================================
+
+// Parent container
+.accordion {
+  margin-bottom: @baseLineHeight;
+}
+
+// Group == heading + body
+.accordion-group {
+  margin-bottom: 2px;
+  border: none;
+  border-bottom: 1px solid @dellGrayStroke;
+  .border-radius(0);
+}
+
+.accordion-toggle:before {
+  font-family: 'icon-ui';
+  font-size:20px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  content:"\2a";
+  color:@blue;
+  position: absolute;
+  top:7px;
+  left:0;
+}
+.accordion-toggle.collapsed:before {
+  content:"\28";
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+
+// General toggle styles
+.accordion-toggle {
+  cursor: pointer;
+}
+
+.accordion-heading {
+  border-bottom: 0;
+  font-size:@fontSizeLarge;
+  position:relative;
+  padding-left:15px;
+  position:relative;
+  &.well {
+    padding-left:0;
+    .border-radius(0);
+    margin-bottom: -1px;
+    margin-top: -3px;
+    border-top:1px solid @dellGrayStroke;
+    .accordion-toggle {
+      &:before {
+        display:none;
+      }
+      &:after {
+        font-family: 'icon-ui';
+        font-size:20px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        color:inherit;
+        content:"\26";
+        font-size:12px;
+        position:absolute;
+        right:20px;
+        margin-top:5px;
+      }
+      &.collapsed:after {
+        content:"\25";
+      }
+    }
+  }
+}
+
+.accordion > .accordion-group:first-child > .accordion-heading.well {
+  border-top:none;
+  margin-top:3px;
+}
+// Inner needs the styles because you can't animate properly with any styles on the element
+.accordion-inner {
+  padding: 9px 15px;
+  border-top: 1px solid @dellGrayStroke;
+}
+
+
+// carousel
+//=======================================================================================================================
+
+
+
+.pull-caption(){
+  max-width: 50%;
+  .border-radius(@baseBorderRadius);
+  background:rgba(255,255,255,0.8);
+  position:absolute;
+  color:@grayDarker !important;
+  a {
+    color:@blue !important;
+  }
+  .btn-primary,
+  .btn-secondary {
+    color:@white !important;
+  }
+}
+.carousel {
+  padding: 0 40px 30px 40px;
+  .carousel-control {
+    position: absolute;
+    top: 35%;
+    width: 40px;
+    height: 50px;
+    margin-top: 0;
+    font-size: 60px;
+    font-weight: normal;
+    line-height: 30px;
+    color: @blue;
+    text-align: center;
+    background: none;
+    border: none;
+    .border-radius(0);
+    opacity: 1;
+    filter: alpha(opacity=100);
+    &.left{
+      left:0;
+      &:before {
+        content:"\2e";
+        font-family: 'icon-ui';
+        font-size: 60px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        margin-left:-20px;
+
+      }
+      &:hover{
+        color: @dellHighlightBlue;
+      }
+    }
+    &.right{
+      right:0;
+      &:after {
+        content:"\2d";
+        font-family: 'icon-ui';
+        font-size: 60px;
+        speak: none;
+        font-style: normal;
+        font-weight: normal;
+        font-variant: normal;
+        text-transform: none;
+        line-height: 1;
+        -webkit-font-smoothing: antialiased;
+        margin-left:-17px;
+      }
+      &:hover{
+        color: @dellHighlightBlue;
+      }
+    }
+  }
+  .carousel-indicators {
+    margin-right: 0;
+    left: 44%;
+    position:relative;
+    &-4 {
+      margin-left: -21px;
+    }
+    &-5 {
+      margin-left: -37px;
+    }
+    li {
+      margin-left:10px;
+      width:30px;
+      .border-radius(@borderRadiusSmall);
+      background: @dellGrayStroke;
+      &:hover:not(.active){
+        background: @dellHighlightBlue;
+        cursor:pointer;
+      }
+    }
+    .active {
+      background: @grayDarker;
+    }
+  }
+  &.carousel-gallery {
+    padding: 0 0 30px;
+    position:relative;
+    .carousel-control {
+      top: 33%;
+      background: rgba(255,255,255,0.4);
+      padding: 20px 10px;
+      height: 100px;
+      width: 60px;
+      &.left{
+        .border-right-radius(@borderRadiusSmall);
+        &:hover{
+          background: rgba(255,255,255,0.8);
+          color:@blue;
+        }
+      }
+      &.right{
+        .border-left-radius(@borderRadiusSmall);
+        &:hover{
+          background: rgba(255,255,255,0.8);
+          color:@blue;
+        }
+      }
+
+    }
+    .item.active {
+      .border-radius(@baseBorderRadius);
+      overflow:hidden;
+    }
+
+    // Caption for text below images
+    // -----------------------------
+
+    .carousel-caption {
+      position: relative;
+      left: auto;
+      right: auto;
+      bottom: auto;
+      padding: 20px;
+      background: inherit;
+      &.pull-top-left {
+        .pull-caption();
+        top:20px;
+        left:20px;
+      }
+      &.pull-top-right {
+        .pull-caption();
+        top:20px;
+        right:20px;        
+      }
+      &.pull-bottom-left {
+        .pull-caption();
+        bottom:20px;
+        left:20px;        
+      }
+      &.pull-bottom-right {
+        .pull-caption();
+        bottom:20px;
+        right:20px;       
+      }
+    }
+    .carousel-caption h4,
+    .carousel-caption p {
+      color: inherit;
+      line-height: inherit;
+    }
+    .well {
+      margin-bottom:0;
+    }
+
+  }
+}
+
+@media only screen and (max-width:@mobileMaxWidth) {
+  .carousel-control{
+    display:none;
+  }
+  .carousel .carousel-indicators {
+    left: 32%;
+  }
+  .carousel.carousel-gallery {
+    width: 105%;
+    margin-left: -2%;
+    .item.active {
+      .border-radius(0);
+      .well {
+        .border-radius(0);
+      }
+    }
+  }
+}
+
+// hero-unit
+//=======================================================================================================================
+
+
+
+
+// Utility classes
+// utilities
+//=======================================================================================================================
+
+
+
+
+
+//
+// Scaffolding
+// --------------------------------------------------
+
+
+// Links
+// -------------------------
+
+
+
+
+// Images
+// -------------------------
+
+
+
+//
+// Layouts
+// --------------------------------------------------
+
+
+
+// TODO: need to look at div reset here.
+
+
+
+
+//ICONS
+//=======================================================================================================================
+// NOTE: These are Dell Specific Icon classes using Dell Icon fonts
+// TODO: There should be four sizes mini/13px, small/16px, medium/25px, large/63px - small would be the standard
+
+[class^=icon-] {
+  font-family: 'icon-small';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  margin-top: 3px;
+  background:none;
+}
+p.lead [class^=icon-] {
+    margin-top: 4px;
+}
+
+// this is to provide some mapping for bootstrap icons that match the Dell 308 set
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icon-ui';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="your-class-prefix"] {
+*/
+.icon-ui-triangleup, .icon-ui-triangleright, .icon-ui-triangleleft, .icon-ui-triangledown, .icon-ui-plus, .icon-ui-minus, .icon-ui-menucollapsed, .icon-ui-expand, .icon-ui-dell, .icon-ui-collapse, .icon-ui-closecircle, .icon-ui-close, .icon-ui-arrowright, .icon-ui-arrowleft {
+  font-family: 'icon-ui';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size:14px;
+  width:20px;
+}
+.icon-ui-triangleup:before {
+  content: "\21";
+}
+.icon-ui-triangleright:before {
+  content: "\22";
+}
+.icon-ui-triangleleft:before {
+  content: "\23";
+}
+.icon-ui-triangledown:before {
+  content: "\24";
+}
+.icon-ui-plus:before {
+  content: "\25";
+}
+.icon-ui-minus:before {
+  content: "\26";
+}
+.icon-ui-menucollapsed:before {
+  content: "\27";
+}
+.icon-ui-expand:before {
+  content: "\28";
+}
+.icon-ui-dell:before {
+  content: "\29";
+}
+.icon-ui-collapse:before {
+  content: "\2a";
+}
+.icon-ui-closecircle:before {
+  content: "\2b";
+}
+.icon-ui-close:before {
+  content: "\2c";
+}
+.icon-ui-arrowright:before {
+  content: "\2d";
+}
+.icon-ui-arrowleft:before {
+  content: "\2e";
+}
+
+
+/*---Small Icons---*/
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icon-small';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="your-class-prefix"] {
+*/
+.icon-small-zoomout, .icon-small-zoomin, .icon-small-wireless, .icon-small-whitepaper, .icon-small-webcam, .icon-small-warranty, .icon-small-videocard, .icon-small-video, .icon-small-useraccount, .icon-small-trash, .icon-small-towergeneric, .icon-small-touchpad, .icon-small-touch, .icon-small-thinclient, .icon-small-tablet, .icon-small-surgeprotection, .icon-small-support, .icon-small-storage, .icon-small-speakers, .icon-small-software, .icon-small-shipsfast, .icon-small-shipping, .icon-small-share, .icon-small-serverrack, .icon-small-server, .icon-small-securesoftware, .icon-small-secure, .icon-small-searchright, .icon-small-searchleft, .icon-small-save, .icon-small-rss, .icon-small-recycle, .icon-small-protection, .icon-small-projector, .icon-small-processor, .icon-small-printer, .icon-small-powersupply, .icon-small-ports, .icon-small-play, .icon-small-photos, .icon-small-phone, .icon-small-performance, .icon-small-package, .icon-small-opticaldrive, .icon-small-operatingsystem, .icon-small-network, .icon-small-music, .icon-small-mouse, .icon-small-mobile, .icon-small-missingimage, .icon-small-memorycardreader, .icon-small-memory, .icon-small-mail, .icon-small-location, .icon-small-lightbulb, .icon-small-keyboard, .icon-small-inktoner, .icon-small-house, .icon-small-help, .icon-small-harddrive, .icon-small-globe, .icon-small-giftcard, .icon-small-favorite, .icon-small-energyefficient, .icon-small-employee, .icon-small-edit, .icon-small-drivers, .icon-small-download, .icon-small-display, .icon-small-dimensionsweight, .icon-small-diagnostic, .icon-small-deals, .icon-small-data, .icon-small-creditcvv, .icon-small-copy, .icon-small-contact, .icon-small-computergeneric, .icon-small-color, .icon-small-cloud, .icon-small-clock, .icon-small-chipset, .icon-small-checkmark, .icon-small-chat, .icon-small-cart, .icon-small-carryingcase, .icon-small-calendar, .icon-small-calculator, .icon-small-cables, .icon-small-bell, .icon-small-battery, .icon-small-award, .icon-small-audiospeaker, .icon-small-audiocard, .icon-small-alertnotice, .icon-small-alertinfo, .icon-small-alerterror, .icon-small-alertcomplete, .icon-small-add {
+  font-family: 'icon-small';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size:14px;
+  width:20px;
+}
+.icon-small-zoomout:before {
+  content: "\21";
+}
+.icon-small-zoomin:before {
+  content: "\22";
+}
+.icon-small-wireless:before {
+  content: "\23";
+}
+.icon-small-whitepaper:before {
+  content: "\24";
+}
+.icon-small-webcam:before {
+  content: "\25";
+}
+.icon-small-warranty:before {
+  content: "\26";
+}
+.icon-small-videocard:before {
+  content: "\27";
+}
+.icon-small-video:before {
+  content: "\28";
+}
+.icon-small-useraccount:before {
+  content: "\29";
+}
+.icon-small-trash:before {
+  content: "\2a";
+}
+.icon-small-towergeneric:before {
+  content: "\2b";
+}
+.icon-small-touchpad:before {
+  content: "\2c";
+}
+.icon-small-touch:before {
+  content: "\2d";
+}
+.icon-small-thinclient:before {
+  content: "\2e";
+}
+.icon-small-tablet:before {
+  content: "\2f";
+}
+.icon-small-surgeprotection:before {
+  content: "\30";
+}
+.icon-small-support:before {
+  content: "\31";
+}
+.icon-small-storage:before {
+  content: "\32";
+}
+.icon-small-speakers:before {
+  content: "\33";
+}
+.icon-small-software:before {
+  content: "\34";
+}
+.icon-small-shipsfast:before {
+  content: "\35";
+}
+.icon-small-shipping:before {
+  content: "\36";
+}
+.icon-small-share:before {
+  content: "\37";
+}
+.icon-small-serverrack:before {
+  content: "\38";
+}
+.icon-small-server:before {
+  content: "\39";
+}
+.icon-small-securesoftware:before {
+  content: "\3a";
+}
+.icon-small-secure:before {
+  content: "\3b";
+}
+.icon-small-searchright:before {
+  content: "\3c";
+}
+.icon-small-searchleft:before {
+  content: "\3d";
+}
+.icon-small-save:before {
+  content: "\3e";
+}
+.icon-small-rss:before {
+  content: "\3f";
+}
+.icon-small-recycle:before {
+  content: "\40";
+}
+.icon-small-protection:before {
+  content: "\41";
+}
+.icon-small-projector:before {
+  content: "\42";
+}
+.icon-small-processor:before {
+  content: "\43";
+}
+.icon-small-printer:before {
+  content: "\44";
+}
+.icon-small-powersupply:before {
+  content: "\45";
+}
+.icon-small-ports:before {
+  content: "\46";
+}
+.icon-small-play:before {
+  content: "\47";
+}
+.icon-small-photos:before {
+  content: "\48";
+}
+.icon-small-phone:before {
+  content: "\49";
+}
+.icon-small-performance:before {
+  content: "\4a";
+}
+.icon-small-package:before {
+  content: "\4b";
+}
+.icon-small-opticaldrive:before {
+  content: "\4c";
+}
+.icon-small-operatingsystem:before {
+  content: "\4d";
+}
+.icon-small-network:before {
+  content: "\4e";
+}
+.icon-small-music:before {
+  content: "\4f";
+}
+.icon-small-mouse:before {
+  content: "\50";
+}
+.icon-small-mobile:before {
+  content: "\51";
+}
+.icon-small-missingimage:before {
+  content: "\52";
+}
+.icon-small-memorycardreader:before {
+  content: "\53";
+}
+.icon-small-memory:before {
+  content: "\54";
+}
+.icon-small-mail:before {
+  content: "\55";
+}
+.icon-small-location:before {
+  content: "\56";
+}
+.icon-small-lightbulb:before {
+  content: "\57";
+}
+.icon-small-keyboard:before {
+  content: "\58";
+}
+.icon-small-inktoner:before {
+  content: "\59";
+}
+.icon-small-house:before {
+  content: "\5a";
+}
+.icon-small-help:before {
+  content: "\5b";
+}
+.icon-small-harddrive:before {
+  content: "\5c";
+}
+.icon-small-globe:before {
+  content: "\5d";
+}
+.icon-small-giftcard:before {
+  content: "\5e";
+}
+.icon-small-favorite:before {
+  content: "\5f";
+}
+.icon-small-energyefficient:before {
+  content: "\60";
+}
+.icon-small-employee:before {
+  content: "\61";
+}
+.icon-small-edit:before {
+  content: "\62";
+}
+.icon-small-drivers:before {
+  content: "\63";
+}
+.icon-small-download:before {
+  content: "\64";
+}
+.icon-small-display:before {
+  content: "\65";
+}
+.icon-small-dimensionsweight:before {
+  content: "\66";
+}
+.icon-small-diagnostic:before {
+  content: "\67";
+}
+.icon-small-deals:before {
+  content: "\68";
+}
+.icon-small-data:before {
+  content: "\69";
+}
+.icon-small-creditcvv:before {
+  content: "\6a";
+}
+.icon-small-copy:before {
+  content: "\6b";
+}
+.icon-small-contact:before {
+  content: "\6c";
+}
+.icon-small-computergeneric:before {
+  content: "\6d";
+}
+.icon-small-color:before {
+  content: "\6e";
+}
+.icon-small-cloud:before {
+  content: "\6f";
+}
+.icon-small-clock:before {
+  content: "\70";
+}
+.icon-small-chipset:before {
+  content: "\71";
+}
+.icon-small-checkmark:before {
+  content: "\72";
+}
+.icon-small-chat:before {
+  content: "\73";
+}
+.icon-small-cart:before {
+  content: "\74";
+}
+.icon-small-carryingcase:before {
+  content: "\75";
+}
+.icon-small-calendar:before {
+  content: "\76";
+}
+.icon-small-calculator:before {
+  content: "\77";
+}
+.icon-small-cables:before {
+  content: "\78";
+}
+.icon-small-bell:before {
+  content: "\79";
+}
+.icon-small-battery:before {
+  content: "\7a";
+}
+.icon-small-award:before {
+  content: "\7b";
+}
+.icon-small-audiospeaker:before {
+  content: "\7c";
+}
+.icon-small-audiocard:before {
+  content: "\7d";
+}
+.icon-small-alertnotice:before {
+  content: "\7e";
+}
+.icon-small-alertinfo:before {
+  content: "\e000";
+}
+.icon-small-alerterror:before {
+  content: "\e001";
+}
+.icon-small-alertcomplete:before {
+  content: "\e002";
+}
+.icon-small-add:before {
+  content: "\e003";
+}
+
+
+/*---Large Icons---*/
+
+/* Use the following CSS code if you want to use data attributes for inserting your icons */
+[data-icon]:before {
+  font-family: 'icon-large';
+  content: attr(data-icon);
+  speak: none;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+}
+
+/* Use the following CSS code if you want to have a class per icon */
+/*
+Instead of a list of all class selectors,
+you can use the generic selector below, but it's slower:
+[class*="your-class-prefix"] {
+*/
+.icon-large-zoomout, .icon-large-zoomin, .icon-large-wifi, .icon-large-whitepaper, .icon-large-webcam, .icon-large-warranty, .icon-large-videocard, .icon-large-video, .icon-large-useraccount, .icon-large-trash, .icon-large-towergeneric, .icon-large-touchpad, .icon-large-touch, .icon-large-thinclient, .icon-large-tablet, .icon-large-surgeprotection, .icon-large-support, .icon-large-storage, .icon-large-speakers, .icon-large-software, .icon-large-shipsfast, .icon-large-shipping, .icon-large-share, .icon-large-serverrack, .icon-large-server, .icon-large-securesoftware, .icon-large-secure, .icon-large-searchright, .icon-large-searchleft, .icon-large-save, .icon-large-rss, .icon-large-recycle, .icon-large-protection, .icon-large-projector, .icon-large-processor, .icon-large-printer, .icon-large-powersupply, .icon-large-ports, .icon-large-play, .icon-large-photos, .icon-large-phone, .icon-large-performance, .icon-large-package, .icon-large-opticaldrive, .icon-large-operatingsystem, .icon-large-network, .icon-large-music, .icon-large-mouse, .icon-large-mobile, .icon-large-missingimage, .icon-large-memorycardreader, .icon-large-memory, .icon-large-mail, .icon-large-location, .icon-large-lightbulb, .icon-large-keyboard, .icon-large-inktoner, .icon-large-house, .icon-large-help, .icon-large-harddrive, .icon-large-globe, .icon-large-giftcard, .icon-large-favorite, .icon-large-energyefficient, .icon-large-employee, .icon-large-edit, .icon-large-drivers, .icon-large-download, .icon-large-display, .icon-large-dimensionsweight, .icon-large-diagnostic, .icon-large-deals, .icon-large-data, .icon-large-creditcvv, .icon-large-copy, .icon-large-contact, .icon-large-computergeneric, .icon-large-color, .icon-large-cloud, .icon-large-clock, .icon-large-chipset, .icon-large-checkmark, .icon-large-chat, .icon-large-cart, .icon-large-carryingcase, .icon-large-calendar, .icon-large-calculator, .icon-large-cables, .icon-large-bell, .icon-large-battery, .icon-large-award, .icon-large-audiospeaker, .icon-large-audiocard, .icon-large-alertnotice, .icon-large-alertinfo, .icon-large-alerterror, .icon-large-alertcomplete, .icon-large-add {
+  font-family: 'icon-large';
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  font-size:36px;
+  width:50px;
+}
+.icon-large-zoomout:before {
+  content: "\21";
+}
+.icon-large-zoomin:before {
+  content: "\22";
+}
+.icon-large-wifi:before {
+  content: "\23";
+}
+.icon-large-whitepaper:before {
+  content: "\24";
+}
+.icon-large-webcam:before {
+  content: "\25";
+}
+.icon-large-warranty:before {
+  content: "\26";
+}
+.icon-large-videocard:before {
+  content: "\27";
+}
+.icon-large-video:before {
+  content: "\28";
+}
+.icon-large-useraccount:before {
+  content: "\29";
+}
+.icon-large-trash:before {
+  content: "\2a";
+}
+.icon-large-towergeneric:before {
+  content: "\2b";
+}
+.icon-large-touchpad:before {
+  content: "\2c";
+}
+.icon-large-touch:before {
+  content: "\2d";
+}
+.icon-large-thinclient:before {
+  content: "\2e";
+}
+.icon-large-tablet:before {
+  content: "\2f";
+}
+.icon-large-surgeprotection:before {
+  content: "\30";
+}
+.icon-large-support:before {
+  content: "\31";
+}
+.icon-large-storage:before {
+  content: "\32";
+}
+.icon-large-speakers:before {
+  content: "\33";
+}
+.icon-large-software:before {
+  content: "\34";
+}
+.icon-large-shipsfast:before {
+  content: "\35";
+}
+.icon-large-shipping:before {
+  content: "\36";
+}
+.icon-large-share:before {
+  content: "\37";
+}
+.icon-large-serverrack:before {
+  content: "\38";
+}
+.icon-large-server:before {
+  content: "\39";
+}
+.icon-large-securesoftware:before {
+  content: "\3a";
+}
+.icon-large-secure:before {
+  content: "\3b";
+}
+.icon-large-searchright:before {
+  content: "\3c";
+}
+.icon-large-searchleft:before {
+  content: "\3d";
+}
+.icon-large-save:before {
+  content: "\3e";
+}
+.icon-large-rss:before {
+  content: "\3f";
+}
+.icon-large-recycle:before {
+  content: "\40";
+}
+.icon-large-protection:before {
+  content: "\41";
+}
+.icon-large-projector:before {
+  content: "\42";
+}
+.icon-large-processor:before {
+  content: "\43";
+}
+.icon-large-printer:before {
+  content: "\44";
+}
+.icon-large-powersupply:before {
+  content: "\45";
+}
+.icon-large-ports:before {
+  content: "\46";
+}
+.icon-large-play:before {
+  content: "\47";
+}
+.icon-large-photos:before {
+  content: "\48";
+}
+.icon-large-phone:before {
+  content: "\49";
+}
+.icon-large-performance:before {
+  content: "\4a";
+}
+.icon-large-package:before {
+  content: "\4b";
+}
+.icon-large-opticaldrive:before {
+  content: "\4c";
+}
+.icon-large-operatingsystem:before {
+  content: "\4d";
+}
+.icon-large-network:before {
+  content: "\4e";
+}
+.icon-large-music:before {
+  content: "\4f";
+}
+.icon-large-mouse:before {
+  content: "\50";
+}
+.icon-large-mobile:before {
+  content: "\51";
+}
+.icon-large-missingimage:before {
+  content: "\52";
+}
+.icon-large-memorycardreader:before {
+  content: "\53";
+}
+.icon-large-memory:before {
+  content: "\54";
+}
+.icon-large-mail:before {
+  content: "\55";
+}
+.icon-large-location:before {
+  content: "\56";
+}
+.icon-large-lightbulb:before {
+  content: "\57";
+}
+.icon-large-keyboard:before {
+  content: "\58";
+}
+.icon-large-inktoner:before {
+  content: "\59";
+}
+.icon-large-house:before {
+  content: "\5a";
+}
+.icon-large-help:before {
+  content: "\5b";
+}
+.icon-large-harddrive:before {
+  content: "\5c";
+}
+.icon-large-globe:before {
+  content: "\5d";
+}
+.icon-large-giftcard:before {
+  content: "\5e";
+}
+.icon-large-favorite:before {
+  content: "\5f";
+}
+.icon-large-energyefficient:before {
+  content: "\60";
+}
+.icon-large-employee:before {
+  content: "\61";
+}
+.icon-large-edit:before {
+  content: "\62";
+}
+.icon-large-drivers:before {
+  content: "\63";
+}
+.icon-large-download:before {
+  content: "\64";
+}
+.icon-large-display:before {
+  content: "\65";
+}
+.icon-large-dimensionsweight:before {
+  content: "\66";
+}
+.icon-large-diagnostic:before {
+  content: "\67";
+}
+.icon-large-deals:before {
+  content: "\68";
+}
+.icon-large-data:before {
+  content: "\69";
+}
+.icon-large-creditcvv:before {
+  content: "\6a";
+}
+.icon-large-copy:before {
+  content: "\6b";
+}
+.icon-large-contact:before {
+  content: "\6c";
+}
+.icon-large-computergeneric:before {
+  content: "\6d";
+}
+.icon-large-color:before {
+  content: "\6e";
+}
+.icon-large-cloud:before {
+  content: "\6f";
+}
+.icon-large-clock:before {
+  content: "\70";
+}
+.icon-large-chipset:before {
+  content: "\71";
+}
+.icon-large-checkmark:before {
+  content: "\72";
+}
+.icon-large-chat:before {
+  content: "\73";
+}
+.icon-large-cart:before {
+  content: "\74";
+}
+.icon-large-carryingcase:before {
+  content: "\75";
+}
+.icon-large-calendar:before {
+  content: "\76";
+}
+.icon-large-calculator:before {
+  content: "\77";
+}
+.icon-large-cables:before {
+  content: "\78";
+}
+.icon-large-bell:before {
+  content: "\79";
+}
+.icon-large-battery:before {
+  content: "\7a";
+}
+.icon-large-award:before {
+  content: "\7b";
+}
+.icon-large-audiospeaker:before {
+  content: "\7c";
+}
+.icon-large-audiocard:before {
+  content: "\7d";
+}
+.icon-large-alertnotice:before {
+  content: "\7e";
+}
+.icon-large-alertinfo:before {
+  content: "\e000";
+}
+.icon-large-alerterror:before {
+  content: "\e001";
+}
+.icon-large-alertcomplete:before {
+  content: "\e002";
+}
+.icon-large-add:before {
+  content: "\e003";
+}
+
+
+// bootstrap icon classes that map to Dell 308 icon set
+
+
+//.icon-glass:before { content:""; }
+//.icon-music:before { content:""; }
+.icon-search:before { content:"\3d"; }
+.icon-envelope:before { content:"\55"; }
+//.icon-heart:before { content:""; }
+.icon-star:before { content:"\5f"; }
+//.icon-star-empty:before { content:""; }
+.icon-user:before { content:"\29"; }
+//.icon-film:before { content:""; }
+//.icon-th-large:before { content:""; }
+//.icon-th:before { content:""; }
+//.icon-th-list:before { content:""; }
+.icon-ok:before { content:"\72"; }
+.icon-remove:before { font-family:'icon-ui';content:"\2b"; }
+.icon-zoom-in:before { content:"\22"; }
+.icon-zoom-out:before { content:"\21"; }
+//.icon-off:before { content:""; }
+//.icon-signal:before { content:""; }
+.icon-cog:before { content:"\63"; }
+.icon-trash:before { content:"\2a"; }
+
+.icon-home:before { content:"\5a";  }
+//.icon-file:before { content:""; }
+.icon-time:before { content:"\70"; }
+//.icon-road:before { content:""; }
+.icon-download-alt:before { content:"\64"; }
+.icon-download:before { content:"\64"; }
+//.icon-upload:before { content:""; }
+//.icon-inbox:before { content:""; }
+//.icon-play-circle:before { content:""; }
+//.icon-repeat:before { content:""; }
+//.icon-refresh:before { content:""; }
+//.icon-list-alt:before { content:""; }
+.icon-lock:before { content:"\3b"; } // px off
+//.icon-flag:before { content:""; }
+//.icon-headphones:before { content:""; }
+//.icon-volume-off:before { content:""; }
+//.icon-volume-down:before { content:""; }
+//.icon-volume-up:before { content:""; }
+//.icon-qrcode:before { content:""; }
+//.icon-barcode:before { content:""; }
+
+//.icon-tag:before { background-position: }
+//.icon-tags:before { content:""; } // px off
+//.icon-book:before { content:""; }
+//.icon-bookmark:before { content:""; }
+.icon-print:before { content:"\44"; }
+.icon-camera:before { content:"\48"; }
+//.icon-font:before { content:""; }
+//.icon-bold:before { content:""; } // px off
+//.icon-italic:before { content:""; }
+//.icon-text-height:before { content:""; }
+//.icon-text-width:before { content:""; }
+//.icon-align-left:before { content:""; }
+//.icon-align-center:before { content:""; }
+//.icon-align-right:before { content:""; }
+//.icon-align-justify:before { content:""; }
+//.icon-list:before { content:""; }
+//.icon-indent-left:before { content:""; }
+//.icon-indent-right:before { content:""; }
+//.icon-facetime-video:before { content:""; }
+//.icon-picture:before { content:""; }
+
+.icon-pencil:before { content:"\62"; }
+.icon-map-marker:before { content:"\56"; }
+//.icon-adjust:before { content:""; }
+//.icon-tint:before { content:""; }
+//.icon-edit:before { content:""; }
+//.icon-share:before { content:""; }
+//.icon-check:before { content:""; }
+//.icon-move:before { content:""; }
+//.icon-step-backward:before { content:""; }
+//.icon-fast-backward:before { content:""; }
+//.icon-backward:before { content:""; }
+//.icon-play:before { content:""; }
+//.icon-pause:before { content:""; }
+//.icon-stop:before { content:""; }
+//.icon-forward:before { content:""; }
+//.icon-fast-forward:before { content:""; }
+//.icon-step-forward:before { content:""; }
+//.icon-eject:before { content:""; }
+.icon-chevron-left:before { font-family:'icon-ui';content:"\2e"; }
+.icon-chevron-right:before { font-family:'icon-ui';content:"\2d"; }
+
+.icon-plus-sign:before { font-family:'icon-ui';content:"\25"; }
+.icon-minus-sign:before { font-family:'icon-ui';content:"\26"; }
+.icon-remove-sign:before { font-family:'icon-ui';content:"\2b"; }
+//.icon-ok-sign:before { content:""; }
+.icon-question-sign:before { content:"\5b"; }
+.icon-info-sign:before { content:"\e000"; }
+//.icon-screenshot:before { content:""; }
+//.icon-remove-circle:before { content:""; }
+//.icon-ok-circle:before { content:""; }
+//.icon-ban-circle:before { content:""; }
+.icon-arrow-left:before { font-family:'icon-ui';content:"\23"; }
+.icon-arrow-right:before { font-family:'icon-ui';content:"\22"; }
+.icon-arrow-up:before { font-family:'icon-ui';content:"\21"; } // px off
+.icon-arrow-down:before { font-family:'icon-ui';content:"\24"; }
+.icon-share-alt:before { content:"\37"; }
+//.icon-resize-full:before { content:""; }
+//.icon-resize-small:before { content:""; }
+.icon-plus:before { font-family:'icon-ui';content:"\25"; }
+.icon-minus:before { font-family:'icon-ui';content:"\26"; }
+//.icon-asterisk:before { content:""; }
+
+.icon-exclamation-sign:before { content:"\7e";}
+.icon-gift:before { content:"\5e"; }
+.icon-leaf:before { content:"\60"; }
+//.icon-fire:before { content:""; }
+//.icon-eye-open:before { content:""; }
+//.icon-eye-close:before { content:""; }
+.icon-warning-sign:before { content:"\7e"; }
+//.icon-plane:before { content:""; }
+.icon-calendar:before { content:"\76"; }
+//.icon-random:before { content:""; width: }
+.icon-comment:before { content:"\73"; }
+//.icon-magnet:before { content:""; }
+//.icon-chevron-up:before { content:""; }
+//.icon-chevron-down:before { content:""; } // px, px off
+//.icon-retweet:before { content:""; }
+.icon-shopping-cart:before { content:"\74"; }
+//.icon-folder-close:before { content:""; width: }
+//.icon-folder-open:before { content:""; width: }
+//.icon-resize-vertical:before { content:""; } // px, px off
+//.icon-resize-horizontal:before { content:""; } // px, px off
+
+.icon-hdd:before {  content:"\5c"; }
+//.icon-bullhorn:before { content:""; }
+.icon-bell:before { content:"\79"; }
+.icon-certificate:before { content:"\26"; }
+//.icon-thumbs-up:before { content:""; }
+//.icon-thumbs-down:before { content:""; }
+//.icon-hand-right:before { content:""; }
+//.icon-hand-left:before { content:""; }
+//.icon-hand-up:before { content:""; }
+//.icon-hand-down:before { content:""; }
+//.icon-circle-arrow-right:before { content:""; }
+//.icon-circle-arrow-left:before { content:""; }
+//.icon-circle-arrow-up:before { content:""; }
+//.icon-circle-arrow-down:before { content:""; }
+.icon-globe:before { content:"\5d"; }
+.icon-wrench:before { content:"\31"; }
+//.icon-tasks:before { content:""; }
+//.icon-filter:before { content:""; }
+//.icon-briefcase:before { content:""; }
+//.icon-fullscreen:before { content:""; }
+
+
+
+
+.icon-ui-loading {
+  height:21px;
+  width:21px;
+  background:url(../../images/loading_animation_square.gif) no-repeat;
+  margin-top: -2px;
+  margin-right: 2px;
+}
+
+
+
+// Dell 308 custom classes that do not exist in bootstrap
+
+// DELL-308-ONLY Specific table styling
+// ------------------------------------------
+// Stroked border tables
+
+div.table-bordered table {
+  border-width: 2px;
+  border-style: solid;
+  .border-radius(@borderRadiusLarge);
+  overflow:hidden;
+  margin-bottom: @baseLineHeight;
+  margin-top:-@baseLineHeight;
+  top:@baseLineHeight;  
+  position:relative;
+
+  tr td:first-child,
+  tr th:first-child {
+      border-left:0;
+  }
+  &.table-striped {
+    td, th {
+      .border-radius(0);
+    }
+  }
+  &.table-bordered {
+    border:none;
+  }
+}
+
+
+
+// these offsets are non-bootstrap gridset related hacks and should be removed in the BS3.0 release
+.bottom-offset-margin(@multiplier) {
+  margin-bottom: @baseLineHeight * @multiplier;
+}
+.top-offset-margin(@multiplier) {
+  margin-top: @baseLineHeight * @multiplier;
+}
+.bottom-offset {
+  &-mini {
+    .bottom-offset-margin(.5);
+  }
+  &-small {
+    .bottom-offset-margin(1);
+  }
+  &-medium {
+    .bottom-offset-margin(2);
+  }
+  &-large {
+    .bottom-offset-margin(3);
+  }
+}
+.top-offset {
+  &-mini {
+    .top-offset-margin(.5);
+  }
+  &-small {
+    .top-offset-margin(1);
+  }
+  &-medium {
+    .top-offset-margin(2);
+  }
+  &-large {
+    .top-offset-margin(3);
+  }
+}
+
+// RESPONSIVE CLASSES
+// ------------------
+
+@import "../../less/responsive-utilities.less";
+
+
+// MEDIA QUERIES
+// ------------------
+
+// Large desktops
+@import "../../less/responsive-1200px-min.less";
+
+// Tablets to regular desktops
+@import "../../less/responsive-768px-979px.less";
+
+// Phones to portrait tablets and narrow desktops
+@import "../../less/responsive-767px-max.less";
+
+
+// modals on phones 
+@media only screen and (max-width:@mobileMaxWidth) {
+
+  .modal {
+    width:98%;
+    padding:10px;
+    left:1%;
+    margin-left:0;
+    top:2%;
+    &.fade.in{
+      top:2%;
+    }
+    .modal-footer {
+      padding: 10px 0 0;
+    }
+    .modal-header .close {
+      position:relative;
+      z-index:0;
+    }
+    .modal-header .close:before {
+      margin-right: -2px;
+      position:relative;
+      z-index:1;
+    }
+  }
+}
+
+
+// IE10 Metro responsive
+// Required for Windows 8 Metro split-screen snapping with IE10
+// Source: http://timkadlec.com/2012/10/ie10-snap-mode-and-responsive-design/
+@-ms-viewport{
+  width: device-width;
+}
+
+
+
+
+
+// Layouts
+//=======================================================================================================================
+
+// NOTE: this is spacific to gridset - will be removed for BS3
+.wrapper {
+  margin: 0 auto;
+  width: 90%;
+  max-width: @desktopMaxWidth;
+  float: none; 
+  overflow:hidden;
+}
+
+
+@media only screen and (min-width:@tabletMinWidth) and (max-width:@desktopMinWidth) {
+  .wrapper {
+      width:100%;
+      padding:0 20px;
+  }
+  .wrapper.tablet-bleed {
+      padding:0;
+  }
+  body {
+      padding-left: 0;
+      padding-right: 0;
+  }
+}
+
+@media only screen and (max-width:@mobileMaxWidth) {
+  .wrapper {
+      width:100%;
+      padding:0 10px;
+  }
+  .wrapper.mobile-bleed {
+      padding:0;
+  }
+  body {
+      padding-left: 0;
+      padding-right: 0;
+  }
+}
+
+
+
+div {
+  float: left;
+  width: 100%;
+  margin-bottom: 0px;
+  display: block;
+}
+.pull-right, .pull-left {
+  width:auto; // dont want to inherit width:100% on divs;
+}
