@@ -1226,8 +1226,8 @@
   <hr>
 </p>
 
-
-<div class="tabbable tabs-left"><!-- tabbable-left -->
+<!-- tabbable-left -->
+<div class="tabbable tabs-left">
   <ul class="nav nav-tabs">
     <li class="active"><a href="#H" data-toggle="tab">Section 1</a></li>
     <li class=""><a href="#I" data-toggle="tab">Section 2</a></li>
@@ -1249,6 +1249,28 @@
 <p>
   <hr>
 </p>
+
+<!-- tabbable-gray light -->
+<div class="tabbable tabs-left tabs-gray-light">
+  <ul class="nav nav-tabs">
+    <li class="active"><a href="#K" data-toggle="tab">Section 1</a></li>
+    <li><a href="#L" data-toggle="tab">Section 2</a></li>
+    <li><a href="#M" data-toggle="tab">Section 3</a></li>
+  </ul>
+  <div class="tab-content">
+    <div class="tab-pane fade active in" id="K">
+      <p>I'm in Section A.</p>
+    </div>
+    <div class="tab-pane fade" id="L">
+      <p>Howdy, I'm in Section B.</p>
+    </div>
+    <div class="tab-pane fade" id="M">
+      <p>What up girl, this is Section C.</p>
+    </div>
+  </div>
+</div><!-- /tabbable-gray light -->
+
+
 
 
 </div>
@@ -1437,7 +1459,7 @@
 
 <!-- ==============  Pills End =================== -->
 
-<!-- ======================== lists ========================= -->
+<!-- ===== lists ========== -->
 
 <section id="lists" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/lists.html'">      <div class="row">
         <div class="page-header">
@@ -1457,7 +1479,7 @@
             <li><a href="#">Help</a></li>
           </ul>
         </div>
-        <div class="da-all ta-all ma-all hide tabbable tabs-aside" id="aside-example-HTML">
+        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-1 tabbable tabs-aside" id="aside-example-HTML">
           <div class="da1-da4">
             <ul class="nav nav-list nav-aside">
               <li class="active"><a href="#aside-home" data-toggle="tab"><h2>Home</h2></a></li>

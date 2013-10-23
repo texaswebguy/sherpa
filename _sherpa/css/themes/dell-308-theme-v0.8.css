@@ -970,23 +970,11 @@ address {
 }
 h1,
 h2,
-h3 {
-  margin-top: 0;
-  margin-bottom: 10.000000003px;
-}
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: 10.000000003px;
-}
-h1,
-h2,
 h3,
 h4,
 h5,
 h6 {
-  margin: 0px 0px 0.7142857145 0px;
+  margin: 5px 0px 5px 0px;
 }
 h1 strong,
 h2 strong,
@@ -4217,6 +4205,14 @@ input[type="submit"].btn.btn-xs {
 .tabbable.tabs-left.tabs-gray-light .tab-content {
   margin-top: 20px;
 }
+.tabbable.tabs-left.tabs-gray-light > .nav-tabs {
+  width: 30%;
+  float: left;
+}
+.tabbable.tabs-left.tabs-gray-light > .nav-tabs > li a {
+  background: #ffffff;
+  border: none;
+}
 .tabs-left .tab-content {
   width: auto;
 }
@@ -4246,7 +4242,6 @@ input[type="submit"].btn.btn-xs {
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   min-width: 100px;
-  max-width: 125px;
   margin-bottom: 3px;
 }
 .tabs-right > .nav-tabs,
@@ -4275,7 +4270,6 @@ input[type="submit"].btn.btn-xs {
   -moz-border-radius: 4px 0 0 4px;
   border-radius: 4px 0 0 4px;
   min-width: 100px;
-  max-width: 125px;
   margin-bottom: 3px;
 }
 .tabbable.tabs-aside .nav-aside {
@@ -4300,8 +4294,25 @@ input[type="submit"].btn.btn-xs {
   -moz-border-radius: 5px;
   border-radius: 5px;
 }
+.nav-list .divider {
+  height: 1px;
+  margin: 9px 15px;
+  overflow: hidden;
+  background-color: #eeeeee;
+  border-bottom: 1px solid #ffffff;
+}
 .nav-list .nav-header {
   color: #444444;
+}
+.nav-list > .active > a,
+.nav-list > .active > a:hover,
+.nav-list > .active > a:focus {
+  color: #fff;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.2);
+  background-color: #007db8;
+}
+.nav-list > li > a {
+  padding: 3px 15px;
 }
 .nav-list > li:last-child a:hover {
   -webkit-border-bottom-right-radius: 5px;
@@ -4394,9 +4405,9 @@ input[type="submit"].btn.btn-xs {
   -webkit-border-bottom-left-radius: 20px;
   -moz-border-radius-bottomleft: 20px;
   border-bottom-left-radius: 20px;
-  margin-top: 1.428571429;
+  margin-top: 10px;
   margin-left: 50%;
-  padding: 0.7142857145 1.428571429 1.428571429 -3.571428571;
+  padding: 10px;
   position: relative;
   z-index: 0;
   cursor: pointer;
@@ -4404,10 +4415,26 @@ input[type="submit"].btn.btn-xs {
 .nav-list + .back-to-top [class*=icon] {
   font-size: 28px;
   position: relative;
-  top: 0.35714285725;
+  vertical-align: middle;
+}
+.nav-list + .back-to-top > span {
+  vertical-align: middle;
 }
 .nav-list + .back-to-top:hover {
   color: #444444;
+}
+.nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999;
+  text-shadow: 0 1px 0 rgba(255, 255, 255, 0.5);
+  text-transform: uppercase;
+}
+.nav li + .nav-header {
+  margin-top: 9px;
 }
 .breadcrumb {
   padding: 8px 0px;

@@ -221,23 +221,9 @@ code {
 // --------------------------------------------------
 @import "../../less-BS3/type.less";
 
-h1,
-h2,
-h3 {
-  margin-top: 0;
-  margin-bottom: (@line-height-computed / 2);
-}
-h4,
-h5,
-h6 {
-  margin-top: 0;
-  margin-bottom: (@line-height-computed / 2);
-}
-
-
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 0px 0px (@line-height-base / 2) 0px;
+  margin: 5px 0px 5px 0px;
 }
 
 // Allows strong only in h5 and h6 - dell-308-only
@@ -2445,23 +2431,34 @@ input[type="submit"].btn {
   margin:0;
 }
 
-.tabbable.tabs-left.tabs-gray-light {
-  background:@gray-light;
-  margin-bottom:7px;
-  .border-right-radius(@border-radius-base);
-  .nav-tabs {
-    margin-bottom:0;
-    background:@white;
-    border-right:none;  
-    li.active a {
-      background:@gray-light;
-      border:none;
+.tabbable.tabs-left{
+  &.tabs-gray-light {
+    background:@gray-light;
+    margin-bottom:7px;
+    .border-right-radius(@border-radius-base);
+    .nav-tabs {
+      margin-bottom:0;
+      background:@white;
+      border-right:none;  
+      li.active a {
+        background:@gray-light;
+        border:none;
+      }
+    }
+
+    .tab-content {
+      margin-top:20px;
+    }
+
+    > .nav-tabs {
+    width: 30%;
+    float: left;
+      > li a {
+        background: #ffffff;
+        border: none;
+      }
     }
   }
-  .tab-content {
-    margin-top:20px;
-  }
-
 }
 
 .tabs-left {
@@ -2496,7 +2493,6 @@ input[type="submit"].btn {
         -moz-border-radius: 4px 0 0 4px;
         border-radius: 4px 0 0 4px;
         min-width: 100px;
-        max-width: 125px;
         margin-bottom: 3px;
       }
     } 
@@ -2524,8 +2520,26 @@ input[type="submit"].btn {
 
 .nav-list {
   background:@gray-light;
+  .divider {
+    height: 1px;
+    margin: 9px 15px;
+    overflow: hidden;
+    background-color: @dell-gray-light;
+    // background-color: #e5e5e5;
+    border-bottom: 1px solid @white;
+  }
   .nav-header {
-    color:@gray-darker;
+    color:@dell-gray-dark;
+  }
+  > .active > a, 
+  > .active > a:hover, 
+  > .active > a:focus {
+    color: #fff;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
+    background-color: @dell-blue;
+  }
+  > li > a {
+    padding: 3px 15px;
   }
   .border-radius(@border-radius-base);
   > li:last-child a:hover {
@@ -2545,25 +2559,47 @@ input[type="submit"].btn {
     background:none;
     .aside-nav();
   }
-  + .back-to-top {
+  + .back-to-top { //This is not part of Bootstrap
     background: @gray;
     color:@white;
     .border-left-radius(@border-radius-large * 2);
-    margin-top: @line-height-base;
+    margin-top: @line-height-base * 6.999999997900000000629999999811px;
     margin-left: 50%;
-    padding:@line-height-base / 2 @line-height-base @line-height-base @line-height-base - 5;
+    padding:@line-height-base * 6.999999997900000000629999999811px;
     position:relative;
     z-index:0;
     cursor:pointer;
     [class*=icon] {
       font-size:@font-size-base * 2;
       position:relative;
-      top:@line-height-base / 4;    
+      vertical-align: middle;    
+    }
+    > span{
+      vertical-align: middle;
     }
     &:hover {
-  color:@gray-darker;
+      color:@gray-darker;
     }
   }
+}
+
+
+
+
+
+.nav-header {
+  display: block;
+  padding: 3px 15px;
+  font-size: 11px;
+  font-weight: bold;
+  line-height: 20px;
+  color: #999;
+  text-shadow: 0 1px 0 rgba(255,255,255,0.5);
+  text-transform: uppercase;
+}
+
+.nav li +.nav-header {
+  margin-top: 9px;
 }
 
 .aside-nav() {
@@ -3046,7 +3082,7 @@ line-height: 20px;
 // Colors
 // Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
 .label {
-  &-teal              { background-color: @dell-teal; }
+  &-teal { background-color: @dell-teal; }
 }
 
 .badge { 
