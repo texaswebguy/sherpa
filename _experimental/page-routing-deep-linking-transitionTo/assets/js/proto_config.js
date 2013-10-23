@@ -74,6 +74,7 @@ SHERPA.PROTO_ROUTES["tab1"].animateExit = function( $state, target ) {
 };
 
 SHERPA.PROTO_ROUTES["tab1"].animateEnter = function() {
+
     console.log("animateEnter tab1");
 };
 
