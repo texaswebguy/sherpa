@@ -1,0 +1,22 @@
+{
+	"sample_text_key" : "This is a sample text key value",
+	"sample_greeting" : "Hello my friend",
+	"sample_greeting_with_data" : "Hello {0}",
+	"sample_question" : "How many roads must a man walk down before you can call him a man?",
+	"sample_message_with_link" : "Which search engine do you like best? [Google] or [Bing]?",
+	"sample_quantitative_with_data_singular" : "1 laptop",
+	"sample_quantitative_with_data_plural" : "{0} laptops",
+	"title_sample_tab_section_1":"Section 1",
+	"title_sample_tab_section_2":"Section 2",
+	"title_sample_tab_section_3":"Section 3",
+	"title_page_home":"Project Name",
+	"text_truncate_elipse":"...",
+	"text_truncate_more":"more",
+	"text_truncate_less":"less",
+	"title_page_css_overview":"CSS Overview",
+	"title_todo":"Todo List",
+	"text_todo_status":"{0} of {1} remaining",
+	"title_product_name":"Sherpa",
+	"text_item_label":"This is my label",
+    "title_page_routing":"Aside Home"
+}
