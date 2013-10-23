@@ -14,7 +14,7 @@
 sherpaApp.controller("pageController", function($scope, $state,$http) {   
 
 
-    if(SHERPA.PROTO_ROUTES) {
+    /*if(SHERPA.PROTO_ROUTES) {
         //TODO not sure this is necessary since each page has their own controller
         var routes = [];
         _.each(_.keys(SHERPA.PROTO_ROUTES),function(route){
@@ -28,7 +28,7 @@ sherpaApp.controller("pageController", function($scope, $state,$http) {
     $scope.setPage = function(page){
         $state.transitionTo(page);
     }
-
+*/
 
     if(SHERPA.PROTO_MASTHEAD_URL) {
         $scope.mastheadUrl = SHERPA.PROTO_MASTHEAD_URL;

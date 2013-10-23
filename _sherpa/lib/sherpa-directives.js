@@ -102,6 +102,19 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
             route.views = viewsObject;
         }
 
+        /**
+         * Set up animation callback
+         */
+
+        route.onEnter = function() {
+            if ( this.animateEnter ) {
+                this.animateEnter();
+            }
+        };
+
+//        route.onExit = function() { console.log("exiting " + route.id)};
+
+
 
 
     });
@@ -154,7 +167,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
         });
 
-
+        sherpaApp.stateProvider = $stateProvider;
     }]);
 
     angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
