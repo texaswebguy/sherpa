@@ -12,7 +12,6 @@
 
 
 Sherpa.namespace = function ( source, framework, propList ) {
-
     for (var property in source) {
         //is the property in the approved propList?
         if (_.contains(propList, property)) {
@@ -264,25 +263,30 @@ Sherpa.lorem = function(options){
 
 
 Sherpa.ready("amplify", function() {
+	Sherpa.counter("Loading JS: amplify");
     var props = ["publish", "subscribe", "unsubscribe", "store", "request"];
     Sherpa.namespace(amplify, "amplify", props);
 })
 
 Sherpa.ready("eve-js", function() {
+	Sherpa.counter("Loading JS: eve-js");
     var props = ["debug", "register", "extend", "scope", "attach"];
     Sherpa.namespace(Eve, "Eve", props);
 });
 
 Sherpa.ready("csvParser", function() {
+	Sherpa.counter("Loading JS: csvParser");
     var props = ["defaults", "hooks", "parsers", "toArray", "toArrays", "toObjects", "fromArrays", "fromObjects2CSV"];
     Sherpa.namespace($.csv, "jQuery-CSV", props);
 });
 
 Sherpa.ready("jwerty-js", function() {
+	Sherpa.counter("Loading JS: jwerty-js");
     var props = ["key", "is", "fire","event", "KEYS"];
     Sherpa.namespace(jwerty, "hotkeys", props);
 });
 Sherpa.ready("showdown-js", function() {
+	Sherpa.counter("Loading JS: showdown-js");
     var props = ["extensions", "forEach", "converter"];
     Sherpa.namespace(Showdown, "Markdown", props);
 });
