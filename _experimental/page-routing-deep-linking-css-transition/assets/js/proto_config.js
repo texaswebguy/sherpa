@@ -10,10 +10,12 @@ sherpaApp.controller("navTabController", function($scope, $state ) {
 
     $scope.$state = $state;
 
-
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "navTabs"});
 
     $scope.selectItem = function (selectedItem) {
+
+//       console.log( selectedItem );
+
         _($scope.routes).each(function (item) {
             item.selected = false;
             if (selectedItem === item) {
@@ -32,7 +34,9 @@ sherpaApp.controller("navTabController", function($scope, $state ) {
 
 
 
-sherpaApp.controller("asideNavController", function($scope) {
+sherpaApp.controller("asideNavController", function($scope, $state) {
+
+    $scope.$state = $state;
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return route.view == "asideTabs"});
 
