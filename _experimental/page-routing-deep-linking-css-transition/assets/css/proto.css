@@ -1,0 +1,190 @@
+/* Prototype CSS */
+
+/* MASTHEAD CSS */
+/* MASTHEAD CSS */
+/* MASTHEAD CSS */
+.masthead .wrapper {
+    overflow: visible;
+}
+.masthead .utility-nav {
+    height: 30px;
+    padding-top: 5px;
+}
+.masthead .navbar {
+    height: 90px;
+    margin-bottom: 0;
+}
+.masthead .navbar .brand {
+    margin-left: -50px;
+}
+.masthead .navbar .brand .icon-ui-dell {
+    font-size: 62px;
+    height: 62px;
+    width: 90px;
+    float: left;
+}
+.masthead .navbar .brand h2 {
+    float: left;
+    margin-top: 18px;
+}
+.masthead .navbar .nav-collapse {
+    margin-top: 26px;
+}
+.masthead .navbar .nav .active > a,
+.masthead .navbar .nav .active > a:hover,
+.masthead .navbar .nav .active > a:focus {
+    -webkit-border-radius: 5px;
+    -moz-border-radius: 5px;
+    border-radius: 5px;
+}
+/* For mobile */
+@media only screen and (max-width: 767px) {
+
+}
+/* For tablet */
+@media only screen and (min-width: 768px) and (max-width: 979px) {
+
+}
+
+
+/* TABS CSS */
+/* TABS CSS */
+/* TABS CSS */
+
+header .wrapper {
+	overflow:visible;
+}
+.utility-nav {
+	height:30px;
+	padding-top:5px;
+}
+.main-nav {
+	height:90px;
+	padding-top:10px;
+}
+.icon-ui-dell.masthead {
+	font-size:62px;
+}
+
+.horiz-tabbable.horiz-tabs .horiz-tab-content {
+    position: relative;
+    padding-left: 4.08163265%;
+    padding-right: 4.08163265%;
+    left: -4.08163265%;
+    z-index: 1;
+    background: #ffffff;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    /*-webkit-box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
+    /*-moz-box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
+    /*box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
+    margin-bottom: 20px;
+}
+
+
+/* HORIZONTAL TABS CSS */
+/* HORIZONTAL TABS CSS */
+/* HORIZONTAL TABS CSS */
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.navTabsWell[ui-view]{
+    min-height: 230px;
+    max-width: 700px;
+}
+
+.navTabsView-enter, .navTabsView-leave {
+    position: absolute;
+    -webkit-transition:all .75s ease-in-out;
+    -moz-transition:all .75s ease-in-out;
+    -o-transition:all .75s ease-in-out;
+    transition:all .75s ease-in-out;
+}
+
+.navTabsView-enter {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*-moz-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*transform:scale3d(0.5, 0.5, 0.5);*/
+}
+
+.navTabsView-enter-active {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(1, 1, 1);*/
+    /*-moz-transform:scale3d(1, 1, 1);*/
+    /*transform:scale3d(1, 1, 1);*/
+}
+
+.navTabsView-leave {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(0, 0, 0);*/
+    /*-moz-transform:translate3d(0, 0, 0);*/
+    /*transform:translate3d(0, 0, 0);*/
+}
+
+.navTabsView-leave-active {
+    max-width: 700px;
+    min-height: 230px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(100px, 0, 0);*/
+    /*-moz-transform:translate3d(100px, 0, 0);*/
+    /*transform:translate3d(100px, 0, 0);*/
+}
+
+/* ASIDE TABS CSS */
+/* ASIDE TABS CSS */
+/* ASIDE TABS CSS */
+
+/* Have to set height explicity on ui-view
+to prevent collapsing during animation*/
+.asideTabsWell[ui-view]{
+    min-height: 700px;
+    max-width: 700px;
+}
+
+.asideTabsView-enter, .asideTabsView-leave {
+    position: absolute;
+    -webkit-transition:all .75s ease-in-out;
+    -moz-transition:all .75s ease-in-out;
+    -o-transition:all .75s ease-in-out;
+    transition:all .75s ease-in-out;
+}
+
+.asideTabsView-enter {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*-moz-transform:scale3d(0.5, 0.5, 0.5);*/
+    /*transform:scale3d(0.5, 0.5, 0.5);*/
+}
+
+.asideTabsView-enter-active {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:scale3d(1, 1, 1);*/
+    /*-moz-transform:scale3d(1, 1, 1);*/
+    /*transform:scale3d(1, 1, 1);*/
+}
+
+.asideTabsView-leave {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(0, 0, 0);*/
+    /*-moz-transform:translate3d(0, 0, 0);*/
+    /*transform:translate3d(0, 0, 0);*/
+}
+
+.asideTabsView-leave-active {
+    max-width: 700px;
+    opacity: 0;
+    /*-webkit-transform:translate3d(100px, 0, 0);*/
+    /*-moz-transform:translate3d(100px, 0, 0);*/
+    /*transform:translate3d(100px, 0, 0);*/
+}
