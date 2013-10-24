@@ -187,4 +187,9 @@ to prevent collapsing during animation*/
     /*-webkit-transform:translate3d(100px, 0, 0);*/
     /*-moz-transform:translate3d(100px, 0, 0);*/
     /*transform:translate3d(100px, 0, 0);*/
+
+}
+/* ANIMATIONS */
+#tab2P {
+    opacity: 0;
 }
