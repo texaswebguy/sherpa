@@ -37,6 +37,10 @@ sherpaApp.controller("navTabController", function($scope, $state ) {
         console.log( "DEFAULT --> " + item );
     }
 
+    $scope.animateEnter = function ( id ) {
+        SHERPA.PROTO_ROUTES[ id ].animateEnter();
+    }
+
 
 });
 
@@ -64,6 +68,8 @@ sherpaApp.controller("asideNavController", function($scope, $state) {
 
 });
 
+
+
 /**
  * Custom Animation Methods
  */
@@ -80,23 +86,18 @@ SHERPA.PROTO_ROUTES["tab1"].animateEnter = function() {
 
 SHERPA.PROTO_ROUTES["tab2"].animateExit = function( $state, target ) {
     console.log("animateExit tab2 ");
-    TweenMax.to($('#tab2P'),.5, {opacity: 0});
-    TweenMax.delayedCall(.5, changeState() )
 
-    function changeState ( ) {
+    function changeState() {
         $state.go( target );
     }
 
+    TweenMax.to($('#tab2P'),.5, {opacity: 0, onComplete:changeState});
 
 };
 
 SHERPA.PROTO_ROUTES["tab2"].animateEnter = function() {
-    $('#tab2P').on( "change", function() {
-        TweenMax.to($('#tab2P'),.5, {opacity: 1});
-        console.log( "#tab2p loaded");
-    })
-
-    console.log("animateEnter tab2");
+    TweenMax.to($('#tab2P'),.5, {opacity: 1});
+    console.log("animateEnter tab2 from ng-init");
 };
 
 SHERPA.PROTO_ROUTES["tab3"].animateExit = function( $state, target ) {

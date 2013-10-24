@@ -108,11 +108,11 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
          * Set up animation callback
          */
 
-        route.onEnter = function() {
-            if ( this.animateEnter ) {
-                this.animateEnter();
-            }
-        };
+//        route.onEnter = function() {
+//            if ( this.animateEnter ) {
+//                this.animateEnter();
+//            }
+//        };
 
 //        route.onExit = function() { console.log("exiting " + route.id)};
 
