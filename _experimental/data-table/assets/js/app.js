@@ -68,3 +68,18 @@ sherpaApp.controller("tableCtrl", function($scope,$http) {
 
 });
 
+sherpaApp.controller("bsTableCtrl", function($scope,$http) {
+    $http.get(SHERPA.PATH_PROTO_ASSETS+"data/sample_customer_list_en.json").success(function (tableRows) {    
+        $scope.rows = tableRows;
+        $scope.labels = (function(){
+            var tempObj = {}
+            _.each(_.keys(tableRows[0]), function(label){
+                tempObj[label] = _.str.humanize(label);
+            });
+            return tempObj;
+        })();
+
+        //console.log($scope.rows,$scope.labels)
+    });
+});
+
