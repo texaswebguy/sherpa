@@ -178,7 +178,7 @@ Sherpa.globalEvents = {
 			Sherpa.request({
 				resourceId: "get_component", 
 				data: {
-					"filename" : "uxmf/editable-badge.html";
+					"filename" : "uxmf/editable-badge.html"
 				},
 				success: function(responseHTML){
 					$('body').append(responseHTML);
@@ -250,6 +250,7 @@ Sherpa.globalEvents = {
 		   					editControls = '<div class="edit-controls"><label for="is-markdown"><input type="checkbox" id="is-markdown" class="is-markdown" '+isMarkdown+'/> Markdown</label><button class="btn btn-mini cancel">Cancel</button>&nbsp;<button class="btn btn-mini btn-secondary save">Save</button></div>',
 		   					contentContainer = $(event.currentTarget),
 		   					id = Sherpa.uuid();
+		   					//TODO make editControls into component as template
 		   				Sherpa.session.store(id,_.escape($(event.currentTarget).html()));
 	   					contentContainer.attr('data-orig-html-id',id);
 	   					if(markdownFilename) {

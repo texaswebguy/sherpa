@@ -1,0 +1,30 @@
+<div class="sherpa-editable-alert">
+	<span class="text-red">Editable mode is ON. <button class="btn btn-mini turn-off-editable pull-right">turn off</button></span>
+</div>
+<style>
+	.sherpa-editable-alert {
+		display:none;
+	}
+	html.editable .sherpa-editable-alert {
+		display:block;
+		width: 210px;
+		position: fixed;
+		right: 10px;
+		top: 10px;
+		padding: 5px;
+		background: #f2af00;
+		border: solid 1px #ccc;
+		border-bottom-left-radius: 3px;
+		border-top-left-radius: 3px;
+		box-shadow: 2px 2px 10px #999;
+		font-weight:bold;
+	}
+</style>
+<script type="text/javascript">
+	Sherpa.scope(".sherpa-editable-alert", function(){
+		this.listen(".turn-off-editable","click",function(){
+			Sherpa.fire("ctrl+shift+f2");
+		})
+	})
+
+</script>

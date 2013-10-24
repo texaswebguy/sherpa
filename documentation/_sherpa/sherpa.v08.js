@@ -188,7 +188,6 @@ _.mixin({merge: function(obj) {
 		}
 	}
 });
-console.log(_.merge(["dogs","cats"],["hamsters","dogs"]))
 
 
 // Sherpa GLOBALS:
