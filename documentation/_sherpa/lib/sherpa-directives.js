@@ -258,23 +258,25 @@ sherpaApp.directive('lorem', function () {
     }
 });
 
-sherpaApp.directive('markdown', function ($http) {
+sherpaApp.directive('markdown', function ($http,$compile) {
     //This is a directive version of the msg version.  This will render html.
-    return function (scope, elem, attr) {
-        $http({method: 'GET', url: attr.markdown}).
-            success(function (data, status, headers, config) {
-                // this callback will be called asynchronously
-                // when the response is available
-                var convertMD = new Sherpa.converter();
-                $(elem).html(convertMD.makeHtml(data));
-                $(elem).attr('data-filename', attr.markdown).addClass('editable');
-            }).
-            error(function (data, status, headers, config) {
-                // called asynchronously if an error occurs
-                // or server returns response with an error status.
-                var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing markdown file</h4> <p>' + attr.markdown + ' does not exist</p></div>';
-                $(elem).html(responseHTML);
-            });
+    return {
+        link: function (scope, elem, attr) {
+            $http({method: 'GET', url: attr.markdown}).
+                success(function (data, status, headers, config) {
+                    // this callback will be called asynchronously
+                    // when the response is available
+                    var convertMD = new Sherpa.converter();
+                    $(elem).html(convertMD.makeHtml(data));
+                    $(elem).attr('data-filename', attr.markdown).addClass('editable');
+                }).
+                error(function (data, status, headers, config) {
+                    // called asynchronously if an error occurs
+                    // or server returns response with an error status.
+                    var responseHTML = '<div class="rounded-small red-stroke gray da-all da-padin"><h4>Missing markdown file</h4> <p>' + attr.markdown + ' does not exist</p></div>';
+                    $(elem).html(responseHTML);
+                });
+        }
     }
 });
 

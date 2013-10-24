@@ -129,7 +129,8 @@
         "dateformatjs",
         "bootstrap-232",
         "bootstrap-datepicker",
-        "showdown-js"
+        "showdown-js",
+        "equalize-js"
     ],
     "LOAD_ANGULAR_MODULES": [
         "ngSanitize",
@@ -329,6 +330,10 @@
         "eve-js": {
             "local": "eve.min.js",
             "cdn":"http://evejs.com/stable/eve.min.js"
+        },
+        "equalize-js": {
+            "local": "equalize.min.js",
+            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js"
         }
     },
     "LIB_CSS": {
