@@ -15,13 +15,55 @@
 </head>
 <body ng-controller="pageController">
 	<a name="top" id="top"></a>
-	<div class="da-all">
+<div class="da-all">
+	<div class="wrapper table">
+		<div class="title top-offset-medium">
+			<h1>ngGrid Table</h1>
+		</div>
+		<div class="alert alert-block">
+			TODO: Need to work on this
+		</div>
+		<div ng-controller="tableCtrl">
+	        <div class="customers" ng-grid="gridOptions">
+	    </div>
+	</div>
+</div>  
+
+	<div class="da-all top-offset-large">
 		<div class="wrapper table">
-			<div ng-controller="tableCtrl">
-		        <div class="customers" ng-grid="gridOptions">
+			<div class="title top-offset-medium">
+				<h1>Regular Bootstrap Table</h1>
+			</div>
+
+			<div ng-controller="bsTableCtrl" class="bs-table-sample">
+				<table class="table table-striped">
+				  <thead>
+				    <tr>
+				    	<th>{{labels.FirstName}}</th>
+				    	<th>{{labels.LastName}}</th>
+				    	<th>{{labels.Company}}</th>
+				    	<th>{{labels.Phone}}</th>
+				    	<th>{{labels.Fax}}</th>
+				    </tr>
+				  </thead>
+				  <tbody>
+				  	<tr ng-repeat="row in rows">
+						<td>{{row.FirstName}}</td>
+						<td>{{row.LastName}}</td>
+						<td>{{row.Company}}</td>
+						<td>{{row.Phone}}</td>
+						<td>{{row.Fax}}</td>
+				  	</tr>
+				  </tbody>
+				</table>
 		    </div>
+		    
 		</div>
 	</div>
+
+
+
+
 </body>
 
 </html>
