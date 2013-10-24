@@ -179,8 +179,6 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
             $stateProvider.state(route.id, route);
 
         });
-
-
     }]);
 
     angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
