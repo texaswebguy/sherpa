@@ -339,13 +339,15 @@ Sherpa.loadJS = function(jsFilename,libName){
 	} catch (err) {
 		console.error("Had trouble loading JS: "+libName)
 	}}
-Sherpa.loadCoreCSS = function(libName){
+Sherpa.loadCoreCSS = function(libName,path){
 	try {	
-		var obj = {},path="";
+		var obj = {};
 		if(libName=="css_theme"){
 			path = SHERPA.PATH_CORE_CSS_THEME;
 		} else {
-			path = SHERPA.PATH_CORE_CSS;
+			if(!path) {
+				path = SHERPA.PATH_CORE_CSS;
+			}
 		}
 		obj[libName]=path+SHERPA.LIB_CSS[libName][SHERPA.LIB_ORIGIN];
 		Sherpa.load(obj);

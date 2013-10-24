@@ -1,8 +1,26 @@
 //Load all angular modules from the core config and create sherpaApp namespace
 
 Sherpa.counter("Angular directives");
+
+/* 
+    TODO
+    this is in place to load any modules that are not in LOAD_ANGULAR_MODULES
+    in some cases a module might have several keys. Will have to figure out how to deal with that
+*/
 var angular_modules = _.union([], SHERPA.LOAD_ANGULAR_MODULES);
 Sherpa.counter("Angular modules loaded into directives: "+angular_modules);
+
+
+/*
+    load any angular module related CSS
+    In the core-config.json it looks for a matching LIB_CSS entry and loads it
+*/
+_.each(SHERPA.LOAD_ANGULAR_MODULES, function(libName){
+    if(SHERPA.LIB_CSS[libName]) {
+        Sherpa.loadCoreCSS(libName,SHERPA.PATH_CORE_JS);
+    }
+});
+
 
 var sherpaApp = angular.module('sherpaApp', angular_modules);
 

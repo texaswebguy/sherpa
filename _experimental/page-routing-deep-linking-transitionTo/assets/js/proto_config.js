@@ -85,13 +85,15 @@ SHERPA.PROTO_ROUTES["tab1"].animateEnter = function() {
 };
 
 SHERPA.PROTO_ROUTES["tab2"].animateExit = function( $state, target ) {
-    console.log("animateExit tab2 ");
+    console.log("animateExit tab2 ", target);
 
-    function changeState() {
-        $state.go( target );
+
+    function changeState(_state, _target) {
+        _state.go( _target );
     }
 
-    TweenMax.to($('#tab2P'),.5, {opacity: 0, onComplete:changeState});
+    TweenMax.to( $('#tab2P') ,.5, {opacity: 0, onComplete:changeState, onCompleteParams:[$state, target]});
+
 
 };
 

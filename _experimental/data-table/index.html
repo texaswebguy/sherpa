@@ -1,0 +1,27 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="utf-8">
+    <title>Dell Sherpa: Data Tables Experimentation</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+	<!-- Don't touch 
+	******************************************************************************** -->
+	<style>body{opacity:0}body.ng-scope{opacity:1}</style>
+	<script src="../../_sherpa/sherpa.v08.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+
+</head>
+<body ng-controller="pageController">
+	<a name="top" id="top"></a>
+	<div class="da-all">
+		<div class="wrapper table">
+			<div ng-controller="tableCtrl">
+		        <div class="customers" ng-grid="gridOptions">
+		    </div>
+		</div>
+	</div>
+</body>
+
+</html>
