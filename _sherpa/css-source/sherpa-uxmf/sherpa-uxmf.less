@@ -388,37 +388,38 @@
   margin: 0 10px 10px 0;
 }
 
-
 html.editable .editable:hover {
   background-color: #FFFFAB;
   outline: 1px solid #ff0;
-  border-radius: 2px;  cursor: url(../img/edit-cursor.png), auto;
+  cursor: url(../img/edit-cursor.png), auto;
+  color: #444 !important;
 }
 html.editable .editable.editing:hover {
   background-color: #FFFFAB;
   outline: 1px solid #ff0;
   cursor: text;
+  color: #444 !important;
 }
 html.editable .editable.editing:hover {
   background-color: #FFFFAB;
-  outline: 1px solid #ff0;
+  outline: 2px solid #666;
   border-radius: 2px;
+  color: #444 !important;
 }
 html.editable .editable.editing,
 [contenteditable="true"] {
   background-color: #FFFFAB;
-  outline: 1px solid #ff0;
+  outline: 2px solid #666;
   color: #444 !important;
   cursor: text;
 }
 .edit-controls {
-  background-color: #FFFFAB;
-  outline: 1px solid #ff0;
+  background-color: #ccc;
   border-top: 0;
   padding: 5px 7px;
   width: 210px;
-  margin-right: 0;
-  margin-top: 0px;
+  margin-right: 5px;
+  margin-top: 2px;
   -webkit-border-bottom-right-radius: 5px;
   -moz-border-radius-bottomright: 5px;
   border-bottom-right-radius: 5px;
@@ -426,6 +427,8 @@ html.editable .editable.editing,
   -moz-border-radius-bottomleft: 5px;
   border-bottom-left-radius: 5px;
   float: right;
+  color: #444 !important;
+  z-index: 2;
 }
 .edit-controls label {
   display: inline;
@@ -447,9 +450,7 @@ html.editable .editable.editing,
   white-space: pre-wrap;
   background-color: #fff;
   border: 0;
-  -webkit-border-radius: 0;
-  -moz-border-radius: 0;
-  border-radius: 0;
+  color: #444 !important;
 }
 h1 > .editing > pre,
 h2 > .editing > pre,
@@ -463,6 +464,8 @@ h6 > .editing > pre {
   cursor: text;
   margin-bottom: -1px;
 }
+
+
 .alert .editable.markdown {
   width: inherit;
 }

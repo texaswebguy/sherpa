@@ -1,7 +1,9 @@
 //Load all angular modules from the core config and create sherpaApp namespace
 
+Sherpa.counter("Angular directives");
 var angular_modules = _.union([], SHERPA.LOAD_ANGULAR_MODULES);
-console.log(angular_modules)
+Sherpa.counter("Angular modules loaded into directives: "+angular_modules);
+
 var sherpaApp = angular.module('sherpaApp', angular_modules);
 
 
@@ -57,6 +59,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
     var redirectURL = (SHERPA.DEFAULT_PROTO_ROUTE) ? SHERPA.DEFAULT_PROTO_ROUTE : "/";
 
+
     _.each(SHERPA.PROTO_ROUTES, function (route) {
 
         if (route.isDefault || route.isHomeDefault) {
@@ -92,29 +95,12 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
          *
          * @type {{}}
          */
-
-        if ( route.view ) {
-            var viewsObject = {};
-            viewsObject[ route.view ] = {
-                templateUrl: route.templateUrl
-            };
-
-            route.views = viewsObject;
-        }
-
-        /**
-         * Set up animation callback
-         */
-
-        route.onEnter = function() {
-            if ( this.animateEnter ) {
-                this.animateEnter();
-            }
+        var viewsObject = {};
+        viewsObject[ route.view ] = {
+            templateUrl: route.templateUrl
         };
 
-//        route.onExit = function() { console.log("exiting " + route.id)};
-
-
+        route.views = viewsObject;
 
 
     });
@@ -122,10 +108,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
     sherpaApp.config(['$stateProvider', '$urlRouterProvider', function ($stateProvider, $urlRouterProvider) {
 
-        /**
-         * $urlRouterProvider and $stateProvider must be parsed in separate
-         * _.each loops to work.
-         */
+
         _.each(SHERPA.PROTO_ROUTES, function (route) {
 
             if (route.parentURL && route.redirectURL && !route.arrayUrls ) {
@@ -146,10 +129,6 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
         $urlRouterProvider.otherwise( redirectURL );
 
 
-        /**
-         * $urlRouterProvider and $stateProvider must be parsed in separate
-         * _.each loops to work.
-         */
         _.each(SHERPA.PROTO_ROUTES, function (route) {
 
 
@@ -162,12 +141,12 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
              to add attribute with viewTemplateURL
 
              */
-
+             
             $stateProvider.state(route.id, route);
 
         });
 
-        sherpaApp.stateProvider = $stateProvider;
+
     }]);
 
     angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
@@ -300,3 +279,4 @@ sherpaApp.directive('markdown', function ($http) {
 });
 
 
+Sherpa.counter("Angular directives");
