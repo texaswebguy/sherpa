@@ -1524,7 +1524,7 @@ li.dropdown .dropdown-menu {
 
 .rounded-large {
   .border-radius(@border-radius-large);
-  padding:@line-height-base;
+  padding:@line-height-base  * 13.999999995800000001259999999622px; // ~20px
   > :last-child {
     margin-bottom: 0px;
   }
@@ -1532,7 +1532,7 @@ li.dropdown .dropdown-menu {
 
 .rounded-small {
  .border-radius(@border-radius-small);
-  padding:@line-height-base;
+  padding:@line-height-base  * 13.999999995800000001259999999622px; // ~20px
   > :last-child {
     margin-bottom: 0px;
   }
@@ -1623,6 +1623,12 @@ li.dropdown .dropdown-menu {
 .well-blue { 
   .well-colors (@blue, @white, @white, @white)
 }
+
+.blue a, .well-blue a {
+  color: #ffffff;
+}
+
+
 .blue-stroke,
 .well-blue-stroke  { 
   border: @default-stroke solid @blue !important;
@@ -2506,7 +2512,7 @@ input[type="submit"].btn {
   }
   .tab-content {
     position:relative;
-    left:-47px;
+    left:-15px;
     padding-left:47px;
     z-index:1;
     .box-shadow(-10px 0px 5px -9px rgba(0, 0, 0, .4));
@@ -2525,7 +2531,6 @@ input[type="submit"].btn {
     margin: 9px 15px;
     overflow: hidden;
     background-color: @dell-gray-light;
-    // background-color: #e5e5e5;
     border-bottom: 1px solid @white;
   }
   .nav-header {
@@ -2564,7 +2569,7 @@ input[type="submit"].btn {
     color:@white;
     .border-left-radius(@border-radius-large * 2);
     margin-top: @line-height-base * 6.999999997900000000629999999811px;
-    margin-left: 50%;
+    margin-left: 40%;
     padding:@line-height-base * 6.999999997900000000629999999811px;
     position:relative;
     z-index:0;
@@ -2582,10 +2587,6 @@ input[type="submit"].btn {
     }
   }
 }
-
-
-
-
 
 .nav-header {
   display: block;
@@ -2610,7 +2611,6 @@ input[type="submit"].btn {
       .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
       border-bottom: #666 1px solid;
       padding-top:@line-height-base;
-
     }
     > li a:hover {
       background-color: @dell-highlight-blue;
@@ -3067,23 +3067,27 @@ border-radius: 4px;
 // Base classes
 
 label, input, button, select, textarea {
-font-size: 14px;
-font-weight: normal;
-line-height: 20px;
+  font-size: 12px;
+  font-weight: normal;
+  line-height: 14px;
 }
 
 .label,
 .badge {
   padding: 2px 6px;
   text-shadow: none;
-  background-color: @gray;
+  background-color: @dell-gray;
+  font-weight: bold;
+  line-height: 14px;
+  color: @white;
+  vertical-align: baseline;
+  white-space: nowrap;
+  border-radius: 9px;
 }
 
 // Colors
 // Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
-.label {
-  &-teal { background-color: @dell-teal; }
-}
+
 
 .badge { 
   background-color: @dell-gray-dark; 
@@ -3092,6 +3096,10 @@ line-height: 20px;
 }
 
 
+.label-teal, 
+.label-info {
+  background-color: @dell-teal;
+}
 
 // progress-bars
 //=======================================================================================================================
