@@ -5,9 +5,7 @@
     "PATH_WEBROOT": "",
     "PATH_PROTO_ASSETS": "assets/",
     "DEFAULT_PROTO_ROUTE": "/",
-    "LOAD_JS_CORE": [
-        "greensockTweenMax"
-    ],
+    "LOAD_JS_CORE": ["greensockTweenMax"],
     "PROTO_ROUTES": {
         "page-1": {
             "id":"page-1",

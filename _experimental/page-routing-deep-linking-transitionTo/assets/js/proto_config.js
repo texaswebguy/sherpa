@@ -23,7 +23,7 @@ sherpaApp.controller("navTabController", function($scope, $state ) {
 //       console.log( $state.current.name );
 
 
-       $scope.title = selectedItem.id;
+        $scope.title = selectedItem.id;
 
         _($scope.routes).each(function (item) {
             item.selected = false;
@@ -80,10 +80,22 @@ SHERPA.PROTO_ROUTES["tab1"].animateEnter = function() {
 
 SHERPA.PROTO_ROUTES["tab2"].animateExit = function( $state, target ) {
     console.log("animateExit tab2 ");
-    $state.go( target );
+    TweenMax.to($('#tab2P'),.5, {opacity: 0});
+    TweenMax.delayedCall(.5, changeState() )
+
+    function changeState ( ) {
+        $state.go( target );
+    }
+
+
 };
 
 SHERPA.PROTO_ROUTES["tab2"].animateEnter = function() {
+    $('#tab2P').on( "change", function() {
+        TweenMax.to($('#tab2P'),.5, {opacity: 1});
+        console.log( "#tab2p loaded");
+    })
+
     console.log("animateEnter tab2");
 };
 

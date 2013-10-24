@@ -1,0 +1,100 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title></title>
+</head>
+<body>
+<table>
+
+<!-- BEGIN EDIT -->
+    <tr>
+        <td id="firstcolumn" style="width: 50%; vertical-align: top;">
+            <div>
+                    <span style="margin-top: 10px;">
+                        Service Tag
+                    </span><span class="small" style="padding-left: 5px"><a href="http://support.dell.com/support/topics/global.aspx/support/kcs/document?docid=267748" class="link">
+                <small>Details</small>
+            </a>
+                    </span>
+            </div>
+            <div style="margin-top: 6px;padding-bottom: 10px;" class="row-fluid">
+                    <span style="float: left; padding-right: 10px; height: 35px;">
+                        <input name="serviceTag" id="inputServiceTag" type="text" maxlength="11" style="width:90%; height:100%" placeholder="Example: ABCDEFG" value="">
+                    </span><span style="float: left; margin-top:2px;">
+                        <button class="isCallFromColdproduceSelector btn btn-secondary" id="btnSubmit" onclick="productSelectionHelper.tagFormValidation()">Submit
+                        </button>
+                    </span>
+            </div>
+        </td>
+        <td style="width: 10%; display:none;">
+            <div id="vertSeperatorAbove" class="vericalSeperator" style="padding-bottom: 20.5px;">
+                &nbsp;
+            </div>
+            <div class="lead" style="padding-left: 40%; height: 0px; padding-top: 5px; padding-bottom: 10px;">or</div>
+            <div id="vertSeperatorBelow" class="vericalSeperator" style="padding-bottom: 20.5px;">
+                &nbsp;
+            </div>
+        </td>
+        <td style="width: 40%; display:none">
+            <div style="padding-left: 17px; padding-top: 20px">
+                <div style="float: left; margin-top: 18px">
+                                <span>
+                                    <button class="btn btn-secondary" onclick="productSelectionHelper.transactionLoginRedirect('https://www.dell.com/identity/v2/discovery?wa=wsignin1.0&amp;wtrealm=http%3a%2f%2fwww.dell.com&amp;wreply=http%3a%2f%2fwww.dell.com%2fsupport%2fmy-support%2fus%2fen%2f04%2fproduct-support%2fproduct%2flatitude-e5410%3fsign%3dy&amp;whr=urn:transaction');">
+                                        Sign In
+                                    </button></span>
+                </div>
+                <br>
+
+                <div style="padding-top: 20px;">
+                    <a class="create_account" style="margin-left: 0px;" href="https://ecomm.dell.com/dellstore/myaccount/signup.aspx" target="_blank">Create an
+                        account</a>
+                </div>
+                <div style="padding-top: 10px">
+                    <a href="http://premier.dell.com" class="sign_into_premier">Sign in to Premier
+                    </a>
+                </div>
+            </div>
+        </td>
+    </tr>
+
+
+    <tr>
+        <td style="vertical-align: top; margin-bottom:0;" colspan="3">
+            <div id="psError" class="" style="margin-top: 8px; margin-bottom: 0;">
+                <div class="row-fluid alert error" style="width: 97%;">
+                    <div id="alerimagecoldproductdashboard" class="span2">
+
+
+                        <img alt="attention" src="http://i.dell.com/sites/metacontent/eSupport/MSE/eSupport_MSE_Images/english/_values/attention-alert_100x100.png" width="50" height="50">
+
+                    </div>
+                    <div class="span9">
+                        <span class="alert-message" id="spnErrorMsg" style="color: black">We were unable to verify the Service Tag or Express Service Code you have entered. Please verify your entry or choose a product category below. If you recently purchased a system, please try again in 48 hours.</span>
+                    </div>
+
+                </div>
+            </div>
+        </td>
+    </tr>
+
+    <tr>
+        <td style="width: 50%; vertical-align: top;">
+            <div id="cantFindTag" style="/* margin-top: 0; */">
+                <span>Can't find your Service Tag?</span>
+            </div>
+            <div style="padding-top: 8px">
+                    <span><a data-toggle="modal" id="eula" class="btn not-phone  btn-tertiary" onclick="eulaHelper.SetScanProperties('P','TMC','N');eulaHelper.scanEulaClickHandler();">Detect
+                        My Product</a>
+                    </span><span>
+                        <img id="scanPSHProcessing" alt="processing" style="display:none;" src="http://i.dell.com/sites/metacontent/eSupport/MSE/eSupport_MSE_Images/english/_values/processing.gif">
+                    </span>
+            </div>
+        </td>
+        <td style="width: 10%;"></td>
+        <td style="width: 40%;"></td>
+    </tr>
+<!-- END EDIT -->
+
+</table>
+</body>
+</html>

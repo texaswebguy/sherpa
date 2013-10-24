@@ -8,13 +8,13 @@
         <li ng-repeat="tab in routes"
             ng-class="{active: $state.includes('{{tab.id}}')}"
             ng-click="selectItem(tab)">
-            <a  >{{tab.label}}</a>
+            <a>{{tab.label}}</a>
         </li>
     </ul>
 
     <div class="tab-content horiz-tab-content">
 
-        <section class="navTabsWell"  ui-view="navTabs" ng-animate="'navTabsView'"></section>
+        <section id="navTabsWrapper" class="navTabsWell"  ui-view="navTabs" ></section>
 
     </div>
 </div>

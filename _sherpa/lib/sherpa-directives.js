@@ -95,12 +95,28 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
          *
          * @type {{}}
          */
-        var viewsObject = {};
-        viewsObject[ route.view ] = {
-            templateUrl: route.templateUrl
+        if ( route.view ) {
+            var viewsObject = {};
+            viewsObject[ route.view ] = {
+                templateUrl: route.templateUrl
+            };
+
+            route.views = viewsObject;
+        }
+
+        /**
+         * Set up animation callback
+         */
+
+        route.onEnter = function() {
+            if ( this.animateEnter ) {
+                this.animateEnter();
+            }
         };
 
-        route.views = viewsObject;
+//        route.onExit = function() { console.log("exiting " + route.id)};
+
+
 
 
     });
