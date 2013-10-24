@@ -145,6 +145,7 @@ _.mixin({merge: function(obj) {
 	      tempObj={};
 	 if(_.isArray(obj) && _.isArray(slice.call(arguments, 1)[0])) {
 	 	// TODO this is to merge objects NOT arrays, we should make it handle arrays as a union
+	 	// This should work console.log(_.merge(["dogs","cats"],["hamsters","dogs"])) >>> ["dogs","cats","hamsters"]
 	 	_.each(slice.call(arguments, 1), function(arr){
 	 		_.union(obj,arr);
 	 	})
@@ -152,15 +153,12 @@ _.mixin({merge: function(obj) {
 	 } else {
 		  _.each(slice.call(arguments, 1), function(source) {
 		    for (var prop in source) {
-		    	console.log("looking at: ",prop,source)
 		      if (hasOwnProperty.call(source, prop)) {
 		        if (_.isUndefined(obj[prop]) || _.isFunction(obj[prop]) || _.isNull(source[prop])) {
 		          obj[prop] = source[prop];
-		          console.log("hello function, undefined, null")
 		        }
 		        else if (_.isString(source[prop]) && parentRE.test(source[prop])) {
 		          if (_.isString(obj[prop])) {
-		          	console.log("hello string")
 		            obj[prop] = source[prop].replace(parentRE, obj[prop]);
 		          }
 		        }
@@ -168,20 +166,16 @@ _.mixin({merge: function(obj) {
 		          if (!_.isArray(obj[prop]) || !_.isArray(source[prop])){
 		            throw 'Error: Trying to combine an array with a non-array (' + prop + ')';
 		          } else {
-		          	console.log("hello array",obj[prop],source[prop])
 		          	obj[prop] = _.union(obj[prop],source[prop])
-		          	console.log(obj[prop])
 		          }
 		        }
 		        else if (_.isObject(obj[prop]) || _.isObject(source[prop])){
 		          if (!_.isObject(obj[prop]) || !_.isObject(source[prop])){
 		            throw 'Error: Trying to combine an object with a non-object (' + prop + ')';
 		          } else {
-		          	console.log("hello object",obj[prop],source[prop])
 		            obj[prop] = _.merge(obj[prop], source[prop]);
 		          }
 		        } else {
-		        	console.log("WRONG!!!!!!!!!!!!",obj[prop],source[prop])
 		          obj[prop] = source[prop];
 		        }
 		      }

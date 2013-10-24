@@ -168,14 +168,32 @@ Sherpa.globalEvents = {
 			Sherpa.key('ctrl+shift+f2', function () { 
 				if($('html').hasClass('editable')){
 					Sherpa.feature("editable",false);
+					Sherpa.store("editable",false);
 				} else {
 					Sherpa.feature("editable",true);
+					Sherpa.store("editable",true);
 				}
 			});
+			//add editable mode badge on page
+			Sherpa.request({
+				resourceId: "get_component", 
+				data: {
+					"filename" : "uxmf/editable-badge.html";
+				},
+				success: function(responseHTML){
+					$('body').append(responseHTML);
+				}
+			});
+			//Persist editable state after page reload
+			if(Sherpa.store("editable")){
+				Sherpa.fire('ctrl+shift+f2');
+			}
+
+
 			// Enable editable hotkey
 			Sherpa.help.add('CTRL SHIFT F3','Edit all Texkkeys');
 			Sherpa.key('ctrl+shift+f3', function () { 
-
+//TODO need to connect to Sherpa Editor
 			});
 			// Enable content export hotkey
 			Sherpa.help.add('CTRL SHIFT F4','Download content file - not working yet');

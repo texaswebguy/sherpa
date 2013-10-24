@@ -445,6 +445,12 @@ Sherpa.ready("amplify", function(){
 	    type: "GET"
 	});
 
+	Sherpa.request.define( "get_html", "ajax", {
+		url: "{filename}",
+	    dataType: "html",
+	    type: "GET"
+	});
+
 
 
 });
