@@ -38,13 +38,16 @@ sherpaApp.controller("navTabController", function ($scope, $state) {
         });
     };
 
-    $scope.setDefault = function (item) {
-        console.log("DEFAULT --> " + item);
-    }
+    $scope.$on('$viewContentLoaded',
+        function(event){
+              SHERPA.PROTO_ROUTES[ $state.current.name ].animateEnter();
+        });
 
+/*
     $scope.animateEnter = function (id) {
         SHERPA.PROTO_ROUTES[ id ].animateEnter();
     }
+*/
 });
 
 
@@ -85,9 +88,8 @@ SHERPA.PROTO_ROUTES["tab1"].animateEnter = function () {
 SHERPA.PROTO_ROUTES["tab2"].animateExit = function ($state, target) {
     console.log("animateExit tab2 ", target);
 
-    $state.go(target);
     TweenMax.to($('#tab2P'), .5, {opacity: 0});
-
+    $state.go(target, null, {delay:.5});
 
 };
 
