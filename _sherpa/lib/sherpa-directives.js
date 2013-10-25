@@ -129,6 +129,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 //        };
 
 
+
         route.views = viewsObject;
 
 
