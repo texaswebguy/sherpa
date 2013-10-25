@@ -129,8 +129,7 @@
         "dateformatjs",
         "bootstrap-232",
         "bootstrap-datepicker",
-        "showdown-js",
-        "equalize-js"
+        "showdown-js"
     ],
     "LOAD_ANGULAR_MODULES": [
         "ngSanitize",

@@ -23,16 +23,6 @@ var initAside = function(){
 		fixWidth();
 	});    
 	fixWidth();
-
-
-
-/*	$('.sherpa-aside li > a').click(function(event){
-		$('.sherpa-aside li').removeClass('active');
-		$(event.currentTarget).parent().addClass('active');
-	});
-*/
-
-
 }
 
 
@@ -91,6 +81,20 @@ sherpaApp.controller("docsMastheadController", function($scope, $state) {
 	$scope.$state = $state;
 	$scope.current_name = $state.current.name;
 
+});sherpaApp.controller("whySherpaCtrl", function($scope, $state) {
+    
+	$scope.equalize= function(){
+		window.setTimeout(function(){
+			var max = 0;
+			_.each($('.equalize'), function(item){
+				if($(item).height() > max){
+					max = $(item).height();
+				}
+			});
+			$('.equalize').height(max);
+		},500);
+	}
+
 });
 sherpaApp.controller("homeController", function($scope, $state) {
     
@@ -99,19 +103,16 @@ sherpaApp.controller("homeController", function($scope, $state) {
 });
 sherpaApp.controller("getStartedController", function($scope, $state) {
 	$('.footer-back-to-top').show()
-	$scope.initAside = initAside();
 
 	$scope.prettyPrint = initPrettyPrint();
+	$scope.initAside = initAside();
 	$scope.scrollSpy = function(){
-
-		
+		$('.set-aside').scrollspy({offset:40});
 		window.setTimeout(function(){
-			$('body').scrollspy({offset:-80});
 			$('[data-spy="scroll"]').each(function () {
 			  var $spy = $(this).scrollspy('refresh')
 			});			
-		},1000)
-
+		},1000);
 	}
 
 	$scope.sections = [
@@ -150,7 +151,7 @@ sherpaApp.controller("getStartedController", function($scope, $state) {
 });
 
 sherpaApp.controller("cssOverviewController", function($scope, $state) {
-	console.log(">>>>>>>>>>>>>>>>>>>>>>>>hello")
+
  	$('.footer-back-to-top').show()
 	$scope.prettyPrint = initPrettyPrint();
 	$scope.initAside = initAside();
