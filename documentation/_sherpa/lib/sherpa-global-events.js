@@ -49,7 +49,21 @@ Sherpa.globalEvents = {
 		Sherpa.viewModel.page_title_textkey = "title_page_"+_.str.underscored($('html').attr('id'));
 		
 		Sherpa.globalEvents.checkFormFactor();
-		
+
+		//allows bookmarks of in page anchors 
+		var hashQuery = Sherpa.hashQuery();
+		if(hashQuery){
+			if(hashQuery.section) {
+				console.log("hello",hashQuery.section)
+				var offset = $('body').attr('data-offset'), options="";
+				if(offset) {
+					options = {offset:{top:parseInt(offset)+20}}
+				}
+				window.setTimeout(function(){
+					$.scrollTo('#'+hashQuery.section,300);
+				},2500)
+			};
+		}
 
 		$(window).resize(function() {
 			Sherpa.globalEvents.checkFormFactor();

@@ -130,6 +130,27 @@ Sherpa.urlQuery = function () {
 	}
 }
 
+Sherpa.hashQuery = function () {
+	if(location.hash.split(/\?/)[1]) {
+		var query_string,query_obj = {}, query_array;
+		query_string = (location.hash.split(/\?/)[1]).replace(/\?|\//g,'');
+		query_array = query_string.split('&');
+		_.each(query_array, function(item){
+			var itemArr = item.split('='),key,value;
+			key = itemArr[0];
+			value = itemArr[1];
+			if(value) {
+				query_obj[key] = value;
+			} else {
+				query_obj[key] = "";
+			}
+		})
+		return query_obj
+	} else {
+		return false;
+	}
+}
+
 
 
 Sherpa.msg = function(textkey,t_data) {
