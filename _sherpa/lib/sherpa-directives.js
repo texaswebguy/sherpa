@@ -60,6 +60,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
     var redirectURL = (SHERPA.DEFAULT_PROTO_ROUTE) ? SHERPA.DEFAULT_PROTO_ROUTE : "/";
 
 
+
     _.each(SHERPA.PROTO_ROUTES, function (route) {
 
         if (route.isDefault || route.isHomeDefault) {
@@ -95,10 +96,37 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
          *
          * @type {{}}
          */
-        var viewsObject = {};
-        viewsObject[ route.view ] = {
-            templateUrl: route.templateUrl
-        };
+
+        if ( route.view ) {
+            var viewsObject = {};
+            viewsObject[ route.view ] = {
+                templateUrl: route.templateUrl
+            };
+
+            route.views = viewsObject;
+        }
+
+        if ( SHERPA.PROTO_ROUTES["globalData"] ){
+            if ( route.data &&  SHERPA.PROTO_ROUTES["globalData"].data ) {
+                route.data = _.merge( route.data, SHERPA.PROTO_ROUTES["globalData"].data );
+            }
+
+            if ( !route.data && SHERPA.PROTO_ROUTES["globalData"].data ) {
+                route.data = SHERPA.PROTO_ROUTES["globalData"].data;
+            }
+
+        }
+
+
+        /**
+         * Set up animation callback
+         */
+
+//        route.onEnter = function() {
+//            if ( this.animateEnter ) {
+//                this.animateEnter();
+//            }
+//        };
 
         route.views = viewsObject;
 
@@ -145,8 +173,6 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
             $stateProvider.state(route.id, route);
 
         });
-
-
     }]);
 
     angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
