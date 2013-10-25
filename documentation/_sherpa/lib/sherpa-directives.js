@@ -169,17 +169,39 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 sherpaApp.directive('scrollSpy', function ($timeout) {
     //TODO This is a hack
     return function (scope, elem, attr) {
-        if (!attr.scrollSpy === 'refresh') {
-            $('body').scrollspy('refresh');
-            $('.main-active').addClass("active"); //hack to prevent scrollspy from removing active from main nav
+
+        if (attr.scrollSpy === 'refresh') {
+
+            _.each($('[scroll-spy]'), function(scrollSpyItem){
+                //looks for any item that has the scroll-spy directive that is not a call to refresh
+                if($(scrollSpyItem).attr('scroll-spy')!='refresh') {
+                    $(scrollSpyItem).scrollspy('refresh')
+                }
+            });
+
         } else {
-            $(elem).scrollspy();
+            
+            var offset = '';
+            if(_.isObject(attr.scrollSpy)){
+                var offset = { offset: attr.scrollSpy.offset || 10 }
+            } 
+            if (attr.offset) {
+                var offset = { offset: attr.offset || 10 }
+            }
+            if (attr.target) {
+                elem = target;
+            }
+            $(elem).scrollspy(offset);
+
             scope.$watch(attr.scrollSpy, function (value) {
-                $timeout(function () {
-                    $('body').scrollspy('refresh')
-                }, 500);
+                _.each($('[scroll-spy]'), function(scrollSpyItem){
+                    //looks for any item that has the scroll-spy directive that is not a call to refresh
+                    if($(scrollSpyItem).attr('scroll-spy')!='refresh') {
+                        $(scrollSpyItem).scrollspy('refresh')
+                    }
+                });                
             }, true);
-            $('.main-active').addClass("active");
+            
         }
     }
 });
