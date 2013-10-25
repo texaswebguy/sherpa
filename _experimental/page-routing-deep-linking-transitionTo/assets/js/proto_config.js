@@ -24,7 +24,7 @@ sherpaApp.controller("navTabController", function ($scope, $state) {
 
         SHERPA.PROTO_ROUTES[ $state.current.name ].animateExit($state, selectedItem.id);
 
-
+        console.log( $state.current.data.userStatus.current );
 //       console.log( selectedItem.id );
 //       console.log( $state.current.name );
 
@@ -78,6 +78,7 @@ sherpaApp.controller("asideNavController", function ($scope, $state) {
 SHERPA.PROTO_ROUTES["tab1"].animateExit = function ($state, target) {
     console.log("animateExit tab1 ");
     $state.go(target);
+    $state.current.data.userStatus.current = "scanned";
 };
 
 SHERPA.PROTO_ROUTES["tab1"].animateEnter = function () {

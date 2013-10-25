@@ -78,6 +78,7 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
     var redirectURL = (SHERPA.DEFAULT_PROTO_ROUTE) ? SHERPA.DEFAULT_PROTO_ROUTE : "/";
 
 
+
     _.each(SHERPA.PROTO_ROUTES, function (route) {
 
         if (route.isDefault || route.isHomeDefault) {
@@ -121,6 +122,18 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
 
             route.views = viewsObject;
         }
+
+        if ( SHERPA.PROTO_ROUTES["globalData"] ){
+            if ( route.data &&  SHERPA.PROTO_ROUTES["globalData"].data ) {
+                route.data = _.merge( route.data, SHERPA.PROTO_ROUTES["globalData"].data );
+            }
+
+            if ( !route.data && SHERPA.PROTO_ROUTES["globalData"].data ) {
+                route.data = SHERPA.PROTO_ROUTES["globalData"].data;
+            }
+
+        }
+
 
         /**
          * Set up animation callback

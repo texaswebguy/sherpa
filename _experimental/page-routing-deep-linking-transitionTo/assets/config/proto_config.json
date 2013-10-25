@@ -7,6 +7,19 @@
     "DEFAULT_PROTO_ROUTE": "/",
     "LOAD_JS_CORE": ["greensockTweenMax"],
     "PROTO_ROUTES": {
+        "globalData":{
+            "id":"globalData",
+            "data":{
+                "userStatus":{
+                    "constants":["cold", "authenticated", "tagged", "scanned"],
+                    "current":"cold",
+                    "cold":true,
+                    "authenticated":false,
+                    "tagged":false,
+                    "scanned":false
+                }
+            }
+        },
         "page-1": {
             "id":"page-1",
             "url":"/page-1",
