@@ -218,7 +218,7 @@ Sherpa.globalEvents = {
 
 				//TODO need to add a markdown checkbox to edit-controls. This would have to delete a non-markdown textkey if converted.
 
-				this.listen('.editable a', 'click', function(event){
+				this.listen('.editing a', 'click', function(event){
 						event.preventDefault();
 						event.stopPropagation();					
 				});

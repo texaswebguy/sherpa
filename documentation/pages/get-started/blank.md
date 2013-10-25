@@ -1,4 +1,3 @@
- ---------------------
 The Blank Folder
 ------------
 
@@ -33,3 +32,5 @@ The _blank folder is there for you to copy and start a new prototype application
 
   [1]: assets/img/starter-kit-blank.png
   [2]: assets/img/starter-kit-assets.png
+
+ ---------------------

@@ -136,6 +136,7 @@
         "ngSanitize",
         "ui.router",
         "ngGrid",
+        "mgcrea.jquery",
         "ui.slider"
     ],
     "LOAD_JS_CORE_IE": [
@@ -174,13 +175,13 @@
             "local": "angular.min.js",
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js",
             "docs": "http://angularjs.org/",
-            "description": "AngularJS is a toolset for building the framework most suited to your application development. "
+            "description": "AngularJS is a toolset for building the framework most suited to your application development."
         },
         "ngGrid": {
             "local": "angular-ui-grid/ng-grid-2.0.7.min.js",
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.min.js",
             "docs": "http://angular-ui.github.io/ng-grid/",
-            "description": "Angular Data Grid written in AngularJS and jQuery by the AngularUI Team"
+            "description": "Angular Data Grid written in AngularJS and jQuery by the AngularUI Team"
         },
         "knockout": {
             "local": "knockout.min.js",
@@ -210,19 +211,19 @@
             "local": "jquery-ui.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js",
             "docs": "http://jqueryui.com/",
-            "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library. "
+            "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library."
         },
         "scrollTo": {
             "local": "jquery.scrollTo.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js",
             "docs": "http://flesler.blogspot.com/2007/10/jqueryscrollto.html",
-            "description": "A small, customizable plugin for scrolling elements, or the window itself. "
+            "description": "A small, customizable plugin for scrolling elements, or the window itself."
         },
         "underscoreString": {
             "local": "underscore.string.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/underscore.string/2.3.3/underscore.string.min.js",
             "docs": "http://epeli.github.io/underscore.string/",
-            "description": "Underscore.string is string manipulation extension for JavaScript that you can use with or without Underscore.js."
+            "description": "Underscore.string is string manipulation extension for JavaScript that you can use with or without Underscore.js."
         },
         "queryString": {
             "local": "query-string.js",
@@ -298,13 +299,13 @@
             "local": "less.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js",
             "docs": "http://lesscss.org/",
-            "description": "The dynamic stylesheet language."
+            "description": "The dynamic stylesheet language."
         },
         "jwerty-js": {
             "local": "jwerty.js",
             "cdn": "https://raw.github.com/keithamus/jwerty/master/jwerty.js",
             "docs": "http://keithcirkel.co.uk/jwerty/",
-            "description": "jwerty is a JS lib which allows you to bind, fire and assert key combination strings against elements and events. "
+            "description": "jwerty is a JS lib which allows you to bind, fire and assert key combination strings against elements and events."
         },
         "showdown-js": {
             "local": "showdown.js",
@@ -370,7 +371,7 @@
             "local": "greensock/TweenMax.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js",
             "docs": "http://www.greensock.com/tweenmax/",
-            "description": "TweenMax extends the extremely lightweight, fast TweenLite engine, adding many useful features like timeScale, AS3 event dispatching, updateTo(), yoyo, repeat, repeatDelay, rounding, and more. "
+            "description": "TweenMax extends the extremely lightweight, fast TweenLite engine, adding many useful features like timeScale, AS3 event dispatching, updateTo(), yoyo, repeat, repeatDelay, rounding, and more."
         },
         "greensockTweenLite": {
             "local": "greensock/TweenLite.min.js",
@@ -382,13 +383,13 @@
             "local": "greensock/plugins/CSSPlugin.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js",
             "docs": "http://www.greensock.com/get-started-js/#css",
-            "description": "With the help of the CSSPlugin, GSAP can animate almost any css-related property of DOM elements including the obvious things like width, height, margins, padding, top, left, and more plus complex properties like transforms (rotation, scaleX, scaleY, skewX, skewY, x, y, rotationX, and rotationY), colors, backgroundPosition, opacity, and lots more."
+            "description": "With the help of the CSSPlugin, GSAP can animate almost any css-related property of DOM elements including the obvious things like width, height, margins, padding, top, left, and more plus complex properties like transforms (rotation, scaleX, scaleY, skewX, skewY, x, y, rotationX, and rotationY), colors, backgroundPosition, opacity, and lots more."
         },
         "ui.router": {
             "local": "angular-ui-router.min.js",
             "cdn": "//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.0/angular-ui-router.min.js",
             "docs": "https://github.com/angular-ui/ui-router",
-            "description": "AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine. "
+            "description": "AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine."
         },
         "ui.slider": {
             "local": "angular-ui-slider.js",
@@ -400,19 +401,19 @@
             "local": "angular-strap.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.4/angular-strap.min.js",
             "docs": "http://mgcrea.github.io/angular-strap/",
-            "description": "Bootstrap directives for AngularJS."
+            "description": "Bootstrap directives for AngularJS."
         },
         "ngSanitize": {
             "local": "angular-sanitize.min.js",
             "cdn": "https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.min.js",
             "docs": "http://docs.angularjs.org/api/ngSanitize",
-            "description": "The ngSanitize module provides functionality to sanitize HTML."
+            "description": "The ngSanitize module provides functionality to sanitize HTML."
         },
         "angular-ui-bootstrap": {
             "local": "ui-bootstrap-tpls.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js",
             "docs": "http://angular-ui.github.io/bootstrap/",
-            "description": "Bootstrap components written in pure AngularJS by the AngularUI Team"
+            "description": "Bootstrap components written in pure AngularJS by the AngularUI Team"
         },
         "sherpa-filters": {
             "local": "sherpa-filters.js",
@@ -430,13 +431,25 @@
             "local": "eve.min.js",
             "cdn": "http://evejs.com/stable/eve.min.js",
             "docs": "http://evejs.com/",
-            "description": "A <3kb JavaScript file providing three simple methods to organize code into CSS namespaces which magically restrict code to the current context, allowing for dramatic reductions to code size and development time."
+            "description": "A <3kb JavaScript file providing three simple methods to organize code into CSS namespaces which magically restrict code to the current context, allowing for dramatic reductions to code size and development time."
         },
         "equalize-js": {
             "local": "equalize.min.js",
             "cdn": "http://cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js",
             "docs": "http://tsvensen.github.io/equalize.js/",
-            "description": "The jQuery plugin for equalizing the height or width of elements"
+            "description": "The jQuery plugin for equalizing the height or width of elements"
+        },
+        "mgcrea.bootstrap.scrollspy": {
+            "local": "angular-bootstrap-scrollspy.min.js",
+            "cdn": "https://raw.github.com/mgcrea/angular-bootstrap-scrollspy/master/dist/angular-bootstrap-scrollspy.min.js",
+            "docs": "https://github.com/mgcrea/angular-bootstrap-scrollspy",
+            "description": "Pure AngularJS component replicating Twitter Bootstrap's Scrollspy component behavior. The scrollspy behavior enables to automatically update nav targets based on scroll position."
+        },
+        "mgcrea.jquery": {
+            "local": "angular-jquery.min.js",
+            "cdn": "https://raw.github.com/mgcrea/angular-jquery/master/dist/angular-jquery.min.js",
+            "docs": "https://github.com/mgcrea/angular-bootstrap-scrollspy",
+            "description": "jQuery-like extensions for AngularJS embedded jQLite"
         }
     },
     "LIB_CSS": {

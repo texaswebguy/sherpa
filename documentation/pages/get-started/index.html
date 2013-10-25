@@ -1,12 +1,12 @@
 	<div class="da-clear ta-clear ma-clear top-offset-small" ng-controller="getStartedController">
 		<div class="wrapper">	
 			<div class="da1-da3 ta1-ta3 ma-all">
-	          <ul class="nav nav-list affix-top sherpa-aside" data-ng-init="initAside()" scroll-spy data-offset="40">
-	            <li ng-repeat="section in sections" ng-class="{active:$first}"><a href="{{section.url}}" class="scroll">{{section.label}}</a></li>
+	          <ul class="nav nav-list affix-top sherpa-aside" data-ng-init="initAside()">
+	            <li ng-repeat="section in sections" ng-class="{active:$first}"><a href="#{{section.id}}" class="scroll">{{section.label}}</a></li>
 	          </ul>	        
 			</div>
 			<div class="da4-da12 ta4-ta9 ma-all list-content" data-ng-init="prettyPrint()">
-				<div ng-repeat="section in sections" markdown="{{section.templateUrl}}" scroll-spy="refresh"></div>
+				<div ng-repeat="section in sections" id="{{section.id}}" markdown="{{section.templateUrl}}"></div>
 			</div>
 		</div>
 	</div>

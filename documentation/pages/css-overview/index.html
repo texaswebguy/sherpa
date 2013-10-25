@@ -1,11 +1,11 @@
 	<div class="da-clear ta-clear ma-clear top-offset-small" ng-controller="cssOverviewController">
 		<div class="wrapper">	
 			<div class="da1-da3 ta1-ta3 ma-all">
-	          <ul class="nav nav-list sherpa-aside" data-ng-init="initAside()" scroll-spy="">
+	          <ul class="nav nav-list sherpa-aside" data-ng-init="initAside()">
 	            <li ng-repeat="section in sections" ng-class="{active:$first}"><a href="#{{section.name}}" class="scroll">{{section.label}}</a></li>
 	          </ul>
 			</div>
-			<div class="da4-da12 ta4-ta9 ma-all" data-ng-init="prettyPrint();scrollSpy()">
+			<div class="da4-da12 ta4-ta9 ma-all" data-ng-init="prettyPrint()">
 				<div class="bottom-offset-small" ng-repeat="section in sections" id="{{section.name}}" ng-include="section.templateUrl"></div>
 			</div>
 		</div>
