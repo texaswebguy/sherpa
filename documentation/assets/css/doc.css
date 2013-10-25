@@ -177,6 +177,13 @@
 /*[id^=css-overview] > .wrapper {
 	overflow:visible;
 }*/
+.well.mountain {
+  background: url(../img/mountain.jpg) no-repeat;
+  background-size: cover;
+  opacity: .4;
+  background-position-y: bottom;
+  background-position-x: -1751px;
+}
 /* Pretty print stuff */
 /***************************************************************************************/
 .com {

@@ -1,4 +1,3 @@
- ---------------------
 The index.html file
 ------------
 
@@ -28,3 +27,4 @@ The pageController is a Sherpa function that controlls certain aspects of every 
 
     <body ng-controller="pageController">
 
+ ---------------------

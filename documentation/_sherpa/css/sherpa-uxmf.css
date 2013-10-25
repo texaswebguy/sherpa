@@ -374,26 +374,34 @@ html.editable .editable:hover {
   cursor: url(../img/edit-cursor.png), auto;
   color: #444 !important;
 }
-html.editable .editable.editing:hover {
-  background-color: #FFFFAB;
-  outline: 1px solid #ff0;
+html.editable .editable:hover a,
+html.editable .editable:hover a:hover,
+html.editable .editable:hover .btn {
+  text-decoration: none;
   cursor: text;
-  color: #444 !important;
 }
-html.editable .editable.editing:hover {
-  background-color: #FFFFAB;
-  outline: 2px solid #666;
-  border-radius: 2px;
-  color: #444 !important;
-}
-html.editable .editable.editing,
-[contenteditable="true"] {
+html.editable .editable.editing:hover,
+html.editable .editable.editing[contenteditable="true"] {
   background-color: #FFFFAB;
   outline: 2px solid #666;
   color: #444 !important;
   cursor: text;
 }
-.edit-controls {
+html.editable .editable.editing pre {
+  display: block;
+  padding: 5px;
+  margin: 0;
+  font-size: 13px;
+  line-height: 20px;
+  word-break: break-all;
+  word-wrap: break-word;
+  white-space: pre;
+  white-space: pre-wrap;
+  background-color: #fff;
+  border: 0;
+  color: #444 !important;
+}
+html.editable .edit-controls {
   background-color: #ccc;
   border-top: 0;
   padding: 5px 7px;
@@ -410,34 +418,23 @@ html.editable .editable.editing,
   color: #444 !important;
   z-index: 2;
 }
-.edit-controls label {
+html.editable .edit-controls label {
   display: inline;
   padding-right: 12px;
 }
-.edit-controls [type=checkbox] {
+html.editable .edit-controls .btn {
+  cursor: pointer;
+}
+html.editable .edit-controls [type=checkbox] {
   margin-top: -2px;
   margin-right: 2px;
 }
-.editing pre {
-  display: block;
-  padding: 5px;
-  margin: 0;
-  font-size: 13px;
-  line-height: 20px;
-  word-break: break-all;
-  word-wrap: break-word;
-  white-space: pre;
-  white-space: pre-wrap;
-  background-color: #fff;
-  border: 0;
-  color: #444 !important;
-}
-h1 > .editing > pre,
-h2 > .editing > pre,
-h3 > .editing > pre,
-h4 > .editing > pre,
-h5 > .editing > pre,
-h6 > .editing > pre {
+html.editable h1 > .editing > pre,
+html.editable h2 > .editing > pre,
+html.editable h3 > .editing > pre,
+html.editable h4 > .editing > pre,
+html.editable h5 > .editing > pre,
+html.editable h6 > .editing > pre {
   background-color: #FFFFAB;
   border: 1px solid #ff0;
   color: #444 !important;

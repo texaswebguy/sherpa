@@ -12,3 +12,5 @@ After you download the starter kit, expand it and you should see the following f
 ![starter kit folder contents][1]
 
   [1]: assets/img/starter-kit.png
+
+ ---------------------

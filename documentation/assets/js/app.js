@@ -2,6 +2,8 @@
 Sherpa.js({"pretty-print":"_sherpa/lib/google-code-prettify/prettify.js"}) 
 Sherpa.js({"ZeroClipboard":SHERPA.PATH_CORE_JS+"ZeroClipboard.js"});
 
+
+//TODO convert to directive that requires no change to bootstrap native code
 var initAside = function(){	
 	$('.sherpa-aside').affix({
         offset: {
@@ -23,16 +25,6 @@ var initAside = function(){
 		fixWidth();
 	});    
 	fixWidth();
-
-
-
-/*	$('.sherpa-aside li > a').click(function(event){
-		$('.sherpa-aside li').removeClass('active');
-		$(event.currentTarget).parent().addClass('active');
-	});
-*/
-
-
 }
 
 
@@ -91,79 +83,86 @@ sherpaApp.controller("docsMastheadController", function($scope, $state) {
 	$scope.$state = $state;
 	$scope.current_name = $state.current.name;
 
+});sherpaApp.controller("whySherpaCtrl", function($scope, $state) {
+    
+	$scope.equalize= function(){
+		window.setTimeout(function(){
+			var max = 0;
+			_.each($('.equalize'), function(item){
+				if($(item).height() > max){
+					max = $(item).height();
+				}
+			});
+			$('.equalize').height(max);
+		},500);
+	}
+
 });
 sherpaApp.controller("homeController", function($scope, $state) {
     
 	$('.footer-back-to-top').hide()
-
+    $scope.$on('$viewContentLoaded', function(event){
+        console.log("home Controller is done")
+    });
 });
 sherpaApp.controller("getStartedController", function($scope, $state) {
 	$('.footer-back-to-top').show()
-	$scope.initAside = initAside();
 
 	$scope.prettyPrint = initPrettyPrint();
-	$scope.scrollSpy = function(){
-
-		
-		window.setTimeout(function(){
-			$('body').scrollspy({offset:-80});
-			$('[data-spy="scroll"]').each(function () {
-			  var $spy = $(this).scrollspy('refresh')
-			});			
-		},1000)
-
-	}
-
-	$scope.sections = [
-		{
-			templateUrl: "pages/get-started/starter-kit.md",
-			label: "Your Starter Kit",
-			url:"#yourstarterkit"
-		},
-		{
-			templateUrl: "pages/get-started/blank.md",
-			label: "The Blank Folder",
-			url:"#theblankfolder"
-		},
-		{
-			templateUrl: "pages/get-started/index-file.md",
-			label: "The index.html file",
-			url:"#theindexhtmlfile"
-		},
-		{
-			templateUrl: "pages/get-started/configuration.md",
-			label: "Configuring Your Prototype",
-			url:"#configuringyourprototype"
-		},
-		{
-			templateUrl: "pages/get-started/page-routing.md",
-			label: "Page Routing",
-			url:"#pagerouting"
-		},
-		{
-			templateUrl: "pages/get-started/examples.md",
-			label: "Examples",
-			url:"#examples"
-		}
-	]
-
-});
-
-sherpaApp.controller("cssOverviewController", function($scope, $state) {
-	console.log(">>>>>>>>>>>>>>>>>>>>>>>>hello")
- 	$('.footer-back-to-top').show()
-	$scope.prettyPrint = initPrettyPrint();
 	$scope.initAside = initAside();
-	$scope.sections = _.filter(SHERPA.PROTO_ROUTES, function(route){if(route.parent){return route.parent.name === "css-overview"}});
-	$scope.navigation_sections = _.filter(SHERPA.PROTO_ROUTES, function(route){if(route.parent){return route.parent.name === "css-overview-navigation"}});
 	$scope.scrollSpy = function(){
-		$('body').scrollspy({offset:40});
+		$('.set-aside').scrollspy({offset:40});
 		window.setTimeout(function(){
 			$('[data-spy="scroll"]').each(function () {
 			  var $spy = $(this).scrollspy('refresh')
 			});			
 		},1000);
 	}
+
+	$scope.sections = [
+		{
+			templateUrl: "pages/get-started/starter-kit.md",
+			label: "Your Starter Kit",
+			id:"your-starter-kit"
+		},
+		{
+			templateUrl: "pages/get-started/blank.md",
+			label: "The Blank Folder",
+			id:"the-blank-folder"
+		},
+		{
+			templateUrl: "pages/get-started/index-file.md",
+			label: "The index.html file",
+			id:"the-index-html-file"
+		},
+		{
+			templateUrl: "pages/get-started/configuration.md",
+			label: "Configuring Your Prototype",
+			id:"configuring-your-prototype"
+		},
+		{
+			templateUrl: "pages/get-started/page-routing.md",
+			label: "Page Routing",
+			id:"page-routing"
+		},
+		{
+			templateUrl: "pages/get-started/examples.md",
+			label: "Examples",
+			id:"examples"
+		}
+	]
+	
+
+});
+
+sherpaApp.controller("cssOverviewController", function($scope, $state) {
+console.log(">>>>>>>>>hello")
+ 	$('.footer-back-to-top').show()
+	$scope.prettyPrint = initPrettyPrint(); //TODO make directive to do this with class
+	$scope.initAside = initAside(); //TODO to make directive
+	$scope.sections = _.filter(SHERPA.PROTO_ROUTES, function(route){if(route.parent){return route.parent === "css-overview"}});
+	$scope.navigation_sections = _.filter(SHERPA.PROTO_ROUTES, function(route){if(route.parent){return route.parent === "css-overview-navigation"}});
+
 	$scope.example_modal = {
 		title:'Hello my friend',
 		body: 'I am a simple demo modal!',
@@ -187,7 +186,6 @@ sherpaApp.controller("cssOverviewController", function($scope, $state) {
 		return alerts;
 	}*/
 
-
 });
 
 sherpaApp.controller("navigationController", function($scope, $state) {
@@ -209,6 +207,10 @@ sherpaApp.controller("cssGridController", function($scope, $state) {
 	Sherpa.ready("ZeroClipboard", function(){
 		activateClipboard();
 	});	
+    $scope.$on('$viewContentLoaded', function(event){
+        console.log("grid Controller is done")
+    });
+
 });
 sherpaApp.controller("prototypingController", function($scope, $state) {
 	$('.footer-back-to-top').show()    

@@ -5,16 +5,20 @@
     "PATH_WEBROOT": "",
     "ENABLE_CONTENT_EDIT": true,
     "DEFAULT_PROTO_ROUTE" : "/",
-    "ENABLE_COUNTER": false,
-    "LOAD_JS_CORE": [
-        "greensockTweenMax"
-    ],
+    "ENABLE_COUNTER": true,
     "PROTO_ROUTES": {
         "home": {
             "id": "home",
             "url": "/",
             "label": "",
             "templateUrl": "pages/home/index.html",
+            "view":"page"
+        },
+        "why-sherpa": {
+            "id": "why-sherpa",
+            "url": "/why-sherpa",
+            "label": "Why Sherpa?",
+            "templateUrl": "pages/why-sherpa/index.html",
             "view":"page"
         },
         "get-started": {

@@ -1,11 +1,11 @@
 {
     "VERSION": {
-        "codeName" : "Screaming Autumn",
-        "prodName" : "Dell Sherpa",
-        "releaseName" : "Dell-308 2.3.2 Boostrap Theme",
-        "minor" : ".01",
-        "major" : "0.8",
-        "releaseDate" : "10.18.2013"
+        "codeName": "Screaming Autumn",
+        "prodName": "Dell Sherpa",
+        "releaseName": "Dell-308 2.3.2 Boostrap Theme",
+        "minor": ".01",
+        "major": "0.8",
+        "releaseDate": "10.18.2013"
     },
     "default_values": {
         "default_alerts_data": {
@@ -105,7 +105,7 @@
     "PATH_CORE_ANGULAR_I18N": "i18n/angular-locale_{{locale}}.js",
     "PATH_CORE_CSS": "css/",
     "PATH_CORE_CSS_THEME": "css/themes/",
-    "PATH_GLOBAL_MODAL":"modal/global.html",   
+    "PATH_GLOBAL_MODAL": "modal/global.html",
     "API_APP": "sherpa-api.php",
     "ENABLE_GLOBAL_MODAL": true,
     "ENABLE_ADMIN_CONSOLE": true,
@@ -114,17 +114,17 @@
     "ENABLE_GRIDSET_OVERLAY": true,
     "ENABLE_NOTES": true,
     "ENABLE_PROTOTYPE_QA": false,
-    "ENABLE_CONTENT_EDIT":true,
+    "ENABLE_CONTENT_EDIT": true,
     "LOAD_JS_CORE": [
+        "jquery",
         "angular",
-        "jquery", 
-        "jqueryui", 
-        "amplify", 
+        "jqueryui",
+        "amplify",
         "eve-js",
         "scrollTo",
-        "underscoreString", 
-        "jwerty-js", 
-        "csvParser", 
+        "underscoreString",
+        "jwerty-js",
+        "csvParser",
         "gridset-overlay",
         "dateformatjs",
         "bootstrap-232",
@@ -135,235 +135,355 @@
     "LOAD_ANGULAR_MODULES": [
         "ngSanitize",
         "ui.router",
+        "ngGrid",
+        "mgcrea.jquery",
         "ui.slider"
     ],
-    "LOAD_JS_CORE_IE":  [
-        "html5printshiv", 
+    "LOAD_JS_CORE_IE": [
+        "html5printshiv",
         "html5Formshim"
     ],
-    "LOAD_JS_SHERPA":  [
+    "LOAD_JS_SHERPA": [
         "sherpa-i18n",
         "sherpa-directives",
         "sherpa-filters",
         "sherpa-global-events",
         "sherpa-page-controller"
     ],
-    "LOAD_CSS_CORE": ["bootstrap", "css_theme", "sherpa_uxmf"],
-    "LOAD_CSS_GRID": ["gridset"],
-    "LOAD_CSS_GRID_IE9": ["gridsetIE9"],
-    "LOAD_CSS_GRID_IELT8": ["gridsetIELT8"],
+    "LOAD_CSS_CORE": [
+        "bootstrap",
+        "css_theme",
+        "sherpa_uxmf"
+    ],
+    "LOAD_CSS_GRID": [
+        "gridset"
+    ],
+    "LOAD_CSS_GRID_IE9": [
+        "gridsetIE9"
+    ],
+    "LOAD_CSS_GRID_IELT8": [
+        "gridsetIELT8"
+    ],
     "LIB_JS": {
-        "jquery" : {
-           "local":"jquery.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+        "jquery": {
+            "local": "jquery.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js",
+            "docs": "http://jquery.com/",
+            "description": "jQuery is a fast, small, and feature-rich JavaScript library."
         },
-        "angular" : {
-           "local":"angular.min.js",
-           "cdn":"//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js"
+        "angular": {
+            "local": "angular.min.js",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/angular.js/1.1.5/angular.min.js",
+            "docs": "http://angularjs.org/",
+            "description": "AngularJS is a toolset for building the framework most suited to your application development."
         },
-        "knockout" : {
-           "local":"knockout.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js"
+        "ngGrid": {
+            "local": "angular-ui-grid/ng-grid-2.0.7.min.js",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.min.js",
+            "docs": "http://angular-ui.github.io/ng-grid/",
+            "description": "Angular Data Grid written in AngularJS and jQuery by the AngularUI Team"
         },
-        "amplify" : {
-           "local":"amplify.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.0/amplify.min.js"
+        "knockout": {
+            "local": "knockout.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/knockout/2.3.0/knockout-min.js",
+            "docs": "http://knockoutjs.com/",
+            "description": "Simplify dynamic JavaScript UIs with the Model-View-View Model (MVVM)"
         },
-        "pagerjs" : {
-           "local":"pager.min.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/pager.min.js"
+        "amplify": {
+            "local": "amplify.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/amplifyjs/1.1.0/amplify.min.js",
+            "docs": "http://www.amplifyjs.com/",
+            "description": "Amplify's goal is to simplify all forms of data handling by providing a unified API for various data sources."
         },
-        "history" : {
-           "local":"jquery.ba-hashchange.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/jquery-hashchange/v1.3/jquery.ba-hashchange.min.js"
+        "pagerjs": {
+            "local": "pager.min.js",
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/pager.min.js",
+            "docs": "http://pagerjs.com/",
+            "description": "pager.js is a JavaScript library based on KnockoutJS and jQuery that provides the possibility of creating single page applications in a declarative fashion"
         },
-        "jqueryui" : {
-           "local":"jquery-ui.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js"
+        "history": {
+            "local": "jquery.ba-hashchange.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/jquery-hashchange/v1.3/jquery.ba-hashchange.min.js",
+            "docs": "http://benalman.com/code/projects/jquery-hashchange/docs/files/jquery-ba-hashchange-js.html",
+            "description": "This jQuery plugin enables very basic bookmarkable #hash history via a cross-browser HTML5 window.onhashchange event."
         },
-        "scrollTo" : {
-           "local":"jquery.scrollTo.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js"
+        "jqueryui": {
+            "local": "jquery-ui.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/jqueryui/1.10.3/jquery-ui.min.js",
+            "docs": "http://jqueryui.com/",
+            "description": "jQuery UI is a curated set of user interface interactions, effects, widgets, and themes built on top of the jQuery JavaScript Library."
         },
-        "underscoreString" : {
-           "local":"underscore.string.min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/underscore.string/2.3.3/underscore.string.min.js"
+        "scrollTo": {
+            "local": "jquery.scrollTo.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/jquery-scrollTo/1.4.6/jquery.scrollTo.min.js",
+            "docs": "http://flesler.blogspot.com/2007/10/jqueryscrollto.html",
+            "description": "A small, customizable plugin for scrolling elements, or the window itself."
         },
-        "queryString" : {
-           "local":"query-string.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/jquery/2.0.3/jquery.min.js"
+        "underscoreString": {
+            "local": "underscore.string.min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/underscore.string/2.3.3/underscore.string.min.js",
+            "docs": "http://epeli.github.io/underscore.string/",
+            "description": "Underscore.string is string manipulation extension for JavaScript that you can use with or without Underscore.js."
         },
-        "bootstrap-232" : {
-           "local":"bootstrap-min.js",
-           "cdn":"http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js"
+        "queryString": {
+            "local": "query-string.js",
+            "cdn": "",
+            "docs": "",
+            "description": ""
+        },
+        "bootstrap-232": {
+            "local": "bootstrap-min.js",
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/twitter-bootstrap/2.3.2/js/bootstrap.min.js",
+            "docs": "http://getbootstrap.com/2.3.2/javascript.html",
+            "description": "Sleek, intuitive, and powerful front-end framework for faster and easier web development."
         },
         "gridset-overlay": {
             "local": "gridset-overlay.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/gridset-overlay.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/gridset-overlay.js",
+            "docs": "https://gridsetapp.com/documentation/adding/#js",
+            "description": "You can view an overlay of your prototype grids on your pages."
         },
         "sherpa_notes": {
             "local": "sherpa-notes.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-notes.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-notes.js",
+            "docs": "",
+            "description": ""
         },
         "sherpa-directives": {
             "local": "sherpa-directives.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-directives.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-directives.js",
+            "docs": "",
+            "description": ""
         },
         "sherpa_qa": {
             "local": "sherpa-prototype-qa.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-prototype-qa.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-prototype-qa.js",
+            "docs": "",
+            "description": ""
         },
         "underscorejs": {
             "local": "underscore.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/underscore.js/1.5.2/underscore-min.js",
+            "docs": "http://underscorejs.org/",
+            "description": "Underscore provides 80-odd functions that support the manipulation of arrays and objects"
         },
         "prototype_app": {
-            "local": "app.js"
+            "local": "app.js",
+            "description": "",
+            "docs": ""
         },
         "prototype_css": {
-            "local": "doc.css"
+            "local": "doc.css",
+            "description": "",
+            "docs": ""
         },
         "sherpa-page-controller": {
             "local": "sherpa-page-controller.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-page-controller.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-page-controller.js",
+            "docs": "",
+            "description": ""
         },
         "sherpautils": {
             "local": "sherpa-utils-v2.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-utils.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-utils.js",
+            "docs": "",
+            "description": ""
         },
         "csvParser": {
             "local": "jquery.csv-0.71.min.js",
-            "cdn":"https://jquery-csv.googlecode.com/files/jquery.csv-0.71.min.js"
+            "cdn": "https://jquery-csv.googlecode.com/files/jquery.csv-0.71.min.js",
+            "docs": "https://code.google.com/p/jquery-csv/",
+            "description": "jQuery CSV parser plug-in"
         },
         "less": {
             "local": "less.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/less.js/1.4.1/less.min.js",
+            "docs": "http://lesscss.org/",
+            "description": "The dynamic stylesheet language."
         },
         "jwerty-js": {
             "local": "jwerty.js",
-            "cdn":"https://raw.github.com/keithamus/jwerty/master/jwerty.js"
+            "cdn": "https://raw.github.com/keithamus/jwerty/master/jwerty.js",
+            "docs": "http://keithcirkel.co.uk/jwerty/",
+            "description": "jwerty is a JS lib which allows you to bind, fire and assert key combination strings against elements and events."
         },
         "showdown-js": {
             "local": "showdown.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/showdown/0.3.1/showdown.min.js",
+            "docs": "https://github.com/coreyti/showdown",
+            "description": "A JavaScript port of Markdown"
         },
         "dateformatjs": {
             "local": "date-format.js",
-            "cdn":"http://stevenlevithan.com/assets/misc/date.format.js"
+            "cdn": "http://stevenlevithan.com/assets/misc/date.format.js",
+            "docs": "http://blog.stevenlevithan.com/archives/date-time-format",
+            "description": "Although JavaScript provides a bunch of methods for getting and setting parts of a date object, it lacks a simple way to format dates and times according to a user-specified mask. "
         },
         "html5printshiv": {
             "local": "html5shiv-printshiv.js",
-            "cdn":"https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv-printshiv.js"
+            "cdn": "https://raw.github.com/aFarkas/html5shiv/master/dist/html5shiv-printshiv.js",
+            "docs": "https://github.com/dsheiko/HTML5-Form-Shim",
+            "description": "That is a jQuery plugin, which brings HTML5 Form support on legacy browsers and allow to extend HTML5 Form on new ones."
         },
         "html5Formshim": {
             "local": "jquery.html5form.js",
-            "cdn":"http://html5form.googlecode.com/svn/trunk/jquery.html5form-min.js"
+            "cdn": "http://html5form.googlecode.com/svn/trunk/jquery.html5form-min.js",
+            "docs": "",
+            "description": ""
         },
         "sherpaEventManager": {
             "local": "sherpa-event-manager.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-event-manager.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-event-manager.js",
+            "description": "",
+            "docs": ""
         },
         "sherpa-i18n": {
             "local": "sherpa-i18n.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-i18n.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-i18n.js",
+            "description": "",
+            "docs": ""
         },
         "sherpaPseudoAuth": {
             "local": "sherpa-pseudo-auth.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-pseudo-auth.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-pseudo-auth.js",
+            "description": "",
+            "docs": ""
         },
         "sherpaCustomWidgets": {
             "local": "sherpa-custom-widgets.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-custom-widgets.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-custom-widgets.js",
+            "description": "",
+            "docs": ""
         },
         "sherpa-global-events": {
             "local": "sherpa-global-events.js",
-            "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-global-events.js"
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/lib/sherpa-global-events.js",
+            "description": "",
+            "docs": ""
         },
         "prettify": {
             "local": "google-code-prettify/prettify.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.js",
+            "docs": "https://code.google.com/p/google-code-prettify/",
+            "description": "A Javascript module and CSS file that allows syntax highlighting of source code snippets in an html page."
         },
         "greensockTweenMax": {
             "local": "greensock/TweenMax.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenMax.min.js",
+            "docs": "http://www.greensock.com/tweenmax/",
+            "description": "TweenMax extends the extremely lightweight, fast TweenLite engine, adding many useful features like timeScale, AS3 event dispatching, updateTo(), yoyo, repeat, repeatDelay, rounding, and more."
         },
         "greensockTweenLite": {
             "local": "greensock/TweenLite.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js"
-        },
-        "greensockEasePack": {
-            "local": "greensock/easing/EasePack.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/easing/EasePack.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/TweenLite.min.js",
+            "docs": "http://www.greensock.com/tweenlite/",
+            "description": "TweenLite is an extremely fast, lightweight, and flexible tweening engine that serves as the foundation of the GreenSock Animation Platform."
         },
         "greensockCSSPlugin": {
             "local": "greensock/plugins/CSSPlugin.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/gsap/latest/plugins/CSSPlugin.min.js",
+            "docs": "http://www.greensock.com/get-started-js/#css",
+            "description": "With the help of the CSSPlugin, GSAP can animate almost any css-related property of DOM elements including the obvious things like width, height, margins, padding, top, left, and more plus complex properties like transforms (rotation, scaleX, scaleY, skewX, skewY, x, y, rotationX, and rotationY), colors, backgroundPosition, opacity, and lots more."
         },
         "ui.router": {
             "local": "angular-ui-router.min.js",
-            "cdn":"//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.0/angular-ui-router.min.js"
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.0/angular-ui-router.min.js",
+            "docs": "https://github.com/angular-ui/ui-router",
+            "description": "AngularUI Router is a routing framework for AngularJS, which allows you to organize the parts of your interface into a state machine."
         },
         "ui.slider": {
             "local": "angular-ui-slider.js",
-            "cdn":"angular-ui-slider.js"
+            "cdn": "http://angular-ui.github.io/ui-slider/src/slider.js",
+            "docs": "https://github.com/angular-ui/ui-slider",
+            "description": "An angular implementation of jQuery UI slider"
         },
         "angular-strap": {
             "local": "angular-strap.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.4/angular-strap.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/angular-strap/0.7.4/angular-strap.min.js",
+            "docs": "http://mgcrea.github.io/angular-strap/",
+            "description": "Bootstrap directives for AngularJS."
         },
         "ngSanitize": {
             "local": "angular-sanitize.min.js",
-            "cdn":"https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.min.js"
+            "cdn": "https://ajax.googleapis.com/ajax/libs/angularjs/1.1.5/angular-sanitize.min.js",
+            "docs": "http://docs.angularjs.org/api/ngSanitize",
+            "description": "The ngSanitize module provides functionality to sanitize HTML."
         },
         "angular-ui-bootstrap": {
             "local": "ui-bootstrap-tpls.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/angular-ui-bootstrap/0.6.0/ui-bootstrap-tpls.min.js",
+            "docs": "http://angular-ui.github.io/bootstrap/",
+            "description": "Bootstrap components written in pure AngularJS by the AngularUI Team"
         },
         "sherpa-filters": {
             "local": "sherpa-filters.js",
-            "cdn":"sherpa-filters.js"
+            "cdn": "sherpa-filters.js",
+            "description": "",
+            "docs": ""
         },
         "bootstrap-datepicker": {
             "local": "bootstrap-datepicker.js",
-            "cdn":"bootstrap-datepicker.js"
+            "cdn": "http://www.eyecon.ro/bootstrap-datepicker/js/bootstrap-datepicker.js",
+            "docs": "http://www.eyecon.ro/bootstrap-datepicker/",
+            "description": ""
         },
         "eve-js": {
             "local": "eve.min.js",
-            "cdn":"http://evejs.com/stable/eve.min.js"
+            "cdn": "http://evejs.com/stable/eve.min.js",
+            "docs": "http://evejs.com/",
+            "description": "A <3kb JavaScript file providing three simple methods to organize code into CSS namespaces which magically restrict code to the current context, allowing for dramatic reductions to code size and development time."
         },
         "equalize-js": {
             "local": "equalize.min.js",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/equalize.js/1.0.1/equalize.min.js",
+            "docs": "http://tsvensen.github.io/equalize.js/",
+            "description": "The jQuery plugin for equalizing the height or width of elements"
+        },
+        "mgcrea.bootstrap.scrollspy": {
+            "local": "angular-bootstrap-scrollspy.min.js",
+            "cdn": "https://raw.github.com/mgcrea/angular-bootstrap-scrollspy/master/dist/angular-bootstrap-scrollspy.min.js",
+            "docs": "https://github.com/mgcrea/angular-bootstrap-scrollspy",
+            "description": "Pure AngularJS component replicating Twitter Bootstrap's Scrollspy component behavior. The scrollspy behavior enables to automatically update nav targets based on scroll position."
+        },
+        "mgcrea.jquery": {
+            "local": "angular-jquery.min.js",
+            "cdn": "https://raw.github.com/mgcrea/angular-jquery/master/dist/angular-jquery.min.js",
+            "docs": "https://github.com/mgcrea/angular-bootstrap-scrollspy",
+            "description": "jQuery-like extensions for AngularJS embedded jQLite"
         }
     },
     "LIB_CSS": {
         "bootstrap": {
-                "local":"bootstrap.css",
-                "cdn":"http://getbootstrap.com/2.3.2/assets/css/bootstrap.css"
+            "local": "bootstrap.css",
+            "cdn": "http://getbootstrap.com/2.3.2/assets/css/bootstrap.css"
         },
         "css_theme": {
-                "local":"dell-308-theme-v0.6.css",
-                "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/css/themes/dell-308-theme-v0.6.css"
+            "local": "dell-308-theme-v0.6.css",
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/css/themes/dell-308-theme-v0.6.css"
         },
         "sherpa_uxmf": {
-                "local":"sherpa-uxmf.css",
-                "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/css/sherpa-uxmf.css"
+            "local": "sherpa-uxmf.css",
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/css/sherpa-uxmf.css"
         },
         "gridset": {
-                "local":"grid/gridset.css",
-                "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/css/grid/gridset.css"
+            "local": "grid/gridset.css",
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/css/grid/gridset.css"
         },
         "gridsetIE9": {
-                "local":"grid/gridset-ie-9.cssgridset.css",
-                "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/css/grid/gridset-ie-9.cssgridset.css"
+            "local": "grid/gridset-ie-9.cssgridset.css",
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/css/grid/gridset-ie-9.cssgridset.css"
         },
         "gridsetIELT8": {
-                "local":"grid/gridset-ie-lte8.css",
-                "cdn":"http://open.gsdprototypes.com/sherpa/.sherpa/css/grid/gridset-ie-lte8.css"
+            "local": "grid/gridset-ie-lte8.css",
+            "cdn": "http://open.gsdprototypes.com/sherpa/.sherpa/css/grid/gridset-ie-lte8.css"
         },
         "prettify": {
             "local": "google-code-prettify/prettify.css",
-            "cdn":"http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.css"
+            "cdn": "http://cdnjs.cloudflare.com/ajax/libs/prettify/r224/prettify.css"
+        },
+        "ngGrid": {
+            "local": "angular-ui-grid/ng-grid.min.css",
+            "cdn": "//cdnjs.cloudflare.com/ajax/libs/ng-grid/2.0.7/ng-grid.min.css"
         }
     }
 }

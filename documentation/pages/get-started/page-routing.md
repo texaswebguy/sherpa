@@ -1,4 +1,3 @@
- ------------
 Page Routing
 ------------
 
@@ -58,4 +57,6 @@ First, let's look at the config-overrides file with page routing added:
     }
 
   
-This will automatically create a global object called `SHERPA.PROTO_ROUTES` which can now be used to build "pages". There is more information on this in the Prototyping section
+This will automatically create a global object called `SHERPA.PROTO_ROUTES` which can now be used to build "pages". There is more information on this in the Prototyping section.
+
+ ---------------------

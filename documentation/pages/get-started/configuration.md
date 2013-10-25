@@ -1,4 +1,3 @@
- ---------------------
 Configuring Your Prototype
 ------------
 
@@ -22,3 +21,5 @@ To enable these overrides, your index page needs to have the following added to 
     </script>
     
 **Note:** the name of the config overrides file can be anything.
+
+ ---------------------
