@@ -7,28 +7,29 @@ SHERPA.PROTO_ROUTES["sherpa-manager"] = {
     "url": "/sherpa-manager",
     "label": "Sherpa Manager",
     "templateUrl": SHERPA.PATH_CORE+"manager/index.html",
-    "view":"page"
+    "view":"page",
+    "hide":true
 }
 SHERPA.PROTO_ROUTES["sherpa-editor"] = {
     "id": "sherpa-editor",
     "url": "/sherpa-editor",
     "label": "Sherpa Editor",
     "templateUrl": SHERPA.PATH_CORE+"manager/editor/index.html",
-    "view":"page"
+    "view":"page",
+    "hide":true
 }
-
 //JS and CSS
 Sherpa.load(
-    {"jsoneditor-css":SHERPA.PATH_CORE+"admin/editor/jsoneditor-min.css"}
+    {"jsoneditor-css":SHERPA.PATH_CORE+"manager/editor/jsoneditor-min.css"}
 );
 
 Sherpa.js(
-    {"jsoneditor-js":SHERPA.PATH_CORE+"admin/editor/jsoneditor-min.js"},
-    {"ace":SHERPA.PATH_CORE+"admin/editor/lib/ace/ace.js"},
-    {"mode-json":SHERPA.PATH_CORE+"admin/editor/lib/ace/mode-json.js"},
-    {"theme-textmate":SHERPA.PATH_CORE+"admin/editor/lib/ace/theme-textmate.js"},
-    {"theme-jsoneditor":SHERPA.PATH_CORE+"admin/editor/lib/ace/theme-jsoneditor.js"},
-    {"jsonlint":SHERPA.PATH_CORE+"admin/editor/lib/jsonlint/jsonlint.js"}
+    {"jsoneditor-js":SHERPA.PATH_CORE+"manager/editor/jsoneditor-min.js"},
+    {"ace":SHERPA.PATH_CORE+"manager/editor/lib/ace/ace.js"},
+    {"mode-json":SHERPA.PATH_CORE+"manager/editor/lib/ace/mode-json.js"},
+    {"theme-textmate":SHERPA.PATH_CORE+"manager/editor/lib/ace/theme-textmate.js"},
+    {"theme-jsoneditor":SHERPA.PATH_CORE+"manager/editor/lib/ace/theme-jsoneditor.js"},
+    {"jsonlint":SHERPA.PATH_CORE+"manager/editor/lib/jsonlint/jsonlint.js"}
 );
 Sherpa.ready("jsonlint", function(){
     Sherpa.editor = {}
@@ -80,8 +81,8 @@ Sherpa.help = {
 };
 
 
-// Enable admin console hotkey
-Sherpa.help.add('CTRL SHIFT F1','Redirects browser to Sherpa Admin Console');
+// Enable manager console hotkey
+Sherpa.help.add('CTRL SHIFT F1','Redirects browser to Sherpa manager Console');
 Sherpa.key('ctrl+shift+f1', function () { 
     location.href = "#"+SHERPA.PROTO_ROUTES["sherpa-manager"].url;
 });
