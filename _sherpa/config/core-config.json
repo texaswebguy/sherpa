@@ -306,7 +306,7 @@
         },
         "ui.router": {
             "local": "angular-ui-router.min.js",
-            "cdn":"//cdnjs.cloudflare.com/ajax/libs/angular-ui-router/0.2.0/angular-ui-router.min.js"
+            "cdn":"https://github.com/DellGDC/ui-router/blob/master/releaseGDC/angular-ui-router.min.js"
         },
         "ui.slider": {
             "local": "angular-ui-slider.js",
