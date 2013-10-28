@@ -203,28 +203,26 @@ sherpaApp.directive('spy', function($window, $location, $routeParams, jQuery, de
 
             offsets = [];
             targets = [];
-            $timeout(function() {
-              slice.call(jQuery(options.target).children())
-                .map(function(el) {       
-                    //original was not getting the proper id
-                    var target_id = jQuery(el).find('[href]').attr('href').replace(/#/,"");
-                    var offset = jQuery("#"+target_id).offset().top;
-                    return [offset, target_id];
-                })
-                .sort(function(a, b) {
-                    return a[0] - b[0];
-                })
-                .forEach(function(el) {
-                  offsets.push(el[0]);
-                  targets.push(el[1]);
-                });
-                
-              if(options.offset) {
-                offset = options.offset === 'auto' ? offsets.length && offsets[0] : options.offset * 1;
-              } else {
-                offset = 10; // if not it will cause a NaN with var scrollTop = el[0].scrollTop + offset;
-              }
-            },700); //TODO, need to figure out a way to run this when the DOM is actually loaded. Adding a timeout for now
+            slice.call(jQuery(options.target).children())
+              .map(function(el) {       
+                  //original was not getting the proper id
+                  var target_id = jQuery(el).find('[href]').attr('href').replace(/#/,"");
+                  var offset = jQuery("#"+target_id).offset().top;
+                  return [offset, target_id];
+              })
+              .sort(function(a, b) {
+                  return a[0] - b[0];
+              })
+              .forEach(function(el) {
+                offsets.push(el[0]);
+                targets.push(el[1]);
+              });
+              
+            if(options.offset) {
+              offset = options.offset === 'auto' ? offsets.length && offsets[0] : options.offset * 1;
+            } else {
+              offset = 10; // if not it will cause a NaN with var scrollTop = el[0].scrollTop + offset;
+            }
 
         },
         process = function(scope, el, options) {
@@ -254,7 +252,6 @@ sherpaApp.directive('spy', function($window, $location, $routeParams, jQuery, de
                 prevId: targets[activeTargetIndex-1]
             }
             lastLocation = spy.currentLocation;
-             
             if(spy.direction == 'down') {
                 //scrolling down 
                 if(isAtBottom) {
@@ -264,9 +261,16 @@ sherpaApp.directive('spy', function($window, $location, $routeParams, jQuery, de
                 }
             } else {
                 //scrolling up
-                if( spy.prevId && spy.currentLocation <= spy.prevOffset) {
+                //TODO if the activeTarget is out of view and its going up it needs to switch to prevID
+                console.log(spy.currentLocation+windowHeight,spy.currentOffset+bottomOffset)
+                if(spy.currentLocation+windowHeight <= spy.currentOffset+bottomOffset && spy.currentLocation+windowHeight <= spy.currentOffset+bottomOffset + 20) {
+                  console.log("switch to ",spy.prevId);
+                  activate(scope, spy.prevId, options);
+                } else if ( spy.prevId && spy.currentLocation <= spy.prevOffset) {
                     //step down to previous id
                     activate(scope, spy.prevId, options);
+                } else {
+                  console.log(activeTarget)
                 }
             }
 
@@ -293,7 +297,7 @@ sherpaApp.directive('spy', function($window, $location, $routeParams, jQuery, de
               refresh(iAttrs);
               process(scope, iElement, iAttrs);
             };
-            var debouncedRefresh = debounce(refreshPositions, 300);
+            var debouncedRefresh = debounce(refreshPositions, 700);
 
             scope.$on('$viewContentLoaded', debouncedRefresh);
             scope.$on('$includeContentLoaded', debouncedRefresh);
@@ -403,5 +407,36 @@ sherpaApp.directive('markdown', function ($http,$compile) {
     }
 });
 
+sherpaApp.directive('scroll', function ($http,$compile) {
+  return {
+    restrict: 'C',
+    link: function (scope, elem, attr, ctrl) {
+      angular.element(elem).bind('click', function(event) {
+        event.preventDefault();
+        var options={offset:{top:0}};
+        if($('.nav.affix:visible')) {
+          if(Sherpa.viewModel.IsPhoneDevice) {
+            //TODO this is not completely right. 
+            options.offset.top = -$('.nav.affix:visible').height();
+          }
+          if(!Sherpa.viewModel.IsPhoneDevice) {
+            //desktop and tablet 
+            options.offset.top = -20;
+          }
+
+        }
+        if(elem.attr('href')){
+          targetId = elem.attr('href');
+        } else if (elem.attr('rel')){
+          targetId = elem.attr('rel')
+        }
+        if(targetId){
+          
+          $.scrollTo(targetId,500,options);
+        }       
+      });
+    }
+  }
+});
 
 Sherpa.counter("Angular directives");

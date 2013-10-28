@@ -1,2 +1,2 @@
-This starter kit was created on 25-10-2013 - 02:58 PM 
+This starter kit was created on 28-10-2013 - 03:33 PM 
 If you have any questions please contact Bo Lora bo_lora@dell.com 
