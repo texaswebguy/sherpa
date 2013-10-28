@@ -284,6 +284,15 @@ Sherpa.lorem = function(options){
 
 }
 
+Sherpa.equalizeHeight = function(selector, add_px) {
+    var max = 0, elements;
+    elements = $(selector), _.each(elements, function (element) {
+        $(element).height() > max && (max = $(element).height())
+    }), add_px && (max += add_px), _.each(elements, function (element) {
+        $(element).height(max)
+    })
+}
+
 Sherpa.ready("amplify", function() {
     var props = ["publish", "subscribe", "unsubscribe", "store", "request"];
     Sherpa.namespace(amplify, "amplify", props);

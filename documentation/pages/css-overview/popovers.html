@@ -2,7 +2,7 @@
     <div class="">
       <h2>Popovers</h2>
     </div>     
-      <div class="da-all ta-all ma-all">
+      <div class="da-all ta-all ma-all" ng-init="initPopovers()">
         <div id="popover-example-HTML">
           <ul class="unstyled">
             <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title='Popover on top<i class="close icon-ui-close pull-right visible-phone" data-dismiss="popover"></i>'>Popover on top</a></li>
@@ -31,20 +31,20 @@
 
         <div class="collapse" id="popover-HTML">
           <h4>HTML code to activate popovers</h4>
-          <ul data-bind="foreach: $('#popover-example-HTML a')" class="unstyled">
-              <li>
-                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
+          <ul class="unstyled">
+              <li ng-repeat="popover in popoversHTML">
+                <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text="{{popover.clipboardText}}">
                   Copy HTML
                 </button>
                 <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
-                <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
+                <pre class="prettyprint linenums">{{popover.exampleHTML}}</pre>
               </li>
           </ul>
         </div>
 
         <div class="collapse" id="popover-JS">
           <h4>Javascript code to activate popovers</h4>
-          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#popover-JS-code').html()}">
+          <button class="btn btn-mini" data-copy="2-clipboard" loadclipboardtext="#popover-JS-code">
             Copy HTML
           </button>
           <pre class="prettyprint linenums" id="popover-JS-code">     $('[data-toggle="popover"]').popover({trigger:'manual'});

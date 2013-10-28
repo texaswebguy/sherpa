@@ -45,13 +45,13 @@
           <div class="collapse" id="alerts-HTML">
   
             <ul class="unstyled">
-                <li ng-repeat="html in alerts()" >
-                  <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text="{{html}}">
+                <li ng-repeat="alert in alerts" >
+                  <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text="{{alert.html}}">
                     Copy HTML
                   </button>
-                  <button class="btn btn-mini fiddle-button" data-target="{{id}}">Fiddle</button>
+                  <button class="btn btn-mini fiddle-button" data-target="{{alert.id}}">Fiddle</button>
 
-                  <pre class="prettyprint linenums">{{html_sample}}</pre>
+                  <pre class="prettyprint linenums">{{alert.html_sample}}</pre>
                 </li>
             </ul>
 

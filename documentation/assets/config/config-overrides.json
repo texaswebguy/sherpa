@@ -3,6 +3,7 @@
     "PROTO_CSS": "doc.css",
     "PATH_PROTO_ASSETS": "assets/",
     "PATH_WEBROOT": "",
+    "ENABLE_MANAGER": true,
     "ENABLE_CONTENT_EDIT": true,
     "DEFAULT_PROTO_ROUTE" : "/",
     "ENABLE_COUNTER": true,
@@ -49,144 +50,137 @@
             "templateUrl": "pages/prototyping/index.html",
             "view":"page"
         },
-        "styleguides": {
-            "id": "styleguides",
-            "url": "/styleguides",
-            "label": "Styleguides",
-            "templateUrl": "pages/styleguides/index.html",
-            "view":"page"
-        },
-        "css-overview-typography": {
-            "id": "css-overview-typography",
-            "url": "/css-overview/typography",
+        "typography": {
+            "id": "typography",
+            "url": "typography",
             "label": "Typography",
             "parent": "css-overview",
             "view":"page",
             "templateUrl": "pages/css-overview/typography.html"
         },
-        "css-overview-navbar": {
-            "id": "css-overview-navbar",
-            "url": "/css-overview/navbar",
+        "navbar": {
+            "id": "navbar",
+            "url": "navbar",
             "label": "Navigation Bars",
             "parent": "css-overview",
             "view":"page",
             "templateUrl": "pages/css-overview/navbar.html"
         },
-        "css-overview-buttons": {
-            "id": "css-overview-buttons",
-            "url": "/css-overview/buttons",
+        "buttons": {
+            "id": "buttons",
+            "url": "buttons",
             "label": "Buttons",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/buttons.html"
         },
-        "css-overview-forms": {
-            "id": "css-overview-forms",
-            "url": "/css-overview/forms",
+        "forms": {
+            "id": "forms",
+            "url": "forms",
             "label": "Forms",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/forms.html"
         },
-        "css-overview-tables": {
-            "id": "css-overview-tables",
-            "url": "/css-overview/tables",
+        "tables": {
+            "id": "tables",
+            "url": "tables",
             "label": "Tables",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/tables.html"
         },
-        "css-overview-breadcrumbs": {
-            "id": "css-overview-breadcrumbs",
-            "url": "/css-overview/breadcrumbs",
+        "breadcrumbs": {
+            "id": "breadcrumbs",
+            "url": "breadcrumbs",
             "label": "Breadcrumbs",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/breadcrumbs.html"
         },
-        "css-overview-pagination": {
-            "id": "css-overview-pagination",
-            "url": "/css-overview/pagination",
+        "pagination": {
+            "id": "pagination",
+            "url": "pagination",
             "label": "Pagination",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/pagination.html"
         },
-        "css-overview-pagers": {
-            "id": "css-overview-pagers",
-            "url": "/css-overview/pagers",
+        "pagers": {
+            "id": "pagers",
+            "url": "pagers",
             "label": "Pagers",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/pagers.html"
         },
-        "css-overview-labels-and-badges": {
-            "id": "css-overview-labels-and-badges",
-            "url": "/css-overview/labels-and-badges",
+        "labels-and-badges": {
+            "id": "labels-and-badges",
+            "url": "labels-and-badges",
             "label": "Labels and Badges",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/labels-and-badges.html"
         },
-        "css-overview-tabs-lists-pills": {
-            "id": "css-overview-tabs-lists-pills",
-            "url": "/css-overview/tabs-lists-pills",
+        "tabs-lists-pills": {
+            "id": "tabs-lists-pills",
+            "url": "tabs-lists-pills",
             "label": "Tabs, list and pills",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/tabs-lists-pills.html"
         },
-        "css-overview-progress-bars": {
-            "id": "css-overview-progress-bars",
-            "url": "/css-overview/progress-bars",
+        "progress-bars": {
+            "id": "progress-bars",
+            "url": "progress-bars",
             "label": "Progress Bars",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/progress-bars.html"
         },
-        "css-overview-alerts": {
-            "id": "css-overview-alerts",
-            "url": "/css-overview/alerts",
+        "alerts": {
+            "id": "alerts",
+            "url": "alerts",
             "label": "Alerts",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/alerts.html"
         },
-        "css-overview-modals": {
-            "id": "css-overview-modals",
-            "url": "/css-overview/modals",
+        "modals": {
+            "id": "modals",
+            "url": "modals",
             "label": "Modals",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/modals.html"
         },
-        "css-overview-tooltips": {
-            "id": "css-overview-tooltips",
-            "url": "/css-overview/tooltips",
+        "tooltips": {
+            "id": "tooltips",
+            "url": "tooltips",
             "label": "Tooltips",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/tooltips.html"
         },
-        "css-overview-collapsible-items": {
-            "id": "css-overview-collapsible-items",
-            "url": "/css-overview/collapsible-items",
+        "collapsible-items": {
+            "id": "collapsible-items",
+            "url": "collapsible-items",
             "label": "Collapsible Items",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/collapsible-items.html"
         },
-        "css-overview-popovers": {
-            "id": "css-overview-popovers",
-            "url": "/css-overview/popovers",
+        "popovers": {
+            "id": "popovers",
+            "url": "popovers",
             "label": "Popovers",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/popovers.html"
         },
-        "css-overview-wells-and-containers": {
-            "id": "css-overview-wells-and-containers",
-            "url": "/css-overview/wells-and-containers",
+        "wells-and-containers": {
+            "id": "wells-and-containers",
+            "url": "wells-and-containers",
             "label": "Wells and Containers",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/wells-and-containers.html"
         },
-        "css-overview-icons": {
-            "id": "css-overview-icons",
-            "url": "/css-overview/icons",
+        "icons": {
+            "id": "icons",
+            "url": "icons",
             "label": "Icons",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/icons.html"
         },
-        "css-overview-responsive-classes": {
-            "id": "css-overview-responsive-classes",
-            "url": "/css-overview/responsive-classes",
+        "responsive-classes": {
+            "id": "responsive-classes",
+            "url": "responsive-classes",
             "label": "Responsive Classes",
             "parent": "css-overview",
             "templateUrl": "pages/css-overview/responsive-classes.html"
