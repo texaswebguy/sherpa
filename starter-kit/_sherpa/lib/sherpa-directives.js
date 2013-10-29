@@ -60,7 +60,6 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
     var redirectURL = (SHERPA.DEFAULT_PROTO_ROUTE) ? SHERPA.DEFAULT_PROTO_ROUTE : "/";
 
 
-
     _.each(SHERPA.PROTO_ROUTES, function (route) {
 
         if (route.isDefault || route.isHomeDefault) {
@@ -96,37 +95,10 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
          *
          * @type {{}}
          */
-
-        if ( route.view ) {
-            var viewsObject = {};
-            viewsObject[ route.view ] = {
-                templateUrl: route.templateUrl
-            };
-
-            route.views = viewsObject;
-        }
-
-        if ( SHERPA.PROTO_ROUTES["globalData"] ){
-            if ( route.data &&  SHERPA.PROTO_ROUTES["globalData"].data ) {
-                route.data = _.merge( route.data, SHERPA.PROTO_ROUTES["globalData"].data );
-            }
-
-            if ( !route.data && SHERPA.PROTO_ROUTES["globalData"].data ) {
-                route.data = SHERPA.PROTO_ROUTES["globalData"].data;
-            }
-
-        }
-
-
-        /**
-         * Set up animation callback
-         */
-
-//        route.onEnter = function() {
-//            if ( this.animateEnter ) {
-//                this.animateEnter();
-//            }
-//        };
+        var viewsObject = {};
+        viewsObject[ route.view ] = {
+            templateUrl: route.templateUrl
+        };
 
         route.views = viewsObject;
 
@@ -173,6 +145,8 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
             $stateProvider.state(route.id, route);
 
         });
+
+
     }]);
 
     angular.module("ui.router").run(function ($rootScope, $state, $stateParams) {
@@ -191,125 +165,24 @@ if (!_.isUndefined(SHERPA.PROTO_ROUTES)) {
      */
 }
 
-sherpaApp.directive('spy', function($window, $location, $routeParams, jQuery, debounce,$timeout) {
-    //re- written with underscore
 
-    var slice = Array.prototype.slice,
-        offset,offsets = [],
-        targets = [],
-        activeTarget,
-        lastLocation = 0,
-        refresh = function(options) {
-
-            offsets = [];
-            targets = [];
-            slice.call(jQuery(options.target).children())
-              .map(function(el) {       
-                  //original was not getting the proper id
-                  var target_id = jQuery(el).find('[href]').attr('href').replace(/#/,"");
-                  var offset = jQuery("#"+target_id).offset().top;
-                  return [offset, target_id];
-              })
-              .sort(function(a, b) {
-                  return a[0] - b[0];
-              })
-              .forEach(function(el) {
-                offsets.push(el[0]);
-                targets.push(el[1]);
-              });
-              
-            if(options.offset) {
-              offset = options.offset === 'auto' ? offsets.length && offsets[0] : options.offset * 1;
-            } else {
-              offset = 10; // if not it will cause a NaN with var scrollTop = el[0].scrollTop + offset;
-            }
-
-        },
-        process = function(scope, el, options) {
-
-          if(!offsets.length) return; //if there are no scroll spy items
-
-          var scrollTop = el[0].scrollTop + offset,
-              documentHeight = el[0].scrollHeight || document.body.scrollHeight,
-              windowHeight = $(window).height(),
-              activeTargetIndex = _.indexOf(targets, activeTarget),
-              bottomOffset = documentHeight - _.last(offsets) - $('#'+_.last(targets)).height(),
-              isAtBottom = documentHeight - bottomOffset < windowHeight + scrollTop;
-              if(_.isUndefined(activeTarget)) { activeTarget = targets[0]; activeTargetIndex = 0} // sometimes because of an offset nothing will be targeted and in that case the top item should be active
-            var spy = {
-                direction: (function(){
-                    if(lastLocation > scrollTop) {
-                        return 'up';
-                    } else {
-                        return 'down';
-                    }
-                })(),
-                currentLocation: scrollTop,
-                currentOffset: offsets[activeTargetIndex],
-                nextOffset: offsets[activeTargetIndex+1],
-                prevOffset: offsets[activeTargetIndex-1],
-                nextId: targets[activeTargetIndex+1],
-                prevId: targets[activeTargetIndex-1]
-            }
-            lastLocation = spy.currentLocation;
-            if(spy.direction == 'down') {
-                //scrolling down 
-                if(isAtBottom) {
-                    activate(scope, _.last(targets), options);
-                } else if( spy.nextId && spy.currentLocation >= spy.nextOffset) {
-                    activate(scope, spy.nextId, options);
-                }
-            } else {
-                //scrolling up
-                //TODO if the activeTarget is out of view and its going up it needs to switch to prevID
-                console.log(spy.currentLocation+windowHeight,spy.currentOffset+bottomOffset)
-                if(spy.currentLocation+windowHeight <= spy.currentOffset+bottomOffset && spy.currentLocation+windowHeight <= spy.currentOffset+bottomOffset + 20) {
-                  console.log("switch to ",spy.prevId);
-                  activate(scope, spy.prevId, options);
-                } else if ( spy.prevId && spy.currentLocation <= spy.prevOffset) {
-                    //step down to previous id
-                    activate(scope, spy.prevId, options);
-                } else {
-                  console.log(activeTarget)
-                }
-            }
-
-        },
-        activate = function(scope, selector, options) {
-
-          // Save active target for process()
-          activeTarget = selector;
-
-          // Toggle active class on elements
-          jQuery(options.target + ' > .active').removeClass('active');
-          $('[href=#'+activeTarget+']').parent().addClass('active');
-
-          // Use $location.search to trigger dom changes
-          scope.$apply($location.search(options.search || 'section', selector));
-
-        };
-
-    return {
-      restrict: 'EAC',
-      link: function postLink(scope, iElement, iAttrs) {
-        if(iAttrs.spy == 'scroll') {
-            var refreshPositions = function() {
-              refresh(iAttrs);
-              process(scope, iElement, iAttrs);
-            };
-            var debouncedRefresh = debounce(refreshPositions, 700);
-
-            scope.$on('$viewContentLoaded', debouncedRefresh);
-            scope.$on('$includeContentLoaded', debouncedRefresh);
-
-            angular.element($window).bind('scroll', function() {
-              process(scope, iElement, iAttrs);
-            });
+sherpaApp.directive('scrollSpy', function ($timeout) {
+    //TODO This is a hack
+    return function (scope, elem, attr) {
+        if (!attr.scrollSpy === 'refresh') {
+            $('body').scrollspy('refresh');
+            $('.main-active').addClass("active"); //hack to prevent scrollspy from removing active from main nav
+        } else {
+            $(elem).scrollspy();
+            scope.$watch(attr.scrollSpy, function (value) {
+                $timeout(function () {
+                    $('body').scrollspy('refresh')
+                }, 500);
+            }, true);
+            $('.main-active').addClass("active");
         }
-      }
-    };
-
-  });
+    }
+});
 
 
 sherpaApp.directive('msg', function () {
@@ -407,36 +280,5 @@ sherpaApp.directive('markdown', function ($http,$compile) {
     }
 });
 
-sherpaApp.directive('scroll', function ($http,$compile) {
-  return {
-    restrict: 'C',
-    link: function (scope, elem, attr, ctrl) {
-      angular.element(elem).bind('click', function(event) {
-        event.preventDefault();
-        var options={offset:{top:0}};
-        if($('.nav.affix:visible')) {
-          if(Sherpa.viewModel.IsPhoneDevice) {
-            //TODO this is not completely right. 
-            options.offset.top = -$('.nav.affix:visible').height();
-          }
-          if(!Sherpa.viewModel.IsPhoneDevice) {
-            //desktop and tablet 
-            options.offset.top = -20;
-          }
-
-        }
-        if(elem.attr('href')){
-          targetId = elem.attr('href');
-        } else if (elem.attr('rel')){
-          targetId = elem.attr('rel')
-        }
-        if(targetId){
-          
-          $.scrollTo(targetId,500,options);
-        }       
-      });
-    }
-  }
-});
 
 Sherpa.counter("Angular directives");

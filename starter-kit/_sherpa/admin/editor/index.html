@@ -1,0 +1,58 @@
+
+<script type="text/javascript">
+
+</script>
+<style type="text/css">
+    body#jsoneditor {
+        font: 10.5pt arial;
+        color: #4d4d4d;
+        line-height: 150%;
+        width: 500px;
+    }
+    code {
+        background-color: #f5f5f5;
+    }
+    #content-editor,
+    #taxonomy-editor {
+        width: 100%;
+        height: 1000px;
+    }
+</style>
+
+        <h2>Sherpa Editor</h2>
+
+        <div class="tabbable tabs-bordered sherpa-editor">
+          <ul class="nav nav-tabs">
+            <li class="active"><a href="#content" data-toggle="tab">Content</a></li>
+            <li><a href="#config" data-toggle="tab">Configurations</a></li>
+            <li><a href="#xref" data-toggle="tab">Resource Cross References</a></li>
+          </ul>
+          <div class="tab-content">
+            <div class="tab-pane fade active in" id="content" ng-init="contentEditor()">
+                <p class="alert alert-info">
+                    <button class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-close"></i></button>
+                    You can switch editor mode using the mode box.
+                </p>
+                <div class="sherpa-editor-controls">
+                    <button class="btn btn-mini" ng-click="resetContent()">Reset</button>
+                    <button class="btn btn-secondary btn-mini" ng-click="saveContent()">Save</button>
+                </div>
+                <div id="content-editor"></div>
+            </div>
+            <div class="tab-pane fade" id="config" ng-init="configEditor()">
+                <p class="alert alert-info">
+                    <button class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-close"></i></button>
+                    You can switch editor mode using the mode box.
+                </p>
+                <div id="config-editor"></div>
+            </div>
+            <div class="tab-pane fade" id="xref" ng-init="xrefEditor()">
+                <p class="alert alert-info">
+                    <button class="close" data-dismiss="alert"><i aria-hidden="true" class="icon-ui-close"></i></button>
+                    You can switch editor mode using the mode box.
+                </p>
+                <div id="xref-editor"></div>
+            </div>
+          </div>
+        </div>
+

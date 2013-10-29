@@ -217,54 +217,48 @@ if(typeof(SHERPA_CONFIG_OVERRIDES)==="undefined"){
 //______________________________________________________________________________________
 
 Sherpa.counter = function (marker) {
-	if(marker == "report") {
-		var report = "--------------------------------------------------------------\nSherpa Counter Report\n--------------------------------------------------------------\n";
-		_.each( _.keys(Sherpa.counter.obj.time_log), function(entry){
-			if(Sherpa.counter.obj.time_log[entry].elapsed_time) {
-				report += entry+": "+Sherpa.counter.obj.time_log[entry].elapsed_time/1000 +" seconds\n";
-				report += "--------------------------------------------------------------\n";		
-			}
-		})
-		console.log(report);
-	} else {
-		if(!Sherpa.counter.obj) {
-			var obj = {
-				count: 0,
-				start_time: (new Date).getTime(),
-				time_log: {},
-				last_time: 0
-			};
-			obj.new_time = obj.start_time;
+	if(SHERPA.ENABLE_COUNTER || marker == "Sherpa INIT") {
+		if(marker == "report") {
+			var report = "--------------------------------------------------------------\nSherpa Counter Report\n--------------------------------------------------------------\n";
+			_.each( _.keys(Sherpa.counter.obj.time_log), function(entry){
+				if(Sherpa.counter.obj.time_log[entry].elapsed_time) {
+					report += entry+": "+Sherpa.counter.obj.time_log[entry].elapsed_time/1000 +" seconds\n";
+					report += "--------------------------------------------------------------\n";		
+				}
+			})
+			console.log(report);
 		} else {
-			var obj = Sherpa.counter.obj;
-			obj.new_time = (new Date).getTime();
+			if(!Sherpa.counter.obj) {
+				var obj = {
+					count: 0,
+					start_time: (new Date).getTime(),
+					time_log: {},
+					last_time: 0
+				};
+				obj.new_time = obj.start_time;
+			} else {
+				var obj = Sherpa.counter.obj;
+				obj.new_time = (new Date).getTime();
+			}
+			obj.count++;
+		    obj.elapsed_time = (obj.new_time - obj.last_time) / 1000;
+		    obj.last_time = obj.new_time;
+		    if(marker && obj.time_log[marker] == undefined) {
+		    	//never seen this marker
+		    	obj.time_log[marker]={};
+		    	obj.time_log[marker].start = obj.new_time;
+		    	console.log(obj.count + ": "+marker + " - time: " + (obj.last_time - obj.start_time )/1000 + " seconds");
+		    } else if (marker) {
+		    	obj.time_log[marker].elapsed_time = obj.last_time - obj.time_log[marker].start;
+		    	console.log(obj.count + ": "+marker + " - elapsed time: " + obj.time_log[marker].elapsed_time /1000 + " seconds");
+		    } else {
+			    console.log(obj.count + ": elapsed/total time:" + obj.elapsed_time + "/"  + obj.last_time);
+		    }
+		    Sherpa.counter.obj = obj;
+		    return obj.new_time;
 		}
-		obj.count++;
-	    obj.elapsed_time = (obj.new_time - obj.last_time) / 1000;
-	    obj.last_time = obj.new_time;
-	    if(marker && obj.time_log[marker] == undefined) {
-	    	//never seen this marker
-	    	obj.time_log[marker]={};
-	    	obj.time_log[marker].start = obj.new_time;
-	    	var msg = obj.count + ": "+marker + " - time: " + (obj.last_time - obj.start_time )/1000 + " seconds";
-	    	if(Sherpa.counter_msg) {
-	    		console.log(Sherpa.counter_msg);
-	    		delete Sherpa.counter_msg;
-	    	}
-	    	if(marker == "Sherpa INIT") {
-	    		Sherpa.counter_msg = msg;
-	    	} else {
-	    		console.log(msg);
-	    	}
-	    } else if (marker) {
-	    	obj.time_log[marker].elapsed_time = obj.last_time - obj.time_log[marker].start;
-	    	console.log(obj.count + ": "+marker + " - elapsed time: " + obj.time_log[marker].elapsed_time /1000 + " seconds");    	
-	    } else {
-		    console.log(obj.count + ": elapsed/total time:" + obj.elapsed_time + "/"  + obj.last_time);
-	    }
-	    Sherpa.counter.obj = obj;
-	    return obj.new_time;
-	}		
+		
+	}
 }
 // initiate counter to start login of entire app
 Sherpa.counter("Sherpa INIT");
@@ -482,9 +476,6 @@ Sherpa.init.resetPaths = function(Sherpa,SHERPA,SHERPA_CONFIG_OVERRIDES,console)
 //______________________________________________________________________________________
 
 Sherpa.init.start = function(Sherpa,SHERPA,console){
-	if(!SHERPA.ENABLE_COUNTER){
-		Sherpa.counter = function(){return}
-	}
 
 	if(SHERPA.RUN_AS_LOCAL) {
 		Sherpa.js({sherpautils: SHERPA.PATH_CORE_JS+SHERPA.LIB_JS["sherpautils"]["local"]});
@@ -534,12 +525,6 @@ Sherpa.init.start = function(Sherpa,SHERPA,console){
 			//TODO: Right now all this is worth is for angular. Need to figure out hoe to intergrate use of this with msg directive 
 			Sherpa.loadI18NJS();
 		});
-
-		//load Sherpa Manager
-		if(SHERPA.ENABLE_MANAGER){
-			Sherpa.js({"sherpa-manager":SHERPA.PATH_CORE+SHERPA.PATH_MANAGER_APP});
-		}
-
 
 		Sherpa.ready("angular-i18n", function(){
 			// load all core Sherpa libraries
