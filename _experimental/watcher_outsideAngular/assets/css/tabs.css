@@ -1,0 +1,32 @@
+/* Prototype CSS */
+
+header .wrapper {
+	overflow:visible;
+}
+.utility-nav {
+	height:30px;
+	padding-top:5px;
+}
+.main-nav {
+	height:90px;
+	padding-top:10px;
+}
+.icon-ui-dell.masthead {
+	font-size:62px;
+}
+
+.horiz-tabbable.horiz-tabs .horiz-tab-content {
+    position: relative;
+    padding-left: 4.08163265%;
+    padding-right: 4.08163265%;
+    left: -4.08163265%;
+    z-index: 1;
+    background: #ffffff;
+    -webkit-box-sizing: content-box;
+    -moz-box-sizing: content-box;
+    box-sizing: content-box;
+    /*-webkit-box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
+    /*-moz-box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
+    /*box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);*/
+    margin-bottom: 20px;
+}

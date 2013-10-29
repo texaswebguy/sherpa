@@ -8,7 +8,7 @@ We have provided a simple way for you to provide the framework a route structure
 First, let's look at the config-overrides file with page routing added:
 
     {
-        "PROTO_JS": "proto_config.js",
+        "PROTO_JS": "app.js",
         "PROTO_CSS": "doc.css",
         "PATH_PROTO_ASSETS": "assets/",
         "PATH_WEBROOT": "",
