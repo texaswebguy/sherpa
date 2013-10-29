@@ -4,6 +4,12 @@ Sherpa.js({"ZeroClipboard":SHERPA.PATH_CORE_JS+"ZeroClipboard.js"});
 
 
 //TODO convert to directive that requires no change to bootstrap native code
+/*sherpaApp.directive('affixAside', function(){
+	return function(scope, elem, attr) {
+
+	}
+});*/
+
 var initAside = function(){	
 	$('.sherpa-aside').affix({
         offset: {
@@ -30,14 +36,14 @@ var initAside = function(){
 
 function initPrettyPrint(){
 
-		window.setTimeout(function(){
-			$('pre').addClass('prettyprint linenums');
-			Sherpa.ready("pretty-print", function(){
-				prettyPrint();
-			});
-		},1000);
+	window.setTimeout(function(){
+		$('pre').addClass('prettyprint linenums');
+		Sherpa.ready("pretty-print", function(){
+			prettyPrint();
+		});
+	},1000);
 
-	}
+}
 
 sherpaApp.directive('copysample', function(){
   return function(scope, elem, attr) {
@@ -79,12 +85,15 @@ sherpaApp.directive('loadclipboardtext', function(){
 
 sherpaApp.controller("docsMastheadController", function($scope, $state) {
 
-	$scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){return !route.parent});
+	$scope.routes = _.filter(SHERPA.PROTO_ROUTES, function(route){ return !route.parent && !route.hide});
 	$scope.$state = $state;
 	$scope.current_name = $state.current.name;
 
 });sherpaApp.controller("whySherpaCtrl", function($scope, $state) {
-    
+	
+	//var viewModel = $scope.$parent.viewModel;
+
+    //TODO need to make an equalize directive Sherpa.equalizeHeight
 	$scope.equalize= function(){
 		window.setTimeout(function(){
 			var max = 0;
@@ -98,26 +107,29 @@ sherpaApp.controller("docsMastheadController", function($scope, $state) {
 	}
 
 });
-sherpaApp.controller("homeController", function($scope, $state) {
-    
+sherpaApp.controller("homeController", function($scope, $state, $rootScope) {
+    //var viewModel = $scope.$parent.viewModel;
 	$('.footer-back-to-top').hide()
     $scope.$on('$viewContentLoaded', function(event){
         console.log("home Controller is done")
     });
 });
 sherpaApp.controller("getStartedController", function($scope, $state) {
+
+	//var viewModel = $scope.$parent.viewModel;
+
 	$('.footer-back-to-top').show()
 
 	$scope.prettyPrint = initPrettyPrint();
 	$scope.initAside = initAside();
-	$scope.scrollSpy = function(){
+/*	$scope.scrollSpy = function(){
 		$('.set-aside').scrollspy({offset:40});
 		window.setTimeout(function(){
 			$('[data-spy="scroll"]').each(function () {
 			  var $spy = $(this).scrollspy('refresh')
 			});			
 		},1000);
-	}
+	}*/
 
 	$scope.sections = [
 		{
@@ -155,8 +167,8 @@ sherpaApp.controller("getStartedController", function($scope, $state) {
 
 });
 
-sherpaApp.controller("cssOverviewController", function($scope, $state) {
-console.log(">>>>>>>>>hello")
+sherpaApp.controller("cssOverviewController", function($scope, $state,$timeout) {
+
  	$('.footer-back-to-top').show()
 	$scope.prettyPrint = initPrettyPrint(); //TODO make directive to do this with class
 	$scope.initAside = initAside(); //TODO to make directive
@@ -174,17 +186,86 @@ console.log(">>>>>>>>>hello")
 			activateClipboard();
 		},1000);
 	});
-/*	$scope.alerts = function(){
-		var alerts_html = $('#alerts-example-HTML .alert'),alerts=[];
-		_.each(alerts_html, function(item) {	
-			var tempObj = {}
-			tempObj.id = $(item).parent().attr('id');
-			tempObj.html= $('#'+tempObj.id).html();
-			tempObj.html_sample= tempObj.html.replace(/</g,'&lt;');
-			alerts.push(tempObj);
+	$scope.initTooltips = function(){
+		$('[data-toggle="tooltip"]').tooltip();
+	}
+	$scope.initPopovers = function(){
+		$('[data-toggle="popover"]').popover({trigger:'manual'});
+		$('[data-toggle="popover"]').click(function(event){
+		  event.preventDefault();
+		  $('[data-toggle="popover"]').popover('destroy');
+		  $(this).popover('show');
+		  $('[data-dismiss="popover"]').click(function(event){
+		    event.preventDefault();
+		    $(this).parents('.popover').prev().popover('hide');
+		  });
 		});
-		return alerts;
-	}*/
+		$('[data-toggle="popover"][data-trigger="hover"]').mouseover(function(event){
+		  event.preventDefault();
+		  $('[data-toggle="popover"]').popover('destroy');
+		  $(this).popover('show');
+		});
+		$('[data-toggle="popover"][data-trigger="hover"]').mouseout(function(event){
+		  $(this).popover('destroy');
+		});
+		$('[data-toggle="popover"][data-trigger="hover"]').focus(function(event){
+		  $('[data-toggle="popover"]').popover('destroy');
+		  $(this).popover('show');
+		});
+		 
+		$('#custom-popover').click(function(event){
+		  event.preventDefault();
+		  $(this).popover('show');
+		  $('[data-dismiss="popover"]').click(function(event){
+		    event.preventDefault();
+		    $(this).parents('.popover').prev().popover('hide');
+		  });
+		});
+	}
+	$scope.popoversHTML = (function(){
+		var html = []
+		_.each($('#popover-example-HTML [data-toggle="popover"]'), function(popover){
+			var tempObj = {};
+			tempObj.clipboardText = popover;
+			tempObj.exampleHTML = popover.replace((/</g,'&lt;'));
+			html.push(tempObj);
+			console.log(html)
+		});
+		console.log(html)
+		return html;
+	})();
+	$timeout(function(){
+		$scope.paginationHTML = (function(){
+			return $('#pagination-example-HTML .pagination');
+		})();
+
+	},1000);
+	$scope.changeTabs = function(event){
+		var new_val = $(event.currentTarget).val();
+		if(new_val==="tabs-aside"){
+
+			var html = $('#tabbable-aside-example-HTML').html();
+			$('#tabs-HTML-code').html(html.replace(/\</g,"&lt;"));
+			$('#tabs-HTML-code').removeClass("prettyprinted");
+			$('#tabs-HTML button').attr('data-clipboard-text',html);
+			initPrettyPrint();
+			$('#tabbable-example-HTML').hide();
+			$('#tabbable-aside-example-HTML').show();
+			$.scrollTo('#tabs-lists-pills',300,{offset:-20})
+		} else {
+			var new_class = "tabbable "+$(event.currentTarget).val();
+			$('#tabbable-example-HTML > .tabbable').attr('class', new_class);
+			var html = $('#tabbable-example-HTML').html();
+			$('#tabs-HTML-code').html(html.replace(/\</g,"&lt;"));
+			$('#tabs-HTML-code').removeClass("prettyprinted");
+			$('#tabs-HTML button').attr('data-clipboard-text',html);
+			initPrettyPrint();
+			$('#tabbable-example-HTML').show();
+			$('#tabbable-aside-example-HTML').hide();
+			$.scrollTo('#tabs-lists-pills',300,{offset:-20})
+		}
+		
+	}
 
 });
 
@@ -206,11 +287,7 @@ sherpaApp.controller("cssGridController", function($scope, $state) {
  	$('.footer-back-to-top').show()   
 	Sherpa.ready("ZeroClipboard", function(){
 		activateClipboard();
-	});	
-    $scope.$on('$viewContentLoaded', function(event){
-        console.log("grid Controller is done")
-    });
-
+	});
 });
 sherpaApp.controller("prototypingController", function($scope, $state) {
 	$('.footer-back-to-top').show()    

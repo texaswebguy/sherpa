@@ -1,0 +1,20 @@
+{
+    "ENABLE_COUNTER": false,
+    "PROTO_JS": "app.js",
+    "PROTO_CSS": "doc.css",
+    "PATH_PROTO_ASSETS": "assets/",
+    "PATH_WEBROOT": "",
+    "PATH_PROTO_ASSETS": "assets/",
+    "USER_PROFILES": {
+    	"user1": {
+	        "name": "Bo",
+	        "id":"user1",
+	        "car":"http://upload.wikimedia.org/wikipedia/commons/3/3a/06-07_Dodge_Charger_SXT.jpg"
+	    },
+	    "user2":{
+	        "name": "Jerry",
+	        "id":"user2",
+	        "car":"http://upload.wikimedia.org/wikipedia/commons/b/b1/'00_Nissan_Pathfinder.jpg"
+	    }
+	}
+}

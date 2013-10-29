@@ -1,0 +1,74 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+	<meta charset="utf-8">
+    <title>Blank Page</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <script type="text/javascript">
+      var SHERPA_CONFIG_OVERRIDES = {};
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/config-overrides.json";
+    </script>
+
+
+	<!-- Don't touch 
+	******************************************************************************** -->
+	<style>body{opacity:0}body.ng-scope{opacity:1}</style>
+	<script src="../../_sherpa/sherpa.v08.js"></script>	
+	<!-- Sherpa js adds all the js and css files you need.
+	******************************************************************************** -->	
+</head>
+<body ng-controller="pageController">
+	<a id="top"></a>
+	<header>
+		<div class="da-all ta-all ma-all gray">
+			<div class="wrapper">
+				<div class="da1 tb1 mb1">
+					<p class="top-offset-mini"><img src="assets/img/logo.png"/></p>
+				</div>
+				<div class="da2-da12 tb2-tb8 mb2-mb4">
+					<h2 class="top-offset-small">Masthead</h2>
+				</div>
+			</div>
+		</div>		
+	</header>	
+
+
+	<section class="da-clear ma-clear ta-clear da-all ta-all ma-all top-offset-small">
+		<div class="wrapper">
+			<div class="da-clear ta-clear ma-clear">		
+				<div class="da1-da6 ta-all ma-all">
+					<div class="well well-red-dark well-large double-height" ng-controller="testCtrl">
+						<h4>Controls in same angular controller</h4>
+						<select ng-model="userIdInContext" ng-options="user.name for user in users">
+				          <option value="">-- choose user --</option>
+				        </select>
+
+						<p>Hello {{user.name}}</p>
+						<p><img src="{{user.car}}" width="70%"/></p>
+					</div>
+				</div>
+				<div class="da7-da12 ta-all ma-all" ng-controller="testCtrl2">
+					<div class="well well-large well-green single-height">
+						<h4>Controls in another angular controller</h4>
+						<a href="#" ng-click="clickFunction('user2')" class="btn">See Jerry</a>
+						<a href="#" ng-click="clickFunction('user1')" class="btn">See Bo</a>			
+					</div>								
+					<div class="well well-large well-purple single-height change-user">
+						<h4>Controls in outside of angular</h4>
+						<a href="#" rel="user2" class="btn">See Jerry</a>
+						<a href="#" rel="user1" class="btn">See Bo</a>
+					</div>								
+				</div>
+			</div>
+		</div>
+	</section>
+	<footer id="footer" class="da-all ta-all ma-all gray-light">
+	  <div class="wrapper">
+	    <div class="da-all ta-all ma-all">
+	      <p class="top-offset-small bottom-offset-small">Footer</p>
+	    </div>
+	  </div>
+	</footer>
+
+</body>
+</html>

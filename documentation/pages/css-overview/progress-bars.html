@@ -38,22 +38,52 @@
   <div class="da-all ta-all ma-all">
 
 
-    <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#progress-bars-HTML">
+    <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#progress-bars-HTML-code">
       <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
     </button>
 
     <p>&nbsp;</p>
 
-    <div class="collapse" id="progress-bars-HTML">
+    <div class="collapse" id="progress-bars-HTML-code">
 
-      <ul data-bind="foreach: $('#progress-bars .progress')" class="unstyled">
+      <ul class="unstyled">
           <li>
-            <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}">
-              Copy HTML
+            <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text='<div class="progress">
+  <div class="bar" style="width: 60%;"></div>
+</div>'>
+            Copy HTML
             </button>
-            <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
-            <pre class="prettyprint linenums" data-bind="text: $($data)[0].outerHTML.replace(/</g,'&lt;')"></pre>
-          </li>
+            <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}">Fiddle</button>
+            <pre class="prettyprint linenums">&lt;div class="progress">
+  &lt;div class="bar" style="width: 60%;">&lt;/div>
+&lt;/div></pre>
+         </li>
+         <li>
+            <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text='<div class="progress">
+  <div class="bar" style="width: 60%;"></div>
+</div>'>
+            Copy HTML
+            </button>
+            <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}">Fiddle</button>
+            <pre class="prettyprint linenums">&lt;div class="progress">
+  &lt;div class="bar bar-success" style="width: 60%;">&lt;/div>
+&lt;/div></pre>
+         </li>
+         <li>
+            <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text='<div class="progress">
+  <div class="bar" style="width: 60%;"></div>
+</div>'>
+            Copy HTML
+            </button>
+            <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}">Fiddle</button>
+            <pre class="prettyprint linenums">&lt;div class="progress progress-status">
+  &lt;a href="#shipping" class="bar bar-complete" style="width: 25%">&lt;span>Shipping&lt;/span>&lt;/a>
+  &lt;a href="#payment" class="bar bar-complete" style="width: 25%">&lt;span>Payment&lt;/span>&lt;/a>
+  &lt;div class="bar bar-progress" style="width: 25%">&lt;span>Verify & Submit Order&lt;/span>&lt;/div>
+  &lt;div class="bar bar-incomplete" style="width: 25%">&lt;span>Order Submitted&lt;/span>&lt;/div>
+&lt;/div></pre>
+         </li>
+         
       </ul>
 
     </div>

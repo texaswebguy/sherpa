@@ -112,10 +112,12 @@ Sherpa.counter("Sherpa i18n");
 		});
 	}
 	
-	if(SHERPA.PATH_CORE == "_sherpa/"){
-		SHERPA.PATH_API_DOCUMENT_ROOT = "../../../"+location.pathname;
-	} else {
-		SHERPA.PATH_API_DOCUMENT_ROOT = SHERPA.PATH_CORE.replace(/\/_sherpa\//,location.pathname);
+	if(!SHERPA.PATH_API_DOCUMENT_ROOT) {
+		if(SHERPA.PATH_CORE == "_sherpa/"){
+			SHERPA.PATH_API_DOCUMENT_ROOT = "../../../"+location.pathname;
+		} else {
+			SHERPA.PATH_API_DOCUMENT_ROOT = SHERPA.PATH_CORE.replace(/\/_sherpa\//,location.pathname);
+		}
 	}
 
 	SHERPA.PATH_CONTENT_FILE = SHERPA.PATH_API_DOCUMENT_ROOT + SHERPA.PATH_PROTO_ASSETS+"content/";

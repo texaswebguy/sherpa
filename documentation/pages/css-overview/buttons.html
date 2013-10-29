@@ -128,17 +128,17 @@
         <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
       </button>
       <div class="collapse" id="buttons-HTML">
-<p>&nbsp;</p>
+        <div class="alert alert-info bottom-offset-small top-offset-small">
+          <p>Click on the code sample to copy</p>
+        </div>
 
-
-
-        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#button-sample-code-1').html()}">
+        <pre class="prettyprint linenums da-clear ta-clear ma-clear" data-copy="2-clipboard" title="Click me to copy html to clipboard"  loadclipboardtext="#button-sample-code-1">
 &lt;a class="btn btn-primary" href="#">Primary&lt;/a></pre>
-        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#button-sample-code-2').html()}">
+        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" loadclipboardtext="#button-sample-code-2">
 &lt;a class="btn btn-primary disabled" href="#">Primary&lt;/a></pre>
-        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#button-sample-code-3').html()}">
+        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard"  loadclipboardtext="#button-sample-code-3">
 &lt;a class="btn btn-primary" href="#">Primary &lt;span aria-hidden="true" class="icon-small-searchright">&lt;/span>&lt;/a></pre>
-        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#button-sample-code-4').html()}">
+        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard"  loadclipboardtext="#button-sample-code-4">
   &lt;div class="btn-group">
     &lt;a class="btn btn-primary" href="#">Primary&lt;/a>
     &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">Primary&lt;/a>
@@ -150,7 +150,7 @@
       &lt;li>&lt;a href="#">Separated link&lt;/a>&lt;/li>
     &lt;/ul>
   &lt;/div>&lt;!-- /btn-group --></pre>
-        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#button-sample-code-5').html()}">
+        <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard"  loadclipboardtext="#button-sample-code-5">
   &lt;div class="btn-group">
     &lt;a class="btn btn-primary dropdown-toggle" data-toggle="dropdown" href="#">Primary&lt;/a>
     &lt;ul class="dropdown-menu">
@@ -165,7 +165,6 @@
                 <p>&nbsp;</p>
 
     <h4>Blocked Level Buttons (Sized by container)</h4>
-
     <div  id="block-button-sample-code">
       <div class="da-all ta-all ma-all">
         <div class="well">
@@ -199,12 +198,23 @@
       <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#blocked-buttons-HTML">
         <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
       </button>
-      <div class="collapse" id="blocked-buttons-HTML">
-<p>&nbsp;</p>
-       <pre class="prettyprint linenums" data-copy="2-clipboard" title="Click me to copy html to clipboard" data-bind="attr: {'data-clipboard-text':$('#block-button-sample-code').html()}">
-&lt;div class="da-clear ta-clear ma-clear da1-da6 tb1-tb4 mb1-mb2">
+      <div class="collapse top-offset-small" id="blocked-buttons-HTML">
+
+    <button class="btn btn-mini" data-copy="2-clipboard" data-clipboard-text='
+      <div class="da-all ta-all ma-all">
+        <div class="well">
+          <p>Inside da-all ta-all ma-all</p>
+          <button class="btn btn-large btn-block btn-primary" type="button">Block level button </button>
+        </div>
+      </div>
+       '>
+      Copy HTML
+    </button>
+
+       <pre class="prettyprint linenums da-clear ta-clear ma-clear" data-copy="2-clipboard" title="Click me to copy html to clipboard">
+&lt;div class="da-all ta-all ma-all">
   &lt;div class="well">
-    &lt;p>Inside da1-da6 tb1-tb4 mb1-mb2&lt;/p>
+    &lt;p>Inside da-all ta-all ma-all&lt;/p>
     &lt;button class="btn btn-large btn-block btn-primary" type="button">Block level button &lt;/button>
   &lt;/div>
 &lt;/div>

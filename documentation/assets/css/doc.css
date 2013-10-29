@@ -104,6 +104,12 @@
 .sherpa-aside.affix {
   top: 20px;
 }
+#tabbable-aside-example-HTML .tabbable.tabs-aside > .tab-content {
+  left: -5.5%;
+}
+#tabbable-aside-example-HTML .nav-list + .back-to-top {
+  margin-left: 45%;
+}
 #documentation-home {
   background: url(../img/mountain.jpg) no-repeat;
   background-size: cover;
