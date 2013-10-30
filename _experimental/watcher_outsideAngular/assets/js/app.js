@@ -30,19 +30,24 @@ UserStatus.prototype = {
 
 Sherpa.userStatus = new UserStatus();
 
+var test = {
+    "username":"jerry"
+}
+
 
 sherpaApp.controller("mastheadController", function ($scope) {
-/*
 
-    var username = $scope.username = Sherpa.userStatus.name;
-    Sherpa.userStatus.addWatcher("masthead", $scope);
+    var username = $scope.username = test.username;
+//    Sherpa.userStatus.addWatcher("masthead", $scope);
 
     $scope.$watch( "username", function(newValue, oldValue) {
         console.log( "data changed: ", newValue);
 //        $scope.$digest();
 //        $scope.username = Sherpa.userStatus.name;
-    }, true)
-*/
+    }, true);
+
+    $scope.username  = "ted";
+//    $scope.$digest();
 
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function (route) {
@@ -55,7 +60,7 @@ sherpaApp.controller("navTabController", function ($scope, $state) {
 
 //    console.log( $rootScope );
 
-    $scope.username = Sherpa.userStatus.name;
+//    $scope.username = Sherpa.userStatus.name;
 
     $scope.$state = $state;
     SHERPA.STATE = $state;
@@ -70,7 +75,7 @@ sherpaApp.controller("navTabController", function ($scope, $state) {
 
         SHERPA.PROTO_ROUTES[ $state.current.name ].animateExit($state, selectedItem.id);
 
-        console.log($state.current.data.userStatus.current);
+//        console.log($state.current.data.userStatus.current);
 //       console.log( selectedItem.id );
 //       console.log( $state.current.name );
 
@@ -118,7 +123,7 @@ sherpaApp.controller("asideNavController", function ($scope, $state) {
 
 
 sherpaApp.controller("footer", function ($scope) {
-    $scope.username = Sherpa.userStatus.name;
+    $scope.username = test.username;
 });
 
 

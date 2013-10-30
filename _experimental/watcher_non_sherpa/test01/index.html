@@ -8,18 +8,20 @@
 <body>
 <div ng-app="watchApp">
     <div ng-controller="watchCtrl">
+        <p>Shared source is an array of objects.</p>
         <div ng-repeat="a in b">
             <input type="text" ng-model="a.value" />{{a.value}}
         </div>
-        {{count}}-{{b}}
+        {{count}}-{{b}}<br />
         <input type="text" ng-model="objectValue[0].value" />{{objectValue[0].value}}
-    </div>
+    </div><br/><br/>
 
     <div  ng-controller="watchCtrl2">
+        <p>Shared soure is an array of one object.</p>
         <div ng-repeat="a in b">
             <input type="text" ng-model="a.value" />{{a.value}}
         </div>
-        {{count}}-{{b}}
+        {{count}}-{{b}}<br />
         <input type="text" ng-model="objectValue[0].value" />{{objectValue[0].value}}
     </div>
 

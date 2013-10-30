@@ -39,10 +39,10 @@
 
 
 </head>
-<body ng-controller="pageController">
+<body ng-controller="pageController" ng-model="username">
 <a name="top" id="top"></a>
 <!--<header ng-include="'../masthead/assets/includes/masthead.html'" ng-controller="mastheadController"></header>-->
-<header ng-include="'assets/includes/masthead.html'" ng-model="username" ng-controller="mastheadController" class="masthead"></header>
+<header ng-include="'assets/includes/masthead.html'"  ng-controller="mastheadController" class="masthead"></header>
 <section ui-view></section>
 
 
