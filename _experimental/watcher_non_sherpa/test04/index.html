@@ -1,0 +1,90 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>$watch - Test 03</title>
+    <script src="../lib/angular.min.js"></script>
+    <script src="app.js"></script>
+    <style type="text/css">
+        .wrapper {
+            border: 1px solid #333333;
+            padding: 20px;
+            float: left;
+        }
+
+        .clearFloats {
+            clear:both;
+        }
+    </style>
+</head>
+<body>
+<div ng-app="watchApp">
+    <div ng-controller="watchCtrl" class="wrapper">
+        <p>controller is "watchCtrl"</p>
+
+        <p>Shared source is an array of objects.</p>
+
+        <div ng-repeat="a in b">
+            <input type="text" ng-model="a.value"/>{{a.value}}
+        </div>
+        Count: {{count}}<br/>
+        Array: {{b}}<br/>
+
+        <p>model is "objectValue.value1"<br>
+            <input type="text" ng-model="objectValue.value1"/>{{objectValue.value1}}
+        </p>
+    </div>
+
+    <div ng-controller="watchCtr2" class="wrapper">
+        <p>controller is "watchCtrl2"</p>
+
+        <p>Shared source is an array of objects.</p>
+
+        <div ng-repeat="a in b">
+            <input type="text" ng-model="a.value"/>{{a.value}}
+        </div>
+        Count: {{count}}<br/>
+        Array: {{b}}<br/>
+
+        <p>Shared soure is an object.</p>
+
+        <p>model is "objectValue.value"<br/>
+            <input type="text" ng-model="objectValue.value1"/>{{objectValue.value1}}<br/><br/>
+        </p>
+
+        <p>model is "objectValue.value2"<br>
+            <input type="text" ng-model="objectValue.value2"/>{{objectValue.value2}}
+        </p>
+    </div>
+
+
+    <div ng-controller="watchCtr3" class="wrapper">
+        <p>controller is "watchCtrl3"</p>
+
+        <p>Shared source is an array of objects.
+
+        <div ng-repeat="a in b">
+            <input type="text" ng-model="a.value"/>{{a.value}}
+        </div>
+        Count: {{count}}<br/>
+        Array: {{b}}<br/>
+
+        <p>model is "objectValue.value2"<br/>
+            <input type="text" ng-model="objectValue.value2"/>{{objectValue.value2}}
+        </p>
+    </div>
+
+    <div class="clearFloats" ></div>
+
+    <div ng-controller="watchCtr4" class="wrapper">
+        <p>controller is "watchCtrl4"</p>
+
+        <p>Updating value2 from this input field, will update value1 as well.</p>
+
+        <p>model is "objectValue.value2"<br/>
+            <input type="text" ng-model="objectValue.value2" onfocus="globalObject.updateValue1 = true" onBlur="globalObject.updateValue1 = false"/>{{objectValue.value2}}
+        </p>
+    </div>
+
+</div>
+</body>
+</html>
