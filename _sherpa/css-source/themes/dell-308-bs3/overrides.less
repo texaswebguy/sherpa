@@ -171,6 +171,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
+  color: @dell-blue;
 }
 
 // Rounded corners
@@ -1782,8 +1783,6 @@ border: @default-stroke solid @purple !important;
   }
 }
 
-
-
 .btn, .btn-tertiary, .btn-default {
  .default-button();
   color:@blue !important;
@@ -1792,8 +1791,6 @@ border: @default-stroke solid @purple !important;
 .form-search .btn {
   color:@white !important;
 }
-
-
 
 .btn-primary,
 .btn-warning,
@@ -1972,7 +1969,6 @@ input[type="submit"].btn {
   font-size: 0; // remove as part 1 of font-size inline-block hack
   vertical-align: middle; // match .btn alignment given font-size hack above
   white-space: nowrap; // prevent buttons from wrapping when in tight spaces (e.g., the table on the tests page)
-
 }
 
 
@@ -2009,7 +2005,7 @@ input[type="submit"].btn {
 }
 
 // Reset fonts for other sizes
-.btn-group > .btn-mini {
+.btn-group > .btn-xs {
   font-size: @font-size-mini;
 }
 .btn-group > .btn-small {
@@ -2225,6 +2221,7 @@ input[type="submit"].btn {
     right: -8px;
     > [class^=icon] {
       font-size: 14px;
+      line-height: 20px;
       display:block;
     }
   }
@@ -2251,7 +2248,7 @@ input[type="submit"].btn {
 
 
 .alert-success {
-  background-color: @alert-success-bg;
+  background-color: @alert-warning-bg;
   border-color: @gray-light;
   color: @gray-darker;
   h4 {
@@ -2263,7 +2260,7 @@ input[type="submit"].btn {
 }
 .alert-danger,
 .alert-error {
-  background-color: @alert-danger-bg;
+  background-color: @alert-warning-bg;
   border-color: @gray-light;
   color: @gray-darker;
   &:before {
@@ -2930,7 +2927,6 @@ border-radius: 4px;
   border: none; 
 }
 
-
 .modal-header {
   padding: 0;
   padding-bottom: 5px;
@@ -2957,6 +2953,13 @@ border-radius: 4px;
       opacity:1;
     }
   }
+
+// #modal-example-HTML {
+//   background: rgba(0,0,0,0.8);
+//   padding: 100px 0 !important;
+// }
+
+
   // Heading
   h3 {
     margin: 0;
@@ -3036,7 +3039,7 @@ border-radius: 4px;
 
 [data-toggle=tooltip] {
   color:inherit;
-  border-bottom: 1px dashed @gray;
+  border-bottom: 1px dashed @dell-gray;
   &:hover{
     text-decoration:none;
     color:inherit;
@@ -3061,6 +3064,18 @@ border-radius: 4px;
     margin-top:4px;
   }
 }
+
+ul.unstyled, ol.unstyled {
+margin-left: 0;
+list-style: none;
+}
+
+#popover-example-HTML {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
+
+
 
 // labels-badges
 //=======================================================================================================================
@@ -3109,11 +3124,51 @@ label, input, button, select, textarea {
 
 .progress {
   overflow: hidden;
-  height: @line-height-base;
-  margin-bottom: @line-height-base;
+  height: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
+  margin-bottom: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
   #gradient > .vertical(@dell-gray-light, @dell-gray-light);
   .box-shadow(inset 0 1px 2px rgba(0,0,0,.3));
   .border-radius(@border-radius-base);
+
+  .bar {
+    width: 0;
+    height: 100%;
+    color: @white;
+    float: left;
+    font-size: 12px;
+    text-align: center;
+    text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
+    background-color: @dell-blue;
+    background-image: -moz-linear-gradient(top,#0B93D3,@dell-blue);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#0B93D3),to(@dell-blue));
+    background-image: -webkit-linear-gradient(top,#0B93D3,@dell-blue);
+    background-image: -o-linear-gradient(top,#0B93D3,@dell-blue);
+    background-image: linear-gradient(to bottom,#0B93D3,@dell-blue);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf',endColorstr='#ff0480be',GradientType=0);
+    -webkit-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    -moz-box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    box-shadow: inset 0 -1px 0 rgba(0,0,0,0.15);
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+    -webkit-transition: width .6s ease;
+    -moz-transition: width .6s ease;
+    -o-transition: width .6s ease;
+    transition: width .6s ease;
+  }
+
+  .bar-success {
+    background-color: @dell-green;
+    background-image: -moz-linear-gradient(top,#7ab800,#6DA300);
+    background-image: -webkit-gradient(linear,0 0,0 100%,from(#7ab800),to(#6DA300));
+    background-image: -webkit-linear-gradient(top,#7ab800,#6DA300);
+    background-image: -o-linear-gradient(top,#7ab800,#6DA300);
+    background-image: linear-gradient(to bottom,#7ab800,#6DA300);
+    background-repeat: repeat-x;
+    filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462',endColorstr='#ff57a957',GradientType=0);
+    }
+
 
   //progress-status dell 308 only
   &.progress-status {
@@ -3173,6 +3228,7 @@ label, input, button, select, textarea {
   }
 }
 
+
 @media only screen and (max-width:@mobile-max-width) {
   .progress.progress-status {
     .bar span {
@@ -3196,7 +3252,12 @@ label, input, button, select, textarea {
 
 // Parent container
 .accordion {
-  margin-bottom: @line-height-base;
+  margin-bottom: @line-height-base  * 13.999999995800000001259999999622px; 
+
+  > .accordion-group:first-child > .accordion-heading.well {
+  border-top: none;
+  margin-top: 3px;
+  }
 }
 
 // Group == heading + body
@@ -3206,45 +3267,100 @@ label, input, button, select, textarea {
   border-bottom: 1px solid @dell-gray-stroke;
   .border-radius(0);
 }
+
 .accordion-heading {
   border-bottom: 0;
   font-size:@font-size-large;
   position:relative;
   padding-left:15px;
+
+  .accordion-toggle {
+    display: block;
+    padding: 8px 15px;
+  } 
+
+  &.well {
+    padding-left: 0;
+    -webkit-border-radius: 0;
+    -moz-border-radius: 0;
+    border-radius: 0;
+    margin-bottom: -1px;
+    margin-top: -3px;
+    border-top: 1px solid #cccccc;
+
+    .accordion-toggle:after {
+      font-family: 'icon-ui';
+      font-size: 20px;
+      speak: none;
+      font-style: normal;
+      font-weight: normal;
+      font-variant: normal;
+      text-transform: none;
+      line-height: 1;
+      -webkit-font-smoothing: antialiased;
+      color: inherit;
+      content: "\26";
+      font-size: 12px;
+      position: absolute;
+      right: 20px;
+      margin-top: 5px;
+    }
+
+    .accordion-toggle.collapsed:after {
+      content: "\25";
+    }
+
+    .accordion-toggle.collapsed:before {
+      content: "\28";
+    }
+
+    .accordion-toggle:before {
+      display: none;
+    }
+  }  
 }
-.accordion-toggle:before {
-  font-family: 'icon-ui';
-  font-size:20px;
-  speak: none;
-  font-style: normal;
-  font-weight: normal;
-  font-variant: normal;
-  text-transform: none;
-  line-height: 1;
-  -webkit-font-smoothing: antialiased;
-  content:"\2a";
-  color:@blue;
-  position: absolute;
-  top:7px;
-  left:0;
-}
-.accordion-toggle.collapsed:before {
-  content:"\28";
-}
-.accordion-heading .accordion-toggle {
-  display: block;
-  padding: 8px 15px;
-}
+
 
 // General toggle styles
 .accordion-toggle {
   cursor: pointer;
+  
+  &:before {
+    font-family: 'icon-ui';
+    font-size:20px;
+    speak: none;
+    font-style: normal;
+    font-weight: normal;
+    font-variant: normal;
+    text-transform: none;
+    line-height: 1;
+    -webkit-font-smoothing: antialiased;
+    content:"\2a";
+    color:@dell-blue;
+    position: absolute;
+    top:7px;
+    left:0;
+  }
+
+  &.collapsed:before {
+    content:"\28";
+  }
 }
 
 // Inner needs the styles because you can't animate properly with any styles on the element
 .accordion-inner {
   padding: 9px 15px;
-  border-top: 1px solid @dell-gray-stroke;;
+  border-top: 1px solid @dell-gray-stroke;
+}
+
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+  -moz-transition: height .35s ease;
+  -o-transition: height .35s ease;
+  transition: height .35s ease;
 }
 
 

@@ -69,6 +69,7 @@ a {
 a:hover,
 a:focus {
   text-decoration: underline;
+  color: #007db8;
 }
 .img-rounded {
   -webkit-border-radius: 10px;
@@ -1385,7 +1386,7 @@ input[type="checkbox"]:focus {
 .control-group.warning .input-prepend .add-on,
 .control-group.warning .input-append .add-on {
   color: #c09853;
-  background-color: #fcf8e3;
+  background-color: #ffffc9;
   border-color: #c09853;
 }
 .control-group.error .control-label,
@@ -2166,7 +2167,7 @@ div.table-bordered table.table-bordered {
   background-color: #f2dede;
 }
 .table tbody tr.warning > td {
-  background-color: #fcf8e3;
+  background-color: #ffffc9;
 }
 .table tbody tr.info > td {
   background-color: #ffffc9;
@@ -2178,7 +2179,7 @@ div.table-bordered table.table-bordered {
   background-color: #ebcccc;
 }
 .table-hover tbody tr.warning:hover > td {
-  background-color: #faf2cc;
+  background-color: #ffffaf;
 }
 .table-hover tbody tr.info:hover > td {
   background-color: #ffffaf;
@@ -3815,7 +3816,7 @@ input[type="submit"].btn.btn-xs {
 .btn-group > .popover {
   font-size: 14px;
 }
-.btn-group > .btn-mini {
+.btn-group > .btn-xs {
   font-size: 10.5px;
 }
 .btn-group > .btn-small {
@@ -3990,7 +3991,7 @@ input[type="submit"].btn.btn-xs {
   padding: 10px 20px 10px 45px;
   margin-bottom: 1.428571429;
   text-shadow: none;
-  background-color: #fcf8e3;
+  background-color: #ffffc9;
   border: 1px solid #eeeeee;
   position: relative;
 }
@@ -4009,6 +4010,7 @@ input[type="submit"].btn.btn-xs {
 }
 .alert .close > [class^=icon] {
   font-size: 14px;
+  line-height: 20px;
   display: block;
 }
 .alert:before {
@@ -4021,7 +4023,7 @@ input[type="submit"].btn.btn-xs {
   font-size: 20px;
 }
 .alert-success {
-  background-color: #dff0d8;
+  background-color: #ffffc9;
   border-color: #eeeeee;
   color: #444444;
 }
@@ -4039,7 +4041,7 @@ input[type="submit"].btn.btn-xs {
 }
 .alert-danger,
 .alert-error {
-  background-color: #f2dede;
+  background-color: #ffffc9;
   border-color: #eeeeee;
   color: #444444;
 }
@@ -4886,6 +4888,15 @@ input[type="submit"].btn.btn-xs {
   text-shadow: none;
   margin-top: 4px;
 }
+ul.unstyled,
+ol.unstyled {
+  margin-left: 0;
+  list-style: none;
+}
+#popover-example-HTML {
+  overflow: hidden;
+  margin-bottom: 20px;
+}
 label,
 input,
 button,
@@ -4918,8 +4929,8 @@ textarea {
 }
 .progress {
   overflow: hidden;
-  height: 1.428571429;
-  margin-bottom: 1.428571429;
+  height: 20px;
+  margin-bottom: 20px;
   background-image: -webkit-gradient(linear, left 0%, left 100%, from(#eeeeee), to(#eeeeee));
   background-image: -webkit-linear-gradient(top, #eeeeee, 0%, #eeeeee, 100%);
   background-image: -moz-linear-gradient(top, #eeeeee 0%, #eeeeee 100%);
@@ -4937,6 +4948,43 @@ textarea {
   -webkit-border-radius: 5px;
   -moz-border-radius: 5px;
   border-radius: 5px;
+}
+.progress .bar {
+  width: 0;
+  height: 100%;
+  color: #ffffff;
+  float: left;
+  font-size: 12px;
+  text-align: center;
+  text-shadow: 0 -1px 0 rgba(0, 0, 0, 0.25);
+  background-color: #007db8;
+  background-image: -moz-linear-gradient(top, #0b93d3, #007db8);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#0b93d3), to(#007db8));
+  background-image: -webkit-linear-gradient(top, #0b93d3, #007db8);
+  background-image: -o-linear-gradient(top, #0b93d3, #007db8);
+  background-image: linear-gradient(to bottom, #0b93d3, #007db8);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff149bdf', endColorstr='#ff0480be', GradientType=0);
+  -webkit-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -moz-box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  box-shadow: inset 0 -1px 0 rgba(0, 0, 0, 0.15);
+  -webkit-box-sizing: border-box;
+  -moz-box-sizing: border-box;
+  box-sizing: border-box;
+  -webkit-transition: width .6s ease;
+  -moz-transition: width .6s ease;
+  -o-transition: width .6s ease;
+  transition: width .6s ease;
+}
+.progress .bar-success {
+  background-color: #7ab800;
+  background-image: -moz-linear-gradient(top, #7ab800, #6da300);
+  background-image: -webkit-gradient(linear, 0 0, 0 100%, from(#7ab800), to(#6da300));
+  background-image: -webkit-linear-gradient(top, #7ab800, #6da300);
+  background-image: -o-linear-gradient(top, #7ab800, #6da300);
+  background-image: linear-gradient(to bottom, #7ab800, #6da300);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462', endColorstr='#ff57a957', GradientType=0);
 }
 .progress.progress-status {
   overflow: visible;
@@ -5033,7 +5081,11 @@ textarea {
   }
 }
 .accordion {
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
+}
+.accordion > .accordion-group:first-child > .accordion-heading.well {
+  border-top: none;
+  margin-top: 3px;
 }
 .accordion-group {
   margin-bottom: 2px;
@@ -5048,6 +5100,48 @@ textarea {
   font-size: 17.5px;
   position: relative;
   padding-left: 15px;
+}
+.accordion-heading .accordion-toggle {
+  display: block;
+  padding: 8px 15px;
+}
+.accordion-heading.well {
+  padding-left: 0;
+  -webkit-border-radius: 0;
+  -moz-border-radius: 0;
+  border-radius: 0;
+  margin-bottom: -1px;
+  margin-top: -3px;
+  border-top: 1px solid #cccccc;
+}
+.accordion-heading.well .accordion-toggle:after {
+  font-family: 'icon-ui';
+  font-size: 20px;
+  speak: none;
+  font-style: normal;
+  font-weight: normal;
+  font-variant: normal;
+  text-transform: none;
+  line-height: 1;
+  -webkit-font-smoothing: antialiased;
+  color: inherit;
+  content: "\26";
+  font-size: 12px;
+  position: absolute;
+  right: 20px;
+  margin-top: 5px;
+}
+.accordion-heading.well .accordion-toggle.collapsed:after {
+  content: "\25";
+}
+.accordion-heading.well .accordion-toggle.collapsed:before {
+  content: "\28";
+}
+.accordion-heading.well .accordion-toggle:before {
+  display: none;
+}
+.accordion-toggle {
+  cursor: pointer;
 }
 .accordion-toggle:before {
   font-family: 'icon-ui';
@@ -5068,16 +5162,18 @@ textarea {
 .accordion-toggle.collapsed:before {
   content: "\28";
 }
-.accordion-heading .accordion-toggle {
-  display: block;
-  padding: 8px 15px;
-}
-.accordion-toggle {
-  cursor: pointer;
-}
 .accordion-inner {
   padding: 9px 15px;
   border-top: 1px solid #cccccc;
+}
+.collapse {
+  position: relative;
+  height: 0;
+  overflow: hidden;
+  -webkit-transition: height .35s ease;
+  -moz-transition: height .35s ease;
+  -o-transition: height .35s ease;
+  transition: height .35s ease;
 }
 [class^=icon-] {
   font-family: 'icon-small';

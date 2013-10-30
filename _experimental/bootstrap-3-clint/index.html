@@ -1854,7 +1854,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <!-- ============ /asside ============== -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="alert alert-info">
-                            <a class="close"></a> <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
+                            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
                         </div>
                         <h5>
                             Dell 308 Variations
@@ -2332,6 +2332,20 @@ body{opacity:0}body.ng-scope{opacity:1}
                         </h2>
                     </div>
                     <div class="row" id="progress-bars-HTML">
+                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                            <div class="alert alert-info">
+                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+                                <h4 class="alert-heading">
+                                    Dell 308 Style Guidelines:
+                                </h4>
+                                <p>
+                                    Do not use animanted, striped bars or any other colors other than default and green.
+                                </p>
+                                <p>
+                                    <strong class="label">NOTE:</strong> Progress status bar is custom to Dell 308 and requires slightly different markup and custom classes.
+                                </p>
+                            </div>
+                        </div>
                         <div class="col-md-6">
                             <h4>
                                 Default
@@ -2354,20 +2368,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 <div class="bar bar-success" style="width: 60%;"></div>
                             </div>
                         </div>
-                        <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                            <div class="alert alert-info">
-                                <a class="close"></a>
-                                <h4 class="alert-heading">
-                                    Dell 308 Style Guidelines:
-                                </h4>
-                                <p>
-                                    Do not use animanted, striped bars or any other colors other than default and green.
-                                </p>
-                                <p>
-                                    <strong class="label">NOTE:</strong> Progress status bar is custom to Dell 308 and requires slightly different markup and custom classes.
-                                </p>
-                            </div>
-                        </div>
+                        
                     </div>
                         <p>
                             Progress Status <span class="label">(not in Bootstrap)</span>
@@ -2383,16 +2384,16 @@ body{opacity:0}body.ng-scope{opacity:1}
                         </div>
                     
                 
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
                     <div class="alert alert-info">
-                        <a class="close"></a>
+                        <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
                         <p>
                             <strong class="label">NOTE:</strong> <code>div</code> tags can be replaced with <code>a</code> tags to provide links in the taskflow to go back.
                         </p>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
-                    <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#progress-bars-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
+                    <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#progress-bars-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
                     <p>
                         &nbsp;
                     </p>
@@ -2414,7 +2415,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;progress&quot;&gt; &lt;div class=&quot;bar bar-success&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;progress&quot;&gt; &lt;div class=&quot;bar bar-success&quot; style=&quot;width: 60%;&quot;&gt;&lt;/div&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2429,7 +2430,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;progress progress-status&quot;&gt; &lt;a href=&quot;#shipping&quot; class=&quot;bar bar-complete&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Shipping&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;#payment&quot; class=&quot;bar bar-complete&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Payment&lt;/span&gt;&lt;/a&gt; &lt;div class=&quot;bar bar-progress&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Verify &amp;amp; Submit Order&lt;/span&gt;&lt;/div&gt; &lt;div class=&quot;bar bar-incomplete&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Order Submitted&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;progress progress-status&quot;&gt; &lt;a href=&quot;#shipping&quot; class=&quot;bar bar-complete&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Shipping&lt;/span&gt;&lt;/a&gt; &lt;a href=&quot;#payment&quot; class=&quot;bar bar-complete&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Payment&lt;/span&gt;&lt;/a&gt; &lt;div class=&quot;bar bar-progress&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Verify &amp;amp; Submit Order&lt;/span&gt;&lt;/div&gt; &lt;div class=&quot;bar bar-incomplete&quot; style=&quot;width: 25%&quot;&gt;&lt;span&gt;Order Submitted&lt;/span&gt;&lt;/div&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2468,10 +2469,10 @@ body{opacity:0}body.ng-scope{opacity:1}
                         Alerts
                     </h2>
                 </div>
-                <div id="alerts-example-HTML">
-                    <div class="da-all ta-all ma-all" id="alerts-HTML-code-1">
+                <div id="alerts-example-HTML" class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="alerts-HTML-code-1">
                         <div class="alert alert-block">
-                            <a class="close" data-dismiss="alert"></a>
+                            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
                             <h4 class="alert-heading">
                                 Alert block with title
                             </h4>
@@ -2480,25 +2481,26 @@ body{opacity:0}body.ng-scope{opacity:1}
                             </p>
                         </div>
                     </div>
-                    <div class="da-all ta-all ma-all">
-                        <div class="da1-da4 ta1-ta3 ma-all" id="alerts-HTML-code-2">
+                    <div class="row">
+                    <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="alerts-HTML-code-2">
                             <div class="alert alert-error">
-                                <a class="close" data-dismiss="alert"></a> <strong>Error:</strong> Change a few things up and try submitting again.
+                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Error:</strong> Change a few things up and try submitting again.
                             </div>
                         </div>
-                        <div class="da5-da8 ta4-ta6 ma-all" id="alerts-HTML-code-3">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="alerts-HTML-code-3">
                             <div class="alert alert-success">
-                                <a class="close" data-dismiss="alert"></a> <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
+                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
                             </div>
                         </div>
-                        <div class="da9-da12 ta7-ta9 ma-all" id="alerts-HTML-code-4">
+                        <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="alerts-HTML-code-4">
                             <div class="alert alert-info">
-                                <a class="close" data-dismiss="alert"></a> <strong>Information:</strong> This alert needs your attention, but it's not super important.
+                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Information:</strong> This alert needs your attention, but it's not super important.
                             </div>
                         </div>
                     </div>
                 </div>
-                <div class="da-all ta-all ma-all">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="alert alert-info">
                         <a class="close" data-dismiss="alert"></a>
                         <h4 class="alert-heading">
@@ -2507,14 +2509,14 @@ body{opacity:0}body.ng-scope{opacity:1}
                         <p>
                             Any icon placed inside the alerts block will be automatically hidden.
                         </p>
-                    </div><button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#alerts-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
+                    </div><button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#alerts-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
                     <p>
                         &nbsp;
                     </p>
                     <div class="collapse" id="alerts-HTML">
                         <ul data-bind="foreach: $('#alerts-example-HTML .alert')" class="unstyled">
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-block&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;h4 class=&quot;alert-heading&quot;&gt;Alert block with title&lt;/h4&gt; &lt;p&gt;Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/p&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-1">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-block&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;h4 class=&quot;alert-heading&quot;&gt;Alert block with title&lt;/h4&gt; &lt;p&gt;Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/p&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-1">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2535,7 +2537,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-error&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Error:&lt;/strong&gt; Change a few things up and try submitting again. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-2">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-error&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Error:&lt;/strong&gt; Change a few things up and try submitting again. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-2">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2553,7 +2555,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-success&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Success:&lt;/strong&gt; You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-3">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-success&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Success:&lt;/strong&gt; You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-3">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2571,7 +2573,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-info&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Information:&lt;/strong&gt; This alert needs your attention, but it's not super important. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-4">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-info&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Information:&lt;/strong&gt; This alert needs your attention, but it's not super important. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-4">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2589,21 +2591,21 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                         </ul>
-                    </div>
+                     </div>
                     <hr>
                 </div>
             </div>
         </section>
         <!-- ============== /alerts ============== -->
         <!-- ============== modals =============== -->
-        <section id="modals" class="da-all ta-all ma-all" data-bind="include: 'pages/css-overview/modals.html'">
-            <div class="wrapper">
+<section id="modals" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/modals.html'">
+            <div class="">
                 <div class="page-header">
                     <h2>
                         Modals
                     </h2>
                 </div>
-                <div class="da-all ta-all ma-all">
+                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div id="modal-example-HTML" style="display:block">
                         <div class="modal">
                             <div class="modal-header">
@@ -2620,12 +2622,12 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 <a href="#" class="btn">Close</a> <a href="#" class="btn btn-primary">Save changes</a>
                             </div>
                         </div>
-                    </div><button class="btn btn-mini collapsed launch-demo-modal">Launch Demo Modal</button> <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#modal-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
+                    </div><button class="btn btn-xs collapsed launch-demo-modal">Launch Demo Modal</button> <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#modal-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
                     <p>
                         &nbsp;
                     </p>
                     <div class="collapse" id="modal-HTML">
-                        <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].innerHTML.replace(/ da-clear ta-clear ma-clear/,'').replace(/style=*position: relative*/,'')}" data-clipboard-text=" &lt;div class=&quot;modal&quot;&gt; &lt;div class=&quot;modal-header&quot;&gt; &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt; &lt;h3&gt;Modal header&lt;/h3&gt; &lt;/div&gt; &lt;div class=&quot;modal-body&quot;&gt; &lt;p&gt;One fine body…&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;modal-footer&quot;&gt; &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Close&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;">Copy HTML</button>
+                        <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].innerHTML.replace(/ da-clear ta-clear ma-clear/,'').replace(/style=*position: relative*/,'')}" data-clipboard-text=" &lt;div class=&quot;modal&quot;&gt; &lt;div class=&quot;modal-header&quot;&gt; &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt; &lt;h3&gt;Modal header&lt;/h3&gt; &lt;/div&gt; &lt;div class=&quot;modal-body&quot;&gt; &lt;p&gt;One fine body…&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;modal-footer&quot;&gt; &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Close&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;">Copy HTML</button>
                         <pre class="prettyprint linenums prettyprinted" data-bind="text: $('#modal-example-HTML')[0].outerHTML.replace(/&lt;/g,'&lt;').replace(/ style=.*/g,'&gt;')" style=""></pre>
                         <ol class="linenums">
                             <li class="L0">
@@ -2681,27 +2683,32 @@ body{opacity:0}body.ng-scope{opacity:1}
                     &nbsp;
                 </p>
             </div>
-        </section>
+        </section> -->
         <!-- ========= /modals ============= -->
         <!-- ======== tool tips ============ -->
-        <section id="tooltips" class="da-all ta-all ma-all" data-bind="include: 'pages/css-overview/tooltips.html'">
-            <div class="wrapper">
+<section id="tooltips" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/tooltips.html'">
+            <div class="row">
                 <div class="page-header">
                     <h2>
                         Tooltips
                     </h2>
                 </div>
+
+                <script>
+                $(['data-toggle=tooltip']).tooltip();
+                </script>
+
                 <div class="da-all ta-all ma-all">
                     <p id="tooltip-example-HTML">
                         Lorem ipsum dolor sit amet, consectetur <a href="#" data-toggle="tooltip" data-placement="top" title="" data-original-title="Tooltip on top">Tooltip on top</a> elit, sed do eiusmod tempor incididunt ut <a href="#" data-toggle="tooltip" data-placement="right" title="" data-original-title="Tooltip on right">Tooltip on right</a> et dolore magna aliqua. Ut enim ad minim veniam, quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo consequat. Duis aute <a href="#" data-toggle="tooltip" data-placement="bottom" title="" data-original-title="Tooltip on bottom">Tooltip on bottom</a> dolor in reprehenderit in voluptate velit esse cillum dolore <a href="#" data-toggle="tooltip" data-placement="left" title="" data-original-title="Tooltip on left">Tooltip on left</a> eu fugiat nulla pariatur. Excepteur sint occaecat cupidatat non proident, sunt in culpa qui deserunt mollit anim id est laborum.
-                    </p><button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#tooltip-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
+                    </p><button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#tooltip-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
                     <p>
                         &nbsp;
                     </p>
                     <div class="collapse" id="tooltip-HTML">
                         <ul data-bind="foreach: $('#tooltip-example-HTML a')" class="unstyled">
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;Tooltip on top&lt;/a&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;top&quot; title=&quot;Tooltip on top&quot;&gt;Tooltip on top&lt;/a&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2710,7 +2717,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;Tooltip on right&lt;/a&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;right&quot; title=&quot;Tooltip on right&quot;&gt;Tooltip on right&lt;/a&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2719,7 +2726,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;Tooltip on bottom&lt;/a&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;bottom&quot; title=&quot;Tooltip on bottom&quot;&gt;Tooltip on bottom&lt;/a&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2728,7 +2735,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/a&gt;">Copy HTML</button> <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; data-toggle=&quot;tooltip&quot; data-placement=&quot;left&quot; title=&quot;Tooltip on left&quot;&gt;Tooltip on left&lt;/a&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
@@ -2741,8 +2748,910 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <hr>
                 </div>
             </div>
-        </section>
+        </section> -->
         <!-- ============== / tool tips ============ -->
+
+
+        <!-- ============== collapseable items =============== -->
+
+<section id="collapsible-items" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/collapsible-items.html'">    <div class="row">
+    <div class="page-header">
+      <h2>Collapsible Items</h2>
+    </div>     
+
+      <h3>Typical Accordion</h3>
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+        <div id="collapsible-example-HTML-1">
+          <div class="accordion" id="accordion1">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseOne">
+                      Collapsible Group Item #1
+                    </a>
+                  </div>
+                  <div id="collapseOne" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseTwo">
+                      Collapsible Group Item #2
+                    </a>
+                  </div>
+                  <div id="collapseTwo" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" data-parent="#accordion1" href="#collapseThree">
+                      Collapsible Group Item #3
+                    </a>
+                  </div>
+                  <div id="collapseThree" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+      <h3>Accordion with independent panels</h3>
+      <p>By removing <code>data-parent</code> all panels will act independently</p>
+        <div id="collapsible-example-HTML-2">
+          <div class="accordion" id="accordion2">
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOne-2">
+                      Collapsible Group Item #1
+                    </a>
+                  </div>
+                  <div id="collapseOne-2" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseTwo-2">
+                      Collapsible Group Item #2
+                    </a>
+                  </div>
+                  <div id="collapseTwo-2" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThree-2">
+                      Collapsible Group Item #3
+                    </a>
+                  </div>
+                  <div id="collapseThree-2" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+
+      <h3>Accordion with colored background triggers and independent panels</h3>
+      <p>By adding <code>well</code> classes to <code>accordion-heading</code> you can create a colored header with plus/minus collapse/expand icons on the right. 
+      </p><div class="btn-group pull-right">
+        <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">View other colors</button>
+        <ul class="dropdown-menu change-accordion-color pull-right">
+          <li><a href="#" class="gray-dark">Dark Gray</a></li>
+          <li><a href="#" class="gray-medium">Medium Gray</a></li>
+          <li><a href="#" class="gray">Gray</a></li>
+          <li><a href="#" class="gray-light">Light Gray</a></li>
+          <li><a href="#" class="gray-very-light">Very Light Gray</a></li>
+          <li><a href="#" class="white">White</a></li>
+          <li><a href="#" class="blue">Blue</a></li>
+          <li><a href="#" class="navyblue">Navy Blue</a></li>
+          <li><a href="#" class="green">Green</a></li>
+          <li><a href="#" class="yellow">Yellow</a></li>
+          <li><a href="#" class="orange">Orange</a></li>
+          <li><a href="#" class="red">Red</a></li>
+          <li><a href="#" class="red-dark">Dark Red</a></li>
+          <li><a href="#" class="berry">Berry</a></li>
+          <li><a href="#" class="purple">Purple</a></li>
+          <li><a href="#" class="teal">Teal</a></li>
+        </ul>
+      </div>
+
+        <div id="collapsible-example-HTML-3">
+          <div class="accordion" id="accordion3">
+                <div class="accordion-group">
+                  <div class="accordion-heading well well-small well-blue">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseOne-3">
+                      Collapsible Group Item #1
+                    </a>
+                  </div>
+                  <div id="collapseOne-3" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading well well-small well-blue">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseTwo-3">
+                      Collapsible Group Item #2
+                    </a>
+                  </div>
+                  <div id="collapseTwo-3" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+                <div class="accordion-group">
+                  <div class="accordion-heading well well-small well-blue">
+                    <a class="accordion-toggle collapsed" data-toggle="collapse" href="#collapseThree-3">
+                      Collapsible Group Item #3
+                    </a>
+                  </div>
+                  <div id="collapseThree-3" class="accordion-body collapse">
+                    <div class="accordion-inner">
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    </div>
+                  </div>
+                </div>
+              </div>
+        </div>
+
+
+      <h3>Independent collapsible triggers</h3>
+      <p>
+      </p><h4>From a Button</h4>
+        <div id="collapsible-example-HTML-4" class="">
+          <p>
+            <button class="btn collapsed" data-toggle="collapse" data-target="#collapsible-example-area-4">
+              <span class="show-collapsed">Show Stuff <i aria-hidden="true" class="icon-ui-triangledown"></i></span>
+              <span class="hide-expanded">Hide Stuff <i aria-hidden="true" class="icon-ui-triangleup"></i></span>
+            </button>  
+          </p>       
+          <p id="collapsible-example-area-4" class="collapse">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </p>
+        </div>
+        <hr>
+      <p></p>
+      <p>
+      </p><h4>From a Link</h4>
+        <div id="collapsible-example-HTML-5" class="">
+          <p><a href="javascript:;" class="collapsed" data-toggle="collapse" data-target="#collapsible-example-area-5">
+            <span class="show-collapsed">Show Stuff <i aria-hidden="true" class="icon-ui-triangledown"></i></span>
+            <span class="hide-expanded">Hide Stuff <i aria-hidden="true" class="icon-ui-triangleup"></i></span>
+          </a></p>   
+          <p id="collapsible-example-area-5" class="collapse">
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          </p>
+        </div>
+        <hr>
+      <p></p>
+      <p>
+
+
+        </p><div class="alert alert-warning" id="collapsible-markup-warning">
+          <h4>Warning:</h4>
+          <p><strong>Check your markup:</strong> If <code>show-collapsed</code> and <code>hide-expanded</code> classes are not behaving correctly it is possible that you added another class allong with these.  For example: <code>&lt;span class="show-collapsed ma-all da-hide ta-hide"&gt;Show Stuff <i aria-hidden="true" class="icon-ui-triangledown"></i>&lt;/span&gt;</code> will fail because ma-all overrides show-collapsed display settings. ma-all in this case should be a div parent to the show-collapsed.</p>
+        </div>
+
+
+
+
+
+        <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#collapsible-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="collapsible-HTML">
+          <ul data-bind="foreach: $('#collapsible-items [id*=collapsible-example-HTML]')" class="unstyled">
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML,'rel':'#'+$($($data)[0]).attr('id')}" data-clipboard-text="&lt;div id=&quot;collapsible-example-HTML-1&quot;&gt;
+          &lt;div class=&quot;accordion&quot; id=&quot;accordion1&quot;&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion1&quot; href=&quot;#collapseOne&quot;&gt;
+                      Collapsible Group Item #1
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseOne&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion1&quot; href=&quot;#collapseTwo&quot;&gt;
+                      Collapsible Group Item #2
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseTwo&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; data-parent=&quot;#accordion1&quot; href=&quot;#collapseThree&quot;&gt;
+                      Collapsible Group Item #3
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseThree&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+        &lt;/div&gt;" rel="#collapsible-example-HTML-1">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="collapsible-example-HTML-1">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;'),attr: {'rel':$($($data)[0]).attr('id')}" rel="collapsible-example-HTML-1" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-HTML-1"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">          </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"accordion1"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">data-parent</span><span class="pun">=</span><span class="atv">"#accordion1"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseOne"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                      Collapsible Group Item #1</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L7"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseOne"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L1"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">data-parent</span><span class="pun">=</span><span class="atv">"#accordion1"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseTwo"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">                      Collapsible Group Item #2</span></li><li class="L8"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L9"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseTwo"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L3"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">data-parent</span><span class="pun">=</span><span class="atv">"#accordion1"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseThree"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                      Collapsible Group Item #3</span></li><li class="L0"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L1"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseThree"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L5"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">              </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML,'rel':'#'+$($($data)[0]).attr('id')}" data-clipboard-text="&lt;div id=&quot;collapsible-example-HTML-2&quot;&gt;
+          &lt;div class=&quot;accordion&quot; id=&quot;accordion2&quot;&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseOne-2&quot;&gt;
+                      Collapsible Group Item #1
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseOne-2&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseTwo-2&quot;&gt;
+                      Collapsible Group Item #2
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseTwo-2&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseThree-2&quot;&gt;
+                      Collapsible Group Item #3
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseThree-2&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+        &lt;/div&gt;" rel="#collapsible-example-HTML-2">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="collapsible-example-HTML-2">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;'),attr: {'rel':$($($data)[0]).attr('id')}" rel="collapsible-example-HTML-2" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-HTML-2"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">          </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"accordion2"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseOne-2"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                      Collapsible Group Item #1</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L7"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseOne-2"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L1"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseTwo-2"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">                      Collapsible Group Item #2</span></li><li class="L8"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L9"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseTwo-2"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L3"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseThree-2"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                      Collapsible Group Item #3</span></li><li class="L0"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L1"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseThree-2"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L5"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">              </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML,'rel':'#'+$($($data)[0]).attr('id')}" data-clipboard-text="&lt;div id=&quot;collapsible-example-HTML-3&quot;&gt;
+          &lt;div class=&quot;accordion&quot; id=&quot;accordion3&quot;&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading well well-small well-blue&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseOne-3&quot;&gt;
+                      Collapsible Group Item #1
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseOne-3&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading well well-small well-blue&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseTwo-3&quot;&gt;
+                      Collapsible Group Item #2
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseTwo-3&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+                &lt;div class=&quot;accordion-group&quot;&gt;
+                  &lt;div class=&quot;accordion-heading well well-small well-blue&quot;&gt;
+                    &lt;a class=&quot;accordion-toggle collapsed&quot; data-toggle=&quot;collapse&quot; href=&quot;#collapseThree-3&quot;&gt;
+                      Collapsible Group Item #3
+                    &lt;/a&gt;
+                  &lt;/div&gt;
+                  &lt;div id=&quot;collapseThree-3&quot; class=&quot;accordion-body collapse&quot;&gt;
+                    &lt;div class=&quot;accordion-inner&quot;&gt;
+                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+                    &lt;/div&gt;
+                  &lt;/div&gt;
+                &lt;/div&gt;
+              &lt;/div&gt;
+        &lt;/div&gt;" rel="#collapsible-example-HTML-3">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="collapsible-example-HTML-3">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;'),attr: {'rel':$($($data)[0]).attr('id')}" rel="collapsible-example-HTML-3" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-HTML-3"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">          </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"accordion3"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading well well-small well-blue"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseOne-3"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                      Collapsible Group Item #1</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L7"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseOne-3"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L1"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L5"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading well well-small well-blue"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseTwo-3"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">                      Collapsible Group Item #2</span></li><li class="L8"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L9"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L0"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseTwo-3"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L3"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L5"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">                </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-group"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-heading well well-small well-blue"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">                    </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-toggle collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#collapseThree-3"</span><span class="tag">&gt;</span></li><li class="L9"><span class="pln">                      Collapsible Group Item #3</span></li><li class="L0"><span class="pln">                    </span><span class="tag">&lt;/a&gt;</span></li><li class="L1"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L2"><span class="pln">                  </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapseThree-3"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-body collapse"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">                    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"accordion-inner"</span><span class="tag">&gt;</span></li><li class="L4"><span class="pln">                      Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L5"><span class="pln">                    </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">                  </span><span class="tag">&lt;/div&gt;</span></li><li class="L7"><span class="pln">                </span><span class="tag">&lt;/div&gt;</span></li><li class="L8"><span class="pln">              </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML,'rel':'#'+$($($data)[0]).attr('id')}" data-clipboard-text="&lt;div id=&quot;collapsible-example-HTML-4&quot; class=&quot;&quot;&gt;
+          &lt;p&gt;
+            &lt;button class=&quot;btn collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapsible-example-area-4&quot;&gt;
+              &lt;span class=&quot;show-collapsed&quot;&gt;Show Stuff &lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangledown&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+              &lt;span class=&quot;hide-expanded&quot;&gt;Hide Stuff &lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangleup&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;/button&gt;  
+          &lt;/p&gt;       
+          &lt;p id=&quot;collapsible-example-area-4&quot; class=&quot;collapse&quot;&gt;
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          &lt;/p&gt;
+        &lt;/div&gt;" rel="#collapsible-example-HTML-4">
+                  Copy HTML
+                </button>
+                <button class="btn btn-mini fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="collapsible-example-HTML-4">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;'),attr: {'rel':$($($data)[0]).attr('id')}" rel="collapsible-example-HTML-4" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-HTML-4"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">          </span><span class="tag">&lt;p&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#collapsible-example-area-4"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">              </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"show-collapsed"</span><span class="tag">&gt;</span><span class="pln">Show Stuff </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-triangledown"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span></li><li class="L4"><span class="pln">              </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"hide-expanded"</span><span class="tag">&gt;</span><span class="pln">Hide Stuff </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-triangleup"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span></li><li class="L5"><span class="pln">            </span><span class="tag">&lt;/button&gt;</span><span class="pln">  </span></li><li class="L6"><span class="pln">          </span><span class="tag">&lt;/p&gt;</span><span class="pln">       </span></li><li class="L7"><span class="pln">          </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-area-4"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="tag">&gt;</span></li><li class="L8"><span class="pln">            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L9"><span class="pln">          </span><span class="tag">&lt;/p&gt;</span></li><li class="L0"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML,'rel':'#'+$($($data)[0]).attr('id')}" data-clipboard-text="&lt;div id=&quot;collapsible-example-HTML-5&quot; class=&quot;&quot;&gt;
+          &lt;p&gt;&lt;a href=&quot;javascript:;&quot; class=&quot;collapsed&quot; data-toggle=&quot;collapse&quot; data-target=&quot;#collapsible-example-area-5&quot;&gt;
+            &lt;span class=&quot;show-collapsed&quot;&gt;Show Stuff &lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangledown&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+            &lt;span class=&quot;hide-expanded&quot;&gt;Hide Stuff &lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangleup&quot;&gt;&lt;/i&gt;&lt;/span&gt;
+          &lt;/a&gt;&lt;/p&gt;   
+          &lt;p id=&quot;collapsible-example-area-5&quot; class=&quot;collapse&quot;&gt;
+            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.
+          &lt;/p&gt;
+        &lt;/div&gt;" rel="#collapsible-example-HTML-5">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="collapsible-example-HTML-5">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;'),attr: {'rel':$($($data)[0]).attr('id')}" rel="collapsible-example-HTML-5" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-HTML-5"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">""</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">          </span><span class="tag">&lt;p&gt;&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"javascript:;"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapsed"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="pln"> </span><span class="atn">data-target</span><span class="pun">=</span><span class="atv">"#collapsible-example-area-5"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">            </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"show-collapsed"</span><span class="tag">&gt;</span><span class="pln">Show Stuff </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-triangledown"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span></li><li class="L3"><span class="pln">            </span><span class="tag">&lt;span</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"hide-expanded"</span><span class="tag">&gt;</span><span class="pln">Hide Stuff </span><span class="tag">&lt;i</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-triangleup"</span><span class="tag">&gt;&lt;/i&gt;&lt;/span&gt;</span></li><li class="L4"><span class="pln">          </span><span class="tag">&lt;/a&gt;&lt;/p&gt;</span><span class="pln">   </span></li><li class="L5"><span class="pln">          </span><span class="tag">&lt;p</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"collapsible-example-area-5"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"collapse"</span><span class="tag">&gt;</span></li><li class="L6"><span class="pln">            Anim pariatur cliche reprehenderit, enim eiusmod high life accusamus terry richardson ad squid. 3 wolf moon officia aute, non cupidatat skateboard dolor brunch. Food truck quinoa nesciunt laborum eiusmod. Brunch 3 wolf moon tempor, sunt aliqua put a bird on it squid single-origin coffee nulla assumenda shoreditch et. Nihil anim keffiyeh helvetica, craft beer labore wes anderson cred nesciunt sapiente ea proident. Ad vegan excepteur butcher vice lomo. Leggings occaecat craft beer farm-to-table, raw denim aesthetic synth nesciunt you probably haven't heard of them accusamus labore sustainable VHS.</span></li><li class="L7"><span class="pln">          </span><span class="tag">&lt;/p&gt;</span></li><li class="L8"><span class="pln">        </span><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+              </li>
+          </ul>
+        </div>
+        <hr>
+
+      </div>
+    </div></section>
+
+<!-- ================/ collapseable items ============ -->
+
+<!-- ================= popovers ================ -->
+<section id="popovers" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/popovers.html'">    
+    <div class="row">
+    <div class="page-header">
+      <h2>Popovers</h2>
+    </div>     
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
+        <div id="popover-example-HTML">
+          <ul class="unstyled">
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="top" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on top&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;">Popover on top</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on right&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;">Popover on right</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on bottom&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;">Popover on bottom</a></li>
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on left&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;">Popover on left</a></li>
+          </ul>
+          <ul class="unstyled row top-offset-large">
+            <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on hover&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;" data-trigger="hover">Popover on hover</a></li>
+            <li><a href="#" class="btn" id="custom-popover" data-toggle="popover" data-original-title="Popover with custom content&lt;i class=&quot;close icon-ui-close&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;" data-trigger="manual" data-placement="right" data-html="true" data-content="&lt;p&gt;This is a sample custom popover with lots of cool stuff inside.&lt;/p&gt;&lt;p class=&quot;pull-right&quot;&gt;&lt;button class=&quot;btn btn-primary&quot; data-dismiss=&quot;popover&quot;&gt;Ok&lt;/button&gt;&lt;/p&gt;">Popover with custom content</a></li>
+            <li><a href="#" class="btn" id="popover-no-title" data-toggle="popover" data-trigger="manual" data-placement="top" data-html="true" data-content="&lt;i class=&quot;close icon-ui-close pull-right&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;&lt;p&gt;This is a sample popover with lots of cool stuff inside and no title.&lt;/p&gt;" data-original-title="" title="">Popover no title with dismiss</a></li>      
+          </ul>
+
+          
+        </div>
+        <div class="alert alert-info" id="popover-308-rules">
+          <h4>Dell 308 Styleguide Rules:</h4>
+          <p>No two popovers should display at the same time.  Default bootstrap behavior is to allow multiple popovers to display therefore they should be manually triggered to hide all other instances before displayed.  <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#popover-JS"><span class="show-collapsed">See JavaScript below</span><span class="hide-expanded">Hide JavaScript below</span></button>
+          </p>
+        </div>
+        <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#popover-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+
+        <div class="collapse" id="popover-HTML">
+          <h4>HTML code to activate popovers</h4>
+          <ul data-bind="foreach: $('#popover-example-HTML a')" class="unstyled">
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; data-html=&quot;true&quot; data-toggle=&quot;popover&quot; data-placement=&quot;top&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; title=&quot;&quot; data-original-title=&quot;Popover on top&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot;&gt;Popover on top&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"top"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">data-original-title</span><span class="pun">=</span><span class="atv">"Popover on top&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;"</span><span class="tag">&gt;</span><span class="pln">Popover on top</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; data-html=&quot;true&quot; data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; title=&quot;&quot; data-original-title=&quot;Popover on right&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot;&gt;Popover on right&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"right"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">data-original-title</span><span class="pun">=</span><span class="atv">"Popover on right&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;"</span><span class="tag">&gt;</span><span class="pln">Popover on right</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; data-html=&quot;true&quot; data-toggle=&quot;popover&quot; data-placement=&quot;bottom&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; title=&quot;&quot; data-original-title=&quot;Popover on bottom&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot;&gt;Popover on bottom&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"bottom"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">data-original-title</span><span class="pun">=</span><span class="atv">"Popover on bottom&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;"</span><span class="tag">&gt;</span><span class="pln">Popover on bottom</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; data-html=&quot;true&quot; data-toggle=&quot;popover&quot; data-placement=&quot;left&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; title=&quot;&quot; data-original-title=&quot;Popover on left&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot;&gt;Popover on left&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"left"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">data-original-title</span><span class="pun">=</span><span class="atv">"Popover on left&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;"</span><span class="tag">&gt;</span><span class="pln">Popover on left</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; data-html=&quot;true&quot; data-toggle=&quot;popover&quot; data-placement=&quot;right&quot; data-content=&quot;Vivamus sagittis lacus vel augue laoreet rutrum faucibus.&quot; title=&quot;&quot; data-original-title=&quot;Popover on hover&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot; data-trigger=&quot;hover&quot;&gt;Popover on hover&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"right"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"Vivamus sagittis lacus vel augue laoreet rutrum faucibus."</span><span class="pln"> </span><span class="atn">title</span><span class="pun">=</span><span class="atv">""</span><span class="pln"> </span><span class="atn">data-original-title</span><span class="pun">=</span><span class="atv">"Popover on hover&amp;lt;i class=&amp;quot;close icon-ui-close pull-right visible-phone&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;"</span><span class="pln"> </span><span class="atn">data-trigger</span><span class="pun">=</span><span class="atv">"hover"</span><span class="tag">&gt;</span><span class="pln">Popover on hover</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; id=&quot;custom-popover&quot; data-toggle=&quot;popover&quot; data-original-title=&quot;Popover with custom content&amp;lt;i class=&amp;quot;close icon-ui-close&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&quot; data-trigger=&quot;manual&quot; data-placement=&quot;right&quot; data-html=&quot;true&quot; data-content=&quot;&amp;lt;p&amp;gt;This is a sample custom popover with lots of cool stuff inside.&amp;lt;/p&amp;gt;&amp;lt;p class=&amp;quot;pull-right&amp;quot;&amp;gt;&amp;lt;button class=&amp;quot;btn btn-primary&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;Ok&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;&quot;&gt;Popover with custom content&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="custom-popover">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"custom-popover"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-original-title</span><span class="pun">=</span><span class="atv">"Popover with custom content&amp;lt;i class=&amp;quot;close icon-ui-close&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;"</span><span class="pln"> </span><span class="atn">data-trigger</span><span class="pun">=</span><span class="atv">"manual"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"right"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"&amp;lt;p&amp;gt;This is a sample custom popover with lots of cool stuff inside.&amp;lt;/p&amp;gt;&amp;lt;p class=&amp;quot;pull-right&amp;quot;&amp;gt;&amp;lt;button class=&amp;quot;btn btn-primary&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;Ok&amp;lt;/button&amp;gt;&amp;lt;/p&amp;gt;"</span><span class="tag">&gt;</span><span class="pln">Popover with custom content</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          
+              <li>
+                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;a href=&quot;#&quot; class=&quot;btn&quot; id=&quot;popover-no-title&quot; data-toggle=&quot;popover&quot; data-trigger=&quot;manual&quot; data-placement=&quot;top&quot; data-html=&quot;true&quot; data-content=&quot;&amp;lt;i class=&amp;quot;close icon-ui-close pull-right&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;p&amp;gt;This is a sample popover with lots of cool stuff inside and no title.&amp;lt;/p&amp;gt;&quot;&gt;Popover no title with dismiss&lt;/a&gt;">
+                  Copy HTML
+                </button>
+                <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).attr('id')}" data-target="popover-no-title">Fiddle</button>
+                <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"popover-no-title"</span><span class="pln"> </span><span class="atn">data-toggle</span><span class="pun">=</span><span class="atv">"popover"</span><span class="pln"> </span><span class="atn">data-trigger</span><span class="pun">=</span><span class="atv">"manual"</span><span class="pln"> </span><span class="atn">data-placement</span><span class="pun">=</span><span class="atv">"top"</span><span class="pln"> </span><span class="atn">data-html</span><span class="pun">=</span><span class="atv">"true"</span><span class="pln"> </span><span class="atn">data-content</span><span class="pun">=</span><span class="atv">"&amp;lt;i class=&amp;quot;close icon-ui-close pull-right&amp;quot; data-dismiss=&amp;quot;popover&amp;quot;&amp;gt;&amp;lt;/i&amp;gt;&amp;lt;p&amp;gt;This is a sample popover with lots of cool stuff inside and no title.&amp;lt;/p&amp;gt;"</span><span class="tag">&gt;</span><span class="pln">Popover no title with dismiss</span><span class="tag">&lt;/a&gt;</span></li></ol></pre>
+              </li>
+          </ul>
+        </div>
+
+        <div class="collapse" id="popover-JS">
+          <h4>Javascript code to activate popovers</h4>
+          <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#popover-JS-code').html()}" data-clipboard-text="     $('[data-toggle=&quot;popover&quot;]').popover({trigger:'manual'});
+$('[data-toggle=&quot;popover&quot;]').click(function(event){
+  event.preventDefault();
+  $('[data-toggle=&quot;popover&quot;]').popover('destroy');
+  $(this).popover('show');
+  $('[data-dismiss=&quot;popover&quot;]').click(function(event){
+    event.preventDefault();
+    $(this).parents('.popover').prev().popover('hide');
+  });
+});
+$('[data-toggle=&quot;popover&quot;][data-trigger=&quot;hover&quot;]').mouseover(function(event){
+  event.preventDefault();
+  $('[data-toggle=&quot;popover&quot;]').popover('destroy');
+  $(this).popover('show');
+});
+$('[data-toggle=&quot;popover&quot;][data-trigger=&quot;hover&quot;]').mouseout(function(event){
+  $(this).popover('destroy');
+});
+$('[data-toggle=&quot;popover&quot;][data-trigger=&quot;hover&quot;]').focus(function(event){
+  $('[data-toggle=&quot;popover&quot;]').popover('destroy');
+  $(this).popover('show');
+});
+
+$('#custom-popover').click(function(event){
+  event.preventDefault();
+  $(this).popover('show');
+  $('[data-dismiss=&quot;popover&quot;]').click(function(event){
+    event.preventDefault();
+    $(this).parents('.popover').prev().popover('hide');
+  });
+});">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums prettyprinted" id="popover-JS-code" style=""><ol class="linenums"><li class="L0"><span class="pln">     $</span><span class="pun">(</span><span class="str">'[data-toggle="popover"]'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">({</span><span class="pln">trigger</span><span class="pun">:</span><span class="str">'manual'</span><span class="pun">});</span></li><li class="L1"><span class="pln">$</span><span class="pun">(</span><span class="str">'[data-toggle="popover"]'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L2"><span class="pln">  </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">preventDefault</span><span class="pun">();</span></li><li class="L3"><span class="pln">  $</span><span class="pun">(</span><span class="str">'[data-toggle="popover"]'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'destroy'</span><span class="pun">);</span></li><li class="L4"><span class="pln">  $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">);</span></li><li class="L5"><span class="pln">  $</span><span class="pun">(</span><span class="str">'[data-dismiss="popover"]'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L6"><span class="pln">    </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">preventDefault</span><span class="pun">();</span></li><li class="L7"><span class="pln">    $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">parents</span><span class="pun">(</span><span class="str">'.popover'</span><span class="pun">).</span><span class="pln">prev</span><span class="pun">().</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'hide'</span><span class="pun">);</span></li><li class="L8"><span class="pln">  </span><span class="pun">});</span></li><li class="L9"><span class="pun">});</span></li><li class="L0"><span class="pln">$</span><span class="pun">(</span><span class="str">'[data-toggle="popover"][data-trigger="hover"]'</span><span class="pun">).</span><span class="pln">mouseover</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L1"><span class="pln">  </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">preventDefault</span><span class="pun">();</span></li><li class="L2"><span class="pln">  $</span><span class="pun">(</span><span class="str">'[data-toggle="popover"]'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'destroy'</span><span class="pun">);</span></li><li class="L3"><span class="pln">  $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">);</span></li><li class="L4"><span class="pun">});</span></li><li class="L5"><span class="pln">$</span><span class="pun">(</span><span class="str">'[data-toggle="popover"][data-trigger="hover"]'</span><span class="pun">).</span><span class="pln">mouseout</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L6"><span class="pln">  $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'destroy'</span><span class="pun">);</span></li><li class="L7"><span class="pun">});</span></li><li class="L8"><span class="pln">$</span><span class="pun">(</span><span class="str">'[data-toggle="popover"][data-trigger="hover"]'</span><span class="pun">).</span><span class="pln">focus</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L9"><span class="pln">  $</span><span class="pun">(</span><span class="str">'[data-toggle="popover"]'</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'destroy'</span><span class="pun">);</span></li><li class="L0"><span class="pln">  $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">);</span></li><li class="L1"><span class="pun">});</span></li><li class="L2"><span class="pln">&nbsp;</span></li><li class="L3"><span class="pln">$</span><span class="pun">(</span><span class="str">'#custom-popover'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L4"><span class="pln">  </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">preventDefault</span><span class="pun">();</span></li><li class="L5"><span class="pln">  $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'show'</span><span class="pun">);</span></li><li class="L6"><span class="pln">  $</span><span class="pun">(</span><span class="str">'[data-dismiss="popover"]'</span><span class="pun">).</span><span class="pln">click</span><span class="pun">(</span><span class="kwd">function</span><span class="pun">(</span><span class="kwd">event</span><span class="pun">){</span></li><li class="L7"><span class="pln">    </span><span class="kwd">event</span><span class="pun">.</span><span class="pln">preventDefault</span><span class="pun">();</span></li><li class="L8"><span class="pln">    $</span><span class="pun">(</span><span class="kwd">this</span><span class="pun">).</span><span class="pln">parents</span><span class="pun">(</span><span class="str">'.popover'</span><span class="pun">).</span><span class="pln">prev</span><span class="pun">().</span><span class="pln">popover</span><span class="pun">(</span><span class="str">'hide'</span><span class="pun">);</span></li><li class="L9"><span class="pln">  </span><span class="pun">});</span></li><li class="L0"><span class="pun">});</span></li></ol></pre>
+
+        </div>
+        <hr>
+
+        </div>
+      </div>
+    </section>
+
+<!-- ================== /popovers ================ -->
+
+<!-- ================= wells and containers =============== -->
+
+<section id="wells-and-containers" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/wells-and-containers.html'">      
+    <div class="row">
+    <div class="page-header">
+      <h2>Wells and Containers</h2>
+    </div> 
+        <div class="alert alert-info">
+          <p><strong>To copy icon HTML:</strong> Click on the <code>code sample</code> to copy to clipboard.</p>
+        </div>
+
+
+
+
+          <h4>Well <code data-copy="2-clipboard">&lt;div class="well"&gt;...&lt;/div&gt;</code></h4>
+          <div class="well">
+            <p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+          <h4>Well Large <code data-copy="2-clipboard">&lt;div class="well well-large"&gt;...&lt;/div&gt;</code></h4>
+
+          <div class="well well-large">
+            <p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+          <h4>Well Small <code data-copy="2-clipboard">&lt;div class="well well-small"&gt;...&lt;/div&gt;</code></h4>
+
+          <div class="well well-small">
+            <p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+
+
+            <div class="btn-group pull-right">
+                <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">View other colors</button>
+                <ul class="dropdown-menu change-container-color pull-right">
+                  <li><a href="#" class="gray-dark">Dark Gray</a></li>
+                  <li><a href="#" class="gray-medium">Medium Gray</a></li>
+                  <li><a href="#" class="gray">Gray</a></li>
+                  <li><a href="#" class="gray-light">Light Gray</a></li>
+                  <li><a href="#" class="gray-very-light">Very Light Gray</a></li>
+                  <li><a href="#" class="white">White</a></li>
+                  <li><a href="#" class="blue">Blue</a></li>
+                  <li><a href="#" class="navyblue">Navy Blue</a></li>
+                  <li><a href="#" class="green">Green</a></li>
+                  <li><a href="#" class="yellow">Yellow</a></li>
+                  <li><a href="#" class="orange">Orange</a></li>
+                  <li><a href="#" class="red">Red</a></li>
+                  <li><a href="#" class="red-dark">Dark Red</a></li>
+                  <li><a href="#" class="berry">Berry</a></li>
+                  <li><a href="#" class="purple">Purple</a></li>
+                  <li><a href="#" class="teal">Teal</a></li>
+                </ul>
+              </div>
+
+              <h4>Solid Colored Wells &amp; Containers <code data-copy="2-clipboard" id="solid-colored-container-example-code">&lt;div class="well well-large well-blue"&gt;...&lt;/div&gt;</code></h4>
+          <div class="well well-large well-blue" id="solid-colored-container-example">
+            <h2>Headline</h2>
+            <p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+          <div class="alert alert-info">
+            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <strong>NOTICE:</strong> The use of <code>&lt;div class="blue rounded-large"&gt; ... &lt;/div&gt;</code> still works in this release of Dell 308 CSS but the native Bootstrap "well" classes should be used and have been augmented with Dell 308 colors.
+          </div>
+
+              <div class=" pull-right">
+                <div class="btn-group">
+                  <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">View other colors</button>
+                  <ul class="dropdown-menu change-container-bleed pull-right">
+                  <li><a href="#" class="gray-dark">Dark Gray</a></li>
+                  <li><a href="#" class="gray-medium">Medium Gray</a></li>
+                  <li><a href="#" class="gray">Gray</a></li>
+                  <li><a href="#" class="gray-light">Light Gray</a></li>
+                  <li><a href="#" class="gray-very-light">Very Light Gray</a></li>
+                  <li><a href="#" class="white">White</a></li>
+                  <li><a href="#" class="blue">Blue</a></li>
+                  <li><a href="#" class="navyblue">Navy Blue</a></li>
+                  <li><a href="#" class="green">Green</a></li>
+                  <li><a href="#" class="yellow">Yellow</a></li>
+                  <li><a href="#" class="orange">Orange</a></li>
+                  <li><a href="#" class="red">Red</a></li>
+                  <li><a href="#" class="red-dark">Dark Red</a></li>
+                  <li><a href="#" class="berry">Berry</a></li>
+                  <li><a href="#" class="purple">Purple</a></li>
+                  <li><a href="#" class="teal">Teal</a></li>
+                  </ul>
+                </div>
+              </div>
+              <h4>Colored Wells &amp; Containers with image that bleeds <code data-copy="2-clipboard" id="color-bleed-container-example-code" data-bind="attr: {'data-clipboard-text':$('#color-bleed-container-example')[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;well well-large well-blue well-bleed&quot; id=&quot;color-bleed-container-example&quot;&gt;
+            &lt;img src=&quot;assets/img/sample-banner-image.png&quot; class=&quot;pull-right&quot;&gt;
+            &lt;h2&gt;Lorem Ispum&lt;/h2&gt;
+            &lt;p&gt;Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit.&lt;/p&gt;
+          &lt;/div&gt;">&lt;div class="well well-large well-blue well-bleed"&gt;...&lt;/div&gt;</code></h4>
+          <div class="well well-large well-blue well-bleed" id="color-bleed-container-example">
+            <img src="assets/img/sample-banner-image.png" class="pull-right">
+            <h2>Lorem Ispum</h2>
+            <p>Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit.</p>
+          </div>
+
+
+          <div class="alert alert-info">
+            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <strong>NOTICE:</strong> <code>&lt;div class="well-bleed"&gt; ... &lt;/div&gt;</code> is not a Bootstrap class.  All this class does it take out the padding and hide the overflow of a well. There is margin set for when an image is pulled to the right followed by other elements. For any other usage you have to take care of the padding/margin by custom class.
+          </div>
+
+
+          <div class=" pull-right">
+            <div class="btn-group">
+                <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">View other colors</button>
+                <ul class="dropdown-menu change-container-color-stroke pull-right">
+                  <li><a href="#" class="gray-dark">Dark Gray</a></li>
+                  <li><a href="#" class="white">White</a></li>
+                  <li><a href="#" class="blue">Blue</a></li>
+                  <li><a href="#" class="navyblue">Navy Blue</a></li>
+                  <li><a href="#" class="green">Green</a></li>
+                  <li><a href="#" class="yellow">Yellow</a></li>
+                  <li><a href="#" class="orange">Orange</a></li>
+                  <li><a href="#" class="red">Red</a></li>
+                  <li><a href="#" class="red-dark">Dark Red</a></li>
+                  <li><a href="#" class="berry">Berry</a></li>
+                  <li><a href="#" class="purple">Purple</a></li>
+                  <li><a href="#" class="teal">Teal</a></li>
+                </ul>
+              </div>
+            </div>
+              <h4>Color Stroked Wells &amp; Containers <code data-copy="2-clipboard" id="color-stroke-container-example-code">&lt;div class="well well-large well-blue-stroke"&gt;...&lt;/div&gt;</code></h4>
+          <div class="well well-large well-blue-stroke" id="color-stroke-container-example">
+            <h2>Headline</h2>
+            <p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+
+              <div class=" pull-right">
+                <div class="btn-group">
+                  <button class="btn btn-xs dropdown-toggle" data-toggle="dropdown">View other colors</button>
+                  <ul class="dropdown-menu change-container-color-stroke-title pull-right">
+                    <li><a href="#" class="gray-dark">Dark Gray</a></li>
+                    <li><a href="#" class="blue">Blue</a></li>
+                    <li><a href="#" class="navyblue">Navy Blue</a></li>
+                    <li><a href="#" class="green">Green</a></li>
+                    <li><a href="#" class="yellow">Yellow</a></li>
+                    <li><a href="#" class="orange">Orange</a></li>
+                    <li><a href="#" class="red">Red</a></li>
+                    <li><a href="#" class="red-dark">Dark Red</a></li>
+                    <li><a href="#" class="berry">Berry</a></li>
+                    <li><a href="#" class="purple">Purple</a></li>
+                    <li><a href="#" class="teal">Teal</a></li>
+                  </ul>
+                </div>
+              </div>
+
+
+
+              <h4>Color Stroked Wells &amp; Containers with Title<br><code data-copy="2-clipboard" id="color-stroke-container-title-example-code">&lt;div class="well well-large well-blue-stroke"&gt;&lt;h4 class="well-title"&gt;A really long title goes here&lt;/h4&gt;...&lt;/div&gt;</code></h4>
+          <div class="well well-large well-blue-stroke" id="color-stroke-container-title-example">
+            <h4 class="container-title">A really long title goes here</h4>
+            <p>Lorem ipsum dolor sit amet
+Consectetur adipiscing elit
+Integer molestie lorem at massa
+Facilisis in pretium nisl aliquet
+Nulla volutpat aliquam velit</p>
+          </div>
+
+          <div class="alert alert-info">
+            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <strong>NOTICE:</strong> <code>&lt;h4 class="well-title"&gt; ... &lt;/h4&gt;</code> is not a Bootstrap class.  Use this class to create a lable inside a well-color-stroke or color-stroke container. Note that the container must have a 20px top padding for the title to be properly placed. The title will also automatically inherit the color of the container stroke.
+          </div>
+
+<hr>
+</div></section>
+
+
+
+<!-- ============= /wells and containers ================= -->
+
+<!-- ====================== carousels ===================== -->
+
+<section id="carousel" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/carousel.html'">    
+    <div class="row">
+      <div class="page-header">
+        <h2>Carousel</h2>
+      </div>     
+
+
+
+         <h4>Carousel Gallery</h4>
+         <p>1 picture at a time full width and automatic slide</p>
+      <p><span class="label label-info">Note:</span> if images are different heights it will cause an undesired jump between slide transitions.</p>
+<div id="carousel-example-gallery" class="carousel slide carousel-gallery">
+ 
+<!-- Carousel items -->
+<div class="carousel-inner">
+  
+<div class="item active">
+  <div class="row-fluid">
+    <a href="#" class="">
+      <img src="http://placehold.it/1140x430" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x400" alt="Image" class="visible-phone">
+    </a>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+<div class="item">
+  <div class="row-fluid">
+    <a href="#" class="">
+      <img src="http://placehold.it/1140x430" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x400" alt="Image" class="visible-phone">
+    </a>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+<div class="item">
+  <div class="row-fluid">
+    <a href="#" class="">
+      <img src="http://placehold.it/1140x430" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x400" alt="Image" class="visible-phone">
+    </a>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+ <div class="item">
+  <div class="row-fluid">
+    <a href="#" class="">
+      <img src="http://placehold.it/1140x430" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x400" alt="Image" class="visible-phone">
+    </a>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+ <div class="item">
+  <div class="row-fluid">
+    <a href="#" class="">
+      <img src="http://placehold.it/1140x430" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x400" alt="Image" class="visible-phone">
+    </a>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+ 
+
+</div><!--/carousel-inner-->
+ 
+
+<ol class="carousel-indicators carousel-indicators-5">
+    <li data-target="#carousel-example-gallery" data-slide-to="0" class="active"></li>
+    <li data-target="#carousel-example-gallery" data-slide-to="1" class=""></li>
+    <li data-target="#carousel-example-gallery" data-slide-to="2" class=""></li>
+    <li data-target="#carousel-example-gallery" data-slide-to="3" class=""></li>
+    <li data-target="#carousel-example-gallery" data-slide-to="4" class=""></li>
+</ol>
+ 
+<a class="left carousel-control" href="#carousel-example-gallery" data-slide="prev"></a>
+<a class="right carousel-control" href="#carousel-example-gallery" data-slide="next"></a>
+</div><!--/carousel-example-gallery-->
+ 
+
+         <h4>Carousel Gallery with Captions</h4>
+         <p>1 full width picture at a time with caption and automatic slide</p>
+         <p><span class="label label-info">Note:</span> You can mix captioned and non captioned images</p>
+
+
+ 
+<div id="carousel-example-gallery-caption" class="carousel slide carousel-gallery">
+ 
+<!-- Carousel items -->
+<div class="carousel-inner">
+  
+<div class="item">
+  <div class="row-fluid">
+    <div class="well well-bleed">
+      <img src="http://placehold.it/1140x430" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x245" alt="Image" class="visible-phone">
+      <div class="carousel-caption pull-top-left">
+        <h2>Lorem ipsum dolor sit amet</h2>
+        <p>Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco  
+        </p>
+        <p>
+          <a href="#" class="btn btn-primary">Buy Now!</a>
+        </p>
+      </div>
+    </div>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+<div class="item">
+  <div class="row-fluid">
+    <div class="well well-berry well-bleed">
+      <img src="http://placehold.it/1140x245" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x245" alt="Image" class="visible-phone">
+      <div class="carousel-caption">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. </h2>
+        <p>Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. 
+        </p>
+        <a href="#" class="btn btn-primary pull-right">Buy Now!</a>
+      </div>
+    </div>
+  </div><!--/row-fluid-->
+</div><!--/item-->
+<div class="item active">
+  <div class="row-fluid">
+    <div class="well well-gray-dark well-bleed">
+      <img src="http://placehold.it/1140x245" alt="Image" class="hidden-phone">
+      <img src="http://placehold.it/400x245" alt="Image" class="visible-phone">
+      <div class="carousel-caption">
+        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+        tempor incididunt ut labore et dolore magna aliqua. </h2>
+        <p>Ut enim ad minim veniam,
+          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+          cillum dolore eu fugiat nulla pariatur. 
+        </p>
+        <a href="#" class="btn btn-primary pull-right">Buy Now!</a>
+      </div>
+    </div>
+  </div><!--/row-fluid-->
+
+
+ 
+
+</div><!--/carousel-inner-->
+ 
+
+<ol class="carousel-indicators active">
+    <li data-target="#carousel-example-gallery-caption" data-slide-to="0" class=""></li>
+    <li data-target="#carousel-example-gallery-caption" data-slide-to="1" class=""></li>
+    <li data-target="#carousel-example-gallery-caption" data-slide-to="2" class="active"></li>
+</ol>
+ 
+<a class="left carousel-control" href="#carousel-example-gallery-caption" data-slide="prev"></a>
+<a class="right carousel-control" href="#carousel-example-gallery-caption" data-slide="next"></a>
+</div><!--/carousel-example-gallery-caption-->
+ 
+
+
+<script type="text/javascript">
+$(document).ready(function() {
+  $('#carousel-example-gallery').carousel({
+  interval: 10000
+  })
+  $('#carousel-example-gallery-caption').carousel({
+  interval: 10000
+  })
+});
+</script>
+    <hr>
+    </div></div></section>
+
+<!-- +================== /carousels ============================ -->
+
         <!-- ================= footer ============== -->
         <footer>
             <div class="row">
