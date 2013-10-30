@@ -25,11 +25,6 @@ UserStatus.prototype = {
     addWatcher: function ( ref, _scope ) {
         this.watchers[ref] = _scope;
     }
-
-
-
-
-
 }
 
 
@@ -37,6 +32,7 @@ Sherpa.userStatus = new UserStatus();
 
 
 sherpaApp.controller("mastheadController", function ($scope) {
+/*
 
     var username = $scope.username = Sherpa.userStatus.name;
     Sherpa.userStatus.addWatcher("masthead", $scope);
@@ -46,6 +42,7 @@ sherpaApp.controller("mastheadController", function ($scope) {
 //        $scope.$digest();
 //        $scope.username = Sherpa.userStatus.name;
     }, true)
+*/
 
 
     $scope.routes = _.filter(SHERPA.PROTO_ROUTES, function (route) {
