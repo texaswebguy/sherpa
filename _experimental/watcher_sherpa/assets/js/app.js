@@ -1,38 +1,3 @@
-function UserStatus() {
-    this.name = "Bo";
-    this.id = 0;
-    this.watchers = {};
-}
-
-UserStatus.prototype = {
-    constructor: UserStatus,
-
-    getId: function( _id ) {
-        if ( _id ) {
-            this.id = _id;
-        }
-        return this.id;
-    },
-
-    getName: function ( ref, _name  ) {
-        if ( _name ) {
-            this.name = _name;
-        }
-
-        this.watchers[ref].$apply();
-    },
-
-    addWatcher: function ( ref, _scope ) {
-        this.watchers[ref] = _scope;
-    }
-}
-
-
-Sherpa.userStatus = new UserStatus();
-
-var test = {
-    "username":"jerry"
-}
 
 
 sherpaApp.controller("mastheadController", function ($scope) {
