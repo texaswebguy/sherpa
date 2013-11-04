@@ -1,0 +1,62 @@
+<!doctype html>
+<html lang="en" xmlns:ng="http://angularjs.org">
+<head>
+    <meta charset="utf-8">
+    <title>Dell Sherpa: Tabs Example</title>
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <script type="text/javascript">
+        var SHERPA_CONFIG_OVERRIDES = {};
+        SHERPA_CONFIG_OVERRIDES.GLOBAL_CONFIG = "assets/config/proto_config.json";
+    </script>
+
+    <!-- Don't touch
+    ******************************************************************************** -->
+    <style>body {
+        opacity: 0
+    }
+
+    body.ng-scope {
+        opacity: 1
+    }</style>
+    <script src="../../_sherpa/sherpa.v08.js"></script>
+    <!-- Sherpa js adds all the js and css files you need.
+    ******************************************************************************** -->
+    <!--<script type="text/javascript">
+        Sherpa.ready("sherpa-filters",function(){
+            Sherpa.js('../masthead/assets/js/masthead.js');
+            Sherpa.load('../masthead/assets/css/masthead.css');
+        })
+    </script>-->
+
+    <script type="text/javascript">
+        Sherpa.ready("sherpa-filters", function () {
+            Sherpa.js('../masthead/assets/js/masthead.js');
+            Sherpa.load('../masthead/assets/css/masthead.css');
+        })
+    </script>
+
+
+</head>
+<body ng-controller="pageController">
+<a name="top" id="top"></a>
+<!--<header ng-include="'../masthead/assets/includes/masthead.html'" ng-controller="mastheadController"></header>-->
+<header ng-include="'assets/includes/masthead.html'" class="masthead"></header>
+
+<section ui-view="main" ng-controller="mainController"></section>
+
+
+<footer class="da-all ta-all ma-all blue">
+    <div class="wrapper">
+        <div class="da-all ta-all ma-all">
+            <div class="blue">
+                footer
+            </div>
+        </div>
+    </div>
+</footer>
+
+
+</body>
+
+</html>
