@@ -163,6 +163,11 @@
 // Scaffolding
 //=======================================================================================================================
 
+p {
+  margin: 0 0 10px;
+}
+
+
 a {
   color: @dell-blue;
   text-decoration: none;
@@ -217,6 +222,7 @@ code {
     white-space: nowrap;
 }
 
+
 //
 // Typography for Desktop
 // --------------------------------------------------
@@ -224,7 +230,7 @@ code {
 
 
 h1, h2, h3, h4, h5, h6 {
-  margin: 5px 0px 5px 0px;
+  margin: 0px 0px 10px 0px;
 }
 
 // Allows strong only in h5 and h6 - dell-308-only
@@ -1492,9 +1498,9 @@ li.dropdown .dropdown-menu {
 //=======================================================================================================================
 
 .well {
-  min-height: @line-height-base;
-  padding: @line-height-base;
-  margin-bottom: @line-height-base;
+  min-height: @line-height-base * 13.999999995800000001259999999622px; // ~20px
+  padding: @line-height-base * 13.999999995800000001259999999622px; // ~20px
+  margin-bottom: @line-height-base * 13.999999995800000001259999999622px; // ~20px
   border: none;
   .border-radius(@border-radius-base);
   .box-shadow(none);
@@ -1508,14 +1514,31 @@ li.dropdown .dropdown-menu {
   }
 }
 
+.well-bleed {
+  padding: 0 !important;
+  overflow: hidden;
+
+  img.pull-right + h2, 
+  .well-bleed img.pull-right + h3, 
+  .well-bleed img.pull-right + h4, 
+  .well-bleed img.pull-right + p {
+    margin-top: 20px;
+  }
+
+  img.pull-right ~ :not(img) {
+    margin-left: 20px;
+  }
+}
+
+
 
 // Sizes
 .well-large {
-  padding: @line-height-base;
+  padding: @line-height-base * 13.999999995800000001259999999622px; // ~20px
   .border-radius(@border-radius-large);
 }
 .well-small {
-  padding: @line-height-base / 2;
+  padding: @line-height-base * 13.999999995800000001259999999622px / 2;
   .border-radius(@border-radius-small);
 }
 
@@ -2601,6 +2624,10 @@ input[type="submit"].btn {
 }
 
 .aside-nav() {
+    h2{
+      margin: 5px 0 5px 0;
+    }
+
     li a {
       text-shadow:none;
       color:@white;
@@ -2923,9 +2950,32 @@ border-radius: 4px;
 
 // Base modal
 .modal {
-  padding: @line-height-base;
+  padding: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
   border: none; 
 }
+
+.modal {
+  position: fixed;
+  top: 10%;
+  left: 50%;
+  z-index: 1050;
+  width: 560px;
+  margin-left: -280px;
+  background-color: #fff;
+  border: 1px solid #999;
+  border: 1px solid rgba(0,0,0,0.3);
+  -webkit-border-radius: 6px;
+  -moz-border-radius: 6px;
+  border-radius: 6px;
+  -webkit-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+  -moz-box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+  box-shadow: 0 3px 7px rgba(0,0,0,0.3);
+  -webkit-background-clip: padding-box;
+  -moz-background-clip: padding-box;
+  background-clip: padding-box;
+  outline: 0;
+}
+
 
 .modal-header {
   padding: 0;
@@ -2954,10 +3004,10 @@ border-radius: 4px;
     }
   }
 
-// #modal-example-HTML {
-//   background: rgba(0,0,0,0.8);
-//   padding: 100px 0 !important;
-// }
+#modal-example-HTML {
+  background: rgba(0,0,0,0.8);
+  padding: 100px 0 !important;
+}
 
 
   // Heading
@@ -3065,17 +3115,25 @@ border-radius: 4px;
   }
 }
 
-ul.unstyled, ol.unstyled {
-margin-left: 0;
-list-style: none;
-}
-
 #popover-example-HTML {
   overflow: hidden;
   margin-bottom: 20px;
+
+  > ul > li > a {
+    float: left;
+    margin-right: 20px;
+  }
+}
+
+ul.unstyled, ol.unstyled {
+  margin-left: 0;
+  list-style: none;
 }
 
 
+.top-offset-large {
+  margin-top: 60px;
+}
 
 // labels-badges
 //=======================================================================================================================
@@ -3097,7 +3155,7 @@ label, input, button, select, textarea {
   color: @white;
   vertical-align: baseline;
   white-space: nowrap;
-  border-radius: 9px;
+  border-radius: 3px;
 }
 
 // Colors
@@ -3108,6 +3166,7 @@ label, input, button, select, textarea {
   background-color: @dell-gray-dark; 
   position:relative;
   top:-5px;
+  border-radius: 9px;
 }
 
 

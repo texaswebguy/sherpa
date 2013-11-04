@@ -1742,8 +1742,9 @@ body{opacity:0}body.ng-scope{opacity:1}
                                     </li>
                                 </ul>
                                 <div class="back-to-top" data-scrollto="body" data-offset-top="-90" data-scroll-speed="300">
-                                    <span>Back to top</span>
-                                </div>
+               <i aria-hidden="true" class="icon-ui-collapse"></i> <span>Back to top</span>
+            </div>
+                        
                             </div>
                             <div class="col-md-9 tab-content">
                                 <div class="tab-pane fade active in" id="aside-home">
@@ -2076,8 +2077,8 @@ body{opacity:0}body.ng-scope{opacity:1}
                                     </li>
                                 </ul>
                                 <div class="back-to-top" data-scrollto="body" data-offset-top="-90" data-scroll-speed="300">
-                                    <span>Back to top</span>
-                                </div>
+               <i aria-hidden="true" class="icon-ui-collapse"></i> <span>Back to top</span>
+            </div>
                             </div>
                             <div class="col-md-9 tab-content">
                                 <div class="tab-pane fade active in" id="aside-home">
@@ -2605,7 +2606,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                         Modals
                     </h2>
                 </div>
-                <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                <div class="row">
                     <div id="modal-example-HTML" style="display:block">
                         <div class="modal">
                             <div class="modal-header">
@@ -2683,7 +2684,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     &nbsp;
                 </p>
             </div>
-        </section> -->
+        </section>
         <!-- ========= /modals ============= -->
         <!-- ======== tool tips ============ -->
 <section id="tooltips" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/tooltips.html'">
@@ -2748,7 +2749,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <hr>
                 </div>
             </div>
-        </section> -->
+        </section>
         <!-- ============== / tool tips ============ -->
 
 
@@ -3158,17 +3159,20 @@ body{opacity:0}body.ng-scope{opacity:1}
             <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="bottom" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on bottom&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;">Popover on bottom</a></li>
             <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="left" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on left&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;">Popover on left</a></li>
           </ul>
-          <ul class="unstyled row top-offset-large">
+        
+          <ul class="unstyled top-offset-large">
             <li><a href="#" class="btn" data-html="true" data-toggle="popover" data-placement="right" data-content="Vivamus sagittis lacus vel augue laoreet rutrum faucibus." title="" data-original-title="Popover on hover&lt;i class=&quot;close icon-ui-close pull-right visible-phone&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;" data-trigger="hover">Popover on hover</a></li>
             <li><a href="#" class="btn" id="custom-popover" data-toggle="popover" data-original-title="Popover with custom content&lt;i class=&quot;close icon-ui-close&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;" data-trigger="manual" data-placement="right" data-html="true" data-content="&lt;p&gt;This is a sample custom popover with lots of cool stuff inside.&lt;/p&gt;&lt;p class=&quot;pull-right&quot;&gt;&lt;button class=&quot;btn btn-primary&quot; data-dismiss=&quot;popover&quot;&gt;Ok&lt;/button&gt;&lt;/p&gt;">Popover with custom content</a></li>
             <li><a href="#" class="btn" id="popover-no-title" data-toggle="popover" data-trigger="manual" data-placement="top" data-html="true" data-content="&lt;i class=&quot;close icon-ui-close pull-right&quot; data-dismiss=&quot;popover&quot;&gt;&lt;/i&gt;&lt;p&gt;This is a sample popover with lots of cool stuff inside and no title.&lt;/p&gt;" data-original-title="" title="">Popover no title with dismiss</a></li>      
           </ul>
-
-          
+      
         </div>
+
+
+
         <div class="alert alert-info" id="popover-308-rules">
           <h4>Dell 308 Styleguide Rules:</h4>
-          <p>No two popovers should display at the same time.  Default bootstrap behavior is to allow multiple popovers to display therefore they should be manually triggered to hide all other instances before displayed.  <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#popover-JS"><span class="show-collapsed">See JavaScript below</span><span class="hide-expanded">Hide JavaScript below</span></button>
+          <p>No two popovers should display at the same time.  Default bootstrap behavior is to allow multiple popovers to display therefore they should be manually triggered to hide all other instances before displayed.  <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#popover-JS"><span class="show-collapsed">See JavaScript below</span><span class="hide-expanded">Hide JavaScript below</span></button>
           </p>
         </div>
         <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#popover-HTML">
