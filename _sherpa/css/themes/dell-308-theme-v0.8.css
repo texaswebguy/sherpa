@@ -1124,9 +1124,9 @@ abbr[data-original-title] {
     font-weight: bold;
   }
   .lead {
-    margin-bottom: 1.428571429;
+    margin-bottom: 20px;
     font-size: 15.959999999999999px;
-    line-height: 1.428571429;
+    line-height: 20px;
   }
   .title {
     background-position: 50% 13px;
@@ -1346,6 +1346,12 @@ input[type="checkbox"]:focus {
   outline: 0px auto #007db8;
   outline-offset: 0px;
 }
+input[type="radio"],
+input[type="checkbox"] {
+  margin: 1px 0 0;
+  margin-top: 1px \9;
+  line-height: normal;
+}
 .uneditable-input,
 .uneditable-textarea {
   color: #737373;
@@ -1353,12 +1359,12 @@ input[type="checkbox"]:focus {
 }
 .radio,
 .checkbox {
-  margin-bottom: 1.428571429;
+  margin-bottom: 10px;
 }
 .radio.inline,
 .checkbox.inline {
   padding-top: 0;
-  margin-bottom: 0.7142857145;
+  margin-bottom: 10px;
 }
 .control-group.warning .control-label,
 .control-group.warning .help-block,
@@ -1742,6 +1748,9 @@ input.search-query {
   -moz-border-radius: 14px 0 0 14px;
   border-radius: 14px 0 0 14px;
 }
+.form-group {
+  margin-right: 5px;
+}
 .form-search input,
 .form-inline input,
 .form-horizontal input,
@@ -1805,6 +1814,15 @@ input.search-query {
   width: 160px;
   padding-top: 5px;
   text-align: right;
+}
+.form-horizontal .control-label,
+.form-horizontal .radio,
+.form-horizontal .checkbox,
+.form-horizontal .radio-inline,
+.form-horizontal .checkbox-inline {
+  margin-top: 0;
+  margin-bottom: 0;
+  padding-top: 5px;
 }
 .control-group {
   margin-bottom: 0.7142857145;
@@ -4899,6 +4917,192 @@ input[type="submit"].btn.btn-xs {
     z-index: 1;
   }
 }
+.carousel {
+  position: relative;
+}
+.carousel-inner {
+  position: relative;
+  overflow: hidden;
+  width: 100%;
+}
+.carousel-inner > .item {
+  display: none;
+  position: relative;
+  -webkit-transition: 0.6s ease-in-out left;
+  transition: 0.6s ease-in-out left;
+}
+.carousel-inner > .item > img,
+.carousel-inner > .item > a > img {
+  display: block;
+  max-width: 100%;
+  height: auto;
+  line-height: 1;
+}
+.carousel-inner > .active,
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  display: block;
+}
+.carousel-inner > .active {
+  left: 0;
+}
+.carousel-inner > .next,
+.carousel-inner > .prev {
+  position: absolute;
+  top: 0;
+  width: 100%;
+}
+.carousel-inner > .next {
+  left: 100%;
+}
+.carousel-inner > .prev {
+  left: -100%;
+}
+.carousel-inner > .next.left,
+.carousel-inner > .prev.right {
+  left: 0;
+}
+.carousel-inner > .active.left {
+  left: -100%;
+}
+.carousel-inner > .active.right {
+  left: 100%;
+}
+.carousel-control {
+  position: absolute;
+  top: 40%;
+  left: 15px;
+  height: 40px;
+  width: 40px;
+  margin-top: -20px;
+  font-weight: 100;
+  line-height: 30px;
+  color: #fff;
+  background: #222;
+  border: 3px solid #fff;
+  -webkit-border-radius: 23px;
+  -moz-border-radius: 23px;
+  border-radius: 23px;
+  bottom: 0;
+  opacity: 0.5;
+  filter: alpha(opacity=50);
+  font-size: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.carousel-control.left {
+  background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.5)), to(rgba(0, 0, 0, 0.0001)));
+  background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.5) 0%), color-stop(rgba(0, 0, 0, 0.0001) 100%));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.5) 0%, rgba(0, 0, 0, 0.0001) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#80000000', endColorstr='#00000000', GradientType=1);
+}
+.carousel-control.right {
+  left: auto;
+  right: 15px;
+  background-image: -webkit-gradient(linear, 0% top, 100% top, from(rgba(0, 0, 0, 0.0001)), to(rgba(0, 0, 0, 0.5)));
+  background-image: -webkit-linear-gradient(left, color-stop(rgba(0, 0, 0, 0.0001) 0%), color-stop(rgba(0, 0, 0, 0.5) 100%));
+  background-image: -moz-linear-gradient(left, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-image: linear-gradient(to right, rgba(0, 0, 0, 0.0001) 0%, rgba(0, 0, 0, 0.5) 100%);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#00000000', endColorstr='#80000000', GradientType=1);
+}
+.carousel-control:hover,
+.carousel-control:focus {
+  color: #ffffff;
+  text-decoration: none;
+  opacity: 0.9;
+  filter: alpha(opacity=90);
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next,
+.carousel-control .glyphicon-chevron-left,
+.carousel-control .glyphicon-chevron-right {
+  position: absolute;
+  top: 50%;
+  left: 50%;
+  z-index: 5;
+  display: inline-block;
+}
+.carousel-control .icon-prev,
+.carousel-control .icon-next {
+  width: 20px;
+  height: 20px;
+  margin-top: -10px;
+  margin-left: -10px;
+  font-family: serif;
+}
+.carousel-control .icon-prev:before {
+  content: '\2039';
+}
+.carousel-control .icon-next:before {
+  content: '\203a';
+}
+.carousel-indicators {
+  position: absolute;
+  top: 15px;
+  right: -1px;
+  bottom: 10px;
+  left: 0%;
+  z-index: 15;
+  width: 0;
+  margin-left: 0;
+  padding-left: 0;
+  list-style: none;
+  text-align: center;
+}
+.carousel-indicators li {
+  display: inline-block;
+  width: 10px;
+  height: 10px;
+  margin: 3px;
+  text-indent: -999px;
+  border-radius: 5px;
+  cursor: pointer;
+  background-color: rgba(255, 255, 255, 0.25);
+  border: none;
+}
+.carousel-indicators .active {
+  margin: 3px;
+  width: 10px;
+  height: 10px;
+  background-color: #ffffff;
+}
+.carousel-caption {
+  position: absolute;
+  left: 15%;
+  right: 15%;
+  bottom: 20px;
+  z-index: 10;
+  padding-top: 20px;
+  padding-bottom: 20px;
+  color: #ffffff;
+  text-align: center;
+  text-shadow: 0 1px 2px rgba(0, 0, 0, 0.6);
+}
+.carousel-caption .btn {
+  text-shadow: none;
+}
+@media screen and (min-width: 768px) {
+  .carousel-control .icon-prev,
+  .carousel-control .icon-next {
+    width: 30px;
+    height: 30px;
+    margin-top: -15px;
+    margin-left: -15px;
+    font-size: 30px;
+  }
+  .carousel-caption {
+    left: 20%;
+    right: 20%;
+    padding-bottom: 30px;
+  }
+  .carousel-indicators {
+    bottom: 20px;
+  }
+}
 .tooltip {
   font-size: 12px;
   line-height: 1.4;
@@ -4953,7 +5157,7 @@ input,
 button,
 select,
 textarea {
-  font-size: 12px;
+  font-size: 14px;
   font-weight: normal;
   line-height: 14px;
 }
