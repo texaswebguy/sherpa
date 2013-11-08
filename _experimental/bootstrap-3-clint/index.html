@@ -1855,7 +1855,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <!-- ============ /asside ============== -->
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="alert alert-info">
-                            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
+                            <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a> <strong>Dell 308 Guidelines:</strong> bottom and right versions should not be used.
                         </div>
                         <h5>
                             Dell 308 Variations
@@ -2281,6 +2281,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     </div>
                     <div class="col-md-6">
                         <div class="alert alert-info">
+                            <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
                             <p>
                                 <strong class="alert-title">Dell 308 vs Boostrap difference:</strong> <span class="alert-message">All of the label colors have been overwritten and the only two colors allowed for are default and info. <code>label-teal</code> works the same as <code>label-info</code> but should no longer be used.</span>
                             </p>
@@ -2288,7 +2289,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                         <hr>
                     </div>
                     <div class="col-md-6">
-                        <div class="alert alert-info">
+                        <div class="alert alert-info"><a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
                             <p>
                                 <strong class="alert-title">Dell 308 vs Boostrap difference:</strong> <span class="alert-message">Badges are only one color (default dark gray) and are to only be used for notification counters for messaging.</span>
                             </p>
@@ -2335,7 +2336,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <div class="row" id="progress-bars-HTML">
                         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                             <div class="alert alert-info">
-                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+                                <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
                                 <h4 class="alert-heading">
                                     Dell 308 Style Guidelines:
                                 </h4>
@@ -2387,7 +2388,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                 
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 row">
                     <div class="alert alert-info">
-                        <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+                        <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
                         <p>
                             <strong class="label">NOTE:</strong> <code>div</code> tags can be replaced with <code>a</code> tags to provide links in the taskflow to go back.
                         </p>
@@ -2473,7 +2474,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                 <div id="alerts-example-HTML" class="row">
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="alerts-HTML-code-1">
                         <div class="alert alert-block">
-                            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+                            <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
                             <h4 class="alert-heading">
                                 Alert block with title
                             </h4>
@@ -2486,24 +2487,24 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="alerts-HTML-code-2">
                             <div class="alert alert-error">
-                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Error:</strong> Change a few things up and try submitting again.
+                                <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a> <strong>Error:</strong> Change a few things up and try submitting again.
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="alerts-HTML-code-3">
                             <div class="alert alert-success">
-                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
+                                <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a> <strong>Success:</strong> You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.
                             </div>
                         </div>
                         <div class="col-xs-12 col-sm-12 col-md-4 col-lg-4" id="alerts-HTML-code-4">
                             <div class="alert alert-info">
-                                <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a> <strong>Information:</strong> This alert needs your attention, but it's not super important.
+                                <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a> <strong>Information:</strong> This alert needs your attention, but it's not super important.
                             </div>
                         </div>
                     </div>
                 </div>
                 <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                     <div class="alert alert-info">
-                        <a class="close" data-dismiss="alert"></a>
+                        <a class="close" data-dismiss="alert"><span aria-hidden="true" class="icon-ui-close"></span></a>
                         <h4 class="alert-heading">
                             Dell 308 Style Guidelines:
                         </h4>
@@ -2517,14 +2518,14 @@ body{opacity:0}body.ng-scope{opacity:1}
                     <div class="collapse" id="alerts-HTML">
                         <ul data-bind="foreach: $('#alerts-example-HTML .alert')" class="unstyled">
                             <li>
-                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-block&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;h4 class=&quot;alert-heading&quot;&gt;Alert block with title&lt;/h4&gt; &lt;p&gt;Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/p&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-1">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-block&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-close&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;h4 class=&quot;alert-heading&quot;&gt;Alert block with title&lt;/h4&gt; &lt;p&gt;Best check yo self, you're not looking too good. Nulla vitae elit libero, a pharetra augue. Praesent commodo cursus magna, vel scelerisque nisl consectetur et.&lt;/p&gt; &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-1">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
                                         <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"alert alert-block"</span><span class="tag">&gt;</span>
                                     </li>
                                     <li class="L1">
-                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-closecircle"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-close"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
                                     </li>
                                     <li class="L2">
                                         <span class="tag">&lt;h4</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"alert-heading"</span><span class="tag">&gt;</span><span class="pln">Alert block with title</span><span class="tag">&lt;/h4&gt;</span>
@@ -2538,14 +2539,14 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-error&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Error:&lt;/strong&gt; Change a few things up and try submitting again. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-2">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-error&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-close&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Error:&lt;/strong&gt; Change a few things up and try submitting again. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-2">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
                                         <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"alert alert-error"</span><span class="tag">&gt;</span>
                                     </li>
                                     <li class="L1">
-                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-closecircle"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-close"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
                                     </li>
                                     <li class="L2">
                                         <span class="tag">&lt;strong&gt;</span><span class="pln">Error:</span><span class="tag">&lt;/strong&gt;</span> <span class="pln">Change a few things up and try submitting again.</span>
@@ -2556,14 +2557,14 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-success&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Success:&lt;/strong&gt; You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-3">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-success&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-close&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Success:&lt;/strong&gt; You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-3">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
                                         <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"alert alert-success"</span><span class="tag">&gt;</span>
                                     </li>
                                     <li class="L1">
-                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-closecircle"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-close"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
                                     </li>
                                     <li class="L2">
                                         <span class="tag">&lt;strong&gt;</span><span class="pln">Success:</span><span class="tag">&lt;/strong&gt;</span> <span class="pln">You successfully read this important alert message. Please note in the html of this alert an icon was inserted but is not displayed. This is because Dell 308 css overrides any icon here.</span>
@@ -2574,14 +2575,14 @@ body{opacity:0}body.ng-scope{opacity:1}
                                 </ol>
                             </li>
                             <li>
-                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-info&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Information:&lt;/strong&gt; This alert needs your attention, but it's not super important. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-4">Fiddle</button>
+                                <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$($data)[0].outerHTML}" data-clipboard-text="&lt;div class=&quot;alert alert-info&quot;&gt; &lt;a class=&quot;close&quot; data-dismiss=&quot;alert&quot;&gt;&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-close&quot;&gt;&lt;/i&gt;&lt;/a&gt; &lt;strong&gt;Information:&lt;/strong&gt; This alert needs your attention, but it's not super important. &lt;/div&gt;">Copy HTML</button> <button class="btn btn-xs fiddle-button" data-bind="attr: {'data-target':$($($data)[0]).parent().attr('id')}" data-target="alerts-HTML-code-4">Fiddle</button>
                                 <pre class="prettyprint linenums prettyprinted" data-bind="text: $($data)[0].outerHTML.replace(/&lt;/g,'&lt;')" style=""></pre>
                                 <ol class="linenums">
                                     <li class="L0">
                                         <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"alert alert-info"</span><span class="tag">&gt;</span>
                                     </li>
                                     <li class="L1">
-                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-closecircle"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
+                                        <span class="tag">&lt;a</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"alert"</span><span class="tag">&gt;&lt;i</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"icon-ui-close"</span><span class="tag">&gt;&lt;/i&gt;&lt;/a&gt;</span>
                                     </li>
                                     <li class="L2">
                                         <span class="tag">&lt;strong&gt;</span><span class="pln">Information:</span><span class="tag">&lt;/strong&gt;</span> <span class="pln">This alert needs your attention, but it's not super important.</span>
@@ -2599,92 +2600,61 @@ body{opacity:0}body.ng-scope{opacity:1}
         </section>
         <!-- ============== /alerts ============== -->
         <!-- ============== modals =============== -->
-<section id="modals" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/modals.html'">
-            <div class="">
-                <div class="page-header">
-                    <h2>
-                        Modals
-                    </h2>
-                </div>
-                <div class="row">
-                    <div id="modal-example-HTML" style="display:block">
-                        <div class="modal">
-                            <div class="modal-header">
-                                <h3>
-                                    Modal header
-                                </h3>
-                            </div>
-                            <div class="modal-body">
-                                <p>
-                                    One fine body…
-                                </p>
-                            </div>
-                            <div class="modal-footer">
-                                <a href="#" class="btn">Close</a> <a href="#" class="btn btn-primary">Save changes</a>
-                            </div>
-                        </div>
-                    </div><button class="btn btn-xs collapsed launch-demo-modal">Launch Demo Modal</button> <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#modal-HTML"><span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span></button>
-                    <p>
-                        &nbsp;
-                    </p>
-                    <div class="collapse" id="modal-HTML">
-                        <button class="btn btn-xs" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].innerHTML.replace(/ da-clear ta-clear ma-clear/,'').replace(/style=*position: relative*/,'')}" data-clipboard-text=" &lt;div class=&quot;modal&quot;&gt; &lt;div class=&quot;modal-header&quot;&gt; &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt; &lt;h3&gt;Modal header&lt;/h3&gt; &lt;/div&gt; &lt;div class=&quot;modal-body&quot;&gt; &lt;p&gt;One fine body…&lt;/p&gt; &lt;/div&gt; &lt;div class=&quot;modal-footer&quot;&gt; &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Close&lt;/a&gt; &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/a&gt; &lt;/div&gt; &lt;/div&gt;">Copy HTML</button>
-                        <pre class="prettyprint linenums prettyprinted" data-bind="text: $('#modal-example-HTML')[0].outerHTML.replace(/&lt;/g,'&lt;').replace(/ style=.*/g,'&gt;')" style=""></pre>
-                        <ol class="linenums">
-                            <li class="L0">
-                                <span class="tag">&lt;div</span> <span class="atn">id</span><span class="pun">=</span><span class="atv">"modal-example-HTML"</span><span class="tag">&gt;</span>
-                            </li>
-                            <li class="L1">
-                                <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"modal"</span><span class="tag">&gt;</span>
-                            </li>
-                            <li class="L2">
-                                <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-header"</span><span class="tag">&gt;</span>
-                            </li>
-                            <li class="L3">
-                                <span class="tag">&lt;button</span> <span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span> <span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"modal"</span> <span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">&gt;&lt;/button&gt;</span>
-                            </li>
-                            <li class="L4">
-                                <span class="tag">&lt;h3&gt;</span><span class="pln">Modal header</span><span class="tag">&lt;/h3&gt;</span>
-                            </li>
-                            <li class="L5">
-                                <span class="tag">&lt;/div&gt;</span>
-                            </li>
-                            <li class="L6">
-                                <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-body"</span><span class="tag">&gt;</span>
-                            </li>
-                            <li class="L7">
-                                <span class="tag">&lt;p&gt;</span><span class="pln">One fine body…</span><span class="tag">&lt;/p&gt;</span>
-                            </li>
-                            <li class="L8">
-                                <span class="tag">&lt;/div&gt;</span>
-                            </li>
-                            <li class="L9">
-                                <span class="tag">&lt;div</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-footer"</span><span class="tag">&gt;</span>
-                            </li>
-                            <li class="L0">
-                                <span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="tag">&gt;</span><span class="pln">Close</span><span class="tag">&lt;/a&gt;</span>
-                            </li>
-                            <li class="L1">
-                                <span class="tag">&lt;a</span> <span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span> <span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="tag">&gt;</span><span class="pln">Save changes</span><span class="tag">&lt;/a&gt;</span>
-                            </li>
-                            <li class="L2">
-                                <span class="tag">&lt;/div&gt;</span>
-                            </li>
-                            <li class="L3">
-                                <span class="tag">&lt;/div&gt;</span>
-                            </li>
-                            <li class="L4">
-                                <span class="tag">&lt;/div&gt;</span>
-                            </li>
-                        </ol>
-                    </div>
-                    <hr>
-                </div>
-                <p>
-                    &nbsp;
-                </p>
-            </div>
-        </section>
+        <section id="modals" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/modals.html'">    
+            <div class="row">
+      <div class="page-header">
+        <h2>Modals</h2>
+      </div>     
+
+      <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+<div id="modal-example-HTML" style="display:block">
+    <div class="modal">
+      <div class="modal-header">
+        <button type="button" class="close" data-dismiss="modal" aria-hidden="true"></button>
+        <h3>Modal header</h3>
+      </div>
+      <div class="modal-body">
+        <p>One fine body…</p>
+      </div>
+      <div class="modal-footer">
+        <a href="#" class="btn">Close</a>
+        <a href="#" class="btn btn-primary">Save changes</a>
+      </div>
+    </div>
+</div>
+        <button class="btn btn-mini collapsed launch-demo-modal">
+          Launch Demo Modal
+        </button>
+        <button class="btn btn-mini collapsed" data-toggle="collapse" data-target="#modal-HTML">
+          <span class="show-collapsed">See HTML</span><span class="hide-expanded">Hide HTML</span>
+        </button>
+        <p>&nbsp;</p>
+
+        <div class="collapse" id="modal-HTML">
+          <button class="btn btn-mini" data-copy="2-clipboard" data-bind="attr: {'data-clipboard-text':$('#modal-example-HTML')[0].innerHTML.replace(/ da-clear ta-clear ma-clear/,'').replace(/style=*position: relative*/,'')}" data-clipboard-text="
+    &lt;div class=&quot;modal&quot;&gt;
+      &lt;div class=&quot;modal-header&quot;&gt;
+        &lt;button type=&quot;button&quot; class=&quot;close&quot; data-dismiss=&quot;modal&quot; aria-hidden=&quot;true&quot;&gt;&lt;/button&gt;
+        &lt;h3&gt;Modal header&lt;/h3&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-body&quot;&gt;
+        &lt;p&gt;One fine body…&lt;/p&gt;
+      &lt;/div&gt;
+      &lt;div class=&quot;modal-footer&quot;&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn&quot;&gt;Close&lt;/a&gt;
+        &lt;a href=&quot;#&quot; class=&quot;btn btn-primary&quot;&gt;Save changes&lt;/a&gt;
+      &lt;/div&gt;
+    &lt;/div&gt;
+">
+            Copy HTML
+          </button>
+          <pre class="prettyprint linenums prettyprinted" data-bind="text: $('#modal-example-HTML')[0].outerHTML.replace(/&lt;/g,'&lt;').replace(/ style=.*/g,'&gt;')" style=""><ol class="linenums"><li class="L0"><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">id</span><span class="pun">=</span><span class="atv">"modal-example-HTML"</span><span class="tag">&gt;</span></li><li class="L1"><span class="pln">    </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal"</span><span class="tag">&gt;</span></li><li class="L2"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-header"</span><span class="tag">&gt;</span></li><li class="L3"><span class="pln">        </span><span class="tag">&lt;button</span><span class="pln"> </span><span class="atn">type</span><span class="pun">=</span><span class="atv">"button"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"close"</span><span class="pln"> </span><span class="atn">data-dismiss</span><span class="pun">=</span><span class="atv">"modal"</span><span class="pln"> </span><span class="atn">aria-hidden</span><span class="pun">=</span><span class="atv">"true"</span><span class="tag">&gt;&lt;/button&gt;</span></li><li class="L4"><span class="pln">        </span><span class="tag">&lt;h3&gt;</span><span class="pln">Modal header</span><span class="tag">&lt;/h3&gt;</span></li><li class="L5"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li><li class="L6"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-body"</span><span class="tag">&gt;</span></li><li class="L7"><span class="pln">        </span><span class="tag">&lt;p&gt;</span><span class="pln">One fine body…</span><span class="tag">&lt;/p&gt;</span></li><li class="L8"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li><li class="L9"><span class="pln">      </span><span class="tag">&lt;div</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"modal-footer"</span><span class="tag">&gt;</span></li><li class="L0"><span class="pln">        </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn"</span><span class="tag">&gt;</span><span class="pln">Close</span><span class="tag">&lt;/a&gt;</span></li><li class="L1"><span class="pln">        </span><span class="tag">&lt;a</span><span class="pln"> </span><span class="atn">href</span><span class="pun">=</span><span class="atv">"#"</span><span class="pln"> </span><span class="atn">class</span><span class="pun">=</span><span class="atv">"btn btn-primary"</span><span class="tag">&gt;</span><span class="pln">Save changes</span><span class="tag">&lt;/a&gt;</span></li><li class="L2"><span class="pln">      </span><span class="tag">&lt;/div&gt;</span></li><li class="L3"><span class="pln">    </span><span class="tag">&lt;/div&gt;</span></li><li class="L4"><span class="tag">&lt;/div&gt;</span></li></ol></pre>
+        </div>
+        <hr>
+
+      </div>
+      <p>&nbsp;</p>
+    </div></section>
         <!-- ========= /modals ============= -->
         <!-- ======== tool tips ============ -->
 <section id="tooltips" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/tooltips.html'">
@@ -2695,9 +2665,7 @@ body{opacity:0}body.ng-scope{opacity:1}
                     </h2>
                 </div>
 
-                <script>
-                $(['data-toggle=tooltip']).tooltip();
-                </script>
+              
 
                 <div class="da-all ta-all ma-all">
                     <p id="tooltip-example-HTML">
@@ -2945,7 +2913,7 @@ body{opacity:0}body.ng-scope{opacity:1}
       <p>
 
 
-        </p><div class="alert alert-warning" id="collapsible-markup-warning">
+        </p><div class="alert alert-warning" id="collapsible-markup-warning"><a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
           <h4>Warning:</h4>
           <p><strong>Check your markup:</strong> If <code>show-collapsed</code> and <code>hide-expanded</code> classes are not behaving correctly it is possible that you added another class allong with these.  For example: <code>&lt;span class="show-collapsed ma-all da-hide ta-hide"&gt;Show Stuff <i aria-hidden="true" class="icon-ui-triangledown"></i>&lt;/span&gt;</code> will fail because ma-all overrides show-collapsed display settings. ma-all in this case should be a div parent to the show-collapsed.</p>
         </div>
@@ -3170,7 +3138,7 @@ body{opacity:0}body.ng-scope{opacity:1}
 
 
 
-        <div class="alert alert-info" id="popover-308-rules">
+        <div class="alert alert-info" id="popover-308-rules"><a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
           <h4>Dell 308 Styleguide Rules:</h4>
           <p>No two popovers should display at the same time.  Default bootstrap behavior is to allow multiple popovers to display therefore they should be manually triggered to hide all other instances before displayed.  <button class="btn btn-xs collapsed" data-toggle="collapse" data-target="#popover-JS"><span class="show-collapsed">See JavaScript below</span><span class="hide-expanded">Hide JavaScript below</span></button>
           </p>
@@ -3295,7 +3263,7 @@ $('#custom-popover').click(function(event){
     <div class="page-header">
       <h2>Wells and Containers</h2>
     </div> 
-        <div class="alert alert-info">
+        <div class="alert alert-info"><a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
           <p><strong>To copy icon HTML:</strong> Click on the <code>code sample</code> to copy to clipboard.</p>
         </div>
 
@@ -3362,7 +3330,7 @@ Facilisis in pretium nisl aliquet
 Nulla volutpat aliquam velit</p>
           </div>
           <div class="alert alert-info">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
             <strong>NOTICE:</strong> The use of <code>&lt;div class="blue rounded-large"&gt; ... &lt;/div&gt;</code> still works in this release of Dell 308 CSS but the native Bootstrap "well" classes should be used and have been augmented with Dell 308 colors.
           </div>
 
@@ -3406,7 +3374,7 @@ Nulla volutpat aliquam velit.</p>
 
 
           <div class="alert alert-info">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
             <strong>NOTICE:</strong> <code>&lt;div class="well-bleed"&gt; ... &lt;/div&gt;</code> is not a Bootstrap class.  All this class does it take out the padding and hide the overflow of a well. There is margin set for when an image is pulled to the right followed by other elements. For any other usage you have to take care of the padding/margin by custom class.
           </div>
 
@@ -3472,7 +3440,7 @@ Nulla volutpat aliquam velit</p>
           </div>
 
           <div class="alert alert-info">
-            <a class="close"><span aria-hidden="true" class="icon-ui-closecircle"></span></a>
+            <a class="close"><span aria-hidden="true" class="icon-ui-close"></span></a>
             <strong>NOTICE:</strong> <code>&lt;h4 class="well-title"&gt; ... &lt;/h4&gt;</code> is not a Bootstrap class.  Use this class to create a lable inside a well-color-stroke or color-stroke container. Note that the container must have a 20px top padding for the title to be properly placed. The title will also automatically inherit the color of the container stroke.
           </div>
 
@@ -3554,8 +3522,8 @@ Nulla volutpat aliquam velit</p>
     <li data-target="#carousel-example-gallery" data-slide-to="4" class=""></li>
 </ol>
  
-<a class="left carousel-control" href="#carousel-example-gallery" data-slide="prev"><span aria-hidden="true" class="icon-ui-arrowleft"></span></a>
-<a class="right carousel-control" href="#carousel-example-gallery" data-slide="next"><span aria-hidden="true" class="icon-ui-arrowright"></span></a>
+<a class="left carousel-control" href="#carousel-example-gallery" data-slide="prev"></a>
+<a class="right carousel-control" href="#carousel-example-gallery" data-slide="next"></a>
 </div><!--/carousel-example-gallery-->
  
 
@@ -3591,7 +3559,7 @@ Nulla volutpat aliquam velit</p>
   <div class="row-fluid">
     <div class="well well-berry well-bleed">
       <img src="http://placehold.it/1140x245" alt="Image" class="hidden-xs hidden-sm visible-md visible-lg">
-      <img src="http://placehold.it/400x245" alt="Image" class="visible-phone">
+      <img src="http://placehold.it/400x245" alt="Image" class="visible-xs visible-sm hidden-md hidden-lg">
       <div class="carousel-caption">
         <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
         tempor incididunt ut labore et dolore magna aliqua. </h2>
@@ -3600,7 +3568,9 @@ Nulla volutpat aliquam velit</p>
           consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
           cillum dolore eu fugiat nulla pariatur. 
         </p>
+        <p>
         <a href="#" class="btn btn-primary pull-right">Buy Now!</a>
+        </p>
       </div>
     </div>
   </div><!--/row-fluid-->
@@ -3608,17 +3578,23 @@ Nulla volutpat aliquam velit</p>
 <div class="item active">
   <div class="row-fluid">
     <div class="well well-gray-dark well-bleed">
-      <img src="http://placehold.it/1140x245" alt="Image" class="hidden-phone">
-      <img src="http://placehold.it/400x245" alt="Image" class="visible-phone">
+      <img src="http://placehold.it/1140x245" alt="Image" class="hidden-xs hidden-sm visible-md visible-lg">
+      <img src="http://placehold.it/400x245" alt="Image" class="visible-xs visible-sm hidden-md hidden-lg">
       <div class="carousel-caption">
-        <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
-        tempor incididunt ut labore et dolore magna aliqua. </h2>
-        <p>Ut enim ad minim veniam,
-          quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
-          consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
-          cillum dolore eu fugiat nulla pariatur. 
-        </p>
-        <a href="#" class="btn btn-primary pull-right">Buy Now!</a>
+       
+            <h2>Lorem ipsum dolor sit amet, consectetur adipisicing elit, sed do eiusmod
+            tempor incididunt ut labore et dolore magna aliqua. </h2>
+            <p>Ut enim ad minim veniam,
+              quis nostrud exercitation ullamco laboris nisi ut aliquip ex ea commodo
+              consequat. Duis aute irure dolor in reprehenderit in voluptate velit esse
+              cillum dolore eu fugiat nulla pariatur. 
+            </p>
+       
+        
+            <p>
+            <a href="#" class="btn btn-primary pull-right">Buy Now!</a>
+            </p>
+        
       </div>
     </div>
   </div><!--/row-fluid-->
@@ -3629,7 +3605,7 @@ Nulla volutpat aliquam velit</p>
 </div><!--/carousel-inner-->
  
 
-<ol class="carousel-indicators active">
+<ol class="carousel-indicators carousel-indicators-5 active">
     <li data-target="#carousel-example-gallery-caption" data-slide-to="0" class=""></li>
     <li data-target="#carousel-example-gallery-caption" data-slide-to="1" class=""></li>
     <li data-target="#carousel-example-gallery-caption" data-slide-to="2" class="active"></li>
@@ -3641,20 +3617,1391 @@ Nulla volutpat aliquam velit</p>
  
 
 
-<script type="text/javascript">
-$(document).ready(function() {
-  $('#carousel-example-gallery').carousel({
-  interval: 10000
-  })
-  $('#carousel-example-gallery-caption').carousel({
-  interval: 10000
-  })
-});
-</script>
+
     <hr>
     </div></div></section>
 
 <!-- +================== /carousels ============================ -->
+
+
+
+
+<!-- ================  UI icon ================ -->
+<section id="icons" class="col-xs-12 col-sm-12 col-md-12 col-lg-12" data-bind="include: 'pages/css-overview/icons.html'">
+    <div class="row">
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+     <div class="page-header">
+      <h2>Dell 308 Specific Icons</h2>
+    </div>     
+      <div class="alert alert-info">
+         <p><strong>To copy icon HTML:</strong> Just click on the icon and HTML will be copied to your clipboard.</p>
+      </div>
+      <h4>UI Icons</h4>
+      <p>Use the UI Icons for user interface elements. For crisper UI Icons use the following sizes: 14px, 28px and 42px.</p>
+  </div>
+  <div class="gray-stroke well well-rounded col-xs-12 col-sm-12 col-md-12 col-lg-12">
+    <div class="da1-da4 ta1-ta3 ma-all">
+       <ul class="unstyled icons">
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-arrowleft&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-arrowleft
+             ">
+             <i aria-hidden="true" class="icon-ui-arrowleft"></i> icon-ui-arrowleft
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-arrowright&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-arrowright
+             ">
+             <i aria-hidden="true" class="icon-ui-arrowright"></i> icon-ui-arrowright
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-close&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-close
+             ">
+             <i aria-hidden="true" class="icon-ui-close"></i> icon-ui-close
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-closecircle&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-closecircle
+             ">
+             <i aria-hidden="true" class="icon-ui-closecircle"></i> icon-ui-closecircle
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-collapse&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-collapse
+             ">
+             <i aria-hidden="true" class="icon-ui-collapse"></i> icon-ui-collapse
+             </span>
+          </li>
+       </ul>
+    </div>
+    <div class="da5-da9 ta4-ta6 ma-all">
+       <ul class="unstyled icons">
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-dell&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-dell
+             ">
+             <i aria-hidden="true" class="icon-ui-dell"></i> icon-ui-dell
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-expand&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-expand
+             ">
+             <i aria-hidden="true" class="icon-ui-expand"></i> icon-ui-expand
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-menucollapsed&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-menucollapsed
+             ">
+             <i aria-hidden="true" class="icon-ui-menucollapsed"></i> icon-ui-menucollapsed
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-minus&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-minus
+             ">
+             <i aria-hidden="true" class="icon-ui-minus"></i> icon-ui-minus
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-plus&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-plus
+             ">
+             <i aria-hidden="true" class="icon-ui-plus"></i> icon-ui-plus
+             </span>
+          </li>
+       </ul>
+    </div>
+    <div class="da10-da12 ta7-ta9 ma-all">
+       <ul class="unstyled icons">
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangledown&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-triangledown
+             ">
+             <i aria-hidden="true" class="icon-ui-triangledown"></i> icon-ui-triangledown
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangleleft&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-triangleleft
+             ">
+             <i aria-hidden="true" class="icon-ui-triangleleft"></i> icon-ui-triangleleft
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangleright&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-triangleright
+             ">
+             <i aria-hidden="true" class="icon-ui-triangleright"></i> icon-ui-triangleright
+             </span>
+          </li>
+          <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-ui-triangleup&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+             icon-ui-triangleup
+             ">
+             <i aria-hidden="true" class="icon-ui-triangleup"></i> icon-ui-triangleup
+             </span>
+          </li>
+       </ul>
+    </div>
+  </div>
+  <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Small Icons</h3>
+  <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The Small Icons have less detail and are intended to be used at the default font size of 14px. Please use the Small Icons for task based communications. For crisper Small Icons use the following sizes: 14px, 28px and 42px.</p>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 gray-stroke well well-rounded">
+    <div class="da1-da4 ta1-ta3 ma-all">
+      <ul class="unstyled icons">
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-add&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-add
+           ">
+           <i aria-hidden="true" class="icon-small-add"></i> icon-small-add
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-alertcomplete&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-alertcomplete
+           ">
+           <i aria-hidden="true" class="icon-small-alertcomplete"></i> icon-small-alertcomplete
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-alerterror&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-alerterror
+           ">
+           <i aria-hidden="true" class="icon-small-alerterror"></i> icon-small-alerterror
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-alertinfo&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-alertinfo
+           ">
+           <i aria-hidden="true" class="icon-small-alertinfo"></i> icon-small-alertinfo
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-alertnotice&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-alertnotice
+           ">
+           <i aria-hidden="true" class="icon-small-alertnotice"></i> icon-small-alertnotice
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-audiocard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-audiocard
+           ">
+           <i aria-hidden="true" class="icon-small-audiocard"></i> icon-small-audiocard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-audiospeaker&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-audiospeaker
+           ">
+           <i aria-hidden="true" class="icon-small-audiospeaker"></i> icon-small-audiospeaker
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-award&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-award
+           ">
+           <i aria-hidden="true" class="icon-small-award"></i> icon-small-award
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-battery&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-battery
+           ">
+           <i aria-hidden="true" class="icon-small-battery"></i> icon-small-battery
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-bell&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-bell
+           ">
+           <i aria-hidden="true" class="icon-small-bell"></i> icon-small-bell
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-cables&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-cables
+           ">
+           <i aria-hidden="true" class="icon-small-cables"></i> icon-small-cables
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-calculator&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-calculator
+           ">
+           <i aria-hidden="true" class="icon-small-calculator"></i> icon-small-calculator
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-calendar&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-calendar
+           ">
+           <i aria-hidden="true" class="icon-small-calendar"></i> icon-small-calendar
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-carryingcase&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-carryingcase
+           ">
+           <i aria-hidden="true" class="icon-small-carryingcase"></i> icon-small-carryingcase
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-cart&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-cart
+           ">
+           <i aria-hidden="true" class="icon-small-cart"></i> icon-small-cart
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-chat&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-chat
+           ">
+           <i aria-hidden="true" class="icon-small-chat"></i> icon-small-chat
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-checkmark&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-checkmark
+           ">
+           <i aria-hidden="true" class="icon-small-checkmark"></i> icon-small-checkmark
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-chipset&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-chipset
+           ">
+           <i aria-hidden="true" class="icon-small-chipset"></i> icon-small-chipset
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-clock&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-clock
+           ">
+           <i aria-hidden="true" class="icon-small-clock"></i> icon-small-clock
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-cloud&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-cloud
+           ">
+           <i aria-hidden="true" class="icon-small-cloud"></i> icon-small-cloud
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-color&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-color
+           ">
+           <i aria-hidden="true" class="icon-small-color"></i> icon-small-color
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-computergeneric&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-computergeneric
+           ">
+           <i aria-hidden="true" class="icon-small-computergeneric"></i> icon-small-computergeneric
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-contact&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-contact
+           ">
+           <i aria-hidden="true" class="icon-small-contact"></i> icon-small-contact
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-copy&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-copy
+           ">
+           <i aria-hidden="true" class="icon-small-copy"></i> icon-small-copy
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-creditcvv&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-creditcvv
+           ">
+           <i aria-hidden="true" class="icon-small-creditcvv"></i> icon-small-creditcvv
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-data&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-data
+           ">
+           <i aria-hidden="true" class="icon-small-data"></i> icon-small-data
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-deals&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-deals
+           ">
+           <i aria-hidden="true" class="icon-small-deals"></i> icon-small-deals
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-diagnostic&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-diagnostic
+           ">
+           <i aria-hidden="true" class="icon-small-diagnostic"></i> icon-small-diagnostic
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-dimensionsweight&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-dimensionsweight
+           ">
+           <i aria-hidden="true" class="icon-small-dimensionsweight"></i> icon-small-dimensionsweight
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-display&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-display
+           ">
+           <i aria-hidden="true" class="icon-small-display"></i> icon-small-display
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-download&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-download
+           ">
+           <i aria-hidden="true" class="icon-small-download"></i> icon-small-download
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-drivers&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-drivers
+           ">
+           <i aria-hidden="true" class="icon-small-drivers"></i> icon-small-drivers
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-edit&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-edit
+           ">
+           <i aria-hidden="true" class="icon-small-edit"></i> icon-small-edit
+           </span>
+        </li>
+      </ul>
+    </div>
+    <div class="da5-da8 ta4-ta6 ma-all">
+      <ul class="unstyled icons">
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-employee&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-employee
+           ">
+           <i aria-hidden="true" class="icon-small-employee"></i> icon-small-employee
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-energyefficient&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-energyefficient
+           ">
+           <i aria-hidden="true" class="icon-small-energyefficient"></i> icon-small-energyefficient
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-favorite&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-favorite
+           ">
+           <i aria-hidden="true" class="icon-small-favorite"></i> icon-small-favorite
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-giftcard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-giftcard
+           ">
+           <i aria-hidden="true" class="icon-small-giftcard"></i> icon-small-giftcard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-globe&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-globe
+           ">
+           <i aria-hidden="true" class="icon-small-globe"></i> icon-small-globe
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-harddrive&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-harddrive
+           ">
+           <i aria-hidden="true" class="icon-small-harddrive"></i> icon-small-harddrive
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-help&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-help
+           ">
+           <i aria-hidden="true" class="icon-small-help"></i> icon-small-help
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-house&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-house
+           ">
+           <i aria-hidden="true" class="icon-small-house"></i> icon-small-house
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-inktoner&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-inktoner
+           ">
+           <i aria-hidden="true" class="icon-small-inktoner"></i> icon-small-inktoner
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-keyboard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-keyboard
+           ">
+           <i aria-hidden="true" class="icon-small-keyboard"></i> icon-small-keyboard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-lightbulb&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-lightbulb
+           ">
+           <i aria-hidden="true" class="icon-small-lightbulb"></i> icon-small-lightbulb
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-location&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-location
+           ">
+           <i aria-hidden="true" class="icon-small-location"></i> icon-small-location
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-mail&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-mail
+           ">
+           <i aria-hidden="true" class="icon-small-mail"></i> icon-small-mail
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-memory&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-memory
+           ">
+           <i aria-hidden="true" class="icon-small-memory"></i> icon-small-memory
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-memorycardreader&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-memorycardreader
+           ">
+           <i aria-hidden="true" class="icon-small-memorycardreader"></i> icon-small-memorycardreader
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-missingimage&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-missingimage
+           ">
+           <i aria-hidden="true" class="icon-small-missingimage"></i> icon-small-missingimage
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-mobile&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-mobile
+           ">
+           <i aria-hidden="true" class="icon-small-mobile"></i> icon-small-mobile
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-mouse&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-mouse
+           ">
+           <i aria-hidden="true" class="icon-small-mouse"></i> icon-small-mouse
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-music&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-music
+           ">
+           <i aria-hidden="true" class="icon-small-music"></i> icon-small-music
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-network&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-network
+           ">
+           <i aria-hidden="true" class="icon-small-network"></i> icon-small-network
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-operatingsystem&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-operatingsystem
+           ">
+           <i aria-hidden="true" class="icon-small-operatingsystem"></i> icon-small-operatingsystem
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-opticaldrive&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-opticaldrive
+           ">
+           <i aria-hidden="true" class="icon-small-opticaldrive"></i> icon-small-opticaldrive
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-package&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-package
+           ">
+           <i aria-hidden="true" class="icon-small-package"></i> icon-small-package
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-performance&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-performance
+           ">
+           <i aria-hidden="true" class="icon-small-performance"></i> icon-small-performance
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-phone&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-phone
+           ">
+           <i aria-hidden="true" class="icon-small-phone"></i> icon-small-phone
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-photos&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-photos
+           ">
+           <i aria-hidden="true" class="icon-small-photos"></i> icon-small-photos
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-play&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-play
+           ">
+           <i aria-hidden="true" class="icon-small-play"></i> icon-small-play
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-ports&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-ports
+           ">
+           <i aria-hidden="true" class="icon-small-ports"></i> icon-small-ports
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-powersupply&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-powersupply
+           ">
+           <i aria-hidden="true" class="icon-small-powersupply"></i> icon-small-powersupply
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-printer&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-printer
+           ">
+           <i aria-hidden="true" class="icon-small-printer"></i> icon-small-printer
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-processor&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-processor
+           ">
+           <i aria-hidden="true" class="icon-small-processor"></i> icon-small-processor
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-projector&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-projector
+           ">
+           <i aria-hidden="true" class="icon-small-projector"></i> icon-small-projector
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-protection&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-protection
+           ">
+           <i aria-hidden="true" class="icon-small-protection"></i> icon-small-protection
+           </span>
+        </li>
+      </ul>
+    </div>
+    <div class="da9-da12 ta7-ta9 ma-all">
+      <ul class="unstyled icons">
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-recycle&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-recycle
+           ">
+           <i aria-hidden="true" class="icon-small-recycle"></i> icon-small-recycle
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-rss&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-rss
+           ">
+           <i aria-hidden="true" class="icon-small-rss"></i> icon-small-rss
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-save&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-save
+           ">
+           <i aria-hidden="true" class="icon-small-save"></i> icon-small-save
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-searchleft&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-searchleft
+           ">
+           <i aria-hidden="true" class="icon-small-searchleft"></i> icon-small-searchleft
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-searchright&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-searchright
+           ">
+           <i aria-hidden="true" class="icon-small-searchright"></i> icon-small-searchright
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-secure&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-secure
+           ">
+           <i aria-hidden="true" class="icon-small-secure"></i> icon-small-secure
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-securesoftware&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-securesoftware
+           ">
+           <i aria-hidden="true" class="icon-small-securesoftware"></i> icon-small-securesoftware
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-server&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-server
+           ">
+           <i aria-hidden="true" class="icon-small-server"></i> icon-small-server
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-serverrack&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-serverrack
+           ">
+           <i aria-hidden="true" class="icon-small-serverrack"></i> icon-small-serverrack
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-share&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-share
+           ">
+           <i aria-hidden="true" class="icon-small-share"></i> icon-small-share
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-shipping&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-shipping
+           ">
+           <i aria-hidden="true" class="icon-small-shipping"></i> icon-small-shipping
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-shipsfast&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-shipsfast
+           ">
+           <i aria-hidden="true" class="icon-small-shipsfast"></i> icon-small-shipsfast
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-software&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-software
+           ">
+           <i aria-hidden="true" class="icon-small-software"></i> icon-small-software
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-speakers&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-speakers
+           ">
+           <i aria-hidden="true" class="icon-small-speakers"></i> icon-small-speakers
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-storage&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-storage
+           ">
+           <i aria-hidden="true" class="icon-small-storage"></i> icon-small-storage
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-support&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-support
+           ">
+           <i aria-hidden="true" class="icon-small-support"></i> icon-small-support
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-surgeprotection&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-surgeprotection
+           ">
+           <i aria-hidden="true" class="icon-small-surgeprotection"></i> icon-small-surgeprotection
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-tablet&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-tablet
+           ">
+           <i aria-hidden="true" class="icon-small-tablet"></i> icon-small-tablet
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-thinclient&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-thinclient
+           ">
+           <i aria-hidden="true" class="icon-small-thinclient"></i> icon-small-thinclient
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-touch&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-touch
+           ">
+           <i aria-hidden="true" class="icon-small-touch"></i> icon-small-touch
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-touchpad&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-touchpad
+           ">
+           <i aria-hidden="true" class="icon-small-touchpad"></i> icon-small-touchpad
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-towergeneric&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-towergeneric
+           ">
+           <i aria-hidden="true" class="icon-small-towergeneric"></i> icon-small-towergeneric
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-trash&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-trash
+           ">
+           <i aria-hidden="true" class="icon-small-trash"></i> icon-small-trash
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-useraccount&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-useraccount
+           ">
+           <i aria-hidden="true" class="icon-small-useraccount"></i> icon-small-useraccount
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-video&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-video
+           ">
+           <i aria-hidden="true" class="icon-small-video"></i> icon-small-video
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-videocard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-videocard
+           ">
+           <i aria-hidden="true" class="icon-small-videocard"></i> icon-small-videocard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-warranty&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-warranty
+           ">
+           <i aria-hidden="true" class="icon-small-warranty"></i> icon-small-warranty
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-webcam&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-webcam
+           ">
+           <i aria-hidden="true" class="icon-small-webcam"></i> icon-small-webcam
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-whitepaper&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-whitepaper
+           ">
+           <i aria-hidden="true" class="icon-small-whitepaper"></i> icon-small-whitepaper
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-wireless&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-wireless
+           ">
+           <i aria-hidden="true" class="icon-small-wireless"></i> icon-small-wireless
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-zoomin&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-zoomin
+           ">
+           <i aria-hidden="true" class="icon-small-zoomin"></i> icon-small-zoomin
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-small-zoomout&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-small-zoomout
+           ">
+           <i aria-hidden="true" class="icon-small-zoomout"></i> icon-small-zoomout
+           </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Large Icons</h3>
+  <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">The Large Icons have more detail then the Small Icons. These should be used to support content only. For crisper Large Icons use the following sizes: 36px, 72px and 108px.</p>
+  <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12 gray-stroke well well-rounded large-icons">
+    <div class="da1-da4 ta1-ta3 ma-all">
+      <ul class="unstyled icons">
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-add&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-add
+           ">
+           <i aria-hidden="true" class="icon-large-add"></i> icon-large-add
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-alertcomplete&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-alertcomplete
+           ">
+           <i aria-hidden="true" class="icon-large-alertcomplete"></i> icon-large-alertcomplete
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-alerterror&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-alerterror
+           ">
+           <i aria-hidden="true" class="icon-large-alerterror"></i> icon-large-alerterror
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-alertinfo&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-alertinfo
+           ">
+           <i aria-hidden="true" class="icon-large-alertinfo"></i> icon-large-alertinfo
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-alertnotice&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-alertnotice
+           ">
+           <i aria-hidden="true" class="icon-large-alertnotice"></i> icon-large-alertnotice
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-audiocard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-audiocard
+           ">
+           <i aria-hidden="true" class="icon-large-audiocard"></i> icon-large-audiocard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-audiospeaker&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-audiospeaker
+           ">
+           <i aria-hidden="true" class="icon-large-audiospeaker"></i> icon-large-audiospeaker
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-award&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-award
+           ">
+           <i aria-hidden="true" class="icon-large-award"></i> icon-large-award
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-battery&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-battery
+           ">
+           <i aria-hidden="true" class="icon-large-battery"></i> icon-large-battery
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-bell&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-bell
+           ">
+           <i aria-hidden="true" class="icon-large-bell"></i> icon-large-bell
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-cables&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-cables
+           ">
+           <i aria-hidden="true" class="icon-large-cables"></i> icon-large-cables
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-calculator&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-calculator
+           ">
+           <i aria-hidden="true" class="icon-large-calculator"></i> icon-large-calculator
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-calendar&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-calendar
+           ">
+           <i aria-hidden="true" class="icon-large-calendar"></i> icon-large-calendar
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-carryingcase&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-carryingcase
+           ">
+           <i aria-hidden="true" class="icon-large-carryingcase"></i> icon-large-carryingcase
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-cart&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-cart
+           ">
+           <i aria-hidden="true" class="icon-large-cart"></i> icon-large-cart
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-chat&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-chat
+           ">
+           <i aria-hidden="true" class="icon-large-chat"></i> icon-large-chat
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-checkmark&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-checkmark
+           ">
+           <i aria-hidden="true" class="icon-large-checkmark"></i> icon-large-checkmark
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-chipset&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-chipset
+           ">
+           <i aria-hidden="true" class="icon-large-chipset"></i> icon-large-chipset
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-clock&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-clock
+           ">
+           <i aria-hidden="true" class="icon-large-clock"></i> icon-large-clock
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-cloud&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-cloud
+           ">
+           <i aria-hidden="true" class="icon-large-cloud"></i> icon-large-cloud
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-color&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-color
+           ">
+           <i aria-hidden="true" class="icon-large-color"></i> icon-large-color
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-computergeneric&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-computergeneric
+           ">
+           <i aria-hidden="true" class="icon-large-computergeneric"></i> icon-large-computergeneric
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-contact&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-contact
+           ">
+           <i aria-hidden="true" class="icon-large-contact"></i> icon-large-contact
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-copy&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-copy
+           ">
+           <i aria-hidden="true" class="icon-large-copy"></i> icon-large-copy
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-creditcvv&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-creditcvv
+           ">
+           <i aria-hidden="true" class="icon-large-creditcvv"></i> icon-large-creditcvv
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-data&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-data
+           ">
+           <i aria-hidden="true" class="icon-large-data"></i> icon-large-data
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-deals&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-deals
+           ">
+           <i aria-hidden="true" class="icon-large-deals"></i> icon-large-deals
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-diagnostic&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-diagnostic
+           ">
+           <i aria-hidden="true" class="icon-large-diagnostic"></i> icon-large-diagnostic
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-dimensionsweight&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-dimensionsweight
+           ">
+           <i aria-hidden="true" class="icon-large-dimensionsweight"></i> icon-large-dimensionsweight
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-display&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-display
+           ">
+           <i aria-hidden="true" class="icon-large-display"></i> icon-large-display
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-download&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-download
+           ">
+           <i aria-hidden="true" class="icon-large-download"></i> icon-large-download
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-drivers&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-drivers
+           ">
+           <i aria-hidden="true" class="icon-large-drivers"></i> icon-large-drivers
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-edit&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-edit
+           ">
+           <i aria-hidden="true" class="icon-large-edit"></i> icon-large-edit
+           </span>
+        </li>
+      </ul>
+    </div>
+    <div class="da5-da8 ta4-ta6 ma-all">
+      <ul class="unstyled icons">
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-employee&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-employee
+           ">
+           <i aria-hidden="true" class="icon-large-employee"></i> icon-large-employee
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-energyefficient&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-energyefficient
+           ">
+           <i aria-hidden="true" class="icon-large-energyefficient"></i> icon-large-energyefficient
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-favorite&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-favorite
+           ">
+           <i aria-hidden="true" class="icon-large-favorite"></i> icon-large-favorite
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-giftcard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-giftcard
+           ">
+           <i aria-hidden="true" class="icon-large-giftcard"></i> icon-large-giftcard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-globe&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-globe
+           ">
+           <i aria-hidden="true" class="icon-large-globe"></i> icon-large-globe
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-harddrive&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-harddrive
+           ">
+           <i aria-hidden="true" class="icon-large-harddrive"></i> icon-large-harddrive
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-help&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-help
+           ">
+           <i aria-hidden="true" class="icon-large-help"></i> icon-large-help
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-house&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-house
+           ">
+           <i aria-hidden="true" class="icon-large-house"></i> icon-large-house
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-inktoner&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-inktoner
+           ">
+           <i aria-hidden="true" class="icon-large-inktoner"></i> icon-large-inktoner
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-keyboard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-keyboard
+           ">
+           <i aria-hidden="true" class="icon-large-keyboard"></i> icon-large-keyboard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-lightbulb&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-lightbulb
+           ">
+           <i aria-hidden="true" class="icon-large-lightbulb"></i> icon-large-lightbulb
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-location&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-location
+           ">
+           <i aria-hidden="true" class="icon-large-location"></i> icon-large-location
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-mail&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-mail
+           ">
+           <i aria-hidden="true" class="icon-large-mail"></i> icon-large-mail
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-memory&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-memory
+           ">
+           <i aria-hidden="true" class="icon-large-memory"></i> icon-large-memory
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-memorycardreader&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-memorycardreader
+           ">
+           <i aria-hidden="true" class="icon-large-memorycardreader"></i> icon-large-memorycardreader
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-missingimage&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-missingimage
+           ">
+           <i aria-hidden="true" class="icon-large-missingimage"></i> icon-large-missingimage
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-mobile&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-mobile
+           ">
+           <i aria-hidden="true" class="icon-large-mobile"></i> icon-large-mobile
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-mouse&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-mouse
+           ">
+           <i aria-hidden="true" class="icon-large-mouse"></i> icon-large-mouse
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-music&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-music
+           ">
+           <i aria-hidden="true" class="icon-large-music"></i> icon-large-music
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-network&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-network
+           ">
+           <i aria-hidden="true" class="icon-large-network"></i> icon-large-network
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-operatingsystem&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-operatingsystem
+           ">
+           <i aria-hidden="true" class="icon-large-operatingsystem"></i> icon-large-operatingsystem
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-opticaldrive&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-opticaldrive
+           ">
+           <i aria-hidden="true" class="icon-large-opticaldrive"></i> icon-large-opticaldrive
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-package&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-package
+           ">
+           <i aria-hidden="true" class="icon-large-package"></i> icon-large-package
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-performance&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-performance
+           ">
+           <i aria-hidden="true" class="icon-large-performance"></i> icon-large-performance
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-phone&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-phone
+           ">
+           <i aria-hidden="true" class="icon-large-phone"></i> icon-large-phone
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-photos&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-photos
+           ">
+           <i aria-hidden="true" class="icon-large-photos"></i> icon-large-photos
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-play&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-play
+           ">
+           <i aria-hidden="true" class="icon-large-play"></i> icon-large-play
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-ports&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-ports
+           ">
+           <i aria-hidden="true" class="icon-large-ports"></i> icon-large-ports
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-powersupply&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-powersupply
+           ">
+           <i aria-hidden="true" class="icon-large-powersupply"></i> icon-large-powersupply
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-printer&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-printer
+           ">
+           <i aria-hidden="true" class="icon-large-printer"></i> icon-large-printer
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-processor&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-processor
+           ">
+           <i aria-hidden="true" class="icon-large-processor"></i> icon-large-processor
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-projector&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-projector
+           ">
+           <i aria-hidden="true" class="icon-large-projector"></i> icon-large-projector
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-protection&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-protection
+           ">
+           <i aria-hidden="true" class="icon-large-protection"></i> icon-large-protection
+           </span>
+        </li>
+      </ul>
+    </div>
+    <div class="da9-da12 ta7-ta9 ma-all">
+      <ul class="unstyled icons">
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-recycle&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-recycle
+           ">
+           <i aria-hidden="true" class="icon-large-recycle"></i> icon-large-recycle
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-rss&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-rss
+           ">
+           <i aria-hidden="true" class="icon-large-rss"></i> icon-large-rss
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-save&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-save
+           ">
+           <i aria-hidden="true" class="icon-large-save"></i> icon-large-save
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-searchleft&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-searchleft
+           ">
+           <i aria-hidden="true" class="icon-large-searchleft"></i> icon-large-searchleft
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-searchright&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-searchright
+           ">
+           <i aria-hidden="true" class="icon-large-searchright"></i> icon-large-searchright
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-secure&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-secure
+           ">
+           <i aria-hidden="true" class="icon-large-secure"></i> icon-large-secure
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-securesoftware&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-securesoftware
+           ">
+           <i aria-hidden="true" class="icon-large-securesoftware"></i> icon-large-securesoftware
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-server&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-server
+           ">
+           <i aria-hidden="true" class="icon-large-server"></i> icon-large-server
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-serverrack&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-serverrack
+           ">
+           <i aria-hidden="true" class="icon-large-serverrack"></i> icon-large-serverrack
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-share&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-share
+           ">
+           <i aria-hidden="true" class="icon-large-share"></i> icon-large-share
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-shipping&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-shipping
+           ">
+           <i aria-hidden="true" class="icon-large-shipping"></i> icon-large-shipping
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-shipsfast&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-shipsfast
+           ">
+           <i aria-hidden="true" class="icon-large-shipsfast"></i> icon-large-shipsfast
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-software&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-software
+           ">
+           <i aria-hidden="true" class="icon-large-software"></i> icon-large-software
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-speakers&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-speakers
+           ">
+           <i aria-hidden="true" class="icon-large-speakers"></i> icon-large-speakers
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-storage&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-storage
+           ">
+           <i aria-hidden="true" class="icon-large-storage"></i> icon-large-storage
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-support&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-support
+           ">
+           <i aria-hidden="true" class="icon-large-support"></i> icon-large-support
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-surgeprotection&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-surgeprotection
+           ">
+           <i aria-hidden="true" class="icon-large-surgeprotection"></i> icon-large-surgeprotection
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-tablet&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-tablet
+           ">
+           <i aria-hidden="true" class="icon-large-tablet"></i> icon-large-tablet
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-thinclient&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-thinclient
+           ">
+           <i aria-hidden="true" class="icon-large-thinclient"></i> icon-large-thinclient
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-touch&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-touch
+           ">
+           <i aria-hidden="true" class="icon-large-touch"></i> icon-large-touch
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-touchpad&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-touchpad
+           ">
+           <i aria-hidden="true" class="icon-large-touchpad"></i> icon-large-touchpad
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-towergeneric&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-towergeneric
+           ">
+           <i aria-hidden="true" class="icon-large-towergeneric"></i> icon-large-towergeneric
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-trash&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-trash
+           ">
+           <i aria-hidden="true" class="icon-large-trash"></i> icon-large-trash
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-useraccount&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-useraccount
+           ">
+           <i aria-hidden="true" class="icon-large-useraccount"></i> icon-large-useraccount
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-video&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-video
+           ">
+           <i aria-hidden="true" class="icon-large-video"></i> icon-large-video
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-videocard&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-videocard
+           ">
+           <i aria-hidden="true" class="icon-large-videocard"></i> icon-large-videocard
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-warranty&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-warranty
+           ">
+           <i aria-hidden="true" class="icon-large-warranty"></i> icon-large-warranty
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-webcam&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-webcam
+           ">
+           <i aria-hidden="true" class="icon-large-webcam"></i> icon-large-webcam
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-whitepaper&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-whitepaper
+           ">
+           <i aria-hidden="true" class="icon-large-whitepaper"></i> icon-large-whitepaper
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-wifi&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-wifi
+           ">
+           <i aria-hidden="true" class="icon-large-wifi"></i> icon-large-wifi
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-zoomin&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-zoomin
+           ">
+           <i aria-hidden="true" class="icon-large-zoomin"></i> icon-large-zoomin
+           </span>
+        </li>
+        <li><span data-clipboard-text="&lt;i aria-hidden=&quot;true&quot; class=&quot;icon-large-zoomout&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="
+           icon-large-zoomout
+           ">
+           <i aria-hidden="true" class="icon-large-zoomout"></i> icon-large-zoomout
+           </span>
+        </li>
+      </ul>
+    </div>
+  </div>
+  
+  <h3 class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Native Bootstrap icon class names that map to Dell 308</h3>
+  <p class="col-xs-12 col-sm-12 col-md-12 col-lg-12">Some of the bootstrap icon class names map to </p>
+  <p></p>
+  <div class="gray-stroke well well-rounded da-all ta-all ma-all">
+    <ul class="unstyled the-icons clearfix">
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-search&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-search"><i class="icon-search"></i> icon-search</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-envelope&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-envelope"><i class="icon-envelope"></i> icon-envelope</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-star&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-star"><i class="icon-star"></i> icon-star</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-user&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-user"><i class="icon-user"></i> icon-user</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-ok&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-ok"><i class="icon-ok"></i> icon-ok</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-remove&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-remove"><i class="icon-remove"></i> icon-remove</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-zoom-in&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-zoom-in"><i class="icon-zoom-in"></i> icon-zoom-in</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-zoom-out&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-zoom-out"><i class="icon-zoom-out"></i> icon-zoom-out</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-cog&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-cog"><i class="icon-cog"></i> icon-cog</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-trash&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-trash"><i class="icon-trash"></i> icon-trash</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-home&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-home"><i class="icon-home"></i> icon-home</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-time&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-time"><i class="icon-time"></i> icon-time</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-download-alt&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-download-alt"><i class="icon-download-alt"></i> icon-download-alt</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-download&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-download"><i class="icon-download"></i> icon-download</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-lock&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-lock"><i class="icon-lock"></i> icon-lock</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-print&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-print"><i class="icon-print"></i> icon-print</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-camera&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-camera"><i class="icon-camera"></i> icon-camera</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-pencil&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-pencil"><i class="icon-pencil"></i> icon-pencil</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-map-marker&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-map-marker"><i class="icon-map-marker"></i> icon-map-marker</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-chevron-left&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-chevron-left"><i class="icon-chevron-left"></i> icon-chevron-left</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-chevron-right&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-chevron-right"><i class="icon-chevron-right"></i> icon-chevron-right</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-plus-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-plus-sign"><i class="icon-plus-sign"></i> icon-plus-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-minus-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-minus-sign"><i class="icon-minus-sign"></i> icon-minus-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-remove-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-remove-sign"><i class="icon-remove-sign"></i> icon-remove-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-question-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-question-sign"><i class="icon-question-sign"></i> icon-question-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-info-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-info-sign"><i class="icon-info-sign"></i> icon-info-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-arrow-left&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-arrow-left"><i class="icon-arrow-left"></i> icon-arrow-left</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-arrow-right&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-arrow-right"><i class="icon-arrow-right"></i> icon-arrow-right</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-arrow-up&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-arrow-up"><i class="icon-arrow-up"></i> icon-arrow-up</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-arrow-down&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-arrow-down"><i class="icon-arrow-down"></i> icon-arrow-down</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-share-alt&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-share-alt"><i class="icon-share-alt"></i> icon-share-alt</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-plus&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-plus"><i class="icon-plus"></i> icon-plus</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-minus&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-minus"><i class="icon-minus"></i> icon-minus</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-exclamation-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-exclamation-sign"><i class="icon-exclamation-sign"></i> icon-exclamation-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-gift&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-gift"><i class="icon-gift"></i> icon-gift</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-leaf&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-leaf"><i class="icon-leaf"></i> icon-leaf</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-warning-sign&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-warning-sign"><i class="icon-warning-sign"></i> icon-warning-sign</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-calendar&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-calendar"><i class="icon-calendar"></i> icon-calendar</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-comment&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-comment"><i class="icon-comment"></i> icon-comment</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-shopping-cart&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-shopping-cart"><i class="icon-shopping-cart"></i> icon-shopping-cart</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-hdd&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-hdd"><i class="icon-hdd"></i> icon-hdd</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-bell&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-bell"><i class="icon-bell"></i> icon-bell</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-certificate&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-certificate"><i class="icon-certificate"></i> icon-certificate</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-globe&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-globe"><i class="icon-globe"></i> icon-globe</span></li>
+      <li><span data-clipboard-text="&lt;i class=&quot;icon-wrench&quot;&gt;&lt;/i&gt;" data-copy="2-clipboard" data-original-title="icon-wrench"><i class="icon-wrench"></i> icon-wrench</span></li>
+    </ul>
+  </div>
+</div></section>
+<!-- ================ UI Icons ============== -->
+
+
 
         <!-- ================= footer ============== -->
         <footer>
