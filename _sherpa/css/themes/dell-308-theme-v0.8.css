@@ -722,6 +722,9 @@ code {
   border: 1px solid #e1e1e8;
   white-space: nowrap;
 }
+.strike-through {
+  text-decoration: line-through;
+}
 p {
   margin: 0 0 10.000000003px;
 }
@@ -1033,7 +1036,7 @@ h6 {
   max-width: 80%;
 }
 .lead {
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
   font-size: 18.060000000000002px;
   font-weight: normal;
   line-height: 22px;
@@ -1060,7 +1063,7 @@ blockquote p {
 }
 blockquote small {
   display: block;
-  line-height: 1.428571429;
+  line-height: 20px;
   color: #737373;
   font-style: italic;
 }
@@ -1097,9 +1100,9 @@ abbr[data-original-title] {
     line-height: 20px;
   }
   .lead {
-    margin-bottom: 1.428571429;
+    margin-bottom: 20px;
     font-size: 18.060000000000002px;
-    line-height: 3.428571429;
+    line-height: 22px;
   }
   .title {
     background-position: 50% 13px;
@@ -1274,6 +1277,15 @@ form div {
 }
 legend {
   color: #444444;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 40px;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
 }
 legend small {
   color: #737373;
@@ -1361,7 +1373,7 @@ input[type="checkbox"]:focus {
 }
 input[type="radio"],
 input[type="checkbox"] {
-  margin: 1px 0 0;
+  margin: none;
   margin-top: 1px \9;
   line-height: normal;
 }
@@ -1837,11 +1849,30 @@ input.search-query {
   margin-bottom: 0;
   padding-top: 5px;
 }
+.form-horizontal .controls {
+  margin-left: 180px;
+  width: auto;
+}
+@media only screen and (max-width: 767px) {
+  .form-horizontal .control-label {
+    float: none;
+    width: auto;
+    padding-top: 0;
+    text-align: left;
+  }
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 .control-group {
-  margin-bottom: 0.7142857145;
+  margin-bottom: 10px;
 }
 legend + .control-group {
-  margin-top: 1.428571429;
+  margin-top: 20px;
   -webkit-margin-top-collapse: separate;
 }
 .form-horizontal .control-group {
@@ -1883,7 +1914,7 @@ textarea + .help-block,
 .uneditable-input + .help-block,
 .input-prepend + .help-block,
 .input-append + .help-block {
-  margin-top: 0.7142857145;
+  margin-top: 10px;
 }
 .form-actions {
   padding-left: 180px;
@@ -1986,6 +2017,27 @@ textarea + .help-block,
 .input-xxlarge {
   width: 530px;
 }
+@media only screen and (max-width: 980px) {
+  .input-large,
+  .input-xlarge,
+  .input-xxlarge,
+  input[class*="span"],
+  select[class*="span"],
+  textarea[class*="span"],
+  .uneditable-input {
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+@media only screen and (max-width: 980px) {
+  .input-xxlarge {
+    width: 100%!important;
+  }
+}
 span.uneditable-input {
   padding-top: 7px;
 }
@@ -2019,7 +2071,7 @@ table {
 .table thead > tr > td,
 .table tbody > tr > td,
 .table tfoot > tr > td {
-  padding: 8px;
+  padding: 8px 5px;
   line-height: 20px;
   vertical-align: top;
   border: none;
@@ -2330,6 +2382,14 @@ li.dropdown .dropdown-menu {
 }
 .well-bleed img.pull-right ~ :not(img) {
   margin-left: 20px;
+}
+@media only screen and (max-width: 767px) {
+  .well-bleed > :last-child {
+    margin-bottom: 10px;
+  }
+  .well-bleed img.pull-right {
+    padding-bottom: 10px;
+  }
 }
 .well-large {
   padding: 20px;
@@ -3840,8 +3900,8 @@ input[type="submit"].btn.btn-xs {
 }
 .btn-toolbar {
   font-size: 0;
-  margin-top: 0.7142857145;
-  margin-bottom: 0.7142857145;
+  margin-top: 10px;
+  margin-bottom: 10px;
 }
 .btn-toolbar > .btn + .btn,
 .btn-toolbar > .btn-group + .btn,
@@ -4036,7 +4096,7 @@ input[type="submit"].btn.btn-xs {
 .alert {
   color: #444444;
   padding: 10px 20px 10px 45px;
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
   text-shadow: none;
   background-color: #ffffc9;
   border: 1px solid #eeeeee;
@@ -4348,7 +4408,7 @@ input[type="submit"].btn.btn-xs {
   z-index: 1;
   -webkit-box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);
   box-shadow: -10px 0px 5px -9px rgba(0, 0, 0, 0.4);
-  margin-bottom: 1.428571429;
+  margin-bottom: 20px;
 }
 .tabbable.tabs-aside .tab-content:before {
   content: " ";
@@ -4420,7 +4480,7 @@ input[type="submit"].btn.btn-xs {
   -webkit-box-shadow: inset -10px 0px 10px -9px rgba(0, 0, 0, 0.8);
   box-shadow: inset -10px 0px 10px -9px rgba(0, 0, 0, 0.8);
   border-bottom: #666 1px solid;
-  padding-top: 1.428571429;
+  padding-top: 20px;
 }
 .nav-list.nav-aside > li a:hover {
   background-color: #cce7f3;
@@ -4671,32 +4731,50 @@ input[type="submit"].btn.btn-xs {
 .pagination.pagination-unnumbered .zoom-controls [class^="icon-small-zoom"]:hover {
   color: #cce7f3;
 }
-.bottom-offset-mini {
-  margin-bottom: 0.7142857145;
-}
-.bottom-offset-small {
-  margin-bottom: 1.428571429;
-}
-.bottom-offset-medium {
-  margin-bottom: 2.857142858;
-}
-.bottom-offset-large {
-  margin-bottom: 4.285714287;
+.offset-examples .well {
+  height: 200px;
 }
 .top-offset-mini {
-  margin-top: 0.7142857145;
+  margin-top: 10px;
 }
 .top-offset-small {
-  margin-top: 1.428571429;
+  margin-top: 20px;
 }
 .top-offset-medium {
-  margin-top: 2.857142858;
+  margin-top: 40px;
 }
 .top-offset-large {
-  margin-top: 4.285714287;
+  margin-top: 60px;
+}
+.offset-examples hr {
+  clear: both;
+  border-top: none !important;
+  border-bottom: 1px solid #dc5034 !important;
+  margin: 0;
+}
+.bottom-offset-mini {
+  margin-bottom: 10px;
+}
+.bottom-offset-small {
+  margin-bottom: 20px;
+}
+.bottom-offset-medium {
+  margin-bottom: 40px;
+}
+.bottom-offset-large {
+  margin-bottom: 60px;
+}
+.offset-examples .well:not([class*=offset]) {
+  margin-top: 0;
+  color: #dc5034 !important;
+  margin-bottom: 0;
+}
+.offset-examples .well > .well {
+  color: #fff !important;
+  height: auto;
 }
 .pager {
-  margin: 1.428571429 0;
+  margin: 20px 0;
   list-style: none;
   text-align: center;
 }
@@ -5330,7 +5408,11 @@ select,
 textarea {
   font-size: 14px;
   font-weight: normal;
-  line-height: 14px;
+  line-height: 20px;
+}
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 .label,
 .badge {

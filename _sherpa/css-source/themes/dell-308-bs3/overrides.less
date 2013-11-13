@@ -228,6 +228,10 @@ code {
     white-space: nowrap;
 }
 
+.strike-through {
+  text-decoration: line-through;
+}
+
 
 //
 // Typography for Desktop
@@ -295,7 +299,7 @@ h5, h6 {
 }
 
 .lead {
-  margin-bottom: @line-height-base;
+  margin-bottom: @line-height-base * 13.999999995800000001259999999622px;
   font-size: @font-size-base * 1.29;
   font-weight: normal;
   line-height: @line-height-base * 15.399999995380000001385999999584px;
@@ -334,7 +338,7 @@ blockquote p {
 
 blockquote small {
   display: block;
-  line-height: @line-height-base;
+  line-height: @line-height-base  * 13.999999995800000001259999999622px;
   color: @gray-dark;
   font-style: italic;
 }
@@ -386,9 +390,9 @@ abbr[data-original-title] {
   } 
 
   .lead {
-    margin-bottom: @line-height-base;
+    margin-bottom: @line-height-base * 13.999999995800000001259999999622px; // ~20px
     font-size: @font-size-base * 1.29; // ~18px
-    line-height: @line-height-base + 2;  // ~22px
+    line-height: @line-height-base * 15.399999995380000001385999999584px; // ~22px
   }
 
   .title {
@@ -551,6 +555,15 @@ form div {
 // Groups of fields with labels on top (legends)
 legend {
   color: @gray-darker;
+  display: block;
+  width: 100%;
+  padding: 0;
+  margin-bottom: 20px;
+  font-size: 21px;
+  line-height: 40px;
+  color: #333;
+  border: 0;
+  border-bottom: 1px solid #e5e5e5;
   small {
     color: @gray-dark;
   }
@@ -639,7 +652,7 @@ input[type="checkbox"]:focus {
 
 input[type="radio"], 
 input[type="checkbox"] {
-  margin: 1px 0 0;
+  margin: none;
   margin-top: 1px \9;
   line-height: normal;
 }
@@ -1041,16 +1054,38 @@ input.search-query {
   padding-top: 5px;
 }
 
+.form-horizontal .controls {
+  margin-left: 180px;
+  width: auto;
+}
+
+@media only screen and (max-width:@mobile-max-width) {
+  .form-horizontal .control-label {
+  float: none;
+  width: auto;
+  padding-top: 0;
+  text-align: left;
+  }
+
+  .form-horizontal .controls {
+    margin-left: 0;
+  }
+
+  .form-horizontal .form-actions {
+    padding-left: 10px;
+    padding-right: 10px;
+  }
+}
 
 
 // Margin to space out fieldsets
 .control-group {
-  margin-bottom: @line-height-base / 2;
+  margin-bottom: @line-height-base  * 13.999999995800000001259999999622px / 2;
 }
 
 // Legend collapses margin, so next element is responsible for spacing
 legend + .control-group {
-  margin-top: @line-height-base;
+  margin-top: @line-height-base  * 13.999999995800000001259999999622px;
   -webkit-margin-top-collapse: separate;
 }
 
@@ -1097,7 +1132,7 @@ legend + .control-group {
   .input-prepend,
   .input-append {
     + .help-block {
-      margin-top: @line-height-base / 2;
+      margin-top: @line-height-base  * 13.999999995800000001259999999622px / 2;
     }
   }
   // Move over buttons in .form-actions to align with .controls
@@ -1159,6 +1194,32 @@ legend + .control-group {
 .input-xlarge     { width: 270px; }
 .input-xxlarge    { width: 530px; }
 
+@media only screen and (max-width:@tablet-max-width) {
+  .input-large, 
+  .input-xlarge, 
+  .input-xxlarge, 
+  input[class*="span"], 
+  select[class*="span"], 
+  textarea[class*="span"], 
+  .uneditable-input {
+    display: block;
+    width: 100%;
+    min-height: 34px;
+    -webkit-box-sizing: border-box;
+    -moz-box-sizing: border-box;
+    box-sizing: border-box;
+  }
+}
+
+@media only screen and (max-width:@tablet-max-width) {
+  .input-xxlarge {
+    width: 100%!important;
+  }
+}
+
+
+
+
 
 span.uneditable-input {
   padding-top:7px;
@@ -1205,7 +1266,7 @@ table {
   thead > tr > td, 
   tbody > tr > td, 
   tfoot > tr > td {
-  padding: 8px;
+  padding: 8px 5px;
   line-height: @line-height-base * 13.999999995800000001259999999622px; // ~20px
   vertical-align: top;
   border:none;
@@ -1572,7 +1633,15 @@ li.dropdown .dropdown-menu {
   }
 }
 
+@media only screen and (max-width:@mobile-max-width) {
+  .well-bleed > :last-child {
+    margin-bottom: 10px;
+  }
 
+  .well-bleed img.pull-right {
+    padding-bottom: 10px;
+  }
+}
 
 // Sizes
 .well-large {
@@ -1603,6 +1672,8 @@ li.dropdown .dropdown-menu {
     margin-bottom: 0px;
   }
 }
+
+
 
 
 //
@@ -2045,8 +2116,8 @@ input[type="submit"].btn {
 // Optional: Group multiple button groups together for a toolbar
 .btn-toolbar {
   font-size: 0; // Hack to remove whitespace that results from using inline-block
-  margin-top: @line-height-base / 2;
-  margin-bottom: @line-height-base / 2;
+  margin-top: @line-height-base * 13.999999995800000001259999999622px / 2;
+  margin-bottom: @line-height-base * 13.999999995800000001259999999622px / 2;
   > .btn + .btn,
   > .btn-group + .btn,
   > .btn + .btn-group {
@@ -2265,7 +2336,7 @@ input[type="submit"].btn {
 .alert {
   color: @gray-darker;
   padding: 10px 20px 10px 45px;
-  margin-bottom: @line-height-base;
+  margin-bottom: @line-height-base * 13.999999995800000001259999999622px;
   text-shadow: none;
   background-color: @alert-warning-bg;
   border: 1px solid @gray-light;
@@ -2597,7 +2668,7 @@ input[type="submit"].btn {
     &:before {
       content:" ";
     }
-    margin-bottom: @line-height-base;
+    margin-bottom: @line-height-base * 13.999999995800000001259999999622px;
   }
 }
 
@@ -2692,7 +2763,7 @@ input[type="submit"].btn {
       background-color: @aside-nav-bg;
       .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
       border-bottom: #666 1px solid;
-      padding-top:@line-height-base;
+      padding-top:@line-height-base * 13.999999995800000001259999999622px;
     }
     > li a:hover {
       background-color: @dell-highlight-blue;
@@ -2919,49 +2990,71 @@ border-radius: 4px;
 }
 
 
-// these offsets are non-bootstrap gridset related hacks and should be removed in the BS3.0 release
-.bottom-offset-margin(@multiplier) {
-  margin-bottom: @line-height-base * @multiplier;
+// ==================================== offsets ============================================
+
+.offset-examples .well {
+height: 200px;
 }
-.top-offset-margin(@multiplier) {
-  margin-top: @line-height-base * @multiplier;
+
+.top-offset-mini {
+margin-top: 10px;
 }
-.bottom-offset {
-  &-mini {
-    .bottom-offset-margin(.5);
-  }
-  &-small {
-    .bottom-offset-margin(1);
-  }
-  &-medium {
-    .bottom-offset-margin(2);
-  }
-  &-large {
-    .bottom-offset-margin(3);
-  }
+
+.top-offset-small {
+margin-top: 20px;
 }
-.top-offset {
-  &-mini {
-    .top-offset-margin(.5);
-  }
-  &-small {
-    .top-offset-margin(1);
-  }
-  &-medium {
-    .top-offset-margin(2);
-  }
-  &-large {
-    .top-offset-margin(3);
-  }
+
+.top-offset-medium {
+margin-top: 40px;
+}
+
+.top-offset-large {
+margin-top: 60px;
+}
+
+.offset-examples hr {
+clear: both;
+border-top: none !important;
+border-bottom: 1px solid #dc5034 !important;
+margin: 0;
+}
+
+.bottom-offset-mini {
+margin-bottom: 10px;
+}
+
+.bottom-offset-small {
+margin-bottom: 20px;
+}
+
+.bottom-offset-medium {
+margin-bottom: 40px;
+}
+
+.bottom-offset-large {
+margin-bottom: 60px;
+}
+
+.offset-examples .well:not([class*=offset]) {
+margin-top: 0;
+margin-bottom: 0;
+color: #dc5034 !important;
+margin-bottom: 0;
+}
+
+.offset-examples .well > .well {
+color: #fff !important;
+height: auto;
 }
 
 
+//==========================================================================================
 
 // pager
 //=======================================================================================================================
 
 .pager {
-  margin: @line-height-base 0;
+  margin: @line-height-base * 13.999999995800000001259999999622px 0;
   list-style: none;
   text-align: center;
   .clearfix();
@@ -3476,7 +3569,12 @@ border-radius: 4px;
 label, input, button, select, textarea {
   font-size: 14px;
   font-weight: normal;
-  line-height: 14px;
+  line-height: 20px;
+}
+
+label {
+  display: block;
+  margin-bottom: 5px;
 }
 
 .label,
