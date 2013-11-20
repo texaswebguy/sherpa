@@ -4990,6 +4990,14 @@ div.navbar-inner {
   color: #fff !important;
   height: auto;
 }
+.double-height {
+  height: 400px;
+  margin-bottom: 30px;
+}
+.single-height {
+  height: 185px;
+  margin-bottom: 30px;
+}
 .pager {
   margin: 20px 0;
   list-style: none;
@@ -5618,14 +5626,21 @@ div.navbar-inner {
     display: block;
   }
 }
+button,
 label,
 input,
-button,
 select,
 textarea {
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
+}
+@media only screen and (max-width: 980px) {
+  input,
+  select,
+  textarea {
+    font-size: 16px;
+  }
 }
 label {
   display: block;
@@ -6010,11 +6025,9 @@ you can use the generic selector below, but it's slower:
   -webkit-font-smoothing: antialiased;
 }
 /* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
+/*Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
-[class*="your-class-prefix"] {
-*/
+[class*="your-class-prefix"] */
 .icon-small-zoomout,
 .icon-small-zoomin,
 .icon-small-wireless,
@@ -6438,11 +6451,9 @@ you can use the generic selector below, but it's slower:
   margin-bottom: 10px;
 }
 /* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
+/* Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
-[class*="your-class-prefix"] {
-*/
+[class*="your-class-prefix"] */
 .icon-large-zoomout,
 .icon-large-zoomin,
 .icon-large-wifi,

@@ -3,7 +3,7 @@
 // Clint Batte
 
 // Missing Mixins in BS3
-//=======================================================================================================================
+//===================================================================================
 
 // Border Radius
 .border-radius(@radius) {
@@ -138,7 +138,7 @@
 
 
 // Button backgrounds
-// ------------------
+//===================================================================================
 .buttonBackground(@startColor, @endColor, @textColor: #fff, @textShadow: 0 -1px 0 rgba(0,0,0,.25)) {
   // gradientBar will set the background to a pleasing blend of these, to support IE<=9
   .gradientBar(@startColor, @endColor, @textColor, @textShadow);
@@ -161,7 +161,7 @@
 
 
 // Scaffolding
-//=======================================================================================================================
+//===================================================================================
 
 p {
   margin: 0 0 10px;
@@ -191,14 +191,14 @@ ul.unstyled, ol.unstyled {
 }
 
 // Grid
-//=======================================================================================================================
+//===================================================================================
 
 @import "../../less-BS3/grid.less";
 
 
 // Base CSS
 // Type
-//=======================================================================================================================
+//===================================================================================
 
 body {
   margin: 0;
@@ -235,7 +235,7 @@ code {
 
 //
 // Typography for Desktop
-// --------------------------------------------------
+//===================================================================================
 @import "../../less-BS3/type.less";
 
 
@@ -313,7 +313,7 @@ small {
 
 
 // Page header
-// -------------------------
+//===================================================================================
 
 .page-header {
   border-bottom: 1px solid @dell-gray-stroke;
@@ -360,7 +360,7 @@ abbr[data-original-title] {
 }
 
 // Typography for tablet 
-// --------------------------------------------------
+//===================================================================================
 @media only screen and (min-width:@tablet-min-width) and (max-width:@desktop-min-width) {
 
 
@@ -404,7 +404,7 @@ abbr[data-original-title] {
 
 
 // Typography for mobile (Phone)
-// --------------------------------------------------
+//===================================================================================
 @media only screen and (max-width:@mobile-max-width) {
 
 
@@ -468,7 +468,7 @@ abbr[data-original-title] {
 // Typographic Colors 
 // NOTE: (Not part of Standard Bootstrap)
 // !important is used so that it overrides any parent directive
-// --------------------------------------------------
+//===================================================================================
 
 // these should be deprecated because they are not in bootstrap like ocnvention
 .white-text             { color: @white !important;  }
@@ -506,8 +506,7 @@ abbr[data-original-title] {
 
 
 // Collapsible Items (Dell 308 only)
-//=======================================================================================================================
-
+//===================================================================================
 
 // When uising triangles inside of a collapse scenario the size is reduced
 
@@ -538,7 +537,7 @@ a[data-toggle="collapse"] {
 
 
 // GENERAL STYLES
-// --------------
+//===================================================================================
 
 form {
   margin: 0;
@@ -570,7 +569,7 @@ legend {
 }
 
 // Form controls
-// -------------------------
+//===================================================================================
 
 // Shared size and type resets
 select,
@@ -661,7 +660,7 @@ input[type="checkbox"] {
 
 
 // Uneditable inputs
-// -------------------------
+//===================================================================================
 
 // Make uneditable inputs look inactive
 .uneditable-input,
@@ -672,7 +671,7 @@ input[type="checkbox"] {
 
 
 // CHECKBOXES & RADIOS
-// -------------------
+//===================================================================================
 
 // Indent the labels to position radios/checkboxes as hanging
 .radio,
@@ -726,7 +725,7 @@ input[type="checkbox"] {
 
 
 // FORM FIELD FEEDBACK STATES
-// --------------------------
+//===================================================================================
 
 // Warning
 .control-group.warning {
@@ -763,7 +762,7 @@ select:focus:invalid {
 //TODO: If there is a requirement to display icon we will have to build this
 
 // FORM ACTIONS
-// ------------
+//===================================================================================
 // TODO need to check if there is any 308 usage of this
 .form-actions {
   padding: 19px 20px 20px;
@@ -807,7 +806,7 @@ select:focus:invalid {
 
 
 // HELP TEXT
-// ---------
+//===================================================================================
 
 .help-block,
 .help-inline {
@@ -816,7 +815,7 @@ select:focus:invalid {
 
 
 // INPUT GROUPS
-// ------------
+//===================================================================================
 
 // Allow us to put symbols and text within the input field for a cleaner look
 .input-append,
@@ -942,7 +941,7 @@ select:focus:invalid {
 }
 
 // SEARCH FORM
-// -----------
+//===================================================================================
 
 input.search-query {
   padding-right: 14px;
@@ -973,15 +972,12 @@ input.search-query {
 
 
 // HORIZONTAL & VERTICAL FORMS
-// ---------------------------
+//===================================================================================
 
 // Common properties
-// -----------------
-
 .form-group {
   margin-right: 5px;
 }
-
 
 .form-search,
 .form-inline,
@@ -1010,6 +1006,7 @@ input.search-query {
 .form-inline .btn-group {
   display: inline-block;
 }
+
 // Remove margin for input-prepend/-append
 .form-search .input-append,
 .form-inline .input-append,
@@ -1017,6 +1014,7 @@ input.search-query {
 .form-inline .input-prepend {
   margin-bottom: 0;
 }
+
 // Inline checkbox/radio labels (remove padding on left)
 .form-search .radio,
 .form-search .checkbox,
@@ -1027,7 +1025,6 @@ input.search-query {
   vertical-align: middle;
 }
 
-
 // Remove float and margin, set to inline-block
 .form-search .radio input[type="radio"],
 .form-search .checkbox input[type="checkbox"],
@@ -1037,6 +1034,7 @@ input.search-query {
   margin-right: 3px;
   margin-left: 0;
 }
+
 .form-horizontal .control-label {
   float: left;
   width: 160px;
@@ -1077,7 +1075,6 @@ input.search-query {
   }
 }
 
-
 // Margin to space out fieldsets
 .control-group {
   margin-bottom: @line-height-base  * 13.999999995800000001259999999622px / 2;
@@ -1090,8 +1087,6 @@ legend + .control-group {
 }
 
 // Horizontal-specific styles
-// --------------------------
-
 .form-horizontal {
   // Increase spacing between groups
   .control-group {
@@ -1099,69 +1094,71 @@ legend + .control-group {
     .clearfix();
   }
 }
-  // Float the labels left
-  .control-label {
-    float: left;
-    width: @component-offset-horizontal - 20;
-    padding-top: 5px;
-    text-align: right;
-  }
 
-  // Move over all input controls and content
-  .controls {
-    // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
-    // don't inherit the margin of the parent, in this case .controls
-    *display: inline-block;
-    *padding-left: 20px;
-    margin-left: @component-offset-horizontal;
-    *margin-left: 0;
-    &:first-child {
-      *padding-left: @component-offset-horizontal;
-    }
-  }
+// Float the labels left
+.control-label {
+  float: left;
+  width: @component-offset-horizontal - 20;
+  padding-top: 5px;
+  text-align: right;
+}
 
-    // Remove bottom margin on block level help text since that's accounted for on .control-group
-  .help-block {
-    margin-bottom: 0;
+// Move over all input controls and content
+.controls {
+  // Super jank IE7 fix to ensure the inputs in .input-append and input-prepend
+  // don't inherit the margin of the parent, in this case .controls
+  *display: inline-block;
+  *padding-left: 20px;
+  margin-left: @component-offset-horizontal;
+  *margin-left: 0;
+  &:first-child {
+    *padding-left: @component-offset-horizontal;
   }
-  // And apply it only to .help-block instances that follow a form control
-  input,
-  select,
-  textarea,
-  .uneditable-input,
-  .input-prepend,
-  .input-append {
-    + .help-block {
-      margin-top: @line-height-base  * 13.999999995800000001259999999622px / 2;
-    }
-  }
-  // Move over buttons in .form-actions to align with .controls
-  .form-actions {
-    padding-left: @component-offset-horizontal;
-  }
+}
 
-  .form-search {
-    position:relative;
+// Remove bottom margin on block level help text since that's accounted for on .control-group
+.help-block {
+  margin-bottom: 0;
+}
+// And apply it only to .help-block instances that follow a form control
+input,
+select,
+textarea,
+.uneditable-input,
+.input-prepend,
+.input-append {
+  + .help-block {
+    margin-top: @line-height-base  * 13.999999995800000001259999999622px / 2;
   }
-  .form-search .input-prepend,
-  .form-search .input-append {
+}
+// Move over buttons in .form-actions to align with .controls
+.form-actions {
+  padding-left: @component-offset-horizontal;
+}
+
+.form-search {
+  position:relative;
+}
+
+.form-search .input-prepend,
+.form-search .input-append {
+  width:100%;
+  clear:both;
+}
+
+.form-search .search-query,  
+.form-search .input-prepend .search-query,
+.form-search .input-append .search-query {
     width:100%;
-    clear:both;
-  }
-  .form-search .search-query,  
-  .form-search .input-prepend .search-query,
-  .form-search .input-append .search-query {
-      width:100%;
-      height: @input-height-base + 10;
-      padding: 5px 80px 5px 5px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
-      .border-radius(@input-border-radius);
-  }
+    height: @input-height-base + 10;
+    padding: 5px 80px 5px 5px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
+    .border-radius(@input-border-radius);
+}
 
 .form-search .input-prepend .search-query {
     padding: 5px 5px 5px 80px; //TODO: 80px is a hack because for longer words of "search" the text in the input would run behind the button.;
     .border-radius(@input-border-radius);
 }
-
 
 .form-search .btn {
   position: absolute;
@@ -1171,11 +1168,11 @@ legend + .control-group {
   .border-radius(@border-radius-small);
 }
 
-
 .form-search .input-append .btn {
   right: 25px;
   .border-radius(@border-radius-small);
 }
+
 .form-search .input-prepend .btn {
   left: 25px;
   right:inherit;
@@ -1184,8 +1181,7 @@ legend + .control-group {
 }
 
 // INPUT SIZES
-// -----------
-
+//===================================================================================
 // General classes for quick sizes
 .input-mini       { width: 60px; }
 .input-small      { width: 90px; }
@@ -1217,17 +1213,13 @@ legend + .control-group {
   }
 }
 
-
-
-
-
 span.uneditable-input {
   padding-top:7px;
 }
 
 
 // BASE TABLES
-// -----------------
+//===================================================================================
 
 table {
   max-width: 100%;
@@ -1236,9 +1228,8 @@ table {
   border-spacing: 0;
 }
 
-
 // BASELINE STYLES
-// ---------------
+//===================================================================================
 
 .table {
   width: 100%;
@@ -1295,12 +1286,8 @@ table {
   }
 }
 
-
-
-
 // CONDENSED TABLE W/ HALF PADDING
-// -------------------------------
-
+//===================================================================================
 .table-condensed {
   th,
   td {
@@ -1308,10 +1295,8 @@ table {
   }
 }
 
-
-
 // ZEBRA-STRIPING
-// --------------
+//===================================================================================
 
 // Default zebra-stripe styles (alternating gray and transparent backgrounds)
 .table-striped {
@@ -1322,9 +1307,9 @@ table {
   tbody {
     > tr:nth-child(odd) > td,
     > tr:nth-child(odd) > th {
-        background-color: @table-bg-accent;
-        border-top: none;
-      }
+      background-color: @table-bg-accent;
+      border-top: none;
+    }
   }
   tbody {
     tr th:first-child, tr td:first-child {.border-left-radius(@border-radius-base);}
@@ -1336,9 +1321,8 @@ table {
   >thead>tr>td, 
   >tbody>tr>td, 
   >tfoot>tr>td {
-  border: none;
-}
-
+    border: none;
+  }
 }
 
 .table-bordered.table-striped {
@@ -1347,13 +1331,11 @@ table {
     tr th:first-child, tr td:first-child {.border-left-radius(0);}
     tr th:last-child, tr td:last-child {.border-right-radius(0);}
   }
-
 }
 
 
 .table-bordered {
   .border-radius(@border-radius-large);
-
 
   // For first th/td in the first row in the first thead or tbody
   thead:first-child tr:first-child > th:first-child,
@@ -1402,7 +1384,7 @@ table {
 }
 
 // DELL-308-ONLY Specific table styling
-// ------------------------------------------
+//===================================================================================
 // Stroked border tables
 
 div.table-bordered table {
@@ -1426,7 +1408,6 @@ div.table-bordered table {
   }
   &.table-bordered {
     border: 1px solid @table-border-color;
-
   }
 }
 
@@ -1441,7 +1422,7 @@ div.table-bordered table {
 
 
 // HOVER EFFECT
-// ------------
+//===================================================================================
 // Placed here since it has to come after the potential zebra striping
 .table-hover {
   tbody {
@@ -1452,9 +1433,8 @@ div.table-bordered table {
   }
 }
 
-
 // TABLE BACKGROUNDS
-// -----------------
+//===================================================================================
 // Exact selectors below required to override .table-striped
 
 .table tbody tr {
@@ -1488,15 +1468,9 @@ div.table-bordered table {
   }
 }
 
-
-
-
-
 // dropdowns
-//=======================================================================================================================
-
-
-//=============== new from old code
+//===================================================================================
+//new from old code
 .dropdown-menu {
   margin: 20px 0 0;
   li > a {
@@ -1545,31 +1519,27 @@ div.table-bordered table {
   &.pull-right {
   left: auto;
   right: 0;
-  &:before {
-    left: auto;
-    right: 12px;
-  }
-  &:after {
-    left: auto;
-    right: 13px;
-  }
-  .dropdown-menu {
-    left: auto;
-    right: 100%;
-    margin-left: 0;
-    margin-right: -1px;
-    -webkit-border-radius: 6px 0 6px 6px;
-    -moz-border-radius: 6px 0 6px 6px;
-    border-radius: 6px 0 6px 6px;
+    &:before {
+      left: auto;
+      right: 12px;
+    }
+    &:after {
+      left: auto;
+      right: 13px;
+    }
+    .dropdown-menu {
+      left: auto;
+      right: 100%;
+      margin-left: 0;
+      margin-right: -1px;
+      -webkit-border-radius: 6px 0 6px 6px;
+      -moz-border-radius: 6px 0 6px 6px;
+      border-radius: 6px 0 6px 6px;
+    }
   }
 }
-}
-
-
-//-----------------------
 
 // NOTE: overriding caret with font icon for dell-308
-
 .dropdown-toggle .caret {
   display:none;
 }
@@ -1579,9 +1549,8 @@ div.table-bordered table {
   font-family: 'icon-ui';
   content: "\24";
   top:1px;
-  // float:right; 
-  // margin-left:1px;
 }
+
 .open > .dropdown-toggle:after {
   content: "\21";
 }
@@ -1594,11 +1563,8 @@ li.dropdown .dropdown-menu {
   margin: 2px 0 0;
 }
 
-
-
-
 // wells
-//=======================================================================================================================
+//===================================================================================
 
 .well {
   min-height: @line-height-base * 13.999999995800000001259999999622px; // ~20px
@@ -1656,7 +1622,6 @@ li.dropdown .dropdown-menu {
 // NOTE: Non-Bootstrap well like containers. 
 // TODO: do we keep this in the future?
 // These are borderless
-
 .rounded-large {
   .border-radius(@border-radius-large);
   padding:@line-height-base  * 13.999999995800000001259999999622px; // ~20px
@@ -1674,13 +1639,11 @@ li.dropdown .dropdown-menu {
 }
 
 
-
-
 //
 // Container Colors 
 // NOTE: (Not part of Standard Bootstrap) - dell-308-only
 // Should we scope these within the well class in the future?
-// --------------------------------------------------
+//===================================================================================
 
 .well-colors (@body-bg, @text-color, @headings-color, @link-color) {
   background-color: @body-bg;
@@ -1705,14 +1668,12 @@ li.dropdown .dropdown-menu {
   }
 }
 
-
-
 /* Grays */
-
 .gray-dark,
 .well-gray-dark { 
   .well-colors (@gray-darker, @white, @white, @white)
 }
+
 .gray-dark-stroke,
 .well-gray-dark-stroke  { 
   border: @default-stroke solid @gray-darker !important;
@@ -1739,10 +1700,12 @@ li.dropdown .dropdown-menu {
 .well-gray-light { 
   .well-colors (@gray-light, @gray-darker, @gray-darker, @blue)
 }
+
 .gray-very-light,
 .well-gray-very-light { 
   .well-colors (@dell-gray-very-light, @gray-darker, @gray-darker, @blue)
 }
+
 .white,
 .well-white { 
   .well-colors (@white, @gray-darker, @gray-darker, @blue)
@@ -1754,7 +1717,6 @@ li.dropdown .dropdown-menu {
   .well-colors (transparent, @white, @white, @white)
 }
 
-
 /* Blue */
 .blue,
 .well-blue { 
@@ -1765,13 +1727,11 @@ li.dropdown .dropdown-menu {
   color: #ffffff;
 }
 
-
 .blue-stroke,
 .well-blue-stroke  { 
   border: @default-stroke solid @blue !important;
   .well-colors (@white, @text-color, @blue, @link-color)
 }
-
 
 /* Green */
 .green,
@@ -1811,25 +1771,30 @@ li.dropdown .dropdown-menu {
 .well-red        { 
   .well-colors (@red, @white, @white, @white)
 }
+
 .red-stroke,
 .well-red-stroke     { 
   border: @default-stroke solid  @red !important;
   .well-colors (@white, @text-color, @red, @link-color)
 }
+
 .red-dark,
 .well-red-dark       { 
   .well-colors (@dell-red-dark, @white, @white, @white)
 }
+
 .red-dark-stroke,
 .well-red-dark-stroke     { 
   border: @default-stroke solid  @dell-red-dark !important;
   .well-colors (@white, @text-color, @dell-red-dark, @link-color)
 }
+
 /* Berry */
 .berry,
 .well-berry        { 
   .well-colors (@dell-berry, @white, @white, @white)
 }
+
 .berry-stroke,
 .well-berry-stroke     { 
   border: @default-stroke solid @dell-berry !important;
@@ -1841,6 +1806,7 @@ li.dropdown .dropdown-menu {
 .well-purple       { 
   .well-colors (@purple, @white, @white, @white)
 }
+
 .purple-stroke,
 .well-purple-stroke    { 
 border: @default-stroke solid @purple !important;
@@ -1852,6 +1818,7 @@ border: @default-stroke solid @purple !important;
 .well-teal         { 
   .well-colors (@dell-teal, @white, @white, @white)
 }
+
 .teal-stroke,
 .well-teal-stroke    { 
   border: @default-stroke solid @dell-teal !important;
@@ -1861,15 +1828,10 @@ border: @default-stroke solid @purple !important;
 /* Modify all stroke classes with "thin"*/
 [class$=-stroke].thin { border-width: @thin-stroke;  }
 
-
-
-
 // Base styles
-// --------------------------------------------------
-
+//===================================================================================
 // Dell-308 added btn-tertiary.  It should really be the default so it is added here but it should be deprecated eventually 
 // Core
-
 // creating a default-button mixin to reuse in the pager
 
 .default-button() {
@@ -1941,7 +1903,7 @@ border: @default-stroke solid @purple !important;
 }
 
 // Button Sizes
-// --------------------------------------------------
+//===================================================================================
 // dell-308 does not allow large so these will be forced into normal size
 
 // Large
@@ -1964,20 +1926,14 @@ border: @default-stroke solid @purple !important;
 .btn-small [class*=" icon-"] {
   margin-top: 0;
 }
-// .btn-mini [class^="icon-"],
-// .btn-mini [class*=" icon-"] {
-//   margin-top: -1px;
-// }
 
 // Mini
 .btn-xs {
   padding: 1px 5px;
 }
 
-
 // Block button
-// -------------------------
-
+//===================================================================================
 .btn-block {
   display: block;
   width: 100%;
@@ -1998,10 +1954,8 @@ input[type="button"] {
   }
 }
 
-
 // Alternate buttons
-// --------------------------------------------------
-
+//===================================================================================
 // Provide *some* extra contrast for those who can get it
 .btn-primary.active,
 .btn-warning.active,
@@ -2013,35 +1967,37 @@ input[type="button"] {
 }
 
 // Set the backgrounds
-// -------------------------
 .btn-primary {
   .buttonBackground(@btn-primary-bg, @btn-primary-bg-highlight,);
 }
+
 //not used in dell-308
 .btn-warning {
   .buttonBackground(@btn-warning-bg, @btn-warning-bg-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
+
 //not used in dell-308
 .btn-danger {
   .buttonBackground(@btn-danger-bg, @btn-danger-bg-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
+
 // Success appears as green
 .btn-success {
   .buttonBackground(@btn-success-bg, @btn-success-bg-highlight);
 }
+
 //not used in dell-308
 .btn-info {
   .buttonBackground(@btn-info-bg, @btn-info-bg-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
+
 // not used in dell-308
 .btn-inverse {
   .buttonBackground(@btn-inverse-background, @btn-inverse-background-highlight, 0 1px 1px rgba(255,255,255,.75));
 }
 
-
 // Cross-browser Jank
-// --------------------------------------------------
-
+//===================================================================================
 button.btn,
 input[type="submit"].btn {
 
@@ -2069,10 +2025,8 @@ input[type="submit"].btn {
   }
 }
 
-
 // Link buttons
-// --------------------------------------------------
-
+//===================================================================================
 // Make a button look and behave like a link
 .btn-link,
 .btn-link:active,
@@ -2081,18 +2035,21 @@ input[type="submit"].btn {
   background-image: none;
   .box-shadow(none);
 }
+
 .btn-link {
   border-color: transparent;
   cursor: pointer;
   color:@link-color;
   .border-radius(0);
 }
+
 .btn-link:hover,
 .btn-link:focus {
   color:@link-hover-color;
   text-decoration: underline;
   background-color: transparent;
 }
+
 .btn-link[disabled]:hover,
 .btn-link[disabled]:focus {
   color: @gray-dark;
@@ -2106,7 +2063,6 @@ input[type="submit"].btn {
   vertical-align: middle; // match .btn alignment given font-size hack above
   white-space: nowrap; // prevent buttons from wrapping when in tight spaces (e.g., the table on the tests page)
 }
-
 
 // Space out series of button groups
 .btn-group + .btn-group {
@@ -2131,9 +2087,11 @@ input[type="submit"].btn {
   .border-radius(0);
   float:none;
 }
+
 .btn-group > .btn + .btn {
   margin-left: -1px;
 }
+
 .btn-group > .btn,
 .btn-group > .dropdown-menu,
 .btn-group > .popover {
@@ -2144,9 +2102,11 @@ input[type="submit"].btn {
 .btn-group > .btn-xs {
   font-size: @font-size-mini;
 }
+
 .btn-group > .btn-small {
   font-size: @font-size-small;
 }
+
 .btn-group > .btn-lg {
   font-size: @font-size-large;
 }
@@ -2157,18 +2117,21 @@ input[type="submit"].btn {
   .border-top-left-radius(@input-border-radius);
   .border-bottom-left-radius(@input-border-radius);
 }
+
 // Need .dropdown-toggle since :last-child doesn't apply given a .dropdown-menu immediately after it
 .btn-group > .btn:last-child,
 .btn-group > .dropdown-toggle {
   .border-top-right-radius(@input-border-radius);
   .border-bottom-right-radius(@input-border-radius);
 }
+
 // Reset corners for large buttons
 .btn-group > .btn.large:first-child {
   margin-left: 0;
   .border-top-left-radius(@border-radius-large);
   .border-bottom-left-radius(@border-radius-large);
 }
+
 .btn-group > .btn.large:last-child,
 .btn-group > .large.dropdown-toggle {
   .border-top-right-radius(@border-radius-large);
@@ -2189,10 +2152,8 @@ input[type="submit"].btn {
   outline: 0;
 }
 
-
 // Split button dropdowns
-// ----------------------
-
+//===================================================================================
 // Give the line between buttons some depth
 .btn-group > .btn + .dropdown-toggle {
   padding-left: 8px;
@@ -2201,16 +2162,19 @@ input[type="submit"].btn {
   *padding-top: 5px;
   *padding-bottom: 5px;
 }
+
 .btn-group > .btn-mini + .dropdown-toggle {
   padding-left: 5px;
   padding-right: 5px;
   *padding-top: 2px;
   *padding-bottom: 2px;
 }
+
 .btn-group > .btn-small + .dropdown-toggle {
   *padding-top: 5px;
   *padding-bottom: 4px;
 }
+
 .btn-group > .btn-lg + .dropdown-toggle {
   padding-left: 12px;
   padding-right: 12px;
@@ -2218,9 +2182,7 @@ input[type="submit"].btn {
   *padding-bottom: 7px;
 }
 
-
 .btn-group.open {
-
   // The clickable button for toggling the menu
   // Remove the gradient and set the same inset shadow as the :active state
   .dropdown-toggle {
@@ -2232,28 +2194,31 @@ input[type="submit"].btn {
   .btn.dropdown-toggle {
     background-color: @dropdown-bg;
   }
+
   .btn-primary.dropdown-toggle {
     background-color: @btn-primary-bg-highlight;
   }
+
   .btn-warning.dropdown-toggle {
     background-color: @btn-warning-bg-highlight;
   }
+
   .btn-danger.dropdown-toggle {
     background-color: @btn-danger-bg-highlight;
   }
+
   .btn-success.dropdown-toggle {
     background-color: @btn-success-bg-highlight;
   }
+
   .btn-info.dropdown-toggle {
     background-color: @btn-info-bg-highlight;
   }
+
   .btn-inverse.dropdown-toggle {
     background-color: @btn-inverse-background-highlight;
   }
 }
-
-
-
 
 // Reposition the caret
 .btn .caret {
@@ -2267,21 +2232,22 @@ input[type="submit"].btn {
 .btn-lg .caret {
   margin-top: 6px;
 }
+
 .btn-lg .caret {
   border-left-width:  5px;
   border-right-width: 5px;
   border-top-width:   5px;
 }
+
 .btn-mini .caret,
 .btn-small .caret {
   margin-top: 8px;
 }
+
 // Upside down carets for .dropup
 .dropup .btn-lg .caret {
   border-bottom-width: 5px;
 }
-
-
 
 // Account for other colors
 .btn-primary,
@@ -2296,8 +2262,6 @@ input[type="submit"].btn {
   }
 }
 
-
-
 // Vertical button groups
 .btn-group-vertical > .btn {
   display: block;
@@ -2305,19 +2269,24 @@ input[type="submit"].btn {
   max-width: 100%;
   .border-radius(0);
 }
+
 .btn-group-vertical > .btn + .btn {
   margin-left: 0;
   margin-top: -1px;
 }
+
 .btn-group-vertical > .btn:first-child {
   .border-radius(@border-radius-base @border-radius-base 0 0);
 }
+
 .btn-group-vertical > .btn:last-child {
   .border-radius(0 0 @border-radius-base @border-radius-base);
 }
+
 .btn-group-vertical > .btn-lg:first-child {
   .border-radius(@border-radius-large @border-radius-large 0 0);
 }
+
 .btn-group-vertical > .btn-lg:last-child {
   .border-radius(0 0 @border-radius-large @border-radius-large);
 }
@@ -2326,13 +2295,9 @@ input[type="submit"].btn {
   display: inline-block; // makes buttons only take up the width they need
 }
 
-
 // alerts
-//=======================================================================================================================
-
+///===================================================================================
 // Base styles
-// -------------------------
-
 .alert {
   color: @gray-darker;
   padding: 10px 20px 10px 45px;
@@ -2346,12 +2311,15 @@ input[type="submit"].btn {
     // Specified for the h4 to prevent conflicts of changing @headingsColor
     color: @gray-darker;
   }
+
   p:last-child {
     margin-bottom:0px;
   }
+
   [class^=icon-] {
     display:none;
-  }  
+  } 
+
   .close {
     position: relative;
     right: -8px;
@@ -2363,10 +2331,10 @@ input[type="submit"].btn {
       margin-right: -2px;
     }
   }
+
   &:before {
     .insert-icon("\7e", @red);
   }
-
 }
 
 .insert-icon(@content, @color) {
@@ -2379,12 +2347,7 @@ input[type="submit"].btn {
     font-size:20px;
 }
 
-
-
 // Alternate styles
-// -------------------------
-
-
 .alert-success {
   background-color: @alert-warning-bg;
   border-color: @gray-light;
@@ -2392,10 +2355,12 @@ input[type="submit"].btn {
   h4 {
     color: @gray-darker;
   }
+
   &:before {
     .insert-icon("\72", @green);
   }
 }
+
 .alert-danger,
 .alert-error {
   background-color: @alert-warning-bg;
@@ -2405,10 +2370,12 @@ input[type="submit"].btn {
     .insert-icon("\e001", @dell-red-dark);
   }
 }
+
 .alert-danger h4,
 .alert-error h4 {
   color: @gray-darker;
 }
+
 .alert-info {
   background-color:@alert-info-bg;
   border-color: @gray-light;
@@ -2417,13 +2384,12 @@ input[type="submit"].btn {
     .insert-icon("\e000", @blue);
   }
 }
+
 .alert-info h4 {
   color: @gray-darker;
 }
 
-
-// ============= Block alerts ================
-
+// Block alerts
 .alert-block {
   padding-top: 14px;
   padding-bottom: 14px;
@@ -2438,8 +2404,8 @@ input[type="submit"].btn {
   }
 }
 
-// ============== Components: Nav ========================
-
+//Components: Nav
+//===================================================================================
 .nav-tabs {
   margin-left: 0;
   margin-bottom: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
@@ -2485,8 +2451,8 @@ input[type="submit"].btn {
  
 
 
-// ========== PILLS ================
-
+//PILLS
+//===================================================================================
 // Links rendered as pills
 .nav-pills > li{
 
@@ -2507,7 +2473,7 @@ input[type="submit"].btn {
   }
 }
 
-// ============ Open dropdowns =================
+//Open dropdowns
 
 .nav-tabs .open .dropdown-toggle,
 .nav-pills .open .dropdown-toggle,
@@ -2517,6 +2483,7 @@ input[type="submit"].btn {
   background-color: @gray-light;
   border-color: @gray-light;
 }
+
 .nav li.dropdown.open .caret,
 .nav li.dropdown.open.active .caret,
 .nav li.dropdown.open a:hover .caret,
@@ -2530,10 +2497,8 @@ input[type="submit"].btn {
   margin: 0;
 }
 
-
-
 // navbar
-//=======================================================================================================================
+//===================================================================================
 
 .navbar {
   overflow: visible;
@@ -2611,13 +2576,8 @@ input[type="submit"].btn {
       -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
       box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
     }
-
-
-
-  
   }
 }
-
 
 div.navbar-inner {
   width: 100%;
@@ -2625,81 +2585,6 @@ div.navbar-inner {
   border: 0;
   box-shadow: none;
 }
-
-// .navbar div {
-// width: auto;
-// float: none;
-// }
-
-// .navbar .container {
-// width: auto;
-// }
-
-// .navbar .btn-navbar {
-// display: none;
-// float: right;
-// padding: 7px 10px;
-// margin-left: 5px;
-// margin-right: 5px;
-// color: #fff;
-// text-shadow: 0 -1px 0 rgba(0,0,0,0.25);
-// background-color: #ededed;
-// background-image: -moz-linear-gradient(top,#f2f2f2,#e5e5e5);
-// background-image: -webkit-gradient(linear,0 0,0 100%,from(#f2f2f2),to(#e5e5e5));
-// background-image: -webkit-linear-gradient(top,#f2f2f2,#e5e5e5);
-// background-image: -o-linear-gradient(top,#f2f2f2,#e5e5e5);
-// background-image: linear-gradient(to bottom,#f2f2f2,#e5e5e5);
-// background-repeat: repeat-x;
-// filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#fff2f2f2',endColorstr='#ffe5e5e5',GradientType=0);
-// border-color: #e5e5e5 #e5e5e5 #bfbfbf;
-// border-color: rgba(0,0,0,0.1) rgba(0,0,0,0.1) rgba(0,0,0,0.25);
-// filter: progid:DXImageTransform.Microsoft.gradient(enabled = false);
-// -webkit-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);
-// -moz-box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);
-// box-shadow: inset 0 1px 0 rgba(255,255,255,.1),0 1px 0 rgba(255,255,255,.075);
-// }
-
-// .navbar .brand {
-// float: left;
-// display: block;
-// padding: 10px 20px 10px;
-// margin-left: -20px;
-// font-size: 20px;
-// font-weight: 200;
-// color: #007db8;
-// text-shadow: 0 1px 0 #fff;
-// }
-
-// .navbar .nav {
-// position: relative;
-// left: 0;
-// display: block;
-// float: left;
-// margin: 0 10px 0 0;
-// }
-
-// .navbar .nav > li {
-//   float: left;
-// }
-
-// .navbar .nav > li > a {
-//   float: none;
-//   padding: 10px 15px 10px;
-//   color: #007db8;
-//   text-decoration: none;
-//   text-shadow: 0 1px 0 #fff;
-// }
-
-// .navbar .nav > .active > a, 
-// .navbar .nav > .active > a:hover, 
-// .navbar .nav > .active > a:focus {
-// color: #007db8;
-// text-decoration: none;
-// background-color: #e5e5e5;
-// -webkit-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
-// -moz-box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
-// box-shadow: inset 0 3px 8px rgba(0,0,0,0.125);
-// }
 
 .navbar-inverse .navbar-inner {
 background-color: @dell-blue;
@@ -2712,7 +2597,6 @@ background-repeat: repeat-x;
 filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff007db8',endColorstr='#ff007db8',GradientType=0);
 border-color: transparent;
 }
-
 
 @media only screen and (max-width:@mobile-max-width) {
   .container {
@@ -2792,8 +2676,6 @@ border-color: transparent;
     box-shadow: none;
   }
 
-
-
   .nav-collapse .nav > li > a, 
   .nav-collapse .dropdown-menu a {
     padding: 9px 15px;
@@ -2829,7 +2711,6 @@ border-color: transparent;
     float: none;
     margin-left: 0;
   }
-
 }
 
 .navbar-inverse 
@@ -2848,30 +2729,26 @@ border-color: transparent;
   background-color: #006c9f;
 }
 
-
 .navbar-inner {
-min-height: 40px;
-padding-left: 20px;
-padding-right: 20px;
-background-color: #fafafa;
-background-image: -moz-linear-gradient(top,#fff,#f2f2f2);
-background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f2f2f2));
-background-image: -webkit-linear-gradient(top,#fff,#f2f2f2);
-background-image: -o-linear-gradient(top,#fff,#f2f2f2);
-background-image: linear-gradient(to bottom,#fff,#f2f2f2);
-background-repeat: repeat-x;
-filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#fff2f2f2',GradientType=0);
-border: 1px solid #d4d4d4;
--webkit-border-radius: 5px;
--moz-border-radius: 5px;
-border-radius: 5px;
--webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
--moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+  min-height: 40px;
+  padding-left: 20px;
+  padding-right: 20px;
+  background-color: #fafafa;
+  background-image: -moz-linear-gradient(top,#fff,#f2f2f2);
+  background-image: -webkit-gradient(linear,0 0,0 100%,from(#fff),to(#f2f2f2));
+  background-image: -webkit-linear-gradient(top,#fff,#f2f2f2);
+  background-image: -o-linear-gradient(top,#fff,#f2f2f2);
+  background-image: linear-gradient(to bottom,#fff,#f2f2f2);
+  background-repeat: repeat-x;
+  filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ffffffff',endColorstr='#fff2f2f2',GradientType=0);
+  border: 1px solid #d4d4d4;
+  -webkit-border-radius: 5px;
+  -moz-border-radius: 5px;
+  border-radius: 5px;
+  -webkit-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+  -moz-box-shadow: 0 1px 4px rgba(0,0,0,0.065);
+  box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 }
-
-
-
 
 .navbar-search {
   margin-top: 3px;
@@ -2997,6 +2874,7 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     position:relative;
     z-index:2;
   }
+
   .tab-content {
     position:relative;
     left:-15px;
@@ -3006,10 +2884,10 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     &:before {
       content:" ";
     }
+
     margin-bottom: @line-height-base * 13.999999995800000001259999999622px;
   }
 }
-
 
 .nav-list {
   background:@gray-light;
@@ -3020,9 +2898,11 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     background-color: @dell-gray-light;
     border-bottom: 1px solid @white;
   }
+
   .nav-header {
     color:@dell-gray-dark;
   }
+
   > .active > a, 
   > .active > a:hover, 
   > .active > a:focus {
@@ -3030,19 +2910,24 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     text-shadow: 0 -1px 0 rgba(0,0,0,0.2);
     background-color: @dell-blue;
   }
+
   > li > a {
     padding: 3px 15px;
   }
+
   .border-radius(@border-radius-base);
   > li:last-child a:hover {
     .border-bottom-radius(@border-radius-base);
   }
+
   > li:first-child a:hover {
     .border-top-radius(@border-radius-base);
   }
+
   > li:not(.nav-header):first a {
     .border-top-radius(@border-radius-base);
   }
+
   &.nav-aside {
     .nav-header, 
     .divider {
@@ -3051,6 +2936,7 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
     background:none;
     .aside-nav();
   }
+
   + .back-to-top { //This is not part of Bootstrap
     background: @gray;
     color:@white;
@@ -3066,9 +2952,11 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
       position:relative;
       vertical-align: middle;    
     }
+
     > span{
       vertical-align: middle;
     }
+
     &:hover {
       color:@gray-darker;
     }
@@ -3091,59 +2979,62 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
 }
 
 .aside-nav() {
-    h2{
-      margin: 5px 0 5px 0;
+  h2{
+    margin: 5px 0 5px 0;
+  }
+
+  li a {
+    text-shadow:none;
+    color:@white;
+    background-color: @aside-nav-bg;
+    .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
+    border-bottom: #666 1px solid;
+    padding-top:@line-height-base * 13.999999995800000001259999999622px;
+  }
+
+  > li a:hover {
+    background-color: @dell-highlight-blue;
+    color:@aside-nav-bg;
+    .box-shadow(inset -10px 0px 10px -10px rgba(0, 0, 0, .35));
+    border-bottom:1px solid @dell-highlight-blue;
+  }
+
+  > li.active a {
+    background:@aside-nav-bg-active;
+    border-bottom:none;
+    position:relative;
+    &:hover {
+      color:@white;
     }
 
-    li a {
-      text-shadow:none;
-      color:@white;
-      background-color: @aside-nav-bg;
-      .box-shadow(inset -10px 0px 10px -9px rgba(0, 0, 0, .8));
-      border-bottom: #666 1px solid;
-      padding-top:@line-height-base * 13.999999995800000001259999999622px;
+    &:after {
+      content: "\23";//left arrow
+      font-family:'icon-ui';
+      font-size:28px;
+      position:absolute;
+      top: 35%;
+      right: -12px;
+      text-shadow: -10px 0px 10px -9px rgba(0, 0, 0, .8);
     }
-    > li a:hover {
-      background-color: @dell-highlight-blue;
-      color:@aside-nav-bg;
-      .box-shadow(inset -10px 0px 10px -10px rgba(0, 0, 0, .35));
-      border-bottom:1px solid @dell-highlight-blue;
-    }
-    > li.active a {
-      background:@aside-nav-bg-active;
-      border-bottom:none;
-      position:relative;
-      &:hover {
-        color:@white;
-      }
-      &:after {
-        content: "\23";//left arrow
-        font-family:'icon-ui';
-        font-size:28px;
-        position:absolute;
-        top: 35%;
-        right: -12px;
-        text-shadow: -10px 0px 10px -9px rgba(0, 0, 0, .8);
-      }
-    }
-    > li:last-child a,
-    > li:last-child a:hover {
-      .border-radius(0);
-      .border-bottom-left-radius(@border-radius-large * 2);
-    }
-    > li:first-child a,
-    > li:first-child a:hover {
-      .border-radius(0);
-      .border-top-left-radius(@border-radius-large * 2);
-    }
+  }
+
+  > li:last-child a,
+  > li:last-child a:hover {
+    .border-radius(0);
+    .border-bottom-left-radius(@border-radius-large * 2);
+  }
+
+  > li:first-child a,
+  > li:first-child a:hover {
+    .border-radius(0);
+    .border-top-left-radius(@border-radius-large * 2);
+  }
 }
 
 
 
 // breadcrumbs
-//=======================================================================================================================
-
-
+//===================================================================================
 .breadcrumb {
   padding: 8px 0px;
   background-color: @white;
@@ -3154,18 +3045,21 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
   > li {
     text-shadow: none;
     &:first-child {
-        a {
-          display:none;
-        }
-        &:before {
-          font-size:14px;
-          content: "\5a";
-          font-family:"icon-small";  
-        }         
+      a {
+        display:none;
+      }
+
+      &:before {
+        font-size:14px;
+        content: "\5a";
+        font-family:"icon-small";  
+      }         
     }
+
     a { 
       color: @gray;
     }
+
     > .divider {
       padding: 0 5px;
       position:relative;
@@ -3179,15 +3073,15 @@ box-shadow: 0 1px 4px rgba(0,0,0,0.065);
       }
     }
   }
+
   > .active {
     color: @gray;
   }
-  
 }
 
 
-//============== pagination  ===============
-
+// pagination
+//===================================================================================
 .pagination {
 display: inline-block;
 padding-left: 0;
@@ -3195,15 +3089,16 @@ margin: 20px 0;
 border-radius: 4px;
 }
 
-
 .pagination ul {
   // Visuals
   .border-radius(@border-radius-base);
   .box-shadow(none);
 }
+
 .pagination ul > li {
   display: inline; // Remove list-style and block-level defaults
 }
+
 .pagination ul > li > a,
 .pagination ul > li > span {
   background-color: none;
@@ -3212,6 +3107,7 @@ border-radius: 4px;
   margin:0 5px;
   padding: 7px 10px;
 }
+
 .pagination ul > li > a:hover,
 .pagination ul > li > a:focus,
 .pagination ul > .active > a,
@@ -3220,6 +3116,7 @@ border-radius: 4px;
   text-decoration: none;
   .border-radius(@border-radius-base);
 }
+
 .pagination ul > .active > a,
 .pagination ul > .active > a:hover,
 .pagination ul > .active > span {
@@ -3232,6 +3129,7 @@ border-radius: 4px;
   pointer-events: none;
   cursor: default;
 }
+
 .pagination ul > .disabled > span,
 .pagination ul > .disabled > a,
 .pagination ul > .disabled > a:hover,
@@ -3243,8 +3141,7 @@ border-radius: 4px;
   cursor: default;
 }
 
-// ------------------------ Pagination --------
-
+//  Pagination 
 .pagination {
   &.pagination  { 
 
@@ -3318,7 +3215,6 @@ border-radius: 4px;
   }
 }
 
-
 .mirror-text() {
    -moz-transform: scaleX(-1); /* Gecko */
   -o-transform: scaleX(-1); /* Operah */
@@ -3328,69 +3224,75 @@ border-radius: 4px;
 }
 
 
-// ==================================== offsets ============================================
-
+// offsets 
+//===================================================================================
 .offset-examples .well {
-height: 200px;
+  height: 200px;
 }
 
 .top-offset-mini {
-margin-top: 10px;
+  margin-top: 10px;
 }
 
 .top-offset-small {
-margin-top: 20px;
+  margin-top: 20px;
 }
 
 .top-offset-medium {
-margin-top: 40px;
+  margin-top: 40px;
 }
 
 .top-offset-large {
-margin-top: 60px;
+  margin-top: 60px;
 }
 
 .offset-examples hr {
-clear: both;
-border-top: none !important;
-border-bottom: 1px solid #dc5034 !important;
-margin: 0;
+  clear: both;
+  border-top: none !important;
+  border-bottom: 1px solid #dc5034 !important;
+  margin: 0;
 }
 
 .bottom-offset-mini {
-margin-bottom: 10px;
+  margin-bottom: 10px;
 }
 
 .bottom-offset-small {
-margin-bottom: 20px;
+  margin-bottom: 20px;
 }
 
 .bottom-offset-medium {
-margin-bottom: 40px;
+  margin-bottom: 40px;
 }
 
 .bottom-offset-large {
-margin-bottom: 60px;
+  margin-bottom: 60px;
 }
 
 .offset-examples .well:not([class*=offset]) {
-margin-top: 0;
-margin-bottom: 0;
-color: #dc5034 !important;
-margin-bottom: 0;
+  margin-top: 0;
+  margin-bottom: 0;
+  color: #dc5034 !important;
+  margin-bottom: 0;
 }
 
 .offset-examples .well > .well {
-color: #fff !important;
-height: auto;
+  color: #fff !important;
+  height: auto;
 }
 
+.double-height {
+  height: 400px;
+  margin-bottom: 30px;
+}
 
-//==========================================================================================
+.single-height {
+  height: 185px;
+  margin-bottom: 30px;
+}
 
 // pager
-//=======================================================================================================================
-
+//===================================================================================
 .pager {
   margin: @line-height-base * 13.999999995800000001259999999622px 0;
   list-style: none;
@@ -3433,15 +3335,8 @@ height: auto;
   }
 }
 
-
-
-
-
-
 // modals
-//=======================================================================================================================
-
-
+//===================================================================================
 #modal-example-HTML {
   background: rgba(0,0,0,0.8);
   padding: 100px 0 !important;
@@ -3478,7 +3373,6 @@ height: auto;
   border: none; 
 }
 
-
 .modal-header {
   padding: 0;
   padding-bottom: 5px;
@@ -3499,17 +3393,19 @@ height: auto;
       content: "\2c";
       font-size:14px;
       margin-right:0px;
-      
     }
+
     &:hover {
       opacity:1;
     }
   }
+
   // Heading
   h3 {
     margin: 0;
     line-height: 30px;
   }
+
   hr {
     margin-bottom:0;
   }
@@ -3547,13 +3443,16 @@ height: auto;
     &.fade.in{
       top:2%;
     }
+
     .modal-footer {
       padding: 10px 0 0;
     }
+
     .modal-header .close {
       position:relative;
       z-index:0;
     }
+
     .modal-header .close:before {
       margin-right: -2px;
       position:relative;
@@ -3564,10 +3463,7 @@ height: auto;
 
 
 // carousel
-//=======================================================================================================================
-
-
-
+//===================================================================================
 .pull-caption(){
   max-width: 50%;
   .border-radius(@border-radius-base);
@@ -3577,11 +3473,13 @@ height: auto;
   a {
     color:@dell-blue !important;
   }
+
   .btn-primary,
   .btn-secondary {
     color:@white !important;
   }
 }
+
 .carousel {
   padding: 0 40px 30px 40px;
   .carousel-control {
@@ -3614,12 +3512,13 @@ height: auto;
         line-height: 1;
         -webkit-font-smoothing: antialiased;
         margin-left:-20px;
-
       }
+
       &:hover{
         color: @dell-highlight-blue;
       }
     }
+
     &.right{
       right:0;
       &:after {
@@ -3635,11 +3534,13 @@ height: auto;
         -webkit-font-smoothing: antialiased;
         margin-left:-17px;
       }
+
       &:hover{
         color: @dell-highlight-blue;
       }
     }
   }
+
   .carousel-indicators {
     margin-right: 0;
     left: 24%;
@@ -3647,9 +3548,11 @@ height: auto;
     &-4 {
       margin-left: -21px;
     }
+
     &-5 {
       margin-left: -37px;
     }
+
     li {
       margin-left:10px;
       width:30px;
@@ -3660,10 +3563,12 @@ height: auto;
         cursor:pointer;
       }
     }
+
     .active {
       background: @dell-gray-dark;
     }
   }
+
   &.carousel-gallery {
     padding: 0 0 30px;
     position:relative;
@@ -3681,6 +3586,7 @@ height: auto;
           color:@dell-blue;
         }
       }
+
       &.right{
         .border-left-radius(@border-radius-small);
         &:hover{
@@ -3688,16 +3594,14 @@ height: auto;
           color:@dell-blue;
         }
       }
-
     }
+
     .item.active {
       .border-radius(@border-radius-base);
       overflow:hidden;
     }
 
     // Caption for text below images
-    // -----------------------------
-
     .carousel-caption {
       position: relative;
       left: auto;
@@ -3712,31 +3616,35 @@ height: auto;
         top:20px;
         left:20px;
       }
+
       &.pull-top-right {
         .pull-caption();
         top:20px;
         right:20px;        
       }
+
       &.pull-bottom-left {
         .pull-caption();
         bottom:20px;
         left:20px;        
       }
+
       &.pull-bottom-right {
         .pull-caption();
         bottom:20px;
         right:20px;       
       }
     }
+
     .carousel-caption h4,
     .carousel-caption p {
       color: inherit;
       line-height: inherit;
     }
+
     .well {
       margin-bottom:0;
     }
-
   }
 }
 
@@ -3744,9 +3652,11 @@ height: auto;
   .carousel-control{
     display:none;
   }
+
   .carousel .carousel-indicators {
     left: 32%;
   }
+
   .carousel.carousel-gallery {
     width: 105%;
     margin-left: -2%;
@@ -3759,11 +3669,8 @@ height: auto;
   }
 }
 
-
 // tooltip
-//=======================================================================================================================
-
-
+//===================================================================================
 // Base class
 .tooltip {
   font-size: 12px;
@@ -3785,9 +3692,6 @@ height: auto;
     color:inherit;
   }
 }
-
-
-
 
 // popovers
 //=======================================================================================================================
@@ -3817,6 +3721,7 @@ height: auto;
       opacity: 1;
     }
   }
+
   .popover-title {
     color:@white;
     background:@dell-blue;
@@ -3835,6 +3740,7 @@ height: auto;
     }
   }
 }
+
 .popover.bottom .popover-title:before {
   bottom: 100%;
   border: solid transparent;
@@ -3871,7 +3777,6 @@ height: auto;
 }
 
 //popovers for mobile
-
 @media only screen and (max-width:@mobile-max-width) {
   .popover {
     .arrow,
@@ -3887,6 +3792,7 @@ height: auto;
       margin-left: 0;
     }  
   }
+
   .control-group.error .popover,
   .error .popover,
   .error + .popover {
@@ -3899,15 +3805,19 @@ height: auto;
   }
 }
 
-
 // labels-badges
-//=======================================================================================================================
+///===================================================================================
 // Base classes
-
-label, input, button, select, textarea {
+button, label, input, select, textarea {
   font-size: 14px;
   font-weight: normal;
   line-height: 20px;
+}
+
+@media only screen and (max-width:@tablet-max-width){
+  input, select, textarea {
+    font-size: 16px;
+  }
 }
 
 label {
@@ -3930,8 +3840,6 @@ label {
 
 // Colors
 // Only give background-color difference to links (and to simplify, we don't qualifty with `a` but [href] attribute)
-
-
 .badge { 
   background-color: @dell-gray-dark; 
   position:relative;
@@ -3939,18 +3847,13 @@ label {
   border-radius: 9px;
 }
 
-
 .label-teal, 
 .label-info {
   background-color: @dell-teal;
 }
 
 // progress-bars
-//=======================================================================================================================
-
-
-
-
+//===================================================================================
 .progress {
   overflow: hidden;
   height: @line-height-base  * 13.999999995800000001259999999622px; // ~20px
@@ -3998,7 +3901,6 @@ label {
     filter: progid:DXImageTransform.Microsoft.gradient(startColorstr='#ff62c462',endColorstr='#ff57a957',GradientType=0);
     }
 
-
   //progress-status dell 308 only
   &.progress-status {
     overflow:visible;
@@ -4014,11 +3916,13 @@ label {
         top:30px;
         font-size:14px;
       }
+
       &-complete {
         span {
           font-weight:bold;
           color:@blue;    
         }
+
         &:after {
           position:absolute;
           right:45%;
@@ -4030,36 +3934,40 @@ label {
           margin-right:2px;
         }
       }
+
       &-progress {
         span {
           font-weight:bold;
         }
-
         #gradient > .vertical(@gray, @gray);
       }
+
       &-incomplete {
         span {
           color: @gray;
-
         }
+
         #gradient > .vertical(@dell-gray-light, @dell-gray-light);
       }
+
       &:first-child {
         .border-left-radius(@border-radius-base);
       }
+
       &:last-child {
         .border-right-radius(@border-radius-base);
       }
+
       &:hover {
         text-decoration: none;
       }
     } 
   }
+
   .progress-label {
     display:none;
   }
 }
-
 
 @media only screen and (max-width:@mobile-max-width) {
   .progress.progress-status {
@@ -4077,11 +3985,8 @@ label {
   }
 }
 
-
-
 // accordion
-//=======================================================================================================================
-
+//===================================================================================
 // Parent container
 .accordion {
   margin-bottom: @line-height-base  * 13.999999995800000001259999999622px; 
@@ -4152,7 +4057,6 @@ label {
   }  
 }
 
-
 // General toggle styles
 .accordion-toggle {
   cursor: pointer;
@@ -4197,10 +4101,9 @@ label {
 
 
 //ICONS
-//=======================================================================================================================
+//===================================================================================
 // NOTE: These are Dell Specific Icon classes using Dell Icon fonts
 // TODO: There should be four sizes mini/13px, small/16px, medium/25px, large/63px - small would be the standard
-
 [class^=icon-] {
   font-family: 'icon-small';
   speak: none;
@@ -4211,8 +4114,8 @@ label {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-// this is to provide some mapping for bootstrap icons that match the Dell 308 set
 
+// this is to provide some mapping for bootstrap icons that match the Dell 308 set
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icon-ui';
@@ -4224,7 +4127,6 @@ label {
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
-
 
 /* Use the following CSS code if you want to have a class per icon */
 /*
@@ -4243,6 +4145,7 @@ you can use the generic selector below, but it's slower:
   line-height: 1;
   -webkit-font-smoothing: antialiased;
 }
+
 .icon-ui-triangleup:before {
   content: "\21";
 }
@@ -4286,9 +4189,7 @@ you can use the generic selector below, but it's slower:
   content: "\2e";
 }
 
-
 /*---Small Icons---*/
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icon-small';
@@ -4302,11 +4203,9 @@ you can use the generic selector below, but it's slower:
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
+/*Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
-[class*="your-class-prefix"] {
-*/
+[class*="your-class-prefix"] */
 .icon-small-zoomout, .icon-small-zoomin, .icon-small-wireless, .icon-small-whitepaper, .icon-small-webcam, .icon-small-warranty, .icon-small-videocard, .icon-small-video, .icon-small-useraccount, .icon-small-trash, .icon-small-towergeneric, .icon-small-touchpad, .icon-small-touch, .icon-small-thinclient, .icon-small-tablet, .icon-small-surgeprotection, .icon-small-support, .icon-small-storage, .icon-small-speakers, .icon-small-software, .icon-small-shipsfast, .icon-small-shipping, .icon-small-share, .icon-small-serverrack, .icon-small-server, .icon-small-securesoftware, .icon-small-secure, .icon-small-searchright, .icon-small-searchleft, .icon-small-save, .icon-small-rss, .icon-small-recycle, .icon-small-protection, .icon-small-projector, .icon-small-processor, .icon-small-printer, .icon-small-powersupply, .icon-small-ports, .icon-small-play, .icon-small-photos, .icon-small-phone, .icon-small-performance, .icon-small-package, .icon-small-opticaldrive, .icon-small-operatingsystem, .icon-small-network, .icon-small-music, .icon-small-mouse, .icon-small-mobile, .icon-small-missingimage, .icon-small-memorycardreader, .icon-small-memory, .icon-small-mail, .icon-small-location, .icon-small-lightbulb, .icon-small-keyboard, .icon-small-inktoner, .icon-small-house, .icon-small-help, .icon-small-harddrive, .icon-small-globe, .icon-small-giftcard, .icon-small-favorite, .icon-small-energyefficient, .icon-small-employee, .icon-small-edit, .icon-small-drivers, .icon-small-download, .icon-small-display, .icon-small-dimensionsweight, .icon-small-diagnostic, .icon-small-deals, .icon-small-data, .icon-small-creditcvv, .icon-small-copy, .icon-small-contact, .icon-small-computergeneric, .icon-small-color, .icon-small-cloud, .icon-small-clock, .icon-small-chipset, .icon-small-checkmark, .icon-small-chat, .icon-small-cart, .icon-small-carryingcase, .icon-small-calendar, .icon-small-calculator, .icon-small-cables, .icon-small-bell, .icon-small-battery, .icon-small-award, .icon-small-audiospeaker, .icon-small-audiocard, .icon-small-alertnotice, .icon-small-alertinfo, .icon-small-alerterror, .icon-small-alertcomplete, .icon-small-add {
   font-family: 'icon-small';
   speak: none;
@@ -4612,11 +4511,7 @@ you can use the generic selector below, but it's slower:
   content: "\e003";
 }
 
-
-
-
 /*---Large Icons---*/
-
 /* Use the following CSS code if you want to use data attributes for inserting your icons */
 [data-icon]:before {
   font-family: 'icon-large';
@@ -4642,11 +4537,9 @@ you can use the generic selector below, but it's slower:
 }
 
 /* Use the following CSS code if you want to have a class per icon */
-/*
-Instead of a list of all class selectors,
+/* Instead of a list of all class selectors,
 you can use the generic selector below, but it's slower:
-[class*="your-class-prefix"] {
-*/
+[class*="your-class-prefix"] */
 .icon-large-zoomout, .icon-large-zoomin, .icon-large-wifi, .icon-large-whitepaper, .icon-large-webcam, .icon-large-warranty, .icon-large-videocard, .icon-large-video, .icon-large-useraccount, .icon-large-trash, .icon-large-towergeneric, .icon-large-touchpad, .icon-large-touch, .icon-large-thinclient, .icon-large-tablet, .icon-large-surgeprotection, .icon-large-support, .icon-large-storage, .icon-large-speakers, .icon-large-software, .icon-large-shipsfast, .icon-large-shipping, .icon-large-share, .icon-large-serverrack, .icon-large-server, .icon-large-securesoftware, .icon-large-secure, .icon-large-searchright, .icon-large-searchleft, .icon-large-save, .icon-large-rss, .icon-large-recycle, .icon-large-protection, .icon-large-projector, .icon-large-processor, .icon-large-printer, .icon-large-powersupply, .icon-large-ports, .icon-large-play, .icon-large-photos, .icon-large-phone, .icon-large-performance, .icon-large-package, .icon-large-opticaldrive, .icon-large-operatingsystem, .icon-large-network, .icon-large-music, .icon-large-mouse, .icon-large-mobile, .icon-large-missingimage, .icon-large-memorycardreader, .icon-large-memory, .icon-large-mail, .icon-large-location, .icon-large-lightbulb, .icon-large-keyboard, .icon-large-inktoner, .icon-large-house, .icon-large-help, .icon-large-harddrive, .icon-large-globe, .icon-large-giftcard, .icon-large-favorite, .icon-large-energyefficient, .icon-large-employee, .icon-large-edit, .icon-large-drivers, .icon-large-download, .icon-large-display, .icon-large-dimensionsweight, .icon-large-diagnostic, .icon-large-deals, .icon-large-data, .icon-large-creditcvv, .icon-large-copy, .icon-large-contact, .icon-large-computergeneric, .icon-large-color, .icon-large-cloud, .icon-large-clock, .icon-large-chipset, .icon-large-checkmark, .icon-large-chat, .icon-large-cart, .icon-large-carryingcase, .icon-large-calendar, .icon-large-calculator, .icon-large-cables, .icon-large-bell, .icon-large-battery, .icon-large-award, .icon-large-audiospeaker, .icon-large-audiocard, .icon-large-alertnotice, .icon-large-alertinfo, .icon-large-alerterror, .icon-large-alertcomplete, .icon-large-add {
   font-family: 'icon-large';
   speak: none;
@@ -4952,16 +4845,10 @@ you can use the generic selector below, but it's slower:
   content: "\e003";
 }
 
-
-
-
 //
 // Layouts
-// --------------------------------------------------
-
-
+//===================================================================================
 // bootstrap icon classes that map to Dell 308 icon set
-
 
 //.icon-glass:before { content:""; }
 //.icon-music:before { content:""; }
@@ -4983,7 +4870,6 @@ you can use the generic selector below, but it's slower:
 //.icon-signal:before { content:""; }
 .icon-cog:before { content:"\63"; }
 .icon-trash:before { content:"\2a"; }
-
 .icon-home:before { content:"\5a";  }
 //.icon-file:before { content:""; }
 .icon-time:before { content:"\70"; }
@@ -5004,7 +4890,6 @@ you can use the generic selector below, but it's slower:
 //.icon-volume-up:before { content:""; }
 //.icon-qrcode:before { content:""; }
 //.icon-barcode:before { content:""; }
-
 //.icon-tag:before { background-position: }
 //.icon-tags:before { content:""; } // px off
 //.icon-book:before { content:""; }
@@ -5025,7 +4910,6 @@ you can use the generic selector below, but it's slower:
 //.icon-indent-right:before { content:""; }
 //.icon-facetime-video:before { content:""; }
 //.icon-picture:before { content:""; }
-
 .icon-pencil:before { content:"\62"; }
 .icon-map-marker:before { content:"\56"; }
 //.icon-adjust:before { content:""; }
@@ -5046,7 +4930,6 @@ you can use the generic selector below, but it's slower:
 //.icon-eject:before { content:""; }
 .icon-chevron-left:before { font-family:'icon-ui';content:"\2e"; }
 .icon-chevron-right:before { font-family:'icon-ui';content:"\2d"; }
-
 .icon-plus-sign:before { font-family:'icon-ui';content:"\25"; }
 .icon-minus-sign:before { font-family:'icon-ui';content:"\26"; }
 .icon-remove-sign:before { font-family:'icon-ui';content:"\2b"; }
@@ -5067,7 +4950,6 @@ you can use the generic selector below, but it's slower:
 .icon-plus:before { font-family:'icon-ui';content:"\25"; }
 .icon-minus:before { font-family:'icon-ui';content:"\26"; }
 //.icon-asterisk:before { content:""; }
-
 .icon-exclamation-sign:before { content:"\7e";}
 .icon-gift:before { content:"\5e"; }
 .icon-leaf:before { content:"\60"; }
@@ -5088,7 +4970,6 @@ you can use the generic selector below, but it's slower:
 //.icon-folder-open:before { content:""; width: }
 //.icon-resize-vertical:before { content:""; } // px, px off
 //.icon-resize-horizontal:before { content:""; } // px, px off
-
 .icon-hdd:before {  content:"\5c"; }
 //.icon-bullhorn:before { content:""; }
 .icon-bell:before { content:"\79"; }
@@ -5110,20 +4991,13 @@ you can use the generic selector below, but it's slower:
 //.icon-briefcase:before { content:""; }
 //.icon-fullscreen:before { content:""; }
 
-
-
-
-
-
 // RESPONSIVE CLASSES
-// ------------------
-
+//===================================================================================
 @import "../../less-BS3/responsive-utilities.less";
 
 
 // 15 column grid
-//------------------------------------------------- 
-
+//===================================================================================
 .col-md-b-1,
 .col-md-b-2,
 .col-md-b-3,
@@ -5163,9 +5037,7 @@ you can use the generic selector below, but it's slower:
 }
 
 // Medium grid
-//
 // Columns, offsets, pushes, and pulls for the large desktop device range.
-//
 // Note that `.col-lg-b-12` doesn't get floated on purpose—there's no need since
 // it's full-width.
 
@@ -5256,9 +5128,7 @@ you can use the generic selector below, but it's slower:
 }
 
 // Large grid
-//
 // Columns, offsets, pushes, and pulls for the large desktop device range.
-//
 // Note that `.col-lg-b-12` doesn't get floated on purpose—there's no need since
 // it's full-width.
 
@@ -5347,3 +5217,23 @@ you can use the generic selector below, but it's slower:
   .col-lg-b-offset-13 { margin-left: percentage((13/ @grid-b-columns)); }
   .col-lg-b-offset-14 { margin-left: percentage((14/ @grid-b-columns)); }
 }
+
+
+// stroke modifiers 
+//===================================================================================
+.mobile-no-stroke () {
+  @media only screen and (max-width:@mobile-max-width) {
+    border: none !important;
+  }
+}
+.tablet-no-stroke () {
+  @media only screen and (min-width:@tablet-min-width) and (max-width:@desktop-min-width) {
+    border: none !important;
+  }
+}
+.desktop-no-stroke () {
+  @media only screen and (min-width:@desktop-min-width) and (max-width:@desktop-max-width) {
+    border: none !important;
+  }
+}
+
