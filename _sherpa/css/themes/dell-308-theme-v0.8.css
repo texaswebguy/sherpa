@@ -4994,8 +4994,16 @@ div.navbar-inner {
   height: 400px;
   margin-bottom: 30px;
 }
+.double-height-hero {
+  height: 520px;
+  margin-bottom: 30px;
+}
 .single-height {
   height: 185px;
+  margin-bottom: 30px;
+}
+.single-height-hero {
+  height: 245px;
   margin-bottom: 30px;
 }
 .pager {
@@ -5635,7 +5643,7 @@ textarea {
   font-weight: normal;
   line-height: 20px;
 }
-@media only screen and (max-width: 980px) {
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width: 767px) {
   input,
   select,
   textarea {

@@ -3286,8 +3286,18 @@ border-radius: 4px;
   margin-bottom: 30px;
 }
 
+.double-height-hero {
+  height: 520px;
+  margin-bottom: 30px;
+}
+
 .single-height {
   height: 185px;
+  margin-bottom: 30px;
+}
+
+.single-height-hero {
+  height: 245px;
   margin-bottom: 30px;
 }
 
@@ -3814,7 +3824,9 @@ button, label, input, select, textarea {
   line-height: 20px;
 }
 
-@media only screen and (max-width:@tablet-max-width){
+// Fix for - Zooming in on input textboxes in iOS - Phone
+// adjusted to only be in effect for mobile breakpoint otherwise this has no effect on desktop chrome
+@media screen and (-webkit-min-device-pixel-ratio: 0) and (max-width:@mobile-max-width){
   input, select, textarea {
     font-size: 16px;
   }
