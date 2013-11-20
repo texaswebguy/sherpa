@@ -2609,30 +2609,35 @@
             Complex examples 
             *******************************************************
             -->
-         <div class="da-all ng-scope">
-            <div class="wrapper">
+
+      <div class="row">      
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
                <hr>
                <h4>Complex Examples</h4>
             </div>
          </div>
          <!-- complex-option-1 -->
-         <div class="da-clear ta-clear ma-clear ng-scope" id="complex-option-1">
-            <div class="wrapper">
+
+         <div class="row">
+         <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12" id="complex-option-1">
+            
                <p><strong>Option 1:</strong>
                </p>
                <ul>
-                  <li>Desktop: 2 up double height with nested with 2 stacked on 1 on the right.</li>
+                  <li>Desktop Large: 2 up double height with nested with 2 stacked on 1 on the right.</li>
+                  <li>Desktop Medium: 2 up double height with nested with 2 stacked on 1 on the right.</li>
                   <li>Tablet: 1 double height stacked on 2 up - single height stacked on 1 up - single height</li>
                   <li>Phone: 1 double height stacked on 2 up - single height stacked on 1 up - single height</li>
                </ul>
-               <button class="btn btn-mini copy-grid" data-copy="2-clipboard" loadclipboardtext="#complex-option-1" data-clipboard-text="	&lt;div class=&quot;da-clear ta-clear ma-clear ng-scope&quot;&gt;
+               <button class="btn btn-xs copy-grid" data-copy="2-clipboard" loadclipboardtext="#complex-option-1" data-clipboard-text="	&lt;div class=&quot;col-xs-12 col-sm-12 col-md-12 col-lg-12&quot;&gt;
                   &lt;!-- complex-option-1
                   Options:
-                  Desktop: 2 up double height with nested with 2 stacked on 1 on the right.
+                  Desktop Large: 2 up double height with nested with 2 stacked on 1 on the right.
+                  Desktop Medium: 2 up double height with nested with 2 stacked on 1 on the right.
                   Tablet: 1 double height stacked on 2 up - single height stacked on 1 up - single height
                   Phone: 1 double height stacked on 2 up - single height stacked on 1 up - single height
                   --&gt;
-                  &lt;div class=&quot;wrapper&quot;&gt;
+                  &lt;div class=&quot;row&quot;&gt;
                   &lt;div class=&quot;da-clear ta-clear ma-clear&quot;&gt;		
                   &lt;div class=&quot;da1-da6 ta-all ma-all&quot;&gt;
                   &lt;div class=&quot;well well-red-dark well-large double-height&quot;&gt;
@@ -2656,48 +2661,59 @@
                   &lt;/div&gt;
                   &lt;/div&gt;">Copy HTML</button>
                <p></p>
-               <div class="da-clear ta-clear ma-clear">
-                  <div class="da1-da6 ta-all ma-all">
-                     <div class="well well-red-dark well-large double-height">
-                        <p class="text-center">
-                           <span class="visible-desktop">da1-da6 - double-height</span>
-                           <span class="visible-tablet">ta-all</span>
-                           <span class="visible-phone">ma-all</span>
-                        </p>
-                     </div>
-                  </div>
-                  <div class="da7-da12 ta-all ma-all">
-                     <div class="da7-da9 tb1-tb4 mb1-mb2">
-                        <div class="well well-purple well-large single-height">
-                           <p class="text-center">
-                              <span class="visible-desktop">da7-da9 inside da7-da12 - single-height</span>
-                              <span class="visible-tablet">tb1-tb4 inside a ta-all - single height</span>
-                              <span class="visible-phone">mb1-mb2 inside a ma-all - single height</span>
-                           </p>
-                        </div>
-                     </div>
-                     <div class="da10-da12 tb5-tb8  mb3-mb4">
-                        <div class="well well-red well-large single-height">
-                           <p class="text-center">
-                              <span class="visible-desktop">da10-da12 inside da7-da12 - single-height</span>
-                              <span class="visible-tablet">tb5-tb8 inside a ta-all - single height</span>
-                              <span class="visible-phone">mb3-tb4 inside a ma-all - single height</span>
-                           </p>
-                        </div>
-                     </div>
-                     <div class="da-clear da-all ta-all ma-all">
-                        <div class="well well-large well-green single-height">
-                           <p class="text-center">
-                              <span class="visible-desktop">da-clear da-all inside da7-da12 - single-height</span>
-                              <span class="visible-tablet">ta-all inside a ta-all - single height</span>
-                              <span class="visible-phone">ma-all inside a ma-all - single height</span>
-                           </p>
-                        </div>
-                     </div>
-                  </div>
-               </div>
             </div>
          </div>
+         <div class="row">
+               <div class="col-xs-12 col-sm-12 col-md-12 col-lg-12">
+                  <div class="row">
+                     <div class="col-xs-12 col-sm-12 col-md-6 col-lg-6">
+                        <div class="well well-red-dark well-large double-height">
+                           <p class="text-center">
+                              <span class="visible-lg">col-lg-6 double-height - inside a col-lg-12</span>
+                              <span class="visible-md">col-md-6 double-height - inside a col-md-12</span>
+                              <span class="visible-sm">col-sm-12 double-height - inside a col-sm-12</span>
+                              <span class="visible-xs">col-xs-12 double-height - inside a col-xs-12</span>
+                           </p>
+                        </div>
+                     </div>
+                     <div class="col-xs-6 col-sx-6 col-md-3 col-lg-3">
+                        <div class="well well-purple well-large single-height">
+                           <p class="text-center">
+                              <span class="visible-lg">col-lg-3 single-height - inside a col-lg-12</span>
+                              <span class="visible-md">col-md-3 single-height - inside a col-md-12</span>
+                              <span class="visible-sm">col-sm-6 single-height - inside a col-sm-12</span>
+                              <span class="visible-xs">col-xs-6 single-height - inside a col-xs-12</span>
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="col-xs-6 col-sx-6 col-md-3 col-lg-3">
+                        <div class="well well-red well-large single-height">
+                           <p class="text-center">
+                              <span class="visible-lg">col-lg-3 single-height - inside a col-lg-12</span>
+                              <span class="visible-md">col-md-3 single-height - inside a col-md-12</span>
+                              <span class="visible-sm">col-sm-6 single-height - inside a col-sm-12</span>
+                              <span class="visible-xs">col-xs-6 single-height - inside a col-xs-12</span>
+                           </p>
+                        </div>
+                     </div>
+
+                     <div class="col-xs-12 col-sx-12 col-md-6 col-lg-6 clearfix">
+                        <div class="well well-large well-green single-height">
+                           <p class="text-center">
+                              <span class="visible-lg">col-lg-6 clearfix single-height - inside a col-lg-12</span>
+                              <span class="visible-md">col-md-6 clearfix single-height - inside a col-md-12</span>
+                              <span class="visible-sm">ta-all clearfix single-height - inside a col-sm-12</span>
+                              <span class="visible-xs">ma-all clearfix single-height - inside a col-xs-12</span>
+                           </p>
+                        </div>
+                     </div>
+                  </div> <!-- check this ending row -->   
+               </div>
+         </div>
+
+
+
          <!-- complex-option-2 -->
          <div class="da-clear ta-clear ma-clear ng-scope" id="complex-option-2">
             <div class="wrapper">
